@@ -124,7 +124,7 @@ def main():
         # Construct file paths
         #csv_path = os.path.join(script_dir, 'topics.csv')
         #xlsx_path = os.path.join(script_dir, 'topics.xlsx')
-        html_path = os.path.join(script_dir, 'generated_table_with_python.html')
+        html_path = os.path.join(script_dir, 'index.html')
 
         # Save to files
         #topics_df.to_csv(csv_path, index=None)

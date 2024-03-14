@@ -1,0 +1,808 @@
+
+                <!DOCTYPE html>
+                <html lang="en" class="h-full bg-gray-100">
+                <head>
+                    <meta charset="UTF-8">
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    <title>Kiadók</title>
+                    <script src="https://cdn.tailwindcss.com"></script>
+                    <link rel="icon" href="/pictures/sze_logo.png" sizes="144x144">
+                </head>
+                <style>
+                        table {
+                            font-family: Arial, sans-serif;
+                            border-collapse: collapse;
+                            
+                            margin: auto;
+                        }
+                        th, td {
+                            border-bottom: 1px solid #dddddd;
+                            text-align: left;
+                            padding: 16px;
+                        }
+                        
+                        a {
+                            color: #007BFF;
+                            text-decoration: none;
+                            cursor: pointer;
+                        }
+                        #subjectDropdown {
+                            margin-bottom: 50px;
+                        }
+                        .min-h-screen {
+                            /* Prevent vertical centering */
+                            display: flex;
+                            align-items: flex-start; /* Align content to the start (top) of the container */
+                        }
+                        tr:hover td {
+                          background-color: lightgrey;
+                        }            
+                </style>
+                <body class="h-full">
+                <div class="min-h-full">
+                    <nav class="bg-gray-800">
+                    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="flex h-16 items-center justify-between">
+          
+          <div class="flex items-center">
+            <div class="flex-shrink-0">
+              <img class="h-8 w-8" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500" alt="Your Company">
+            </div>
+            <div class="hidden md:block">
+              <div class="ml-10 flex items-baseline space-x-4">
+                <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                <a href="#" class="bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium" aria-current="page">Dashboard</a>
+                <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Team</a>
+                <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Projects</a>
+                <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Calendar</a>
+                <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Reports</a>
+                <div class="space-y-1 px-2 pb-3 pt-2 sm:px-3">
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="hidden md:block">
+            
+            <div class="ml-4 flex items-center md:ml-6">
+              
+              <button type="button" class="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
+                <span class="absolute -inset-1.5"></span>
+                <span class="sr-only">View notifications</span>
+                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0" />
+                </svg>
+              </button>
+  
+              <!-- Profile dropdown -->
+              <div class="relative ml-3">
+                <div>
+                  <button type="button" class="relative flex max-w-xs items-center rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800" id="user-menu-button" aria-expanded="false" aria-haspopup="true">
+                    
+                    <span class="sr-only">Open user menu</span>
+                    <img class="h-8 w-8 rounded-full" src="/pictures/SzSzG-profile-picture.jpg" alt="">
+                   
+                  </button>
+                </div>
+  
+                <!--
+                  Dropdown menu, show/hide based on menu state.
+  
+                  Entering: "transition ease-out duration-100"
+                    From: "transform opacity-0 scale-95"
+                    To: "transform opacity-100 scale-100"
+                  Leaving: "transition ease-in duration-75"
+                    From: "transform opacity-100 scale-100"
+                    To: "transform opacity-0 scale-95"
+                -->
+                
+              </div>
+            </div>
+          </div>
+          <div class="-mr-2 flex md:hidden">
+            <!-- Mobile menu button -->
+            <button type="button" class="relative inline-flex items-center justify-center rounded-md bg-gray-800 p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800" aria-controls="mobile-menu" aria-expanded="false">
+              <span class="absolute -inset-0.5"></span>
+              <span class="sr-only">Open main menu</span>
+              <!-- Menu open: "hidden", Menu closed: "block" -->
+              <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+              </svg>
+              <!-- Menu open: "block", Menu closed: "hidden" -->
+              <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+                    </nav>
+                
+                    <header class="bg-white shadow">
+                    <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
+                        <h1 class="text-3xl font-bold tracking-tight text-gray-900">Kiadók</h1>
+                    </div>
+                    </header>
+                    
+                    <main>
+                    <div class="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">
+                    
+                            
+                            <p class="text-base mb-4">   </p>
+                            <div class="flex justify-between">
+                              <div>
+                                  <label for="searchInput" class="text-sm font-medium text-gray-500">Search for title</label><br>
+                                  <input type="text" id="searchInput" onkeyup="searchFunction()" placeholder="Search title..." title="Type in a name" class="p-2 mb-4">
+                              </div>
+                              <div>
+                                  <label for="subjectDropdown" class="text-sm font-medium text-gray-500">Select Subject:</label>
+                                  <select id="subjectDropdown" onchange="filterTable()" class="block mt-1 p-2 border-gray-300 rounded-md">
+                                      <option value="all">All Subjects</option>
+                                       <!-- Add options for each subject_key -->
+                                      <option value="Accounting finance & economics">Accounting finance & economics</option>
+                                      <option value="Business, management & strategy">Business, management & strategy</option>
+                                      <option value="HR, learning & organisation studies">HR, learning & organisation studies</option>
+                                      <option value="Information & knowledge management">Information & knowledge management</option>
+                                      <option value="Marketing">Marketing</option>
+                                      <option value="Tourism & hospitality management">Tourism & hospitality management</option>
+                                      <option value="Operations, logistics & quality">Operations, logistics & quality</option>
+                                      <!-- Add other subjects as needed -->
+                                  </select>
+                              </div>
+                          </div>
+
+                        <div class="">
+
+                            <table class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Title</th>
+      <th>Description</th>
+      <th>Close date</th>
+      <th>Url</th>
+      <th>Kiadó</th>
+      <th>Filter</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Resilience and Performance Auditing for a Changing Public Sector Environment</td>
+      <td>Opens for Submissions 1 March 2025</td>
+      <td>30 Jun 2025</td>
+      <td><a href="https://www.emeraldgrouppublishing.com//calls-for-papers/resilience-and-performance-auditing-a-changing-public-sector-environment" target="_blank">Link</a></td>
+      <td><img src='https://www.emeraldgrouppublishing.com/themes/custom/emerald_publishing/logo.svg' width='50px' height='50px'></td>
+      <td>Accounting finance & economics</td>
+    </tr>
+    <tr>
+      <td>Sustainability, Corporate Social Responsibility, and Corporate Governance in Emerging Economies</td>
+      <td>The Journal of Financial Reporting and Accounting invites submissions for a special issue focused on the intersection of sustainability, corporate social responsibility (CSR), and corporate governance...</td>
+      <td>01 Dec 2024</td>
+      <td><a href="https://www.emeraldgrouppublishing.com//calls-for-papers/sustainability-corporate-social-responsibility-and-corporate-governance-emerging" target="_blank">Link</a></td>
+      <td><img src='https://www.emeraldgrouppublishing.com/themes/custom/emerald_publishing/logo.svg' width='50px' height='50px'></td>
+      <td>Accounting finance & economics</td>
+    </tr>
+    <tr>
+      <td>Call for Papers – Joint Asian Conference On Business And Economic Studies (6th ACBES - 8th GARCOMBS - 2nd ICONICS)</td>
+      <td>Call for Papers – Joint Asian Conference On Business And Economic Studies (6th ACBES - 8th GARCOMBS - 2nd ICONICS)</td>
+      <td>15 Jun 2024</td>
+      <td><a href="https://www.emeraldgrouppublishing.com//calls-for-papers/call-papers-joint-asian-conference-business-and-economic-studies-6th-acbes-8th" target="_blank">Link</a></td>
+      <td><img src='https://www.emeraldgrouppublishing.com/themes/custom/emerald_publishing/logo.svg' width='50px' height='50px'></td>
+      <td>Accounting finance & economics</td>
+    </tr>
+    <tr>
+      <td>Accounting Beyond Disruption: Risk Work for Sustainable and Resilient Global Supply Chains</td>
+      <td>This AAAJ special issue invites empirical and theoretical contributions focused on the role of accounting and the impact on the accountability of the organisational work undertaken to identify and...</td>
+      <td>30 Sep 2024</td>
+      <td><a href="https://www.emeraldgrouppublishing.com//calls-for-papers/accounting-beyond-disruption-risk-work-sustainable-and-resilient-global-supply" target="_blank">Link</a></td>
+      <td><img src='https://www.emeraldgrouppublishing.com/themes/custom/emerald_publishing/logo.svg' width='50px' height='50px'></td>
+      <td>Accounting finance & economics</td>
+    </tr>
+    <tr>
+      <td>BALAS 2024 Conference – Call for papers</td>
+      <td>The BALAS 2024 Conference will provide a scholarly academic forum for discussing innovation ecosystems for business development in the LATAM contexts, focusing on specific conditions and solutions of...</td>
+      <td>17 Feb 2024</td>
+      <td><a href="https://www.emeraldgrouppublishing.com//calls-for-papers/balas-2024-conference-call-papers" target="_blank">Link</a></td>
+      <td><img src='https://www.emeraldgrouppublishing.com/themes/custom/emerald_publishing/logo.svg' width='50px' height='50px'></td>
+      <td>Accounting finance & economics</td>
+    </tr>
+    <tr>
+      <td>Sustainability discourses and narratives in the European Union</td>
+      <td>This special issue seeks to explore and examine current plans, actions, and practices about different elements of sustainability to further knowledge and debates about likely future sustainability...</td>
+      <td>31 Oct 2024</td>
+      <td><a href="https://www.emeraldgrouppublishing.com//calls-for-papers/sustainability-discourses-and-narratives-european-union" target="_blank">Link</a></td>
+      <td><img src='https://www.emeraldgrouppublishing.com/themes/custom/emerald_publishing/logo.svg' width='50px' height='50px'></td>
+      <td>Accounting finance & economics</td>
+    </tr>
+    <tr>
+      <td>Special Issue – Entrepreneurship and Society</td>
+      <td>Special issue: Entrepreneurship and Society</td>
+      <td>31 Aug 2024</td>
+      <td><a href="https://www.emeraldgrouppublishing.com//calls-for-papers/special-issue-entrepreneurship-and-society" target="_blank">Link</a></td>
+      <td><img src='https://www.emeraldgrouppublishing.com/themes/custom/emerald_publishing/logo.svg' width='50px' height='50px'></td>
+      <td>Accounting finance & economics</td>
+    </tr>
+    <tr>
+      <td>Risk Management and Accounting in Firms’ Response to Global Risk Challenges</td>
+      <td>This special issue debates the role of risk governance and accounting with regards to the responses of firms to global risk challenges and enables us to reflect on the nature of the risks faced today...</td>
+      <td>31 Dec 2024</td>
+      <td><a href="https://www.emeraldgrouppublishing.com//calls-for-papers/risk-management-and-accounting-firms-response-global-risk-challenges" target="_blank">Link</a></td>
+      <td><img src='https://www.emeraldgrouppublishing.com/themes/custom/emerald_publishing/logo.svg' width='50px' height='50px'></td>
+      <td>Accounting finance & economics</td>
+    </tr>
+    <tr>
+      <td>Behavioral Accounting and Finance</td>
+      <td>This special issue explores the impact of behavioral biases, anomalies, and heuristics on firm decision-making in accounting, auditing, financial reporting, markets, and corporate practices.</td>
+      <td>31 Oct 2024</td>
+      <td><a href="https://www.emeraldgrouppublishing.com//calls-for-papers/behavioral-accounting-and-finance" target="_blank">Link</a></td>
+      <td><img src='https://www.emeraldgrouppublishing.com/themes/custom/emerald_publishing/logo.svg' width='50px' height='50px'></td>
+      <td>Accounting finance & economics</td>
+    </tr>
+    <tr>
+      <td>GRI in Developing Economies and Emerging Markets (DEEMs)</td>
+      <td>This special issue aims to provide insights into the applicability and adaptability of GRI reporting framework in DEEMs, highlight local values/issues which need to be considered in the SR standard...</td>
+      <td>15 Jul 2025</td>
+      <td><a href="https://www.emeraldgrouppublishing.com//calls-for-papers/gri-developing-economies-and-emerging-markets-deems" target="_blank">Link</a></td>
+      <td><img src='https://www.emeraldgrouppublishing.com/themes/custom/emerald_publishing/logo.svg' width='50px' height='50px'></td>
+      <td>Accounting finance & economics</td>
+    </tr>
+    <tr>
+      <td>Exploring the Synergy of Technology, Artificial Intelligence, and Accounting & Finance in the Digital Era</td>
+      <td>This special issue will focus on how advancements in technology and AI are influencing accounting and financial practices, and how these changes impact financial reporting, auditing, risk management...</td>
+      <td>30 Sep 2024</td>
+      <td><a href="https://www.emeraldgrouppublishing.com//calls-for-papers/exploring-synergy-technology-artificial-intelligence-and-accounting-finance" target="_blank">Link</a></td>
+      <td><img src='https://www.emeraldgrouppublishing.com/themes/custom/emerald_publishing/logo.svg' width='50px' height='50px'></td>
+      <td>Accounting finance & economics</td>
+    </tr>
+    <tr>
+      <td>Developing destination sustainability practices: Influencing practitioners and tourists</td>
+      <td>This special issue is on discussions that seek to understand how destinations foster practices of sustainability that encourage both businesses and tourists to adopt such approaches. As such, this...</td>
+      <td>31 Jul 2024</td>
+      <td><a href="https://www.emeraldgrouppublishing.com//calls-for-papers/developing-destination-sustainability-practices-influencing-practitioners-and" target="_blank">Link</a></td>
+      <td><img src='https://www.emeraldgrouppublishing.com/themes/custom/emerald_publishing/logo.svg' width='50px' height='50px'></td>
+      <td>Accounting finance & economics</td>
+    </tr>
+    <tr>
+      <td>Is sustainable corporate governance a positive sum game?</td>
+      <td>Explore groundbreaking research at the nexus of finance and sustainability, shaping resilient economies through innovative practices in our Special Issue on Sustainable Finance Innovations.</td>
+      <td>31 Jan 2025</td>
+      <td><a href="https://www.emeraldgrouppublishing.com//calls-for-papers/sustainable-corporate-governance-a-positive-sum-game" target="_blank">Link</a></td>
+      <td><img src='https://www.emeraldgrouppublishing.com/themes/custom/emerald_publishing/logo.svg' width='50px' height='50px'></td>
+      <td>Business, management & strategy</td>
+    </tr>
+    <tr>
+      <td>Unseating Western Hegemonies in Contextualised Research on Gender and Entrepreneurship</td>
+      <td>This special issue challenges long held Western assumptions around the gender and entrepreneurship in order to capture its diverse nature.</td>
+      <td>16 Oct 2024</td>
+      <td><a href="https://www.emeraldgrouppublishing.com//calls-for-papers/unseating-western-hegemonies-contextualised-research-gender-and-entrepreneurship" target="_blank">Link</a></td>
+      <td><img src='https://www.emeraldgrouppublishing.com/themes/custom/emerald_publishing/logo.svg' width='50px' height='50px'></td>
+      <td>Business, management & strategy</td>
+    </tr>
+    <tr>
+      <td>Advancing Sustainability Reporting in SMEs: Challenges and Opportunities in the Modern Landscape</td>
+      <td>The aim of this Special Issue is to explore the impact of digitalization on sustainability reporting practices, with a particular focus on small and medium-sized enterprises (SMEs).</td>
+      <td>31 Jan 2025</td>
+      <td><a href="https://www.emeraldgrouppublishing.com//calls-for-papers/advancing-sustainability-reporting-smes-challenges-and-opportunities-modern" target="_blank">Link</a></td>
+      <td><img src='https://www.emeraldgrouppublishing.com/themes/custom/emerald_publishing/logo.svg' width='50px' height='50px'></td>
+      <td>Business, management & strategy</td>
+    </tr>
+    <tr>
+      <td>Digital Sustainability</td>
+      <td>To approach the set of global changes that interlink digital transition objectives and structural changes involving the social, economic, technological and environmental domains.</td>
+      <td>15 Jun 2024</td>
+      <td><a href="https://www.emeraldgrouppublishing.com//calls-for-papers/digital-sustainability" target="_blank">Link</a></td>
+      <td><img src='https://www.emeraldgrouppublishing.com/themes/custom/emerald_publishing/logo.svg' width='50px' height='50px'></td>
+      <td>Business, management & strategy</td>
+    </tr>
+    <tr>
+      <td>Artificial Intelligence in Entrepreneurship</td>
+      <td>This special issue aims to explore various ways AI influences entrepreneurship, entrepreneurial decision-making processes and outcomes, and the potential opportunities and challenges these...</td>
+      <td>31 Dec 2024</td>
+      <td><a href="https://www.emeraldgrouppublishing.com//calls-for-papers/artificial-intelligence-entrepreneurship" target="_blank">Link</a></td>
+      <td><img src='https://www.emeraldgrouppublishing.com/themes/custom/emerald_publishing/logo.svg' width='50px' height='50px'></td>
+      <td>Business, management & strategy</td>
+    </tr>
+    <tr>
+      <td>Unpacking the Resilience Imperative in the Latin America and Caribbean Context</td>
+      <td>The aim of the special issue is to understand how to create and promote resilience and sustainability Latin America and Caribbean context.</td>
+      <td>29 Nov 2024</td>
+      <td><a href="https://www.emeraldgrouppublishing.com//calls-for-papers/unpacking-resilience-imperative-latin-america-and-caribbean-context" target="_blank">Link</a></td>
+      <td><img src='https://www.emeraldgrouppublishing.com/themes/custom/emerald_publishing/logo.svg' width='50px' height='50px'></td>
+      <td>Business, management & strategy</td>
+    </tr>
+    <tr>
+      <td>Artificial intelligence and family business</td>
+      <td>This special issue will examine how artificial intelligence is an emerging technology that has become a topical issue for many family businesses due to uncertainty regarding its usage and...</td>
+      <td>30 Sep 2024</td>
+      <td><a href="https://www.emeraldgrouppublishing.com//calls-for-papers/artificial-intelligence-and-family-business" target="_blank">Link</a></td>
+      <td><img src='https://www.emeraldgrouppublishing.com/themes/custom/emerald_publishing/logo.svg' width='50px' height='50px'></td>
+      <td>Business, management & strategy</td>
+    </tr>
+    <tr>
+      <td>Sustainability and family business</td>
+      <td>This Special Issue aims calls for an insightful and critical discussion about how Sustainability is articulated in organizations from the perspective of management and economics in family business.</td>
+      <td>01 Dec 2024</td>
+      <td><a href="https://www.emeraldgrouppublishing.com//calls-for-papers/sustainability-and-family-business" target="_blank">Link</a></td>
+      <td><img src='https://www.emeraldgrouppublishing.com/themes/custom/emerald_publishing/logo.svg' width='50px' height='50px'></td>
+      <td>Business, management & strategy</td>
+    </tr>
+    <tr>
+      <td>Continuity and resilience in transportation systems</td>
+      <td>This special issue aims to explore how to understand and enhance the continuity and resilience of transportation systems amidst disruptions.</td>
+      <td>30 Aug 2024</td>
+      <td><a href="https://www.emeraldgrouppublishing.com//calls-for-papers/continuity-and-resilience-transportation-systems" target="_blank">Link</a></td>
+      <td><img src='https://www.emeraldgrouppublishing.com/themes/custom/emerald_publishing/logo.svg' width='50px' height='50px'></td>
+      <td>Business, management & strategy</td>
+    </tr>
+    <tr>
+      <td>The future of language in international business management</td>
+      <td>We welcome contributions that explore the use, management, and impact of language in various organizational settings, and in particular contributions that explore innovative, future-oriented...</td>
+      <td>30 Sep 2024</td>
+      <td><a href="https://www.emeraldgrouppublishing.com//calls-for-papers/future-language-international-business-management" target="_blank">Link</a></td>
+      <td><img src='https://www.emeraldgrouppublishing.com/themes/custom/emerald_publishing/logo.svg' width='50px' height='50px'></td>
+      <td>Business, management & strategy</td>
+    </tr>
+    <tr>
+      <td>Reimagining theories and frameworks of entrepreneurship through the lens of transitional entrepreneurship</td>
+      <td>This special issue is to improve our understanding of how marginalized people can use entrepreneurship to reduce the negative consequences effects of stigma, bias, and discrimination.</td>
+      <td>15 Jul 2024</td>
+      <td><a href="https://www.emeraldgrouppublishing.com//calls-for-papers/reimagining-theories-and-frameworks-entrepreneurship-through-lens-transitional" target="_blank">Link</a></td>
+      <td><img src='https://www.emeraldgrouppublishing.com/themes/custom/emerald_publishing/logo.svg' width='50px' height='50px'></td>
+      <td>Business, management & strategy</td>
+    </tr>
+    <tr>
+      <td>Toward a new mandatory sustainability reporting landscape in Europe: Challenges and opportunities</td>
+      <td>The Special Issue welcomes studies that provide valuable insights into the new sustainability reporting landscape's consequences on academic, practical and social domains.</td>
+      <td>31 Jul 2024</td>
+      <td><a href="https://www.emeraldgrouppublishing.com//calls-for-papers/toward-a-new-mandatory-sustainability-reporting-landscape-europe-challenges-and" target="_blank">Link</a></td>
+      <td><img src='https://www.emeraldgrouppublishing.com/themes/custom/emerald_publishing/logo.svg' width='50px' height='50px'></td>
+      <td>Business, management & strategy</td>
+    </tr>
+    <tr>
+      <td>Beyond Traditional Fieldwork – Digital Ethnography’s Role in Understanding Modern Work(places)</td>
+      <td>This special issue examines the changing role of ethnography in organization and management research, highlighting its adaptation to modern, often digital, work environments. It focuses on digital...</td>
+      <td>01 Nov 2024</td>
+      <td><a href="https://www.emeraldgrouppublishing.com//calls-for-papers/beyond-traditional-fieldwork-digital-ethnographys-role-understanding-modern" target="_blank">Link</a></td>
+      <td><img src='https://www.emeraldgrouppublishing.com/themes/custom/emerald_publishing/logo.svg' width='50px' height='50px'></td>
+      <td>HR, learning & organisation studies</td>
+    </tr>
+    <tr>
+      <td>ONLY LITERATURE REVIEWS</td>
+      <td>Literature studies are essential for scientific cumulative knowledge development and usually extensively cited. Consequently, the editorial team of the Journal of Global Mobility (JGM) would like to...</td>
+      <td>01 Oct 2024</td>
+      <td><a href="https://www.emeraldgrouppublishing.com//calls-for-papers/only-literature-reviews" target="_blank">Link</a></td>
+      <td><img src='https://www.emeraldgrouppublishing.com/themes/custom/emerald_publishing/logo.svg' width='50px' height='50px'></td>
+      <td>HR, learning & organisation studies</td>
+    </tr>
+    <tr>
+      <td>Industrial Revolutions and Digital Transformation: Understanding Technological Embeddedness and Its Impact on Organizational Dynamics</td>
+      <td>The special issue aims to explore the multifaceted impact of digital transformation in the context of Industry 4.0 and 5.0, examining how technological embeddedness influences organizational dynamics.</td>
+      <td>31 Dec 2024</td>
+      <td><a href="https://www.emeraldgrouppublishing.com//calls-for-papers/industrial-revolutions-and-digital-transformation-understanding-technological" target="_blank">Link</a></td>
+      <td><img src='https://www.emeraldgrouppublishing.com/themes/custom/emerald_publishing/logo.svg' width='50px' height='50px'></td>
+      <td>HR, learning & organisation studies</td>
+    </tr>
+    <tr>
+      <td>Taking stock and charting the future: The management and implication of generative artificial intelligence (AI) for the changing workplace</td>
+      <td>This special issue aims to take stock, and also chart the future of the (un) known possibilities and potentialities of AI for the changing workplace.</td>
+      <td>30 May 2024</td>
+      <td><a href="https://www.emeraldgrouppublishing.com//calls-for-papers/taking-stock-and-charting-future-management-and-implication-generative-artificial" target="_blank">Link</a></td>
+      <td><img src='https://www.emeraldgrouppublishing.com/themes/custom/emerald_publishing/logo.svg' width='50px' height='50px'></td>
+      <td>HR, learning & organisation studies</td>
+    </tr>
+    <tr>
+      <td>Methodological Frontiers for Intersectional Theorizing: Advancing Qualitative Approaches for Research in Labour and Organizations</td>
+      <td>This special issue aims of providing management and organizational scholars with novel and useful epistemological and methodological approaches to help make sense of, theorize, and confront labour and...</td>
+      <td>30 Jun 2025</td>
+      <td><a href="https://www.emeraldgrouppublishing.com//calls-for-papers/methodological-frontiers-intersectional-theorizing-advancing-qualitative" target="_blank">Link</a></td>
+      <td><img src='https://www.emeraldgrouppublishing.com/themes/custom/emerald_publishing/logo.svg' width='50px' height='50px'></td>
+      <td>HR, learning & organisation studies</td>
+    </tr>
+    <tr>
+      <td>Metaverse and organizations: Perspectives from emerging economies</td>
+      <td>The special issue aims to explore various aspects of metaverse on organisations from an emerging economies perspective. It aims to explore both the bright and dark side of the metaverse in...</td>
+      <td>31 Jul 2024</td>
+      <td><a href="https://www.emeraldgrouppublishing.com//calls-for-papers/metaverse-and-organizations-perspectives-emerging-economies" target="_blank">Link</a></td>
+      <td><img src='https://www.emeraldgrouppublishing.com/themes/custom/emerald_publishing/logo.svg' width='50px' height='50px'></td>
+      <td>HR, learning & organisation studies</td>
+    </tr>
+    <tr>
+      <td>Enhancing and Celebrating Equity Diversity, and Inclusion (EDI) in the Labour Market: The Role of Socioeconomic Research and Public Policy</td>
+      <td>Given that the current EDI issues are in flux and there have been pervasively subpar outcomes for the vulnerable groups (indigenous people, racialized minorities, recent immigrants, 2SLGBTQ people...</td>
+      <td>30 Apr 2024</td>
+      <td><a href="https://www.emeraldgrouppublishing.com//calls-for-papers/enhancing-and-celebrating-equity-diversity-and-inclusion-edi-labour-market-role" target="_blank">Link</a></td>
+      <td><img src='https://www.emeraldgrouppublishing.com/themes/custom/emerald_publishing/logo.svg' width='50px' height='50px'></td>
+      <td>HR, learning & organisation studies</td>
+    </tr>
+    <tr>
+      <td>Learning Organizations and Tourism Sustainability</td>
+      <td>To develop and manage sustainable tourism practices, learning organizations and tourism sustainability play a crucial role. Scholars in the field of tourism from various parts of the globe have...</td>
+      <td>09 Apr 2024</td>
+      <td><a href="https://www.emeraldgrouppublishing.com//calls-for-papers/learning-organizations-and-tourism-sustainability" target="_blank">Link</a></td>
+      <td><img src='https://www.emeraldgrouppublishing.com/themes/custom/emerald_publishing/logo.svg' width='50px' height='50px'></td>
+      <td>HR, learning & organisation studies</td>
+    </tr>
+    <tr>
+      <td>STARA (smart technology, AI, robotics, and algorithms): Implications for career research</td>
+      <td>This SI aims to examine the implications of smart technology, AI, robotics, and algorithms (STARA) on career development and outcomes of workers in (non-)standard work.</td>
+      <td>02 Oct 2024</td>
+      <td><a href="https://www.emeraldgrouppublishing.com//calls-for-papers/stara-smart-technology-ai-robotics-and-algorithms-implications-career-research" target="_blank">Link</a></td>
+      <td><img src='https://www.emeraldgrouppublishing.com/themes/custom/emerald_publishing/logo.svg' width='50px' height='50px'></td>
+      <td>HR, learning & organisation studies</td>
+    </tr>
+    <tr>
+      <td>Sports Industry and Organizations: Social Issues, Social Responsibility and Philanthropy</td>
+      <td>This Special Issue elucidates the multifaceted ways in which sports organizations, events, athletes and stakeholders, can embrace their role as catalysts for positive social change.</td>
+      <td>19 Jan 2025</td>
+      <td><a href="https://www.emeraldgrouppublishing.com//calls-for-papers/sports-industry-and-organizations-social-issues-social-responsibility-and" target="_blank">Link</a></td>
+      <td><img src='https://www.emeraldgrouppublishing.com/themes/custom/emerald_publishing/logo.svg' width='50px' height='50px'></td>
+      <td>HR, learning & organisation studies</td>
+    </tr>
+    <tr>
+      <td>Managing the Twin Transformation: Driving Sustainability and Digitalisation in Organisations</td>
+      <td>The special issue addresses questions on how to manage the twin transition in organizations from a behavioural perspective.</td>
+      <td>31 Dec 2024</td>
+      <td><a href="https://www.emeraldgrouppublishing.com//calls-for-papers/managing-twin-transformation-driving-sustainability-and-digitalisation" target="_blank">Link</a></td>
+      <td><img src='https://www.emeraldgrouppublishing.com/themes/custom/emerald_publishing/logo.svg' width='50px' height='50px'></td>
+      <td>HR, learning & organisation studies</td>
+    </tr>
+    <tr>
+      <td>Spanning Boundaries in Business, Law and Tourism – Opportunities & Challenges for management development</td>
+      <td>This special issue showcases interdisciplinary research on emerging and contemporary challenges that affect management development, by initiating debate to further management theory and practice...</td>
+      <td>20 Dec 2024</td>
+      <td><a href="https://www.emeraldgrouppublishing.com//calls-for-papers/spanning-boundaries-business-law-and-tourism-opportunities-challenges-management" target="_blank">Link</a></td>
+      <td><img src='https://www.emeraldgrouppublishing.com/themes/custom/emerald_publishing/logo.svg' width='50px' height='50px'></td>
+      <td>HR, learning & organisation studies</td>
+    </tr>
+    <tr>
+      <td>Ethics and Sustainability in Gaming and Persuasive Systems</td>
+      <td>In this special issue, we aim to attract multidisciplinary contributions that deal with ethics and sustainability, along with sub-fields such as privacy, intercultural digital ethics, fair accountable...</td>
+      <td>30 Jun 2024</td>
+      <td><a href="https://www.emeraldgrouppublishing.com//calls-for-papers/ethics-and-sustainability-gaming-and-persuasive-systems" target="_blank">Link</a></td>
+      <td><img src='https://www.emeraldgrouppublishing.com/themes/custom/emerald_publishing/logo.svg' width='50px' height='50px'></td>
+      <td>Information & knowledge management</td>
+    </tr>
+    <tr>
+      <td>Circular supply chain strategy in Industry 4.0 under disruption and ambidexterity: challenges and risks</td>
+      <td>The circular supply chain strategy (CSCS) is to be an appropriate response to such challenges to manage supply chain activities under disruption and ambidexterity and to deal with challenges and risks...</td>
+      <td>30 Apr 2024</td>
+      <td><a href="https://www.emeraldgrouppublishing.com//calls-for-papers/circular-supply-chain-strategy-industry-40-under-disruption-and-ambidexterity" target="_blank">Link</a></td>
+      <td><img src='https://www.emeraldgrouppublishing.com/themes/custom/emerald_publishing/logo.svg' width='50px' height='50px'></td>
+      <td>Information & knowledge management</td>
+    </tr>
+    <tr>
+      <td>Transforming Industrial Competitiveness through Digital Service Innovation (DSI): Enabling Factors and Expected Outcomes</td>
+      <td>The role of services in manufacturing industries has become increasingly relevant as industrialized nations have progressively transitioned towards service-based economies (Hofmeister et al., 2023).</td>
+      <td>30 Apr 2024</td>
+      <td><a href="https://www.emeraldgrouppublishing.com//calls-for-papers/transforming-industrial-competitiveness-through-digital-service-innovation-dsi" target="_blank">Link</a></td>
+      <td><img src='https://www.emeraldgrouppublishing.com/themes/custom/emerald_publishing/logo.svg' width='50px' height='50px'></td>
+      <td>Information & knowledge management</td>
+    </tr>
+    <tr>
+      <td>Esports: A Multidisciplinary Research Perspective</td>
+      <td>Electronic sports, or esports as they are more generally known, have been referred to as “alternative sport realities” (Hemphill, 2005, p. 199), and can be defined more precisely as “professional or...</td>
+      <td>28 Mar 2024</td>
+      <td><a href="https://www.emeraldgrouppublishing.com//calls-for-papers/esports-a-multidisciplinary-research-perspective" target="_blank">Link</a></td>
+      <td><img src='https://www.emeraldgrouppublishing.com/themes/custom/emerald_publishing/logo.svg' width='50px' height='50px'></td>
+      <td>Information & knowledge management</td>
+    </tr>
+    <tr>
+      <td>Cybersecurity in the Higher Education Sector: Challenges, Solutions and Best Practices</td>
+      <td>Cybercriminals have identified universities as soft targets, with cyberattacks against the university sector on the rise over the past few years. The issues of cybersecurity are no longer confined...</td>
+      <td>30 Mar 2023</td>
+      <td><a href="https://www.emeraldgrouppublishing.com//calls-for-papers/cybersecurity-higher-education-sector-challenges-solutions-and-best-practices" target="_blank">Link</a></td>
+      <td><img src='https://www.emeraldgrouppublishing.com/themes/custom/emerald_publishing/logo.svg' width='50px' height='50px'></td>
+      <td>Information & knowledge management</td>
+    </tr>
+    <tr>
+      <td>Guidelines for Special Issues in The Bottom Line</td>
+      <td>Special Issues (SI) of The Bottom Line (TBL) play an important role in achieving the aims and scope of the Journal.</td>
+      <td>31 Dec 2040</td>
+      <td><a href="https://www.emeraldgrouppublishing.com//calls-for-papers/guidelines-special-issues-bottom-line" target="_blank">Link</a></td>
+      <td><img src='https://www.emeraldgrouppublishing.com/themes/custom/emerald_publishing/logo.svg' width='50px' height='50px'></td>
+      <td>Information & knowledge management</td>
+    </tr>
+    <tr>
+      <td>Integrating sustainability into the marketing of food services and food and beverage retail merchandising</td>
+      <td>This special issue aims to encourage a diverse array of research that can offer theoretical and practical insights into marketing sustainable food services and food and beverage retail merchandising.</td>
+      <td>01 Jul 2024</td>
+      <td><a href="https://www.emeraldgrouppublishing.com//calls-for-papers/integrating-sustainability-marketing-food-services-and-food-and-beverage-retail" target="_blank">Link</a></td>
+      <td><img src='https://www.emeraldgrouppublishing.com/themes/custom/emerald_publishing/logo.svg' width='50px' height='50px'></td>
+      <td>Marketing</td>
+    </tr>
+    <tr>
+      <td>Marketing with Anthropomorphised AI: Insights from Consumers</td>
+      <td>This SI intends to advance theoretical development and empirical research on anthropomorphised AI in the B2C context.</td>
+      <td>01 May 2024</td>
+      <td><a href="https://www.emeraldgrouppublishing.com//calls-for-papers/marketing-anthropomorphised-ai-insights-consumers" target="_blank">Link</a></td>
+      <td><img src='https://www.emeraldgrouppublishing.com/themes/custom/emerald_publishing/logo.svg' width='50px' height='50px'></td>
+      <td>Marketing</td>
+    </tr>
+    <tr>
+      <td>The whole is better than the sum of the parts: a service ecosystems approach to service interaction vulnerability</td>
+      <td>Exploring customer and frontline employee experiences of vulnerability using a service ecosystem approach, this special issue provides a holistic approach of service interaction vulnerability and...</td>
+      <td>01 May 2024</td>
+      <td><a href="https://www.emeraldgrouppublishing.com//calls-for-papers/whole-better-sum-parts-a-service-ecosystems-approach-service-interaction" target="_blank">Link</a></td>
+      <td><img src='https://www.emeraldgrouppublishing.com/themes/custom/emerald_publishing/logo.svg' width='50px' height='50px'></td>
+      <td>Marketing</td>
+    </tr>
+    <tr>
+      <td>Artificial Intelligence and Sport Business</td>
+      <td>Integrating robust datasets, learning algorithms, software programs, and hardware infrastructure, artificial intelligence (AI) has been exponentially elevating human society’s problem-solving capacity...</td>
+      <td>30 Jun 2024</td>
+      <td><a href="https://www.emeraldgrouppublishing.com//calls-for-papers/artificial-intelligence-and-sport-business" target="_blank">Link</a></td>
+      <td><img src='https://www.emeraldgrouppublishing.com/themes/custom/emerald_publishing/logo.svg' width='50px' height='50px'></td>
+      <td>Marketing</td>
+    </tr>
+    <tr>
+      <td>Brand Inclusivity</td>
+      <td>This SI aspires to investigate the concept of brand inclusivity, its definition and dimensions and explore the antecedents and consequences of brand inclusivity for firms and consumers.</td>
+      <td>01 Jul 2024</td>
+      <td><a href="https://www.emeraldgrouppublishing.com//calls-for-papers/brand-inclusivity" target="_blank">Link</a></td>
+      <td><img src='https://www.emeraldgrouppublishing.com/themes/custom/emerald_publishing/logo.svg' width='50px' height='50px'></td>
+      <td>Marketing</td>
+    </tr>
+    <tr>
+      <td>The History of Third Sector Marketing.</td>
+      <td>The marketing history of charities and non-governmental organisations is a neglected area of research. This issue seeks to address this gap in the academic literature.</td>
+      <td>01 May 2024</td>
+      <td><a href="https://www.emeraldgrouppublishing.com//calls-for-papers/history-third-sector-marketing" target="_blank">Link</a></td>
+      <td><img src='https://www.emeraldgrouppublishing.com/themes/custom/emerald_publishing/logo.svg' width='50px' height='50px'></td>
+      <td>Marketing</td>
+    </tr>
+    <tr>
+      <td>The Digital Revolution: The Role of Technology in Transforming Fashion Design, Branding, and Marketing</td>
+      <td>This special issue examines current problems concerning digital technology and its interplay with design, branding and marketing, exploring the use of research and practice for the retail industry...</td>
+      <td>31 May 2024</td>
+      <td><a href="https://www.emeraldgrouppublishing.com//calls-for-papers/digital-revolution-role-technology-transforming-fashion-design-branding-and" target="_blank">Link</a></td>
+      <td><img src='https://www.emeraldgrouppublishing.com/themes/custom/emerald_publishing/logo.svg' width='50px' height='50px'></td>
+      <td>Marketing</td>
+    </tr>
+    <tr>
+      <td>Interpretive Approaches to Branding</td>
+      <td>The SI collects papers about branding and grounded in interpretive approaches, both theoretical and methodological.</td>
+      <td>30 Jun 2024</td>
+      <td><a href="https://www.emeraldgrouppublishing.com//calls-for-papers/interpretive-approaches-branding" target="_blank">Link</a></td>
+      <td><img src='https://www.emeraldgrouppublishing.com/themes/custom/emerald_publishing/logo.svg' width='50px' height='50px'></td>
+      <td>Marketing</td>
+    </tr>
+    <tr>
+      <td>Participating in the Arts Market: A Path towards Transformation?</td>
+      <td>The Special Issue explores the socio-political potential of consumer participation in the arts market and its complex relationship to individual activation, community empowerment, institutional change...</td>
+      <td>31 Jul 2024</td>
+      <td><a href="https://www.emeraldgrouppublishing.com//calls-for-papers/participating-arts-market-a-path-towards-transformation" target="_blank">Link</a></td>
+      <td><img src='https://www.emeraldgrouppublishing.com/themes/custom/emerald_publishing/logo.svg' width='50px' height='50px'></td>
+      <td>Marketing</td>
+    </tr>
+    <tr>
+      <td>Institutional Technologies and the New Frontiers of International Marketing and Global Supply Chain Management</td>
+      <td>The purpose of this special issue is to provide a comprehensive understanding of the challenges and opportunities associated with managing the interface between international marketing and global SCM...</td>
+      <td>30 Sep 2024</td>
+      <td><a href="https://www.emeraldgrouppublishing.com//calls-for-papers/institutional-technologies-and-new-frontiers-international-marketing-and-global-0" target="_blank">Link</a></td>
+      <td><img src='https://www.emeraldgrouppublishing.com/themes/custom/emerald_publishing/logo.svg' width='50px' height='50px'></td>
+      <td>Marketing</td>
+    </tr>
+    <tr>
+      <td>Advancing International Marketing Strategy: Innovative Conceptual Insights and Comprehensive Literature Reviews</td>
+      <td>The special issue editors encourage scholars to submit conceptual papers or review articles that demonstrate the value of cross-fertilization of ideas between IMS and other research streams, both...</td>
+      <td>01 Apr 2025</td>
+      <td><a href="https://www.emeraldgrouppublishing.com//calls-for-papers/advancing-international-marketing-strategy-innovative-conceptual-insights-and" target="_blank">Link</a></td>
+      <td><img src='https://www.emeraldgrouppublishing.com/themes/custom/emerald_publishing/logo.svg' width='50px' height='50px'></td>
+      <td>Marketing</td>
+    </tr>
+    <tr>
+      <td>Healthy aging and tourism as a way of promoting global public health: A call for cross-disciplinary research</td>
+      <td>The special issue encourages cross-disciplinary investigations that examine the interplay between healthy aging and tourism to promote public health.</td>
+      <td>15 Mar 2024</td>
+      <td><a href="https://www.emeraldgrouppublishing.com//calls-for-papers/healthy-aging-and-tourism-a-way-promoting-global-public-health-a-call-cross" target="_blank">Link</a></td>
+      <td><img src='https://www.emeraldgrouppublishing.com/themes/custom/emerald_publishing/logo.svg' width='50px' height='50px'></td>
+      <td>Marketing</td>
+    </tr>
+    <tr>
+      <td>Sustainability Management from a Behavioral Perspective in Hospitality and Tourism</td>
+      <td>This special issue aims to address this gap by investigating how employees and customers in the hospitality tourism industries may promote sustainable management practices.</td>
+      <td>30 Sep 2024</td>
+      <td><a href="https://www.emeraldgrouppublishing.com//calls-for-papers/sustainability-management-a-behavioral-perspective-hospitality-and-tourism" target="_blank">Link</a></td>
+      <td><img src='https://www.emeraldgrouppublishing.com/themes/custom/emerald_publishing/logo.svg' width='50px' height='50px'></td>
+      <td>Tourism & hospitality management</td>
+    </tr>
+    <tr>
+      <td>The value of events education – reflecting on the past and shaping the future</td>
+      <td>This special issue will examine the evolution of events education and explore its value to the continuing development of the events industry</td>
+      <td>01 May 2025</td>
+      <td><a href="https://www.emeraldgrouppublishing.com//calls-for-papers/value-events-education-reflecting-past-and-shaping-future" target="_blank">Link</a></td>
+      <td><img src='https://www.emeraldgrouppublishing.com/themes/custom/emerald_publishing/logo.svg' width='50px' height='50px'></td>
+      <td>Tourism & hospitality management</td>
+    </tr>
+    <tr>
+      <td>Fostering belonging through event design</td>
+      <td>This special issue will advance events research by moving the conversation from how Diversity, Equity and Inclusion practices may be implemented, towards how event design can foster belonging –...</td>
+      <td>01 Jul 2024</td>
+      <td><a href="https://www.emeraldgrouppublishing.com//calls-for-papers/fostering-belonging-through-event-design" target="_blank">Link</a></td>
+      <td><img src='https://www.emeraldgrouppublishing.com/themes/custom/emerald_publishing/logo.svg' width='50px' height='50px'></td>
+      <td>Tourism & hospitality management</td>
+    </tr>
+    <tr>
+      <td>Visual turn in tourism, hospitality and leisure research</td>
+      <td>This special issue provides a space for a collection of articles showcasing some of the major contemporary themes of visual tourism, hospitality and leisure studies and an exploration of the variety...</td>
+      <td>05 Apr 2024</td>
+      <td><a href="https://www.emeraldgrouppublishing.com//calls-for-papers/visual-turn-tourism-hospitality-and-leisure-research" target="_blank">Link</a></td>
+      <td><img src='https://www.emeraldgrouppublishing.com/themes/custom/emerald_publishing/logo.svg' width='50px' height='50px'></td>
+      <td>Tourism & hospitality management</td>
+    </tr>
+    <tr>
+      <td>Liveable Cities for Locals and Visitors: Challenges and Opportunities for Destinations</td>
+      <td>The main aim of this special issue is to show that intangible factors such as the environment (and the atmosphere it contributes to create) are as important as tangible factors for liveable cities.</td>
+      <td>31 Jan 2024</td>
+      <td><a href="https://www.emeraldgrouppublishing.com//calls-for-papers/liveable-cities-locals-and-visitors-challenges-and-opportunities-destinations" target="_blank">Link</a></td>
+      <td><img src='https://www.emeraldgrouppublishing.com/themes/custom/emerald_publishing/logo.svg' width='50px' height='50px'></td>
+      <td>Tourism & hospitality management</td>
+    </tr>
+    <tr>
+      <td>Emerging technologies in events</td>
+      <td>This special issue seeks to unpack emerging technologies in the events landscape in response to the adoption of new digital tools in the sector.</td>
+      <td>31 May 2024</td>
+      <td><a href="https://www.emeraldgrouppublishing.com//calls-for-papers/emerging-technologies-events" target="_blank">Link</a></td>
+      <td><img src='https://www.emeraldgrouppublishing.com/themes/custom/emerald_publishing/logo.svg' width='50px' height='50px'></td>
+      <td>Tourism & hospitality management</td>
+    </tr>
+    <tr>
+      <td>Transformation and the Regenerative Future of Tourism (By Special Invitation Only)</td>
+      <td>JOURNAL OF TOURSIM FUTURES SPECIAL ISSUE Transformation and the Regenerative Future of Tourism Guest Editors Irena Ateljevic, Institute for Tourism, Croatia – Email: [email protected] Pauline J...</td>
+      <td>30 May 2022</td>
+      <td><a href="https://www.emeraldgrouppublishing.com//journal/jtf/transformation-and-regenerative-future-tourism-special-invitation-only" target="_blank">Link</a></td>
+      <td><img src='https://www.emeraldgrouppublishing.com/themes/custom/emerald_publishing/logo.svg' width='50px' height='50px'></td>
+      <td>Tourism & hospitality management</td>
+    </tr>
+    <tr>
+      <td>The Future of Work and its Long-standing Supply Chain Implications: Lessons from the Pandemic and Beyond</td>
+      <td>The SI issue explores flexible work arrangements' impact on supply chain resilience and future work dynamics, welcoming empirical and theoretical studies using diverse research methodologies.</td>
+      <td>31 Mar 2025</td>
+      <td><a href="https://www.emeraldgrouppublishing.com//calls-for-papers/future-work-and-its-long-standing-supply-chain-implications-lessons-pandemic-and" target="_blank">Link</a></td>
+      <td><img src='https://www.emeraldgrouppublishing.com/themes/custom/emerald_publishing/logo.svg' width='50px' height='50px'></td>
+      <td>Operations, logistics & quality</td>
+    </tr>
+    <tr>
+      <td>Healthcare and Humanitarian Supply Chains in Africa</td>
+      <td>The special issue aims to explore and showcase cutting-edge research on emerging trends in healthcare and humanitarian supply chains in Africa.</td>
+      <td>31 Dec 2024</td>
+      <td><a href="https://www.emeraldgrouppublishing.com//calls-for-papers/healthcare-and-humanitarian-supply-chains-africa" target="_blank">Link</a></td>
+      <td><img src='https://www.emeraldgrouppublishing.com/themes/custom/emerald_publishing/logo.svg' width='50px' height='50px'></td>
+      <td>Operations, logistics & quality</td>
+    </tr>
+    <tr>
+      <td>Business model innovation and transformation towards net zero in digital services: theoretical foundations and industry implications</td>
+      <td>The aim of the proposed special issue is to advance theoretical foundations and industry implications concerning business model innovation and transformation towards net zero in digital service firms.</td>
+      <td>31 Oct 2024</td>
+      <td><a href="https://www.emeraldgrouppublishing.com//calls-for-papers/business-model-innovation-and-transformation-towards-net-zero-digital-services" target="_blank">Link</a></td>
+      <td><img src='https://www.emeraldgrouppublishing.com/themes/custom/emerald_publishing/logo.svg' width='50px' height='50px'></td>
+      <td>Operations, logistics & quality</td>
+    </tr>
+    <tr>
+      <td>Crafting Immersive Service Experiences: Bridging Fiction and Reality</td>
+      <td>The special issue will contribute novel insights into the intersection of immersive technologies and service management, expanding the theoretical and empirical landscape of service theory and...</td>
+      <td>30 Nov 2024</td>
+      <td><a href="https://www.emeraldgrouppublishing.com//calls-for-papers/crafting-immersive-service-experiences-bridging-fiction-and-reality" target="_blank">Link</a></td>
+      <td><img src='https://www.emeraldgrouppublishing.com/themes/custom/emerald_publishing/logo.svg' width='50px' height='50px'></td>
+      <td>Operations, logistics & quality</td>
+    </tr>
+    <tr>
+      <td>Operational Excellence and Quality Improvement in Northern Africa</td>
+      <td>This SI highlights the current state of Operational Excellence in Northern Africa as well as analysing the different tools and practises utilised across different organizations.</td>
+      <td>31 May 2024</td>
+      <td><a href="https://www.emeraldgrouppublishing.com//calls-for-papers/operational-excellence-and-quality-improvement-northern-africa" target="_blank">Link</a></td>
+      <td><img src='https://www.emeraldgrouppublishing.com/themes/custom/emerald_publishing/logo.svg' width='50px' height='50px'></td>
+      <td>Operations, logistics & quality</td>
+    </tr>
+    <tr>
+      <td>Modern Slavery and Supply Chain Management</td>
+      <td>The special issue seeks interdisciplinary research embedded in global supply chains which offers practitioners and researchers novel insights into modern slavery and encourages future work to push the...</td>
+      <td>30 Jun 2025</td>
+      <td><a href="https://www.emeraldgrouppublishing.com//calls-for-papers/modern-slavery-and-supply-chain-management" target="_blank">Link</a></td>
+      <td><img src='https://www.emeraldgrouppublishing.com/themes/custom/emerald_publishing/logo.svg' width='50px' height='50px'></td>
+      <td>Operations, logistics & quality</td>
+    </tr>
+    <tr>
+      <td>Operational Excellence in Africa</td>
+      <td>The special issue of the International Journal of Lean Six Sigma will focus on issues surrounding the current state of Quality Management and Operational Excellence in Africa as well as analysing the...</td>
+      <td>31 Jul 2024</td>
+      <td><a href="https://www.emeraldgrouppublishing.com//calls-for-papers/operational-excellence-africa" target="_blank">Link</a></td>
+      <td><img src='https://www.emeraldgrouppublishing.com/themes/custom/emerald_publishing/logo.svg' width='50px' height='50px'></td>
+      <td>Operations, logistics & quality</td>
+    </tr>
+    <tr>
+      <td>Digital transformation, knowledge management, innovation and inclusion in the digital age: Shapping ASEAN’s future</td>
+      <td>The aim of the special issue is to discuss challenges, initiatives, opportunities, and trends for digital transformation in ASEAN.</td>
+      <td>30 Jun 2024</td>
+      <td><a href="https://www.emeraldgrouppublishing.com//calls-for-papers/digital-transformation-knowledge-management-innovation-and-inclusion-digital-age" target="_blank">Link</a></td>
+      <td><img src='https://www.emeraldgrouppublishing.com/themes/custom/emerald_publishing/logo.svg' width='50px' height='50px'></td>
+      <td>Operations, logistics & quality</td>
+    </tr>
+    <tr>
+      <td>Emergency response logistics</td>
+      <td>The special issue in “Emergency Response Logistics” aims to create a confluence of diverse research that unravels the unique challenges posed by different ranges of emergencies— from frequent...</td>
+      <td>31 Mar 2024</td>
+      <td><a href="https://www.emeraldgrouppublishing.com//calls-for-papers/emergency-response-logistics" target="_blank">Link</a></td>
+      <td><img src='https://www.emeraldgrouppublishing.com/themes/custom/emerald_publishing/logo.svg' width='50px' height='50px'></td>
+      <td>Operations, logistics & quality</td>
+    </tr>
+    <tr>
+      <td>Metaverse Adoption and Implementation in Logistics and Supply Chain Management: Challenges, Issues and Opportunities</td>
+      <td>This special issue will cover all aspects related to the metaverse adoption and implementation in logistics and supply chain management.</td>
+      <td>31 Jul 2024</td>
+      <td><a href="https://www.emeraldgrouppublishing.com//calls-for-papers/metaverse-adoption-and-implementation-logistics-and-supply-chain-management" target="_blank">Link</a></td>
+      <td><img src='https://www.emeraldgrouppublishing.com/themes/custom/emerald_publishing/logo.svg' width='50px' height='50px'></td>
+      <td>Operations, logistics & quality</td>
+    </tr>
+    <tr>
+      <td>Women in supply chain and logistics under the Industry 4.0 and Industry 5.0 workplace environment.</td>
+      <td>A forum for scholars to further understand the role of new technologies in creating gender balance in the supply chain and logistics industry.</td>
+      <td>16 Jun 2024</td>
+      <td><a href="https://www.emeraldgrouppublishing.com//calls-for-papers/women-supply-chain-and-logistics-under-industry-40-and-industry-50-workplace" target="_blank">Link</a></td>
+      <td><img src='https://www.emeraldgrouppublishing.com/themes/custom/emerald_publishing/logo.svg' width='50px' height='50px'></td>
+      <td>Operations, logistics & quality</td>
+    </tr>
+    <tr>
+      <td>Managing emergent uncertainties through adaptable supply chain planning</td>
+      <td>This SI intends to address developments in SCP – extending the theory and the nature of SCP, while advancing the contemporary discussion on practices such as S&OP, integrated business planning, demand...</td>
+      <td>01 Jun 2024</td>
+      <td><a href="https://www.emeraldgrouppublishing.com//calls-for-papers/managing-emergent-uncertainties-through-adaptable-supply-chain-planning" target="_blank">Link</a></td>
+      <td><img src='https://www.emeraldgrouppublishing.com/themes/custom/emerald_publishing/logo.svg' width='50px' height='50px'></td>
+      <td>Operations, logistics & quality</td>
+    </tr>
+  </tbody>
+</table>
+                        
+                        </div>
+                    </div>
+                    </main>
+                </div>
+                <script>
+        function filterTable() {
+                  var input, filter, table, tr, td, i, txtValue;
+                  input = document.getElementById("subjectDropdown");
+                  filter = input.value.toUpperCase();
+                  table = document.getElementsByTagName("table")[0];
+                  tr = table.getElementsByTagName("tr");
+
+                  
+
+                  // Loop through all table rows, and show those that match the selected subject
+                  for (i = 0; i < tr.length; i++) {
+                      td = tr[i].getElementsByTagName("td")[5]; // Assuming the search is based on the fifth column (subject_key)
+                      if (td) {
+                          txtValue = td.textContent || td.innerText;
+                          if (filter === "all" || txtValue.toUpperCase().indexOf(filter) > -1) {
+                              tr[i].style.display = "";
+                          } else {
+                              tr[i].style.display = "none";
+                          }
+                      }
+                  }
+              }
+
+        
+         function searchFunction() {
+        // Declare variables
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementById("searchInput");
+        filter = input.value.toUpperCase();
+        table = document.getElementsByTagName("table")[0];
+        tr = table.getElementsByTagName("tr");
+
+        // Loop through all table rows, and hide those who don't match the search query
+        for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[0]; // Assuming the search is based on the first column (title)
+            if (td) {
+                txtValue = td.textContent || td.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                }
+            }
+        }
+    }
+    </script>
+                </body>
+                </html>
+                

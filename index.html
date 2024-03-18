@@ -1,86 +1,133 @@
 <!DOCTYPE html>
 <html lang="en" class="h-full bg-gray-100">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Publishers</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="icon" href="/pictures/sze_logo.png" sizes="144x144">
-</head>
-<style>
+    <link rel="icon" href="/pictures/sze_logo.png" sizes="144x144" />
+  </head>
+  <style>
     table {
-                            font-family: Arial, sans-serif;
-                            border-collapse: collapse;
-                            
-                            margin: auto;
-                        }
-                        th, td {
-                            border-bottom: 1px solid #dddddd;
-                            text-align: left;
-                            padding: 16px;
-                        }
-                        
-                        a {
-                            color: #007BFF;
-                            text-decoration: none;
-                            cursor: pointer;
-                        }
-                        #subjectDropdown {
-                            margin-bottom: 50px;
-                        }
-                        .min-h-screen {
-                            /* Prevent vertical centering */
-                            display: flex;
-                            align-items: flex-start; /* Align content to the start (top) of the container */
-                        }
-                        tr:hover td {
-                          background-color: lightgrey;
-                        }
-</style>
+      font-family: Arial, sans-serif;
+      border-collapse: collapse;
 
-<body class="h-full">
+      margin: auto;
+    }
+    th,
+    td {
+      border-bottom: 1px solid #dddddd;
+      text-align: left;
+      padding: 16px;
+    }
+
+    a {
+      color: #007bff;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    #subjectDropdown {
+      margin-bottom: 50px;
+    }
+    .min-h-screen {
+      /* Prevent vertical centering */
+      display: flex;
+      align-items: flex-start; /* Align content to the start (top) of the container */
+    }
+    tr:hover td {
+      background-color: lightgrey;
+    }
+  </style>
+
+  <body class="h-full">
     <div class="min-h-full">
-        <nav class="bg-gray-800" style="position: fixed; width:100%">
-            <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                <div class="flex h-16 items-center justify-between">
-                    <div class="flex items-center">
-                        <div class="flex-shrink-0">
-                            <img class="h-8 w-8" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500" alt="Your Company">
-                        </div>
-                        <div class="hidden md:block">
-                            <div class="ml-10 flex items-baseline space-x-4">
-                                <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-                                <a href="#" class="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium" aria-current="page">Dashboard</a>
-                                <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Team</a>
-                                <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Projects</a>
-                                <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Calendar</a>
-                                <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Reports</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="hidden md:block">
+      <nav class="bg-gray-800 " style="position: fixed; width: 100%">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div class="flex h-16 items-center justify-between">
+            <div class="flex items-center">
+              <div class="flex-shrink-0">
+                <img
+                  class="h-8 w-8"
+                  src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
+                  alt="Your Company"
+                />
+              </div>
+              <div class="hidden md:block">
+                <div class="ml-10 flex items-baseline space-x-4">
+                  <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                  <a
+                    href="#"
+                    class="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium"
+                    aria-current="page"
+                    >Dashboard</a
+                  >
+                  <a
+                    href="#"
+                    class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+                    >Team</a
+                  >
+                  <a
+                    href="#"
+                    class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+                    >Projects</a
+                  >
+                  <a
+                    href="#"
+                    class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+                    >Calendar</a
+                  >
+                  <a
+                    href="#"
+                    class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+                    >Reports</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="hidden md:block">
+              <div class="ml-4 flex items-center md:ml-6">
+                <button
+                  type="button"
+                  class="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+                >
+                  <span class="absolute -inset-1.5"></span>
+                  <span class="sr-only">View notifications</span>
+                  <svg
+                    class="h-6 w-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0"
+                    />
+                  </svg>
+                </button>
 
-                        <div class="ml-4 flex items-center md:ml-6">
-                            <button type="button" class="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
-                <span class="absolute -inset-1.5"></span>
-                <span class="sr-only">View notifications</span>
-                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0" />
-                </svg>
-              </button>
+                <!-- Profile dropdown -->
+                <div class="relative ml-3">
+                  <div>
+                    <button
+                      type="button"
+                      class="relative flex max-w-xs items-center rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+                      id="user-menu-button"
+                      aria-expanded="false"
+                      aria-haspopup="true"
+                    >
+                      <span class="sr-only">Open user menu</span>
+                      <img
+                        class="h-8 w-8 rounded-full"
+                        src="pictures/SzSzG-profile-picture.jpg"
+                        alt=""
+                      />
+                    </button>
+                  </div>
 
-                            <!-- Profile dropdown -->
-                            <div class="relative ml-3">
-                                <div>
-                                    <button type="button" class="relative flex max-w-xs items-center rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800" id="user-menu-button" aria-expanded="false" aria-haspopup="true">
-                    
-                    <span class="sr-only">Open user menu</span>
-                    <img class="h-8 w-8 rounded-full" src="pictures/SzSzG-profile-picture.jpg" alt="">
-                  </button>
-                                </div>
-
-                                <!--
+                  <!--
                   Dropdown menu, show/hide based on menu state.
   
                   Entering: "transition ease-out duration-100"
@@ -89,70 +136,128 @@
                   Leaving: "transition ease-in duration-75"
                     From: "transform opacity-100 scale-100"
                     To: "transform opacity-0 scale-95"
-                -->
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="-mr-2 flex md:hidden">
-                        <!-- Mobile menu button -->
-                        <button type="button" class="relative inline-flex items-center justify-center rounded-md bg-gray-800 p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800" aria-controls="mobile-menu" aria-expanded="false">
-              <span class="absolute -inset-0.5"></span>
-              <span class="sr-only">Open main menu</span>
-              <!-- Menu open: "hidden", Menu closed: "block" -->
-              <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-              </svg>
-              <!-- Menu open: "block", Menu closed: "hidden" -->
-              <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-              </svg>
-            </button>
-                    </div>
-                </div>
+                --></div>
+              </div>
             </div>
-        </nav>
-
-        <header class="bg-white shadow rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none" style="position: fixed; width:100%; top:64px">
-            <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
-                <h1 class="text-3xl font-bold tracking-tight text-gray-900">Publishers</h1>
+            <div class="-mr-2 flex md:hidden">
+              <!-- Mobile menu button -->
+              <button
+                type="button"
+                class="relative inline-flex items-center justify-center rounded-md bg-gray-800 p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+                aria-controls="mobile-menu"
+                aria-expanded="false"
+              >
+                <span class="absolute -inset-0.5"></span>
+                <span class="sr-only">Open main menu</span>
+                <!-- Menu open: "hidden", Menu closed: "block" -->
+                <svg
+                  class="block h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                  />
+                </svg>
+                <!-- Menu open: "block", Menu closed: "hidden" -->
+                <svg
+                  class="hidden h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                </svg>
+              </button>
             </div>
-        </header>
+          </div>
+        </div>
+      </nav>
 
-        <main>
-            <div class="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">
+      <header
+        class="bg-white shadow rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
+        style="position: fixed; width: 100%; top: 64px"
+      >
+        <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
+          <h1 class="text-3xl font-bold tracking-tight text-gray-900">
+            Publishers
+          </h1>
+        </div>
+      </header>
 
-                <p class="text-base mb-4"> </p>
-                <div class="flex justify-between" style="margin-top: 200px">
-                    <div>
-                        <!-- <label for="searchInput" class="text-sm font-medium text-gray-500">Search for title</label><br> -->
-                        <input type="text" id="searchInput" onkeyup="searchFunction()" placeholder="Search title..." title="Type in a name" class="p-2 mb-4 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
-                    </div>
-                    <div>
-                        <!-- <label for="subjectDropdown" class="text-sm font-medium text-gray-500">Select Subject:</label> -->
-                        <select id="subjectDropdown" onchange="filterTable()" class="block mt-1 p-2 border-gray-300 rounded-md rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
-                                      <option value="all">All Subjects</option>
-                                       <!-- Add options for each subject_key -->
-                                      <option value="Accounting finance & economics">Accounting finance & economics</option>
-                                      <option value="Business, management & strategy">Business, management & strategy</option>
-                                      <option value="HR, learning & organisation studies">HR, learning & organisation studies</option>
-                                      <option value="Information & knowledge management">Information & knowledge management</option>
-                                      <option value="Marketing">Marketing</option>
-                                      <option value="Tourism & hospitality management">Tourism & hospitality management</option>
-                                      <option value="Operations, logistics & quality">Operations, logistics & quality</option>
-                                      <option value="Business, Management and Accounting">Business, Management and Accounting</option>
-                                      <option value="Economics, Econometrics and Finance - (Finance)">Economics, Econometrics and Finance - (Finance)</option>
-                                      
-                                      
-                                      <!-- Add other subjects as needed -->
-                                  </select>
-                    </div>
-                </div>
+      <main>
+        <div class="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">
+          <p class="text-base mb-4"></p>
+          <div class="flex justify-between" style="margin-top: 200px">
+            <div>
+              <!-- <label for="searchInput" class="text-sm font-medium text-gray-500">Search for title</label><br> -->
+              <input
+                type="text"
+                id="searchInput"
+                onkeyup="searchFunction()"
+                placeholder="Search title..."
+                title="Type in a name"
+                class="p-2 mb-4 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
+              />
+            </div>
+            <div>
+              <!-- <label for="subjectDropdown" class="text-sm font-medium text-gray-500">Select Subject:</label> -->
+              <select
+                id="subjectDropdown"
+                onchange="filterTable()"
+                class="block mt-1 p-2 border-gray-300 rounded-md rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
+              >
+                <option value="all">All Subjects</option>
+                <!-- Add options for each subject_key -->
+                <option value="Accounting finance & economics">
+                  Accounting finance & economics
+                </option>
+                <option value="Business, management & strategy">
+                  Business, management & strategy
+                </option>
+                <option value="HR, learning & organisation studies">
+                  HR, learning & organisation studies
+                </option>
+                <option value="Information & knowledge management">
+                  Information & knowledge management
+                </option>
+                <option value="Marketing">Marketing</option>
+                <option value="Tourism & hospitality management">
+                  Tourism & hospitality management
+                </option>
+                <option value="Operations, logistics & quality">
+                  Operations, logistics & quality
+                </option>
+                <option value="Business, Management and Accounting">
+                  Business, Management and Accounting
+                </option>
+                <option value="Economics, Econometrics and Finance - (Finance)">
+                  Economics, Econometrics and Finance - (Finance)
+                </option>
 
-                <div class="">
-                    <span id="rowCount" class="text-sm font-medium text-gray-500">ydv</span> 
-                    
-                    <table class="dataframe mt-5" id="myTable">
+                <!-- Add other subjects as needed -->
+              </select>
+            </div>
+          </div>
+
+          <div class="">
+            <span
+              id="rowCount"
+              class="text-sm font-medium text-gray-500"
+            ></span>
+
+            <table class="dataframe mt-5" id="myTable">
   <thead>
     <tr style="text-align: right;">
       <th>Title</th>
@@ -309,6 +414,14 @@
       <td>HR, learning & organisation studies</td>
     </tr>
     <tr>
+      <td>Industrial Management & Data Systems (IMDS) Call for Special Issue proposals.</td>
+      <td>Industrial Management & Data Systems (IMDS) invites interested researchers to submit a special issue proposal to publish the special issue papers in 2025. We are open to any emerging topics that fit...</td>
+      <td>2024. április 30.</td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.emeraldgrouppublishing.com//calls-for-papers/industrial-management-data-systems-imds-call-special-issue-proposals" target="_blank">Link</a></td>
+      <td><img src='https://www.emeraldgrouppublishing.com/themes/custom/emerald_publishing/logo.svg' width='50px' height='50px'> <br> Emerald</td>
+      <td>Information & knowledge management</td>
+    </tr>
+    <tr>
       <td>Celebrating the multidisciplinary contribution of entrepreneurial research on inclusive socio-economic development</td>
       <td>The special issue aims to recognise the diverse entrepreneurial research and its contributions to inclusive socio-economic development through theoretical discourse, practical implications and policy...</td>
       <td>2024. augusztus 25.</td>
@@ -345,14 +458,6 @@
       <td>Electronic sports, or esports as they are more generally known, have been referred to as “alternative sport realities” (Hemphill, 2005, p. 199), and can be defined more precisely as “professional or...</td>
       <td>2024. március 28.</td>
       <td><a class="text-blue-500 hover:underline" href="https://www.emeraldgrouppublishing.com//calls-for-papers/esports-a-multidisciplinary-research-perspective" target="_blank">Link</a></td>
-      <td><img src='https://www.emeraldgrouppublishing.com/themes/custom/emerald_publishing/logo.svg' width='50px' height='50px'> <br> Emerald</td>
-      <td>Information & knowledge management</td>
-    </tr>
-    <tr>
-      <td>Cybersecurity in the Higher Education Sector: Challenges, Solutions and Best Practices</td>
-      <td>Cybercriminals have identified universities as soft targets, with cyberattacks against the university sector on the rise over the past few years. The issues of cybersecurity are no longer confined...</td>
-      <td>2023. március 30.</td>
-      <td><a class="text-blue-500 hover:underline" href="https://www.emeraldgrouppublishing.com//calls-for-papers/cybersecurity-higher-education-sector-challenges-solutions-and-best-practices" target="_blank">Link</a></td>
       <td><img src='https://www.emeraldgrouppublishing.com/themes/custom/emerald_publishing/logo.svg' width='50px' height='50px'> <br> Emerald</td>
       <td>Information & knowledge management</td>
     </tr>
@@ -492,44 +597,1111 @@
       <td><img src='https://www.emeraldgrouppublishing.com/themes/custom/emerald_publishing/logo.svg' width='50px' height='50px'> <br> Emerald</td>
       <td>Operations, logistics & quality</td>
     </tr>
+    <tr>
+      <td>Integrating Inclusive Finance and Sustainability: Pathways to Carbon Neutrality and Nature-Positive Futures</td>
+      <td>Research in International Business and Finance • Impact Factor 6.5 • CiteScore 9.1</td>
+      <td>2024. december 31.</td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.sciencedirect.com/journal/research-in-international-business-and-finance/about/call-for-papers#integrating-inclusive-finance-and-sustainability-pathways-to-carbon-neutrality-and-nature-positive-futures" target="_blank">Link</a></td>
+      <td><img src='https://sdfestaticassets-eu-west-1.sciencedirectassets.com/shared-assets/24/images/elsevier-non-solus-new-grey.svg' width='50px' height='50px'> <br> Elsevier</td>
+      <td>Business, Management and Accounting</td>
+    </tr>
+    <tr>
+      <td>Design and Entrepreneurship</td>
+      <td>Journal of Business Venturing Design</td>
+      <td>2024. június 01.</td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.sciencedirect.com/journal/journal-of-business-venturing-design/about/call-for-papers#design-and-entrepreneurship" target="_blank">Link</a></td>
+      <td><img src='https://sdfestaticassets-eu-west-1.sciencedirectassets.com/shared-assets/24/images/elsevier-non-solus-new-grey.svg' width='50px' height='50px'> <br> Elsevier</td>
+      <td>Business, Management and Accounting</td>
+    </tr>
+    <tr>
+      <td>Literature Reviews driving the field of purchasing and supply chain management forward</td>
+      <td>Journal of Purchasing and Supply Management • Impact Factor 6.1 • CiteScore 13.2</td>
+      <td>2024. november 30.</td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.sciencedirect.com/journal/journal-of-purchasing-and-supply-management/about/call-for-papers#literature-reviews-driving-the-field-of-purchasing-and-supply-chain-management-forward" target="_blank">Link</a></td>
+      <td><img src='https://sdfestaticassets-eu-west-1.sciencedirectassets.com/shared-assets/24/images/elsevier-non-solus-new-grey.svg' width='50px' height='50px'> <br> Elsevier</td>
+      <td>Business, Management and Accounting</td>
+    </tr>
+    <tr>
+      <td>Best Papers of the ICPM 2023 Conference</td>
+      <td>Information Systems • Impact Factor 3.7 • CiteScore 7.9</td>
+      <td>2024. március 27.</td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.sciencedirect.com/journal/information-systems/about/call-for-papers#best-papers-of-the-icpm-2023-conference" target="_blank">Link</a></td>
+      <td><img src='https://sdfestaticassets-eu-west-1.sciencedirectassets.com/shared-assets/24/images/elsevier-non-solus-new-grey.svg' width='50px' height='50px'> <br> Elsevier</td>
+      <td>Business, Management and Accounting</td>
+    </tr>
+    <tr>
+      <td>Advances in Internet of Fuzzy Things</td>
+      <td>Internet of Things • Impact Factor 5.9 • CiteScore 14.2</td>
+      <td>2024. május 31.</td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.sciencedirect.com/journal/internet-of-things/about/call-for-papers#advances-in-internet-of-fuzzy-things" target="_blank">Link</a></td>
+      <td><img src='https://sdfestaticassets-eu-west-1.sciencedirectassets.com/shared-assets/24/images/elsevier-non-solus-new-grey.svg' width='50px' height='50px'> <br> Elsevier</td>
+      <td>Business, Management and Accounting</td>
+    </tr>
+    <tr>
+      <td>Climate and Sustainable Finance 2024</td>
+      <td>Research in International Business and Finance • Impact Factor 6.5 • CiteScore 9.1</td>
+      <td>2024. szeptember 30.</td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.sciencedirect.com/journal/research-in-international-business-and-finance/about/call-for-papers#climate-and-sustainable-finance-2024" target="_blank">Link</a></td>
+      <td><img src='https://sdfestaticassets-eu-west-1.sciencedirectassets.com/shared-assets/24/images/elsevier-non-solus-new-grey.svg' width='50px' height='50px'> <br> Elsevier</td>
+      <td>Business, Management and Accounting</td>
+    </tr>
+    <tr>
+      <td>SOI 2024 JOIn Special issue</td>
+      <td>Journal of Open Innovation: Technology, Market, and Complexity • CiteScore 7.5</td>
+      <td>2024. december 31.</td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.sciencedirect.com/journal/journal-of-open-innovation-technology-market-and-complexity/about/call-for-papers#soi-2024-join-special-issue" target="_blank">Link</a></td>
+      <td><img src='https://sdfestaticassets-eu-west-1.sciencedirectassets.com/shared-assets/24/images/elsevier-non-solus-new-grey.svg' width='50px' height='50px'> <br> Elsevier</td>
+      <td>Business, Management and Accounting</td>
+    </tr>
+    <tr>
+      <td>Applications of Generative AI and Large Language Models in the Patent Domain</td>
+      <td>World Patent Information • Impact Factor 2.7 • CiteScore 3.5</td>
+      <td>2024. szeptember 30.</td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.sciencedirect.com/journal/world-patent-information/about/call-for-papers#applications-of-generative-ai-and-large-language-models-in-the-patent-domain" target="_blank">Link</a></td>
+      <td><img src='https://sdfestaticassets-eu-west-1.sciencedirectassets.com/shared-assets/24/images/elsevier-non-solus-new-grey.svg' width='50px' height='50px'> <br> Elsevier</td>
+      <td>Business, Management and Accounting</td>
+    </tr>
+    <tr>
+      <td>Queer futures – expanding the knowledge base of futures studies</td>
+      <td>Futures • Impact Factor 3.0 • CiteScore 6.3</td>
+      <td>2024. október 31.</td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.sciencedirect.com/journal/futures/about/call-for-papers#queer-futures-expanding-the-knowledge-base-of-futures-studies" target="_blank">Link</a></td>
+      <td><img src='https://sdfestaticassets-eu-west-1.sciencedirectassets.com/shared-assets/24/images/elsevier-non-solus-new-grey.svg' width='50px' height='50px'> <br> Elsevier</td>
+      <td>Business, Management and Accounting</td>
+    </tr>
+    <tr>
+      <td>Technology-driven Destination Transformations</td>
+      <td>Journal of Destination Marketing & Management • Impact Factor 8.4 • CiteScore 13.4</td>
+      <td>2024. szeptember 30.</td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.sciencedirect.com/journal/journal-of-destination-marketing-and-management/about/call-for-papers#technology-driven-destination-transformations" target="_blank">Link</a></td>
+      <td><img src='https://sdfestaticassets-eu-west-1.sciencedirectassets.com/shared-assets/24/images/elsevier-non-solus-new-grey.svg' width='50px' height='50px'> <br> Elsevier</td>
+      <td>Business, Management and Accounting</td>
+    </tr>
+    <tr>
+      <td>The Financial Stability of Airlines: Turbulence or Tranquillity Ahead?</td>
+      <td>Journal of Air Transport Management • Impact Factor 6.0 • CiteScore 10.2</td>
+      <td>2024. december 30.</td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.sciencedirect.com/journal/journal-of-air-transport-management/about/call-for-papers#the-financial-stability-of-airlines-turbulence-or-tranquillity-ahead" target="_blank">Link</a></td>
+      <td><img src='https://sdfestaticassets-eu-west-1.sciencedirectassets.com/shared-assets/24/images/elsevier-non-solus-new-grey.svg' width='50px' height='50px'> <br> Elsevier</td>
+      <td>Business, Management and Accounting</td>
+    </tr>
+    <tr>
+      <td>Fostering Responsible Generative Artificial Intelligence in Tourism</td>
+      <td>Tourism Management • Impact Factor 12.7 • CiteScore 22.9</td>
+      <td>2024. október 31.</td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.sciencedirect.com/journal/tourism-management/about/call-for-papers#fostering-responsible-generative-artificial-intelligence-in-tourism" target="_blank">Link</a></td>
+      <td><img src='https://sdfestaticassets-eu-west-1.sciencedirectassets.com/shared-assets/24/images/elsevier-non-solus-new-grey.svg' width='50px' height='50px'> <br> Elsevier</td>
+      <td>Business, Management and Accounting</td>
+    </tr>
+    <tr>
+      <td>IBR Special Issue for the 50th Anniversary of EIBA: Building on the European foundations of IB Scholarship</td>
+      <td>International Business Review • Impact Factor 8.7 • CiteScore 12.3</td>
+      <td>2024. augusztus 01.</td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.sciencedirect.com/journal/international-business-review/about/call-for-papers#ibr-special-issue-for-the-50th-anniversary-of-eiba-building-on-the-european-foundations-of-ib-scholarship" target="_blank">Link</a></td>
+      <td><img src='https://sdfestaticassets-eu-west-1.sciencedirectassets.com/shared-assets/24/images/elsevier-non-solus-new-grey.svg' width='50px' height='50px'> <br> Elsevier</td>
+      <td>Business, Management and Accounting</td>
+    </tr>
+    <tr>
+      <td>Organizing for Emerging Digital Technologies: The Good, the Bad & the Ugly</td>
+      <td>Information and Organization • Impact Factor 6.3 • CiteScore 10.7</td>
+      <td>2025. február 01.</td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.sciencedirect.com/journal/information-and-organization/about/call-for-papers#organizing-for-emerging-digital-technologies-the-good-the-bad-the-ugly" target="_blank">Link</a></td>
+      <td><img src='https://sdfestaticassets-eu-west-1.sciencedirectassets.com/shared-assets/24/images/elsevier-non-solus-new-grey.svg' width='50px' height='50px'> <br> Elsevier</td>
+      <td>Business, Management and Accounting</td>
+    </tr>
+    <tr>
+      <td>Special Issue on ESG in Logistics and Supply Chain Management</td>
+      <td>Transportation Research Part E: Logistics and Transportation Review • Impact Factor 10.6 • CiteScore 14.7</td>
+      <td>2024. december 30.</td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.sciencedirect.com/journal/transportation-research-part-e-logistics-and-transportation-review/about/call-for-papers#special-issue-on-esg-in-logistics-and-supply-chain-management" target="_blank">Link</a></td>
+      <td><img src='https://sdfestaticassets-eu-west-1.sciencedirectassets.com/shared-assets/24/images/elsevier-non-solus-new-grey.svg' width='50px' height='50px'> <br> Elsevier</td>
+      <td>Business, Management and Accounting</td>
+    </tr>
+    <tr>
+      <td>In-Store Technologies</td>
+      <td>Journal of Business Research • Impact Factor 11.3 • CiteScore 16.0</td>
+      <td>2025. március 01.</td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.sciencedirect.com/journal/journal-of-business-research/about/call-for-papers#in-store-technologies" target="_blank">Link</a></td>
+      <td><img src='https://sdfestaticassets-eu-west-1.sciencedirectassets.com/shared-assets/24/images/elsevier-non-solus-new-grey.svg' width='50px' height='50px'> <br> Elsevier</td>
+      <td>Business, Management and Accounting</td>
+    </tr>
+    <tr>
+      <td>Call for Papers Journal of Contemporary Accounting and Economics (JCAE) Mid-Year Symposium</td>
+      <td>Journal of Contemporary Accounting & Economics • Impact Factor 3.3 • CiteScore 5.0</td>
+      <td>2024. május 17.</td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.sciencedirect.com/journal/journal-of-contemporary-accounting-and-economics/about/call-for-papers#call-for-papers-journal-of-contemporary-accounting-and-economics-jcae-mid-year-symposium" target="_blank">Link</a></td>
+      <td><img src='https://sdfestaticassets-eu-west-1.sciencedirectassets.com/shared-assets/24/images/elsevier-non-solus-new-grey.svg' width='50px' height='50px'> <br> Elsevier</td>
+      <td>Business, Management and Accounting</td>
+    </tr>
+    <tr>
+      <td>Policy and institutional perspectives in advancing the socio-economic embeddedness of the circular economy</td>
+      <td>Socio-Economic Planning Sciences • Impact Factor 6.1 • CiteScore 7.7</td>
+      <td>2025. február 28.</td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.sciencedirect.com/journal/socio-economic-planning-sciences/about/call-for-papers#policy-and-institutional-perspectives-in-advancing-the-socio-economic-embeddedness-of-the-circular-economy" target="_blank">Link</a></td>
+      <td><img src='https://sdfestaticassets-eu-west-1.sciencedirectassets.com/shared-assets/24/images/elsevier-non-solus-new-grey.svg' width='50px' height='50px'> <br> Elsevier</td>
+      <td>Business, Management and Accounting</td>
+    </tr>
+    <tr>
+      <td>Understanding the Entrepreneurial Motivations, Dynamics, and Outcomes of First Fridays, Festivals, Farmer’s Markets and other Community Events</td>
+      <td>Journal of Business Venturing Insights • CiteScore 8.8</td>
+      <td>2026. december 31.</td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.sciencedirect.com/journal/journal-of-business-venturing-insights/about/call-for-papers#understanding-the-entrepreneurial-motivations-dynamics-and-outcomes-of-first-fridays-festivals-farmer-s-markets-and-other-community-events" target="_blank">Link</a></td>
+      <td><img src='https://sdfestaticassets-eu-west-1.sciencedirectassets.com/shared-assets/24/images/elsevier-non-solus-new-grey.svg' width='50px' height='50px'> <br> Elsevier</td>
+      <td>Business, Management and Accounting</td>
+    </tr>
+    <tr>
+      <td>Anticipatory practices at the intersections of innovation, policy and society</td>
+      <td>Futures • Impact Factor 3.0 • CiteScore 6.3</td>
+      <td>2024. szeptember 01.</td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.sciencedirect.com/journal/futures/about/call-for-papers#anticipatory-practices-at-the-intersections-of-innovation-policy-and-society" target="_blank">Link</a></td>
+      <td><img src='https://sdfestaticassets-eu-west-1.sciencedirectassets.com/shared-assets/24/images/elsevier-non-solus-new-grey.svg' width='50px' height='50px'> <br> Elsevier</td>
+      <td>Business, Management and Accounting</td>
+    </tr>
+    <tr>
+      <td>Navigating Errors, Opinions, Uncertainty and Quality in Digital Forensic Science</td>
+      <td>Forensic Science International: Digital Investigation • Impact Factor 2.0 • CiteScore 5.5</td>
+      <td>2024. június 01.</td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.sciencedirect.com/journal/forensic-science-international-digital-investigation/about/call-for-papers#navigating-errors-opinions-uncertainty-and-quality-in-digital-forensic-science" target="_blank">Link</a></td>
+      <td><img src='https://sdfestaticassets-eu-west-1.sciencedirectassets.com/shared-assets/24/images/elsevier-non-solus-new-grey.svg' width='50px' height='50px'> <br> Elsevier</td>
+      <td>Business, Management and Accounting</td>
+    </tr>
+    <tr>
+      <td>Achieving carbon neutrality in China’s power sector</td>
+      <td>The Electricity Journal • CiteScore 5.4</td>
+      <td>2024. augusztus 31.</td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.sciencedirect.com/journal/the-electricity-journal/about/call-for-papers#achieving-carbon-neutrality-in-china-s-power-sector" target="_blank">Link</a></td>
+      <td><img src='https://sdfestaticassets-eu-west-1.sciencedirectassets.com/shared-assets/24/images/elsevier-non-solus-new-grey.svg' width='50px' height='50px'> <br> Elsevier</td>
+      <td>Business, Management and Accounting</td>
+    </tr>
+    <tr>
+      <td>HRM for the greater good: Mapping the field and envisioning the future</td>
+      <td>Human Resource Management Review • Impact Factor 11.4 • CiteScore 16.6</td>
+      <td>2024. november 30.</td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.sciencedirect.com/journal/human-resource-management-review/about/call-for-papers#hrm-for-the-greater-good-mapping-the-field-and-envisioning-the-future" target="_blank">Link</a></td>
+      <td><img src='https://sdfestaticassets-eu-west-1.sciencedirectassets.com/shared-assets/24/images/elsevier-non-solus-new-grey.svg' width='50px' height='50px'> <br> Elsevier</td>
+      <td>Business, Management and Accounting</td>
+    </tr>
+    <tr>
+      <td>Process mining meets visual analytics</td>
+      <td>Information Systems • Impact Factor 3.7 • CiteScore 7.9</td>
+      <td>2024. június 05.</td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.sciencedirect.com/journal/information-systems/about/call-for-papers#process-mining-meets-visual-analytics" target="_blank">Link</a></td>
+      <td><img src='https://sdfestaticassets-eu-west-1.sciencedirectassets.com/shared-assets/24/images/elsevier-non-solus-new-grey.svg' width='50px' height='50px'> <br> Elsevier</td>
+      <td>Business, Management and Accounting</td>
+    </tr>
+    <tr>
+      <td>Indigenous Management Systems in the Middle East – A Contextual Extension of the International Management Field</td>
+      <td>Journal of International Management • Impact Factor 6.1 • CiteScore 7.9</td>
+      <td>2024. szeptember 30.</td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.sciencedirect.com/journal/journal-of-international-management/about/call-for-papers#indigenous-management-systems-in-the-middle-east-a-contextual-extension-of-the-international-management-field" target="_blank">Link</a></td>
+      <td><img src='https://sdfestaticassets-eu-west-1.sciencedirectassets.com/shared-assets/24/images/elsevier-non-solus-new-grey.svg' width='50px' height='50px'> <br> Elsevier</td>
+      <td>Business, Management and Accounting</td>
+    </tr>
+    <tr>
+      <td>Critical Challenges and Opportunities for the Indian Electricity System</td>
+      <td>The Electricity Journal • CiteScore 5.4</td>
+      <td>2024. szeptember 30.</td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.sciencedirect.com/journal/the-electricity-journal/about/call-for-papers#critical-challenges-and-opportunities-for-the-indian-electricity-system" target="_blank">Link</a></td>
+      <td><img src='https://sdfestaticassets-eu-west-1.sciencedirectassets.com/shared-assets/24/images/elsevier-non-solus-new-grey.svg' width='50px' height='50px'> <br> Elsevier</td>
+      <td>Business, Management and Accounting</td>
+    </tr>
+    <tr>
+      <td>Institutional Quality, Climate Risks, and Environmental Transition in International Business and Finance</td>
+      <td>Research in International Business and Finance • Impact Factor 6.5 • CiteScore 9.1</td>
+      <td>2024. június 30.</td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.sciencedirect.com/journal/research-in-international-business-and-finance/about/call-for-papers#institutional-quality-climate-risks-and-environmental-transition-in-international-business-and-finance" target="_blank">Link</a></td>
+      <td><img src='https://sdfestaticassets-eu-west-1.sciencedirectassets.com/shared-assets/24/images/elsevier-non-solus-new-grey.svg' width='50px' height='50px'> <br> Elsevier</td>
+      <td>Business, Management and Accounting</td>
+    </tr>
+    <tr>
+      <td>Thriving Through Turbulent Times: Geopolitical Risks and Supply Chain Resilience</td>
+      <td>Transportation Research Part E: Logistics and Transportation Review • Impact Factor 10.6 • CiteScore 14.7</td>
+      <td>2024. november 30.</td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.sciencedirect.com/journal/transportation-research-part-e-logistics-and-transportation-review/about/call-for-papers#thriving-through-turbulent-times-geopolitical-risks-and-supply-chain-resilience" target="_blank">Link</a></td>
+      <td><img src='https://sdfestaticassets-eu-west-1.sciencedirectassets.com/shared-assets/24/images/elsevier-non-solus-new-grey.svg' width='50px' height='50px'> <br> Elsevier</td>
+      <td>Business, Management and Accounting</td>
+    </tr>
+    <tr>
+      <td>Tackling Grand Challenges with Projects</td>
+      <td>International Journal of Project Management • Impact Factor 8.0 • CiteScore 12.7</td>
+      <td>2026. december 31.</td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.sciencedirect.com/journal/international-journal-of-project-management/about/call-for-papers#tackling-grand-challenges-with-projects" target="_blank">Link</a></td>
+      <td><img src='https://sdfestaticassets-eu-west-1.sciencedirectassets.com/shared-assets/24/images/elsevier-non-solus-new-grey.svg' width='50px' height='50px'> <br> Elsevier</td>
+      <td>Business, Management and Accounting</td>
+    </tr>
+    <tr>
+      <td>Revolutionizing Accounting Education: Integrating Artificial Intelligence and Large Language Models in Teaching and Learning</td>
+      <td>Journal of Accounting Education • CiteScore 4.6</td>
+      <td>2024. december 31.</td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.sciencedirect.com/journal/journal-of-accounting-education/about/call-for-papers#revolutionizing-accounting-education-integrating-artificial-intelligence-and-large-language-models-in-teaching-and-learning" target="_blank">Link</a></td>
+      <td><img src='https://sdfestaticassets-eu-west-1.sciencedirectassets.com/shared-assets/24/images/elsevier-non-solus-new-grey.svg' width='50px' height='50px'> <br> Elsevier</td>
+      <td>Business, Management and Accounting</td>
+    </tr>
+    <tr>
+      <td>Bridging the gap: Aligning human resource theory and practice</td>
+      <td>Human Resource Management Review • Impact Factor 11.4 • CiteScore 16.6</td>
+      <td>2024. április 30.</td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.sciencedirect.com/journal/human-resource-management-review/about/call-for-papers#bridging-the-gap-aligning-human-resource-theory-and-practice" target="_blank">Link</a></td>
+      <td><img src='https://sdfestaticassets-eu-west-1.sciencedirectassets.com/shared-assets/24/images/elsevier-non-solus-new-grey.svg' width='50px' height='50px'> <br> Elsevier</td>
+      <td>Business, Management and Accounting</td>
+    </tr>
+    <tr>
+      <td>Accounting for Space</td>
+      <td>Critical Perspectives on Accounting • Impact Factor 5.1 • CiteScore 7.9</td>
+      <td>2024. augusztus 31.</td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.sciencedirect.com/journal/critical-perspectives-on-accounting/about/call-for-papers#accounting-for-space" target="_blank">Link</a></td>
+      <td><img src='https://sdfestaticassets-eu-west-1.sciencedirectassets.com/shared-assets/24/images/elsevier-non-solus-new-grey.svg' width='50px' height='50px'> <br> Elsevier</td>
+      <td>Business, Management and Accounting</td>
+    </tr>
+    <tr>
+      <td>Digital Transformation and the Changing Context of Strategy and Work</td>
+      <td>The Journal of Strategic Information Systems • Impact Factor 7.0 • CiteScore 31.0</td>
+      <td>2024. április 30.</td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.sciencedirect.com/journal/the-journal-of-strategic-information-systems/about/call-for-papers#digital-transformation-and-the-changing-context-of-strategy-and-work" target="_blank">Link</a></td>
+      <td><img src='https://sdfestaticassets-eu-west-1.sciencedirectassets.com/shared-assets/24/images/elsevier-non-solus-new-grey.svg' width='50px' height='50px'> <br> Elsevier</td>
+      <td>Business, Management and Accounting</td>
+    </tr>
+    <tr>
+      <td>Navigating the Paradoxes of Artificial Intelligence: Implications for Strategy Theory and Practice</td>
+      <td>Long Range Planning • Impact Factor 8.5 • CiteScore 12.2</td>
+      <td>2024. november 30.</td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.sciencedirect.com/journal/long-range-planning/about/call-for-papers#navigating-the-paradoxes-of-artificial-intelligence-implications-for-strategy-theory-and-practice" target="_blank">Link</a></td>
+      <td><img src='https://sdfestaticassets-eu-west-1.sciencedirectassets.com/shared-assets/24/images/elsevier-non-solus-new-grey.svg' width='50px' height='50px'> <br> Elsevier</td>
+      <td>Business, Management and Accounting</td>
+    </tr>
+    <tr>
+      <td>Climate Mitigation, Adaptation and Green Development</td>
+      <td>Innovation and Green Development</td>
+      <td>2024. július 15.</td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.sciencedirect.com/journal/innovation-and-green-development/about/call-for-papers#climate-mitigation-adaptation-and-green-development" target="_blank">Link</a></td>
+      <td><img src='https://sdfestaticassets-eu-west-1.sciencedirectassets.com/shared-assets/24/images/elsevier-non-solus-new-grey.svg' width='50px' height='50px'> <br> Elsevier</td>
+      <td>Business, Management and Accounting</td>
+    </tr>
+    <tr>
+      <td>Creative teaching methods for achieving responsible management: Educating the next generation of business leaders</td>
+      <td>The International Journal of Management Education • Impact Factor 5.2 • CiteScore 7.1</td>
+      <td>2024. augusztus 31.</td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.sciencedirect.com/journal/the-international-journal-of-management-education/about/call-for-papers#creative-teaching-methods-for-achieving-responsible-management-educating-the-next-generation-of-business-leaders" target="_blank">Link</a></td>
+      <td><img src='https://sdfestaticassets-eu-west-1.sciencedirectassets.com/shared-assets/24/images/elsevier-non-solus-new-grey.svg' width='50px' height='50px'> <br> Elsevier</td>
+      <td>Business, Management and Accounting</td>
+    </tr>
+    <tr>
+      <td>Digital Finance: Transforming Financial Landscapes for Companies and Households</td>
+      <td>Journal of Economics and Business • Impact Factor 3.8 • CiteScore 4.3</td>
+      <td>2024. május 31.</td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.sciencedirect.com/journal/journal-of-economics-and-business/about/call-for-papers#digital-finance-transforming-financial-landscapes-for-companies-and-households" target="_blank">Link</a></td>
+      <td><img src='https://sdfestaticassets-eu-west-1.sciencedirectassets.com/shared-assets/24/images/elsevier-non-solus-new-grey.svg' width='50px' height='50px'> <br> Elsevier</td>
+      <td>Business, Management and Accounting</td>
+    </tr>
+    <tr>
+      <td>Must-have or nice-to-have? Using Necessary Condition Analysis (NCA) to advance strategy, innovation, and entrepreneurship research</td>
+      <td>Journal of Business Research • Impact Factor 11.3 • CiteScore 16.0</td>
+      <td>2025. december 31.</td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.sciencedirect.com/journal/journal-of-business-research/about/call-for-papers#must-have-or-nice-to-have-using-necessary-condition-analysis-nca-to-advance-strategy-innovation-and-entrepreneurship-research" target="_blank">Link</a></td>
+      <td><img src='https://sdfestaticassets-eu-west-1.sciencedirectassets.com/shared-assets/24/images/elsevier-non-solus-new-grey.svg' width='50px' height='50px'> <br> Elsevier</td>
+      <td>Business, Management and Accounting</td>
+    </tr>
+    <tr>
+      <td>Enhancing innovation ecosystems for a sustainable world in times of dramatic change</td>
+      <td>Technovation • Impact Factor 12.5 • CiteScore 12.3</td>
+      <td>2024. december 31.</td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.sciencedirect.com/journal/technovation/about/call-for-papers#enhancing-innovation-ecosystems-for-a-sustainable-world-in-times-of-dramatic-change" target="_blank">Link</a></td>
+      <td><img src='https://sdfestaticassets-eu-west-1.sciencedirectassets.com/shared-assets/24/images/elsevier-non-solus-new-grey.svg' width='50px' height='50px'> <br> Elsevier</td>
+      <td>Business, Management and Accounting</td>
+    </tr>
+    <tr>
+      <td>Decarbonization and Energy Justice for a Low-Carbon Economy</td>
+      <td>Journal of Business Research • Impact Factor 11.3 • CiteScore 16.0</td>
+      <td>2024. október 31.</td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.sciencedirect.com/journal/journal-of-business-research/about/call-for-papers#decarbonization-and-energy-justice-for-a-low-carbon-economy" target="_blank">Link</a></td>
+      <td><img src='https://sdfestaticassets-eu-west-1.sciencedirectassets.com/shared-assets/24/images/elsevier-non-solus-new-grey.svg' width='50px' height='50px'> <br> Elsevier</td>
+      <td>Business, Management and Accounting</td>
+    </tr>
+    <tr>
+      <td>Life Events of Strategic Leaders: spillovers in the professional domain</td>
+      <td>Journal of Business Research • Impact Factor 11.3 • CiteScore 16.0</td>
+      <td>2025. február 01.</td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.sciencedirect.com/journal/journal-of-business-research/about/call-for-papers#life-events-of-strategic-leaders-spillovers-in-the-professional-domain" target="_blank">Link</a></td>
+      <td><img src='https://sdfestaticassets-eu-west-1.sciencedirectassets.com/shared-assets/24/images/elsevier-non-solus-new-grey.svg' width='50px' height='50px'> <br> Elsevier</td>
+      <td>Business, Management and Accounting</td>
+    </tr>
+    <tr>
+      <td>Careers of the Vulnerable Workforce</td>
+      <td>Journal of Vocational Behavior • Impact Factor 11.1 • CiteScore 12.8</td>
+      <td>2024. július 31.</td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.sciencedirect.com/journal/journal-of-vocational-behavior/about/call-for-papers#careers-of-the-vulnerable-workforce" target="_blank">Link</a></td>
+      <td><img src='https://sdfestaticassets-eu-west-1.sciencedirectassets.com/shared-assets/24/images/elsevier-non-solus-new-grey.svg' width='50px' height='50px'> <br> Elsevier</td>
+      <td>Business, Management and Accounting</td>
+    </tr>
+    <tr>
+      <td>Artificial intelligence (AI) technology, applications and AI powered device use in hospitality service creation and delivery</td>
+      <td>International Journal of Hospitality Management • Impact Factor 11.7 • CiteScore 18.3</td>
+      <td>2024. május 15.</td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.sciencedirect.com/journal/international-journal-of-hospitality-management/about/call-for-papers#artificial-intelligence-ai-technology-applications-and-ai-powered-device-use-in-hospitality-service-creation-and-delivery" target="_blank">Link</a></td>
+      <td><img src='https://sdfestaticassets-eu-west-1.sciencedirectassets.com/shared-assets/24/images/elsevier-non-solus-new-grey.svg' width='50px' height='50px'> <br> Elsevier</td>
+      <td>Business, Management and Accounting</td>
+    </tr>
+    <tr>
+      <td>Smart and Resilient Circular Supply Chain Innovations</td>
+      <td>Technovation • Impact Factor 12.5 • CiteScore 12.3</td>
+      <td>2024. június 30.</td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.sciencedirect.com/journal/technovation/about/call-for-papers#smart-and-resilient-circular-supply-chain-innovations" target="_blank">Link</a></td>
+      <td><img src='https://sdfestaticassets-eu-west-1.sciencedirectassets.com/shared-assets/24/images/elsevier-non-solus-new-grey.svg' width='50px' height='50px'> <br> Elsevier</td>
+      <td>Business, Management and Accounting</td>
+    </tr>
+    <tr>
+      <td>Household Finance and Socioeconomic Development</td>
+      <td>Emerging Markets Review • Impact Factor 4.8 • CiteScore 6.5</td>
+      <td>2024. november 30.</td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.sciencedirect.com/journal/emerging-markets-review/about/call-for-papers#household-finance-and-socioeconomic-development" target="_blank">Link</a></td>
+      <td><img src='https://sdfestaticassets-eu-west-1.sciencedirectassets.com/shared-assets/24/images/elsevier-non-solus-new-grey.svg' width='50px' height='50px'> <br> Elsevier</td>
+      <td>Business, Management and Accounting</td>
+    </tr>
+    <tr>
+      <td>The M6 Forecasting Competition</td>
+      <td>International Journal of Forecasting • Impact Factor 7.9 • CiteScore 12.0</td>
+      <td>2024. május 31.</td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.sciencedirect.com/journal/international-journal-of-forecasting/about/call-for-papers#the-m6-forecasting-competition" target="_blank">Link</a></td>
+      <td><img src='https://sdfestaticassets-eu-west-1.sciencedirectassets.com/shared-assets/24/images/elsevier-non-solus-new-grey.svg' width='50px' height='50px'> <br> Elsevier</td>
+      <td>Business, Management and Accounting</td>
+    </tr>
+    <tr>
+      <td>Innovative entrepreneurial practices for heritage-led urban and rural regeneration in Europe</td>
+      <td>Cities • Impact Factor 6.7 • CiteScore 10.4</td>
+      <td>2024. június 30.</td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.sciencedirect.com/journal/cities/about/call-for-papers#innovative-entrepreneurial-practices-for-heritage-led-urban-and-rural-regeneration-in-europe" target="_blank">Link</a></td>
+      <td><img src='https://sdfestaticassets-eu-west-1.sciencedirectassets.com/shared-assets/24/images/elsevier-non-solus-new-grey.svg' width='50px' height='50px'> <br> Elsevier</td>
+      <td>Business, Management and Accounting</td>
+    </tr>
+    <tr>
+      <td>THE 1ST INTERNATIONAL WORKSHOP ON EMERGING ISSUES IN AUDITING: THE ADVENT OF ARTIFICIAL INTELLIGENCE AND FUTURE ROADS (EIA WORKSHOP & JIAAT 2024) 11-12 JULY 2024 University of Salerno, Italy</td>
+      <td>Journal of International Accounting, Auditing and Taxation • Impact Factor 2.6 • CiteScore 4.3</td>
+      <td>2024. április 30.</td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.sciencedirect.com/journal/journal-of-international-accounting-auditing-and-taxation/about/call-for-papers#the-1st-international-workshop-on-emerging-issues-in-auditing-the-advent-of-artificial-intelligence-and-future-roads-eia-workshop-jiaat-2024-11-12-july-2024-university-of-salerno-italy" target="_blank">Link</a></td>
+      <td><img src='https://sdfestaticassets-eu-west-1.sciencedirectassets.com/shared-assets/24/images/elsevier-non-solus-new-grey.svg' width='50px' height='50px'> <br> Elsevier</td>
+      <td>Business, Management and Accounting</td>
+    </tr>
+    <tr>
+      <td>Improving Rigor in Research: Replication Studies in International Management</td>
+      <td>Journal of International Management • Impact Factor 6.1 • CiteScore 7.9</td>
+      <td>2024. november 01.</td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.sciencedirect.com/journal/journal-of-international-management/about/call-for-papers#improving-rigor-in-research-replication-studies-in-international-management" target="_blank">Link</a></td>
+      <td><img src='https://sdfestaticassets-eu-west-1.sciencedirectassets.com/shared-assets/24/images/elsevier-non-solus-new-grey.svg' width='50px' height='50px'> <br> Elsevier</td>
+      <td>Business, Management and Accounting</td>
+    </tr>
+    <tr>
+      <td>Call for papers on the special issue: Emerging AI-Driven Smart and Sustainable Mobility</td>
+      <td>Transportation Research Part E: Logistics and Transportation Review • Impact Factor 10.6 • CiteScore 14.7</td>
+      <td>2024. augusztus 30.</td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.sciencedirect.com/journal/transportation-research-part-e-logistics-and-transportation-review/about/call-for-papers#call-for-papers-on-the-special-issue-emerging-ai-driven-smart-and-sustainable-mobility" target="_blank">Link</a></td>
+      <td><img src='https://sdfestaticassets-eu-west-1.sciencedirectassets.com/shared-assets/24/images/elsevier-non-solus-new-grey.svg' width='50px' height='50px'> <br> Elsevier</td>
+      <td>Business, Management and Accounting</td>
+    </tr>
+    <tr>
+      <td>Advancing Equity and Justice in the Electric Power Sector: Emerging Policies, Programs, and Projects Across the Globe</td>
+      <td>The Electricity Journal • CiteScore 5.4</td>
+      <td>2024. május 15.</td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.sciencedirect.com/journal/the-electricity-journal/about/call-for-papers#advancing-equity-and-justice-in-the-electric-power-sector-emerging-policies-programs-and-projects-across-the-globe" target="_blank">Link</a></td>
+      <td><img src='https://sdfestaticassets-eu-west-1.sciencedirectassets.com/shared-assets/24/images/elsevier-non-solus-new-grey.svg' width='50px' height='50px'> <br> Elsevier</td>
+      <td>Business, Management and Accounting</td>
+    </tr>
+    <tr>
+      <td>Market Designs that Support an Efficient and  Reliable Energy Transition</td>
+      <td>The Electricity Journal • CiteScore 5.4</td>
+      <td>2024. szeptember 01.</td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.sciencedirect.com/journal/the-electricity-journal/about/call-for-papers#market-designs-that-support-an-efficient-and-reliable-energy-transition" target="_blank">Link</a></td>
+      <td><img src='https://sdfestaticassets-eu-west-1.sciencedirectassets.com/shared-assets/24/images/elsevier-non-solus-new-grey.svg' width='50px' height='50px'> <br> Elsevier</td>
+      <td>Business, Management and Accounting</td>
+    </tr>
+    <tr>
+      <td>E-governance and the European Union: Agenda for implementation</td>
+      <td>Internet of Things • Impact Factor 5.9 • CiteScore 14.2</td>
+      <td>2024. április 30.</td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.sciencedirect.com/journal/internet-of-things/about/call-for-papers#e-governance-and-the-european-union-agenda-for-implementation" target="_blank">Link</a></td>
+      <td><img src='https://sdfestaticassets-eu-west-1.sciencedirectassets.com/shared-assets/24/images/elsevier-non-solus-new-grey.svg' width='50px' height='50px'> <br> Elsevier</td>
+      <td>Business, Management and Accounting</td>
+    </tr>
+    <tr>
+      <td>Role of green transition in sustainable development</td>
+      <td>Innovation and Green Development</td>
+      <td>2024. május 31.</td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.sciencedirect.com/journal/innovation-and-green-development/about/call-for-papers#role-of-green-transition-in-sustainable-development" target="_blank">Link</a></td>
+      <td><img src='https://sdfestaticassets-eu-west-1.sciencedirectassets.com/shared-assets/24/images/elsevier-non-solus-new-grey.svg' width='50px' height='50px'> <br> Elsevier</td>
+      <td>Business, Management and Accounting</td>
+    </tr>
+    <tr>
+      <td>Human and Virtual Influencer Marketing in Hospitality and Tourism</td>
+      <td>Journal of Hospitality and Tourism Management • Impact Factor 8.3 • CiteScore 10.1</td>
+      <td>2024. április 30.</td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.sciencedirect.com/journal/journal-of-hospitality-and-tourism-management/about/call-for-papers#human-and-virtual-influencer-marketing-in-hospitality-and-tourism" target="_blank">Link</a></td>
+      <td><img src='https://sdfestaticassets-eu-west-1.sciencedirectassets.com/shared-assets/24/images/elsevier-non-solus-new-grey.svg' width='50px' height='50px'> <br> Elsevier</td>
+      <td>Business, Management and Accounting</td>
+    </tr>
+    <tr>
+      <td>Call for papers on the special issue: COVID-19 and Beyond: Lessons Learned from the Pandemic for Managing Resilient and Sustainable Supply Chains</td>
+      <td>Transportation Research Part E: Logistics and Transportation Review • Impact Factor 10.6 • CiteScore 14.7</td>
+      <td>2024. szeptember 30.</td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.sciencedirect.com/journal/transportation-research-part-e-logistics-and-transportation-review/about/call-for-papers#call-for-papers-on-the-special-issue-covid-19-and-beyond-lessons-learned-from-the-pandemic-for-managing-resilient-and-sustainable-supply-chains" target="_blank">Link</a></td>
+      <td><img src='https://sdfestaticassets-eu-west-1.sciencedirectassets.com/shared-assets/24/images/elsevier-non-solus-new-grey.svg' width='50px' height='50px'> <br> Elsevier</td>
+      <td>Business, Management and Accounting</td>
+    </tr>
+    <tr>
+      <td>Towards Disruptive Sustainability</td>
+      <td>Research Policy • Impact Factor 7.2 • CiteScore 15.1</td>
+      <td>2024. szeptember 01.</td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.sciencedirect.com/journal/research-policy/about/call-for-papers#towards-disruptive-sustainability" target="_blank">Link</a></td>
+      <td><img src='https://sdfestaticassets-eu-west-1.sciencedirectassets.com/shared-assets/24/images/elsevier-non-solus-new-grey.svg' width='50px' height='50px'> <br> Elsevier</td>
+      <td>Business, Management and Accounting</td>
+    </tr>
+    <tr>
+      <td>Harmful Hopes in Sustainability Transitions</td>
+      <td>Futures • Impact Factor 3.0 • CiteScore 6.3</td>
+      <td>2024. augusztus 15.</td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.sciencedirect.com/journal/futures/about/call-for-papers#harmful-hopes-in-sustainability-transitions" target="_blank">Link</a></td>
+      <td><img src='https://sdfestaticassets-eu-west-1.sciencedirectassets.com/shared-assets/24/images/elsevier-non-solus-new-grey.svg' width='50px' height='50px'> <br> Elsevier</td>
+      <td>Business, Management and Accounting</td>
+    </tr>
+    <tr>
+      <td>Non-parametric Methods for Policy making in Agriculture and Forestry</td>
+      <td>Socio-Economic Planning Sciences • Impact Factor 6.1 • CiteScore 7.7</td>
+      <td>2024. május 31.</td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.sciencedirect.com/journal/socio-economic-planning-sciences/about/call-for-papers#non-parametric-methods-for-policy-making-in-agriculture-and-forestry" target="_blank">Link</a></td>
+      <td><img src='https://sdfestaticassets-eu-west-1.sciencedirectassets.com/shared-assets/24/images/elsevier-non-solus-new-grey.svg' width='50px' height='50px'> <br> Elsevier</td>
+      <td>Business, Management and Accounting</td>
+    </tr>
+    <tr>
+      <td>Linking Innovation and Entrepreneurship: Real-World Challenges in High-Cost Economies</td>
+      <td>Technovation • Impact Factor 12.5 • CiteScore 12.3</td>
+      <td>2024. október 01.</td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.sciencedirect.com/journal/technovation/about/call-for-papers#linking-innovation-and-entrepreneurship-real-world-challenges-in-high-cost-economies" target="_blank">Link</a></td>
+      <td><img src='https://sdfestaticassets-eu-west-1.sciencedirectassets.com/shared-assets/24/images/elsevier-non-solus-new-grey.svg' width='50px' height='50px'> <br> Elsevier</td>
+      <td>Business, Management and Accounting</td>
+    </tr>
+    <tr>
+      <td>Redesigning the process of scientific research in the AI era to mitigate against sloppy science, error, and fraud</td>
+      <td>She Ji: The Journal of Design, Economics, and Innovation • Impact Factor 2.0 • CiteScore 6.5</td>
+      <td>2024. június 30.</td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.sciencedirect.com/journal/she-ji-the-journal-of-design-economics-and-innovation/about/call-for-papers#redesigning-the-process-of-scientific-research-in-the-ai-era-to-mitigate-against-sloppy-science-error-and-fraud" target="_blank">Link</a></td>
+      <td><img src='https://sdfestaticassets-eu-west-1.sciencedirectassets.com/shared-assets/24/images/elsevier-non-solus-new-grey.svg' width='50px' height='50px'> <br> Elsevier</td>
+      <td>Business, Management and Accounting</td>
+    </tr>
+    <tr>
+      <td>ESG and Carbon Neutrality: Market and Moral Approaches & Adam Smith ESG Conference at Edinburgh</td>
+      <td>The British Accounting Review • Impact Factor 5.1 • CiteScore 7.2</td>
+      <td>2024. október 31.</td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.sciencedirect.com/journal/the-british-accounting-review/about/call-for-papers#esg-and-carbon-neutrality-market-and-moral-approaches-adam-smith-esg-conference-at-edinburgh" target="_blank">Link</a></td>
+      <td><img src='https://sdfestaticassets-eu-west-1.sciencedirectassets.com/shared-assets/24/images/elsevier-non-solus-new-grey.svg' width='50px' height='50px'> <br> Elsevier</td>
+      <td>Business, Management and Accounting</td>
+    </tr>
+    <tr>
+      <td>Currents issues in applied econometrics, business analytics, and empirical and comparative analysis of emerging and developed markets</td>
+      <td>Emerging Markets Review • Impact Factor 4.8 • CiteScore 6.5</td>
+      <td>2024. március 31.</td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.sciencedirect.com/journal/emerging-markets-review/about/call-for-papers#currents-issues-in-applied-econometrics-business-analytics-and-empirical-and-comparative-analysis-of-emerging-and-developed-markets" target="_blank">Link</a></td>
+      <td><img src='https://sdfestaticassets-eu-west-1.sciencedirectassets.com/shared-assets/24/images/elsevier-non-solus-new-grey.svg' width='50px' height='50px'> <br> Elsevier</td>
+      <td>Business, Management and Accounting</td>
+    </tr>
+    <tr>
+      <td>Precision Agriculture</td>
+      <td>Innovation and Green Development</td>
+      <td>2024. április 15.</td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.sciencedirect.com/journal/innovation-and-green-development/about/call-for-papers#precision-agriculture" target="_blank">Link</a></td>
+      <td><img src='https://sdfestaticassets-eu-west-1.sciencedirectassets.com/shared-assets/24/images/elsevier-non-solus-new-grey.svg' width='50px' height='50px'> <br> Elsevier</td>
+      <td>Business, Management and Accounting</td>
+    </tr>
+    <tr>
+      <td>Blockchain-Driven Business Models</td>
+      <td>Digital Business</td>
+      <td>2024. március 31.</td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.sciencedirect.com/journal/digital-business/about/call-for-papers#blockchain-driven-business-models" target="_blank">Link</a></td>
+      <td><img src='https://sdfestaticassets-eu-west-1.sciencedirectassets.com/shared-assets/24/images/elsevier-non-solus-new-grey.svg' width='50px' height='50px'> <br> Elsevier</td>
+      <td>Business, Management and Accounting</td>
+    </tr>
+    <tr>
+      <td>Navigating the Nexus: Intersectional Climate Justice in Urban Adaptation Planning</td>
+      <td>Cities • Impact Factor 6.7 • CiteScore 10.4</td>
+      <td>2024. június 14.</td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.sciencedirect.com/journal/cities/about/call-for-papers#navigating-the-nexus-intersectional-climate-justice-in-urban-adaptation-planning" target="_blank">Link</a></td>
+      <td><img src='https://sdfestaticassets-eu-west-1.sciencedirectassets.com/shared-assets/24/images/elsevier-non-solus-new-grey.svg' width='50px' height='50px'> <br> Elsevier</td>
+      <td>Business, Management and Accounting</td>
+    </tr>
+    <tr>
+      <td>The art and fiction of the societal impact of research</td>
+      <td>Technovation • Impact Factor 12.5 • CiteScore 12.3</td>
+      <td>2024. április 01.</td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.sciencedirect.com/journal/technovation/about/call-for-papers#the-art-and-fiction-of-the-societal-impact-of-research" target="_blank">Link</a></td>
+      <td><img src='https://sdfestaticassets-eu-west-1.sciencedirectassets.com/shared-assets/24/images/elsevier-non-solus-new-grey.svg' width='50px' height='50px'> <br> Elsevier</td>
+      <td>Business, Management and Accounting</td>
+    </tr>
+    <tr>
+      <td>Sustainable materials for circular buildings</td>
+      <td>Journal of Building Engineering • Impact Factor 6.4 • CiteScore 8.3</td>
+      <td>2024. május 06.</td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.sciencedirect.com/journal/journal-of-building-engineering/about/call-for-papers#sustainable-materials-for-circular-buildings" target="_blank">Link</a></td>
+      <td><img src='https://sdfestaticassets-eu-west-1.sciencedirectassets.com/shared-assets/24/images/elsevier-non-solus-new-grey.svg' width='50px' height='50px'> <br> Elsevier</td>
+      <td>Business, Management and Accounting</td>
+    </tr>
+    <tr>
+      <td>Advancing and Integrating Value-Based Selling Research in Industrial Marketing: New Theories, Methods, and Perspectives</td>
+      <td>Industrial Marketing Management • Impact Factor 10.3 • CiteScore 13.8</td>
+      <td>2024. december 01.</td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.sciencedirect.com/journal/industrial-marketing-management/about/call-for-papers#advancing-and-integrating-value-based-selling-research-in-industrial-marketing-new-theories-methods-and-perspectives" target="_blank">Link</a></td>
+      <td><img src='https://sdfestaticassets-eu-west-1.sciencedirectassets.com/shared-assets/24/images/elsevier-non-solus-new-grey.svg' width='50px' height='50px'> <br> Elsevier</td>
+      <td>Business, Management and Accounting</td>
+    </tr>
+    <tr>
+      <td>7th Shanghai-Edinburgh Fintech Conference The British Accounting Review Special Issue</td>
+      <td>The British Accounting Review • Impact Factor 5.1 • CiteScore 7.2</td>
+      <td>2024. június 15.</td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.sciencedirect.com/journal/the-british-accounting-review/about/call-for-papers#7th-shanghai-edinburgh-fintech-conference-the-british-accounting-review-special-issue" target="_blank">Link</a></td>
+      <td><img src='https://sdfestaticassets-eu-west-1.sciencedirectassets.com/shared-assets/24/images/elsevier-non-solus-new-grey.svg' width='50px' height='50px'> <br> Elsevier</td>
+      <td>Business, Management and Accounting</td>
+    </tr>
+    <tr>
+      <td>Qualitative Methods in Leadership Research: Toward Counterfactual Designs and Open Science</td>
+      <td>The Leadership Quarterly • Impact Factor 7.5 • CiteScore 15.3</td>
+      <td>2024. október 01.</td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.sciencedirect.com/journal/the-leadership-quarterly/about/call-for-papers#qualitative-methods-in-leadership-research-toward-counterfactual-designs-and-open-science" target="_blank">Link</a></td>
+      <td><img src='https://sdfestaticassets-eu-west-1.sciencedirectassets.com/shared-assets/24/images/elsevier-non-solus-new-grey.svg' width='50px' height='50px'> <br> Elsevier</td>
+      <td>Business, Management and Accounting</td>
+    </tr>
+    <tr>
+      <td>Mass Connectivity and/or Communication Paradigms for the Internet of Things (IoT)</td>
+      <td>Internet of Things • Impact Factor 5.9 • CiteScore 14.2</td>
+      <td>2024. április 01.</td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.sciencedirect.com/journal/internet-of-things/about/call-for-papers#mass-connectivity-and-or-communication-paradigms-for-the-internet-of-things-iot" target="_blank">Link</a></td>
+      <td><img src='https://sdfestaticassets-eu-west-1.sciencedirectassets.com/shared-assets/24/images/elsevier-non-solus-new-grey.svg' width='50px' height='50px'> <br> Elsevier</td>
+      <td>Business, Management and Accounting</td>
+    </tr>
+    <tr>
+      <td>AIGC-based Business Innovation and Theoretical Exploration</td>
+      <td>Electronic Commerce Research and Applications • Impact Factor 6.0 • CiteScore 10.1</td>
+      <td>2024. június 30.</td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.sciencedirect.com/journal/electronic-commerce-research-and-applications/about/call-for-papers#aigc-based-business-innovation-and-theoretical-exploration" target="_blank">Link</a></td>
+      <td><img src='https://sdfestaticassets-eu-west-1.sciencedirectassets.com/shared-assets/24/images/elsevier-non-solus-new-grey.svg' width='50px' height='50px'> <br> Elsevier</td>
+      <td>Business, Management and Accounting</td>
+    </tr>
+    <tr>
+      <td>Projectification and Project-Orientation of Society</td>
+      <td>International Journal of Project Management • Impact Factor 8.0 • CiteScore 12.7</td>
+      <td>2024. június 30.</td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.sciencedirect.com/journal/international-journal-of-project-management/about/call-for-papers#projectification-and-project-orientation-of-society" target="_blank">Link</a></td>
+      <td><img src='https://sdfestaticassets-eu-west-1.sciencedirectassets.com/shared-assets/24/images/elsevier-non-solus-new-grey.svg' width='50px' height='50px'> <br> Elsevier</td>
+      <td>Business, Management and Accounting</td>
+    </tr>
+    <tr>
+      <td>The Use of Extended Reality Technologies in Safety Research</td>
+      <td>Safety Science • Impact Factor 6.1 • CiteScore 12.4</td>
+      <td>2024. szeptember 30.</td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.sciencedirect.com/journal/safety-science/about/call-for-papers#the-use-of-extended-reality-technologies-in-safety-research" target="_blank">Link</a></td>
+      <td><img src='https://sdfestaticassets-eu-west-1.sciencedirectassets.com/shared-assets/24/images/elsevier-non-solus-new-grey.svg' width='50px' height='50px'> <br> Elsevier</td>
+      <td>Business, Management and Accounting</td>
+    </tr>
+    <tr>
+      <td>Sustainable City Logistics Management</td>
+      <td>Cleaner Logistics and Supply Chain • CiteScore 3.4</td>
+      <td>2024. június 30.</td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.sciencedirect.com/journal/cleaner-logistics-and-supply-chain/about/call-for-papers#sustainable-city-logistics-management" target="_blank">Link</a></td>
+      <td><img src='https://sdfestaticassets-eu-west-1.sciencedirectassets.com/shared-assets/24/images/elsevier-non-solus-new-grey.svg' width='50px' height='50px'> <br> Elsevier</td>
+      <td>Business, Management and Accounting</td>
+    </tr>
+    <tr>
+      <td>The Role of Political Economy in Innovation and Green Development</td>
+      <td>Innovation and Green Development</td>
+      <td>2024. június 30.</td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.sciencedirect.com/journal/innovation-and-green-development/about/call-for-papers#the-role-of-political-economy-in-innovation-and-green-development" target="_blank">Link</a></td>
+      <td><img src='https://sdfestaticassets-eu-west-1.sciencedirectassets.com/shared-assets/24/images/elsevier-non-solus-new-grey.svg' width='50px' height='50px'> <br> Elsevier</td>
+      <td>Business, Management and Accounting</td>
+    </tr>
+    <tr>
+      <td>Fostering Consumers’ Climate (Change) Engagement</td>
+      <td>Journal of Business Research • Impact Factor 11.3 • CiteScore 16.0</td>
+      <td>2024. május 01.</td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.sciencedirect.com/journal/journal-of-business-research/about/call-for-papers#fostering-consumers-climate-change-engagement" target="_blank">Link</a></td>
+      <td><img src='https://sdfestaticassets-eu-west-1.sciencedirectassets.com/shared-assets/24/images/elsevier-non-solus-new-grey.svg' width='50px' height='50px'> <br> Elsevier</td>
+      <td>Business, Management and Accounting</td>
+    </tr>
+    <tr>
+      <td>Democracy and International Business</td>
+      <td>Journal of Business Research • Impact Factor 11.3 • CiteScore 16.0</td>
+      <td>2024. október 19.</td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.sciencedirect.com/journal/journal-of-business-research/about/call-for-papers#democracy-and-international-business" target="_blank">Link</a></td>
+      <td><img src='https://sdfestaticassets-eu-west-1.sciencedirectassets.com/shared-assets/24/images/elsevier-non-solus-new-grey.svg' width='50px' height='50px'> <br> Elsevier</td>
+      <td>Business, Management and Accounting</td>
+    </tr>
+    <tr>
+      <td>Artificial Intelligence, with a focus on Large Language Models, in Accounting</td>
+      <td>International Journal of Accounting Information Systems • Impact Factor 4.6 • CiteScore 8.7</td>
+      <td>2024. március 31.</td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.sciencedirect.com/journal/international-journal-of-accounting-information-systems/about/call-for-papers#artificial-intelligence-with-a-focus-on-large-language-models-in-accounting" target="_blank">Link</a></td>
+      <td><img src='https://sdfestaticassets-eu-west-1.sciencedirectassets.com/shared-assets/24/images/elsevier-non-solus-new-grey.svg' width='50px' height='50px'> <br> Elsevier</td>
+      <td>Business, Management and Accounting</td>
+    </tr>
+    <tr>
+      <td>Special Issue on Explainability, Robustness and Fairness for User-centric Intelligent Systems</td>
+      <td>Electronic Commerce Research and Applications • Impact Factor 6.0 • CiteScore 10.1</td>
+      <td>2024. augusztus 01.</td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.sciencedirect.com/journal/electronic-commerce-research-and-applications/about/call-for-papers#special-issue-on-explainability-robustness-and-fairness-for-user-centric-intelligent-systems" target="_blank">Link</a></td>
+      <td><img src='https://sdfestaticassets-eu-west-1.sciencedirectassets.com/shared-assets/24/images/elsevier-non-solus-new-grey.svg' width='50px' height='50px'> <br> Elsevier</td>
+      <td>Business, Management and Accounting</td>
+    </tr>
+    <tr>
+      <td>ICT for Development, Grand Challenges and Increasing Marginalization: Theoretical, Methodological and Ethical Imperatives</td>
+      <td>Information and Organization • Impact Factor 6.3 • CiteScore 10.7</td>
+      <td>2024. augusztus 01.</td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.sciencedirect.com/journal/information-and-organization/about/call-for-papers#ict-for-development-grand-challenges-and-increasing-marginalization-theoretical-methodological-and-ethical-imperatives" target="_blank">Link</a></td>
+      <td><img src='https://sdfestaticassets-eu-west-1.sciencedirectassets.com/shared-assets/24/images/elsevier-non-solus-new-grey.svg' width='50px' height='50px'> <br> Elsevier</td>
+      <td>Business, Management and Accounting</td>
+    </tr>
+    <tr>
+      <td>Transforming the Metaverse and Spatial Computing: Overcoming Challenges and Building a Brighter Future</td>
+      <td>International Journal of Information Management • Impact Factor 21.0 • CiteScore 41.9</td>
+      <td>2024. augusztus 15.</td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.sciencedirect.com/journal/international-journal-of-information-management/about/call-for-papers#transforming-the-metaverse-and-spatial-computing-overcoming-challenges-and-building-a-brighter-future" target="_blank">Link</a></td>
+      <td><img src='https://sdfestaticassets-eu-west-1.sciencedirectassets.com/shared-assets/24/images/elsevier-non-solus-new-grey.svg' width='50px' height='50px'> <br> Elsevier</td>
+      <td>Business, Management and Accounting</td>
+    </tr>
+    <tr>
+      <td>Learning based Solution Techniques for Optimization in Logistics and Transportation Systems</td>
+      <td>Transportation Research Part E: Logistics and Transportation Review • Impact Factor 10.6 • CiteScore 14.7</td>
+      <td>2024. szeptember 30.</td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.sciencedirect.com/journal/transportation-research-part-e-logistics-and-transportation-review/about/call-for-papers#learning-based-solution-techniques-for-optimization-in-logistics-and-transportation-systems" target="_blank">Link</a></td>
+      <td><img src='https://sdfestaticassets-eu-west-1.sciencedirectassets.com/shared-assets/24/images/elsevier-non-solus-new-grey.svg' width='50px' height='50px'> <br> Elsevier</td>
+      <td>Business, Management and Accounting</td>
+    </tr>
+    <tr>
+      <td>ESG Integration: An Asian Perspective</td>
+      <td>Research in International Business and Finance • Impact Factor 6.5 • CiteScore 9.1</td>
+      <td>2024. december 31.</td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.sciencedirect.com/journal/research-in-international-business-and-finance/about/call-for-papers#esg-integration-an-asian-perspective" target="_blank">Link</a></td>
+      <td><img src='https://sdfestaticassets-eu-west-1.sciencedirectassets.com/shared-assets/24/images/elsevier-non-solus-new-grey.svg' width='50px' height='50px'> <br> Elsevier</td>
+      <td>Business, Management and Accounting</td>
+    </tr>
+    <tr>
+      <td>Construction materials functionalized in energy storage and harvesting</td>
+      <td>Journal of Building Engineering • Impact Factor 6.4 • CiteScore 8.3</td>
+      <td>2024. június 30.</td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.sciencedirect.com/journal/journal-of-building-engineering/about/call-for-papers#construction-materials-functionalized-in-energy-storage-and-harvesting" target="_blank">Link</a></td>
+      <td><img src='https://sdfestaticassets-eu-west-1.sciencedirectassets.com/shared-assets/24/images/elsevier-non-solus-new-grey.svg' width='50px' height='50px'> <br> Elsevier</td>
+      <td>Business, Management and Accounting</td>
+    </tr>
+    <tr>
+      <td>The Coevolution of Financial and Technological Innovations</td>
+      <td>Research Policy • Impact Factor 7.2 • CiteScore 15.1</td>
+      <td>2024. június 30.</td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.sciencedirect.com/journal/research-policy/about/call-for-papers#the-coevolution-of-financial-and-technological-innovations" target="_blank">Link</a></td>
+      <td><img src='https://sdfestaticassets-eu-west-1.sciencedirectassets.com/shared-assets/24/images/elsevier-non-solus-new-grey.svg' width='50px' height='50px'> <br> Elsevier</td>
+      <td>Business, Management and Accounting</td>
+    </tr>
+    <tr>
+      <td>Meta-analyses in economic psychology</td>
+      <td>Journal of Economic Psychology • Impact Factor 3.5 • CiteScore 5.2</td>
+      <td>2024. március 31.</td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.sciencedirect.com/journal/journal-of-economic-psychology/about/call-for-papers#meta-analyses-in-economic-psychology" target="_blank">Link</a></td>
+      <td><img src='https://sdfestaticassets-eu-west-1.sciencedirectassets.com/shared-assets/24/images/elsevier-non-solus-new-grey.svg' width='50px' height='50px'> <br> Elsevier</td>
+      <td>Business, Management and Accounting</td>
+    </tr>
+    <tr>
+      <td>Professional judgment in accounting and auditing decisions</td>
+      <td>Journal of Accounting and Public Policy • Impact Factor 3.6 • CiteScore 4.1</td>
+      <td>2024. április 30.</td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.sciencedirect.com/journal/journal-of-accounting-and-public-policy/about/call-for-papers#professional-judgment-in-accounting-and-auditing-decisions" target="_blank">Link</a></td>
+      <td><img src='https://sdfestaticassets-eu-west-1.sciencedirectassets.com/shared-assets/24/images/elsevier-non-solus-new-grey.svg' width='50px' height='50px'> <br> Elsevier</td>
+      <td>Business, Management and Accounting</td>
+    </tr>
+    <tr>
+      <td>Service Research in Business-to-Business Marketing</td>
+      <td>Journal of Business Research • Impact Factor 11.3 • CiteScore 16.0</td>
+      <td>2024. március 31.</td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.sciencedirect.com/journal/journal-of-business-research/about/call-for-papers#service-research-in-business-to-business-marketing" target="_blank">Link</a></td>
+      <td><img src='https://sdfestaticassets-eu-west-1.sciencedirectassets.com/shared-assets/24/images/elsevier-non-solus-new-grey.svg' width='50px' height='50px'> <br> Elsevier</td>
+      <td>Business, Management and Accounting</td>
+    </tr>
+    <tr>
+      <td>Accounting as a STEM discipline: Perspectives and applications - Journal of Accounting Education</td>
+      <td>Journal of Accounting Education • CiteScore 4.6</td>
+      <td>2024. március 31.</td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.sciencedirect.com/journal/journal-of-accounting-education/about/call-for-papers#accounting-as-a-stem-discipline-perspectives-and-applications-journal-of-accounting-education" target="_blank">Link</a></td>
+      <td><img src='https://sdfestaticassets-eu-west-1.sciencedirectassets.com/shared-assets/24/images/elsevier-non-solus-new-grey.svg' width='50px' height='50px'> <br> Elsevier</td>
+      <td>Business, Management and Accounting</td>
+    </tr>
+    <tr>
+      <td>Consumer role in product end-of-life return: challenges and opportunities for circular supply chains</td>
+      <td>Cleaner Logistics and Supply Chain • CiteScore 3.4</td>
+      <td>2024. április 15.</td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.sciencedirect.com/journal/cleaner-logistics-and-supply-chain/about/call-for-papers#consumer-role-in-product-end-of-life-return-challenges-and-opportunities-for-circular-supply-chains" target="_blank">Link</a></td>
+      <td><img src='https://sdfestaticassets-eu-west-1.sciencedirectassets.com/shared-assets/24/images/elsevier-non-solus-new-grey.svg' width='50px' height='50px'> <br> Elsevier</td>
+      <td>Business, Management and Accounting</td>
+    </tr>
+    <tr>
+      <td>Project Leadership in a Changing World</td>
+      <td>Project Leadership and Society • CiteScore 3.4</td>
+      <td>2026. december 31.</td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.sciencedirect.com/journal/project-leadership-and-society/about/call-for-papers#project-leadership-in-a-changing-world" target="_blank">Link</a></td>
+      <td><img src='https://sdfestaticassets-eu-west-1.sciencedirectassets.com/shared-assets/24/images/elsevier-non-solus-new-grey.svg' width='50px' height='50px'> <br> Elsevier</td>
+      <td>Business, Management and Accounting</td>
+    </tr>
+    <tr>
+      <td>Innovation Management in the Digital Era</td>
+      <td>International Journal of Information Management • Impact Factor 21.0 • CiteScore 41.9</td>
+      <td>None</td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.sciencedirect.com/journal/international-journal-of-information-management/about/call-for-papers#innovation-management-in-the-digital-era" target="_blank">Link</a></td>
+      <td><img src='https://sdfestaticassets-eu-west-1.sciencedirectassets.com/shared-assets/24/images/elsevier-non-solus-new-grey.svg' width='50px' height='50px'> <br> Elsevier</td>
+      <td>Business, Management and Accounting</td>
+    </tr>
+    <tr>
+      <td>Advanced Technologies and Decision Support for Audit</td>
+      <td>International Journal of Accounting Information Systems • Impact Factor 4.6 • CiteScore 8.7</td>
+      <td>None</td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.sciencedirect.com/journal/international-journal-of-accounting-information-systems/about/call-for-papers#advanced-technologies-and-decision-support-for-audit" target="_blank">Link</a></td>
+      <td><img src='https://sdfestaticassets-eu-west-1.sciencedirectassets.com/shared-assets/24/images/elsevier-non-solus-new-grey.svg' width='50px' height='50px'> <br> Elsevier</td>
+      <td>Business, Management and Accounting</td>
+    </tr>
+    <tr>
+      <td>Acting on the ambitions to a net-zero EU</td>
+      <td>Energy Strategy Reviews • Impact Factor 8.2 • CiteScore 15.1</td>
+      <td>None</td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.sciencedirect.com/journal/energy-strategy-reviews/about/call-for-papers#acting-on-the-ambitions-to-a-net-zero-eu" target="_blank">Link</a></td>
+      <td><img src='https://sdfestaticassets-eu-west-1.sciencedirectassets.com/shared-assets/24/images/elsevier-non-solus-new-grey.svg' width='50px' height='50px'> <br> Elsevier</td>
+      <td>Business, Management and Accounting</td>
+    </tr>
+    <tr>
+      <td>Integrating Inclusive Finance and Sustainability: Pathways to Carbon Neutrality and Nature-Positive Futures</td>
+      <td>Research in International Business and Finance • Impact Factor 6.5 • CiteScore 9.1</td>
+      <td>2024. december 31.</td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.sciencedirect.com/journal/research-in-international-business-and-finance/about/call-for-papers#integrating-inclusive-finance-and-sustainability-pathways-to-carbon-neutrality-and-nature-positive-futures" target="_blank">Link</a></td>
+      <td><img src='https://sdfestaticassets-eu-west-1.sciencedirectassets.com/shared-assets/24/images/elsevier-non-solus-new-grey.svg' width='50px' height='50px'> <br> Elsevier</td>
+      <td>Economics, Econometrics and Finance - (Finance)</td>
+    </tr>
+    <tr>
+      <td>YSBC Sustainable and Socially Responsible Finance 2024</td>
+      <td>Finance Research Letters • Impact Factor 10.4 • CiteScore 10.8</td>
+      <td>2024. augusztus 13.</td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.sciencedirect.com/journal/finance-research-letters/about/call-for-papers#ysbc-sustainable-and-socially-responsible-finance-2024" target="_blank">Link</a></td>
+      <td><img src='https://sdfestaticassets-eu-west-1.sciencedirectassets.com/shared-assets/24/images/elsevier-non-solus-new-grey.svg' width='50px' height='50px'> <br> Elsevier</td>
+      <td>Economics, Econometrics and Finance - (Finance)</td>
+    </tr>
+    <tr>
+      <td>Market Power: A Search-Theoretic Approach</td>
+      <td>European Economic Review • Impact Factor 2.8 • CiteScore 3.9</td>
+      <td>2024. december 01.</td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.sciencedirect.com/journal/european-economic-review/about/call-for-papers#market-power-a-search-theoretic-approach" target="_blank">Link</a></td>
+      <td><img src='https://sdfestaticassets-eu-west-1.sciencedirectassets.com/shared-assets/24/images/elsevier-non-solus-new-grey.svg' width='50px' height='50px'> <br> Elsevier</td>
+      <td>Economics, Econometrics and Finance - (Finance)</td>
+    </tr>
+    <tr>
+      <td>Climate and Sustainable Finance 2024</td>
+      <td>Research in International Business and Finance • Impact Factor 6.5 • CiteScore 9.1</td>
+      <td>2024. szeptember 30.</td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.sciencedirect.com/journal/research-in-international-business-and-finance/about/call-for-papers#climate-and-sustainable-finance-2024" target="_blank">Link</a></td>
+      <td><img src='https://sdfestaticassets-eu-west-1.sciencedirectassets.com/shared-assets/24/images/elsevier-non-solus-new-grey.svg' width='50px' height='50px'> <br> Elsevier</td>
+      <td>Economics, Econometrics and Finance - (Finance)</td>
+    </tr>
+    <tr>
+      <td>Inflation in the COVID Era and Beyond</td>
+      <td>Journal of Monetary Economics • Impact Factor 4.1 • CiteScore 5.9</td>
+      <td>2024. július 31.</td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.sciencedirect.com/journal/journal-of-monetary-economics/about/call-for-papers#inflation-in-the-covid-era-and-beyond" target="_blank">Link</a></td>
+      <td><img src='https://sdfestaticassets-eu-west-1.sciencedirectassets.com/shared-assets/24/images/elsevier-non-solus-new-grey.svg' width='50px' height='50px'> <br> Elsevier</td>
+      <td>Economics, Econometrics and Finance - (Finance)</td>
+    </tr>
+    <tr>
+      <td>Socially Responsible Investment, SDGs, and Transition Finance: New International Evidence</td>
+      <td>Journal of International Money and Finance • Impact Factor 2.5 • CiteScore 4.0</td>
+      <td>2024. szeptember 15.</td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.sciencedirect.com/journal/journal-of-international-money-and-finance/about/call-for-papers#socially-responsible-investment-sdgs-and-transition-finance-new-international-evidence" target="_blank">Link</a></td>
+      <td><img src='https://sdfestaticassets-eu-west-1.sciencedirectassets.com/shared-assets/24/images/elsevier-non-solus-new-grey.svg' width='50px' height='50px'> <br> Elsevier</td>
+      <td>Economics, Econometrics and Finance - (Finance)</td>
+    </tr>
+    <tr>
+      <td>Digital markets and competition</td>
+      <td>International Review of Law and Economics • Impact Factor 1.1 • CiteScore 2.0</td>
+      <td>2024. május 31.</td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.sciencedirect.com/journal/international-review-of-law-and-economics/about/call-for-papers#digital-markets-and-competition" target="_blank">Link</a></td>
+      <td><img src='https://sdfestaticassets-eu-west-1.sciencedirectassets.com/shared-assets/24/images/elsevier-non-solus-new-grey.svg' width='50px' height='50px'> <br> Elsevier</td>
+      <td>Economics, Econometrics and Finance - (Finance)</td>
+    </tr>
+    <tr>
+      <td>Government policies in shaping firm behaviors in Asia-Pacific markets</td>
+      <td>Pacific-Basin Finance Journal • Impact Factor 4.6 • CiteScore 5.9</td>
+      <td>2024. augusztus 31.</td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.sciencedirect.com/journal/pacific-basin-finance-journal/about/call-for-papers#government-policies-in-shaping-firm-behaviors-in-asia-pacific-markets" target="_blank">Link</a></td>
+      <td><img src='https://sdfestaticassets-eu-west-1.sciencedirectassets.com/shared-assets/24/images/elsevier-non-solus-new-grey.svg' width='50px' height='50px'> <br> Elsevier</td>
+      <td>Economics, Econometrics and Finance - (Finance)</td>
+    </tr>
+    <tr>
+      <td>Agriculture cluster, trade and supply chain resilience and food security in China</td>
+      <td>China Economic Review • Impact Factor 6.8 • CiteScore 9.0</td>
+      <td>2024. november 30.</td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.sciencedirect.com/journal/china-economic-review/about/call-for-papers#agriculture-cluster-trade-and-supply-chain-resilience-and-food-security-in-china" target="_blank">Link</a></td>
+      <td><img src='https://sdfestaticassets-eu-west-1.sciencedirectassets.com/shared-assets/24/images/elsevier-non-solus-new-grey.svg' width='50px' height='50px'> <br> Elsevier</td>
+      <td>Economics, Econometrics and Finance - (Finance)</td>
+    </tr>
+    <tr>
+      <td>Capital vs. Labor: Perspectives on Inequality and Taxation in the 21st Century</td>
+      <td>European Economic Review • Impact Factor 2.8 • CiteScore 3.9</td>
+      <td>2024. szeptember 30.</td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.sciencedirect.com/journal/european-economic-review/about/call-for-papers#capital-vs-labor-perspectives-on-inequality-and-taxation-in-the-21st-century" target="_blank">Link</a></td>
+      <td><img src='https://sdfestaticassets-eu-west-1.sciencedirectassets.com/shared-assets/24/images/elsevier-non-solus-new-grey.svg' width='50px' height='50px'> <br> Elsevier</td>
+      <td>Economics, Econometrics and Finance - (Finance)</td>
+    </tr>
+    <tr>
+      <td>Climate Risk, Central Bank Mandates and Inflation</td>
+      <td>International Review of Economics & Finance • Impact Factor 4.5 • CiteScore 5.7</td>
+      <td>2024. augusztus 31.</td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.sciencedirect.com/journal/international-review-of-economics-and-finance/about/call-for-papers#climate-risk-central-bank-mandates-and-inflation" target="_blank">Link</a></td>
+      <td><img src='https://sdfestaticassets-eu-west-1.sciencedirectassets.com/shared-assets/24/images/elsevier-non-solus-new-grey.svg' width='50px' height='50px'> <br> Elsevier</td>
+      <td>Economics, Econometrics and Finance - (Finance)</td>
+    </tr>
+    <tr>
+      <td>Generative AI in Finance</td>
+      <td>Journal of Banking & Finance • Impact Factor 3.7 • CiteScore 5.7</td>
+      <td>2025. január 31.</td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.sciencedirect.com/journal/journal-of-banking-and-finance/about/call-for-papers#generative-ai-in-finance" target="_blank">Link</a></td>
+      <td><img src='https://sdfestaticassets-eu-west-1.sciencedirectassets.com/shared-assets/24/images/elsevier-non-solus-new-grey.svg' width='50px' height='50px'> <br> Elsevier</td>
+      <td>Economics, Econometrics and Finance - (Finance)</td>
+    </tr>
+    <tr>
+      <td>Institutional Quality, Climate Risks, and Environmental Transition in International Business and Finance</td>
+      <td>Research in International Business and Finance • Impact Factor 6.5 • CiteScore 9.1</td>
+      <td>2024. június 30.</td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.sciencedirect.com/journal/research-in-international-business-and-finance/about/call-for-papers#institutional-quality-climate-risks-and-environmental-transition-in-international-business-and-finance" target="_blank">Link</a></td>
+      <td><img src='https://sdfestaticassets-eu-west-1.sciencedirectassets.com/shared-assets/24/images/elsevier-non-solus-new-grey.svg' width='50px' height='50px'> <br> Elsevier</td>
+      <td>Economics, Econometrics and Finance - (Finance)</td>
+    </tr>
+    <tr>
+      <td>China’s Open Economy under Multiple Crises</td>
+      <td>China Economic Review • Impact Factor 6.8 • CiteScore 9.0</td>
+      <td>2024. augusztus 31.</td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.sciencedirect.com/journal/china-economic-review/about/call-for-papers#china-s-open-economy-under-multiple-crises" target="_blank">Link</a></td>
+      <td><img src='https://sdfestaticassets-eu-west-1.sciencedirectassets.com/shared-assets/24/images/elsevier-non-solus-new-grey.svg' width='50px' height='50px'> <br> Elsevier</td>
+      <td>Economics, Econometrics and Finance - (Finance)</td>
+    </tr>
+    <tr>
+      <td>Green and Climate Influences on Corporate Debt Choices</td>
+      <td>International Review of Financial Analysis • Impact Factor 8.2 • CiteScore 9.1</td>
+      <td>2024. augusztus 16.</td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.sciencedirect.com/journal/international-review-of-financial-analysis/about/call-for-papers#green-and-climate-influences-on-corporate-debt-choices" target="_blank">Link</a></td>
+      <td><img src='https://sdfestaticassets-eu-west-1.sciencedirectassets.com/shared-assets/24/images/elsevier-non-solus-new-grey.svg' width='50px' height='50px'> <br> Elsevier</td>
+      <td>Economics, Econometrics and Finance - (Finance)</td>
+    </tr>
+    <tr>
+      <td>Accounting for Space</td>
+      <td>Critical Perspectives on Accounting • Impact Factor 5.1 • CiteScore 7.9</td>
+      <td>2024. augusztus 31.</td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.sciencedirect.com/journal/critical-perspectives-on-accounting/about/call-for-papers#accounting-for-space" target="_blank">Link</a></td>
+      <td><img src='https://sdfestaticassets-eu-west-1.sciencedirectassets.com/shared-assets/24/images/elsevier-non-solus-new-grey.svg' width='50px' height='50px'> <br> Elsevier</td>
+      <td>Economics, Econometrics and Finance - (Finance)</td>
+    </tr>
+    <tr>
+      <td>Machine Learning, Generative AI, and Trading</td>
+      <td>Journal of Financial Markets • Impact Factor 2.8 • CiteScore 3.7</td>
+      <td>2024. október 15.</td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.sciencedirect.com/journal/journal-of-financial-markets/about/call-for-papers#machine-learning-generative-ai-and-trading" target="_blank">Link</a></td>
+      <td><img src='https://sdfestaticassets-eu-west-1.sciencedirectassets.com/shared-assets/24/images/elsevier-non-solus-new-grey.svg' width='50px' height='50px'> <br> Elsevier</td>
+      <td>Economics, Econometrics and Finance - (Finance)</td>
+    </tr>
+    <tr>
+      <td>Digital Finance: Transforming Financial Landscapes for Companies and Households</td>
+      <td>Journal of Economics and Business • Impact Factor 3.8 • CiteScore 4.3</td>
+      <td>2024. május 31.</td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.sciencedirect.com/journal/journal-of-economics-and-business/about/call-for-papers#digital-finance-transforming-financial-landscapes-for-companies-and-households" target="_blank">Link</a></td>
+      <td><img src='https://sdfestaticassets-eu-west-1.sciencedirectassets.com/shared-assets/24/images/elsevier-non-solus-new-grey.svg' width='50px' height='50px'> <br> Elsevier</td>
+      <td>Economics, Econometrics and Finance - (Finance)</td>
+    </tr>
+    <tr>
+      <td>Monetary and Fiscal Policies in Emerging Markets Amid Heightened Uncertainty</td>
+      <td>Journal of International Money and Finance • Impact Factor 2.5 • CiteScore 4.0</td>
+      <td>2024. július 01.</td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.sciencedirect.com/journal/journal-of-international-money-and-finance/about/call-for-papers#monetary-and-fiscal-policies-in-emerging-markets-amid-heightened-uncertainty" target="_blank">Link</a></td>
+      <td><img src='https://sdfestaticassets-eu-west-1.sciencedirectassets.com/shared-assets/24/images/elsevier-non-solus-new-grey.svg' width='50px' height='50px'> <br> Elsevier</td>
+      <td>Economics, Econometrics and Finance - (Finance)</td>
+    </tr>
+    <tr>
+      <td>Recent Advances in Financial Econometrics</td>
+      <td>The Quarterly Review of Economics and Finance • Impact Factor 3.4 • CiteScore 4.7</td>
+      <td>2024. október 31.</td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.sciencedirect.com/journal/the-quarterly-review-of-economics-and-finance/about/call-for-papers#recent-advances-in-financial-econometrics" target="_blank">Link</a></td>
+      <td><img src='https://sdfestaticassets-eu-west-1.sciencedirectassets.com/shared-assets/24/images/elsevier-non-solus-new-grey.svg' width='50px' height='50px'> <br> Elsevier</td>
+      <td>Economics, Econometrics and Finance - (Finance)</td>
+    </tr>
+    <tr>
+      <td>Field Experiments to Reduce Inequality</td>
+      <td>European Economic Review • Impact Factor 2.8 • CiteScore 3.9</td>
+      <td>2024. december 31.</td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.sciencedirect.com/journal/european-economic-review/about/call-for-papers#field-experiments-to-reduce-inequality" target="_blank">Link</a></td>
+      <td><img src='https://sdfestaticassets-eu-west-1.sciencedirectassets.com/shared-assets/24/images/elsevier-non-solus-new-grey.svg' width='50px' height='50px'> <br> Elsevier</td>
+      <td>Economics, Econometrics and Finance - (Finance)</td>
+    </tr>
+    <tr>
+      <td>Household Finance and Socioeconomic Development</td>
+      <td>Emerging Markets Review • Impact Factor 4.8 • CiteScore 6.5</td>
+      <td>2024. november 30.</td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.sciencedirect.com/journal/emerging-markets-review/about/call-for-papers#household-finance-and-socioeconomic-development" target="_blank">Link</a></td>
+      <td><img src='https://sdfestaticassets-eu-west-1.sciencedirectassets.com/shared-assets/24/images/elsevier-non-solus-new-grey.svg' width='50px' height='50px'> <br> Elsevier</td>
+      <td>Economics, Econometrics and Finance - (Finance)</td>
+    </tr>
+    <tr>
+      <td>Alternative data in finance</td>
+      <td>Finance Research Letters • Impact Factor 10.4 • CiteScore 10.8</td>
+      <td>2024. december 31.</td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.sciencedirect.com/journal/finance-research-letters/about/call-for-papers#alternative-data-in-finance" target="_blank">Link</a></td>
+      <td><img src='https://sdfestaticassets-eu-west-1.sciencedirectassets.com/shared-assets/24/images/elsevier-non-solus-new-grey.svg' width='50px' height='50px'> <br> Elsevier</td>
+      <td>Economics, Econometrics and Finance - (Finance)</td>
+    </tr>
+    <tr>
+      <td>14th Financial Markets and Corporate Governance Conference</td>
+      <td>Pacific-Basin Finance Journal • Impact Factor 4.6 • CiteScore 5.9</td>
+      <td>2024. december 31.</td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.sciencedirect.com/journal/pacific-basin-finance-journal/about/call-for-papers#14th-financial-markets-and-corporate-governance-conference" target="_blank">Link</a></td>
+      <td><img src='https://sdfestaticassets-eu-west-1.sciencedirectassets.com/shared-assets/24/images/elsevier-non-solus-new-grey.svg' width='50px' height='50px'> <br> Elsevier</td>
+      <td>Economics, Econometrics and Finance - (Finance)</td>
+    </tr>
+    <tr>
+      <td>Contemporary Issues in Commodity and Energy Markets</td>
+      <td>Journal of Banking & Finance • Impact Factor 3.7 • CiteScore 5.7</td>
+      <td>2024. december 31.</td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.sciencedirect.com/journal/journal-of-banking-and-finance/about/call-for-papers#contemporary-issues-in-commodity-and-energy-markets" target="_blank">Link</a></td>
+      <td><img src='https://sdfestaticassets-eu-west-1.sciencedirectassets.com/shared-assets/24/images/elsevier-non-solus-new-grey.svg' width='50px' height='50px'> <br> Elsevier</td>
+      <td>Economics, Econometrics and Finance - (Finance)</td>
+    </tr>
+    <tr>
+      <td>THE 1ST INTERNATIONAL WORKSHOP ON EMERGING ISSUES IN AUDITING: THE ADVENT OF ARTIFICIAL INTELLIGENCE AND FUTURE ROADS (EIA WORKSHOP & JIAAT 2024) 11-12 JULY 2024 University of Salerno, Italy</td>
+      <td>Journal of International Accounting, Auditing and Taxation • Impact Factor 2.6 • CiteScore 4.3</td>
+      <td>2024. április 30.</td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.sciencedirect.com/journal/journal-of-international-accounting-auditing-and-taxation/about/call-for-papers#the-1st-international-workshop-on-emerging-issues-in-auditing-the-advent-of-artificial-intelligence-and-future-roads-eia-workshop-jiaat-2024-11-12-july-2024-university-of-salerno-italy" target="_blank">Link</a></td>
+      <td><img src='https://sdfestaticassets-eu-west-1.sciencedirectassets.com/shared-assets/24/images/elsevier-non-solus-new-grey.svg' width='50px' height='50px'> <br> Elsevier</td>
+      <td>Economics, Econometrics and Finance - (Finance)</td>
+    </tr>
+    <tr>
+      <td>The Macroprudential policy and research conference</td>
+      <td>Journal of Banking & Finance • Impact Factor 3.7 • CiteScore 5.7</td>
+      <td>2024. március 31.</td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.sciencedirect.com/journal/journal-of-banking-and-finance/about/call-for-papers#the-macroprudential-policy-and-research-conference" target="_blank">Link</a></td>
+      <td><img src='https://sdfestaticassets-eu-west-1.sciencedirectassets.com/shared-assets/24/images/elsevier-non-solus-new-grey.svg' width='50px' height='50px'> <br> Elsevier</td>
+      <td>Economics, Econometrics and Finance - (Finance)</td>
+    </tr>
+    <tr>
+      <td>2024 FeAT International Conference on Artificial Intelligence, Green Finance, and Investments</td>
+      <td>Pacific-Basin Finance Journal • Impact Factor 4.6 • CiteScore 5.9</td>
+      <td>2024. augusztus 31.</td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.sciencedirect.com/journal/pacific-basin-finance-journal/about/call-for-papers#2024-feat-international-conference-on-artificial-intelligence-green-finance-and-investments" target="_blank">Link</a></td>
+      <td><img src='https://sdfestaticassets-eu-west-1.sciencedirectassets.com/shared-assets/24/images/elsevier-non-solus-new-grey.svg' width='50px' height='50px'> <br> Elsevier</td>
+      <td>Economics, Econometrics and Finance - (Finance)</td>
+    </tr>
+    <tr>
+      <td>Machine Learning and Big Data Analytics in Applied Finance</td>
+      <td>Pacific-Basin Finance Journal • Impact Factor 4.6 • CiteScore 5.9</td>
+      <td>2024. szeptember 30.</td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.sciencedirect.com/journal/pacific-basin-finance-journal/about/call-for-papers#machine-learning-and-big-data-analytics-in-applied-finance" target="_blank">Link</a></td>
+      <td><img src='https://sdfestaticassets-eu-west-1.sciencedirectassets.com/shared-assets/24/images/elsevier-non-solus-new-grey.svg' width='50px' height='50px'> <br> Elsevier</td>
+      <td>Economics, Econometrics and Finance - (Finance)</td>
+    </tr>
+    <tr>
+      <td>Income Inequality, Vulnerability and Middle-Income Trap (in honor of professor Martin Ravallion)</td>
+      <td>China Economic Review • Impact Factor 6.8 • CiteScore 9.0</td>
+      <td>2024. július 30.</td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.sciencedirect.com/journal/china-economic-review/about/call-for-papers#income-inequality-vulnerability-and-middle-income-trap-in-honor-of-professor-martin-ravallion" target="_blank">Link</a></td>
+      <td><img src='https://sdfestaticassets-eu-west-1.sciencedirectassets.com/shared-assets/24/images/elsevier-non-solus-new-grey.svg' width='50px' height='50px'> <br> Elsevier</td>
+      <td>Economics, Econometrics and Finance - (Finance)</td>
+    </tr>
+    <tr>
+      <td>Innovative Development of Chinese Cities in the New Era</td>
+      <td>China Economic Review • Impact Factor 6.8 • CiteScore 9.0</td>
+      <td>2024. augusztus 30.</td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.sciencedirect.com/journal/china-economic-review/about/call-for-papers#innovative-development-of-chinese-cities-in-the-new-era" target="_blank">Link</a></td>
+      <td><img src='https://sdfestaticassets-eu-west-1.sciencedirectassets.com/shared-assets/24/images/elsevier-non-solus-new-grey.svg' width='50px' height='50px'> <br> Elsevier</td>
+      <td>Economics, Econometrics and Finance - (Finance)</td>
+    </tr>
+    <tr>
+      <td>Currents issues in applied econometrics, business analytics, and empirical and comparative analysis of emerging and developed markets</td>
+      <td>Emerging Markets Review • Impact Factor 4.8 • CiteScore 6.5</td>
+      <td>2024. március 31.</td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.sciencedirect.com/journal/emerging-markets-review/about/call-for-papers#currents-issues-in-applied-econometrics-business-analytics-and-empirical-and-comparative-analysis-of-emerging-and-developed-markets" target="_blank">Link</a></td>
+      <td><img src='https://sdfestaticassets-eu-west-1.sciencedirectassets.com/shared-assets/24/images/elsevier-non-solus-new-grey.svg' width='50px' height='50px'> <br> Elsevier</td>
+      <td>Economics, Econometrics and Finance - (Finance)</td>
+    </tr>
+    <tr>
+      <td>Financial Economics of Climate and Related Risks</td>
+      <td>The North American Journal of Economics and Finance • Impact Factor 3.6 • CiteScore 5.6</td>
+      <td>2024. június 30.</td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.sciencedirect.com/journal/the-north-american-journal-of-economics-and-finance/about/call-for-papers#financial-economics-of-climate-and-related-risks" target="_blank">Link</a></td>
+      <td><img src='https://sdfestaticassets-eu-west-1.sciencedirectassets.com/shared-assets/24/images/elsevier-non-solus-new-grey.svg' width='50px' height='50px'> <br> Elsevier</td>
+      <td>Economics, Econometrics and Finance - (Finance)</td>
+    </tr>
+    <tr>
+      <td>Sovereign-bank diabolic loop: recent developments</td>
+      <td>Finance Research Letters • Impact Factor 10.4 • CiteScore 10.8</td>
+      <td>2024. március 31.</td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.sciencedirect.com/journal/finance-research-letters/about/call-for-papers#sovereign-bank-diabolic-loop-recent-developments" target="_blank">Link</a></td>
+      <td><img src='https://sdfestaticassets-eu-west-1.sciencedirectassets.com/shared-assets/24/images/elsevier-non-solus-new-grey.svg' width='50px' height='50px'> <br> Elsevier</td>
+      <td>Economics, Econometrics and Finance - (Finance)</td>
+    </tr>
+    <tr>
+      <td>ESG Integration: An Asian Perspective</td>
+      <td>Research in International Business and Finance • Impact Factor 6.5 • CiteScore 9.1</td>
+      <td>2024. december 31.</td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.sciencedirect.com/journal/research-in-international-business-and-finance/about/call-for-papers#esg-integration-an-asian-perspective" target="_blank">Link</a></td>
+      <td><img src='https://sdfestaticassets-eu-west-1.sciencedirectassets.com/shared-assets/24/images/elsevier-non-solus-new-grey.svg' width='50px' height='50px'> <br> Elsevier</td>
+      <td>Economics, Econometrics and Finance - (Finance)</td>
+    </tr>
+    <tr>
+      <td>Uncertainty, Economic Activity, and Forecasting in a Changing Environment</td>
+      <td>Journal of International Money and Finance • Impact Factor 2.5 • CiteScore 4.0</td>
+      <td>2024. május 15.</td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.sciencedirect.com/journal/journal-of-international-money-and-finance/about/call-for-papers#uncertainty-economic-activity-and-forecasting-in-a-changing-environment" target="_blank">Link</a></td>
+      <td><img src='https://sdfestaticassets-eu-west-1.sciencedirectassets.com/shared-assets/24/images/elsevier-non-solus-new-grey.svg' width='50px' height='50px'> <br> Elsevier</td>
+      <td>Economics, Econometrics and Finance - (Finance)</td>
+    </tr>
+    <tr>
+      <td>Urban Development and the Open Economy in China</td>
+      <td>International Review of Economics & Finance • Impact Factor 4.5 • CiteScore 5.7</td>
+      <td>2024. május 15.</td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.sciencedirect.com/journal/international-review-of-economics-and-finance/about/call-for-papers#urban-development-and-the-open-economy-in-china" target="_blank">Link</a></td>
+      <td><img src='https://sdfestaticassets-eu-west-1.sciencedirectassets.com/shared-assets/24/images/elsevier-non-solus-new-grey.svg' width='50px' height='50px'> <br> Elsevier</td>
+      <td>Economics, Econometrics and Finance - (Finance)</td>
+    </tr>
   </tbody>
 </table>
-
-                </div>
-            </div>
-        </main>
+          </div>
+        </div>
+      </main>
     </div>
+
     <script>
-        function updateRowCount() {
-                  var visibleRows = document.querySelectorAll("table tr:not([style*='display: none'])").length;
-                  document.getElementById("rowCount").innerText = "Total rows: " + (visibleRows-1);
-                }
-        function filterTable() {
-                  var input, filter, table, tr, td, i, txtValue;
-                  input = document.getElementById("subjectDropdown");
-                  filter = input.value.toUpperCase();
-                  table = document.getElementsByTagName("table")[0];
-                  tr = table.getElementsByTagName("tr");
+      function updateRowCount() {
+        var visibleRows = document.querySelectorAll(
+          "table tr:not([style*='display: none'])"
+        ).length;
+        document.getElementById("rowCount").innerText =
+          "Total rows: " + (visibleRows - 1);
+      }
+      function filterTable() {
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementById("subjectDropdown");
+        filter = input.value.toUpperCase();
+        table = document.getElementsByTagName("table")[0];
+        tr = table.getElementsByTagName("tr");
 
-                  
+        // Loop through all table rows, and show those that match the selected subject
+        for (i = 0; i < tr.length; i++) {
+          td = tr[i].getElementsByTagName("td")[5]; // Assuming the search is based on the fifth column (subject_key)
+          if (td) {
+            txtValue = td.textContent || td.innerText;
+            if (
+              filter === "ALL" ||
+              txtValue.toUpperCase().indexOf(filter) > -1
+            ) {
+              tr[i].style.display = "";
+            } else {
+              tr[i].style.display = "none";
+            }
+          }
+        }
+        updateRowCount(); // Update the row count after filtering
+      }
 
-                  // Loop through all table rows, and show those that match the selected subject
-                  for (i = 0; i < tr.length; i++) {
-                      td = tr[i].getElementsByTagName("td")[5]; // Assuming the search is based on the fifth column (subject_key)
-                      if (td) {
-                          txtValue = td.textContent || td.innerText;
-                          if (filter === "ALL" || txtValue.toUpperCase().indexOf(filter) > -1) {
-                              tr[i].style.display = "";
-                          } else {
-                              tr[i].style.display = "none";
-                          }
-                      }
-                  }
-                  updateRowCount(); // Update the row count after filtering
-              }
-
-        
-         function searchFunction() {
+      function searchFunction() {
         // Declare variables
         var input, filter, table, tr, td, i, txtValue;
         input = document.getElementById("searchInput");
@@ -539,22 +1711,20 @@
 
         // Loop through all table rows, and hide those who don't match the search query
         for (i = 0; i < tr.length; i++) {
-            td = tr[i].getElementsByTagName("td")[0]; // Assuming the search is based on the first column (title)
-            if (td) {
-                txtValue = td.textContent || td.innerText;
-                if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                    tr[i].style.display = "";
-                } else {
-                    tr[i].style.display = "none";
-                }
+          td = tr[i].getElementsByTagName("td")[0]; // Assuming the search is based on the first column (title)
+          if (td) {
+            txtValue = td.textContent || td.innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+              tr[i].style.display = "";
+            } else {
+              tr[i].style.display = "none";
             }
+          }
         }
         updateRowCount(); // Update the row count after filtering
-    }
+      }
 
-
-    updateRowCount(); // Update the row count after filtering
+      updateRowCount(); // Update the row count after filtering
     </script>
-</body>
-
+  </body>
 </html>

@@ -86,6 +86,19 @@
           <input type="text" id="searchInput" onkeyup="searchFunction()" placeholder="Search title..." title="Type in a name" class="p-2 mb-4 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
         </div>
         <div>
+          <select
+                id="subjectDropdownPublisher"
+                onchange="filterTablePublisher()"
+                class="block mt-1 p-2 border-gray-300 rounded-md rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none mr-10 mb-14"
+              >
+                <option value="all">All Publishers</option>
+                <!-- Add options for each subject_key -->
+                <option value="Emerald">Emerald </option>
+                <option value="Elsevier">Elsevier </option>
+                <option value="Taylor & Francis">Taylor & Francis </option>
+                
+                <!-- Add other subjects as needed -->
+              </select>
           <select id="subjectDropdown" onchange="filterTable()" class="block mt-1 p-2 border-gray-300 rounded-md rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
             <option value="all">All Subjects</option>
             <option value="Accounting finance & economics">Accounting finance & economics</option>
@@ -3569,6 +3582,32 @@
       }
       updateRowCount();
     }
+
+    function filterTablePublisher() {
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementById("subjectDropdownPublisher");
+        filter = input.value.toUpperCase();
+        table = document.getElementsByTagName("table")[0];
+        tr = table.getElementsByTagName("tr");
+
+        // Loop through all table rows, and show those that match the selected subject
+        for (i = 0; i < tr.length; i++) {
+          td = tr[i].getElementsByTagName("td")[4]; // Assuming the search is based on the fifth column (subject_key)
+          if (td) {
+            txtValue = td.textContent || td.innerText;
+            if (
+              filter === "ALL" ||
+              txtValue.toUpperCase().indexOf(filter) > -1
+            ) {
+              tr[i].style.display = "";
+            } else {
+              tr[i].style.display = "none";
+            }
+          }
+        }
+        updateRowCount(); // Update the row count after filtering
+      }
+    
     function searchFunction() {
       var input, filter, table, tr, td, i, txtValue;
       input = document.getElementById("searchInput");

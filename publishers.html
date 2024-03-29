@@ -1,287 +1,144 @@
 <!DOCTYPE html>
 <html lang="en" class="h-full bg-gray-100">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Publishers</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="icon" href="/pictures/sze_logo.png" sizes="144x144" />
-  </head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Publishers</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" href="/pictures/sze_logo.png" sizes="144x144">
   <style>
-    table {
-      font-family: Arial, sans-serif;
-      border-collapse: collapse;
-
-      margin: auto;
-    }
-    th,
-    td {
-      border-bottom: 1px solid #dddddd;
-      text-align: left;
-      padding: 16px;
-    }
-
-    a {
-      color: #007bff;
-      text-decoration: none;
-      cursor: pointer;
-    }
-
-    .min-h-screen {
-      /* Prevent vertical centering */
-      display: flex;
-      align-items: flex-start; /* Align content to the start (top) of the container */
-    }
-    tr:hover td {
-      background-color: lightgrey;
-    }
+    table { font-family: Arial, sans-serif; border-collapse: collapse; margin: auto; }
+    th, td { border-bottom: 1px solid #dddddd; text-align: left; padding: 16px; }
+    a { color: #007bff; text-decoration: none; cursor: pointer; }
+    #subjectDropdown { margin-bottom: 50px; }
+    .min-h-screen { display: flex; align-items: flex-start; }
+    tr:hover td { background-color: lightgrey; }
   </style>
-
-  <body class="h-full">
-    <div class="min-h-full">
-      <div id="container-for-nav-and-header" style="position: fixed; width: 100%; top:0">
-      <nav class="bg-gray-800 ">
+</head>
+<body class="h-full">
+  <div class="">
+    
+      <nav class="bg-gray-800 fixed w-full z-50">
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div class="flex h-16 items-center justify-between">
             <div class="flex items-center">
               <div class="flex-shrink-0">
-                <img
-                  class="h-8 w-8"
-                  src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
-                  alt="Your Company"
-                />
+                <img class="h-8 w-8" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500" alt="Your Company">
               </div>
               <div class="hidden md:block">
                 <div class="ml-10 flex items-baseline space-x-4">
-                  <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-                  <a
-                    href="#"
-                    class="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium"
-                    aria-current="page"
-                    >Dashboard</a
-                  >
-                  <a
-                    href="#"
-                    class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
-                    >Team</a
-                  >
-                  <a
-                    href="#"
-                    class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
-                    >Projects</a
-                  >
-                  <a
-                    href="#"
-                    class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
-                    >Calendar</a
-                  >
-                  <a
-                    href="#"
-                    class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
-                    >Reports</a
-                  >
+                  
+                  <a href="https://samyborsos.github.io/" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium" aria-current="page">Home</a>
+                  <a href="https://samyborsos.github.io/publishers.html" class="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium">Publishers</a>
+                  <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Summary Page</a>
+                  
                 </div>
               </div>
             </div>
             <div class="hidden md:block">
               <div class="ml-4 flex items-center md:ml-6">
-                <button
-                  type="button"
-                  class="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
-                >
+                <button type="button" class="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
                   <span class="absolute -inset-1.5"></span>
                   <span class="sr-only">View notifications</span>
-                  <svg
-                    class="h-6 w-6"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke-width="1.5"
-                    stroke="currentColor"
-                    aria-hidden="true"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0"
-                    />
+                  <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0"/>
                   </svg>
                 </button>
-
-                <!-- Profile dropdown -->
+                <span class="text-white w-8 ml-4 mr-12">Üdvözlöm!</span>
                 <div class="relative ml-3">
                   <div>
-                    <button
-                      type="button"
-                      class="relative flex max-w-xs items-center rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
-                      id="user-menu-button"
-                      aria-expanded="false"
-                      aria-haspopup="true"
-                    >
+                    <button type="button" class="relative flex max-w-xs items-center rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800" id="user-menu-button" aria-expanded="false" aria-haspopup="true">
                       <span class="sr-only">Open user menu</span>
-                      <img
-                        class="h-8 w-8 rounded-full"
-                        src="pictures/SzSzG-profile-picture.jpg"
-                        alt=""
-                      />
+                      <img class="h-8 w-8 rounded-full" src="/pictures/SzSzG-profile-picture.jpg" alt="">
+                      
                     </button>
                   </div>
-
-                  <!--
-                  Dropdown menu, show/hide based on menu state.
-  
-                  Entering: "transition ease-out duration-100"
-                    From: "transform opacity-0 scale-95"
-                    To: "transform opacity-100 scale-100"
-                  Leaving: "transition ease-in duration-75"
-                    From: "transform opacity-100 scale-100"
-                    To: "transform opacity-0 scale-95"
-                --></div>
+                </div>
               </div>
             </div>
             <div class="-mr-2 flex md:hidden">
-              <!-- Mobile menu button -->
-              <button
-                type="button"
-                class="relative inline-flex items-center justify-center rounded-md bg-gray-800 p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
-                aria-controls="mobile-menu"
-                aria-expanded="false"
-              >
+              <button type="button" class="relative inline-flex items-center justify-center rounded-md bg-gray-800 p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800" aria-controls="mobile-menu" aria-expanded="false">
                 <span class="absolute -inset-0.5"></span>
                 <span class="sr-only">Open main menu</span>
-                <!-- Menu open: "hidden", Menu closed: "block" -->
-                <svg
-                  class="block h-6 w-6"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke-width="1.5"
-                  stroke="currentColor"
-                  aria-hidden="true"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-                  />
+                <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/>
                 </svg>
-                <!-- Menu open: "block", Menu closed: "hidden" -->
-                <svg
-                  class="hidden h-6 w-6"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke-width="1.5"
-                  stroke="currentColor"
-                  aria-hidden="true"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M6 18L18 6M6 6l12 12"
-                  />
+                <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
                 </svg>
               </button>
             </div>
           </div>
         </div>
       </nav>
-
-      <header
-        class="bg-white shadow rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
-        
-      >
+      <header class="bg-white shadow rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none pt-16">
         <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
-          <h1 class="text-3xl font-bold tracking-tight text-gray-900">
-            Publishers
-          </h1>
+          <h1 class="text-3xl font-bold tracking-tight text-gray-900">Publishers</h1>
         </div>
       </header>
     </div>
-      <main>
-        <div class="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">
-          <p class="text-base mb-4"></p>
-          <div class="flex justify-between" style="margin-top: 200px">
-            <div>
-              <!-- <label for="searchInput" class="text-sm font-medium text-gray-500">Search for title</label><br> -->
-              <input
-                type="text"
-                id="searchInput"
-                onkeyup="searchFunction()"
-                placeholder="Search title..."
-                title="Type in a name"
-                class="block mt-1 p-2 border-gray-300 rounded-md rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none mr-10 mb-14"
-              />
-            </div>
-            <div class="flex">
-              
-              <select
-                id="subjectDropdownPublisher"
-                onchange="filterTablePublisher()"
-                class="block mt-1 p-2 border-gray-300 rounded-md rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none mr-10 mb-14"
-              >
-                <option value="all">All Publishers</option>
-                <!-- Add options for each subject_key -->
-                <option value="Emerald">Emerald </option>
-                <option value="Elsevier">Elsevier </option>
-                <option value="Taylor & Francis">Taylor & Francis </option>
-                
-                <!-- Add other subjects as needed -->
-              </select>
-
-              <!-- <label for="subjectDropdown" class="text-sm font-medium text-gray-500">Select Subject:</label> -->
-              <select
-                id="subjectDropdown"
-                onchange="filterTable()"
-                class="block mt-1 p-2 border-gray-300 rounded-md rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none mb-14"
-              >
-                <option value="all">All Subjects</option>
-                <!-- Add options for each subject_key -->
-                <option value="Accounting finance & economics">Accounting finance & economics </option>
-                <option value="Business, management & strategy">Business, management & strategy </option>
-                <option value="HR, learning & organisation studies">HR, learning & organisation studies </option>
-                <option value="Information & knowledge management">Information & knowledge management </option>
-                <option value="Marketing">Marketing</option>
-                <option value="Tourism & hospitality management">Tourism & hospitality management</option>
-                <option value="Operations, logistics & quality">Operations, logistics & quality</option>
-                <option value="Business, Management and Accounting">Business, Management and Accounting</option>
-                <option value="Economics, Econometrics and Finance - (Finance)">Economics, Econometrics and Finance - (Finance)</option>
-                <option value="Urban Studies">Urban Studies</option>
-                <option value="Behavioral Sciences">Behavioral Sciences</option>
-                <option value=" Tourism, Hospitality and Events"> Tourism, Hospitality and Events</option>
-                <option value="Economics, Finance, Business & Industry">Economics, Finance, Business & Industry</option>
-                
-                
-               
-                
-                <!-- Add other subjects as needed -->
-              </select>
-            </div>
-          </div>
-
-          <div class="">
-            <div class="flex justify-between">
-
-              <span
-              id="rowCount"
-              class="text-sm font-medium text-gray-500"
-              ></span>
+  </div>
+  <main>
+    <div class="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">
+      <p class="text-base mb-4"></p>
+      <div class="flex justify-between">
+        <div>
+          <input type="text" id="searchInput" onkeyup="searchFunction()" placeholder="Search title..." title="Type in a name" class="p-2 mb-4 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+        </div>
+        <div class="flex justfiy-end">
+          <select id="subjectDropdownPublisher" onchange="filterTablePublisher()" 
+                  class="block mt-1 p-2 border-gray-300 rounded-md rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none mr-10 mb-14">
+            <option value="all">All Publishers</option>
+            <option value="Emerald">Emerald</option>
+            <option value="Elsevier">Elsevier</option>
+            <option value="Taylor & Francis">Taylor & Francis</option>
             
-              <span
-              id="lastUpdated"
-              class="text-sm font-medium text-gray-500"
-              >Last updated: 2024.03.26</span>
-            </div>
+          </select>
 
-            <table class="dataframe mt-5" id="myTable">
+          <select id="subjectDropdownSubjects" onchange="filterTableSubjects()" 
+                      class="block mt-1 p-2 border-gray-300 rounded-md rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none mr-10 mb-14">
+            <option value="all">All Subjects</option>
+            <option value="Accounting finance & economics">Accounting finance & economics</option>
+            <option value="Business, management & strategy">Business, management & strategy</option>
+            <option value="HR, learning & organisation studies">HR, learning & organisation studies</option>
+            <option value="Information & knowledge management">Information & knowledge management</option>
+            <option value="Marketing">Marketing</option>
+            <option value="Tourism & hospitality management">Tourism & hospitality management</option>
+            <option value="Operations, logistics & quality">Operations, logistics & quality</option>
+            <option value="Business, Management and Accounting">Business, Management and Accounting</option>
+            <option value="Economics, Econometrics and Finance - (Finance)">Economics, Econometrics and Finance - (Finance)</option>
+            <option value="Behavioral Sciences">Behavioral Sciences</option>
+            <option value="Economics, Finance, Business & Industry">Economics, Finance, Business & Industry</option>
+            <option value="Tourism, Hospitality and Events">Tourism, Hospitality and Events</option>
+            <option value="Urban Studies">Urban Studies</option>
+          </select>
+        </div>
+      </div>
+      <div class="flex justify-between">
+        <span id="rowCount" class="text-sm font-medium text-gray-500"></span>
+        <span id="lastUpdated" class="text-sm font-medium text-gray-500">Last updated: 2024.03.28</span>
+      </div>
+      <div>
+        <table class="dataframe mt-5" id="myTable">
   <thead>
     <tr style="text-align: right;">
       <th>Title</th>
       <th>Description</th>
-      <th onclick="onHeaderClick(this)" class="hover hover:cursor-pointer">Close date <span></span></th>
+      <th>Close date</th>
       <th>Url</th>
       <th>Publisher</th>
       <th>Subject</th>
     </tr>
   </thead>
   <tbody>
+    <tr>
+      <td>Sustainability Accounting, Sustainable Finance & Governance: Towards Eco-systems</td>
+      <td>The purpose of this special issue is to offer opportunity for scholars regarding drawing on various theoretical lenses and authentic engagements to contribute to the extant literature on...</td>
+      <td>2024. december 31.</td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.emeraldgrouppublishing.com//calls-for-papers/sustainability-accounting-sustainable-finance-governance-towards-eco-systems" target="_blank">Link</a></td>
+      <td><img src='https://www.emeraldgrouppublishing.com/themes/custom/emerald_publishing/logo.svg' width='50px' height='50px'> <br> Emerald</td>
+      <td>Accounting finance & economics</td>
+    </tr>
     <tr>
       <td>Indonesian Accounting Research: Integrating Contemporary Perspectives with Social, Economic, and Environmental Imperatives</td>
       <td>We explore Indonesia’s accounting landscape amidst social, economic, and environmental challenges to shape a sustainable future through integrated formal and informal institutional perspectives.</td>
@@ -323,12 +180,28 @@
       <td>Accounting finance & economics</td>
     </tr>
     <tr>
-      <td>Call for Papers – Joint Asian Conference On Business And Economic Studies (6th ACBES - 8th GARCOMBS - 2nd ICONICS)</td>
-      <td>Call for Papers – Joint Asian Conference On Business And Economic Studies (6th ACBES - 8th GARCOMBS - 2nd ICONICS)</td>
-      <td>2024. június 15.</td>
-      <td><a class="text-blue-500 hover:underline" href="https://www.emeraldgrouppublishing.com//calls-for-papers/call-papers-joint-asian-conference-business-and-economic-studies-6th-acbes-8th" target="_blank">Link</a></td>
+      <td>Promoting Sustainable Impact: Perspectives from the Middle East on UNGC and PRME</td>
+      <td>This special issue aims to promote sustainable development in the Middle East by delving into the application of UNGC and PRME principles, showcasing unique perspectives, fostering collaboration, and...</td>
+      <td>2024. szeptember 30.</td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.emeraldgrouppublishing.com//calls-for-papers/promoting-sustainable-impact-perspectives-middle-east-ungc-and-prme" target="_blank">Link</a></td>
       <td><img src='https://www.emeraldgrouppublishing.com/themes/custom/emerald_publishing/logo.svg' width='50px' height='50px'> <br> Emerald</td>
-      <td>Accounting finance & economics</td>
+      <td>Business, management & strategy</td>
+    </tr>
+    <tr>
+      <td>Digital Transformation for Societal Sustainability and Human Betterment in Asian Countires: Strategies, Challenges, and Impact</td>
+      <td>This special issue aims to explore how digital transformation strategies can be harnessed to address pressing societal challenges, promote sustainability, and enhance human wellbeing.</td>
+      <td>2024. szeptember 01.</td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.emeraldgrouppublishing.com//calls-for-papers/digital-transformation-societal-sustainability-and-human-betterment-asian" target="_blank">Link</a></td>
+      <td><img src='https://www.emeraldgrouppublishing.com/themes/custom/emerald_publishing/logo.svg' width='50px' height='50px'> <br> Emerald</td>
+      <td>Business, management & strategy</td>
+    </tr>
+    <tr>
+      <td>Technological Impact on Organizational Sustainability</td>
+      <td>The special issue aims to explore the multifaceted relationship between technology and organizational sustainability. Special focus would be the management of organizational processes in technology...</td>
+      <td>2024. július 31.</td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.emeraldgrouppublishing.com//calls-for-papers/technological-impact-organizational-sustainability" target="_blank">Link</a></td>
+      <td><img src='https://www.emeraldgrouppublishing.com/themes/custom/emerald_publishing/logo.svg' width='50px' height='50px'> <br> Emerald</td>
+      <td>Business, management & strategy</td>
     </tr>
     <tr>
       <td>Call for Papers – Special Issue on "Sustainable and Smart Maritime and Port Logistics" of the XXV International Conference on Material Handling, Constructions and Logistics (MHCL 2024)</td>
@@ -355,28 +228,12 @@
       <td>Business, management & strategy</td>
     </tr>
     <tr>
-      <td>Advancing Sustainability Reporting in SMEs: Challenges and Opportunities in the Modern Landscape</td>
-      <td>The aim of this Special Issue is to explore the impact of digitalization on sustainability reporting practices, with a particular focus on small and medium-sized enterprises (SMEs).</td>
-      <td>2025. január 31.</td>
-      <td><a class="text-blue-500 hover:underline" href="https://www.emeraldgrouppublishing.com//calls-for-papers/advancing-sustainability-reporting-smes-challenges-and-opportunities-modern" target="_blank">Link</a></td>
+      <td>Insights into Followership: Implications for Developing Effective Organizations</td>
+      <td>Providing understanding of and resources for embedding followership within education/training opportunities, raising awareness of how this can enhance the development of effective organisations.</td>
+      <td>2024. november 05.</td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.emeraldgrouppublishing.com//calls-for-papers/insights-followership-implications-developing-effective-organizations" target="_blank">Link</a></td>
       <td><img src='https://www.emeraldgrouppublishing.com/themes/custom/emerald_publishing/logo.svg' width='50px' height='50px'> <br> Emerald</td>
-      <td>Business, management & strategy</td>
-    </tr>
-    <tr>
-      <td>Digital Sustainability</td>
-      <td>To approach the set of global changes that interlink digital transition objectives and structural changes involving the social, economic, technological and environmental domains.</td>
-      <td>2024. június 15.</td>
-      <td><a class="text-blue-500 hover:underline" href="https://www.emeraldgrouppublishing.com//calls-for-papers/digital-sustainability" target="_blank">Link</a></td>
-      <td><img src='https://www.emeraldgrouppublishing.com/themes/custom/emerald_publishing/logo.svg' width='50px' height='50px'> <br> Emerald</td>
-      <td>Business, management & strategy</td>
-    </tr>
-    <tr>
-      <td>Artificial Intelligence in Entrepreneurship</td>
-      <td>This special issue aims to explore various ways AI influences entrepreneurship, entrepreneurial decision-making processes and outcomes, and the potential opportunities and challenges these...</td>
-      <td>2024. december 31.</td>
-      <td><a class="text-blue-500 hover:underline" href="https://www.emeraldgrouppublishing.com//calls-for-papers/artificial-intelligence-entrepreneurship" target="_blank">Link</a></td>
-      <td><img src='https://www.emeraldgrouppublishing.com/themes/custom/emerald_publishing/logo.svg' width='50px' height='50px'> <br> Emerald</td>
-      <td>Business, management & strategy</td>
+      <td>HR, learning & organisation studies</td>
     </tr>
     <tr>
       <td>Beyond Traditional Fieldwork – Digital Ethnography’s Role in Understanding Modern Work(places)</td>
@@ -419,14 +276,6 @@
       <td>HR, learning & organisation studies</td>
     </tr>
     <tr>
-      <td>Metaverse and organizations: Perspectives from emerging economies</td>
-      <td>The special issue aims to explore various aspects of metaverse on organisations from an emerging economies perspective. It aims to explore both the bright and dark side of the metaverse in...</td>
-      <td>2024. július 31.</td>
-      <td><a class="text-blue-500 hover:underline" href="https://www.emeraldgrouppublishing.com//calls-for-papers/metaverse-and-organizations-perspectives-emerging-economies" target="_blank">Link</a></td>
-      <td><img src='https://www.emeraldgrouppublishing.com/themes/custom/emerald_publishing/logo.svg' width='50px' height='50px'> <br> Emerald</td>
-      <td>HR, learning & organisation studies</td>
-    </tr>
-    <tr>
       <td>Industrial Management & Data Systems (IMDS) Call for Special Issue proposals.</td>
       <td>Industrial Management & Data Systems (IMDS) invites interested researchers to submit a special issue proposal to publish the special issue papers in 2025. We are open to any emerging topics that fit...</td>
       <td>2024. április 30.</td>
@@ -438,7 +287,7 @@
       <td>Celebrating the multidisciplinary contribution of entrepreneurial research on inclusive socio-economic development</td>
       <td>The special issue aims to recognise the diverse entrepreneurial research and its contributions to inclusive socio-economic development through theoretical discourse, practical implications and policy...</td>
       <td>2024. augusztus 25.</td>
-      <td><a class="text-blue-500 hover:underline" href="https://www.emeraldgrouppublishing.com//calls-for-papers/celebrating-multidisciplinary-contribution-entrepreneurial-research-inclusive-0" target="_blank">Link</a></td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.emeraldgrouppublishing.com//calls-for-papers/celebrating-multidisciplinary-contribution-entrepreneurial-research-inclusive" target="_blank">Link</a></td>
       <td><img src='https://www.emeraldgrouppublishing.com/themes/custom/emerald_publishing/logo.svg' width='50px' height='50px'> <br> Emerald</td>
       <td>Information & knowledge management</td>
     </tr>
@@ -459,6 +308,14 @@
       <td>Information & knowledge management</td>
     </tr>
     <tr>
+      <td>Designing Digital Ecosystems of Service Robot: Artifacts, Behaviors, Organizations, and Design Perspectives</td>
+      <td>This special issue highlights the socio-technical phenomena of service robots, dealing with artifacts, behaviors, organizations, and design perspectives.</td>
+      <td>2024. április 30.</td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.emeraldgrouppublishing.com//calls-for-papers/designing-digital-ecosystems-service-robot-artifacts-behaviors-organizations-and" target="_blank">Link</a></td>
+      <td><img src='https://www.emeraldgrouppublishing.com/themes/custom/emerald_publishing/logo.svg' width='50px' height='50px'> <br> Emerald</td>
+      <td>Information & knowledge management</td>
+    </tr>
+    <tr>
       <td>Transforming Industrial Competitiveness through Digital Service Innovation (DSI): Enabling Factors and Expected Outcomes</td>
       <td>The role of services in manufacturing industries has become increasingly relevant as industrialized nations have progressively transitioned towards service-based economies (Hofmeister et al., 2023).</td>
       <td>2024. április 30.</td>
@@ -467,12 +324,36 @@
       <td>Information & knowledge management</td>
     </tr>
     <tr>
-      <td>Esports: A Multidisciplinary Research Perspective</td>
-      <td>Electronic sports, or esports as they are more generally known, have been referred to as “alternative sport realities” (Hemphill, 2005, p. 199), and can be defined more precisely as “professional or...</td>
-      <td>2024. március 28.</td>
-      <td><a class="text-blue-500 hover:underline" href="https://www.emeraldgrouppublishing.com//calls-for-papers/esports-a-multidisciplinary-research-perspective" target="_blank">Link</a></td>
+      <td>GREENWASHING: MANAGERIAL AND FINANCIAL PERSPECTIVES IN THE CONTEXT OF UNCERTAINTY</td>
+      <td>In the context of uncertainty (Qureshi et al. 2023), greenwashing is a double-edged sword, presenting both opportunities and risks. Risks associated with greenwashing include reputational risks, legal...</td>
+      <td>2024. szeptember 30.</td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.emeraldgrouppublishing.com//calls-for-papers/greenwashing-managerial-and-financial-perspectives-context-uncertainty" target="_blank">Link</a></td>
       <td><img src='https://www.emeraldgrouppublishing.com/themes/custom/emerald_publishing/logo.svg' width='50px' height='50px'> <br> Emerald</td>
-      <td>Information & knowledge management</td>
+      <td>Marketing</td>
+    </tr>
+    <tr>
+      <td>Navigating uncharted waters: The forefront of crisis READINESS</td>
+      <td>This special issue aims to advance the understanding of crisis READINESS, a new crisis management concept beyond crisis preparedness and resilience.</td>
+      <td>2025. január 03.</td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.emeraldgrouppublishing.com//calls-for-papers/navigating-uncharted-waters-forefront-crisis-readiness" target="_blank">Link</a></td>
+      <td><img src='https://www.emeraldgrouppublishing.com/themes/custom/emerald_publishing/logo.svg' width='50px' height='50px'> <br> Emerald</td>
+      <td>Marketing</td>
+    </tr>
+    <tr>
+      <td>The challenge of education. Pedagogy and didactics in applied professional communication disciplines</td>
+      <td>The special issue is concerned with teaching and learning about applied and professional communication at universities, universities of applied sciences and university colleges.</td>
+      <td>2024. szeptember 30.</td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.emeraldgrouppublishing.com//calls-for-papers/challenge-education-pedagogy-and-didactics-applied-professional-communication" target="_blank">Link</a></td>
+      <td><img src='https://www.emeraldgrouppublishing.com/themes/custom/emerald_publishing/logo.svg' width='50px' height='50px'> <br> Emerald</td>
+      <td>Marketing</td>
+    </tr>
+    <tr>
+      <td>Deglobalization and Global Branding Strategy</td>
+      <td>Deglobalization not only affects the world economic order, international trade and business exchanges, technology trade and national competition patterns, but also affects the way we perceive and...</td>
+      <td>2024. december 31.</td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.emeraldgrouppublishing.com//calls-for-papers/deglobalization-and-global-branding-strategy" target="_blank">Link</a></td>
+      <td><img src='https://www.emeraldgrouppublishing.com/themes/custom/emerald_publishing/logo.svg' width='50px' height='50px'> <br> Emerald</td>
+      <td>Marketing</td>
     </tr>
     <tr>
       <td>AI and Ethical Consumerism Among Young Consumers</td>
@@ -487,38 +368,6 @@
       <td>To seek articles from established and new scholars which combine fashion and clothing research with marketing and retailing in its broadest sense.</td>
       <td>2024. augusztus 31.</td>
       <td><a class="text-blue-500 hover:underline" href="https://www.emeraldgrouppublishing.com//calls-for-papers/marketing-and-retailing-clothing-and-fashion-long-view" target="_blank">Link</a></td>
-      <td><img src='https://www.emeraldgrouppublishing.com/themes/custom/emerald_publishing/logo.svg' width='50px' height='50px'> <br> Emerald</td>
-      <td>Marketing</td>
-    </tr>
-    <tr>
-      <td>Integrating sustainability into the marketing of food services and food and beverage retail merchandising</td>
-      <td>This special issue aims to encourage a diverse array of research that can offer theoretical and practical insights into marketing sustainable food services and food and beverage retail merchandising.</td>
-      <td>2024. július 01.</td>
-      <td><a class="text-blue-500 hover:underline" href="https://www.emeraldgrouppublishing.com//calls-for-papers/integrating-sustainability-marketing-food-services-and-food-and-beverage-retail" target="_blank">Link</a></td>
-      <td><img src='https://www.emeraldgrouppublishing.com/themes/custom/emerald_publishing/logo.svg' width='50px' height='50px'> <br> Emerald</td>
-      <td>Marketing</td>
-    </tr>
-    <tr>
-      <td>Marketing with Anthropomorphised AI: Insights from Consumers</td>
-      <td>This SI intends to advance theoretical development and empirical research on anthropomorphised AI in the B2C context.</td>
-      <td>2024. május 01.</td>
-      <td><a class="text-blue-500 hover:underline" href="https://www.emeraldgrouppublishing.com//calls-for-papers/marketing-anthropomorphised-ai-insights-consumers" target="_blank">Link</a></td>
-      <td><img src='https://www.emeraldgrouppublishing.com/themes/custom/emerald_publishing/logo.svg' width='50px' height='50px'> <br> Emerald</td>
-      <td>Marketing</td>
-    </tr>
-    <tr>
-      <td>The whole is better than the sum of the parts: a service ecosystems approach to service interaction vulnerability</td>
-      <td>Exploring customer and frontline employee experiences of vulnerability using a service ecosystem approach, this special issue provides a holistic approach of service interaction vulnerability and...</td>
-      <td>2024. május 01.</td>
-      <td><a class="text-blue-500 hover:underline" href="https://www.emeraldgrouppublishing.com//calls-for-papers/whole-better-sum-parts-a-service-ecosystems-approach-service-interaction" target="_blank">Link</a></td>
-      <td><img src='https://www.emeraldgrouppublishing.com/themes/custom/emerald_publishing/logo.svg' width='50px' height='50px'> <br> Emerald</td>
-      <td>Marketing</td>
-    </tr>
-    <tr>
-      <td>Artificial Intelligence and Sport Business</td>
-      <td>Integrating robust datasets, learning algorithms, software programs, and hardware infrastructure, artificial intelligence (AI) has been exponentially elevating human society’s problem-solving capacity...</td>
-      <td>2024. június 30.</td>
-      <td><a class="text-blue-500 hover:underline" href="https://www.emeraldgrouppublishing.com//calls-for-papers/artificial-intelligence-and-sport-business" target="_blank">Link</a></td>
       <td><img src='https://www.emeraldgrouppublishing.com/themes/custom/emerald_publishing/logo.svg' width='50px' height='50px'> <br> Emerald</td>
       <td>Marketing</td>
     </tr>
@@ -563,6 +412,14 @@
       <td>Tourism & hospitality management</td>
     </tr>
     <tr>
+      <td>Advancing the Future of Retail Operations with Cutting-Edge Technologies</td>
+      <td>This special issue aims to unravel the intricate dance of retail operations and cutting-edge technological innovations, exploring how the marriage of these elements can redefine the customer...</td>
+      <td>2025. január 31.</td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.emeraldgrouppublishing.com//calls-for-papers/advancing-future-retail-operations-cutting-edge-technologies" target="_blank">Link</a></td>
+      <td><img src='https://www.emeraldgrouppublishing.com/themes/custom/emerald_publishing/logo.svg' width='50px' height='50px'> <br> Emerald</td>
+      <td>Operations, logistics & quality</td>
+    </tr>
+    <tr>
       <td>Circular Economy Practices in the context of Project Management</td>
       <td>This special issue seeks to explore the intersection of CE practices and project management.</td>
       <td>2024. október 01.</td>
@@ -603,12 +460,68 @@
       <td>Operations, logistics & quality</td>
     </tr>
     <tr>
-      <td>Crafting Immersive Service Experiences: Bridging Fiction and Reality</td>
-      <td>The special issue will contribute novel insights into the intersection of immersive technologies and service management, expanding the theoretical and empirical landscape of service theory and...</td>
+      <td>Transforming Business Models Across Digital Platforms: Exploring the Role of Artificial Intelligence</td>
+      <td>Journal of Engineering and Technology Management • Impact Factor 4.8 • CiteScore 7.2</td>
+      <td>2024. május 01.</td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.sciencedirect.com/journal/journal-of-engineering-and-technology-management/about/call-for-papers#transforming-business-models-across-digital-platforms-exploring-the-role-of-artificial-intelligence" target="_blank">Link</a></td>
+      <td><img src='https://sdfestaticassets-eu-west-1.sciencedirectassets.com/shared-assets/24/images/elsevier-non-solus-new-grey.svg' width='50px' height='50px'> <br> Elsevier</td>
+      <td>Business, Management and Accounting</td>
+    </tr>
+    <tr>
+      <td>Revolutionizing Smart Buildings: Integrating Machine Learning and AI-Driven Controllers for Energy Optimization and Occupant Comfort within buildings</td>
+      <td>Journal of Building Engineering • Impact Factor 6.4 • CiteScore 8.3</td>
+      <td>2024. december 15.</td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.sciencedirect.com/journal/journal-of-building-engineering/about/call-for-papers#revolutionizing-smart-buildings-integrating-machine-learning-and-ai-driven-controllers-for-energy-optimization-and-occupant-comfort-within-buildings" target="_blank">Link</a></td>
+      <td><img src='https://sdfestaticassets-eu-west-1.sciencedirectassets.com/shared-assets/24/images/elsevier-non-solus-new-grey.svg' width='50px' height='50px'> <br> Elsevier</td>
+      <td>Business, Management and Accounting</td>
+    </tr>
+    <tr>
+      <td>Banking, Environmental, Digitalization, and Gender Challenges in the MENA Region</td>
+      <td>Global Finance Journal • Impact Factor 5.2 • CiteScore 5.0</td>
+      <td>2024. szeptember 15.</td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.sciencedirect.com/journal/global-finance-journal/about/call-for-papers#banking-environmental-digitalization-and-gender-challenges-in-the-mena-region" target="_blank">Link</a></td>
+      <td><img src='https://sdfestaticassets-eu-west-1.sciencedirectassets.com/shared-assets/24/images/elsevier-non-solus-new-grey.svg' width='50px' height='50px'> <br> Elsevier</td>
+      <td>Business, Management and Accounting</td>
+    </tr>
+    <tr>
+      <td>Lights and shadows of generative AI for individuals, organizations, and society</td>
+      <td>International Journal of Information Management • Impact Factor 21.0 • CiteScore 41.9</td>
       <td>2024. november 30.</td>
-      <td><a class="text-blue-500 hover:underline" href="https://www.emeraldgrouppublishing.com//calls-for-papers/crafting-immersive-service-experiences-bridging-fiction-and-reality" target="_blank">Link</a></td>
-      <td><img src='https://www.emeraldgrouppublishing.com/themes/custom/emerald_publishing/logo.svg' width='50px' height='50px'> <br> Emerald</td>
-      <td>Operations, logistics & quality</td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.sciencedirect.com/journal/international-journal-of-information-management/about/call-for-papers#lights-and-shadows-of-generative-ai-for-individuals-organizations-and-society" target="_blank">Link</a></td>
+      <td><img src='https://sdfestaticassets-eu-west-1.sciencedirectassets.com/shared-assets/24/images/elsevier-non-solus-new-grey.svg' width='50px' height='50px'> <br> Elsevier</td>
+      <td>Business, Management and Accounting</td>
+    </tr>
+    <tr>
+      <td>The Impact of Climate Change: Changes in Governance and Finance of Water Utilities</td>
+      <td>Utilities Policy • Impact Factor 4.0 • CiteScore 6.3</td>
+      <td>2025. január 01.</td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.sciencedirect.com/journal/utilities-policy/about/call-for-papers#the-impact-of-climate-change-changes-in-governance-and-finance-of-water-utilities" target="_blank">Link</a></td>
+      <td><img src='https://sdfestaticassets-eu-west-1.sciencedirectassets.com/shared-assets/24/images/elsevier-non-solus-new-grey.svg' width='50px' height='50px'> <br> Elsevier</td>
+      <td>Business, Management and Accounting</td>
+    </tr>
+    <tr>
+      <td>A chrono-urbanist approach to arts and culture</td>
+      <td>Cities • Impact Factor 6.7 • CiteScore 10.4</td>
+      <td>2024. augusztus 31.</td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.sciencedirect.com/journal/cities/about/call-for-papers#a-chrono-urbanist-approach-to-arts-and-culture" target="_blank">Link</a></td>
+      <td><img src='https://sdfestaticassets-eu-west-1.sciencedirectassets.com/shared-assets/24/images/elsevier-non-solus-new-grey.svg' width='50px' height='50px'> <br> Elsevier</td>
+      <td>Business, Management and Accounting</td>
+    </tr>
+    <tr>
+      <td>Generative AI: Transforming Human, Business, and Organizational Decision Making</td>
+      <td>Decision Support Systems • Impact Factor 7.5 • CiteScore 12.5</td>
+      <td>2024. november 30.</td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.sciencedirect.com/journal/decision-support-systems/about/call-for-papers#generative-ai-transforming-human-business-and-organizational-decision-making" target="_blank">Link</a></td>
+      <td><img src='https://sdfestaticassets-eu-west-1.sciencedirectassets.com/shared-assets/24/images/elsevier-non-solus-new-grey.svg' width='50px' height='50px'> <br> Elsevier</td>
+      <td>Business, Management and Accounting</td>
+    </tr>
+    <tr>
+      <td>Serving (with) the "invisibles" in the age of Artificial Intelligence</td>
+      <td>Journal of Business Research • Impact Factor 11.3 • CiteScore 16.0</td>
+      <td>2025. április 30.</td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.sciencedirect.com/journal/journal-of-business-research/about/call-for-papers#serving-with-the-invisibles-in-the-age-of-artificial-intelligence" target="_blank">Link</a></td>
+      <td><img src='https://sdfestaticassets-eu-west-1.sciencedirectassets.com/shared-assets/24/images/elsevier-non-solus-new-grey.svg' width='50px' height='50px'> <br> Elsevier</td>
+      <td>Business, Management and Accounting</td>
     </tr>
     <tr>
       <td>Special Issue of the 16th International Conference on Similarity Search and Applications (SISAP 2023)</td>
@@ -639,14 +552,6 @@
       <td>Journal of Purchasing and Supply Management • Impact Factor 6.1 • CiteScore 13.2</td>
       <td>2024. november 30.</td>
       <td><a class="text-blue-500 hover:underline" href="https://www.sciencedirect.com/journal/journal-of-purchasing-and-supply-management/about/call-for-papers#literature-reviews-driving-the-field-of-purchasing-and-supply-chain-management-forward" target="_blank">Link</a></td>
-      <td><img src='https://sdfestaticassets-eu-west-1.sciencedirectassets.com/shared-assets/24/images/elsevier-non-solus-new-grey.svg' width='50px' height='50px'> <br> Elsevier</td>
-      <td>Business, Management and Accounting</td>
-    </tr>
-    <tr>
-      <td>Best Papers of the ICPM 2023 Conference</td>
-      <td>Information Systems • Impact Factor 3.7 • CiteScore 7.9</td>
-      <td>2024. március 27.</td>
-      <td><a class="text-blue-500 hover:underline" href="https://www.sciencedirect.com/journal/information-systems/about/call-for-papers#best-papers-of-the-icpm-2023-conference" target="_blank">Link</a></td>
       <td><img src='https://sdfestaticassets-eu-west-1.sciencedirectassets.com/shared-assets/24/images/elsevier-non-solus-new-grey.svg' width='50px' height='50px'> <br> Elsevier</td>
       <td>Business, Management and Accounting</td>
     </tr>
@@ -1227,6 +1132,14 @@
       <td>Business, Management and Accounting</td>
     </tr>
     <tr>
+      <td>Program Management of Major Infrastructure Projects</td>
+      <td>International Journal of Project Management • Impact Factor 8.0 • CiteScore 12.7</td>
+      <td>2024. október 30.</td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.sciencedirect.com/journal/international-journal-of-project-management/about/call-for-papers#program-management-of-major-infrastructure-projects" target="_blank">Link</a></td>
+      <td><img src='https://sdfestaticassets-eu-west-1.sciencedirectassets.com/shared-assets/24/images/elsevier-non-solus-new-grey.svg' width='50px' height='50px'> <br> Elsevier</td>
+      <td>Business, Management and Accounting</td>
+    </tr>
+    <tr>
       <td>Sustainable City Logistics Management</td>
       <td>Cleaner Logistics and Supply Chain • CiteScore 3.4</td>
       <td>2024. június 30.</td>
@@ -1331,6 +1244,14 @@
       <td>Business, Management and Accounting</td>
     </tr>
     <tr>
+      <td>How MNEs Adjust their Strategies and Operations in Response to a Turbulent IB Environment</td>
+      <td>International Business Review • Impact Factor 8.7 • CiteScore 12.3</td>
+      <td>2024. május 31.</td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.sciencedirect.com/journal/international-business-review/about/call-for-papers#how-mnes-adjust-their-strategies-and-operations-in-response-to-a-turbulent-ib-environment" target="_blank">Link</a></td>
+      <td><img src='https://sdfestaticassets-eu-west-1.sciencedirectassets.com/shared-assets/24/images/elsevier-non-solus-new-grey.svg' width='50px' height='50px'> <br> Elsevier</td>
+      <td>Business, Management and Accounting</td>
+    </tr>
+    <tr>
       <td>Professional judgment in accounting and auditing decisions</td>
       <td>Journal of Accounting and Public Policy • Impact Factor 3.6 • CiteScore 4.1</td>
       <td>2024. április 30.</td>
@@ -1351,6 +1272,14 @@
       <td>Journal of Accounting Education • CiteScore 4.6</td>
       <td>2024. március 31.</td>
       <td><a class="text-blue-500 hover:underline" href="https://www.sciencedirect.com/journal/journal-of-accounting-education/about/call-for-papers#accounting-as-a-stem-discipline-perspectives-and-applications-journal-of-accounting-education" target="_blank">Link</a></td>
+      <td><img src='https://sdfestaticassets-eu-west-1.sciencedirectassets.com/shared-assets/24/images/elsevier-non-solus-new-grey.svg' width='50px' height='50px'> <br> Elsevier</td>
+      <td>Business, Management and Accounting</td>
+    </tr>
+    <tr>
+      <td>Sustainable servitization for a resource-wise manufacturing</td>
+      <td>Cleaner Logistics and Supply Chain • CiteScore 3.4</td>
+      <td>2024. április 30.</td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.sciencedirect.com/journal/cleaner-logistics-and-supply-chain/about/call-for-papers#sustainable-servitization-for-a-resource-wise-manufacturing" target="_blank">Link</a></td>
       <td><img src='https://sdfestaticassets-eu-west-1.sciencedirectassets.com/shared-assets/24/images/elsevier-non-solus-new-grey.svg' width='50px' height='50px'> <br> Elsevier</td>
       <td>Business, Management and Accounting</td>
     </tr>
@@ -1393,6 +1322,22 @@
       <td><a class="text-blue-500 hover:underline" href="https://www.sciencedirect.com/journal/energy-strategy-reviews/about/call-for-papers#acting-on-the-ambitions-to-a-net-zero-eu" target="_blank">Link</a></td>
       <td><img src='https://sdfestaticassets-eu-west-1.sciencedirectassets.com/shared-assets/24/images/elsevier-non-solus-new-grey.svg' width='50px' height='50px'> <br> Elsevier</td>
       <td>Business, Management and Accounting</td>
+    </tr>
+    <tr>
+      <td>Banking, Environmental, Digitalization, and Gender Challenges in the MENA Region</td>
+      <td>Global Finance Journal • Impact Factor 5.2 • CiteScore 5.0</td>
+      <td>2024. szeptember 15.</td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.sciencedirect.com/journal/global-finance-journal/about/call-for-papers#banking-environmental-digitalization-and-gender-challenges-in-the-mena-region" target="_blank">Link</a></td>
+      <td><img src='https://sdfestaticassets-eu-west-1.sciencedirectassets.com/shared-assets/24/images/elsevier-non-solus-new-grey.svg' width='50px' height='50px'> <br> Elsevier</td>
+      <td>Economics, Econometrics and Finance - (Finance)</td>
+    </tr>
+    <tr>
+      <td>Bayesian econometric approaches in Economics and Finance</td>
+      <td>Journal of Econometrics • Impact Factor 6.3 • CiteScore 7.2</td>
+      <td>2024. június 30.</td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.sciencedirect.com/journal/journal-of-econometrics/about/call-for-papers#bayesian-econometric-approaches-in-economics-and-finance" target="_blank">Link</a></td>
+      <td><img src='https://sdfestaticassets-eu-west-1.sciencedirectassets.com/shared-assets/24/images/elsevier-non-solus-new-grey.svg' width='50px' height='50px'> <br> Elsevier</td>
+      <td>Economics, Econometrics and Finance - (Finance)</td>
     </tr>
     <tr>
       <td>The Econometric Analysis of Financial and Mixed Frequency Data</td>
@@ -1447,6 +1392,14 @@
       <td>Research in International Business and Finance • Impact Factor 6.5 • CiteScore 9.1</td>
       <td>2024. szeptember 30.</td>
       <td><a class="text-blue-500 hover:underline" href="https://www.sciencedirect.com/journal/research-in-international-business-and-finance/about/call-for-papers#climate-and-sustainable-finance-2024" target="_blank">Link</a></td>
+      <td><img src='https://sdfestaticassets-eu-west-1.sciencedirectassets.com/shared-assets/24/images/elsevier-non-solus-new-grey.svg' width='50px' height='50px'> <br> Elsevier</td>
+      <td>Economics, Econometrics and Finance - (Finance)</td>
+    </tr>
+    <tr>
+      <td>Financial Consequences of Innovation, Misconduct, and Regulation</td>
+      <td>Pacific-Basin Finance Journal • Impact Factor 4.6 • CiteScore 5.9</td>
+      <td>2024. december 31.</td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.sciencedirect.com/journal/pacific-basin-finance-journal/about/call-for-papers#financial-consequences-of-innovation-misconduct-and-regulation" target="_blank">Link</a></td>
       <td><img src='https://sdfestaticassets-eu-west-1.sciencedirectassets.com/shared-assets/24/images/elsevier-non-solus-new-grey.svg' width='50px' height='50px'> <br> Elsevier</td>
       <td>Economics, Econometrics and Finance - (Finance)</td>
     </tr>
@@ -1715,20 +1668,12 @@
       <td>Economics, Econometrics and Finance - (Finance)</td>
     </tr>
     <tr>
-      <td>Urban Policy and Research</td>
-      <td>Indonesian Cities: Challenges and Opportunities in the Twenty First Century</td>
-      <td>23 January 2024</td>
-      <td><a class="text-blue-500 hover:underline" href="https://think.taylorandfrancis.com/special_issues/indonesian-cities-challenges/" target="_blank">Link</a></td>
-      <td><img style='filter: invert(100%) grayscale(100%) brightness(0%) sepia(100%);' src='https://authorservices.taylorandfrancis.com/wp-content/themes/JTF3/img/tfgroup-logo-rev.svg' width='120px' height='120px'> <br> Taylor & Francis</td>
-      <td>Urban Studies</td>
-    </tr>
-    <tr>
-      <td>Health Psychology and Behavioral Medicine</td>
-      <td>Improving the overall wellbeing, including mental health and sexual and reproductive health, of young people</td>
-      <td>29 March 2024</td>
-      <td><a class="text-blue-500 hover:underline" href="https://think.taylorandfrancis.com/article_collections/health-psychology-and-behavioral-medicine-improving-the-overall-wellbeing-including-mental-health-and-sexual-and-reproductive-health-of-young-people/" target="_blank">Link</a></td>
-      <td><img style='filter: invert(100%) grayscale(100%) brightness(0%) sepia(100%);' src='https://authorservices.taylorandfrancis.com/wp-content/themes/JTF3/img/tfgroup-logo-rev.svg' width='120px' height='120px'> <br> Taylor & Francis</td>
-      <td>Behavioral Sciences</td>
+      <td>Short Selling, Borrowing and Lending in Capital Markets</td>
+      <td>Borsa Istanbul Review • Impact Factor 5.2 • CiteScore 5.8</td>
+      <td>2024. december 31.</td>
+      <td><a class="text-blue-500 hover:underline" href="https://www.sciencedirect.com/journal/borsa-istanbul-review/about/call-for-papers#short-selling-borrowing-and-lending-in-capital-markets" target="_blank">Link</a></td>
+      <td><img src='https://sdfestaticassets-eu-west-1.sciencedirectassets.com/shared-assets/24/images/elsevier-non-solus-new-grey.svg' width='50px' height='50px'> <br> Elsevier</td>
+      <td>Economics, Econometrics and Finance - (Finance)</td>
     </tr>
     <tr>
       <td>Current Issues in Tourism</td>
@@ -1755,38 +1700,6 @@
       <td>Economics, Finance, Business & Industry</td>
     </tr>
     <tr>
-      <td>Cogent Economics & Finance</td>
-      <td>The transition from Financial Analysis to Financial Data Science</td>
-      <td>31 March 2024</td>
-      <td><a class="text-blue-500 hover:underline" href="https://think.taylorandfrancis.com/article_collections/cogent-economics-finance-the-transition-from-financial-analysis-to-financial-data-science/" target="_blank">Link</a></td>
-      <td><img style='filter: invert(100%) grayscale(100%) brightness(0%) sepia(100%);' src='https://authorservices.taylorandfrancis.com/wp-content/themes/JTF3/img/tfgroup-logo-rev.svg' width='120px' height='120px'> <br> Taylor & Francis</td>
-      <td>Economics, Finance, Business & Industry</td>
-    </tr>
-    <tr>
-      <td>Cogent Economics & Finance</td>
-      <td>Green and Sustainable Finance/Economics in Achieving Sustainable Development Goals</td>
-      <td>31 March 2024</td>
-      <td><a class="text-blue-500 hover:underline" href="https://think.taylorandfrancis.com/article_collections/cogent-economics-finance-green-and-sustainable-finance-economics-in-achieving-sustainable-development-goals/" target="_blank">Link</a></td>
-      <td><img style='filter: invert(100%) grayscale(100%) brightness(0%) sepia(100%);' src='https://authorservices.taylorandfrancis.com/wp-content/themes/JTF3/img/tfgroup-logo-rev.svg' width='120px' height='120px'> <br> Taylor & Francis</td>
-      <td>Economics, Finance, Business & Industry</td>
-    </tr>
-    <tr>
-      <td>Social Influence</td>
-      <td>The Social Influence of Phubbing</td>
-      <td>31 March 2024</td>
-      <td><a class="text-blue-500 hover:underline" href="https://think.taylorandfrancis.com/article_collections/social-influence-the-social-influence-of-phubbing/" target="_blank">Link</a></td>
-      <td><img style='filter: invert(100%) grayscale(100%) brightness(0%) sepia(100%);' src='https://authorservices.taylorandfrancis.com/wp-content/themes/JTF3/img/tfgroup-logo-rev.svg' width='120px' height='120px'> <br> Taylor & Francis</td>
-      <td>Behavioral Sciences</td>
-    </tr>
-    <tr>
-      <td>Geomatics, Natural Hazards and Risk</td>
-      <td>Multi-Geohazards: Monitoring and Assessment for Smart and Resilient Cities of Tomorrow</td>
-      <td>31 March 2024</td>
-      <td><a class="text-blue-500 hover:underline" href="https://think.taylorandfrancis.com/article_collections/geomatics-natural-hazards-and-risk-multi-geohazards-monitoring-and-assessment-for-smart-and-resilient-cities-of-tomorrow/" target="_blank">Link</a></td>
-      <td><img style='filter: invert(100%) grayscale(100%) brightness(0%) sepia(100%);' src='https://authorservices.taylorandfrancis.com/wp-content/themes/JTF3/img/tfgroup-logo-rev.svg' width='120px' height='120px'> <br> Taylor & Francis</td>
-      <td>Urban Studies</td>
-    </tr>
-    <tr>
       <td>Ship Technology Research</td>
       <td>STG Review</td>
       <td>31 March 2024</td>
@@ -1799,14 +1712,6 @@
       <td>Technical Challenges and Opportunities in the Development and Deployment of Microreactors</td>
       <td>31 March 2024</td>
       <td><a class="text-blue-500 hover:underline" href="https://think.taylorandfrancis.com/special_issues/technical-challenges-opportunities-microreactors/" target="_blank">Link</a></td>
-      <td><img style='filter: invert(100%) grayscale(100%) brightness(0%) sepia(100%);' src='https://authorservices.taylorandfrancis.com/wp-content/themes/JTF3/img/tfgroup-logo-rev.svg' width='120px' height='120px'> <br> Taylor & Francis</td>
-      <td>Economics, Finance, Business & Industry</td>
-    </tr>
-    <tr>
-      <td>Public Money & Management</td>
-      <td>Public sector entities building a more sustainable world: managing, measuring and informing on the SDGs</td>
-      <td>31 March 2024</td>
-      <td><a class="text-blue-500 hover:underline" href="https://think.taylorandfrancis.com/special_issues/public-sector-entities-building-sustainable-world/" target="_blank">Link</a></td>
       <td><img style='filter: invert(100%) grayscale(100%) brightness(0%) sepia(100%);' src='https://authorservices.taylorandfrancis.com/wp-content/themes/JTF3/img/tfgroup-logo-rev.svg' width='120px' height='120px'> <br> Taylor & Francis</td>
       <td>Economics, Finance, Business & Industry</td>
     </tr>
@@ -1955,6 +1860,14 @@
       <td>Behavioral Sciences</td>
     </tr>
     <tr>
+      <td>Entrepreneurship & Regional Development</td>
+      <td>Contextual Understanding of Places in Ageing and Entrepreneurship</td>
+      <td>01 April 2024</td>
+      <td><a class="text-blue-500 hover:underline" href="https://think.taylorandfrancis.com/special_issues/entrepreneurship-regional-development-entrepreneurship/" target="_blank">Link</a></td>
+      <td><img style='filter: invert(100%) grayscale(100%) brightness(0%) sepia(100%);' src='https://authorservices.taylorandfrancis.com/wp-content/themes/JTF3/img/tfgroup-logo-rev.svg' width='120px' height='120px'> <br> Taylor & Francis</td>
+      <td>Economics, Finance, Business & Industry</td>
+    </tr>
+    <tr>
       <td>Tourism Planning & Development</td>
       <td>Slow Tourism Development and Planning: A Sustainable Form of Tourism?</td>
       <td>01 April 2024</td>
@@ -1967,14 +1880,6 @@
       <td>Social Work Teams</td>
       <td>01 April 2024</td>
       <td><a class="text-blue-500 hover:underline" href="https://think.taylorandfrancis.com/special_issues/journal-social-work-practice-teams/" target="_blank">Link</a></td>
-      <td><img style='filter: invert(100%) grayscale(100%) brightness(0%) sepia(100%);' src='https://authorservices.taylorandfrancis.com/wp-content/themes/JTF3/img/tfgroup-logo-rev.svg' width='120px' height='120px'> <br> Taylor & Francis</td>
-      <td>Behavioral Sciences</td>
-    </tr>
-    <tr>
-      <td>Global Public Health</td>
-      <td>Sexual Violence: Novel Approaches in Global Public Health</td>
-      <td>03 April 2024</td>
-      <td><a class="text-blue-500 hover:underline" href="https://think.taylorandfrancis.com/article_collections/global-public-health-sexual-violence-novel-approaches-in-global-public-health/" target="_blank">Link</a></td>
       <td><img style='filter: invert(100%) grayscale(100%) brightness(0%) sepia(100%);' src='https://authorservices.taylorandfrancis.com/wp-content/themes/JTF3/img/tfgroup-logo-rev.svg' width='120px' height='120px'> <br> Taylor & Francis</td>
       <td>Behavioral Sciences</td>
     </tr>
@@ -1995,60 +1900,12 @@
       <td>Economics, Finance, Business & Industry</td>
     </tr>
     <tr>
-      <td>Cogent Business & Management</td>
-      <td>Digital Revolution in Accounting and Finance: Exploring Transformative Trends, Sustainable Development, and Emerging Technologies</td>
-      <td>28 April 2024</td>
-      <td><a class="text-blue-500 hover:underline" href="https://think.taylorandfrancis.com/article_collections/cogent-business-management-digital-revolution-in-accounting-and-finance-exploring-transformative-trends-sustainable-development-and-emerging-technologies/" target="_blank">Link</a></td>
-      <td><img style='filter: invert(100%) grayscale(100%) brightness(0%) sepia(100%);' src='https://authorservices.taylorandfrancis.com/wp-content/themes/JTF3/img/tfgroup-logo-rev.svg' width='120px' height='120px'> <br> Taylor & Francis</td>
-      <td>Economics, Finance, Business & Industry</td>
-    </tr>
-    <tr>
-      <td>Cogent Business & Management</td>
-      <td>Rethink about Globalization in the New Era</td>
-      <td>30 April 2024</td>
-      <td><a class="text-blue-500 hover:underline" href="https://think.taylorandfrancis.com/article_collections/cogent-business-management-rethink-about-globalization-in-the-new-era/" target="_blank">Link</a></td>
-      <td><img style='filter: invert(100%) grayscale(100%) brightness(0%) sepia(100%);' src='https://authorservices.taylorandfrancis.com/wp-content/themes/JTF3/img/tfgroup-logo-rev.svg' width='120px' height='120px'> <br> Taylor & Francis</td>
-      <td>Economics, Finance, Business & Industry</td>
-    </tr>
-    <tr>
-      <td>Australian Journal of Psychology</td>
-      <td>Valuing Lived and Living Experience: Inclusion in Psychology Research, Pedagogy and Practice</td>
-      <td>30 April 2024</td>
-      <td><a class="text-blue-500 hover:underline" href="https://think.taylorandfrancis.com/article_collections/australian-journal-of-psychology-valuing-lived-and-living-experience-inclusion-in-psychology-research-pedagogy-and-practice/" target="_blank">Link</a></td>
-      <td><img style='filter: invert(100%) grayscale(100%) brightness(0%) sepia(100%);' src='https://authorservices.taylorandfrancis.com/wp-content/themes/JTF3/img/tfgroup-logo-rev.svg' width='120px' height='120px'> <br> Taylor & Francis</td>
-      <td>Behavioral Sciences</td>
-    </tr>
-    <tr>
-      <td>Geomatics, Natural Hazards and Risk</td>
-      <td>Climate Change Impacts on Bridges, Roads, and Buildings</td>
-      <td>30 April 2024</td>
-      <td><a class="text-blue-500 hover:underline" href="https://think.taylorandfrancis.com/article_collections/geomatics-natural-hazards-and-risk-climate-change-impacts-on-bridges-roads-and-buildings/" target="_blank">Link</a></td>
-      <td><img style='filter: invert(100%) grayscale(100%) brightness(0%) sepia(100%);' src='https://authorservices.taylorandfrancis.com/wp-content/themes/JTF3/img/tfgroup-logo-rev.svg' width='120px' height='120px'> <br> Taylor & Francis</td>
-      <td>Urban Studies</td>
-    </tr>
-    <tr>
-      <td>Medical Education Online</td>
-      <td>When the vaccinators won’t get vaccinated: vaccine hesitancy, (mis)information and healthcare workers</td>
-      <td>30 April 2024</td>
-      <td><a class="text-blue-500 hover:underline" href="https://think.taylorandfrancis.com/article_collections/medical-education-online-when-the-vaccinators-wont-get-vaccinated-vaccine-hesitancy-misinformation-and-healthcare-workers/" target="_blank">Link</a></td>
-      <td><img style='filter: invert(100%) grayscale(100%) brightness(0%) sepia(100%);' src='https://authorservices.taylorandfrancis.com/wp-content/themes/JTF3/img/tfgroup-logo-rev.svg' width='120px' height='120px'> <br> Taylor & Francis</td>
-      <td>Behavioral Sciences</td>
-    </tr>
-    <tr>
       <td>Journal of Chinese Economic and Business Studies</td>
       <td>Finance, Innovation and Economic Transformation</td>
       <td>30 April 2024</td>
       <td><a class="text-blue-500 hover:underline" href="https://think.taylorandfrancis.com/special_issues/economic-transformation/" target="_blank">Link</a></td>
       <td><img style='filter: invert(100%) grayscale(100%) brightness(0%) sepia(100%);' src='https://authorservices.taylorandfrancis.com/wp-content/themes/JTF3/img/tfgroup-logo-rev.svg' width='120px' height='120px'> <br> Taylor & Francis</td>
       <td>Economics, Finance, Business & Industry</td>
-    </tr>
-    <tr>
-      <td>International Journal of Social Psychology</td>
-      <td>Double standards in migration, ethnicity, and intergroup relations</td>
-      <td>30 April 2024</td>
-      <td><a class="text-blue-500 hover:underline" href="https://think.taylorandfrancis.com/special_issues/double-standards-migration-ethnicity-intergroup-relations/" target="_blank">Link</a></td>
-      <td><img style='filter: invert(100%) grayscale(100%) brightness(0%) sepia(100%);' src='https://authorservices.taylorandfrancis.com/wp-content/themes/JTF3/img/tfgroup-logo-rev.svg' width='120px' height='120px'> <br> Taylor & Francis</td>
-      <td>Behavioral Sciences</td>
     </tr>
     <tr>
       <td>Death Studies</td>
@@ -2139,14 +1996,6 @@
       <td>Economics, Finance, Business & Industry</td>
     </tr>
     <tr>
-      <td>Cogent Business & Management</td>
-      <td>Beyond COVID-19: Transformational opportunities for business schools and management education</td>
-      <td>01 May 2024</td>
-      <td><a class="text-blue-500 hover:underline" href="https://think.taylorandfrancis.com/article_collections/cogent-business-management-beyond-covid-19-transformational-opportunities-for-business-schools-and-management-education/" target="_blank">Link</a></td>
-      <td><img style='filter: invert(100%) grayscale(100%) brightness(0%) sepia(100%);' src='https://authorservices.taylorandfrancis.com/wp-content/themes/JTF3/img/tfgroup-logo-rev.svg' width='120px' height='120px'> <br> Taylor & Francis</td>
-      <td>Economics, Finance, Business & Industry</td>
-    </tr>
-    <tr>
       <td>International Journal of Advertising</td>
       <td>Evolution, Challenges, and Opportunities of AI-Generated Advertising</td>
       <td>01 May 2024</td>
@@ -2179,34 +2028,10 @@
       <td>Economics, Finance, Business & Industry</td>
     </tr>
     <tr>
-      <td>Gynecological Endocrinology</td>
-      <td>Management of Gynecologic Disease Processes in Women With Mood Disorders</td>
-      <td>05 May 2024</td>
-      <td><a class="text-blue-500 hover:underline" href="https://think.taylorandfrancis.com/article_collections/gynecological-endocrinology-management-of-gynecologic-disease-processes-in-women-with-mood-disorders/" target="_blank">Link</a></td>
-      <td><img style='filter: invert(100%) grayscale(100%) brightness(0%) sepia(100%);' src='https://authorservices.taylorandfrancis.com/wp-content/themes/JTF3/img/tfgroup-logo-rev.svg' width='120px' height='120px'> <br> Taylor & Francis</td>
-      <td>Behavioral Sciences</td>
-    </tr>
-    <tr>
-      <td>Gynecological Endocrinology</td>
-      <td>Emergence and Predisposition to Peri- and Postmenopausal Mood Disturbance: Risk Factors and Treatment Options</td>
-      <td>05 May 2024</td>
-      <td><a class="text-blue-500 hover:underline" href="https://think.taylorandfrancis.com/article_collections/gynecological-endocrinology-emergence-and-predisposition-to-peri-and-postmenopausal-mood-disturbance-risk-factors-and-treatment-options/" target="_blank">Link</a></td>
-      <td><img style='filter: invert(100%) grayscale(100%) brightness(0%) sepia(100%);' src='https://authorservices.taylorandfrancis.com/wp-content/themes/JTF3/img/tfgroup-logo-rev.svg' width='120px' height='120px'> <br> Taylor & Francis</td>
-      <td>Behavioral Sciences</td>
-    </tr>
-    <tr>
       <td>Marriage & Family Review</td>
       <td>Exemplary, Strong Black Marriages and Families: Findings from Strengths-Focused</td>
       <td>06 May 2024</td>
       <td><a class="text-blue-500 hover:underline" href="https://think.taylorandfrancis.com/special_issues/exemplary-strong-black-marriages-families/" target="_blank">Link</a></td>
-      <td><img style='filter: invert(100%) grayscale(100%) brightness(0%) sepia(100%);' src='https://authorservices.taylorandfrancis.com/wp-content/themes/JTF3/img/tfgroup-logo-rev.svg' width='120px' height='120px'> <br> Taylor & Francis</td>
-      <td>Behavioral Sciences</td>
-    </tr>
-    <tr>
-      <td>Health Psychology and Behavioral Medicine</td>
-      <td>Understanding and Promoting Healthy Eating Using Digital Technology</td>
-      <td>09 May 2024</td>
-      <td><a class="text-blue-500 hover:underline" href="https://think.taylorandfrancis.com/article_collections/health-psychology-and-behavioral-medicine-understanding-and-promoting-healthy-eating-using-digital-technology/" target="_blank">Link</a></td>
       <td><img style='filter: invert(100%) grayscale(100%) brightness(0%) sepia(100%);' src='https://authorservices.taylorandfrancis.com/wp-content/themes/JTF3/img/tfgroup-logo-rev.svg' width='120px' height='120px'> <br> Taylor & Francis</td>
       <td>Behavioral Sciences</td>
     </tr>
@@ -2217,30 +2042,6 @@
       <td><a class="text-blue-500 hover:underline" href="https://think.taylorandfrancis.com/special_issues/contributions-legacy-of-bernie-neville/" target="_blank">Link</a></td>
       <td><img style='filter: invert(100%) grayscale(100%) brightness(0%) sepia(100%);' src='https://authorservices.taylorandfrancis.com/wp-content/themes/JTF3/img/tfgroup-logo-rev.svg' width='120px' height='120px'> <br> Taylor & Francis</td>
       <td>Behavioral Sciences</td>
-    </tr>
-    <tr>
-      <td>Regional Studies, Regional Science</td>
-      <td>Rethinking Post 2020 Mobilities in Cities and Regions</td>
-      <td>10 May 2024</td>
-      <td><a class="text-blue-500 hover:underline" href="https://think.taylorandfrancis.com/article_collections/regional-studies-regional-science-rethinking-post-2020-mobilities-in-cities-and-regions/" target="_blank">Link</a></td>
-      <td><img style='filter: invert(100%) grayscale(100%) brightness(0%) sepia(100%);' src='https://authorservices.taylorandfrancis.com/wp-content/themes/JTF3/img/tfgroup-logo-rev.svg' width='120px' height='120px'> <br> Taylor & Francis</td>
-      <td>Urban Studies</td>
-    </tr>
-    <tr>
-      <td>Journal of Applied Economics</td>
-      <td>Fostering Urban and Regional Innovation Dynamics</td>
-      <td>16 May 2024</td>
-      <td><a class="text-blue-500 hover:underline" href="https://think.taylorandfrancis.com/article_collections/journal-of-applied-economics-fostering-urban-and-regional-innovation-dynamics/" target="_blank">Link</a></td>
-      <td><img style='filter: invert(100%) grayscale(100%) brightness(0%) sepia(100%);' src='https://authorservices.taylorandfrancis.com/wp-content/themes/JTF3/img/tfgroup-logo-rev.svg' width='120px' height='120px'> <br> Taylor & Francis</td>
-      <td>Economics, Finance, Business & Industry</td>
-    </tr>
-    <tr>
-      <td>Regional Studies, Regional Science</td>
-      <td>The Growth Prospects of Mid-Sized/Second-Tier Cities</td>
-      <td>17 May 2024</td>
-      <td><a class="text-blue-500 hover:underline" href="https://think.taylorandfrancis.com/article_collections/regional-studies-regional-science-the-growth-prospects-of-mid-sized-second-tier-cities/" target="_blank">Link</a></td>
-      <td><img style='filter: invert(100%) grayscale(100%) brightness(0%) sepia(100%);' src='https://authorservices.taylorandfrancis.com/wp-content/themes/JTF3/img/tfgroup-logo-rev.svg' width='120px' height='120px'> <br> Taylor & Francis</td>
-      <td>Urban Studies</td>
     </tr>
     <tr>
       <td>Journal of American College Health</td>
@@ -2257,14 +2058,6 @@
       <td><a class="text-blue-500 hover:underline" href="https://think.taylorandfrancis.com/special_issues/remote-data-collection-methods-rdcm/" target="_blank">Link</a></td>
       <td><img style='filter: invert(100%) grayscale(100%) brightness(0%) sepia(100%);' src='https://authorservices.taylorandfrancis.com/wp-content/themes/JTF3/img/tfgroup-logo-rev.svg' width='120px' height='120px'> <br> Taylor & Francis</td>
       <td>Behavioral Sciences</td>
-    </tr>
-    <tr>
-      <td>International Journal of Sustainable Energy</td>
-      <td>Advancing Net-Zero and Zero-Energy Buildings: Challenges and Opportunities in Sustainable Design and Operation</td>
-      <td>31 May 2024</td>
-      <td><a class="text-blue-500 hover:underline" href="https://think.taylorandfrancis.com/article_collections/international-journal-of-sustainable-energy-advancing-net-zero-and-zero-energy-buildings-challenges-and-opportunities-in-sustainable-design-and-operation/" target="_blank">Link</a></td>
-      <td><img style='filter: invert(100%) grayscale(100%) brightness(0%) sepia(100%);' src='https://authorservices.taylorandfrancis.com/wp-content/themes/JTF3/img/tfgroup-logo-rev.svg' width='120px' height='120px'> <br> Taylor & Francis</td>
-      <td>Urban Studies</td>
     </tr>
     <tr>
       <td>American Journal of Mathematical and Management Sciences</td>
@@ -2379,14 +2172,6 @@
       <td>Economics, Finance, Business & Industry</td>
     </tr>
     <tr>
-      <td>GIScience & Remote Sensing</td>
-      <td>Future Challenges in GIScience-Based Sustainable Tourism for the 21st Century: New approaches and Relevant Case Studies</td>
-      <td>01 June 2024</td>
-      <td><a class="text-blue-500 hover:underline" href="https://think.taylorandfrancis.com/article_collections/giscience-remote-sensing-future-challenges-in-giscience-based-sustainable-tourism-for-the-21st-century-new-approaches-and-relevant-case-studies/" target="_blank">Link</a></td>
-      <td><img style='filter: invert(100%) grayscale(100%) brightness(0%) sepia(100%);' src='https://authorservices.taylorandfrancis.com/wp-content/themes/JTF3/img/tfgroup-logo-rev.svg' width='120px' height='120px'> <br> Taylor & Francis</td>
-      <td>Tourism, Hospitality and Events</td>
-    </tr>
-    <tr>
       <td>Jung Journal</td>
       <td>Special Issue on Infants, Children & Adolescents</td>
       <td>01 June 2024</td>
@@ -2404,7 +2189,7 @@
     </tr>
     <tr>
       <td>European Journal of Work and Organizational Psychology</td>
-      <td>European Journal of Work and Organizational Psychology: Absence and presence at work in the state of ill-health:  Looking back and moving forward</td>
+      <td>Absence and presence at work in the state of ill-health:  Looking back and moving forward</td>
       <td>01 June 2024</td>
       <td><a class="text-blue-500 hover:underline" href="https://think.taylorandfrancis.com/special_issues/absence-presence-work-state-ill-health-looking-back-moving-forward/" target="_blank">Link</a></td>
       <td><img style='filter: invert(100%) grayscale(100%) brightness(0%) sepia(100%);' src='https://authorservices.taylorandfrancis.com/wp-content/themes/JTF3/img/tfgroup-logo-rev.svg' width='120px' height='120px'> <br> Taylor & Francis</td>
@@ -2415,6 +2200,14 @@
       <td>The Future of Retail and Consumption</td>
       <td>01 June 2024</td>
       <td><a class="text-blue-500 hover:underline" href="https://think.taylorandfrancis.com/special_issues/international-review-retail-distribution-consumer/" target="_blank">Link</a></td>
+      <td><img style='filter: invert(100%) grayscale(100%) brightness(0%) sepia(100%);' src='https://authorservices.taylorandfrancis.com/wp-content/themes/JTF3/img/tfgroup-logo-rev.svg' width='120px' height='120px'> <br> Taylor & Francis</td>
+      <td>Economics, Finance, Business & Industry</td>
+    </tr>
+    <tr>
+      <td>Public Money & Management</td>
+      <td>Public sector entities building a more sustainable world: managing, measuring and informing on the SDGs</td>
+      <td>01 June 2024</td>
+      <td><a class="text-blue-500 hover:underline" href="https://think.taylorandfrancis.com/special_issues/public-sector-entities-building-sustainable-world/" target="_blank">Link</a></td>
       <td><img style='filter: invert(100%) grayscale(100%) brightness(0%) sepia(100%);' src='https://authorservices.taylorandfrancis.com/wp-content/themes/JTF3/img/tfgroup-logo-rev.svg' width='120px' height='120px'> <br> Taylor & Francis</td>
       <td>Economics, Finance, Business & Industry</td>
     </tr>
@@ -2459,36 +2252,20 @@
       <td>Economics, Finance, Business & Industry</td>
     </tr>
     <tr>
-      <td>Australian Journal of Psychology</td>
-      <td>Indigenous Knowledges in Psychology</td>
-      <td>13 June 2024</td>
-      <td><a class="text-blue-500 hover:underline" href="https://think.taylorandfrancis.com/article_collections/australian-journal-of-psychology-indigenous-knowledges-in-psychology/" target="_blank">Link</a></td>
-      <td><img style='filter: invert(100%) grayscale(100%) brightness(0%) sepia(100%);' src='https://authorservices.taylorandfrancis.com/wp-content/themes/JTF3/img/tfgroup-logo-rev.svg' width='120px' height='120px'> <br> Taylor & Francis</td>
-      <td>Behavioral Sciences</td>
-    </tr>
-    <tr>
-      <td>Scandinavian Journal of Occupational Therapy</td>
-      <td>Mental Health Occupational Therapy – Meeting the Challenges of a Transforming Society</td>
-      <td>21 June 2024</td>
-      <td><a class="text-blue-500 hover:underline" href="https://think.taylorandfrancis.com/article_collections/scandinavian-journal-of-occupational-therapy-mental-health-occupational-therapy-meeting-the-challenges-of-a-transforming-society/" target="_blank">Link</a></td>
-      <td><img style='filter: invert(100%) grayscale(100%) brightness(0%) sepia(100%);' src='https://authorservices.taylorandfrancis.com/wp-content/themes/JTF3/img/tfgroup-logo-rev.svg' width='120px' height='120px'> <br> Taylor & Francis</td>
-      <td>Behavioral Sciences</td>
-    </tr>
-    <tr>
-      <td>Urban, Planning and Transport Research</td>
-      <td>Green Transition towards New Urban Futures: Perspectives, Impacts and Challenges for the Cities</td>
+      <td>Applied Economics</td>
+      <td>Recent Advances in the Applied Economics of Foreign Exchange Markets</td>
       <td>30 June 2024</td>
-      <td><a class="text-blue-500 hover:underline" href="https://think.taylorandfrancis.com/article_collections/green-transition-new-urban-futures/" target="_blank">Link</a></td>
+      <td><a class="text-blue-500 hover:underline" href="https://think.taylorandfrancis.com/special_issues/applied-economics-foreign-exchange-markets/" target="_blank">Link</a></td>
       <td><img style='filter: invert(100%) grayscale(100%) brightness(0%) sepia(100%);' src='https://authorservices.taylorandfrancis.com/wp-content/themes/JTF3/img/tfgroup-logo-rev.svg' width='120px' height='120px'> <br> Taylor & Francis</td>
-      <td>Urban Studies</td>
+      <td>Economics, Finance, Business & Industry</td>
     </tr>
     <tr>
-      <td>Australian Journal of Psychology</td>
-      <td>Digital Technologies for Mental Health Amidst Current Global Crises: Innovation and Implementation</td>
+      <td>Applied Economics</td>
+      <td>The Applied Economics of ESG</td>
       <td>30 June 2024</td>
-      <td><a class="text-blue-500 hover:underline" href="https://think.taylorandfrancis.com/article_collections/australian-journal-of-psychology-digital-technologies-for-mental-health-amidst-current-global-crises-innovation-and-implementation/" target="_blank">Link</a></td>
+      <td><a class="text-blue-500 hover:underline" href="https://think.taylorandfrancis.com/special_issues/applied-economics-of-esg/" target="_blank">Link</a></td>
       <td><img style='filter: invert(100%) grayscale(100%) brightness(0%) sepia(100%);' src='https://authorservices.taylorandfrancis.com/wp-content/themes/JTF3/img/tfgroup-logo-rev.svg' width='120px' height='120px'> <br> Taylor & Francis</td>
-      <td>Behavioral Sciences</td>
+      <td>Economics, Finance, Business & Industry</td>
     </tr>
     <tr>
       <td>International Journal of Strategic Communication</td>
@@ -2571,20 +2348,12 @@
       <td>Behavioral Sciences</td>
     </tr>
     <tr>
-      <td>Global Public Health</td>
-      <td>Indigenous Sovereignty, Community Strengths, and Truths through Health and Wellness Research</td>
+      <td>Public Performance & Management Review</td>
+      <td>Getting specific about public leadership</td>
       <td>01 July 2024</td>
-      <td><a class="text-blue-500 hover:underline" href="https://think.taylorandfrancis.com/article_collections/global-public-health-indigenous-sovereignty-community-strengths-and-truths-through-health-and-wellness-research/" target="_blank">Link</a></td>
+      <td><a class="text-blue-500 hover:underline" href="https://think.taylorandfrancis.com/special_issues/getting-specific-about-public-leadership/" target="_blank">Link</a></td>
       <td><img style='filter: invert(100%) grayscale(100%) brightness(0%) sepia(100%);' src='https://authorservices.taylorandfrancis.com/wp-content/themes/JTF3/img/tfgroup-logo-rev.svg' width='120px' height='120px'> <br> Taylor & Francis</td>
-      <td>Behavioral Sciences</td>
-    </tr>
-    <tr>
-      <td>Psychology Research and Behavior Management</td>
-      <td>Advancing Global Addiction Neuroscience in the Genomic Era</td>
-      <td>01 July 2024</td>
-      <td><a class="text-blue-500 hover:underline" href="https://think.taylorandfrancis.com/article_collections/psychology-research-and-behavior-management-advancing-global-addiction-neuroscience-in-the-genomic-era/" target="_blank">Link</a></td>
-      <td><img style='filter: invert(100%) grayscale(100%) brightness(0%) sepia(100%);' src='https://authorservices.taylorandfrancis.com/wp-content/themes/JTF3/img/tfgroup-logo-rev.svg' width='120px' height='120px'> <br> Taylor & Francis</td>
-      <td>Behavioral Sciences</td>
+      <td>Economics, Finance, Business & Industry</td>
     </tr>
     <tr>
       <td>Journal of Management Analytics</td>
@@ -2627,24 +2396,8 @@
       <td>Behavioral Sciences</td>
     </tr>
     <tr>
-      <td>Journal of Land Use Science</td>
-      <td>Urbanization and Biodiversity: Comparative and Global Perspectives</td>
-      <td>15 July 2024</td>
-      <td><a class="text-blue-500 hover:underline" href="https://think.taylorandfrancis.com/article_collections/urbanization-biodiversity-comparative-global-perspectives/" target="_blank">Link</a></td>
-      <td><img style='filter: invert(100%) grayscale(100%) brightness(0%) sepia(100%);' src='https://authorservices.taylorandfrancis.com/wp-content/themes/JTF3/img/tfgroup-logo-rev.svg' width='120px' height='120px'> <br> Taylor & Francis</td>
-      <td>Urban Studies</td>
-    </tr>
-    <tr>
-      <td>Journal of Healthcare Leadership</td>
-      <td>Breaking the Vicious Cycle: Strengthening Leadership Resilience to Overcome Staff Crisis in Healthcare Systems</td>
-      <td>15 July 2024</td>
-      <td><a class="text-blue-500 hover:underline" href="https://think.taylorandfrancis.com/article_collections/strengthening-leadership-resilience-staff-crisis-in-healthcare-systems/" target="_blank">Link</a></td>
-      <td><img style='filter: invert(100%) grayscale(100%) brightness(0%) sepia(100%);' src='https://authorservices.taylorandfrancis.com/wp-content/themes/JTF3/img/tfgroup-logo-rev.svg' width='120px' height='120px'> <br> Taylor & Francis</td>
-      <td>Economics, Finance, Business & Industry</td>
-    </tr>
-    <tr>
       <td>International Journal of the Economics of Business</td>
-      <td>Ownership and competition</td>
+      <td></td>
       <td>19 July 2024</td>
       <td><a class="text-blue-500 hover:underline" href="https://think.taylorandfrancis.com/special_issues/ownership-competition/" target="_blank">Link</a></td>
       <td><img style='filter: invert(100%) grayscale(100%) brightness(0%) sepia(100%);' src='https://authorservices.taylorandfrancis.com/wp-content/themes/JTF3/img/tfgroup-logo-rev.svg' width='120px' height='120px'> <br> Taylor & Francis</td>
@@ -2675,42 +2428,10 @@
       <td>Behavioral Sciences</td>
     </tr>
     <tr>
-      <td>Cogent Mental Health</td>
-      <td>Enhancing Equity in Mental Health and Mental Health Care for Historically Underserved and Marginalized Populations</td>
+      <td>Advanced Robotics</td>
+      <td>Robot Olfaction</td>
       <td>31 July 2024</td>
-      <td><a class="text-blue-500 hover:underline" href="https://think.taylorandfrancis.com/article_collections/enhancing-equity-in-mental-health/" target="_blank">Link</a></td>
-      <td><img style='filter: invert(100%) grayscale(100%) brightness(0%) sepia(100%);' src='https://authorservices.taylorandfrancis.com/wp-content/themes/JTF3/img/tfgroup-logo-rev.svg' width='120px' height='120px'> <br> Taylor & Francis</td>
-      <td>Behavioral Sciences</td>
-    </tr>
-    <tr>
-      <td>Cogent Mental Health</td>
-      <td>Mental Health on a Changing Planet: Exploring the Implications of the Climate and Ecological Emergency</td>
-      <td>31 July 2024</td>
-      <td><a class="text-blue-500 hover:underline" href="https://think.taylorandfrancis.com/article_collections/mental-health-changing-planet/" target="_blank">Link</a></td>
-      <td><img style='filter: invert(100%) grayscale(100%) brightness(0%) sepia(100%);' src='https://authorservices.taylorandfrancis.com/wp-content/themes/JTF3/img/tfgroup-logo-rev.svg' width='120px' height='120px'> <br> Taylor & Francis</td>
-      <td>Behavioral Sciences</td>
-    </tr>
-    <tr>
-      <td>Australian Journal of Psychology</td>
-      <td>Ageing in a Climate-changing World</td>
-      <td>31 July 2024</td>
-      <td><a class="text-blue-500 hover:underline" href="https://think.taylorandfrancis.com/article_collections/ageing-in-a-climate-changing-world/" target="_blank">Link</a></td>
-      <td><img style='filter: invert(100%) grayscale(100%) brightness(0%) sepia(100%);' src='https://authorservices.taylorandfrancis.com/wp-content/themes/JTF3/img/tfgroup-logo-rev.svg' width='120px' height='120px'> <br> Taylor & Francis</td>
-      <td>Behavioral Sciences</td>
-    </tr>
-    <tr>
-      <td>Cogent Economics & Finance</td>
-      <td>Financial Institutions, Asset Pricing, and Market Behaviour</td>
-      <td>31 July 2024</td>
-      <td><a class="text-blue-500 hover:underline" href="https://think.taylorandfrancis.com/article_collections/cogent-economics-finance-financial-institutions-asset-pricing-and-market-behaviour/" target="_blank">Link</a></td>
-      <td><img style='filter: invert(100%) grayscale(100%) brightness(0%) sepia(100%);' src='https://authorservices.taylorandfrancis.com/wp-content/themes/JTF3/img/tfgroup-logo-rev.svg' width='120px' height='120px'> <br> Taylor & Francis</td>
-      <td>Economics, Finance, Business & Industry</td>
-    </tr>
-    <tr>
-      <td>Cogent Mental Health</td>
-      <td>Enhancing Equity in Mental Health and Mental Health Care for Historically Underserved and Marginalized Populations</td>
-      <td>31 July 2024</td>
-      <td><a class="text-blue-500 hover:underline" href="https://think.taylorandfrancis.com/article_collections/cogent-mental-health-enhancing-equity-in-mental-health-and-mental-health-care-for-historically-underserved-and-marginalized-populations-2/" target="_blank">Link</a></td>
+      <td><a class="text-blue-500 hover:underline" href="https://think.taylorandfrancis.com/special_issues/robot-olfaction/" target="_blank">Link</a></td>
       <td><img style='filter: invert(100%) grayscale(100%) brightness(0%) sepia(100%);' src='https://authorservices.taylorandfrancis.com/wp-content/themes/JTF3/img/tfgroup-logo-rev.svg' width='120px' height='120px'> <br> Taylor & Francis</td>
       <td>Behavioral Sciences</td>
     </tr>
@@ -2835,30 +2556,6 @@
       <td>Economics, Finance, Business & Industry</td>
     </tr>
     <tr>
-      <td>Cogent Business & Management</td>
-      <td>Financial Exclusion, Alternative Entrepreneurial Finance Mechanisms and Entrepreneurial Resilience: A Spotlight on African Developing Economies</td>
-      <td>31 August 2024</td>
-      <td><a class="text-blue-500 hover:underline" href="https://think.taylorandfrancis.com/article_collections/african-developing-economies/" target="_blank">Link</a></td>
-      <td><img style='filter: invert(100%) grayscale(100%) brightness(0%) sepia(100%);' src='https://authorservices.taylorandfrancis.com/wp-content/themes/JTF3/img/tfgroup-logo-rev.svg' width='120px' height='120px'> <br> Taylor & Francis</td>
-      <td>Economics, Finance, Business & Industry</td>
-    </tr>
-    <tr>
-      <td>Cogent Business & Management</td>
-      <td>Current Context and Research Agenda for Innovative Packaging Systems in the light of Sustainability and Digitalization</td>
-      <td>31 August 2024</td>
-      <td><a class="text-blue-500 hover:underline" href="https://think.taylorandfrancis.com/article_collections/innovative-packaging-systems-sustainability-digitalization/" target="_blank">Link</a></td>
-      <td><img style='filter: invert(100%) grayscale(100%) brightness(0%) sepia(100%);' src='https://authorservices.taylorandfrancis.com/wp-content/themes/JTF3/img/tfgroup-logo-rev.svg' width='120px' height='120px'> <br> Taylor & Francis</td>
-      <td>Economics, Finance, Business & Industry</td>
-    </tr>
-    <tr>
-      <td>Sustainable Communities</td>
-      <td>Innovation in Sustainable Entrepreneurship</td>
-      <td>31 August 2024</td>
-      <td><a class="text-blue-500 hover:underline" href="https://think.taylorandfrancis.com/article_collections/sustainable-entrepreneurship/" target="_blank">Link</a></td>
-      <td><img style='filter: invert(100%) grayscale(100%) brightness(0%) sepia(100%);' src='https://authorservices.taylorandfrancis.com/wp-content/themes/JTF3/img/tfgroup-logo-rev.svg' width='120px' height='120px'> <br> Taylor & Francis</td>
-      <td>Economics, Finance, Business & Industry</td>
-    </tr>
-    <tr>
       <td>Journal of Chinese Economic and Business Studies</td>
       <td>The 16th Chinese Economic Association Europe and 35th Chinese Economic Association UK Annual Conference</td>
       <td>31 August 2024</td>
@@ -2939,12 +2636,12 @@
       <td>Urban Studies</td>
     </tr>
     <tr>
-      <td>Health Psychology and Behavioral Medicine</td>
-      <td>Understanding and Predicting the Temporal Dynamics of Health and Wellbeing</td>
+      <td>Marketing Education Review</td>
+      <td>Transformative Pedagogies: Harnessing New Technologies to Elevate the Student Experience (Teaching Innovations Special Issue)</td>
       <td>01 September 2024</td>
-      <td><a class="text-blue-500 hover:underline" href="https://think.taylorandfrancis.com/article_collections/temporal-dynamics-health-wellbeing/" target="_blank">Link</a></td>
+      <td><a class="text-blue-500 hover:underline" href="https://think.taylorandfrancis.com/special_issues/transformative-pedagogies/" target="_blank">Link</a></td>
       <td><img style='filter: invert(100%) grayscale(100%) brightness(0%) sepia(100%);' src='https://authorservices.taylorandfrancis.com/wp-content/themes/JTF3/img/tfgroup-logo-rev.svg' width='120px' height='120px'> <br> Taylor & Francis</td>
-      <td>Behavioral Sciences</td>
+      <td>Economics, Finance, Business & Industry</td>
     </tr>
     <tr>
       <td>Tourism Planning & Development</td>
@@ -2977,14 +2674,6 @@
       <td><a class="text-blue-500 hover:underline" href="https://think.taylorandfrancis.com/special_issues/poetics-of-consumption/" target="_blank">Link</a></td>
       <td><img style='filter: invert(100%) grayscale(100%) brightness(0%) sepia(100%);' src='https://authorservices.taylorandfrancis.com/wp-content/themes/JTF3/img/tfgroup-logo-rev.svg' width='120px' height='120px'> <br> Taylor & Francis</td>
       <td>Economics, Finance, Business & Industry</td>
-    </tr>
-    <tr>
-      <td>European Journal of Psychotraumatology</td>
-      <td>Advances in Psychotherapy</td>
-      <td>02 September 2024</td>
-      <td><a class="text-blue-500 hover:underline" href="https://think.taylorandfrancis.com/article_collections/advances-in-psychotherapy/" target="_blank">Link</a></td>
-      <td><img style='filter: invert(100%) grayscale(100%) brightness(0%) sepia(100%);' src='https://authorservices.taylorandfrancis.com/wp-content/themes/JTF3/img/tfgroup-logo-rev.svg' width='120px' height='120px'> <br> Taylor & Francis</td>
-      <td>Behavioral Sciences</td>
     </tr>
     <tr>
       <td>Cogent Business & Management</td>
@@ -3035,18 +2724,18 @@
       <td>Economics, Finance, Business & Industry</td>
     </tr>
     <tr>
-      <td>Journal of Applied Economics</td>
-      <td>Health Issues, Biodiversity and Climate Change: Individual Perceptions and Risk Aversion</td>
-      <td>20 September 2024</td>
-      <td><a class="text-blue-500 hover:underline" href="https://think.taylorandfrancis.com/article_collections/health-issues-biodiversity-and-climate-change/" target="_blank">Link</a></td>
-      <td><img style='filter: invert(100%) grayscale(100%) brightness(0%) sepia(100%);' src='https://authorservices.taylorandfrancis.com/wp-content/themes/JTF3/img/tfgroup-logo-rev.svg' width='120px' height='120px'> <br> Taylor & Francis</td>
-      <td>Economics, Finance, Business & Industry</td>
-    </tr>
-    <tr>
       <td>Journal of Clinical and Experimental Neuropsychology</td>
       <td>Rumination, Cognitive Performance, and Depressive Symptoms</td>
       <td>22 September 2024</td>
       <td><a class="text-blue-500 hover:underline" href="https://think.taylorandfrancis.com/special_issues/rumination-cognitive-performance-depressive-symptoms/" target="_blank">Link</a></td>
+      <td><img style='filter: invert(100%) grayscale(100%) brightness(0%) sepia(100%);' src='https://authorservices.taylorandfrancis.com/wp-content/themes/JTF3/img/tfgroup-logo-rev.svg' width='120px' height='120px'> <br> Taylor & Francis</td>
+      <td>Behavioral Sciences</td>
+    </tr>
+    <tr>
+      <td>Behaviour & Information Technology</td>
+      <td>Technological Advances and Their Impact on Social Behavior, Neuroscience, and Interpersonal Communication: Opportunities and Risks</td>
+      <td>24 September 2024</td>
+      <td><a class="text-blue-500 hover:underline" href="https://think.taylorandfrancis.com/special_issues/social-behavior-neuroscience/" target="_blank">Link</a></td>
       <td><img style='filter: invert(100%) grayscale(100%) brightness(0%) sepia(100%);' src='https://authorservices.taylorandfrancis.com/wp-content/themes/JTF3/img/tfgroup-logo-rev.svg' width='120px' height='120px'> <br> Taylor & Francis</td>
       <td>Behavioral Sciences</td>
     </tr>
@@ -3091,60 +2780,12 @@
       <td>Urban Studies</td>
     </tr>
     <tr>
-      <td>Sustainable Communities</td>
-      <td>Effective Management Strategies for Renewable Energy Projects</td>
+      <td>International Journal of Management Science and Engineering Management</td>
+      <td>Predictive Modeling with Artificial Intelligence & Big Data for Effective Supply Chain Management</td>
       <td>30 September 2024</td>
-      <td><a class="text-blue-500 hover:underline" href="https://think.taylorandfrancis.com/article_collections/rsco-renewable-energy/" target="_blank">Link</a></td>
+      <td><a class="text-blue-500 hover:underline" href="https://think.taylorandfrancis.com/special_issues/predictive-modeling-with-artificial-intelligence/" target="_blank">Link</a></td>
       <td><img style='filter: invert(100%) grayscale(100%) brightness(0%) sepia(100%);' src='https://authorservices.taylorandfrancis.com/wp-content/themes/JTF3/img/tfgroup-logo-rev.svg' width='120px' height='120px'> <br> Taylor & Francis</td>
       <td>Economics, Finance, Business & Industry</td>
-    </tr>
-    <tr>
-      <td>Cogent Mental Health</td>
-      <td>Sleep Health and Mental Wellbeing</td>
-      <td>30 September 2024</td>
-      <td><a class="text-blue-500 hover:underline" href="https://think.taylorandfrancis.com/article_collections/oamh-sleep-health/" target="_blank">Link</a></td>
-      <td><img style='filter: invert(100%) grayscale(100%) brightness(0%) sepia(100%);' src='https://authorservices.taylorandfrancis.com/wp-content/themes/JTF3/img/tfgroup-logo-rev.svg' width='120px' height='120px'> <br> Taylor & Francis</td>
-      <td>Behavioral Sciences</td>
-    </tr>
-    <tr>
-      <td>Carbon Management</td>
-      <td>GHG Protocol Revision Process</td>
-      <td>30 September 2024</td>
-      <td><a class="text-blue-500 hover:underline" href="https://think.taylorandfrancis.com/article_collections/ghg-protocol-revision-process/" target="_blank">Link</a></td>
-      <td><img style='filter: invert(100%) grayscale(100%) brightness(0%) sepia(100%);' src='https://authorservices.taylorandfrancis.com/wp-content/themes/JTF3/img/tfgroup-logo-rev.svg' width='120px' height='120px'> <br> Taylor & Francis</td>
-      <td>Economics, Finance, Business & Industry</td>
-    </tr>
-    <tr>
-      <td>Cogent Business & Management</td>
-      <td>Digital Green Innovation Management for Industry 5.0</td>
-      <td>30 September 2024</td>
-      <td><a class="text-blue-500 hover:underline" href="https://think.taylorandfrancis.com/article_collections/digital-green-innovation-management-for-industry-5-0/" target="_blank">Link</a></td>
-      <td><img style='filter: invert(100%) grayscale(100%) brightness(0%) sepia(100%);' src='https://authorservices.taylorandfrancis.com/wp-content/themes/JTF3/img/tfgroup-logo-rev.svg' width='120px' height='120px'> <br> Taylor & Francis</td>
-      <td>Economics, Finance, Business & Industry</td>
-    </tr>
-    <tr>
-      <td>Journal of Applied Economics</td>
-      <td>Energy and Environmental Sustainability</td>
-      <td>30 September 2024</td>
-      <td><a class="text-blue-500 hover:underline" href="https://think.taylorandfrancis.com/article_collections/energy-and-environmental-sustainability/" target="_blank">Link</a></td>
-      <td><img style='filter: invert(100%) grayscale(100%) brightness(0%) sepia(100%);' src='https://authorservices.taylorandfrancis.com/wp-content/themes/JTF3/img/tfgroup-logo-rev.svg' width='120px' height='120px'> <br> Taylor & Francis</td>
-      <td>Economics, Finance, Business & Industry</td>
-    </tr>
-    <tr>
-      <td>Journal of Applied Economics</td>
-      <td>Economic and financial integration: Between environmental issues and geopolitical risks</td>
-      <td>30 September 2024</td>
-      <td><a class="text-blue-500 hover:underline" href="https://think.taylorandfrancis.com/article_collections/journal-of-applied-economics-economic-and-financial-integration-between-environmental-issues-and-geopolitical-risks/" target="_blank">Link</a></td>
-      <td><img style='filter: invert(100%) grayscale(100%) brightness(0%) sepia(100%);' src='https://authorservices.taylorandfrancis.com/wp-content/themes/JTF3/img/tfgroup-logo-rev.svg' width='120px' height='120px'> <br> Taylor & Francis</td>
-      <td>Economics, Finance, Business & Industry</td>
-    </tr>
-    <tr>
-      <td>International Journal of Digital Earth</td>
-      <td>Smart Data Technologies in Transport Planning: Prospects and Challenges</td>
-      <td>30 September 2024</td>
-      <td><a class="text-blue-500 hover:underline" href="https://think.taylorandfrancis.com/article_collections/international-journal-of-digital-earth-smart-data-technologies-in-transport-planning-prospects-and-challenges/" target="_blank">Link</a></td>
-      <td><img style='filter: invert(100%) grayscale(100%) brightness(0%) sepia(100%);' src='https://authorservices.taylorandfrancis.com/wp-content/themes/JTF3/img/tfgroup-logo-rev.svg' width='120px' height='120px'> <br> Taylor & Francis</td>
-      <td>Urban Studies</td>
     </tr>
     <tr>
       <td>Journal of Sustainable Tourism</td>
@@ -3227,14 +2868,6 @@
       <td>Behavioral Sciences</td>
     </tr>
     <tr>
-      <td>European Journal of Psychotraumatology</td>
-      <td>Post-traumatic Stress Disorder in Children and Adolescents: Aetiology, Risk Factors and Treatment</td>
-      <td>01 October 2024</td>
-      <td><a class="text-blue-500 hover:underline" href="https://think.taylorandfrancis.com/article_collections/post-traumatic-stress-disorder-children-adolescents/" target="_blank">Link</a></td>
-      <td><img style='filter: invert(100%) grayscale(100%) brightness(0%) sepia(100%);' src='https://authorservices.taylorandfrancis.com/wp-content/themes/JTF3/img/tfgroup-logo-rev.svg' width='120px' height='120px'> <br> Taylor & Francis</td>
-      <td>Behavioral Sciences</td>
-    </tr>
-    <tr>
       <td>Journal of Teaching in Travel & Tourism</td>
       <td>Advancing Diversity, Equity, and Inclusion (DEI) within the Hospitality and Tourism Discipline</td>
       <td>01 October 2024</td>
@@ -3267,14 +2900,6 @@
       <td>Tourism, Hospitality and Events</td>
     </tr>
     <tr>
-      <td>Journal of Applied Economics</td>
-      <td>Globalization: Current trends and challenges</td>
-      <td>05 October 2024</td>
-      <td><a class="text-blue-500 hover:underline" href="https://think.taylorandfrancis.com/article_collections/journal-of-applied-economics-globalization-current-trends-and-challenges/" target="_blank">Link</a></td>
-      <td><img style='filter: invert(100%) grayscale(100%) brightness(0%) sepia(100%);' src='https://authorservices.taylorandfrancis.com/wp-content/themes/JTF3/img/tfgroup-logo-rev.svg' width='120px' height='120px'> <br> Taylor & Francis</td>
-      <td>Economics, Finance, Business & Industry</td>
-    </tr>
-    <tr>
       <td>Journal of Cognitive Psychology</td>
       <td>Environment and Cognition: A Tetrahedral Model for Studies Investigating Nature’s Influence on Attention</td>
       <td>15 October 2024</td>
@@ -3297,14 +2922,6 @@
       <td><a class="text-blue-500 hover:underline" href="https://think.taylorandfrancis.com/special_issues/gender-sexual-diversity-assisted-reproduction/" target="_blank">Link</a></td>
       <td><img style='filter: invert(100%) grayscale(100%) brightness(0%) sepia(100%);' src='https://authorservices.taylorandfrancis.com/wp-content/themes/JTF3/img/tfgroup-logo-rev.svg' width='120px' height='120px'> <br> Taylor & Francis</td>
       <td>Behavioral Sciences</td>
-    </tr>
-    <tr>
-      <td>Journal of Applied Economics</td>
-      <td>Current issues in Environmental and Energy Economics</td>
-      <td>18 October 2024</td>
-      <td><a class="text-blue-500 hover:underline" href="https://think.taylorandfrancis.com/article_collections/journal-of-applied-economics-current-issues-in-environmental-and-energy-economics/" target="_blank">Link</a></td>
-      <td><img style='filter: invert(100%) grayscale(100%) brightness(0%) sepia(100%);' src='https://authorservices.taylorandfrancis.com/wp-content/themes/JTF3/img/tfgroup-logo-rev.svg' width='120px' height='120px'> <br> Taylor & Francis</td>
-      <td>Economics, Finance, Business & Industry</td>
     </tr>
     <tr>
       <td>Journal of Marketing Management</td>
@@ -3331,20 +2948,12 @@
       <td>Economics, Finance, Business & Industry</td>
     </tr>
     <tr>
-      <td>Health Psychology and Behavioral Medicine</td>
-      <td>Promoting health behaviour change using episodic future thinking: Innovative strategies for chronic disease prevention and management</td>
+      <td>Philosophical Psychology</td>
+      <td>The Nature of Devotion</td>
       <td>31 October 2024</td>
-      <td><a class="text-blue-500 hover:underline" href="https://think.taylorandfrancis.com/article_collections/health-psychology-and-behavioral-medicine-promoting-health-behaviour-change-using-episodic-future-thinking-innovative-strategies-for-chronic-disease-prevention-and-management/" target="_blank">Link</a></td>
+      <td><a class="text-blue-500 hover:underline" href="https://think.taylorandfrancis.com/special_issues/philosophical-psychology-special-issue-the-nature-of-devotion/" target="_blank">Link</a></td>
       <td><img style='filter: invert(100%) grayscale(100%) brightness(0%) sepia(100%);' src='https://authorservices.taylorandfrancis.com/wp-content/themes/JTF3/img/tfgroup-logo-rev.svg' width='120px' height='120px'> <br> Taylor & Francis</td>
       <td>Behavioral Sciences</td>
-    </tr>
-    <tr>
-      <td>Regional Studies, Regional Science</td>
-      <td>Developing the Next Generations of Urban and Regional Experts</td>
-      <td>31 October 2024</td>
-      <td><a class="text-blue-500 hover:underline" href="https://think.taylorandfrancis.com/article_collections/regional-studies-regional-science-developing-the-next-generations-of-urban-and-regional-experts/" target="_blank">Link</a></td>
-      <td><img style='filter: invert(100%) grayscale(100%) brightness(0%) sepia(100%);' src='https://authorservices.taylorandfrancis.com/wp-content/themes/JTF3/img/tfgroup-logo-rev.svg' width='120px' height='120px'> <br> Taylor & Francis</td>
-      <td>Urban Studies</td>
     </tr>
     <tr>
       <td>Tourism Planning & Development</td>
@@ -3396,7 +3005,7 @@
     </tr>
     <tr>
       <td>Public Management Review</td>
-      <td>Public Management Review: New Public Governance - how much is it spreading, and what are its limits?</td>
+      <td>New Public Governance - how much is it spreading, and what are its limits?</td>
       <td>31 October 2024</td>
       <td><a class="text-blue-500 hover:underline" href="https://think.taylorandfrancis.com/special_issues/new-public-governance-how-much-is-it-spreading-what-limits/" target="_blank">Link</a></td>
       <td><img style='filter: invert(100%) grayscale(100%) brightness(0%) sepia(100%);' src='https://authorservices.taylorandfrancis.com/wp-content/themes/JTF3/img/tfgroup-logo-rev.svg' width='120px' height='120px'> <br> Taylor & Francis</td>
@@ -3449,6 +3058,14 @@
       <td><a class="text-blue-500 hover:underline" href="https://think.taylorandfrancis.com/special_issues/advertising-societal-wellbeing-exploring-social-issues-advertising-brand-activism/" target="_blank">Link</a></td>
       <td><img style='filter: invert(100%) grayscale(100%) brightness(0%) sepia(100%);' src='https://authorservices.taylorandfrancis.com/wp-content/themes/JTF3/img/tfgroup-logo-rev.svg' width='120px' height='120px'> <br> Taylor & Francis</td>
       <td>Economics, Finance, Business & Industry</td>
+    </tr>
+    <tr>
+      <td>Advanced Robotics</td>
+      <td>Nursing Robotics</td>
+      <td>30 November 2024</td>
+      <td><a class="text-blue-500 hover:underline" href="https://think.taylorandfrancis.com/special_issues/nursing-robotics/" target="_blank">Link</a></td>
+      <td><img style='filter: invert(100%) grayscale(100%) brightness(0%) sepia(100%);' src='https://authorservices.taylorandfrancis.com/wp-content/themes/JTF3/img/tfgroup-logo-rev.svg' width='120px' height='120px'> <br> Taylor & Francis</td>
+      <td>Behavioral Sciences</td>
     </tr>
     <tr>
       <td>Journal of Ecotourism</td>
@@ -3507,20 +3124,12 @@
       <td>Economics, Finance, Business & Industry</td>
     </tr>
     <tr>
-      <td>Geomatics, Natural Hazards and Risk</td>
-      <td>Urbanization and Sustainability of Urban Land Systems</td>
+      <td>Journal of China Tourism Research</td>
+      <td>New Paradigms in Tour Guiding: Leading Chinese Tourists in the Post-modern Era</td>
       <td>31 December 2024</td>
-      <td><a class="text-blue-500 hover:underline" href="https://think.taylorandfrancis.com/article_collections/urbanization-and-sustainability-of-urban-land-systems/" target="_blank">Link</a></td>
+      <td><a class="text-blue-500 hover:underline" href="https://think.taylorandfrancis.com/special_issues/new-paradigms-tour-guiding/" target="_blank">Link</a></td>
       <td><img style='filter: invert(100%) grayscale(100%) brightness(0%) sepia(100%);' src='https://authorservices.taylorandfrancis.com/wp-content/themes/JTF3/img/tfgroup-logo-rev.svg' width='120px' height='120px'> <br> Taylor & Francis</td>
-      <td>Urban Studies</td>
-    </tr>
-    <tr>
-      <td>Health Psychology and Behavioral Medicine</td>
-      <td>Registered Reports and Data Notes within Health Psychology and Behavioral Medicine</td>
-      <td>31 December 2024</td>
-      <td><a class="text-blue-500 hover:underline" href="https://think.taylorandfrancis.com/article_collections/health-psychology-and-behavioral-medicine-registered-reports-and-data-notes-within-health-psychology-and-behavioral-medicine/" target="_blank">Link</a></td>
-      <td><img style='filter: invert(100%) grayscale(100%) brightness(0%) sepia(100%);' src='https://authorservices.taylorandfrancis.com/wp-content/themes/JTF3/img/tfgroup-logo-rev.svg' width='120px' height='120px'> <br> Taylor & Francis</td>
-      <td>Behavioral Sciences</td>
+      <td>Tourism, Hospitality and Events</td>
     </tr>
     <tr>
       <td>Services Marketing Quarterly</td>
@@ -3595,6 +3204,14 @@
       <td>Behavioral Sciences</td>
     </tr>
     <tr>
+      <td>Emerging Markets Finance and Trade</td>
+      <td>Climate Change, Energy and Economic Sustainability</td>
+      <td>31 January 2025</td>
+      <td><a class="text-blue-500 hover:underline" href="https://think.taylorandfrancis.com/special_issues/climate-change-energy-and-economic-sustainability/" target="_blank">Link</a></td>
+      <td><img style='filter: invert(100%) grayscale(100%) brightness(0%) sepia(100%);' src='https://authorservices.taylorandfrancis.com/wp-content/themes/JTF3/img/tfgroup-logo-rev.svg' width='120px' height='120px'> <br> Taylor & Francis</td>
+      <td>Economics, Finance, Business & Industry</td>
+    </tr>
+    <tr>
       <td>Industry and Innovation</td>
       <td>Repurposing for Innovation: Navigating Technology, Uncertainty, and Sustainability in the Modern Business Landscape</td>
       <td>31 January 2025</td>
@@ -3651,6 +3268,14 @@
       <td>Economics, Finance, Business & Industry</td>
     </tr>
     <tr>
+      <td>Nuclear Technology</td>
+      <td>Advancements in Uncertainty and Sensitivity Analyses: Current Status and Prospective</td>
+      <td>16 March 2025</td>
+      <td><a class="text-blue-500 hover:underline" href="https://think.taylorandfrancis.com/special_issues/advancements-uncertainty-sensitivity-analyses/" target="_blank">Link</a></td>
+      <td><img style='filter: invert(100%) grayscale(100%) brightness(0%) sepia(100%);' src='https://authorservices.taylorandfrancis.com/wp-content/themes/JTF3/img/tfgroup-logo-rev.svg' width='120px' height='120px'> <br> Taylor & Francis</td>
+      <td>Economics, Finance, Business & Industry</td>
+    </tr>
+    <tr>
       <td>Accounting Forum</td>
       <td>Accounting and Accountability in Africa</td>
       <td>15 April 2025</td>
@@ -3668,185 +3293,109 @@
     </tr>
   </tbody>
 </table>
-          </div>
-        </div>
-      </main>
+        <p id="noResultsMessage" class="hidden text-red-500 mt-2 font-medium flex items-center justify-center">No matching results found.</p>
+      </div>
     </div>
-      
-      
-    <footer class="bg-white rounded-lg shadow dark:bg-gray-800 mt-12" style="width: 100%;">
-      <div class="w-full max-w-2xl mx-auto p-4 md:py-8">
-        <div class="sm:flex sm:items-center sm:justify-between">
-          <a href="https://hu.linkedin.com/in/samyborsos" class="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
-            <img src="/pictures/samy_profile_picture.png" class="h-8 rounded-full" alt="Samy Borsos">
-            <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Samy Borsos</span>
-          </a>
-          <ul class="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
-            <li><a href="#" class="hover:underline me-4 md:me-6">About</a></li>
-            <li><a href="#" class="hover:underline me-4 md:me-6">Privacy Policy</a></li>
-            <li><a href="#" class="hover:underline me-4 md:me-6">Licensing</a></li>
-            <li><a href="#" class="hover:underline">Contact</a></li>
-          </ul>
+  </main>
+  <footer id="footer" class="bg-white rounded-lg shadow dark:bg-gray-800 mt-12">
+    <div class="w-full max-w-2xl mx-auto p-4 md:py-8">
+      <div class="sm:flex sm:items-center sm:justify-between">
+        <a href="https://hu.linkedin.com/in/samyborsos" class="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
+          <img src="/pictures/samy_profile_picture.png" class="h-8 rounded-full" alt="Samy Borsos">
+          <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Samy Borsos</span>
+        </a>
+        <ul class="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
+          <li><a href="#" class="hover:underline me-4 md:me-6">About</a></li>
+          <li><a href="#" class="hover:underline me-4 md:me-6">Privacy Policy</a></li>
+          <li><a href="#" class="hover:underline me-4 md:me-6">Licensing</a></li>
+          <li><a href="#" class="hover:underline">Contact</a></li>
+        </ul>
+      </div>     
+        <div class="text-lg font-medium text-gray-300 flex items-center justify-center mt-10">
+          <div>
+            You have questions? Send me an e-mail!
+          </div>
         </div>
-        
-          <div class="text-lg font-medium text-gray-300 flex items-center justify-center mt-10">
-            <div>
-              You have questions? Send me an e-mail! <br>
-            </div>
-            
-          </div>
-          <div class="text-lg font-medium text-blue-300 flex items-center justify-center mt-5">
-            <a href="mailto:samy.borsos@gmail.com" >
-              samy.borsos@gmail.com
-            </a>
-          </div>
-      </div>
-        <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8">
-          <span class="block text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2024
-            <a href="https://hu.linkedin.com/in/samyborsos" class="hover:underline">
-              SamyBorsos™
-            </a> 
-            <br>All Rights Reserved. Yes, all of them. That means you, Todd. <br>
-            Proudly created with <a class="hover:underline font-bold" href="https://www.python.org/about/gettingstarted/">Python</a> and <a class="hover:underline font-bold" href="https://github.com/github">GitHub</a>
-          </span>    
-      </div>
-    </footer>
-      
+        <div class="text-lg font-medium text-blue-300 flex items-center justify-center mt-5">
+          <a href="mailto:samy.borsos@gmail.com" >
+            samy.borsos@gmail.com
+          </a>
+        </div>
+    </div>
+      <hr class="my-4 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-2">
+        <span class="block text-sm text-gray-500 sm:text-center dark:text-gray-400 mb-4">© 2024
+          <a href="https://hu.linkedin.com/in/samyborsos" class="hover:underline">
+            SamyBorsos™
+          </a>
+          <br>All Rights Reserved. Yes, all of them. That means you, Todd. <br>
+          Proudly created with <a class="hover:underline font-bold" href="https://www.python.org/about/gettingstarted/">Python</a> and <a class="hover:underline font-bold" href="https://github.com/github">GitHub</a>
+        </span>    
+    </div>
+  </footer>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+    // Cache frequently accessed elements
+    var table = document.getElementsByTagName("table")[0];
+    var rowCount = document.getElementById("rowCount");
+    var searchInput = document.getElementById("searchInput");
+    var subjectDropdownPublisher = document.getElementById("subjectDropdownPublisher");
+    var subjectDropdownSubjects = document.getElementById("subjectDropdownSubjects");
+    var noResultsMessage = document.getElementById("noResultsMessage");
+    var footer = document.getElementById("footer");
 
-<script>
-      function updateRowCount() {
-        var visibleRows = document.querySelectorAll(
-          "table tr:not([style*='display: none'])"
-        ).length;
-        document.getElementById("rowCount").innerText =
-          "Total rows: " + (visibleRows - 1);
-      }
+    // Attach event listeners
+    searchInput.addEventListener("keyup", updateFilters);
+    subjectDropdownPublisher.addEventListener("change", updateFilters);
+    subjectDropdownSubjects.addEventListener("change", updateFilters);
 
-      
+    // Initial row count update
+    updateRowCount();
 
+    function updateRowCount() {
+        var visibleRows = table.querySelectorAll("tr:not([style*='display: none'])").length;
+        rowCount.innerText = "Total rows: " + (visibleRows - 1);
 
-      function filterTable() {
-        var input, filter, table, tr, td, i, txtValue;
-        input = document.getElementById("subjectDropdown");
-        filter = input.value.toUpperCase();
-        table = document.getElementsByTagName("table")[0];
-        tr = table.getElementsByTagName("tr");
-
-        // Loop through all table rows, and show those that match the selected subject
-        for (i = 0; i < tr.length; i++) {
-          td = tr[i].getElementsByTagName("td")[5]; // Assuming the search is based on the fifth column (subject_key)
-          if (td) {
-            txtValue = td.textContent || td.innerText;
-            if (
-              filter === "ALL" ||
-              txtValue.toUpperCase().indexOf(filter) > -1
-            ) {
-              tr[i].style.display = "";
-            } else {
-              tr[i].style.display = "none";
-            }
-          }
-        }
-        updateRowCount(); // Update the row count after filtering
-      }
-
-      function filterTablePublisher() {
-        var input, filter, table, tr, td, i, txtValue;
-        input = document.getElementById("subjectDropdownPublisher");
-        filter = input.value.toUpperCase();
-        table = document.getElementsByTagName("table")[0];
-        tr = table.getElementsByTagName("tr");
-
-        // Loop through all table rows, and show those that match the selected subject
-        for (i = 0; i < tr.length; i++) {
-          td = tr[i].getElementsByTagName("td")[4]; // Assuming the search is based on the fifth column (subject_key)
-          if (td) {
-            txtValue = td.textContent || td.innerText;
-            if (
-              filter === "ALL" ||
-              txtValue.toUpperCase().indexOf(filter) > -1
-            ) {
-              tr[i].style.display = "";
-            } else {
-              tr[i].style.display = "none";
-            }
-          }
-        }
-        updateRowCount(); // Update the row count after filtering
-      }
-
-      function searchFunction() {
-        // Declare variables
-        var input, filter, table, tr, td, i, txtValue;
-        input = document.getElementById("searchInput");
-        filter = input.value.toUpperCase();
-        table = document.getElementsByTagName("table")[0];
-        tr = table.getElementsByTagName("tr");
-
-        // Loop through all table rows, and hide those who don't match the search query
-        for (i = 0; i < tr.length; i++) {
-          td = tr[i].getElementsByTagName("td")[0]; // Assuming the search is based on the first column (title)
-          if (td) {
-            txtValue = td.textContent || td.innerText;
-            if (txtValue.toUpperCase().indexOf(filter) > -1) {
-              tr[i].style.display = "";
-            } else {
-              tr[i].style.display = "none";
-            }
-          }
-        }
-        updateRowCount(); // Update the row count after filtering
-      }
-
-      var sortDirection = 0; // 0: normal, 1: ascending, 2: descending
-var originalRows = [];
-
-var sortDirection = 0; // 0: normal, 1: ascending, 2: descending
-
-function sortTableDates() {
-    var table, rows, switching, i, x, y, shouldSwitch;
-    table = document.getElementById("myTable");
-    switching = true;
-    while (switching) {
-        switching = false;
-        rows = table.rows;
-        for (i = 1; i < (rows.length - 1); i++) {
-            shouldSwitch = false;
-            x = rows[i].getElementsByTagName("TD")[2];
-            y = rows[i + 1].getElementsByTagName("TD")[2];
-            if (sortDirection === 1 && x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
-                shouldSwitch = true;
-                break;
-            } else if (sortDirection === 2 && x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
-                shouldSwitch = true;
-                break;
-            }
-        }
-        if (shouldSwitch) {
-            rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
-            switching = true;
+        if (visibleRows === 1) { // excluding the header row
+            noResultsMessage.classList.remove("hidden");
+            footer.classList.add("hidden");
+        } else {
+            noResultsMessage.classList.add("hidden");
+            footer.classList.remove("hidden");
         }
     }
-}
 
+    function updateFilters() {
+        var searchValue = searchInput.value.toUpperCase();
+        var publisherValue = subjectDropdownPublisher.value.toUpperCase();
+        var subjectValue = subjectDropdownSubjects.value.toUpperCase();
 
-function onHeaderClick(header) {
-    sortDirection = (sortDirection + 1) % 3;
-    var arrow = header.getElementsByTagName("span")[0];
-    if (sortDirection === 0) {
-        arrow.innerHTML = ""; // two-headed arrow
-    } else if (sortDirection === 1) {
-        arrow.innerHTML = "↑"; // up arrow
-    } else {
-        arrow.innerHTML = "↓"; // down arrow
+        // Loop through each row and update display based on filters
+        var tr = table.getElementsByTagName("tr");
+        for (var i = 1; i < tr.length; i++) { // Start from index 1 to skip header row
+            var tdTitle = tr[i].getElementsByTagName("td")[0];
+            var tdPublisher = tr[i].getElementsByTagName("td")[4];
+            var tdSubject = tr[i].getElementsByTagName("td")[5];
+
+            // Check if title, publisher, and subject match the filters
+            var titleMatch = tdTitle.textContent.toUpperCase().indexOf(searchValue) > -1;
+            var publisherMatch = publisherValue === "ALL" || tdPublisher.textContent.toUpperCase() === publisherValue;
+            var subjectMatch = subjectValue === "ALL" || tdSubject.textContent.toUpperCase() === subjectValue;
+
+            // Update row display based on filter matches
+            if (titleMatch && publisherMatch && subjectMatch) {
+                tr[i].style.display = "";
+            } else {
+                tr[i].style.display = "none";
+            }
+        }
+
+        // Update row count after filtering
+        updateRowCount();
     }
-    sortTableDates();
-}
+});
 
 
-
-
-      updateRowCount(); // Update the row count after filtering
-    </script>
-  </body>
+  </script>
+</body>
 </html>
+

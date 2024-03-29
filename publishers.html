@@ -3378,7 +3378,7 @@
 
             // Check if title, publisher, and subject match the filters
             var titleMatch = tdTitle.textContent.toUpperCase().indexOf(searchValue) > -1;
-            var publisherMatch = publisherValue === "ALL" || tdPublisher.textContent.toUpperCase() === publisherValue;
+            var publisherMatch = tdPublisher.textContent.toUpperCase().indexOf(searchValue) > -1;
             var subjectMatch = subjectValue === "ALL" || tdSubject.textContent.toUpperCase() === subjectValue;
 
             // Update row display based on filter matches

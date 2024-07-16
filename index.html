@@ -1,81 +1,95 @@
 <!DOCTYPE html>
-<html lang="en" class="h-full bg-gray-100">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home Page</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="icon" href="/pictures/sze_logo.png" sizes="144x144">
-  <style>
-    table { font-family: Arial, sans-serif; border-collapse: collapse; margin: auto; }
-    th, td { border-bottom: 1px solid #dddddd; text-align: left; padding: 16px; }
-    a { color: #007bff; text-decoration: none; cursor: pointer; }
-    #subjectDropdown { margin-bottom: 50px; }
-    .min-h-screen { display: flex; align-items: flex-start; }
-    tr:hover td { background-color: lightgrey; }
-  </style>
-</head>
+<html lang="en" class="h-full bg-gray-100"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SZE - Publishers</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        szeFoszin1: '#242943',
+                        szeFoszin2: '#50adc9',
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="icon" type="image/svg+xml" href="https://static.wixstatic.com/media/a64cda_74704ce89b8b4e6eb850accaeeee1a93%7Emv2.png/v1/fill/w_192%2Ch_192%2Clg_1%2Cusm_0.66_1.00_0.01/a64cda_74704ce89b8b4e6eb850accaeeee1a93%7Emv2.png">
+
+
+
 <body class="h-full">
-  <div class="">
-    
-      <nav class="bg-gray-800 fixed w-full z-50">
-        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div class="flex h-16 items-center justify-between">
-            <div class="flex items-center">
-              <div class="flex-shrink-0">
-                <img class="" src="https://static.wixstatic.com/media/a64cda_1b6e4310f40343f4ab177e4f7674d6e3~mv2.png/v1/fill/w_212,h_55,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/sze_logo_fekvo_CMYK-03.png" alt="Your Company">
-              </div>
-              <div class="hidden md:block">
-                <div class="ml-10 flex items-baseline space-x-4">
-                  
-                  <a href="https://samyborsos.github.io/" class="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium" aria-current="page">Home</a>
-                  <a href="https://samyborsos.github.io/publishers.html" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Publishers</a>
-                  <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Summary Page</a>
-                  
+
+
+
+
+    <div class="min-h-full">
+
+        
+
+        
+
+
+
+
+        <nav class="bg-szeFoszin1 bg-['#242943'] py-4 mb-4 shadow-lg drop-shadow-lg">
+            <div class="mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex items-center justify-between">
+                    <!-- Logo and Mobile Menu Toggle -->
+                    <div class="flex items-center">
+                    <div class="flex-shrink-0 hidden sm:block">
+<!--                             <img class="h-14 w-auto" src="https://static.wixstatic.com/media/a64cda_1b6e4310f40343f4ab177e4f7674d6e3~mv2.png/v1/fill/w_212,h_55,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/sze_logo_fekvo_CMYK-03.png" alt="Sze Logo">
+ -->                        </div>
+                    </div>
+        
+                    <!-- Center title -->
+                    <div class="flex-1 flex justify-center py-2">
+                        <a href="./new_publishers.html">
+                            <h2 class="font-bold text-3xl text-white">
+                                Home Page
+                            </h2>
+                        </a>
+                    </div>
+        
+                    <!-- User authentication links -->
+                    <!-- <div class="hidden md:flex items-center space-x-4">
+                                                                        <div class="flex items-center space-x-4">
+                            <img class="h-12 w-12" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Favatars2.githubusercontent.com%2Fu%2F1878655%3Fs%3D400%26v%3D4&amp;f=1&amp;nofb=1&amp;ipt=1cc9f00475ef28f4b548ece95a7f909f2d7bc8a1aad606ebb866f4792143eb44&amp;ipo=images" alt="">
+                            <a href="#" class="text-white hover:text-gray-300">
+                                User
+                            </a>
+                        
+<button class="flex items-center space-x-2 bg-blue-500 hover:bg-blue-600 text-white font-semibold px-4 py-2 rounded-md transition-colors relative inline-flex items-center px-4 py-2 text-sm font-medium text-white bg-szeFoszin2 shadow-xl leading-5 rounded-md hover:text-gray-200 focus:outline-none focus:ring ring-gray-300 active:bg-szeFoszin2 active:text-white transition ease-in-out duration-150 dark:bg-szeFoszin2 dark:text-white dark active:bg-white dark:active:text-gray-300 text-white hover:text-gray-300" type="submit">
+    Logout
+</button>
+                            
+                        </div>
+                                            </div> -->
                 </div>
-              </div>
+
+
             </div>
-            <div class="hidden md:block">
-              <div class="ml-4 flex items-center md:ml-6">
-                <button type="button" class="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
-                  <span class="absolute -inset-1.5"></span>
-                  <span class="sr-only">View notifications</span>
-                  <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0"/>
-                  </svg>
-                </button>
-                <div class="relative ml-3">
-                  <div>
-                    <button type="button" class="relative flex max-w-xs items-center rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800" id="user-menu-button" aria-expanded="false" aria-haspopup="true">
-                      <span class="sr-only">Open user menu</span>
-                      
-                    </button>
-                  </div>
-                </div>
-              </div>
+        
+            <!-- Mobile menu -->
+            
+        </nav>
+        
+
+        
+
+        <!-- Header white block below navbar -->
+        <!-- <header class="bg-white shadow">
+            <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8 flex justify-center items-center">
+                <h1 class="text-4xl font-bold tracking-tight text-gray-900 text-center">
+                    Publishers
+                </h1>
+                
             </div>
-            <div class="-mr-2 flex md:hidden">
-              <button type="button" class="relative inline-flex items-center justify-center rounded-md bg-gray-800 p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800" aria-controls="mobile-menu" aria-expanded="false">
-                <span class="absolute -inset-0.5"></span>
-                <span class="sr-only">Open main menu</span>
-                <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/>
-                </svg>
-                <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
-                </svg>
-              </button>
-            </div>
-          </div>
-        </div>
-      </nav>
-      <header class="bg-white shadow rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none pt-16">
-        <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
-          <h1 id="heading-text" class="text-3xl font-bold tracking-tight text-gray-900">Home Page</h1>
-        </div>
-      </header>
-    </div>
-  </div>
+        </header> -->
   <main>
     <div class="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">
       <p class="text-base mb-4"></p>
@@ -87,38 +101,37 @@
         <span id="rowCount" class="text-sm font-medium text-gray-500"></span>
         
         
-        <div class="flex space-x-3">
+        <div class="flex space-x-8">
 
-            <a href="publishers.html">
+            <a href="./new_publishers.html">
             <div class="w-81 h-100 rounded overflow-hidden shadow-lg">
-              <img class="w-full h-40 object-cover" src="/pictures/web-scraping_2560x1067_819-3159527685.webp" alt="Sunset in the mountains">
+              <img class="w-full h-40 object-cover" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fbrewminate.com%2Fwp-content%2Fuploads%2F2016%2F11%2FJournal03.jpg&f=1&nofb=1&ipt=28b7383bb332a8a9f3f0215fba9d4663cdb5348bd462555ab97f07aee5fe6c7d&ipo=images" alt="Journals Image">
               <div class="px-6 py-4">
-                <div class="font-bold text-xl mb-2">Webscraping with Python</div>
+                <div class="font-bold text-xl mb-2">(New) SZE Publishers</div>
                 <p class="text-gray-700 text-base">
                   <!-- some text below the image -->
                 </p>
                 <div class="flex flex-wrap mt-4">
-                  <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#programming</span>
-                  <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#coding</span>
-                  <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#github</span>
+                  <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#emerald</span>
+                  <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#elsevier</span>
+                  <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#taylor&francis</span>
                 </div>
               </div>
             </div>
           </a>
           
-          <a class="cursor-not-allowed" href="mccDocuments.html" onclick="return false;" style="display:none;">
-
+          <a href="./publishers.html">
             <div class="w-81 h-100 rounded overflow-hidden shadow-lg">
-              <img class="w-full h-40 object-cover" src="/pictures/mcc-logo-1837390619.png" alt="Sunset in the mountains">
+              <img class="w-full h-40 object-cover contrast-[.25]" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fbrewminate.com%2Fwp-content%2Fuploads%2F2016%2F11%2FJournal03.jpg&f=1&nofb=1&ipt=28b7383bb332a8a9f3f0215fba9d4663cdb5348bd462555ab97f07aee5fe6c7d&ipo=images" alt="Journals Image">
               <div class="px-6 py-4">
-                <div class="font-bold text-xl mb-2">Summary page for MCC Győr</div>
+                <div class="font-bold text-xl mb-2">(Old) SZE Publishers</div>
                 <p class="text-gray-700 text-base">
-                  Lorem
+                  <!-- some text below the image -->
                 </p>
                 <div class="flex flex-wrap mt-4">
-                  <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#photography</span>
-                  <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#travel</span>
-                  <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#winter</span>
+                  <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#emerald</span>
+                  <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#elsevier</span>
+                  <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#taylor&francis</span>
                 </div>
               </div>
             </div>
@@ -136,12 +149,12 @@
       </div>
     </div>
   </main>
-  <footer id="footer" class="bg-white rounded-lg shadow dark:bg-gray-800 mt-12 fixed bottom-0 w-full">
+  <footer id="footer" class="bg-szeFoszin1 rounded-lg shadow dark:bg-gray-800 mt-12 fixed bottom-0 w-full">
     <div class="w-full max-w-2xl mx-auto p-4 md:py-8">
       <div class="sm:flex sm:items-center sm:justify-between">
         <a href="https://hu.linkedin.com/in/samyborsos" class="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
           <img src="/pictures/samy_profile_picture.png" class="h-8 rounded-full" alt="Samy Borsos">
-          <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Samy Borsos</span>
+          <span class="self-center text-2xl font-semibold whitespace-nowrap text-white">Samy Borsos</span>
         </a>
         <ul class="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
           <li><a href="#" class="hover:underline me-4 md:me-6">About</a></li>
@@ -160,16 +173,7 @@
             samy.borsos@gmail.com
           </a>
         </div>
-    </div>
-      <hr class="my-4 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-2">
-        <span class="block text-sm text-gray-500 sm:text-center dark:text-gray-400 mb-4">© 2024
-          <a href="https://hu.linkedin.com/in/samyborsos" class="hover:underline">
-            SamyBorsos™
-          </a>
-          <br>All Rights Reserved. Yes, all of them. That means you, Todd. <br>
-          Proudly created with <a class="hover:underline font-bold" href="https://www.python.org/about/gettingstarted/">Python</a> and <a class="hover:underline font-bold" href="https://github.com/github">GitHub</a>
-        </span>    
-    </div>
+      
   </footer>
   <script>
     

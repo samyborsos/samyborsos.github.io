@@ -11,5 +11,5 @@
 
 ## Table of Contents
 
-- [Webscraping with Python](#webscraping-with-python)
-- [Documents summary page](#documents-summary-page)
+- [Sze Publishers (New)]
+- [Sze Publishers (Old)]

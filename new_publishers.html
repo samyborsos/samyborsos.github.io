@@ -104,6 +104,7 @@
         </header> -->
 
         <main>
+
             <div class="mx-auto py-6 sm:px-6 lg:px-8 min-h-screen">
                 <div
                     class="mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row space-y-10 md:space-y-0 md:space-x-10 max-w-full">
@@ -113,17 +114,42 @@
                         <!-- Sidebar Section -->
                         <div
                             class="w-full xl:w-2/12 bg-white rounded-lg mt-6 xl:mt-[115px] shadow-lg mb-6 md:h-min mr-0 md:mr-10 overflow-hidden border border-gray-200 flex flex-col justify-start">
-                            <!-- Sidebar Header -->
+                            <!-- Filter header -->
                             <input type="checkbox" id="filter-toggle" class="peer hidden">
                             <label for="filter-toggle" class="flex justify-between items-center bg-gray-100 border-b p-4 cursor-pointer">
                                 <strong class="text-lg text-gray-700">Filter by:</strong>
-                                <svg class="w-6 h-6 text-gray-700 transform transition-transform duration-300 peer-checked:rotate-180 xl:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <svg class="w-6 h-6 text-gray-700 transition-transform duration-300 peer-checked:rotate-180 peer-checked:bg-red-500 xl:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                                 </svg>
                             </label>
+                            <div class="hidden peer-checked:block xl:peer-checked:block xl:block space-y-8 p-6">
+                                <!-- Publisher Section -->
+                                <div>
+                                    <label class="block mb-2 font-semibold text-gray-700">Publisher</label>
+                                    <div class="space-y-4 ml-4">
+                                        <label class="flex items-center space-x-4">
+                                            <input type="checkbox" name="sort_publisher[]" value="Q1"
+                                                class="mr-3 text-blue-500 focus:ring-indigo-500">
+                                                <img class="h-14 xl:h-10" src="https://www.emeraldgrouppublishing.com/themes/custom/emerald_publishing/logo.svg" alt="Emerald">
+                                            <span class="text-gray-600"></span>
+                                        </label>
+                                        <label class="flex items-center space-x-4">
+                                            <input type="checkbox" name="sort_publisher[]" value="Q2"
+                                                class="mr-3 text-blue-500 focus:ring-indigo-500">
+                                                <img class="h-14 xl:h-10" src="https://www.elsevier.com/images/elsevier-logo.svg" alt="Elsevier">
+                                            <span class="text-gray-600"></span>
+                                        </label>
+                                        <label class="flex items-center space-x-4">
+                                            <input type="checkbox" name="sort_publisher[]" value="Q4"
+                                                class="mr-3 text-blue-500 focus:ring-indigo-500">
+                                                <img class="h-14 xl:h-10" src="https://www.tandfonline.com/pb-assets/Global/TFO-logo-new-1716484961953.svg" alt="Taylor & Francis">
+                                            <span class="text-gray-600"></span>
+                                        </label>
+                                    </div>
+                                </div>
 
-                            <!-- Sidebar Content -->
-                            <div class="hidden peer-checked:block xl:peer-checked:block xl:block space-y-6 p-6">
+                                <hr class="border-gray-300">
+                                
                                 <!-- Q Value Section -->
                                 <div>
                                     <label class="block mb-2 font-semibold text-gray-700">Q value</label>

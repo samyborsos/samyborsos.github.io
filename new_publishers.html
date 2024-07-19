@@ -113,12 +113,17 @@
                         <!-- Sidebar Section -->
                         <div
                             class="w-full xl:w-2/12 bg-white rounded-lg mt-6 xl:mt-[115px] shadow-lg mb-6 md:h-min mr-0 md:mr-10 overflow-hidden border border-gray-200 flex flex-col justify-start">
-                            <!-- Card header -->
-                            <div class="bg-gray-100 border-b p-4">
+                            <!-- Sidebar Header -->
+                            <input type="checkbox" id="filter-toggle" class="peer hidden">
+                            <label for="filter-toggle" class="flex justify-between items-center bg-gray-100 border-b p-4 cursor-pointer">
                                 <strong class="text-lg text-gray-700">Filter by:</strong>
-                            </div>
+                                <svg class="w-6 h-6 text-gray-700 transform transition-transform duration-300 peer-checked:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </label>
 
-                            <div class="space-y-6 p-6">
+                            <!-- Sidebar Content -->
+                            <div class="hidden peer-checked:block xl:peer-checked:block xl:block space-y-6 p-6">
                                 <!-- Q Value Section -->
                                 <div>
                                     <label class="block mb-2 font-semibold text-gray-700">Q value</label>

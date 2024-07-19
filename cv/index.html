@@ -7,6 +7,8 @@
     <title>Samy Borsos Portfolio</title>
     <!-- Include Tailwind CSS via CDN -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="image/svg+xml" href="https://avatars.githubusercontent.com/u/159457978?v=4">
     <style>
         /* Custom styles */
         .section {
@@ -40,7 +42,7 @@
 </head>
 
 <body class="bg-gray-100">
-    <header class="text-center py-16 bg-blue-500 text-white space-y-4">
+    <header class="text-center py-16 bg-blue-600 bg-[#872341] text-white space-y-4">
         <img src="https://avatars.githubusercontent.com/u/159457978?v=4" alt="Your Avatar"
             class="rounded-3xl w-40 h-40  shadow-xl mx-auto mt-4">
         <h1 class="text-4xl font-bold drop-shadow-xl">Samy Borsos</h1>
@@ -118,15 +120,24 @@
                 <h2>Projects</h2>
 
             </div>
-            <div class="border-l-2 px-4 border-blue-900 space-y-4">
+            <div class=" space-y-4">
 
-                <p><b>Automation and Optimization in Workflow using the Power Platform at Audi</b></p>
-                <p>I have successfully completed a complex automation project where I utilized Microsoft Power Automate and
+                <p class="border-l-2 px-4 border-blue-900"><b>Automation and Optimization in Workflow using the Power Platform at Audi</b> - <span class=" bg-blue-200 text-white py-1 rounded-full px-3">Finished</span> <br>
+                I have successfully completed a complex automation project where I utilized Microsoft Power Automate and
                     Power Apps. My aim was to streamline a repetitive manual process, and I have achieved significant
                     efficiency improvements. The new system automates the creation of meeting protocols and email sending,
                     resulting in time and resource savings for the organization. The outcome is an integrated, user-friendly
                     system facilitating efficient workflow.</p>
-                </div>
+
+                    <p class="border-l-2 px-4 border-blue-900"><b>A Comprehensive Hub for Special Issues and Cite Scores at Széchenyi István University using Python and Laravel</b> - <span class=" bg-blue-900 text-white py-1 rounded-full px-3">Ongoing</span> <br>
+                        Using Python's webscraping technology and Laravel as a webframework, I’ve created a comprehensive website that aggregates special issues from top publishers like Emerald, Elsevier, and Taylor & Francis. By web scraping data, I’ve collected Cite Scores from Scopus, WoS, ABDC, and SJR for these special issues. 
+                        <!-- <br>
+                        🔗 Explore the hub: [YourWebsiteLinkHere]
+                        <br> -->
+                        This resource is a game-changer for researchers, academics, and anyone interested in scholarly publishing.</p>
+
+
+            </div>
         </div>
         <div class="section shadow-md space-y-4">
             <div class="flex items-center space-x-3">
@@ -159,7 +170,7 @@
             <p class="border-l-2 px-4 border-blue-900"><b>English:</b> Professional working proficiency</p>
         </div>
     </main>
-    <footer class="text-center py-8 bg-blue-500 text-white">
+    <footer class="text-center py-8 bg-blue-600 text-white">
         <p>© 2024 Samy Borsos</p>
     </footer>
 </body>

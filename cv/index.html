@@ -9,6 +9,30 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="icon" type="image/svg+xml" href="https://avatars.githubusercontent.com/u/159457978?v=4">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        'claret': {
+                            '50': '#fdf3f4',
+                            '100': '#fbe8e9',
+                            '200': '#f8d3d9',
+                            '300': '#f1b0ba',
+                            '400': '#e98394',
+                            '500': '#dc5771',
+                            '600': '#c73759',
+                            '700': '#a8284b',
+                            '800': '#872341',
+                            '900': '#79223f',
+                            '950': '#430e1e',
+                        },
+                    }
+                }
+            }
+        }
+    </script>
     <style>
         /* Custom styles */
         .section {
@@ -42,28 +66,32 @@
 </head>
 
 <body class="bg-gray-100">
-    <header class="text-center py-16 bg-blue-600 bg-[#872341] text-white space-y-4">
+    <header class="text-center py-8 bg-claret-800 bg-[#872341] text-white space-y-4">
         <img src="https://avatars.githubusercontent.com/u/159457978?v=4" alt="Your Avatar"
             class="rounded-3xl w-40 h-40  shadow-xl mx-auto mt-4">
         <h1 class="text-4xl font-bold drop-shadow-xl">Samy Borsos</h1>
         <p class="text-xl mt-2 drop-shadow-xl">Trainee at Audi Hungaria Zrt. | Business Informatics student</p>
         <div class="flex items-center justify-center space-x-3">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
-            </svg>              
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
+            </svg>
             <p>samy.borsos@gmail.com</p>
         </div>
         <div class="flex items-center justify-center space-x-3">
 
-            <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="currentColor" version="1.1" id="Layer_1" viewBox="-143 145 512 512" xml:space="preserve">
-                <path d="M113,145c-141.4,0-256,114.6-256,256s114.6,256,256,256s256-114.6,256-256S254.4,145,113,145z M41.4,508.1H-8.5V348.4h49.9  V508.1z M15.1,328.4h-0.4c-18.1,0-29.8-12.2-29.8-27.7c0-15.8,12.1-27.7,30.5-27.7c18.4,0,29.7,11.9,30.1,27.7  C45.6,316.1,33.9,328.4,15.1,328.4z M241,508.1h-56.6v-82.6c0-21.6-8.8-36.4-28.3-36.4c-14.9,0-23.2,10-27,19.6  c-1.4,3.4-1.2,8.2-1.2,13.1v86.3H71.8c0,0,0.7-146.4,0-159.7h56.1v25.1c3.3-11,21.2-26.6,49.8-26.6c35.5,0,63.3,23,63.3,72.4V508.1z  ">
+            <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                fill="currentColor" version="1.1" id="Layer_1" viewBox="-143 145 512 512" xml:space="preserve">
+                <path
+                    d="M113,145c-141.4,0-256,114.6-256,256s114.6,256,256,256s256-114.6,256-256S254.4,145,113,145z M41.4,508.1H-8.5V348.4h49.9  V508.1z M15.1,328.4h-0.4c-18.1,0-29.8-12.2-29.8-27.7c0-15.8,12.1-27.7,30.5-27.7c18.4,0,29.7,11.9,30.1,27.7  C45.6,316.1,33.9,328.4,15.1,328.4z M241,508.1h-56.6v-82.6c0-21.6-8.8-36.4-28.3-36.4c-14.9,0-23.2,10-27,19.6  c-1.4,3.4-1.2,8.2-1.2,13.1v86.3H71.8c0,0,0.7-146.4,0-159.7h56.1v25.1c3.3-11,21.2-26.6,49.8-26.6c35.5,0,63.3,23,63.3,72.4V508.1z  ">
                 </path>
-            </svg>              
+            </svg>
             <p><a href="https://www.linkedin.com/in/samyborsos" target="_blank">Samy Borsos</a></p>
         </div>
-        
+
         <!-- Add any other relevant contact details (phone number, GitHub profile, etc.) -->
-        
+
     </header>
     <main class="px-4 py-8  max-w-7xl mx-auto">
         <div class="section shadow-md space-y-4">
@@ -76,13 +104,18 @@
                 <h2>About</h2>
 
             </div>
-            <p class="border-l-2 px-4 border-blue-900">Hello! I'm Samy, a passionate second-year Economics Informatics student from Hungary. With a knack for
-                German language proficiency and a fervent love for informatics, I'm excited to embark on a journey of
-                innovation and efficiency in digital business operations. From data analysis to computer programming, I
-                thrive in crafting solutions and taking pride in my creations. When I dive into a project, I do so with
-                full dedication, soaking up knowledge and embracing learning opportunities. With a strong focus on
-                creating impactful solutions and a dedication to excellence, I'm determined to contribute effectively to
-                business efficiency and growth. Let's make a significant impact together!</p>
+            <p class="border-l-2 px-4 border-claret-800">Hello! I'm Samy, a passionate second-year Economics Informatics
+                student from Hungary. With proficiency in both German and Hungarian, I seamlessly switch between the two
+                languages, making me adaptable in diverse environments. I have a fervent love for informatics and am
+                excited to embark on a journey of innovation and efficiency in digital business operations. From data
+                analysis to computer programming, I thrive in crafting solutions and taking pride in my creations. <br>
+
+                When I dive into a project, I do so with full dedication, soaking up knowledge and embracing learning
+                opportunities. I strive for adaptability and teamwork to achieve my goals, believing that these skills
+                equip me to tackle any challenge. I am a firm believer in lifelong learning and always eager to enrich
+                my knowledge. With a strong focus on creating impactful solutions and a dedication to excellence, I'm
+                determined to contribute effectively to business efficiency and growth. Let's make a significant impact
+                together!</p>
         </div>
         <div class="section shadow-md space-y-4">
             <div class="flex items-center space-x-3">
@@ -94,8 +127,9 @@
                 <h2>Experience</h2>
 
             </div>
-            <p class="border-l-2 px-4 border-blue-900">
-                <b>Project Assistant in the Ramp-up Management Department</b>, AUDI HUNGARIA Zrt. (May 2023 - Present)</p>
+            <p class="border-l-2 px-4 border-claret-800">
+                <b>Project Assistant in the Ramp-up Management Department</b>, Audi Hungaria Zrt. (May 2023 - Present)
+            </p>
         </div>
         <div class="section shadow-md space-y-4">
             <div class="flex items-center space-x-3">
@@ -107,8 +141,10 @@
                 <h2>Education</h2>
 
             </div>
-            <p class="border-l-2 px-4 border-blue-900"><b>Bachelor of Science in Business Informatics</b>, Széchenyi István Egyetem (2022 - Present)</p>
-            <p class="border-l-2 px-4 border-blue-900"><b>Summer School - The World of Startups in CEE</b>, Modul University Vienna (2024)</p>
+            <p class="border-l-2 px-4 border-claret-800"><b>Bachelor of Science in Business Informatics</b>, Széchenyi
+                István Egyetem (2022 - Present)</p>
+            <p class="border-l-2 px-4 border-claret-800"><b>Summer School - The World of Startups in CEE</b>, Modul
+                University Vienna (2024)</p>
         </div>
         <div class="section shadow-md space-y-4">
             <div class="flex items-center space-x-3">
@@ -121,35 +157,44 @@
 
             </div>
             <div class=" space-y-4">
-                <div class="border-l-2 px-4 border-blue-900 mt-4">
-            
+                <div class="border-l-2 px-4 border-claret-800 mt-4">
+
                     <p class="mb-2"><b>Automation and Workflow Optimization at Audi</b> - <span
-                            class=" bg-blue-200 text-white py-1 rounded-full px-3">Finished</span></p>
+                            class=" bg-claret-300 text-white py-1 rounded-full px-3">Finished</span></p>
                     <p>
-                        I have successfully completed a complex automation project where I utilized Microsoft Power Automate and
-                        Power Apps. My aim was to streamline a repetitive manual process, and I have achieved significant
-                        efficiency improvements. The new system automates the creation of meeting protocols and email sending,
-                        resulting in time and resource savings for the organization. The outcome is an integrated, user-friendly
+                        I have successfully completed a complex automation project where I utilized Microsoft Power
+                        Automate and
+                        Power Apps. My aim was to streamline a repetitive manual process, and I have achieved
+                        significant
+                        efficiency improvements. The new system automates the creation of meeting protocols and email
+                        sending,
+                        resulting in time and resource savings for the organization. The outcome is an integrated,
+                        user-friendly
                         system facilitating efficient workflow.</p>
                 </div>
-            
-                <div class="border-l-2 px-4 border-blue-900 mt-4">
-            
+
+                <div class="border-l-2 px-4 border-claret-800 mt-4">
+
                     <p class="mb-2"><b>Scholarly Insights Hub at Széchenyi István University using
-                            Python and Laravel</b> - <span class=" bg-blue-900 text-white py-1 rounded-full px-3">Ongoing</span></p>
+                            Python and Laravel</b> - <span
+                            class=" bg-claret-950 text-white py-1 rounded-full px-3">Ongoing</span></p>
                     <p>
-                        At Széchenyi István University, I’ve developed a comprehensive website using Python’s web scraping
-                        technology and Laravel as the web framework. This hub aggregates special issues from top publishers—Emerald, Elsevier,
-                        and Taylor & Francis. By collecting Cite Scores from Scopus, WoS, ABDC, and SJR, I’ve created a valuable
+                        At Széchenyi István University, I’ve developed a comprehensive website using Python’s web
+                        scraping
+                        technology and Laravel as the web framework. This hub aggregates special issues from top
+                        publishers—Emerald, Elsevier,
+                        and Taylor & Francis. By collecting Cite Scores from Scopus, WoS, ABDC, and SJR, I’ve created a
+                        valuable
                         resource for researchers, academics, and anyone passionate about scholarly publishing.
                         <!-- <br>
                                         🔗 Explore the hub: [YourWebsiteLinkHere]
                                         <br> -->
-                        This resource is a game-changer for researchers, academics, and anyone interested in scholarly publishing.
+                        This resource is a game-changer for researchers, academics, and anyone interested in scholarly
+                        publishing.
                     </p>
                 </div>
-            
-            
+
+
             </div>
         </div>
         <div class="section shadow-md space-y-4">
@@ -162,13 +207,47 @@
                 <h2>Honors & Awards</h2>
 
             </div>
-            <p class="border-l-2 px-4 border-blue-900"><b>Power Platform Hackathon Special Award</b>, Audi Hungaria Zrt. (Feb 2024)</p>
-            <p class="border-l-2 px-4 border-blue-900"><b>The Student of the Year</b>, the Chamber of Commerce and Industry of Veszprém County (Jun 2022)</p>
-            <p class="border-l-2 px-4 border-blue-900"><b>Böröcky Géza Award</b>, the recommendation of the teaching staff of Jókai Mór Vocational School of Economics
+            <p class="border-l-2 px-4 border-claret-800"><b>Power Platform Hackathon Special Award</b>, Audi Hungaria
+                Zrt. (Feb 2024)</p>
+            <p class="border-l-2 px-4 border-claret-800"><b>The Student of the Year</b>, the Chamber of Commerce and
+                Industry of Veszprém County (Jun 2022)</p>
+            <p class="border-l-2 px-4 border-claret-800"><b>Böröcky Géza Award</b>, the recommendation of the teaching
+                staff of Jókai Mór Vocational School of Economics
                 and the decision of the founder of the Böröczky Géza Award (May 2022)</p>
-            <p class="border-l-2 px-4 border-blue-900"><b>ÁSZÉV National Professional Study Competition</b>, Awarded for achieving 11th place in the 2022 Sectoral and Specialization Vocational Maturity Examination, the National Office for Vocational Education and Training
+            <p class="border-l-2 px-4 border-claret-800"><b>ÁSZÉV National Professional Study Competition</b>, Awarded
+                for achieving 11th place in the 2022 Sectoral and Specialization Vocational Maturity Examination, the
+                National Office for Vocational Education and Training
                 (May 2022)</p>
         </div>
+
+        <div class="section shadow-md space-y-4">
+            <div class="flex items-center space-x-3">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M12 18v-5.25m0 0a6.01 6.01 0 0 0 1.5-.189m-1.5.189a6.01 6.01 0 0 1-1.5-.189m3.75 7.478a12.06 12.06 0 0 1-4.5 0m3.75 2.383a14.406 14.406 0 0 1-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 1 0-7.517 0c.85.493 1.509 1.333 1.509 2.316V18" />
+                </svg>
+
+                <h2>Skills</h2>
+            </div>
+            <p class="border-l-2 px-4 border-claret-800"><b>Programming Languages:</b> Python, C++, HTML, CSS, PHP,
+                JavaScript, SQL</p>
+            <p class="border-l-2 px-4 border-claret-800"><b>Data Science & Analysis:</b> Python, Pandas</p>
+            <p class="border-l-2 px-4 border-claret-800"><b>Web Development:</b> PHP Laravel</p>
+            <p class="border-l-2 px-4 border-claret-800"><b>Power Platform:</b> Microsoft Power Automate, Microsoft
+                Power Apps, Power BI</p>
+            <p class="border-l-2 px-4 border-claret-800"><b>Project Management:</b> Experience with project management,
+                process automation, and workflow optimization at Audi Hungaria Zrt.</p>
+            <p class="border-l-2 px-4 border-claret-800"><b>Microsoft Office Skills:</b> Professional MS Office skills
+            </p>
+            <p class="border-l-2 px-4 border-claret-800"><b>Touch Typing:</b> 4300 keystrokes per minute typing record
+            </p>
+            <p class="border-l-2 px-4 border-claret-800"><b>Core Competencies:</b> Fast/rapid learning, adaptability,
+                problem-solving, deliberate and disciplined work ethic, critical thinking, managing workflow, and
+                process automation</p>
+
+        </div>
+
         <div class="section shadow-md  space-y-4">
             <div class="flex items-center space-x-3">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
@@ -179,11 +258,11 @@
                 <h2>Languages</h2>
 
             </div>
-            <p class="border-l-2 px-4 border-blue-900"><b>German:</b> Native or bilingual proficiency</p>
-            <p class="border-l-2 px-4 border-blue-900"><b>English:</b> Professional working proficiency</p>
+            <p class="border-l-2 px-4 border-claret-800"><b>German:</b> Native or bilingual proficiency</p>
+            <p class="border-l-2 px-4 border-claret-800"><b>English:</b> Professional working proficiency</p>
         </div>
     </main>
-    <footer class="text-center py-8 bg-blue-600 text-white">
+    <footer class="text-center py-8 bg-[#872341] text-white">
         <p>© 2024 Samy Borsos</p>
     </footer>
 </body>

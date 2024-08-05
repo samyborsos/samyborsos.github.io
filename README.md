@@ -11,5 +11,6 @@
 
 ## Table of Contents
 
-- [Sze Publishers (New)](#)
-- [Sze Publishers (Old)](#)
+- [Website](https://samyborsos.github.io/)
+- [Sze Publishers (New)](https://samyborsos.github.io/szePublishers)
+- [Resume (CV)](https://samyborsos.github.io/cv/)

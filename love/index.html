@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Special Message</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="flex items-center justify-center min-h-screen bg-[#BDE17A]">
+    <div class="p-8 text-center max-w-lg w-full">
+        <h1 class="text-2xl font-bold text-gray-800 mb-4">Boldog Hónapfordulót ❤️❤️❤️❤️❤️!!</h1>
+        <h2 class="text-3xl text-gray-600 mb-6">Do you still love me?</h2>
+        <div class="mb-6">
+            <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExcDdtZ2JiZDR0a3lvMWF4OG8yc3p6Ymdvd3g2d245amdveDhyYmx6eCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/cLS1cfxvGOPVpf9g3y/giphy.gif"
+                alt="Cute animated illustration" class="mx-auto">
+        </div>
+        <div class="flex justify-center space-x-6">
+            <button class="hidden bg-blue-500 text-white py-3 px-6 text-lg font-semibold rounded-lg shadow-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50" id="delayedButton" onclick="nextPage()">Yes ❤️</button>
+            <button class="bg-red-500 text-white py-3 px-6 text-lg font-semibold rounded-lg shadow-md hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-opacity-50 relative" id="noButton" onmouseover="moveButton()" onclick="moveButton()">No😭</button>
+        </div>
+    </div>
+
+
+
+    <script>
+        function nextPage() {
+            window.location.href = "yes.html";
+        }
+
+        function moveButton() {
+            const button = document.getElementById('noButton');
+            const buttonWidth = button.offsetWidth;
+            const buttonHeight = button.offsetHeight;
+            const x = Math.random() * (window.innerWidth - buttonWidth);
+            const y = Math.random() * (window.innerHeight - buttonHeight);
+            button.style.position = 'absolute';
+            button.style.left = `${x}px`;
+            button.style.top = `${y}px`;
+        }
+
+        // Function to show the button after 5 seconds
+        setTimeout(function() {
+            document.getElementById('delayedButton').classList.remove('hidden');
+        }, 10000); // 5000 milliseconds = 5 seconds
+    </script>
+</body>
+
+</html>

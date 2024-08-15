@@ -51,11 +51,16 @@
         <div class="relative px-4 py-6 bg-white shadow-lg rounded-3xl sm:p-8 md:p-10">
             <div class="max-w-md mx-auto">
                 <div class="max-w-md mx-auto text-center">
-                    <h1 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-gray-800 mb-4">Üdvözlünk a fedélzeten!</h1>
-                    <p class="text-lg text-gray-600 mb-4">Köszönjük, hogy csatlakoztál hozzánk. Izgatottan várjuk, hogy együtt dolgozhassunk veled!</p>
-                    <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmedia1.tenor.com%2Fm%2FrePDfDWO3XoAAAAd%2Fhacking.gif&f=1&nofb=1&ipt=fc539d24d0e87aafc84fbb7d02c25b434fc3e676765d0425d7b97de48c8b8127&ipo=images" alt="Siker GIF" class="mt-4 mx-auto w-auto h-48 rounded-full shadow-md">
+                    <h1 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-gray-800 mb-4">Üdvözlünk a
+
+                        fedélzeten <span id="user-name" class="bg-yellow-300  px-2 rounded-lg font-bold"></span>!</h1>
+                    <p class="text-lg text-gray-600 mb-4">Köszönjük, hogy csatlakoztál hozzánk. Izgatottan várjuk, hogy
+                        együtt dolgozhassunk veled!</p>
+                    <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmedia1.tenor.com%2Fm%2FrePDfDWO3XoAAAAd%2Fhacking.gif&f=1&nofb=1&ipt=fc539d24d0e87aafc84fbb7d02c25b434fc3e676765d0425d7b97de48c8b8127&ipo=images"
+                        alt="Siker GIF" class="mt-4 mx-auto w-auto h-48 rounded-full shadow-md">
                     <div class="mt-6">
-                        <a href="https://samyborsos.github.io/mccpy" class="inline-block px-6 py-3 bg-dark-blue text-yellow font-semibold rounded-lg shadow-md hover:bg-custom-blue transition-colors">
+                        <a href="https://samyborsos.github.io/mccpy"
+                            class="inline-block px-6 py-3 bg-dark-blue text-yellow font-semibold rounded-lg shadow-md hover:bg-custom-blue transition-colors">
                             Vissza a jelentkezéshez
                         </a>
                     </div>
@@ -65,51 +70,18 @@
     </div>
 
     <script>
-        var form = document.getElementById('sheetdb-form');
-        form.addEventListener("submit", e => {
-            e.preventDefault();
-            fetch(form.action, {
-                method: "POST",
-                body: new FormData(document.getElementById("sheetdb-form")),
-            }).then(
-                response => response.json()
-            ).then((html) => {
-                window.location.href = './thank-you.html';
-            });
-        });
+        // Function to get query parameters
+        function getQueryParam(name) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(name);
+        }
+
+        // Extract the name parameter from the URL
         document.addEventListener('DOMContentLoaded', () => {
-            // Replace 'YOUR_API_KEY' with your actual API key
-            const apiUrl = 'https://sheetdb.io/api/v1/dldxieb7ycs8o';
-
-            async function updateSpots() {
-                try {
-                    const response = await fetch(apiUrl);
-                    const data = await response.json();
-                    console.log(data);  // Log the data to inspect its structure
-
-                    let kpCount = 0;
-                    let epCount = 0;
-
-                    data.forEach(entry => {
-                        console.log(entry);  // Log each entry to check its structure
-                        const kepzes = entry.kepzes;
-                        if (kepzes == 'KP') {
-                            kpCount++;
-                        } else if (kepzes == 'EP') {
-                            epCount++;
-                        }
-                    });
-
-                    document.getElementById('kp-spots').textContent = `KP: ${8-kpCount} spot available`;
-                    document.getElementById('ep-spots').textContent = `EP: ${8-epCount} spot available`;
-                } catch (error) {
-                    console.error('Error fetching data:', error);
-                    document.getElementById('kp-spots').textContent = 'KP: Error loading';
-                    document.getElementById('ep-spots').textContent = 'EP: Error loading';
-                }
+            const name = getQueryParam('name').split(' ')[1];
+            if (name) {
+                document.getElementById('user-name').textContent = name;
             }
-
-            updateSpots();
         });
     </script>
 

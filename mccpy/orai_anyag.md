@@ -1,10 +1,7 @@
 
-
-# Python Alapok
-
 ## Tartalomjegyzék
-- [Python Alapok](#python-alapok)
-  - [Tartalomjegyzék](#tartalomjegyzék)
+
+- [Python Alapok (1. Óra)](#python-alapok-1-óra)
   - [Első lépések](#első-lépések)
     - [Python Alapok: Kód és Kimenet](#python-alapok-kód-és-kimenet)
     - [Hibák és Hibaüzenetek](#hibák-és-hibaüzenetek)
@@ -28,8 +25,12 @@
   - [Véletlen Számok Generálása Pythonban](#véletlen-számok-generálása-pythonban)
     - [Példa: 1 és 10 Közötti Véletlenszám Generálása](#példa-1-és-10-közötti-véletlenszám-generálása)
     - [Miért Fontosak a Véletlenszámok?](#miért-fontosak-a-véletlenszámok)
+- [Projektek (2. Óra)](#projektek-2-óra)
+- [Projektek (3. Óra)](#projektek-3-óra)
 
----
+
+
+# Python Alapok (1. Óra)
 
 ## Első lépések
 
@@ -179,9 +180,7 @@ print(15 / 4)  # Eredmény: 3.75
 
 ### Maradékos Osztás (Modulo)
 
-A maradékos osztás (`%`)
-
- a következőképpen működik:
+A maradékos osztás (`%`) a következőképpen működik:
 
 ```python
 print(15 % 4)  # Eredmény: 3
@@ -192,6 +191,8 @@ Ez a művelet megmutatja, hogy egy szám osztásakor mi marad hátra.
 ---
 
 ## Logikai Kifejezések
+
+
 
 ### Összehasonlító Operátorok
 
@@ -259,3 +260,9 @@ Ez a kód egy véletlenszerű számot generál 1 és 10 között.
 ### Miért Fontosak a Véletlenszámok?
 
 A véletlenszámok sok alkalmazásban hasznosak, például játékokban, szimulációkban és biztonsági alkalmazásokban. A randomizáció növeli a rendszer biztonságát és funkcionalitását azáltal, hogy előre nem látható kimeneteket biztosít.
+
+---
+
+# Projektek (2. Óra)
+# Projektek (3. Óra)
+

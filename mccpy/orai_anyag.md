@@ -43,6 +43,26 @@
       - [Adatbekérés és műveletek](#adatbekérés-és-műveletek-1)
       - [Logikai kifejezések](#logikai-kifejezések-1)
       - [Véletlen számok generálása](#véletlen-számok-generálása)
+  - [5. Ciklusok](#5-ciklusok)
+    - [While ciklus](#while-ciklus)
+    - [Ciklusok egymásba ágyazása](#ciklusok-egymásba-ágyazása)
+  - [Listák](#listák)
+    - [Listák létrehozása és kiíratása](#listák-létrehozása-és-kiíratása)
+    - [Lista elemeinek összefűzése](#lista-elemeinek-összefűzése)
+    - [A lista hossza](#a-lista-hossza)
+    - [Lista elemek elérése indexekkel](#lista-elemek-elérése-indexekkel)
+    - [Részletek a listából: Szeletek](#részletek-a-listából-szeletek)
+    - [Utolsó elem elérése](#utolsó-elem-elérése)
+    - [Listák bejárása](#listák-bejárása)
+    - [Szövegek és listák](#szövegek-és-listák)
+    - [Listák metódusai](#listák-metódusai)
+  - [1. Feladat: Számkitaláló Játék](#1-feladat-számkitaláló-játék)
+  - [2. Feladat: Egyszerű Kalkulátor](#2-feladat-egyszerű-kalkulátor)
+  - [3. Feladat: Egyszerű Jelszógenerátor](#3-feladat-egyszerű-jelszógenerátor)
+  - [4. Feladat: Személyre Szabott Üdvözlés](#4-feladat-személyre-szabott-üdvözlés)
+  - [5. Feladat: Páros vagy Páratlan Szám?](#5-feladat-páros-vagy-páratlan-szám)
+  - [6. Feladat: Neptun Kód generátor](#6-feladat-neptun-kód-generátor)
+  - [Összefoglalás:](#összefoglalás-1)
   - [Projektek (3. óra)](#projektek-3-óra)
 
 ---
@@ -182,10 +202,14 @@ A `Python` szó karaktereit indexeléssel érhetjük el:
 - `P` a 0. index
 - `y` az 1. index
 - `t` a 2. index
-- `h` a 3. index
-- `o` a 4. index
-- `n` az 5. index
+- És így tovább
 
+
+```
+P    y    t    h    o    n
+↑    ↑    ↑    ↑    ↑    ↑ 
+0    1    2    3    4    5
+```
 #### Hogyan használjuk az indexelést?
 
 Az indexelést arra használhatjuk, hogy egy sztring bármelyik karakterét elérjük:
@@ -210,6 +234,12 @@ Itt a karakterek az 1-es indexről kezdődnek és a 4-es indexig tartanak, a 4-e
 #### Negatív indexelés
 
 Negatív indexekkel visszafelé indexelhetünk:
+
+```
+ P    y    t    h    o    n
+ ↑    ↑    ↑    ↑    ↑    ↑ 
+-6   -5   -4   -3   -2   -1
+```
 
 ```python
 szoveg = "Python"
@@ -316,6 +346,39 @@ A logikai operátorok kombinálhatják a feltételeket:
 - **`or`**: Ha bármelyik feltétel igaz
 - **`not`**: Ha a feltétel nem igaz
 
+
+A dupla egyenlőség jellel (**==**) össze lehet hasonlítani 2 értéket.
+
+```python
+engedely = True
+
+if szam == True:
+  print("Kaptál engedélyt, ezért mehetsz nyaralni!")
+else:
+    print("Nem kaptál engedélyt :(")
+```
+
+```python
+szam = 3
+
+if szam >= 1 and szam <= 5:
+    print("A szám 1 és 5 között van")
+else:
+    print("A szám nincsen 1 és 5 között")
+```
+
+
+
+```python
+erdemjegy = 5
+
+if erdemjegy not 5:
+  print("Sajnos nem vagy jeles :(")
+else:
+    print("Jeles!!")
+```
+
+
 ---
 
 ### Véletlen számok generálása pythonban
@@ -363,6 +426,394 @@ Feltételes utasítások és logikai operátorok.
 ##### Véletlen számok generálása
 
 Véletlen számok generálása Pythonban.
+
+
+### 5. Ciklusok
+```python
+'''
+A print függvény a megadott szöveg kiírása után sort emel, 
+vagyis a következő print függvény már egy újabb sorba ír.
+Az alapértelmezett viselkedés azonban felülírható a "t" paraméterrel.
+'''
+# a kiírást követően a kurzor egy tabulátornyit ugrik
+print('Teszt', end='\t')
+# a kiírást követően a kurzor a kiírás végén marad
+print('Teszt', end='')       
+```
+A ciklusok alapvető fontosságúak a programozásban, mert lehetővé teszik, hogy egy adott kódrészletet többször is végrehajtsunk. Gondolj rájuk úgy, mint egy ismétlődő feladat elvégzésére, például egy listában szereplő összes szám hozzáadására.
+
+#### While ciklus
+
+A **while** ciklus addig ismétel egy kódrészletet, amíg egy bizonyos feltétel igaz marad. Képzeld el, hogy egy dobozban addig teszel almát, amíg a doboz meg nem telik. A while ciklus addig fut, amíg a feltétel igaz.
+
+Például:
+
+```python
+# while magyarul azt jelenti: amíg
+  
+  szam = 1
+  while szam <= 10:
+    print(szam)
+    szam = szam + 1   
+```
+
+Ez a ciklus addig írja ki a számokat 1-től 5-ig, amíg a **szam** változó értéke el nem éri a 6-ot. A feltétel itt az, hogy a **szam** kisebb vagy egyenlő legyen 5-tel.
+
+**Egyszerű magyarázat:**
+
+1. A ciklus indul a **szam = 1** értékkel.
+2. Ha a **szam** kisebb vagy egyenlő 5-tel (ami az első futtatáskor igaz), kiírja a számot.
+3. Ezután növeli a **szam** értékét eggyel (pl. 2 lesz).
+4. Újra ellenőrzi a feltételt, és folytatja a ciklust, amíg a feltétel nem lesz hamis (amikor **szam** 6 lesz, a ciklus megáll).
+
+#### Ciklusok egymásba ágyazása
+
+Egymásba ágyazott ciklusokat akkor használunk, ha egy cikluson belül még egy ciklust szeretnénk futtatni. Képzeld el ezt úgy, mintha több dobozt is megtöltenél almával, de minden dobozban van egy kisebb doboz, amit szintén meg kell tölteni.
+
+Például, ha van egy rács (mint egy sakktábla), és ki szeretnéd írni az összes sor és oszlop kombinációját:
+
+```python
+sor = 1
+  while sor <= 3:
+      oszlop = 1
+      while oszlop <= 5:
+          print('O ', end='')
+          oszlop = oszlop + 1
+      print('')
+      sor = sor + 1 
+```
+
+Ez a program egy 3x5-as rácsot ír ki. Az első ciklus végigmegy a sorokon, a belső ciklus pedig minden sorhoz végigmegy az oszlopokon.
+
+---
+
+### Listák
+
+A listák kulcsfontosságúak a programozásban, mivel lehetővé teszik, hogy több különböző elemet (például szavakat, számokat) egyetlen csoportban, vagyis egy listában tároljunk. A Pythonban listát úgy hozhatunk létre, hogy az elemeket szögletes zárójelek [ ] közé helyezzük, és vesszővel választjuk el őket egymástól. 
+
+Képzeljük el, mintha különféle szavakat **`(például: 'január', 'február', 'március', 'április')`** egy nagyobb dobozba (a **`honapok`** nevű listába) gyűjtenénk össze.
+
+#### Listák létrehozása és kiíratása
+
+Egy lista létrehozása egyszerű:
+
+```python
+honapok = ['január', 'február', 'március', 'április']
+```
+
+Ez a lista négy hónap nevét tartalmazza. Kiírathatjuk a listát a `print()` függvénnyel:
+
+```python
+print(honapok)
+```
+
+Ez a parancs kiírja a teljes listát, vagyis az összes hónapot.
+
+#### Lista elemeinek összefűzése
+
+A `join()` metódussal a lista elemeit egy sztringgé fűzhetjük össze, egy megadott elválasztó karakterrel tagolva:
+
+```python
+print(', '.join(honapok))
+```
+
+Ez a parancs egy szöveggé fűzi össze a hónapokat, vesszővel és szóközzel elválasztva őket: `január, február, március, április`.
+
+#### A lista hossza
+
+A `len()` függvénnyel megtudhatjuk, hány elem van a listában:
+
+```python
+print(len(honapok))
+```
+
+Ez kiírja, hogy a lista négy elemet tartalmaz.
+
+#### Lista elemek elérése indexekkel
+
+A listák elemeit az indexük alapján érhetjük el. Az indexek 0-tól kezdődnek, így az első elem indexe 0:
+
+```python
+print(honapok[0])
+```
+
+Ez kiírja az első elemet, azaz `január`-t.
+
+Az utolsó elem indexe pedig 3 lesz, mivel összesen négy elem van a listában:
+
+```python
+print(honapok[3])
+```
+
+Ez kiírja az utolsó elemet, azaz `április`-t.
+
+**Fontos:** Ha megpróbálnánk egy olyan indexet használni, ami nem létezik a listában, például a 4-es indexet, akkor hibát kapnánk, mert a listában csak négy elem van, és az utolsó elem indexe 3.
+
+#### Részletek a listából: Szeletek
+
+A listából kiválaszthatunk bizonyos elemeket is, úgynevezett "szeletek" használatával:
+
+- Az 1-es és 2-es indexű elemek kiíratása:
+
+    ```python
+    print(honapok[1:3])
+    ```
+
+    Ez kiírja `február`-t és `március`-t.
+
+- Az elejétől a 2-es indexű elemmel bezárólag:
+
+    ```python
+    print(honapok[:3])
+    ```
+
+    Ez kiírja `január`, `február` és `március` hónapokat.
+
+- A 2-es indexű elemtől a végéig:
+
+    ```python
+    print(honapok[2:])
+    ```
+
+    Ez kiírja `március`-t és `április`-t.
+
+#### Utolsó elem elérése
+
+A listákban az utolsó elemet is könnyen elérhetjük, ha negatív indexet használunk:
+
+```python
+print(honapok[-1])
+```
+
+Ez kiírja az utolsó elemet, azaz `április`-t.
+
+Ezek az alapvető műveletek segítenek abban, hogy hatékonyan tudj dolgozni a listákkal, és különböző módokon érhesd el az elemeket a programjaidban.
+#### Listák bejárása
+
+A lista bejárása azt jelenti, hogy minden elemet sorban megvizsgálunk. Ezt ciklus segítségével tehetjük meg. Például:
+
+```python
+for gyumolcs in gyumolcsok:
+    print(gyumolcs)
+```
+
+Ez a program kiírja az összes gyümölcsöt a listából: "alma", "banán", "cseresznye".
+
+#### Szövegek és listák
+
+A szövegek is tekinthetők egyfajta listának, ahol minden egyes karakter egy elem. Ezért ugyanúgy bejárhatjuk őket, mint a listákat:
+
+```python
+szoveg = "Python"
+for betu in szoveg:
+    print(betu)
+```
+
+Ez kiírja a "Python" szó minden egyes betűjét külön sorban.
+
+#### Listák metódusai
+
+A listáknak vannak speciális "metódusai", amelyekkel műveleteket végezhetünk rajtuk. Például:
+
+- **`append()`**: Új elemet ad a lista végéhez.
+
+```python
+gyumolcsok.append("dinnye")
+print(gyumolcsok)
+```
+
+Ez hozzáadja a "dinnye" szót a lista végéhez.
+
+- **`remove()`**: Eltávolít egy adott elemet a listából.
+
+```python
+gyumolcsok.remove("banán")
+print(gyumolcsok)
+```
+
+Ez eltávolítja a "banán"-t a listából.
+
+
+Ez a **for** ciklus kiírja az összes számot a listából.
+
+A **while** ciklus hasonló feladatot tud végrehajtani, de rugalmasabban kezelheti a feltételeket:
+
+```python
+i = 0
+while i < len(szamok):
+    print(szamok[i])
+    i += 1
+```
+
+Ez is kiírja az összes számot, de egy **while** ciklussal, amely addig fut, amíg az index (i) kisebb, mint a listában lévő elemek száma.
+
+Példák:
+
+A második óra kis projektjeinek összeállításakor fontos, hogy a feladatok játékosak és érdekesek legyenek, miközben erősítik a hallgatók által az első órán tanult alapvető Python fogalmakat. Mivel a ciklusok és listák még nem kerültek bevezetésre, ezek a projektek főként a változók, matematikai műveletek, logikai kifejezések, adatbekérés, és véletlenszám-generálás köré épülnek.
+
+### 1. Feladat: Számkitaláló Játék
+**Leírás:** Ebben a játékban a program egy véletlenszámot generál 1 és 10 között, és a felhasználónak ki kell találnia ezt a számot.
+
+**Megvalósítás:**
+1. A program generáljon egy véletlenszámot az `import random` és `random.randint()` függvények segítségével.
+2. Kérjen be egy számot a felhasználótól az `input()` függvény segítségével.
+3. Hasonlítsa össze a felhasználó által megadott számot a generált véletlenszámmal:
+   - Ha a számok egyeznek, írja ki, hogy "Gratulálok, eltaláltad!".
+   - Ha nem, írja ki, hogy "Sajnálom, próbáld újra!".
+
+   
+**Példa kód:**
+```python
+import random
+
+szam = random.randint(1, 10)
+tipp = int(input("Találd ki a számot 1 és 10 között: "))
+
+if tipp == szam:
+    print("Gratulálok, eltaláltad!")
+else:
+    print("Sajnálom, próbáld újra! A szám a következő volt:", szam)
+```
+
+Észrevehetjük, hogy csak 1x találgathatunk, utána pedig leáll a programkódunk. Ahhoz, hogy addig probálhatunk amíg eltaláljuk a kitalált számot egy ciklust kell használnunk.
+
+```python
+import random
+
+szam = random.randint(1, 10)
+tipp = None
+
+while tipp != szam:
+    tipp = int(input("Találd ki a számot 1 és 10 között: "))
+    # Üzenet a felhasználónak ha eltalálta
+    if tipp == szam:
+        print("Gratulálok, eltaláltad!")
+    else:
+        print("Sajnálom, próbáld újra!")
+
+print(">> Program vége <<")
+
+```
+
+### 2. Feladat: Egyszerű Kalkulátor
+**Leírás:** A program lehetővé teszi a felhasználónak, hogy két számot adjon meg, és válasszon egy műveletet (összeadás, kivonás, szorzás, osztás), amelyet végre szeretne hajtani.
+
+**Megvalósítás:**
+1. Kérje be a felhasználótól két számot.
+2. Kérje be a felhasználótól, hogy válasszon egy műveletet: `+`, `-`, `*`, vagy `/`.
+3. Végezze el a kiválasztott műveletet a két számmal.
+4. Írja ki az eredményt.
+
+**Példa kód:**
+```python
+szam1 = float(input("Add meg az első számot: "))
+szam2 = float(input("Add meg a második számot: "))
+
+muvelet = input("Milyen műveletet szeretnél elvégezni (+, -, *, /): ")
+
+if muvelet == '+':
+    eredmeny = szam1 + szam2
+elif muvelet == '-':
+    eredmeny = szam1 - szam2
+elif muvelet == '*':
+    eredmeny = szam1 * szam2
+elif muvelet == '/':
+    eredmeny = szam1 / szam2
+else:
+    eredmeny = "Ismeretlen művelet"
+
+print("Az eredmény:", eredmeny)
+```
+
+### 3. Feladat: Egyszerű Jelszógenerátor
+**Leírás:** A program véletlenszerűen generál egy jelszót, amely tartalmaz betűket és számokat.
+
+**Megvalósítás:**
+1. A program előre meghatározott karakterkészletekből (például számok és néhány betű) válasszon véletlenszerű karaktereket.
+2. Generáljon egy 6 karakter hosszú jelszót.
+3. Írja ki a generált jelszót.
+
+**Példa kód:**
+```python
+import random
+
+karakterek = "abcdefghijklmnopqrstuvwxyz0123456789"
+jelszo = ""
+
+for index in range(6):
+    jelszo += random.choice(karakterek)
+
+print("A generált jelszó:", jelszo)
+```
+
+### 4. Feladat: Személyre Szabott Üdvözlés
+**Leírás:** A program elkéri a felhasználó nevét és korát, majd egy üdvözlő üzenetet ír ki, ami tartalmazza ezeket az információkat.
+
+**Megvalósítás:**
+1. Kérje be a felhasználó nevét és korát az `input()` segítségével.
+2. Ha a felhasználó 18 évnél idősebb, írja ki, hogy "Üdvözlünk, [név]! Te már felnőtt vagy!".
+3. Ha 18 évnél fiatalabb, írja ki, hogy "Üdvözlünk, [név]! Még fiatal vagy, élvezd az életet!".
+
+**Példa kód:**
+```python
+nev = input("Add meg a neved: ")
+kor = int(input("Add meg a korod: "))
+
+if kor >= 18:
+    print("Üdvözlünk " , nev, "! Te már felnőtt vagy!")
+else:
+    print("Üdvözlünk " , nev, "! Még fiatal vagy, élvezd az életet!")
+```
+
+### 5. Feladat: Páros vagy Páratlan Szám?
+**Leírás:** A program elkéri a felhasználótól egy számot, és megmondja, hogy a szám páros vagy páratlan.
+
+**Megvalósítás:**
+1. Kérje be a felhasználótól egy számot.
+2. Használja a maradékos osztás (`%`) műveletet, hogy ellenőrizze, a szám páros-e (ha a maradék 0).
+3. Írja ki, hogy a szám páros vagy páratlan.
+
+**Példa kód:**
+```python
+szam = int(input("Adj meg egy számot: "))
+
+if szam % 2 == 0:
+    print(f"A szám páros.")
+else:
+    print(f"A szám páratlan.")
+```
+
+### 6. Feladat: Neptun Kód generátor
+**Leírás:** Random számgenerátorral létrehozunk neptun kódokat.
+
+**Megvalósítás:**
+1. Jelöljük ki, milyen számok és milyen betűk lehetnek.
+2. Használja a **`random`** csomag függvényeit.
+3. Írassa ki a generált neptun kódot.
+
+**Példa kód:**
+```python
+import random
+
+karakterek = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"  # Nagybetűk és számok
+neptun_kod = "" 
+
+# Hat karaktert adunk hozzá egymás után
+for i in range(6):  # A ciklus hatszor fog lefutni
+    veletlen_karakter = random.choice(karakterek)  # Kiválasztunk egy véletlen karaktert
+    neptun_kod += veletlen_karakter  # Hozzáadjuk a kódhoz
+
+print("A generált Neptun-kód:", neptun_kod)
+```
+
+### Összefoglalás:
+- **Számkitaláló Játék**: Gyakorolja a véletlenszám-generálást és a feltételes logikát.
+- **Egyszerű Kalkulátor**: Erősíti a matematikai műveletek és az adatbekérés használatát.
+- **Egyszerű Jelszógenerátor**: Bemutatja a véletlen karakterek használatát és a szövegkezelést.
+- **Személyre Szabott Üdvözlés**: Kombinálja az adatbekérést és a feltételes logikát személyre szabott üzenetek generálására.
+- **Páros vagy Páratlan Szám?**: Egyszerű, de hatékony módon mutatja be a maradékos osztást és az if-else szerkezetet.
+
+Ezek a projektek nemcsak szórakoztatóak, hanem segítenek elmélyíteni az első órán tanultakat, miközben bevezetik a hallgatókat a gyakorlati Python programozás világába.
 
 ### Projektek (3. óra)
 

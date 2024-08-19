@@ -2,3 +2,34 @@ title: MCC.py Órai Anyag
 description: Ez az oldal a MCC.py órai anyagának részletes leírását és gyakorlati feladatait tartalmazza. Az anyag célja, hogy bemutassa a Python programozás alapjait kezdők számára. Az oktatási anyag tartalmaz példákat, feladatokat és magyarázatokat a Python nyelv alapvető fogalmairól.
 theme: jekyll-theme-slate
 markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+permalinks:
+  pretty: /:categories/:year/:month/:day/:title/
+paginate: 10
+paginate_path: "/page:num/"
+exclude:
+  - "README.md"
+  - "node_modules/"
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+url: "https://yourdomain.com"
+baseurl: "/your-site"
+social:
+  twitter: "your_twitter_handle"
+  github: "your_github_handle"
+  linkedin: "your_linkedin_handle"
+language: "en"

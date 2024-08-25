@@ -906,3 +906,9 @@ A bemutatott Python projektek széles spektrumot ölelnek fel a kezdők számár
 Az első és második óra tartalmának ismétlése és mélyebb projektek megvalósítása.
 
 ---
+
+
+Készítette: Borsos Samy & Herold Virág (2024)
+<div style="text-align: center;">
+<em>Készítette: xx & yy (2024)</em>
+</div>

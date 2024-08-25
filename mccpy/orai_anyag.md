@@ -35,7 +35,7 @@
   - [Véletlen számok generálása pythonban](#véletlen-számok-generálása-pythonban)
     - [Példa: 1 és 10 közötti véletlenszám generálása](#példa-1-és-10-közötti-véletlenszám-generálása)
     - [Miért fontosak a véletlenszámok?](#miért-fontosak-a-véletlenszámok)
-  - [Projektek (2. óra)](#projektek-2-óra)
+- [Projektek (2. óra)](#projektek-2-óra)
     - [1. óra ismétlése](#1-óra-ismétlése)
       - [Python alapok](#python-alapok)
       - [Változók](#változók)
@@ -43,7 +43,7 @@
       - [Adatbekérés és műveletek](#adatbekérés-és-műveletek-1)
       - [Logikai kifejezések](#logikai-kifejezések-1)
       - [Véletlen számok generálása](#véletlen-számok-generálása)
-  - [5. Ciklusok](#5-ciklusok)
+  - [Ciklusok](#ciklusok)
     - [While ciklus](#while-ciklus)
     - [Ciklusok egymásba ágyazása](#ciklusok-egymásba-ágyazása)
   - [Listák](#listák)
@@ -56,14 +56,17 @@
     - [Listák bejárása](#listák-bejárása)
     - [Szövegek és listák](#szövegek-és-listák)
     - [Listák metódusai](#listák-metódusai)
-  - [1. Feladat: Számkitaláló Játék](#1-feladat-számkitaláló-játék)
-  - [2. Feladat: Egyszerű Kalkulátor](#2-feladat-egyszerű-kalkulátor)
-  - [3. Feladat: Egyszerű Jelszógenerátor](#3-feladat-egyszerű-jelszógenerátor)
-  - [4. Feladat: Személyre Szabott Üdvözlés](#4-feladat-személyre-szabott-üdvözlés)
-  - [5. Feladat: Páros vagy Páratlan Szám?](#5-feladat-páros-vagy-páratlan-szám)
-  - [6. Feladat: Neptun Kód generátor](#6-feladat-neptun-kód-generátor)
-  - [Összefoglalás:](#összefoglalás-1)
-  - [Projektek (3. óra)](#projektek-3-óra)
+  - [Projektek](#projektek)
+    - [1. Számkitaláló Játék](#1-számkitaláló-játék)
+    - [2. Egyszerű Kalkulátor](#2-egyszerű-kalkulátor)
+    - [3. Egyszerű Jelszógenerátor](#3-egyszerű-jelszógenerátor)
+    - [4. Személyre Szabott Üdvözlés](#4-személyre-szabott-üdvözlés)
+    - [5. Páros vagy Páratlan Szám?](#5-páros-vagy-páratlan-szám)
+    - [6. Neptun Kód Generátor](#6-neptun-kód-generátor)
+    - [7. Változó Hosszúságú Jelszó Generátor](#7-változó-hosszúságú-jelszó-generátor)
+    - [8. Fibonacci Sorozat](#8-fibonacci-sorozat)
+  - [Összegzés](#összegzés)
+- [Projektek (3. óra)](#projektek-3-óra)
 
 ---
 
@@ -399,7 +402,7 @@ A véletlenszámok hasznosak játékokban, statisztikai elemzésekben és más t
 
 ---
 
-### Projektek (2. óra)
+## Projektek (2. óra)
 
 #### 1. óra ismétlése
 
@@ -428,7 +431,7 @@ Feltételes utasítások és logikai operátorok.
 Véletlen számok generálása Pythonban.
 
 
-### 5. Ciklusok
+### Ciklusok
 ```python
 '''
 A print függvény a megadott szöveg kiírása után sort emel, 
@@ -651,31 +654,16 @@ Példák:
 
 A második óra kis projektjeinek összeállításakor fontos, hogy a feladatok játékosak és érdekesek legyenek, miközben erősítik a hallgatók által az első órán tanult alapvető Python fogalmakat. Mivel a ciklusok és listák még nem kerültek bevezetésre, ezek a projektek főként a változók, matematikai műveletek, logikai kifejezések, adatbekérés, és véletlenszám-generálás köré épülnek.
 
-### 1. Feladat: Számkitaláló Játék
-**Leírás:** Ebben a játékban a program egy véletlenszámot generál 1 és 10 között, és a felhasználónak ki kell találnia ezt a számot.
+Persze, itt van a kiegészített szöveg minden projekthez, rövid leírással és mintakimenettel:
 
-**Megvalósítás:**
-1. A program generáljon egy véletlenszámot az `import random` és `random.randint()` függvények segítségével.
-2. Kérjen be egy számot a felhasználótól az `input()` függvény segítségével.
-3. Hasonlítsa össze a felhasználó által megadott számot a generált véletlenszámmal:
-   - Ha a számok egyeznek, írja ki, hogy "Gratulálok, eltaláltad!".
-   - Ha nem, írja ki, hogy "Sajnálom, próbáld újra!".
+---
+### Projektek
+#### 1. Számkitaláló Játék
 
-   
-**Példa kód:**
-```python
-import random
+**Leírás**:
+Ez a program egy egyszerű, szórakoztató játékot valósít meg, ahol a felhasználónak ki kell találnia a számítógép által véletlenszerűen generált számot 1 és 10 között. A program addig kéri a felhasználót, amíg el nem találja a számot, és visszajelzést ad minden próbálkozás után.
 
-szam = random.randint(1, 10)
-tipp = int(input("Találd ki a számot 1 és 10 között: "))
-
-if tipp == szam:
-    print("Gratulálok, eltaláltad!")
-else:
-    print("Sajnálom, próbáld újra! A szám a következő volt:", szam)
-```
-
-Észrevehetjük, hogy csak 1x találgathatunk, utána pedig leáll a programkódunk. Ahhoz, hogy addig probálhatunk amíg eltaláljuk a kitalált számot egy ciklust kell használnunk.
+**Példa kód**:
 
 ```python
 import random
@@ -685,26 +673,33 @@ tipp = None
 
 while tipp != szam:
     tipp = int(input("Találd ki a számot 1 és 10 között: "))
-    # Üzenet a felhasználónak ha eltalálta
     if tipp == szam:
         print("Gratulálok, eltaláltad!")
     else:
         print("Sajnálom, próbáld újra!")
 
 print(">> Program vége <<")
-
 ```
 
-### 2. Feladat: Egyszerű Kalkulátor
-**Leírás:** A program lehetővé teszi a felhasználónak, hogy két számot adjon meg, és válasszon egy műveletet (összeadás, kivonás, szorzás, osztás), amelyet végre szeretne hajtani.
+**Minta kimenet**:
 
-**Megvalósítás:**
-1. Kérje be a felhasználótól két számot.
-2. Kérje be a felhasználótól, hogy válasszon egy műveletet: `+`, `-`, `*`, vagy `/`.
-3. Végezze el a kiválasztott műveletet a két számmal.
-4. Írja ki az eredményt.
+```
+Találd ki a számot 1 és 10 között: 3
+Sajnálom, próbáld újra!
+Találd ki a számot 1 és 10 között: 7
+Gratulálok, eltaláltad!
+>> Program vége <<
+```
 
-**Példa kód:**
+---
+
+#### 2. Egyszerű Kalkulátor
+
+**Leírás**:
+Ez a kalkulátor program lehetővé teszi a felhasználó számára, hogy két szám között végezzen egyszerű matematikai műveleteket: összeadás, kivonás, szorzás és osztás. A program ellenőrzi az osztás esetén a nullával való osztást is.
+
+**Példa kód**:
+
 ```python
 szam1 = float(input("Add meg az első számot: "))
 szam2 = float(input("Add meg a második számot: "))
@@ -718,104 +713,195 @@ elif muvelet == '-':
 elif muvelet == '*':
     eredmeny = szam1 * szam2
 elif muvelet == '/':
-    eredmeny = szam1 / szam2
+    if szam2 != 0:
+        eredmeny = szam1 / szam2
+    else:
+        eredmeny = "Hiba! Nullával való osztás."
 else:
     eredmeny = "Ismeretlen művelet"
 
 print("Az eredmény:", eredmeny)
 ```
 
-### 3. Feladat: Egyszerű Jelszógenerátor
-**Leírás:** A program véletlenszerűen generál egy jelszót, amely tartalmaz betűket és számokat.
+**Minta kimenet**:
 
-**Megvalósítás:**
-1. A program előre meghatározott karakterkészletekből (például számok és néhány betű) válasszon véletlenszerű karaktereket.
-2. Generáljon egy 6 karakter hosszú jelszót.
-3. Írja ki a generált jelszót.
+```
+Add meg az első számot: 10
+Add meg a második számot: 5
+Milyen műveletet szeretnél elvégezni (+, -, *, /): *
+Az eredmény: 50.0
+```
 
-**Példa kód:**
+---
+
+#### 3. Egyszerű Jelszógenerátor
+
+**Leírás**:
+Ez a jelszógeneráló program véletlenszerűen generál egy rövid jelszót kisbetűkből és számokból. Használhatjuk az egyszerű véletlenszerű választást és a string manipulációt.
+
+**Példa kód**:
+
 ```python
 import random
 
 karakterek = "abcdefghijklmnopqrstuvwxyz0123456789"
 jelszo = ""
 
-for index in range(6):
+for _ in range(6):
     jelszo += random.choice(karakterek)
 
 print("A generált jelszó:", jelszo)
 ```
 
-### 4. Feladat: Személyre Szabott Üdvözlés
-**Leírás:** A program elkéri a felhasználó nevét és korát, majd egy üdvözlő üzenetet ír ki, ami tartalmazza ezeket az információkat.
+**Minta kimenet**:
 
-**Megvalósítás:**
-1. Kérje be a felhasználó nevét és korát az `input()` segítségével.
-2. Ha a felhasználó 18 évnél idősebb, írja ki, hogy "Üdvözlünk, [név]! Te már felnőtt vagy!".
-3. Ha 18 évnél fiatalabb, írja ki, hogy "Üdvözlünk, [név]! Még fiatal vagy, élvezd az életet!".
+```
+A generált jelszó: a5j8k2
+```
 
-**Példa kód:**
+---
+
+#### 4. Személyre Szabott Üdvözlés
+
+**Leírás**:
+Ez a program személyre szabott üdvözlést ad a felhasználó életkorának megfelelően. A program megkülönbözteti a felnőtt és fiatal felhasználókat, és üdvözli őket az életkoruk alapján.
+
+**Példa kód**:
+
 ```python
 nev = input("Add meg a neved: ")
 kor = int(input("Add meg a korod: "))
 
 if kor >= 18:
-    print("Üdvözlünk " , nev, "! Te már felnőtt vagy!")
+    print("Üdvözlünk", nev ,"! Te már felnőtt vagy!")
 else:
-    print("Üdvözlünk " , nev, "! Még fiatal vagy, élvezd az életet!")
+    print("Üdvözlünk", nev ,"! Még fiatal vagy, élvezd az életet!")
 ```
 
-### 5. Feladat: Páros vagy Páratlan Szám?
-**Leírás:** A program elkéri a felhasználótól egy számot, és megmondja, hogy a szám páros vagy páratlan.
+**Minta kimenet**:
 
-**Megvalósítás:**
-1. Kérje be a felhasználótól egy számot.
-2. Használja a maradékos osztás (`%`) műveletet, hogy ellenőrizze, a szám páros-e (ha a maradék 0).
-3. Írja ki, hogy a szám páros vagy páratlan.
+```
+Add meg a neved: Anna
+Add meg a korod: 22
+Üdvözlünk Anna! Te már felnőtt vagy!
+```
 
-**Példa kód:**
+---
+
+#### 5. Páros vagy Páratlan Szám?
+
+**Leírás**:
+Ez a program megállapítja, hogy egy megadott szám páros vagy páratlan. Egyszerű példát nyújt a modulus operátor használatára és a feltételes logika alkalmazására.
+
+**Példa kód**:
+
 ```python
 szam = int(input("Adj meg egy számot: "))
 
 if szam % 2 == 0:
-    print(f"A szám páros.")
+    print("A szám páros.")
 else:
-    print(f"A szám páratlan.")
+    print("A szám páratlan.")
 ```
 
-### 6. Feladat: Neptun Kód generátor
-**Leírás:** Random számgenerátorral létrehozunk neptun kódokat.
+**Minta kimenet**:
 
-**Megvalósítás:**
-1. Jelöljük ki, milyen számok és milyen betűk lehetnek.
-2. Használja a **`random`** csomag függvényeit.
-3. Írassa ki a generált neptun kódot.
+```
+Adj meg egy számot: 7
+A szám páratlan.
+```
 
-**Példa kód:**
+---
+
+#### 6. Neptun Kód Generátor
+
+**Leírás**:
+Ez a program véletlenszerű alfanumerikus kódot generál, amely lehet például egy diákazonosító. A kód generálása során nagybetűket és számokat használ, és hat karakterből áll.
+
+**Példa kód**:
+
 ```python
 import random
 
 karakterek = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"  # Nagybetűk és számok
 neptun_kod = "" 
 
-# Hat karaktert adunk hozzá egymás után
-for i in range(6):  # A ciklus hatszor fog lefutni
+for _ in range(6):  # Hat karaktert adunk hozzá egymás után
     veletlen_karakter = random.choice(karakterek)  # Kiválasztunk egy véletlen karaktert
     neptun_kod += veletlen_karakter  # Hozzáadjuk a kódhoz
 
 print("A generált Neptun-kód:", neptun_kod)
 ```
 
-### Összefoglalás:
-- **Számkitaláló Játék**: Gyakorolja a véletlenszám-generálást és a feltételes logikát.
-- **Egyszerű Kalkulátor**: Erősíti a matematikai műveletek és az adatbekérés használatát.
-- **Egyszerű Jelszógenerátor**: Bemutatja a véletlen karakterek használatát és a szövegkezelést.
-- **Személyre Szabott Üdvözlés**: Kombinálja az adatbekérést és a feltételes logikát személyre szabott üzenetek generálására.
-- **Páros vagy Páratlan Szám?**: Egyszerű, de hatékony módon mutatja be a maradékos osztást és az if-else szerkezetet.
+**Minta kimenet**:
 
-Ezek a projektek nemcsak szórakoztatóak, hanem segítenek elmélyíteni az első órán tanultakat, miközben bevezetik a hallgatókat a gyakorlati Python programozás világába.
+```
+A generált Neptun-kód: A4J7P2
+```
 
-### Projektek (3. óra)
+---
+
+#### 7. Változó Hosszúságú Jelszó Generátor
+
+**Leírás**:
+Ez a jelszógeneráló program lehetővé teszi a felhasználó számára, hogy megadja a jelszó kívánt hosszát. A program dinamikusan generálja a jelszót, figyelembe véve a felhasználó által megadott hosszúságot.
+
+**Példa kód**:
+
+```python
+import random
+import string
+
+def jelszo_generalo(hossz):
+    karakterek = string.ascii_letters + string.digits
+    jelszo = ''.join(random.choice(karakterek) for _ in range(hossz))
+    return jelszo
+
+hossz = int(input("Add meg a jelszó hosszát: "))
+print("A generált jelszó:", jelszo_generalo(hossz))
+```
+
+**Minta kimenet**:
+
+```
+Add meg a jelszó hosszát: 8
+A generált jelszó: vT3x9K1q
+```
+
+---
+
+#### 8. Fibonacci Sorozat
+
+**Leírás**:
+Ez a program generálja a Fibonacci sorozatot egy megadott hosszúságig. A program bemutatja a Fibonacci sorozat létrehozásának algoritmusát és a listakezelés alapjait.
+
+**Példa kód**:
+
+```python
+n = int(input("Add meg a Fibonacci sorozat hosszát: "))
+
+sorozat = [0, 1]
+while len(sorozat) < n:
+    sorozat.append(sorozat[-1] + sorozat[-2])
+
+print("A Fibonacci sorozat:", sorozat)
+```
+
+**Minta kimenet**:
+
+```
+Add meg a Fibonacci sorozat hosszát: 7
+A Fibonacci sorozat: [0, 1, 1, 2, 3, 5, 8]
+```
+
+---
+
+### Összegzés
+A bemutatott Python projektek széles spektrumot ölelnek fel a kezdők számára, a véletlenszámok generálásától és felhasználói bemenetek kezelésétől kezdve a matematikai műveletekig és jelszógenerálásig. Ezek a példák segítenek a Python alapvető fogalmainak megértésében és gyakorlásában, valamint az algoritmusok és programozási logika fejlesztésében.
+
+---
+
+## Projektek (3. óra)
 
 Az első és második óra tartalmának ismétlése és mélyebb projektek megvalósítása.
 

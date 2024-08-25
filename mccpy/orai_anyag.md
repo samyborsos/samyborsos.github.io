@@ -905,8 +905,7 @@ A bemutatott Python projektek széles spektrumot ölelnek fel a kezdők számár
 
 Az első és második óra tartalmának ismétlése és mélyebb projektek megvalósítása.
 
----
-
+---****
 
 
 <div style="text-align: center; margin-bottom: 20px; margin-top: 20px; font-family: Arial, sans-serif; font-size: 1.2em; line-height: 1.5; color: #333;">

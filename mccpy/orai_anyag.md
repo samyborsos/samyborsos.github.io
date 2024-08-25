@@ -908,7 +908,10 @@ Az első és második óra tartalmának ismétlése és mélyebb projektek megva
 ---
 
 
-Készítette: Borsos Samy & Herold Virág (2024)
-<div style="text-align: center;">
-<em>Készítette: xx & yy (2024)</em>
+
+<div style="text-align: center; margin-bottom: 20px; margin-top: 20px; font-family: Arial, sans-serif; font-size: 1.2em; line-height: 1.5; color: #333;">
+    <p style="margin: 0;">Készítette</p>
+    <p style="margin: 0; font-weight: bold;">Borsos Samy & Herold Virág</p>
+    <p style="margin: 0; font-style: italic;">2024</p>
 </div>
+

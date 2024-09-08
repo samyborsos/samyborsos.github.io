@@ -1,6 +1,7 @@
 ---
 layout: default
-title: "Home Page"
+title: "MCC.py Órai anyag"
+markdown: kramdown
 ---
 <body style="color: #1f2937; font-family: 'Inter', sans-serif">
     <div style="color: white;">

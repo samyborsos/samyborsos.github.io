@@ -1,8 +1,3 @@
----
-layout: default
-title: "MCC.py Órai anyag"
-markdown: kramdown
----
 <body style="color: #1f2937; font-family: 'Inter', sans-serif">
     <div style="color: white;">
         <div style="max-width: 1280px; margin: 0 auto; padding: 16px 32px; display: flex; justify-content: center; align-items: center;">

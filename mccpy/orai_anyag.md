@@ -1,3 +1,29 @@
+<body style="background-color: #f3f4f6; color: #1f2937; font-family: 'Inter', sans-serif">
+    <div style="background-color: #1e40af; color: white;">
+        <div style="max-width: 1280px; margin: 0 auto; padding: 16px 32px; display: flex; justify-content: center; align-items: center;">
+                <div>
+                                <img src="https://mcc.hu/images/mcc_logo.svg" alt="MCC Logo 1" style="height: 48px;">
+                </div>
+                <div>
+                                <div style="border-left: 2px solid #d1d5db; height: 48px; margin-left:40px;margin-right:40px"></div>
+                </div>
+                <div>
+                                <img src="https://mcc.hu/images/mcc_logo.svg" alt="MCC Logo 2" style="height: 48px;">
+                </div>
+        </div>
+    </div>
+    <!-- Hero szekció -->
+    <section style="background-color: #1e40af; color: white; padding: 64px 0;">
+        <div style="max-width: 1280px; margin: 0 auto; text-align: center;">
+            <p style="font-size: 2.25rem; font-weight: 700;">MCC.py Órai Anyag</p>
+            <p style="margin-top: 16px; font-size: 1.125rem;">Ez az oldal a MCC.py órai anyagának részletes leírását és gyakorlati feladatait tartalmazza. Az anyag célja, hogy bemutassa a Python programozás alapjait kezdők számára. Az oktatási anyag tartalmaz példákat, feladatokat és magyarázatokat a Python nyelv alapvető fogalmairól</p>
+        </div>
+    </section>
+
+</body>
+
+
+
 
 ## Tartalomjegyzék
 
@@ -882,3 +908,9 @@ Az első és második óra tartalmának ismétlése és mélyebb projektek megva
     <p style="margin: 0; font-style: italic;">2024</p>
 </div>
 
+<!-- Lábjegyzet -->
+<footer style="background-color: #1e40af; color: white; padding: 24px 0;">
+    <div style="max-width: 1280px; margin: 0 auto; text-align: center;">
+        <p>&copy; 2024 Mathias Corvinus Collegium. Minden jog fenntartva.</p>
+    </div>
+</footer>

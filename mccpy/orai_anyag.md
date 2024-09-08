@@ -84,7 +84,6 @@
     - [6. Neptun Kód Generátor](#6-neptun-kód-generátor)
     - [7. Változó Hosszúságú Jelszó Generátor](#7-változó-hosszúságú-jelszó-generátor)
     - [8. Fibonacci Sorozat](#8-fibonacci-sorozat)
-  - [Összegzés](#összegzés)
 
 ---
 
@@ -891,26 +890,14 @@ A Fibonacci sorozat: [0, 1, 1, 2, 3, 5, 8]
 
 ---
 
-### Összegzés
-A bemutatott Python projektek széles spektrumot ölelnek fel a kezdők számára, a véletlenszámok generálásától és felhasználói bemenetek kezelésétől kezdve a matematikai műveletekig és jelszógenerálásig. Ezek a példák segítenek a Python alapvető fogalmainak megértésében és gyakorlásában, valamint az algoritmusok és programozási logika fejlesztésében.
-
----
 
 
-Az első és második óra tartalmának ismétlése és mélyebb projektek megvalósítása.
-
----****
 
 
 <div style="text-align: center; margin-bottom: 20px; margin-top: 20px; font-family: Arial, sans-serif; font-size: 1.2em; line-height: 1.5; color: #333;">
     <p style="margin: 0;">Készítette</p>
     <p style="margin: 0; font-weight: bold;">Borsos Samy & Herold Virág</p>
     <p style="margin: 0; font-style: italic;">2024</p>
+    <p style="margin: 0; font-weight: bold;">MCC.py</p>
 </div>
 
-<!-- Lábjegyzet -->
-<footer style="background-color: #1e40af; color: white; padding: 24px 0;">
-    <div style="max-width: 1280px; margin: 0 auto; text-align: center;">
-        <p>&copy; 2024 Mathias Corvinus Collegium. Minden jog fenntartva.</p>
-    </div>
-</footer>

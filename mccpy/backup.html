@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subscription Form</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Define custom colors */
+        .bg-dark-blue {
+            background-color: #2c4355;
+        }
+
+        .text-dark-blue {
+            color: #2c4355;
+        }
+
+        .text-yellow {
+            color: #f8cf05;
+        }
+
+        .focus-border-yellow-200:focus {
+            border-color: #f8cf05;
+        }
+
+        .bg-gradient-custom {
+            background: linear-gradient(to right, #f8cf05, #907903);
+        }
+
+        .hover-bg-yellow-200:hover {
+            background-color: #f8cf05;
+        }
+
+        .bg-custom-blue {
+            background-color: #2c4355;
+        }
+
+        .hover-bg-custom-blue:hover {
+            background-color: #1e2a38;
+        }
+    </style>
+</head>
+
+<body class="bg-dark-blue flex items-center justify-center min-h-screen p-4">
+
+
+
+    <div class="relative py-6 sm:py-8 md:py-10 sm:max-w-lg md:max-w-xl sm:mx-4 md:mx-auto w-full">
+        <div class="absolute inset-0 bg-gradient-custom shadow-lg transform -rotate-6 rounded-3xl mx-2"></div>
+        <div class="relative px-4 py-6 bg-white shadow-lg rounded-3xl sm:p-8 md:p-10">
+            <div class="max-w-md mx-auto">
+                <div class="text-center">
+                    <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold text-yellow">MCC.PY</h1>
+                    <h3 class="text-lg sm:text-xl md:text-2xl mb-4 text-dark-blue">PROGRAMOZÁS KEZDŐKNEK</h3>
+                    <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold mt-6">Jelentkezési űrlap</h1>
+                </div>
+                <!-- Event Information -->
+                <div class="py-6 sm:py-8 text-base leading-6 space-y-4 text-gray-700 sm:text-lg sm:leading-7  text-center">
+                    <p><strong>Időpontok:</strong></p>
+                    <ul>
+                        <li>2024.09.18 - Szerda, 18:00</li>
+                        <li>2024.09.25 - Szerda, 18:00</li>
+                        <li>2024.10.02 - Szerda, 18:00</li>
+                    </ul>
+                </div>
+                <div id="spotsLeft"
+                    class="mt-6 p-6 border border-dark-blue rounded-lg bg-gray-50 shadow-md max-w-sm mx-auto">
+                    <span id="kp-spots" class="block text-xl font-semibold text-green-700 mb-2">KP: Loading...</span>
+                    <span id="ep-spots" class="block text-xl font-semibold text-blue-700">EP: Loading...</span>
+                </div>
+                <!-- Message when seats are full -->
+                <div id="full-message" class="hidden mt-6 p-6 bg-red-100 border border-red-400 text-red-700 rounded-lg">
+                    <p class="text-lg font-semibold">Sajnáljuk, de az összes hely betelt.</p>
+                </div>
+
+                
+
+                <div class="py-6 sm:py-8 text-base leading-6 space-y-4 text-gray-700 sm:text-lg sm:leading-7">
+                    <form method="post" id="sheetdb-form" class="space-y-6" action="https://sheetdb.io/api/v1/tohpi1ashchs9">
+                        <div class="relative">
+                            <input autocomplete="off" id="name" name="data[name]" type="text"
+                                class="peer placeholder-transparent h-12 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:border-yellow-200"
+                                placeholder="Name" required  />
+                            <label for="name"
+                                class="absolute left-0 -top-3 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3 peer-focus:text-gray-600 peer-focus:text-sm">Név</label>
+                        </div>
+
+                        <div class="relative">
+                            <input autocomplete="off" id="email" name="data[email]" type="email"
+                                class="peer placeholder-transparent h-12 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:border-yellow-200"
+                                placeholder="Email" required/>
+                            <label for="email"
+                                class="absolute left-0 -top-3 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3 peer-focus:text-gray-600 peer-focus:text-sm">Email</label>
+                        </div>
+
+                        <div class="relative">
+                            <select id="kepzes" name="data[kepzes]"
+                                class="peer h-12 w-full border-b-2 border-gray-300 text-gray-900 bg-transparent focus:outline-none focus:border-yellow-200"
+                                required autocomplete="off">
+                                <option value="" disabled selected>Válaszd ki a képzésedet!</option>
+                                <option value="KP">KP</option>
+                                <option value="EP">EP</option>
+                            </select>
+                            <label for="kepzes"
+                                class="absolute left-0 -top-3 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3 peer-focus:text-gray-600 peer-focus:text-sm">Képzés</label>
+                        </div>
+
+                        <div class="relative">
+                            <div>
+                                <button id="submitButton" type="submit"
+                                    class="w-full py-3 px-5 rounded-md bg-custom-blue text-white hover:bg-hover-custom-blue focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-custom-blue transition duration-150 ease-in-out">Jelentkezem!</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        var form = document.getElementById('sheetdb-form');
+        form.addEventListener("submit", e => {
+            e.preventDefault();
+            const formData = new FormData(document.getElementById("sheetdb-form"));
+            const name = formData.get('data[name]');
+            const thankYouUrl = `./thank-you.html?name=${encodeURIComponent(name)}`;
+
+            fetch(form.action, {
+                method: "POST",
+                body: formData,
+            }).then(response => response.json())
+                .then(() => {
+                    window.location.href = thankYouUrl;
+                });
+        });
+
+
+        document.addEventListener('DOMContentLoaded', () => {
+            // Replace 'YOUR_API_KEY' with your actual API key
+            const apiUrl = 'https://sheetdb.io/api/v1/tohpi1ashchs9';
+
+            async function updateSpots() {
+                try {
+                    const response = await fetch(apiUrl, {
+                        method: 'GET', // Use 'GET' if that's the required method
+                    });
+
+                    // Check if the response is okay
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! Status: ${response.status}`);
+                    }
+
+                    // Get the raw response text for debugging
+                    const responseText = await response.text();
+                    console.log('Raw response:', responseText); // Log the raw response
+
+                    // Attempt to parse JSON
+                    let data;
+                    try {
+                        data = JSON.parse(responseText);
+                    } catch (jsonError) {
+                        throw new Error('Failed to parse JSON: ' + jsonError.message);
+                    }
+
+                    console.log(data);  // Log the entire data object for inspection
+
+                    let kpCount = 0;
+                    let epCount = 0;
+
+                    // Inspect each entry to ensure it has the expected structure
+                    data.forEach(entry => {
+                        console.log(entry);  // Log each entry
+                        const kepzes = entry.kepzes;
+                        if (kepzes === 'KP') {
+                            kpCount++;
+                        } else if (kepzes === 'EP') {
+                            epCount++;
+                        }
+                    });
+
+                    // Check for element existence before modifying
+                    const kpSpots = document.getElementById('kp-spots');
+                    const epSpots = document.getElementById('ep-spots');
+                    const spotsLeft = document.getElementById('spotsLeft'); // Corrected ID
+                    const fullMessage = document.getElementById('full-message');
+                    const form = document.getElementById('sheetdb-form');
+                    const submitButton = document.getElementById('submitButton');
+                    const kepzesSelect = document.getElementById('kepzes');
+
+                    const kpAvailable = 8 - kpCount;
+                    const epAvailable = 8 - epCount;
+
+                    if (kpSpots) {
+                        if (kpAvailable <= 0) {
+                            kpSpots.innerHTML = '<span class="font-bold text-red-500">KP: Betelt!</span>';
+                        } else {
+                            kpSpots.innerHTML = `KP: Már csak <span class="font-bold text-yellow-500 text-xl">${kpAvailable}</span> hely maradt!`;
+                        }
+                    }
+
+                    if (epSpots) {
+                        if (epAvailable <= 0) {
+                            epSpots.innerHTML = '<span class="font-bold text-red-500">EP: Betelt!</span>';
+                        } else {
+                            epSpots.innerHTML = `EP: Már csak <span class="font-bold text-yellow-500 text-xl">${epAvailable}</span> hely maradt!`;
+                        }
+                    }
+
+                    if (fullMessage) {
+                        if (kpAvailable <= 0 && epAvailable <= 0) {
+                            // Both spots are full
+                            fullMessage.classList.remove('hidden');
+                            fullMessage.innerHTML = '<p class="text-lg font-semibold text-red-700 text-center">Sajnáljuk, de az összes KP és EP hely betelt.</p><br><p class="text-center text-white bg-green-500 text-xl">Jelentkezz Várólistára!</p>';
+                            if (spotsLeft) spotsLeft.classList.add('hidden');
+                            
+                            if (submitButton) submitButton.textContent = 'Jelentkezem a Várolistára!';
+
+                        } else if (kpAvailable <= 0) {
+                            // KP spots are full, but EP spots are available
+                            fullMessage.classList.add('hidden');
+                            if (spotsLeft) spotsLeft.classList.remove('hidden');
+                            if (kepzesSelect) {
+                                kepzesSelect.querySelector('option[value="KP"]').disabled = true;
+                                kepzesSelect.querySelector('option[value="EP"]').disabled = false;
+                            }
+
+                            if (submitButton) submitButton.disabled = false;
+                        } else if (epAvailable <= 0) {
+                            // EP spots are full, but KP spots are available
+                            fullMessage.classList.add('hidden');
+                            if (spotsLeft) spotsLeft.classList.remove('hidden');
+                            if (kepzesSelect) {
+                                kepzesSelect.querySelector('option[value="EP"]').disabled = true;
+                                kepzesSelect.querySelector('option[value="KP"]').disabled = false;
+                            }
+
+                            if (submitButton) submitButton.disabled = false;
+                        } else {
+                            // Both KP and EP spots are available
+                            fullMessage.classList.add('hidden');
+                            if (spotsLeft) spotsLeft.classList.remove('hidden');
+                            if (kepzesSelect) {
+                                kepzesSelect.querySelector('option[value="KP"]').disabled = false;
+                                kepzesSelect.querySelector('option[value="EP"]').disabled = false;
+                            }
+                            if (form) form.classList.remove('opacity-50');
+                            if (submitButton) submitButton.disabled = false;
+                        }
+                    }
+                } catch (error) {
+                    console.error('Error fetching data:', error);
+                    // Hide the spots if there's an error and avoid displaying a specific error message
+                    const kpSpots = document.getElementById('kp-spots');
+                    const epSpots = document.getElementById('ep-spots');
+                    if (kpSpots) kpSpots.textContent = 'KP: Error loading';
+                    if (epSpots) epSpots.textContent = 'EP: Error loading';
+                    // Hide spotsLeft if there's an error
+                    const spotsLeft = document.getElementById('spotsLeft'); // Corrected ID
+                    if (spotsLeft) spotsLeft.classList.add('hidden');
+                }
+            }
+
+
+            updateSpots();
+        });
+    </script>
+
+
+
+
+
+
+
+</body>
+
+</html>

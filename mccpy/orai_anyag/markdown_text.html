@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+</head>
+<body>
+    <div id="markdown-content">
+        # Hello World
+        This is a **Markdown** content.
+      </div>
+      <div id="html-content"></div>
+      
+      <script>
+        document.addEventListener("DOMContentLoaded", function() {
+          var markdownContent = document.getElementById('markdown-content').textContent;
+          var htmlContent = marked(markdownContent);
+          document.getElementById('html-content').innerHTML = htmlContent;
+        });
+      </script>
+      
+</body>
+</html>

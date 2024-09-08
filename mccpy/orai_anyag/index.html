@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MCC Weboldal Sablon</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+        html {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+    <!-- Fejléc -->
+    <header class="bg-blue-900 text-white">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="container mx-auto px-4 py-4 flex items-center space-x-6">
+                <!-- Első logo -->
+                <img src="https://mcc.hu/images/mcc_logo.svg" alt="MCC Logo 1" class="h-12">
+                
+                <!-- Függőleges vonal -->
+                <div class="border-l-2 border-gray-300 h-12"></div>
+                
+                <!-- Második logo -->
+                <img src="https://mcc.hu/images/mcc_logo.svg" alt="MCC Logo 2" class="h-12">
+            </div>
+            
+            <nav>
+                <ul class="flex space-x-6">
+                    <li><a href="#" class="hover:text-yellow-400">Kezdőlap</a></li>
+                    <li><a href="#" class="hover:text-yellow-400">Rólunk</a></li>
+                    <li><a href="#" class="hover:text-yellow-400">Programok</a></li>
+                    <li><a href="#" class="hover:text-yellow-400">Kapcsolat</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero szekció -->
+    <section class="bg-blue-900 text-white py-16">
+        <div class="container mx-auto text-center">
+            <h1 class="text-4xl font-bold">MCC.py Órai Anyag</h1>
+            <p class="mt-4 text-lg">Ez az oldal a MCC.py órai anyagának részletes leírását és gyakorlati feladatait tartalmazza. Az anyag célja, hogy bemutassa a Python programozás alapjait kezdők számára. Az oktatási anyag tartalmaz példákat, feladatokat és magyarázatokat a Python nyelv alapvető fogalmairól</p>
+        </div>
+    </section>
+
+
+
+
+    <!-- Lábjegyzet -->
+    <footer class="bg-blue-900 text-white py-6">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2024 Mathias Corvinus Collegium. Minden jog fenntartva.</p>
+        </div>
+    </footer>
+</body>
+</html>

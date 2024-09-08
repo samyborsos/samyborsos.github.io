@@ -27,22 +27,15 @@
     - [Adatbekérés](#adatbekérés)
     - [Műveletek](#műveletek)
     - [Maradékos osztás (modulo)](#maradékos-osztás-modulo)
+  - [Véletlen számok generálása pythonban](#véletlen-számok-generálása-pythonban)
+    - [Példa: 1 és 10 közötti véletlenszám generálása](#példa-1-és-10-közötti-véletlenszám-generálása)
+- [Python alapok v2 (2. óra)](#python-alapok-v2-2-óra)
+    - [Miért fontosak a véletlenszámok?](#miért-fontosak-a-véletlenszámok)
   - [Logikai kifejezések](#logikai-kifejezések)
     - [Feltételes utasítás (if)](#feltételes-utasítás-if)
     - [További feltételek (else)](#további-feltételek-else)
     - [Összehasonlító operátorok](#összehasonlító-operátorok)
     - [Logikai operátorok](#logikai-operátorok)
-  - [Véletlen számok generálása pythonban](#véletlen-számok-generálása-pythonban)
-    - [Példa: 1 és 10 közötti véletlenszám generálása](#példa-1-és-10-közötti-véletlenszám-generálása)
-    - [Miért fontosak a véletlenszámok?](#miért-fontosak-a-véletlenszámok)
-- [Projektek (2. óra)](#projektek-2-óra)
-    - [1. óra ismétlése](#1-óra-ismétlése)
-      - [Python alapok](#python-alapok)
-      - [Változók](#változók)
-      - [Indexelés](#indexelés-1)
-      - [Adatbekérés és műveletek](#adatbekérés-és-műveletek-1)
-      - [Logikai kifejezések](#logikai-kifejezések-1)
-      - [Véletlen számok generálása](#véletlen-számok-generálása)
   - [Ciklusok](#ciklusok)
     - [While ciklus](#while-ciklus)
     - [Ciklusok egymásba ágyazása](#ciklusok-egymásba-ágyazása)
@@ -56,7 +49,7 @@
     - [Listák bejárása](#listák-bejárása)
     - [Szövegek és listák](#szövegek-és-listák)
     - [Listák metódusai](#listák-metódusai)
-  - [Projektek](#projektek)
+- [Projektek (3. óra)](#projektek-3-óra)
     - [1. Számkitaláló Játék](#1-számkitaláló-játék)
     - [2. Egyszerű Kalkulátor](#2-egyszerű-kalkulátor)
     - [3. Egyszerű Jelszógenerátor](#3-egyszerű-jelszógenerátor)
@@ -66,7 +59,6 @@
     - [7. Változó Hosszúságú Jelszó Generátor](#7-változó-hosszúságú-jelszó-generátor)
     - [8. Fibonacci Sorozat](#8-fibonacci-sorozat)
   - [Összegzés](#összegzés)
-- [Projektek (3. óra)](#projektek-3-óra)
 
 ---
 
@@ -306,6 +298,23 @@ print(maradek)  # Eredmény: 1
 
 ---
 
+### Véletlen számok generálása pythonban
+
+#### Példa: 1 és 10 közötti véletlenszám generálása
+
+A **`random`** modul segítségével véletlen számokat generálhatunk:
+
+```python
+import random
+veletlen_szam = random.randint(1, 10)
+print(veletlen_szam)
+```
+
+## Python alapok v2 (2. óra)
+#### Miért fontosak a véletlenszámok?
+
+A véletlenszámok hasznosak játékokban, statisztikai elemzésekben és más területeken, ahol a véletlen események modellezése szükséges.
+
 ### Logikai kifejezések
 
 #### Feltételes utasítás (if)
@@ -384,51 +393,11 @@ else:
 
 ---
 
-### Véletlen számok generálása pythonban
 
-#### Példa: 1 és 10 közötti véletlenszám generálása
-
-A **`random`** modul segítségével véletlen számokat generálhatunk:
-
-```python
-import random
-veletlen_szam = random.randint(1, 10)
-print(veletlen_szam)
-```
-
-#### Miért fontosak a véletlenszámok?
-
-A véletlenszámok hasznosak játékokban, statisztikai elemzésekben és más területeken, ahol a véletlen események modellezése szükséges.
 
 ---
 
-## Projektek (2. óra)
 
-#### 1. óra ismétlése
-
-##### Python alapok
-
-A Python alapok ismerete az első óra tartalmát képezi.
-
-##### Változók
-
-A változók kezelése, típusok és indexelés.
-
-##### Indexelés
-
-Az indelés bemutatása és variációi.
-
-##### Adatbekérés és műveletek
-
-Adatbekérés és matematikai műveletek végrehajtása.
-
-##### Logikai kifejezések
-
-Feltételes utasítások és logikai operátorok.
-
-##### Véletlen számok generálása
-
-Véletlen számok generálása Pythonban.
 
 
 ### Ciklusok
@@ -657,7 +626,7 @@ A második óra kis projektjeinek összeállításakor fontos, hogy a feladatok 
 Persze, itt van a kiegészített szöveg minden projekthez, rövid leírással és mintakimenettel:
 
 ---
-### Projektek
+## Projektek (3. óra)
 #### 1. Számkitaláló Játék
 
 **Leírás**:
@@ -901,7 +870,6 @@ A bemutatott Python projektek széles spektrumot ölelnek fel a kezdők számár
 
 ---
 
-## Projektek (3. óra)
 
 Az első és második óra tartalmának ismétlése és mélyebb projektek megvalósítása.
 

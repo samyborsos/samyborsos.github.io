@@ -1,16 +1,24 @@
 <body style="color: #1f2937; font-family: 'Inter', sans-serif">
     <div style="color: white;">
-        <div style="max-width: 1280px; margin: 0 auto; padding: 16px 32px; display: flex; justify-content: center; align-items: flex-start;">
-        <div>
-            <img src="https://mcc.hu/images/mcc-logo-kek.svg" alt="MCC Logo 1" style="height: 100px;">
-        </div>
-        <div>
-            <div style="border-left: 2px solid #d1d5db; height: 100px; margin-left: 40px; margin-right: 40px;"></div>
-        </div>
-        <div>
-            <img src="/mccpy/mcc.py.png" alt="MCC Logo 2" style="height: 130px;" class="">
-        </div>
+    <div style="color: white;">
+    <div style="max-width: 1280px; margin: 0 auto; padding: 16px 32px; display: flex; justify-content: center; align-items: flex-start; flex-wrap: nowrap;">
+    <!-- <div style="display: flex; align-items: flex-start;">
+        <img src="https://mcc.hu/images/mcc-logo-kek.svg" alt="MCC Logo 1" style="max-width: 100%; height: auto; width: 200px;">
     </div>
+    <div style="display: flex; align-items: center;">
+        <div style="border-left: 2px solid #d1d5db; height: 100px; margin-left: 40px; margin-right: 40px;"></div>
+    </div> -->
+    <div style="display: flex; align-items: flex-start; padding: 0; margin: 0;">
+        <img src="/mccpy/mcc.py.svg" alt="MCC Logo 2" style="width: 600px; height: auto;">
+    </div>
+</div>
+
+
+</div>
+</div>
+
+
+</div>
     </div>
     <!-- Hero szekció -->
     <section style="padding: 64px 0;">
@@ -901,6 +909,6 @@ A Fibonacci sorozat: [0, 1, 1, 2, 3, 5, 8]
     <p style="margin: 0; font-weight: bold;">Borsos Samy & Herold Virág</p>
     <p style="margin: 0; font-style: italic;">2024</p>
     <p style="margin: 4; font-weight: bold;">MCC.py</p>
-    <p style="margin: 0; font-weight: bold;"><img src="/mccpy/mcc.py.png" height=150px></p>
+    <p style="margin: 0; font-weight: bold;"><img src="/mccpy/mcc.py.png" height=100px></p>
 </div>
 

@@ -27,7 +27,8 @@
 
 </body>
 
-<p><a src="https://youtu.be/rjGGpfTARDA">Thonny telepítése</a></p>
+
+[Thonny telepítése](https://youtu.be/rjGGpfTARDA)
 
 
 

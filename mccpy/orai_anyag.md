@@ -1,27 +1,28 @@
 <body style="color: #1f2937; font-family: 'Inter', sans-serif">
     <div style="color: white;">
-        <div style="max-width: 1280px; margin: 0 auto; padding: 16px 32px; display: flex; justify-content: center; align-items: center;">
-                <div>
-                                <img src="https://mcc.hu/images/mcc-logo-kek.svg" alt="MCC Logo 1" style="height: 100px;">
-                </div>
-                <div>
-                                <div style="border-left: 2px solid #d1d5db; height: 100px; margin-left:40px;margin-right:40px"></div>
-                </div>
-                <div>
-                                <img src="https://mcc.hu/images/mcc-logo-kek.svg" alt="MCC Logo 2" style="height: 100px;">
-                </div>
+        <div style="max-width: 1280px; margin: 0 auto; padding: 16px 32px; display: flex; justify-content: center; align-items: flex-start;">
+        <div>
+            <img src="https://mcc.hu/images/mcc-logo-kek.svg" alt="MCC Logo 1" style="height: 100px;">
         </div>
+        <div>
+            <div style="border-left: 2px solid #d1d5db; height: 100px; margin-left: 40px; margin-right: 40px;"></div>
+        </div>
+        <div>
+            <img src="/mccpy/mcc.py.png" alt="MCC Logo 2" style="height: 130px;" class="">
+        </div>
+    </div>
     </div>
     <!-- Hero szekció -->
     <section style="padding: 64px 0;">
         <div style="max-width: 1280px; margin: 0 auto; text-align: center;">
-            <p style="font-size: 2.25rem; font-weight: 700;">MCC.py Órai Anyag</p>
+            <p style="font-size: 2.25rem; font-weight: 700;">MCC.py órai anyag</p>
             <p style="margin-top: 16px; font-size: 1.125rem;">Ez az oldal a MCC.py órai anyagának részletes leírását és gyakorlati feladatait tartalmazza. Az anyag célja, hogy bemutassa a Python programozás alapjait kezdők számára. Az oktatási anyag tartalmaz példákat, feladatokat és magyarázatokat a Python nyelv alapvető fogalmairól</p>
         </div>
     </section>
 
 </body>
 
+<h1><a src="https://youtu.be/rjGGpfTARDA">Thonny telepítése</a></h1>
 
 
 
@@ -76,14 +77,14 @@
     - [Szövegek és listák](#szövegek-és-listák)
     - [Listák metódusai](#listák-metódusai)
 - [Projektek (3. óra)](#projektek-3-óra)
-    - [1. Számkitaláló Játék](#1-számkitaláló-játék)
-    - [2. Egyszerű Kalkulátor](#2-egyszerű-kalkulátor)
-    - [3. Egyszerű Jelszógenerátor](#3-egyszerű-jelszógenerátor)
-    - [4. Személyre Szabott Üdvözlés](#4-személyre-szabott-üdvözlés)
-    - [5. Páros vagy Páratlan Szám?](#5-páros-vagy-páratlan-szám)
-    - [6. Neptun Kód Generátor](#6-neptun-kód-generátor)
-    - [7. Változó Hosszúságú Jelszó Generátor](#7-változó-hosszúságú-jelszó-generátor)
-    - [8. Fibonacci Sorozat](#8-fibonacci-sorozat)
+    - [1. Számkitaláló játék](#1-számkitaláló-játék)
+    - [2. Egyszerű kalkulátor](#2-egyszerű-kalkulátor)
+    - [3. Egyszerű jelszógenerátor](#3-egyszerű-jelszógenerátor)
+    - [4. Személyre szabott üdvözlés](#4-személyre-szabott-üdvözlés)
+    - [5. Páros vagy páratlan szám?](#5-páros-vagy-páratlan-szám)
+    - [6. Neptun kód generátor](#6-neptun-kód-generátor)
+    - [7. Változó hosszúságú jelszó generátor](#7-változó-hosszúságú-jelszó-generátor)
+    - [8. Fibonacci sorozat](#8-fibonacci-sorozat)
 
 ---
 
@@ -334,6 +335,7 @@ import random
 veletlen_szam = random.randint(1, 10)
 print(veletlen_szam)
 ```
+<h1>Számkitalálós játék (Guess The Number Game)</h1>
 
 ## Python alapok v2 (2. óra)
 #### Miért fontosak a véletlenszámok?
@@ -652,7 +654,7 @@ Persze, itt van a kiegészített szöveg minden projekthez, rövid leírással �
 
 ---
 ## Projektek (3. óra)
-#### 1. Számkitaláló Játék
+#### 1. Számkitaláló játék
 
 **Leírás**:
 Ez a program egy egyszerű, szórakoztató játékot valósít meg, ahol a felhasználónak ki kell találnia a számítógép által véletlenszerűen generált számot 1 és 10 között. A program addig kéri a felhasználót, amíg el nem találja a számot, és visszajelzést ad minden próbálkozás után.
@@ -687,7 +689,7 @@ Gratulálok, eltaláltad!
 
 ---
 
-#### 2. Egyszerű Kalkulátor
+#### 2. Egyszerű kalkulátor
 
 **Leírás**:
 Ez a kalkulátor program lehetővé teszi a felhasználó számára, hogy két szám között végezzen egyszerű matematikai műveleteket: összeadás, kivonás, szorzás és osztás. A program ellenőrzi az osztás esetén a nullával való osztást is.
@@ -728,7 +730,7 @@ Az eredmény: 50.0
 
 ---
 
-#### 3. Egyszerű Jelszógenerátor
+#### 3. Egyszerű jelszógenerátor
 
 **Leírás**:
 Ez a jelszógeneráló program véletlenszerűen generál egy rövid jelszót kisbetűkből és számokból. Használhatjuk az egyszerű véletlenszerű választást és a string manipulációt.
@@ -755,7 +757,7 @@ A generált jelszó: a5j8k2
 
 ---
 
-#### 4. Személyre Szabott Üdvözlés
+#### 4. Személyre szabott üdvözlés
 
 **Leírás**:
 Ez a program személyre szabott üdvözlést ad a felhasználó életkorának megfelelően. A program megkülönbözteti a felnőtt és fiatal felhasználókat, és üdvözli őket az életkoruk alapján.
@@ -782,7 +784,7 @@ Add meg a korod: 22
 
 ---
 
-#### 5. Páros vagy Páratlan Szám?
+#### 5. Páros vagy páratlan szám?
 
 **Leírás**:
 Ez a program megállapítja, hogy egy megadott szám páros vagy páratlan. Egyszerű példát nyújt a modulus operátor használatára és a feltételes logika alkalmazására.
@@ -807,7 +809,7 @@ A szám páratlan.
 
 ---
 
-#### 6. Neptun Kód Generátor
+#### 6. Neptun kód generátor
 
 **Leírás**:
 Ez a program véletlenszerű alfanumerikus kódot generál, amely lehet például egy diákazonosító. A kód generálása során nagybetűket és számokat használ, és hat karakterből áll.
@@ -835,7 +837,7 @@ A generált Neptun-kód: A4J7P2
 
 ---
 
-#### 7. Változó Hosszúságú Jelszó Generátor
+#### 7. Változó hosszúságú jelszó generátor
 
 **Leírás**:
 Ez a jelszógeneráló program lehetővé teszi a felhasználó számára, hogy megadja a jelszó kívánt hosszát. A program dinamikusan generálja a jelszót, figyelembe véve a felhasználó által megadott hosszúságot.
@@ -864,7 +866,7 @@ A generált jelszó: vT3x9K1q
 
 ---
 
-#### 8. Fibonacci Sorozat
+#### 8. Fibonacci sorozat
 
 **Leírás**:
 Ez a program generálja a Fibonacci sorozatot egy megadott hosszúságig. A program bemutatja a Fibonacci sorozat létrehozásának algoritmusát és a listakezelés alapjait.
@@ -898,6 +900,7 @@ A Fibonacci sorozat: [0, 1, 1, 2, 3, 5, 8]
     <p style="margin: 0;">Készítette</p>
     <p style="margin: 0; font-weight: bold;">Borsos Samy & Herold Virág</p>
     <p style="margin: 0; font-style: italic;">2024</p>
-    <p style="margin: 0; font-weight: bold;">MCC.py</p>
+    <p style="margin: 4; font-weight: bold;">MCC.py</p>
+    <p style="margin: 0; font-weight: bold;"><img src="/mccpy/mcc.py.png" height=150px></p>
 </div>
 

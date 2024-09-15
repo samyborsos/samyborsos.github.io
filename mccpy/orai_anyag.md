@@ -19,16 +19,15 @@
 </div>
     </div>
     <!-- Hero szekció -->
-    <section style="padding: 64px 0;">
+    <section style="padding: 0px 0;">
         <div style="max-width: 1280px; margin: 0 auto; text-align: center;">
             <p style="font-size: 2.25rem; font-weight: 700;">MCC.py órai anyag</p>
-            <p style="margin-top: 16px; font-size: 1.125rem;">Ez az oldal a MCC.py órai anyagának részletes leírását és gyakorlati feladatait tartalmazza. Az anyag célja, hogy bemutassa a Python programozás alapjait kezdők számára. Az oktatási anyag tartalmaz példákat, feladatokat és magyarázatokat a Python nyelv alapvető fogalmairól</p>
         </div>
     </section>
 
 </body>
 
-<h1><a src="https://youtu.be/rjGGpfTARDA">Thonny telepítése</a></h1>
+<p><a src="https://youtu.be/rjGGpfTARDA">Thonny telepítése</a></p>
 
 
 

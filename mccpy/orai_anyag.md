@@ -9,7 +9,7 @@
         <div style="border-left: 2px solid #d1d5db; height: 100px; margin-left: 40px; margin-right: 40px;"></div>
     </div> -->
     <div style="display: flex; align-items: flex-start; padding: 0; margin: 0;">
-        <img src="/mccpy/mcc.py.svg" alt="MCC Logo 2" style="width: 600px; height: auto;">
+        <img src="/mccpy/mccpy.svg" alt="MCC Logo 2" style="width: 600px; height: auto;">
     </div>
 </div>
 
@@ -907,6 +907,6 @@ A Fibonacci sorozat: [0, 1, 1, 2, 3, 5, 8]
     <p style="margin: 0; font-weight: bold;">Borsos Samy & Herold Virág</p>
     <p style="margin: 0; font-style: italic;">2024</p>
     <p style="margin: 4; font-weight: bold;">MCC.py</p>
-    <p style="margin: 0; font-weight: bold;"><img src="/mccpy/mcc.py.png" height=100px></p>
+    <p style="margin: 0; font-weight: bold;"><img src="/mccpy/mccpy.svg" height=100px></p>
 </div>
 

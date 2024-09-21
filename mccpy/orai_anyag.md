@@ -214,7 +214,7 @@ Adatbekéréshez használjuk a **`input()`** függvényt:
 
 ```python
 nev = input("Hogy hívnak?")
-print("Üdvözöllek, " + nev)
+print("Üdvözöllek,", nev)
 ```
 
 Az **`input()`** függvény a felhasználótól kér be adatot és az eredmény sztringként tárolódik.
@@ -227,7 +227,7 @@ Matematikai műveleteket végezhetünk a felhasználó által megadott számokon
 szam1 = int(input("Adj meg egy számot: "))
 szam2 = int(input("Adj meg egy másik számot: "))
 eredmeny = szam1 + szam2
-print("A két szám összege: " + str(eredmeny))
+print("A két szám összege: ", eredmeny))
 ```
 
 #### Maradékos osztás (modulo)

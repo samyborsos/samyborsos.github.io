@@ -1,3 +1,5 @@
+
+
 <body style="color: #1f2937; font-family: 'Inter', sans-serif">
     <div style="color: white;">
     <div style="color: white;">
@@ -48,14 +50,6 @@
   - [Változók (tárolás és hivatkozás)](#változók-tárolás-és-hivatkozás)
     - [Típusok](#típusok)
     - [Átalakítás](#átalakítás)
-  - [Indexelés](#indexelés)
-    - [Mi az az indexelés?](#mi-az-az-indexelés)
-    - [Példa: a `Python` szó](#példa-a-python-szó)
-    - [Hogyan használjuk az indexelést?](#hogyan-használjuk-az-indexelést)
-    - [Több betű kiválasztása](#több-betű-kiválasztása)
-    - [Negatív indexelés](#negatív-indexelés)
-    - [Több betű kiválasztása negatív indexeléssel](#több-betű-kiválasztása-negatív-indexeléssel)
-    - [Összefoglalás](#összefoglalás)
   - [Adatbekérés és műveletek](#adatbekérés-és-műveletek)
     - [Adatbekérés](#adatbekérés)
     - [Műveletek](#műveletek)
@@ -211,89 +205,6 @@ tizedes = float('2.5')
 szam_sztring = str(100)
 ```
 
-### Indexelés
-
-#### Mi az az indexelés?
-
-Az indexelés a sztringek és listák elemeinek elérését jelenti. Az indexek 0-tól kezdődnek, például:
-
-```python
-szoveg = "Python"
-print(szoveg[0])  # Eredmény: P
-```
-
-#### Példa: a `Python` szó
-
-A `Python` szó karaktereit indexeléssel érhetjük el:
-
-- `P` a 0. index
-- `y` az 1. index
-- `t` a 2. index
-- És így tovább
-
-
-```
-P    y    t    h    o    n
-↑    ↑    ↑    ↑    ↑    ↑ 
-0    1    2    3    4    5
-```
-#### Hogyan használjuk az indexelést?
-
-Az indexelést arra használhatjuk, hogy egy sztring bármelyik karakterét elérjük:
-
-```python
-szoveg = "Python"
-print(szoveg[0])  # P
-print(szoveg[2])  # t
-```
-
-#### Több betű kiválasztása
-
-Több karakter kiválasztásához szögletes zárójeleket használunk, például:
-
-```python
-szoveg = "Python"
-print(szoveg[1:4])  # yth
-```
-
-Itt a karakterek az 1-es indexről kezdődnek és a 4-es indexig tartanak, a 4-es indexet nem tartalmazza.
-
-#### Negatív indexelés
-
-Negatív indexekkel visszafelé indexelhetünk:
-
-```
- P    y    t    h    o    n
- ↑    ↑    ↑    ↑    ↑    ↑ 
--6   -5   -4   -3   -2   -1
-```
-
-```python
-szoveg = "Python"
-print(szoveg[-1])  # n
-print(szoveg[-3])  # h
-```
-
-A -1 az utolsó karaktert jelöli, -2 az utolsó előtti karaktert, és így tovább.
-
-#### Több betű kiválasztása negatív indexeléssel
-
-Több karakter kiválasztása negatív indexeléssel:
-
-```python
-szoveg = "Python"
-print(szoveg[-5:-2])  # tho
-```
-
-#### Összefoglalás
-
-- **Változók:** Tárolnak értékeket és hivatkozhatunk rájuk a nevek segítségével.
-- **Típusok:** `int`, `string`, `float`, `boolean`.
-- **Átalakítás:** Típusok közötti konvertálás.
-- **Indexelés:** Karakterek elérése egy sztringben.
-- **Negatív indexelés:** Karakterek visszafelé történő elérése.
-
----
 
 ### Adatbekérés és műveletek
 
@@ -341,8 +252,9 @@ import random
 veletlen_szam = random.randint(1, 10)
 print(veletlen_szam)
 ```
-<h1>Számkitalálós játék (Guess The Number Game)</h1>
 
+
+<div hidden>
 ## Python alapok v2 (2. óra)
 #### Miért fontosak a véletlenszámok?
 
@@ -397,7 +309,7 @@ A dupla egyenlőség jellel (**==**) össze lehet hasonlítani 2 értéket.
 ```python
 engedely = True
 
-if szam == True:
+if engedely == True:
   print("Kaptál engedélyt, ezért mehetsz nyaralni!")
 else:
     print("Nem kaptál engedélyt :(")
@@ -659,7 +571,9 @@ A második óra kis projektjeinek összeállításakor fontos, hogy a feladatok 
 Persze, itt van a kiegészített szöveg minden projekthez, rövid leírással és mintakimenettel:
 
 ---
+
 ## Projektek (3. óra)
+
 #### 1. Számkitaláló játék
 
 **Leírás**:
@@ -898,8 +812,7 @@ A Fibonacci sorozat: [0, 1, 1, 2, 3, 5, 8]
 
 ---
 
-
-
+</div>
 
 
 <div style="text-align: center; margin-bottom: 20px; margin-top: 20px; font-family: Arial, sans-serif; font-size: 1.2em; line-height: 1.5; color: #333;">
@@ -909,4 +822,5 @@ A Fibonacci sorozat: [0, 1, 1, 2, 3, 5, 8]
     <p style="margin: 4; font-weight: bold;">MCC.py</p>
     <p style="margin: 0; font-weight: bold;"><img src="/mccpy/mccpy.svg" height=100px></p>
 </div>
+
 

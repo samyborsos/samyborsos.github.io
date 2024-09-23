@@ -177,7 +177,7 @@ A programozás során változókra van szükségünk, amelyeket úgy kell elkép
 x = 5
 ```
 
-Innét kezdve az `x` változó értéke 5 lesz. A változóknak bármilyen nevet adhatunk, de nem kezdődhet számmal és nem tartalmazhat ékezetes betűket. Az ékezetes karakterek és különleges karakterek is használhatók, mint például `-` vagy `_`.
+Innét kezdve az `x` változó értéke 5 lesz. A változóknak bármilyen nevet adhatunk, de nem kezdődhet számmal és nem tartalmazhat ékezetes betűket. Az ékezetes karakterek és különleges karakterek nem lehet használni, de léteznek kivételek mint például `-` vagy `_`.
 
 #### Típusok
 
@@ -196,9 +196,7 @@ A Pythonban a típusok közötti átalakításhoz használhatjuk az átalakító
 # Sztring -> Szám
 szam = int('17')
 
-# Sztring -> T
-
-izedes
+# Sztring -> Tizedes
 tizedes = float('2.5')
 
 # Szám -> Sztring
@@ -227,7 +225,7 @@ Matematikai műveleteket végezhetünk a felhasználó által megadott számokon
 szam1 = int(input("Adj meg egy számot: "))
 szam2 = int(input("Adj meg egy másik számot: "))
 eredmeny = szam1 + szam2
-print("A két szám összege: ", eredmeny))
+print("A két szám összege: ", eredmeny)
 ```
 
 #### Maradékos osztás (modulo)

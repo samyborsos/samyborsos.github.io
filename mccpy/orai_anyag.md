@@ -199,10 +199,10 @@ szam = int('17')
 # Sztring -> Tizedes
 tizedes = float('2.5')
 
+
 # Szám -> Sztring
 szam_sztring = str(100)
 ```
-
 
 ### Adatbekérés és műveletek
 
@@ -225,6 +225,7 @@ Matematikai műveleteket végezhetünk a felhasználó által megadott számokon
 szam1 = int(input("Adj meg egy számot: "))
 szam2 = int(input("Adj meg egy másik számot: "))
 eredmeny = szam1 + szam2
+print("A két szám összege: ", eredmeny)
 print("A két szám összege: ", eredmeny)
 ```
 

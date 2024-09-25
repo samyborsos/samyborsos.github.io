@@ -253,7 +253,7 @@ print(veletlen_szam)
 ```
 
 
-<div hidden>
+
 ## Python alapok v2 (2. óra)
 #### Miért fontosak a véletlenszámok?
 
@@ -570,6 +570,7 @@ A második óra kis projektjeinek összeállításakor fontos, hogy a feladatok 
 Persze, itt van a kiegészített szöveg minden projekthez, rövid leírással és mintakimenettel:
 
 ---
+<div hidden>
 
 ## Projektek (3. óra)
 

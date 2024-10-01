@@ -66,16 +66,6 @@
   - [Ciklusok](#ciklusok)
     - [While ciklus](#while-ciklus)
     - [Ciklusok egymásba ágyazása](#ciklusok-egymásba-ágyazása)
-  - [Listák](#listák)
-    - [Listák létrehozása és kiíratása](#listák-létrehozása-és-kiíratása)
-    - [Lista elemeinek összefűzése](#lista-elemeinek-összefűzése)
-    - [A lista hossza](#a-lista-hossza)
-    - [Lista elemek elérése indexekkel](#lista-elemek-elérése-indexekkel)
-    - [Részletek a listából: Szeletek](#részletek-a-listából-szeletek)
-    - [Utolsó elem elérése](#utolsó-elem-elérése)
-    - [Listák bejárása](#listák-bejárása)
-    - [Szövegek és listák](#szövegek-és-listák)
-    - [Listák metódusai](#listák-metódusai)
 - [Projektek (3. óra)](#projektek-3-óra)
     - [1. Számkitaláló játék](#1-számkitaláló-játék)
     - [2. Egyszerű kalkulátor](#2-egyszerű-kalkulátor)
@@ -85,6 +75,7 @@
     - [6. Neptun kód generátor](#6-neptun-kód-generátor)
     - [7. Változó hosszúságú jelszó generátor](#7-változó-hosszúságú-jelszó-generátor)
     - [8. Fibonacci sorozat](#8-fibonacci-sorozat)
+    - [9. Kő, Papír, Olló](#9-kő-papír-olló)
 
 ---
 
@@ -403,174 +394,6 @@ Ez a program egy 3x5-as rácsot ír ki. Az első ciklus végigmegy a sorokon, a 
 
 ---
 
-### Listák
-
-A listák kulcsfontosságúak a programozásban, mivel lehetővé teszik, hogy több különböző elemet (például szavakat, számokat) egyetlen csoportban, vagyis egy listában tároljunk. A Pythonban listát úgy hozhatunk létre, hogy az elemeket szögletes zárójelek [ ] közé helyezzük, és vesszővel választjuk el őket egymástól. 
-
-Képzeljük el, mintha különféle szavakat **`(például: 'január', 'február', 'március', 'április')`** egy nagyobb dobozba (a **`honapok`** nevű listába) gyűjtenénk össze.
-
-#### Listák létrehozása és kiíratása
-
-Egy lista létrehozása egyszerű:
-
-```python
-honapok = ['január', 'február', 'március', 'április']
-```
-
-Ez a lista négy hónap nevét tartalmazza. Kiírathatjuk a listát a `print()` függvénnyel:
-
-```python
-print(honapok)
-```
-
-Ez a parancs kiírja a teljes listát, vagyis az összes hónapot.
-
-#### Lista elemeinek összefűzése
-
-A `join()` metódussal a lista elemeit egy sztringgé fűzhetjük össze, egy megadott elválasztó karakterrel tagolva:
-
-```python
-print(', '.join(honapok))
-```
-
-Ez a parancs egy szöveggé fűzi össze a hónapokat, vesszővel és szóközzel elválasztva őket: `január, február, március, április`.
-
-#### A lista hossza
-
-A `len()` függvénnyel megtudhatjuk, hány elem van a listában:
-
-```python
-print(len(honapok))
-```
-
-Ez kiírja, hogy a lista négy elemet tartalmaz.
-
-#### Lista elemek elérése indexekkel
-
-A listák elemeit az indexük alapján érhetjük el. Az indexek 0-tól kezdődnek, így az első elem indexe 0:
-
-```python
-print(honapok[0])
-```
-
-Ez kiírja az első elemet, azaz `január`-t.
-
-Az utolsó elem indexe pedig 3 lesz, mivel összesen négy elem van a listában:
-
-```python
-print(honapok[3])
-```
-
-Ez kiírja az utolsó elemet, azaz `április`-t.
-
-**Fontos:** Ha megpróbálnánk egy olyan indexet használni, ami nem létezik a listában, például a 4-es indexet, akkor hibát kapnánk, mert a listában csak négy elem van, és az utolsó elem indexe 3.
-
-#### Részletek a listából: Szeletek
-
-A listából kiválaszthatunk bizonyos elemeket is, úgynevezett "szeletek" használatával:
-
-- Az 1-es és 2-es indexű elemek kiíratása:
-
-    ```python
-    print(honapok[1:3])
-    ```
-
-    Ez kiírja `február`-t és `március`-t.
-
-- Az elejétől a 2-es indexű elemmel bezárólag:
-
-    ```python
-    print(honapok[:3])
-    ```
-
-    Ez kiírja `január`, `február` és `március` hónapokat.
-
-- A 2-es indexű elemtől a végéig:
-
-    ```python
-    print(honapok[2:])
-    ```
-
-    Ez kiírja `március`-t és `április`-t.
-
-#### Utolsó elem elérése
-
-A listákban az utolsó elemet is könnyen elérhetjük, ha negatív indexet használunk:
-
-```python
-print(honapok[-1])
-```
-
-Ez kiírja az utolsó elemet, azaz `április`-t.
-
-Ezek az alapvető műveletek segítenek abban, hogy hatékonyan tudj dolgozni a listákkal, és különböző módokon érhesd el az elemeket a programjaidban.
-#### Listák bejárása
-
-A lista bejárása azt jelenti, hogy minden elemet sorban megvizsgálunk. Ezt ciklus segítségével tehetjük meg. Például:
-
-```python
-for gyumolcs in gyumolcsok:
-    print(gyumolcs)
-```
-
-Ez a program kiírja az összes gyümölcsöt a listából: "alma", "banán", "cseresznye".
-
-#### Szövegek és listák
-
-A szövegek is tekinthetők egyfajta listának, ahol minden egyes karakter egy elem. Ezért ugyanúgy bejárhatjuk őket, mint a listákat:
-
-```python
-szoveg = "Python"
-for betu in szoveg:
-    print(betu)
-```
-
-Ez kiírja a "Python" szó minden egyes betűjét külön sorban.
-
-#### Listák metódusai
-
-A listáknak vannak speciális "metódusai", amelyekkel műveleteket végezhetünk rajtuk. Például:
-
-- **`append()`**: Új elemet ad a lista végéhez.
-
-```python
-gyumolcsok.append("dinnye")
-print(gyumolcsok)
-```
-
-Ez hozzáadja a "dinnye" szót a lista végéhez.
-
-- **`remove()`**: Eltávolít egy adott elemet a listából.
-
-```python
-gyumolcsok.remove("banán")
-print(gyumolcsok)
-```
-
-Ez eltávolítja a "banán"-t a listából.
-
-
-Ez a **for** ciklus kiírja az összes számot a listából.
-
-A **while** ciklus hasonló feladatot tud végrehajtani, de rugalmasabban kezelheti a feltételeket:
-
-```python
-i = 0
-while i < len(szamok):
-    print(szamok[i])
-    i += 1
-```
-
-Ez is kiírja az összes számot, de egy **while** ciklussal, amely addig fut, amíg az index (i) kisebb, mint a listában lévő elemek száma.
-
-Példák:
-
-A második óra kis projektjeinek összeállításakor fontos, hogy a feladatok játékosak és érdekesek legyenek, miközben erősítik a hallgatók által az első órán tanult alapvető Python fogalmakat. Mivel a ciklusok és listák még nem kerültek bevezetésre, ezek a projektek főként a változók, matematikai műveletek, logikai kifejezések, adatbekérés, és véletlenszám-generálás köré épülnek.
-
-Persze, itt van a kiegészített szöveg minden projekthez, rövid leírással és mintakimenettel:
-
----
-<div hidden>
 
 ## Projektek (3. óra)
 
@@ -810,10 +633,45 @@ Add meg a Fibonacci sorozat hosszát: 7
 A Fibonacci sorozat: [0, 1, 1, 2, 3, 5, 8]
 ```
 
+#### 9. Kő, Papír, Olló
+
+```python
+import random
+
+print("Üdv a Kő, Papír, Olló játékban!")
+
+# A játék addig fut, amíg a játékos játszani akar
+while True:
+    lehetosegek = ('kő', 'papír', 'olló')
+    gep_valasztasa = random.choice(lehetosegek)  # A számítógép véletlenszerűen választ
+    jatekos_valasztasa = input("Válassz: kő, papír vagy olló? ")  # A játékos választ
+
+    print("A számítógép választása:", gep_valasztasa)
+    
+    # Döntés, ki nyert
+    if jatekos_valasztasa == gep_valasztasa:
+        print("Döntetlen!")
+    if (jatekos_valasztasa == 'kő' and gep_valasztasa == 'olló') or \
+         (jatekos_valasztasa == 'olló' and gep_valasztasa == 'papír') or \
+         (jatekos_valasztasa == 'papír' and gep_valasztasa == 'kő'):
+        print("Nyertél!")
+    else:
+        print("Vesztettél!")
+    
+    # Kérdezzük meg a játékost, hogy akar-e újra játszani
+    ujra_jatek = input("Szeretnél újra játszani? (igen/nem): ")
+    if ujra_jatek != 'igen':
+        print("Köszönöm a játékot! Viszlát!")
+        break
+```
+
 ---
 
 </div>
 
+<div style="text-align: center; margin-bottom: 20px; margin-top: 20px; font-family: Arial, sans-serif; font-size: 1.2em; line-height: 1.5; color: #333;">
+<img src="./QRCode for MCC.py visszajelzési kérdőív.png">
+</div>
 
 <div style="text-align: center; margin-bottom: 20px; margin-top: 20px; font-family: Arial, sans-serif; font-size: 1.2em; line-height: 1.5; color: #333;">
     <p style="margin: 0;">Készítette</p>

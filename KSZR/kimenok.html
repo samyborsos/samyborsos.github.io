@@ -96,9 +96,16 @@
 <body class="bg-gray-100">
     <div class="flex min-h-screen">
         <!-- Sidebar -->
-        <div class="sidebar fixed top-0 left-0 h-full w-64 bg-szeFoszin1 transition-transform duration-300 transform -translate-x-full lg:translate-x-0 overflow-y-auto" id="sidebar">
-            <div class="mb-4">
-                <img src="https://static.wixstatic.com/media/a64cda_1b6e4310f40343f4ab177e4f7674d6e3~mv2.png" alt="Logo" class="w-40 h-auto mx-auto">
+        <div class="sidebar fixed top-0 left-0 h-full w-full lg:w-64  bg-szeFoszin1 transition-transform duration-300 transform -translate-x-full lg:translate-x-0 overflow-y-auto" id="sidebar">
+            <div class="mb-4 flex items-center justify-around">
+                <img src="https://static.wixstatic.com/media/a64cda_1b6e4310f40343f4ab177e4f7674d6e3~mv2.png" alt="Logo" class="w-40 h-auto">
+                <div id="hamburger" onclick="toggleSidebar()" class="lg:hidden">
+                    
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="white" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M21 16.811c0 .864-.933 1.406-1.683.977l-7.108-4.061a1.125 1.125 0 0 1 0-1.954l7.108-4.061A1.125 1.125 0 0 1 21 8.689v8.122ZM11.25 16.811c0 .864-.933 1.406-1.683.977l-7.108-4.061a1.125 1.125 0 0 1 0-1.954l7.108-4.061a1.125 1.125 0 0 1 1.683.977v8.122Z" />
+                      </svg>
+                      
+                </div>
             </div>
             <nav class="text-white p-4" role="navigation">
                 <ul class="flex flex-col space-y-2">
@@ -324,7 +331,7 @@
             </div>
             <div class="flex flex-col mb-4">
                 <label for="request-date" class="font-semibold">Igénylés időpontja:</label>
-                <input type="datetime-local" id="request-date" class="border rounded p-2 bg-gray-100" required readonly value="2024-10-27T20:00">
+                <input type="datetime-local" id="request-date" class="border rounded p-2 bg-gray-100" required readonly value="2024-10-27T20:24">
             </div>
             <div class="flex flex-col mb-4">
                 <label for="outing-title" class="font-semibold">Kimenő rövid megnevezése:</label>

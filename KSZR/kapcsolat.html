@@ -21,11 +21,10 @@
         }
     </script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css.html" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOMvWz0z8Qk8JYVxBZT2F5MdLw0MS3XaK9dYmoC" crossorigin="anonymous">    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css.html" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOMvWz0z8Qk8JYVxBZT2F5MdLw0MS3XaK9dYmoC" crossorigin="anonymous">
     <link href="https://unpkg.com/heroicons@1.0.6/dist/heroicons.min.css.html" rel="stylesheet">
-
-
     <link rel="icon" type="image/svg+xml" href="https://static.wixstatic.com/media/a64cda_74704ce89b8b4e6eb850accaeeee1a93%7Emv2.png/v1/fill/w_192%2Ch_192%2Clg_1%2Cusm_0.66_1.00_0.01/a64cda_74704ce89b8b4e6eb850accaeeee1a93%7Emv2.png.html">
+
     <style>
         .dropdown {
             position: relative;
@@ -92,42 +91,36 @@
             /* Show options when dropdown is open */
         }
     </style>
-
 </head>
 
 <body class="bg-gray-100">
     <div class="flex min-h-screen">
         <!-- Sidebar -->
-        <div class="bg-szeFoszin1 text-white p-4 w-64">
+        <div class="sidebar fixed top-0 left-0 h-full w-64 bg-szeFoszin1 transition-transform duration-300 transform -translate-x-full lg:translate-x-0 overflow-y-auto" id="sidebar">
             <div class="mb-4">
-                <img src="https://static.wixstatic.com/media/a64cda_1b6e4310f40343f4ab177e4f7674d6e3~mv2.png" alt="Logo"
-                    class="w-40 h-auto mx-auto">
+                <img src="https://static.wixstatic.com/media/a64cda_1b6e4310f40343f4ab177e4f7674d6e3~mv2.png" alt="Logo" class="w-40 h-auto mx-auto">
             </div>
-            <nav class="text-white p-4 w-60" role="navigation">
+            <nav class="text-white p-4" role="navigation">
                 <ul class="flex flex-col space-y-2">
-                    <li>
-                        <a class="hover:bg-szeFoszin2 block my-1 py-1 pl-1 text-lg font-bold  rounded-md"
+                    <li><a class="hover:bg-szeFoszin2 block my-1 py-1 pl-1 text-lg font-bold  rounded-md"
     aria-current="false"
     href="./dashboard.html"
 >Főoldal </a>
 
-                    </li>
+</li>
                     <hr>
-                
                     <li><a class="hover:bg-szeFoszin2 block my-1 py-1 pl-1 text-lg font-bold  rounded-md"
     aria-current="false"
     href="./szobafoglalas.html"
 >Szobafoglalás </a>
 
 </li>
-                
                     <li><a class="hover:bg-szeFoszin2 block my-1 py-1 pl-1 text-lg font-bold  rounded-md"
     aria-current="false"
     href="./szobacsere.html"
 >Szobacsere kérelem </a>
 
 </li>
-                
                     <li><a class="hover:bg-szeFoszin2 block my-1 py-1 pl-1 text-lg font-bold  rounded-md"
     aria-current="false"
     href="./penzugyek.html"
@@ -135,14 +128,12 @@
 
 </li>
                     <hr>
-                
                     <li><a class="hover:bg-szeFoszin2 block my-1 py-1 pl-1 text-lg font-bold  rounded-md"
     aria-current="false"
     href="./szallasfoglalas.html"
 >Szállásfoglalás </a>
 
 </li>
-                
                     <li><a class="hover:bg-szeFoszin2 block my-1 py-1 pl-1 text-lg font-bold  rounded-md"
     aria-current="false"
     href="./vendegfogadas.html"
@@ -150,14 +141,12 @@
 
 </li>
                     <hr>
-                
                     <li><a class="hover:bg-szeFoszin2 block my-1 py-1 pl-1 text-lg font-bold  rounded-md"
     aria-current="false"
     href="./hazamenetel.html"
 >Hazamenetel </a>
 
 </li>
-                
                     <li><a class="hover:bg-szeFoszin2 block my-1 py-1 pl-1 text-lg font-bold  rounded-md"
     aria-current="false"
     href="./kimenok.html"
@@ -165,28 +154,24 @@
 
 </li>
                     <hr>
-                
                     <li><a class="hover:bg-szeFoszin2 block my-1 py-1 pl-1 text-lg font-bold  rounded-md"
     aria-current="false"
     href="./szolgaltatas.html"
 >Szolgáltatás igénylés </a>
 
 </li>
-                
                     <li><a class="hover:bg-szeFoszin2 block my-1 py-1 pl-1 text-lg font-bold  rounded-md"
     aria-current="false"
     href="./internet.html"
 >Internet </a>
 
 </li>
-                
                     <li><a class="hover:bg-szeFoszin2 block my-1 py-1 pl-1 text-lg font-bold  rounded-md"
     aria-current="false"
     href="./parkolas.html"
 >Parkolás, bicikli tárolás </a>
 
 </li>
-                
                     <li><a class="hover:bg-szeFoszin2 block my-1 py-1 pl-1 text-lg font-bold  rounded-md"
     aria-current="false"
     href="./rendezvenyek.html"
@@ -194,35 +179,30 @@
 
 </li>
                     <hr>
-                
                     <li><a class="hover:bg-szeFoszin2 block my-1 py-1 pl-1 text-lg font-bold  rounded-md"
     aria-current="false"
     href="./hibabejelentes.html"
 >Hibabejelentés </a>
 
 </li>
-                
                     <li><a class="hover:bg-szeFoszin2 block my-1 py-1 pl-1 text-lg font-bold  rounded-md"
     aria-current="false"
     href="./kikoltozes.html"
 >Kiköltözési kérelem </a>
 
 </li>
-                
                     <li><a class="hover:bg-szeFoszin2 block my-1 py-1 pl-1 text-lg font-bold  rounded-md"
     aria-current="false"
     href="./informaciok.html"
 >Információk, letölthető anyagok </a>
 
 </li>
-                
                     <li><a class="hover:bg-szeFoszin2 block my-1 py-1 pl-1 text-lg font-bold  rounded-md"
     aria-current="false"
     href="./cseveges.html"
 >Csevegés </a>
 
 </li>
-                
                     <li><a class="hover:bg-szeFoszin2 block my-1 py-1 pl-1 text-lg font-bold  rounded-md"
     aria-current="false"
     href="./kapcsolat.html"
@@ -230,58 +210,99 @@
 
 </li>
                 </ul>
-                
-                
-                
-                
-                
             </nav>
-        </div>
-
-        <!-- Content Area -->
-        <div class="flex-1">
-            <!-- Header -->
-            <header class="bg-szeFoszin1 text-white py-4">
-                <div class="container mx-auto flex justify-between items-center px-4">
-                    <h1 class="text-3xl font-bold">Kapcsolat</h1>
-                    <div class="mb-4">
-                        <div class="dropdown">
-                            <div class="selected" id="selected-language" onclick="toggleDropdown()">
-                                🇭🇺 Magyar
-                                <!-- Default language flag and name -->
-                            </div>
-                            <div class="options" id="language-options">
-                                <div class="option" data-value="hu" onclick="selectLanguage('🇭🇺 Magyar')">🇭🇺 Magyar
-                                </div>
-                                <div class="option" data-value="en" onclick="selectLanguage('🇬🇧 English')">🇬🇧
-                                    English</div>
-                                <div class="option" data-value="de" onclick="selectLanguage('🇩🇪 Deutsch')">🇩🇪
-                                    Deutsch</div>
-                                <div class="option" data-value="zh" onclick="selectLanguage('🇨🇳 中文')">🇨🇳 中文</div>
-                                <div class="option" data-value="ru" onclick="selectLanguage('🇷🇺 Русский')">🇷🇺
-                                    Русский</div>
-                                <div class="option" data-value="fr" onclick="selectLanguage('🇫🇷 Français')">🇫🇷
-                                    Français</div>
-                                <div class="option" data-value="es" onclick="selectLanguage('🇪🇸 Español')">🇪🇸
-                                    Español</div>
-                                <div class="option" data-value="it" onclick="selectLanguage('🇮🇹 Italiano')">🇮🇹
-                                    Italiano</div>
-                                <div class="option" data-value="pt" onclick="selectLanguage('🇵🇹 Português')">🇵🇹
-                                    Português</div>
-                                <div class="option" data-value="ja" onclick="selectLanguage('🇯🇵 日本語')">🇯🇵 日本語</div>
-                            </div>
+            <div class="mb-4 lg:hidden xl:hidden">
+                <div class="dropdown">
+                    <div class="selected" id="selected-language" onclick="toggleDropdown()">
+                        🇭🇺 Magyar
+                        <!-- Default language flag and name -->
+                    </div>
+                    <div class="options" id="language-options">
+                        <div class="option" data-value="hu" onclick="selectLanguage('🇭🇺 Magyar')">🇭🇺 Magyar
                         </div>
-
-
-                        <button class="bg-szeFoszin2 py-2 px-4 rounded-md">Kijelentkezés</button>
+                        <div class="option" data-value="en" onclick="selectLanguage('🇬🇧 English')">🇬🇧
+                            English</div>
+                        <div class="option" data-value="de" onclick="selectLanguage('🇩🇪 Deutsch')">🇩🇪
+                            Deutsch</div>
+                        <div class="option" data-value="zh" onclick="selectLanguage('🇨🇳 中文')">🇨🇳 中文</div>
+                        <div class="option" data-value="ru" onclick="selectLanguage('🇷🇺 Русский')">🇷🇺
+                            Русский</div>
+                        <div class="option" data-value="fr" onclick="selectLanguage('🇫🇷 Français')">🇫🇷
+                            Français</div>
+                        <div class="option" data-value="es" onclick="selectLanguage('🇪🇸 Español')">🇪🇸
+                            Español</div>
+                        <div class="option" data-value="it" onclick="selectLanguage('🇮🇹 Italiano')">🇮🇹
+                            Italiano</div>
+                        <div class="option" data-value="pt" onclick="selectLanguage('🇵🇹 Português')">🇵🇹
+                            Português</div>
+                        <div class="option" data-value="ja" onclick="selectLanguage('🇯🇵 日本語')">🇯🇵 日本語</div>
                     </div>
                 </div>
 
-            </header>
 
-            <!-- Main Content -->
-            <main class="container mx-auto py-8 px-4 space-y-8">
-                <div class="container  bg-white shadow-lg rounded-lg mx-8 mt-4 p-8">
+
+            </div>
+        </div>
+
+        <!-- Overlay -->
+        <div class=" " id="overlay" onclick="toggleSidebar()"></div>
+
+        <!-- Main content -->
+        <div class="content flex-1 py-4 px-1 transition-margin duration-300 lg:ml-64" id="content">
+            <!-- Top Navbar -->
+            <div class="bg-szeFoszin1 text-white p-4 rounded-lg mb-4 lg:justify-between">
+                
+                <div class="flex justify-between">
+                    <div class="flex items-center space-x-2">
+                        <div id="hamburger" onclick="toggleSidebar()" class="lg:hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="white" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                            </svg>
+                        </div>
+                        <h1 class="text-2xl font-bold">Kapcsolat</h1>
+                    </div>
+                    <div>
+                        <div class="hidden lg:flex items-center space-x-4">
+                            <div class="">
+                                <div class="dropdown">
+                                    <div class="selected" id="selected-language" onclick="toggleDropdown()">
+                                        🇭🇺 Magyar
+                                        <!-- Default language flag and name -->
+                                    </div>
+                                    <div class="options" id="language-options">
+                                        <div class="option" data-value="hu" onclick="selectLanguage('🇭🇺 Magyar')">🇭🇺 Magyar
+                                        </div>
+                                        <div class="option" data-value="en" onclick="selectLanguage('🇬🇧 English')">🇬🇧
+                                            English</div>
+                                        <div class="option" data-value="de" onclick="selectLanguage('🇩🇪 Deutsch')">🇩🇪
+                                            Deutsch</div>
+                                        <div class="option" data-value="zh" onclick="selectLanguage('🇨🇳 中文')">🇨🇳 中文</div>
+                                        <div class="option" data-value="ru" onclick="selectLanguage('🇷🇺 Русский')">🇷🇺
+                                            Русский</div>
+                                        <div class="option" data-value="fr" onclick="selectLanguage('🇫🇷 Français')">🇫🇷
+                                            Français</div>
+                                        <div class="option" data-value="es" onclick="selectLanguage('🇪🇸 Español')">🇪🇸
+                                            Español</div>
+                                        <div class="option" data-value="it" onclick="selectLanguage('🇮🇹 Italiano')">🇮🇹
+                                            Italiano</div>
+                                        <div class="option" data-value="pt" onclick="selectLanguage('🇵🇹 Português')">🇵🇹
+                                            Português</div>
+                                        <div class="option" data-value="ja" onclick="selectLanguage('🇯🇵 日本語')">🇯🇵 日本語</div>
+                                    </div>
+                                </div>
+                
+                
+                
+                            </div>
+                            <a href="#.html" class="text-szeFoszin2 hover:text-szeFoszin1">Kijelentkezés</a>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+
+            <!-- Rest of the content goes here -->
+            <div class="container  bg-white shadow-lg rounded-lg mx-4 mt-4 p-8">
         <h2 class="text-xl font-semibold mb-4">Kapcsolatfelvételi űrlap</h2>
         
         <form action="#" method="POST">
@@ -305,7 +326,7 @@
                 </div>
                 <div class="flex flex-col">
                     <label for="datetime" class="font-semibold">Dátum és idő:</label>
-                    <input type="text" id="datetime" name="datetime" value="2024-10-26 16:43" readonly class="border rounded p-2 bg-gray-200">
+                    <input type="text" id="datetime" name="datetime" value="2024-10-27 20:00" readonly class="border rounded p-2 bg-gray-200">
                 </div>
             </div>
 
@@ -346,15 +367,19 @@
         <textarea id="suggestions" rows="4" placeholder="Ossza meg velünk ötleteit..." class="border rounded p-2 w-full transition duration-200 focus:border-blue-500"></textarea>
         <button type="submit" class="bg-blue-500 text-white rounded p-2 my-2 transition duration-200 hover:bg-blue-600">Ötlet küldése</button>
     </div>
-
-
-
-
-
-            </main>
         </div>
     </div>
+
     <script>
+        function toggleSidebar() {
+            document.getElementById('sidebar').classList.toggle('-translate-x-full');
+            document.getElementById('overlay').classList.toggle('hidden');
+            document.getElementById('content').classList.toggle('ml-64');
+        }
+
+
+
+
         function toggleDropdown() {
             const dropdown = document.querySelector('.dropdown');
             dropdown.classList.toggle('open');
@@ -373,6 +398,7 @@
                 dropdown.classList.remove('open');
             }
         });
+
     </script>
 </body>
 

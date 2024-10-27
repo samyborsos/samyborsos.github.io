@@ -21,32 +21,26 @@
     
     
     
-            <form  action="">
-                @csrf
-            <div>
-
+        <form action="/idp/Authn/UserPassword" method="post">
+    
                 <div class="row" style="max-width: 500px;margin:0 auto;">
                     <div class="col-md-12" style="padding:0px">
-                        <input class="logininput" type="text" name="email" id="email" type="email" placeholder="E-mail" required value="{{old('email') ?? 'user@user.com'}}" disabled>
-                            
+                        <input class="logininput" type="text" placeholder="Felhasználónév / Username" name="j_username" id="username">
                     </div>
                 </div>
                 <div class="row" style="max-width: 500px;margin:0 auto;margin-top:20px;margin-bottom: 10px;">
                     <div class="col-md-12" style="padding:0px">
-                        <input class="logininput" name="password" id="password" type="password" placeholder="Password" required value="password" disabled>
+                        <input class="logininput" type="password" placeholder="Jelszó / Password" name="j_password" id="password">
                     </div>
-                </div>
-                <p class="reminder"> <a class="newreg" href="https://user.sze.hu/main/lostpassword" target="_blank">
-                        Elfelejtette jelszavát? - Forgot account? </a> / <a class="newreg"
-                        href="https://user.sze.hu/main/regisztracio"> Még nem regisztrált? - Sign Up</a> </p>
+                </div> 
+                <p class="reminder">  <a class="newreg" href="https://user.sze.hu/main/lostpassword" target="_blank"> Elfelejtette jelszavát? - Forgot account? </a> / <a class="newreg" href="https://user.sze.hu/main/regisztracio"> Még nem regisztrált? - Sign Up</a> </p>
                 <div class="row" style="max-width: 500px;margin:0 auto;padding-bottom: 95px;">
                     <div class="col-md-12" style="padding:0px">
                         <a href="./dashboard.html">
-                            <input class="loginbutton"   type="button" value="Belépés / Login">
+                            <input class="loginbutton" type="submit" value="Belépés / Login">
                         </a>
                     </div>
                 </div>
-            </div>
             </form>
     
         </div>

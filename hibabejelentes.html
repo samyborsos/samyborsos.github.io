@@ -266,7 +266,7 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
                             </svg>
                         </div>
-                        <h1 class="text-2xl font-bold">Kiköltözési kérelem</h1>
+                        <h1 class="text-2xl font-bold">Hibabejelentés</h1>
                     </div>
                     <div>
                         <div class="hidden lg:flex items-center space-x-4">
@@ -309,46 +309,96 @@
             </div>
 
             <!-- Rest of the content goes here -->
-            <div class="container mx-auto mt-6">
-        <form class="bg-white shadow-md rounded-lg p-6 mb-6" action="" method="POST">
-            <input type="hidden" name="_token" value="" autocomplete="off">            <h3 class="font-bold mb-4">Automatikusan kitöltött adatok:</h3>
+            <div class="container mx-auto p-4">
+        <h2 class="text-xl font-semibold mb-4">Hiba bejelentése</h2>
 
-            <div class="mb-4">
-                <label class="block mb-2" for="applicant_name">Kérelmező neve:</label>
-                <input class="w-full p-2 border border-gray-300 rounded bg-gray-100" type="text" id="applicant_name" value="Nagy Péter" readonly>
-            </div>
+        <div class="bg-white shadow-md rounded p-4 mb-6">
+            <form action="" method="POST" enctype="multipart/form-data">
+                <input type="hidden" name="_token" value="" autocomplete="off">
+                <div class="grid grid-cols-2 gap-4 mb-4">
+                    <div class="flex flex-col">
+                        <label for="reporter_name" class="font-semibold">Bejelentő neve:</label>
+                        <input type="text" id="reporter_name" name="reporter_name" value="Nagy Péter" class="border rounded p-2 bg-gray-100" readonly>
+                    </div>
 
-            <div class="mb-4">
-                <label class="block mb-2" for="applicant_id">Kérelmező azonosítója:</label>
-                <input class="w-full p-2 border border-gray-300 rounded bg-gray-100" type="text" id="applicant_id" value="H10044683" readonly>
-            </div>
+                    <div class="flex flex-col">
+                        <label for="reporter_id" class="font-semibold">Bejelentő azonosítója:</label>
+                        <input type="text" id="reporter_id" name="reporter_id" value="1" class="border rounded p-2 bg-gray-100" readonly>
+                    </div>
 
-            <div class="mb-4">
-                <label class="block mb-2" for="applicant_email">Kérelmező email címe:</label>
-                <input class="w-full p-2 border border-gray-300 rounded bg-gray-100" type="email" id="applicant_email" value="peter.nagy@example.com" readonly>
-            </div>
+                    <div class="flex flex-col">
+                        <label for="reporter_email" class="font-semibold">Bejelentő email címe:</label>
+                        <input type="email" id="reporter_email" name="reporter_email" value="peter.nagy@example.com" class="border rounded p-2" required>
+                    </div>
 
-            <div class="mb-4">
-                <label class="block mb-2" for="applicant_phone">Kérelmező telefonszáma:</label>
-                <input class="w-full p-2 border border-gray-300 rounded bg-gray-100" type="text" id="applicant_phone" value="+36 30 987 6543" readonly>
-            </div>
+                    <div class="flex flex-col">
+                        <label for="reporter_phone" class="font-semibold">Bejelentő telefonszáma:</label>
+                        <input type="tel" id="reporter_phone" name="reporter_phone" value="+36 30 987 6543" class="border rounded p-2" required>
+                    </div>
 
-            <div class="mb-4">
-                <label class="block mb-2" for="request_date">Kérelmezés időpontja:</label>
-                <input type="datetime-local" id="request_date" name="request_date" value="2024-10-27T20:24" class="border rounded p-2 bg-gray-100" readonly>
-            </div>
+                    <div class="flex flex-col">
+                        <label for="report_date" class="font-semibold">Bejelentés időpontja:</label>
+                        <input type="datetime-local" id="report_date" name="report_date" value="2024-10-27T20:34" class="border rounded p-2" readonly>
+                    </div>
+                </div>
 
-            <h3 class="font-bold mb-4">Felhasználó által kitöltendő:</h3>
+                <div class="flex flex-col mb-4">
+                    <label for="error_type" class="font-semibold">Hiba jellege:</label>
+                    <select id="error_type" name="error_type" class="border rounded p-2" required>
+                        <option value="">Válasszon...</option>
+                        <option value="informatikai">Informatikai</option>
+                        <option value="asztalos">Asztalos</option>
+                        <option value="gépészeti">Gépészeti</option>
+                        <option value="elektromos">Elektromos</option>
+                        <option value="víz">Víz</option>
+                        <option value="nem_tudom">Nem tudom eldönteni</option>
+                    </select>
+                </div>
 
-            <div class="mb-4">
-                <label class="block mb-2" for="move_out_date">Kiköltözés időpontja:</label>
-                <input type="date" id="move_out_date" name="move_out_date" class="border rounded p-2" required>
-            </div>
+                <div class="flex flex-col mb-4">
+                    <label for="error_subject" class="font-semibold">Hiba tárgya:</label>
+                    <input type="text" id="error_subject" name="error_subject" placeholder="Pl. 2FA, internetelérés" class="border rounded p-2" required>
+                </div>
 
-            <div class="mb-4">
-                <button type="submit" class="bg-blue-500 text-white font-bold py-2 px-4 rounded transition hover:bg-blue-600">Kérelem benyújtása</button>
-            </div>
-        </form>
+                <div class="flex flex-col mb-4">
+                    <label for="error_location" class="font-semibold">Hiba helyszíne:</label>
+                    <input type="text" id="error_location" name="error_location" placeholder="Pl. K3 porta, első emelet, 305" class="border rounded p-2" required>
+                </div>
+
+                <div class="flex flex-col mb-4">
+                    <label for="device_replacement" class="font-semibold">Eszközcsere szükséges?</label>
+                    <div>
+                        <label><input type="radio" name="device_replacement" value="igen" required> Igen</label>
+                        <label><input type="radio" name="device_replacement" value="nem" required> Nem</label>
+                    </div>
+                </div>
+
+                <div class="flex flex-col mb-4">
+                    <label for="error_description" class="font-semibold">Hiba részletes leírása:</label>
+                    <textarea id="error_description" name="error_description" rows="4" class="border rounded p-2" placeholder="Kérjük, írja le részletesen a hibát..."></textarea>
+                </div>
+
+                <div class="flex flex-col mb-4">
+                    <label for="attachment" class="font-semibold">Melléklet feltöltése:</label>
+                    <input type="file" id="attachment" name="attachment" class="border rounded p-2" accept="image/*,application/pdf,application/msword">
+                </div>
+
+                <div class="flex flex-col mb-4">
+                    <label for="notify" class="font-semibold">Értesítést kér?</label>
+                    <div>
+                        <label><input type="radio" name="notify" value="igen" required> Igen</label>
+                        <label><input type="radio" name="notify" value="nem" required> Nem</label>
+                    </div>
+                </div>
+
+                <button type="submit" class="bg-blue-500 text-white rounded p-2 transition hover:bg-blue-600 hover:shadow-lg">Hiba bejelentése</button>
+            </form>
+        </div>
+
+         <!-- Full-width iframe at the bottom -->
+         <div class="w-full h-screen mt-6">
+            <iframe src="https://help.sze.hu/" class="w-full h-full border rounded" frameborder="0" title="Help Desk"></iframe>
+        </div>
     </div>
         </div>
     </div>

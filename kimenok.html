@@ -266,7 +266,7 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
                             </svg>
                         </div>
-                        <h1 class="text-2xl font-bold">Hazamenetel</h1>
+                        <h1 class="text-2xl font-bold">Kimenők</h1>
                     </div>
                     <div>
                         <div class="hidden lg:flex items-center space-x-4">
@@ -309,160 +309,108 @@
             </div>
 
             <!-- Rest of the content goes here -->
-            <!-- Regular homecoming -->
+            <!-- New Outing Request -->
     <div class="bg-white shadow-lg rounded-lg mx-8 mt-4 p-8 flex flex-col">
-        <h2 class="text-2xl font-bold text-gray-800 mb-4">Reguláris hazamenetel</h2>
-        <form id="regular-hazamenetel-form">
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">Új kimenő igénylése</h2>
+        <form id="kimenő-igénylés-form">
             <div class="flex flex-col mb-4">
-                <label for="reporter-name" class="font-semibold">Bejelentő neve:</label>
-                <input type="text" id="reporter-name" value="Nagy Péter" class="border rounded p-2 bg-gray-100" readonly>
+                <label for="requester-name" class="font-semibold">Igénylő neve:</label>
+                <input type="text" id="requester-name" value="Nagy Péter" class="border rounded p-2 bg-gray-100" readonly>
             </div>
             <div class="flex flex-col mb-4">
-                <label for="reporter-id" class="font-semibold">Bejelentő neptun kódja:</label>
-                <input type="text" id="reporter-id" value="ABC123" class="border rounded p-2 bg-gray-100" readonly>
+                <label for="requester-id" class="font-semibold">Igénylő Neptun kódja:</label>
+                <input type="text" id="requester-id" value="ABC123" class="border rounded p-2 bg-gray-100" readonly>
             </div>
             <div class="flex flex-col mb-4">
-                <label for="reporter-email" class="font-semibold">Bejelentő email címe:</label>
-                <input type="email" id="reporter-email" value="peter.nagy@example.com" class="border rounded p-2 bg-gray-100" readonly>
+                <label for="requester-email" class="font-semibold">Igénylő email címe:</label>
+                <input type="email" id="requester-email" value="peter.nagy@example.com" class="border rounded p-2 bg-gray-100" readonly>
             </div>
             <div class="flex flex-col mb-4">
-                <label for="reporter-phone" class="font-semibold">Bejelentő telefonszáma:</label>
-                <input type="tel" id="reporter-phone" value="+36 30 987 6543" class="border rounded p-2 bg-gray-100" readonly>
+                <label for="requester-phone" class="font-semibold">Igénylő telefonszáma:</label>
+                <input type="tel" id="requester-phone" value="+36 30 987 6543" class="border rounded p-2 bg-gray-100" readonly>
             </div>
             <div class="flex flex-col mb-4">
-                <label for="report-date" class="font-semibold">Bejelentés időpontja:</label>
-                <input type="datetime-local" id="report-date" class="border rounded p-2 bg-gray-100" readonly value="2024-10-27 20:24:11">
+                <label for="request-date" class="font-semibold">Igénylés időpontja:</label>
+                <input type="datetime-local" id="request-date" class="border rounded p-2 bg-gray-100" required readonly value="2024-10-27T20:34">
             </div>
-
             <div class="flex flex-col mb-4">
-                <label for="home-day" class="font-semibold">Hazamenetel napja:</label>
-                <select id="home-day" class="border rounded p-2" required>
-                    <option value="">Válasszon napot</option>
-                    <option value="Hétfő">Hétfő</option>
-                    <option value="Kedd">Kedd</option>
-                    <option value="Szerda">Szerda</option>
-                    <option value="Csütörtök">Csütörtök</option>
-                    <option value="Péntek">Péntek</option>
-                    <option value="Szombat">Szombat</option>
-                    <option value="Vasárnap">Vasárnap</option>
-                </select>
+                <label for="outing-title" class="font-semibold">Kimenő rövid megnevezése:</label>
+                <input type="text" id="outing-title" placeholder="Pl. Farsang a suliban" class="border rounded p-2" required>
             </div>
-            
             <div class="flex flex-col mb-4">
-                <label for="home-time" class="font-semibold">Hazamenetel időpontja:</label>
-                <input type="time" id="home-time" class="border rounded p-2" required>
+                <label for="outing-start" class="font-semibold">Kimenő kezdő időpontja:</label>
+                <input type="datetime-local" id="outing-start" class="border rounded p-2" required>
             </div>
-            
             <div class="flex flex-col mb-4">
-                <label for="return-day" class="font-semibold">Kollégiumba való visszatérés napja:</label>
-                <select id="return-day" class="border rounded p-2" required>
-                    <option value="">Válasszon napot</option>
-                    <option value="Hétfő">Hétfő</option>
-                    <option value="Kedd">Kedd</option>
-                    <option value="Szerda">Szerda</option>
-                    <option value="Csütörtök">Csütörtök</option>
-                    <option value="Péntek">Péntek</option>
-                    <option value="Szombat">Szombat</option>
-                    <option value="Vasárnap">Vasárnap</option>
-                </select>
+                <label for="outing-end" class="font-semibold">Kimenő záró időpontja:</label>
+                <input type="datetime-local" id="outing-end" class="border rounded p-2" required>
             </div>
-            
             <div class="flex flex-col mb-4">
-                <label for="return-time" class="font-semibold">Kollégiumba való visszatérés időpontja:</label>
-                <input type="time" id="return-time" class="border rounded p-2" required>
+                <label for="outing-description" class="font-semibold">Igény részletes leírása/indoklása:</label>
+                <textarea id="outing-description" rows="3" placeholder="Pl. Iskolai rendezvény, bevásárlás..." class="border rounded p-2" required></textarea>
             </div>
-
-            <button type="submit" class="bg-szeFoszin2 text-white py-2 px-6 rounded-md shadow hover:bg-opacity-80 transition duration-200">Reguláris hazamenetel beküldése</button>
+            <div class="flex flex-col mb-4">
+                <label for="attachment" class="font-semibold">Melléklet feltöltése:</label>
+                <input type="file" id="attachment" class="border rounded p-2">
+            </div>
+            <button type="submit" class="bg-szeFoszin2 text-white py-2 px-6 rounded-md shadow hover:bg-opacity-80 transition duration-200">Igénylés beküldése</button>
         </form>
     </div>
 
-    <!-- Deviance report -->
-    <div class="bg-white shadow-lg rounded-lg mx-8 mt-4 p-8 flex flex-col">
-        <h2 class="text-2xl font-bold text-gray-800 mb-4">Deviancia bejelentése</h2>
-        <form id="deviance-report-form">
-            <!-- Automatically filled information -->
-            <div class="flex flex-col mb-4">
-                <label for="reporter-name" class="font-semibold">Bejelentő neve:</label>
-                <input type="text" id="reporter-name" value="Nagy Péter" class="border rounded p-2 bg-gray-100" readonly>
+    <!-- Active Outings -->
+    <section id="aktív_kimenők" class="py-8 text-center">
+        <h2 class="text-3xl font-bold mb-6">Aktív kimenők</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <!-- Dummy Active Outing Example -->
+            <div class="bg-white p-6 rounded-lg shadow-md flex flex-col">
+                <h3 class="font-bold text-xl text-gray-800 mb-2">Farsang a suliban</h3>
+                <p class="font-semibold">Kezdő időpont: <span class="text-gray-600">2024-10-31 14:00</span></p>
+                <p class="font-semibold">Záró időpont: <span class="text-gray-600">2024-10-31 18:00</span></p>
+                <p class="font-semibold">Indoklás: <span class="text-gray-600">Iskolai rendezvény</span></p>
+                <div class="mt-auto">
+                    <button class="mt-4 bg-szeFoszin2 text-white py-2 px-4 rounded-md">További részletek</button>
+                </div>
             </div>
-            <div class="flex flex-col mb-4">
-                <label for="reporter-id" class="font-semibold">Bejelentő neptun kódja:</label>
-                <input type="text" id="reporter-id" value="ABC123" class="border rounded p-2 bg-gray-100" readonly>
+            <!-- Add more dummy active outings here as needed -->
+            <div class="bg-white p-6 rounded-lg shadow-md flex flex-col">
+                <h3 class="font-bold text-xl text-gray-800 mb-2">Kirándulás a hegyekben</h3>
+                <p class="font-semibold">Kezdő időpont: <span class="text-gray-600">2024-11-10 08:00</span></p>
+                <p class="font-semibold">Záró időpont: <span class="text-gray-600">2024-11-10 18:00</span></p>
+                <p class="font-semibold">Indoklás: <span class="text-gray-600">Csoportos kirándulás</span></p>
+                <div class="mt-auto">
+                    <button class="mt-4 bg-szeFoszin2 text-white py-2 px-4 rounded-md">További részletek</button>
+                </div>
             </div>
-            <div class="flex flex-col mb-4">
-                <label for="reporter-email" class="font-semibold">Bejelentő email címe:</label>
-                <input type="email" id="reporter-email" value="peter.nagy@example.com" class="border rounded p-2 bg-gray-100" readonly>
-            </div>
-            <div class="flex flex-col mb-4">
-                <label for="reporter-phone" class="font-semibold">Bejelentő telefonszáma:</label>
-                <input type="tel" id="reporter-phone" value="+36 30 987 6543" class="border rounded p-2 bg-gray-100" readonly>
-            </div>
-            <div class="flex flex-col mb-4">
-                <label for="report-date" class="font-semibold">Bejelentés időpontja:</label>
-                <input type="datetime-local" id="report-date" class="border rounded p-2 bg-gray-100" readonly value="2024-10-27 20:24:11">
+        </div>
+    </section>
+
+    <!-- Previous Outings -->
+    <section id="korábbi_kimenők" class="py-8 text-center">
+        <h2 class="text-3xl font-bold mb-6">Korábbi kimenők</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <!-- Dummy Previous Outing Example -->
+            <div class="bg-white p-6 rounded-lg shadow-md flex flex-col">
+                <h3 class="font-bold text-xl text-gray-800 mb-2">ZH</h3>
+                <p class="font-semibold">Kezdő időpont: <span class="text-gray-600">2024-10-20 17:00</span></p>
+                <p class="font-semibold">Záró időpont: <span class="text-gray-600">2024-10-20 18:00</span></p>
+                <p class="font-semibold">Indoklás: <span class="text-gray-600">Vizsga</span></p>
+                <div class="mt-auto">
+                    <button class="mt-4 bg-szeFoszin2 text-white py-2 px-4 rounded-md">További részletek</button>
+                </div>
             </div>
 
-            <!-- User input for deviance report -->
-            <div class="flex flex-col mb-4">
-                <label for="deviance-title" class="font-semibold">Deviancia elnevezése:</label>
-                <input type="text" id="deviance-title" placeholder="Pl. Elmaradó óra hétfőn" class="border rounded p-2" required>
-            </div>
-            <div class="flex flex-col mb-4">
-                <label class="font-semibold">Mi változik?</label>
-                <div class="flex items-center mb-2">
-                    <input type="checkbox" id="change-home" class="mr-2">
-                    <label for="change-home">Hazamenetel időpontja</label>
-                </div>
-                <div class="flex items-center mb-2">
-                    <input type="checkbox" id="change-return" class="mr-2">
-                    <label for="change-return">Kollégiumba való visszatérés időpontja</label>
-                </div>
-                <div class="flex items-center mb-2">
-                    <input type="checkbox" id="change-both" class="mr-2">
-                    <label for="change-both">Mindkettő</label>
+            <!-- Add more dummy previous outings here as needed -->
+            <div class="bg-white p-6 rounded-lg shadow-md flex flex-col">
+                <h3 class="font-bold text-xl text-gray-800 mb-2">Buli a kollégiumban</h3>
+                <p class="font-semibold">Kezdő időpont: <span class="text-gray-600">2024-10-15 20:00</span></p>
+                <p class="font-semibold">Záró időpont: <span class="text-gray-600">2024-10-15 23:00</span></p>
+                <p class="font-semibold">Indoklás: <span class="text-gray-600">Baráti összejövetel</span></p>
+                <div class="mt-auto">
+                    <button class="mt-4 bg-szeFoszin2 text-white py-2 px-4 rounded-md">További részletek</button>
                 </div>
             </div>
-            <div class="flex flex-col mb-4">
-                <label for="home-day" class="font-semibold">Hazamenetel napja:</label>
-                <select id="home-day" class="border rounded p-2" required>
-                    <option value="">Válasszon napot</option>
-                    <option value="Hétfő">Hétfő</option>
-                    <option value="Kedd">Kedd</option>
-                    <option value="Szerda">Szerda</option>
-                    <option value="Csütörtök">Csütörtök</option>
-                    <option value="Péntek">Péntek</option>
-                    <option value="Szombat">Szombat</option>
-                    <option value="Vasárnap">Vasárnap</option>
-                </select>
-            </div>
-            
-            <div class="flex flex-col mb-4">
-                <label for="home-time" class="font-semibold">Hazamenetel időpontja:</label>
-                <input type="time" id="home-time" class="border rounded p-2" required>
-            </div>
-            
-            <div class="flex flex-col mb-4">
-                <label for="return-day" class="font-semibold">Kollégiumba való visszatérés napja:</label>
-                <select id="return-day" class="border rounded p-2" required>
-                    <option value="">Válasszon napot</option>
-                    <option value="Hétfő">Hétfő</option>
-                    <option value="Kedd">Kedd</option>
-                    <option value="Szerda">Szerda</option>
-                    <option value="Csütörtök">Csütörtök</option>
-                    <option value="Péntek">Péntek</option>
-                    <option value="Szombat">Szombat</option>
-                    <option value="Vasárnap">Vasárnap</option>
-                </select>
-            </div>
-            
-            <div class="flex flex-col mb-4">
-                <label for="return-time" class="font-semibold">Kollégiumba való visszatérés időpontja:</label>
-                <input type="time" id="return-time" class="border rounded p-2" required>
-            </div>
-
-            <button type="submit" class="bg-szeFoszin2 text-white py-2 px-6 rounded-md shadow hover:bg-opacity-80 transition duration-200">Deviancia bejelentés beküldése</button>
-        </form>
-    </div>
+        </div>
+    </section>
         </div>
     </div>
 

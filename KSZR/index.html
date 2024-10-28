@@ -1,244 +1,355 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hu">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Samy's Website</title>
-  <meta name="description" content="-">
-  <!-- <meta http-equiv="refresh" content="0; url=http://samyborsos.github.io/" /> -->
-  <meta name="author" content="Samy Borsos">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <!-- <link rel='alternate' type='application/rss+xml' href='/rss.xml' /> -->
-  <link rel="icon" type="image/svg+xml" href="https://avatars.githubusercontent.com/u/159457978?v=4">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SZE - KSZR</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css.html" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        szeFoszin1: '#242943',
+                        szeFoszin2: '#50adc9',
+                    }
+                }
+            }
+        }
+    </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css.html" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOMvWz0z8Qk8JYVxBZT2F5MdLw0MS3XaK9dYmoC" crossorigin="anonymous">
+    <link href="https://unpkg.com/heroicons@1.0.6/dist/heroicons.min.css.html" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="https://static.wixstatic.com/media/a64cda_74704ce89b8b4e6eb850accaeeee1a93%7Emv2.png/v1/fill/w_192%2Ch_192%2Clg_1%2Cusm_0.66_1.00_0.01/a64cda_74704ce89b8b4e6eb850accaeeee1a93%7Emv2.png.html">
 
+    <style>
+        .dropdown {
+            position: relative;
+            display: inline-block;
+            width: 200px;
+            /* Adjust width as needed */
+        }
+
+        .dropdown select {
+            display: none;
+            /* Hide the default select */
+        }
+
+        .dropdown .selected {
+            background-color: #242943;
+            /* szeFoszin1 */
+            border: 1px solid #50adc9;
+            /* szeFoszin2 */
+            padding: 7px;
+            cursor: pointer;
+            color: white;
+            /* White text for contrast */
+            display: flex;
+            align-items: center;
+            border-radius: 0.375rem;
+            /* Rounded corners */
+        }
+
+        .dropdown .options {
+            display: none;
+            position: absolute;
+            background-color: #fff;
+            /* White background for options */
+            border: 1px solid #50adc9;
+            /* szeFoszin2 */
+            z-index: 1;
+            width: 100%;
+            max-height: 200px;
+            overflow-y: auto;
+            border-radius: 0.375rem;
+            /* Rounded corners */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            /* Subtle shadow */
+        }
+
+        .dropdown .option {
+            padding: 10px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            color: #242943;
+            /* szeFoszin1 */
+        }
+
+        .dropdown .option:hover {
+            background-color: #50adc9;
+            /* szeFoszin2 */
+            color: white;
+            /* White text on hover */
+        }
+
+        .dropdown.open .options {
+            display: block;
+            /* Show options when dropdown is open */
+        }
+    </style>
 </head>
 
-<body class="bg-gray-900 text-gray-100">
-  <div class="mx-auto max-w-screen-lg px-3 py-6">
+<body class="bg-gray-100">
+    <div class="flex min-h-screen">
+        <!-- Sidebar -->
+        <div class="sidebar fixed top-0 left-0 h-full w-full lg:w-64  bg-szeFoszin1 transition-transform duration-300 transform -translate-x-full lg:translate-x-0 overflow-y-auto" id="sidebar">
+            <div class="mb-4 flex items-center justify-around">
+                <img src="https://static.wixstatic.com/media/a64cda_1b6e4310f40343f4ab177e4f7674d6e3~mv2.png" alt="Logo" class="w-40 h-auto">
+                <div id="hamburger" onclick="toggleSidebar()" class="lg:hidden">
+                    
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="white" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M21 16.811c0 .864-.933 1.406-1.683.977l-7.108-4.061a1.125 1.125 0 0 1 0-1.954l7.108-4.061A1.125 1.125 0 0 1 21 8.689v8.122ZM11.25 16.811c0 .864-.933 1.406-1.683.977l-7.108-4.061a1.125 1.125 0 0 1 0-1.954l7.108-4.061a1.125 1.125 0 0 1 1.683.977v8.122Z" />
+                      </svg>
+                      
+                </div>
+            </div>
+            <nav class="text-white p-4" role="navigation">
+                <ul class="flex flex-col space-y-2">
+                    <li><a class="hover:bg-szeFoszin2 block my-1 py-1 pl-1 text-lg font-bold  rounded-md"
+    aria-current="false"
+    href="./dashboard.html"
+>Főoldal </a>
+
+</li>
+                    <hr>
+                    <li><a class="hover:bg-szeFoszin2 block my-1 py-1 pl-1 text-lg font-bold  rounded-md"
+    aria-current="false"
+    href="./szobafoglalas.html"
+>Szobafoglalás </a>
+
+</li>
+                    <li><a class="hover:bg-szeFoszin2 block my-1 py-1 pl-1 text-lg font-bold  rounded-md"
+    aria-current="false"
+    href="./szobacsere.html"
+>Szobacsere kérelem </a>
+
+</li>
+                    <li><a class="hover:bg-szeFoszin2 block my-1 py-1 pl-1 text-lg font-bold  rounded-md"
+    aria-current="false"
+    href="./penzugyek.html"
+>Pénzügyek </a>
+
+</li>
+                    <hr>
+                    <li><a class="hover:bg-szeFoszin2 block my-1 py-1 pl-1 text-lg font-bold  rounded-md"
+    aria-current="false"
+    href="./szallasfoglalas.html"
+>Szállásfoglalás </a>
+
+</li>
+                    <li><a class="hover:bg-szeFoszin2 block my-1 py-1 pl-1 text-lg font-bold  rounded-md"
+    aria-current="false"
+    href="./vendegfogadas.html"
+>Vendégfogadás </a>
+
+</li>
+                    <hr>
+                    <li><a class="hover:bg-szeFoszin2 block my-1 py-1 pl-1 text-lg font-bold  rounded-md"
+    aria-current="false"
+    href="./hazamenetel.html"
+>Hazamenetel </a>
+
+</li>
+                    <li><a class="hover:bg-szeFoszin2 block my-1 py-1 pl-1 text-lg font-bold  rounded-md"
+    aria-current="false"
+    href="./kimenok.html"
+>Kimenők </a>
+
+</li>
+                    <hr>
+                    <li><a class="hover:bg-szeFoszin2 block my-1 py-1 pl-1 text-lg font-bold  rounded-md"
+    aria-current="false"
+    href="./szolgaltatas.html"
+>Szolgáltatás igénylés </a>
+
+</li>
+                    <li><a class="hover:bg-szeFoszin2 block my-1 py-1 pl-1 text-lg font-bold  rounded-md"
+    aria-current="false"
+    href="./internet.html"
+>Internet </a>
+
+</li>
+                    <li><a class="hover:bg-szeFoszin2 block my-1 py-1 pl-1 text-lg font-bold  rounded-md"
+    aria-current="false"
+    href="./parkolas.html"
+>Parkolás, bicikli tárolás </a>
+
+</li>
+                    <li><a class="hover:bg-szeFoszin2 block my-1 py-1 pl-1 text-lg font-bold  rounded-md"
+    aria-current="false"
+    href="./rendezvenyek.html"
+>Rendezvények </a>
+
+</li>
+                    <hr>
+                    <li><a class="hover:bg-szeFoszin2 block my-1 py-1 pl-1 text-lg font-bold  rounded-md"
+    aria-current="false"
+    href="./hibabejelentes.html"
+>Hibabejelentés </a>
+
+</li>
+                    <li><a class="hover:bg-szeFoszin2 block my-1 py-1 pl-1 text-lg font-bold  rounded-md"
+    aria-current="false"
+    href="./kikoltozes.html"
+>Kiköltözési kérelem </a>
+
+</li>
+                    <li><a class="hover:bg-szeFoszin2 block my-1 py-1 pl-1 text-lg font-bold  rounded-md"
+    aria-current="false"
+    href="./informaciok.html"
+>Információk, letölthető anyagok </a>
+
+</li>
+                    <li><a class="hover:bg-szeFoszin2 block my-1 py-1 pl-1 text-lg font-bold  rounded-md"
+    aria-current="false"
+    href="./cseveges.html"
+>Csevegés </a>
+
+</li>
+                    <li><a class="hover:bg-szeFoszin2 block my-1 py-1 pl-1 text-lg font-bold  rounded-md"
+    aria-current="false"
+    href="./kapcsolat.html"
+>Kapcsolat </a>
+
+</li>
+                </ul>
+            </nav>
+            <div class="mb-4 lg:hidden xl:hidden">
+                <div class="dropdown">
+                    <div class="selected" id="selected-language" onclick="toggleDropdown()">
+                        🇭🇺 Magyar
+                        <!-- Default language flag and name -->
+                    </div>
+                    <div class="options" id="language-options">
+                        <div class="option" data-value="hu" onclick="selectLanguage('🇭🇺 Magyar')">🇭🇺 Magyar
+                        </div>
+                        <div class="option" data-value="en" onclick="selectLanguage('🇬🇧 English')">🇬🇧
+                            English</div>
+                        <div class="option" data-value="de" onclick="selectLanguage('🇩🇪 Deutsch')">🇩🇪
+                            Deutsch</div>
+                        <div class="option" data-value="zh" onclick="selectLanguage('🇨🇳 中文')">🇨🇳 中文</div>
+                        <div class="option" data-value="ru" onclick="selectLanguage('🇷🇺 Русский')">🇷🇺
+                            Русский</div>
+                        <div class="option" data-value="fr" onclick="selectLanguage('🇫🇷 Français')">🇫🇷
+                            Français</div>
+                        <div class="option" data-value="es" onclick="selectLanguage('🇪🇸 Español')">🇪🇸
+                            Español</div>
+                        <div class="option" data-value="it" onclick="selectLanguage('🇮🇹 Italiano')">🇮🇹
+                            Italiano</div>
+                        <div class="option" data-value="pt" onclick="selectLanguage('🇵🇹 Português')">🇵🇹
+                            Português</div>
+                        <div class="option" data-value="ja" onclick="selectLanguage('🇯🇵 日本語')">🇯🇵 日本語</div>
+                    </div>
+                </div>
 
 
-    <div class="mx-auto max-w-screen-lg px-3 py-6">
-      <div class="flex flex-col items-center md:flex-row md:justify-between md:gap-x-24 text-justify ">
-        <div>
-          <h1 class="text-2xl sm:text-3xl font-bold text-justify">Hi there, I'm <span
-              class="bg-gradient-to-br from-sky-500 to-cyan-400 bg-clip-text text-transparent">Samy</span>
-            👋</h1>
-          <p class="mt-6 text-xl leading-9">I'm a third-year
-            Economics Informatics student from Hungary. Proficient in <span class="text-cyan-400">German</span> and
-            <span class="text-cyan-400">Hungarian</span>, I'm
-            passionate about <span class="text-cyan-400">informatics</span> and eager to innovate in digital
-            business. Let's make an <span class="text-cyan-400">impact</span> together!
-          <div class="mt-3 flex gap-1 space-x-4">
 
-            <a href="https://hu.linkedin.com/in/samyborsos" target="_blank">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 448 512"
-                class="h-12 w-12 hover:translate-y-1">
-
-                <path
-                  d="M100.3 448H7.4V148.9h92.9zM53.8 108.1C24.1 108.1 0 83.5 0 53.8a53.8 53.8 0 0 1 107.6 0c0 29.7-24.1 54.3-53.8 54.3zM447.9 448h-92.7V302.4c0-34.7-.7-79.2-48.3-79.2-48.3 0-55.7 37.7-55.7 76.7V448h-92.8V148.9h89.1v40.8h1.3c12.4-23.5 42.7-48.3 87.9-48.3 94 0 111.3 61.9 111.3 142.3V448z">
-                </path>
-              </svg>
-            </a>
-
-            <a href="mailto:samy.borsos@gmai.com">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 512 512"
-                class="h-12 w-12 hover:translate-y-1">
-
-                <path
-                  d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z">
-                </path>
-              </svg>
-            </a>
-
-
-
-          </div>
+            </div>
         </div>
-        <div class="shrink-0 "><img class="h-80 border-b-2 border-cyan-400" src="./pictures/sirius_red_one-by-one-removebg-preview.png"
-            alt="Avatar image" loading="lazy"></div>
-      </div>
+
+        <!-- Overlay -->
+        <div class=" " id="overlay" onclick="toggleSidebar()"></div>
+
+        <!-- Main content -->
+        <div class="content flex-1 py-4 px-1 transition-margin duration-300 lg:ml-64" id="content">
+            <!-- Top Navbar -->
+            <div class="bg-szeFoszin1 text-white p-4 rounded-lg mb-4 lg:justify-between">
+                
+                <div class="flex justify-between">
+                    <div class="flex items-center space-x-2">
+                        <div id="hamburger" onclick="toggleSidebar()" class="lg:hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="white" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                            </svg>
+                        </div>
+                        <h1 class="text-2xl font-bold">Főoldal</h1>
+                    </div>
+                    <div>
+                        <div class="hidden lg:flex items-center space-x-4">
+                            <div class="">
+                                <div class="dropdown">
+                                    <div class="selected" id="selected-language" onclick="toggleDropdown()">
+                                        🇭🇺 Magyar
+                                        <!-- Default language flag and name -->
+                                    </div>
+                                    <div class="options" id="language-options">
+                                        <div class="option" data-value="hu" onclick="selectLanguage('🇭🇺 Magyar')">🇭🇺 Magyar
+                                        </div>
+                                        <div class="option" data-value="en" onclick="selectLanguage('🇬🇧 English')">🇬🇧
+                                            English</div>
+                                        <div class="option" data-value="de" onclick="selectLanguage('🇩🇪 Deutsch')">🇩🇪
+                                            Deutsch</div>
+                                        <div class="option" data-value="zh" onclick="selectLanguage('🇨🇳 中文')">🇨🇳 中文</div>
+                                        <div class="option" data-value="ru" onclick="selectLanguage('🇷🇺 Русский')">🇷🇺
+                                            Русский</div>
+                                        <div class="option" data-value="fr" onclick="selectLanguage('🇫🇷 Français')">🇫🇷
+                                            Français</div>
+                                        <div class="option" data-value="es" onclick="selectLanguage('🇪🇸 Español')">🇪🇸
+                                            Español</div>
+                                        <div class="option" data-value="it" onclick="selectLanguage('🇮🇹 Italiano')">🇮🇹
+                                            Italiano</div>
+                                        <div class="option" data-value="pt" onclick="selectLanguage('🇵🇹 Português')">🇵🇹
+                                            Português</div>
+                                        <div class="option" data-value="ja" onclick="selectLanguage('🇯🇵 日本語')">🇯🇵 日本語</div>
+                                    </div>
+                                </div>
+                
+                
+                
+                            </div>
+                            <a href="#.html" class="text-szeFoszin2 hover:text-szeFoszin1">Kijelentkezés</a>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+
+            <!-- Rest of the content goes here -->
+            <div class="flex flex-col items-center justify-center min-h-screen bg-gray-100"> <!-- Full height with background -->
+        <h1 class="text-4xl font-bold mb-4">Üdvözöljük a rendszerben!</h1> <!-- Welcome message -->
+        <p class="text-lg text-gray-600 mb-8">Kérjük, jelentkezzen be a folytatáshoz.</p> <!-- Subtext -->
+
+        <a href="/login.html" class="px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 transition duration-300"> <!-- Login button -->
+            Bejelentkezés
+        </a>
     </div>
-    <div class="mx-auto max-w-screen-lg px-3 py-6">
-      <div class="mb-6 text-2xl font-bold">Recent <span
-          class="bg-gradient-to-br from-sky-500 to-cyan-400 bg-clip-text text-transparent">Projects</span>
-      </div>
-      <div class="flex flex-col gap-6">
-        <div class="flex flex-col items-center gap-x-8 rounded-md bg-slate-800 p-3 md:flex-row">
-          <div class="shrink-0">
-            <a href="https://samyborsos.github.io/szePublishers" target="_blank">
-              <img class="h-36 w-36 hover:translate-y-1"
-                src="https://static.vecteezy.com/system/resources/previews/013/391/087/original/graduation-hat-3d-illustration-free-png.png"
-                alt="Project Web Design" loading="lazy">
-
-
-            </a>
-          </div>
-          <div class=" px-4">
-            <div class="items-center space-y-4 gap-x-4">
-              <a class="hover:text-cyan-400"
-                href="https://samyborsos.github.io/szePublishers" target="_blank">
-                <div class="text-xl font-semibold">Scholar Hub at Széchenyi István University</div>
-              </a>
-              <div class="flex gap-2">
-                <div class="rounded-md px-2 py-1 text-xs font-semibold bg-fuchsia-400 text-fuchsia-900">Python</div>
-                <div class="rounded-md px-2 py-1 text-xs font-semibold bg-sky-400 text-sky-900">Tailwind</div>
-                <div class="rounded-md px-2 py-1 text-xs font-semibold bg-rose-400 text-rose-900">Laravel</div>
-                <div class="rounded-md px-2 py-1 text-xs font-semibold bg-purple-400 text-rose-900">PHP</div>
-                <div class="rounded-md px-2 py-1 text-xs font-semibold bg-emerald-400 text-emerald-900">SZE</div>
-              </div>
-            </div>
-            <p class="mt-3 text-gray-400 text-justify ">At Széchenyi István University, I’ve developed a comprehensive
-              website using Python’s web scraping technology and Laravel as the web framework. This hub
-              aggregates special issues from top publishers — Emerald, Elsevier, and Taylor & Francis. By
-              collecting Cite Scores from Scopus, WoS, ABDC, and SJR, I’ve created a valuable resource for
-              researchers, academics, and anyone passionate about scholarly publishing. This resource is a
-              game-changer for researchers, academics, and anyone interested in scholarly publishing.</p>
-          </div>
-
-        </div class=" px-4">
-        <div class="flex flex-col items-center gap-x-8 rounded-md bg-slate-800 p-3 md:flex-row">
-          <div class="shrink-0"><a href="https://samyborsos.github.io/cv" target="_blank"><img
-                class="h-36 w-36 hover:translate-y-1"
-                src="https://static.vecteezy.com/system/resources/previews/019/031/084/original/curriculum-vitae-3d-illustration-icon-png.png"
-                alt="Project Fire" loading="lazy"></a></div>
-          <div class="px-4">
-            <div class="items-center space-y-4 gap-x-4 ">
-              <a class="hover:text-cyan-400" href="https://samyborsos.github.io/cv" target="_blank">
-                <div class="text-xl font-semibold">Samy's Resume (CV)</div>
-              </a>
-              <div class="flex gap-2">
-                <div class="rounded-md px-2 py-1 text-xs font-semibold bg-sky-400 text-sky-900">
-                  Tailwind</div>
-
-              </div>
-            </div>
-            <p class="mt-3 text-gray-400 text-justify">Here you can find my resume, feel free to check it out!</p>
-          </div>
         </div>
-
-        <div class="flex flex-col items-center gap-x-8 rounded-md bg-slate-800 p-3 md:flex-row">
-          <div class="shrink-0 h-36 flex items-center">
-            <a href="#">
-              <img class="w-36 hover:translate-y-1 text-white"
-                src="https://static.vecteezy.com/system/resources/previews/045/981/053/large_2x/cute-wedding-car-3d-graphic-free-png.png"
-                alt="Project Maps" loading="lazy">
-            </a>
-
-          </div>
-          <div class=" px-4">
-            <div class="items-center space-y-4 gap-x-4"><a class="hover:text-cyan-400" href="#">
-                <div class="text-xl font-semibold">Automation and Workflow Optimization at Audi</div>
-              </a>
-              <div class="flex gap-2">
-                <div class="rounded-md px-2 py-1 text-xs font-semibold bg-fuchsia-400 text-fuchsia-900">
-                  Microsoft Power Platform
-                </div>
-                <div class="rounded-md px-2 py-1 text-xs font-semibold bg-indigo-400 text-indigo-900">
-                  Power Automate
-                </div>
-                <div class="rounded-md px-2 py-1 text-xs font-semibold bg-rose-400 text-rose-900">
-                  Power Apps
-                </div>
-                <div class="rounded-md px-2 py-1 text-xs font-semibold bg-yellow-400 text-yellow-900">
-                  Audi
-                </div>
-
-
-              </div>
-            </div>
-            <p class="mt-3 text-gray-400 text-justify">I successfully automated a complex process using the Microsoft
-              Power Platform. The outcome is an integrated, user-friendly system facilitating efficient
-              workflow.</p>
-          </div>
-        </div>
-
-
-      </div>
     </div>
 
-    <!-- Recent Posts -->
-    <!-- <div class="mx-auto max-w-screen-lg px-3 py-6">
-        <div class="mb-6 text-2xl font-bold">
-            <div class="flex items-baseline justify-between">
-                <div>Recent <span
-                        class="bg-gradient-to-br from-sky-500 to-cyan-400 bg-clip-text text-transparent">Posts</span>
-                </div>
-                <div class="text-sm"><a href="/demo/astro-boilerplate/posts">View all Posts →</a></div>
-            </div>
-        </div>
-        <div class="grid grid-cols-1 gap-6 md:grid-cols-3"><a class="hover:translate-y-1"
-                href="/demo/astro-boilerplate/posts/sixth-post">
-                <div class="overflow-hidden rounded-md bg-slate-800">
-                    <div class="aspect-w-3 aspect-h-2"><img class="h-full w-full object-cover object-center"
-                            src="/demo/astro-boilerplate/assets/images/image-post.jpeg" alt="Image post" loading="lazy">
-                    </div>
-                    <div class="px-3 pt-4 pb-6 text-center">
-                        <h2 class="text-xl font-semibold">Typography example</h2>
-                        <div class="mt-1 text-xs text-gray-400">Feb 6, 2020</div>
-                        <div class="mt-2 text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur vero
-                            esse non molestias eos excepturi.</div>
-                    </div>
-                </div>
-            </a><a class="hover:translate-y-1" href="/demo/astro-boilerplate/posts/fifth-post">
-                <div class="overflow-hidden rounded-md bg-slate-800">
-                    <div class="aspect-w-3 aspect-h-2"><img class="h-full w-full object-cover object-center"
-                            src="/demo/astro-boilerplate/assets/images/image-post2.jpeg" alt="Image post 2"
-                            loading="lazy"></div>
-                    <div class="px-3 pt-4 pb-6 text-center">
-                        <h2 class="text-xl font-semibold">5th Lorem ipsum dolor sit</h2>
-                        <div class="mt-1 text-xs text-gray-400">Feb 5, 2020</div>
-                        <div class="mt-2 text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur vero
-                            esse non molestias eos excepturi.</div>
-                    </div>
-                </div>
-            </a><a class="hover:translate-y-1" href="/demo/astro-boilerplate/posts/forth-post">
-                <div class="overflow-hidden rounded-md bg-slate-800">
-                    <div class="aspect-w-3 aspect-h-2"><img class="h-full w-full object-cover object-center"
-                            src="/demo/astro-boilerplate/assets/images/image-post3.jpeg" alt="Image post 3"
-                            loading="lazy"></div>
-                    <div class="px-3 pt-4 pb-6 text-center">
-                        <h2 class="text-xl font-semibold">4th Lorem ipsum dolor sit</h2>
-                        <div class="mt-1 text-xs text-gray-400">Feb 4, 2020</div>
-                        <div class="mt-2 text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur vero
-                            esse non molestias eos excepturi.</div>
-                    </div>
-                </div>
-            </a></div>
-    </div> -->
-
-    <!-- Newsletter Subscription -->
-    <!-- <div class="mx-auto max-w-screen-lg px-3 py-6">
-        <div class="flex flex-col items-center justify-between gap-6 sm:flex-row">
-            <div class="sm:w-7/12">
-                <div class="text-3xl font-bold">Subscribe to my <span
-                        class="bg-gradient-to-br from-sky-500 to-cyan-400 bg-clip-text text-transparent">Newsletters</span>
-                </div>
-                <p class="mt-3 text-gray-300">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur vero
-                    esse non molestias eos excepturi, inventore atque cupiditate.</p>
-            </div>
-            <div class="w-full sm:w-5/12">
-                <form
-                    class="flex rounded-full bg-slate-800 px-4 py-2 focus-within:ring-2 focus-within:ring-cyan-600 hover:ring-2 hover:ring-cyan-600">
-                    <input class="w-full appearance-none bg-slate-800 focus:outline-none"><button
-                        class="ml-2 shrink-0 rounded-full bg-gradient-to-br from-sky-500 to-cyan-400 px-3 py-1 text-sm font-medium hover:from-sky-700 hover:to-cyan-600 focus:outline-none focus:ring-2 focus:ring-cyan-600/50"
-                        type="submit">Subscribe</button></form>
-            </div>
-        </div>
-    </div> -->
-
-    <div class="mx-auto max-w-screen-lg px-3 py-6">
-      <div class="border-t border-gray-600 pt-5">
-        <div class="text-sm text-gray-200">
-          <!-- -->
-          <!-- --> Template by
-          <!-- --> <a class="text-cyan-400 hover:underline" href="https://creativedesignsguru.com" target="_blank"
-            rel="noopener noreferrer">CreativeDesignsGuru</a>
-        </div>
-      </div>
-    </div>
+    <script>
+        function toggleSidebar() {
+            document.getElementById('sidebar').classList.toggle('-translate-x-full');
+            document.getElementById('overlay').classList.toggle('hidden');
+            document.getElementById('content').classList.toggle('ml-64');
+        }
 
 
+
+
+        function toggleDropdown() {
+            const dropdown = document.querySelector('.dropdown');
+            dropdown.classList.toggle('open');
+        }
+
+        function selectLanguage(language) {
+            const selectedDiv = document.getElementById('selected-language');
+            selectedDiv.textContent = language;
+            toggleDropdown(); // Close dropdown after selection
+        }
+
+        // Close dropdown when clicking outside
+        window.addEventListener('click', function (event) {
+            const dropdown = document.querySelector('.dropdown');
+            if (!dropdown.contains(event.target)) {
+                dropdown.classList.remove('open');
+            }
+        });
+
+    </script>
 </body>
 
 </html>

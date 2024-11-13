@@ -26,19 +26,31 @@
     <link rel="icon" type="image/svg+xml" href="https://static.wixstatic.com/media/a64cda_74704ce89b8b4e6eb850accaeeee1a93%7Emv2.png/v1/fill/w_192%2Ch_192%2Clg_1%2Cusm_0.66_1.00_0.01/a64cda_74704ce89b8b4e6eb850accaeeee1a93%7Emv2.png.html">
 
     <style>
+<<<<<<< HEAD
         /* Custom CSS for dropdown behavior */
+=======
+>>>>>>> 3a631830a36e045793caf09176ee767ab120cc54
         .dropdown {
             position: relative;
             display: inline-block;
             width: 200px;
+<<<<<<< HEAD
+=======
+            /* Adjust width as needed */
+>>>>>>> 3a631830a36e045793caf09176ee767ab120cc54
         }
 
         .dropdown select {
             display: none;
+<<<<<<< HEAD
+=======
+            /* Hide the default select */
+>>>>>>> 3a631830a36e045793caf09176ee767ab120cc54
         }
 
         .dropdown .selected {
             background-color: #242943;
+<<<<<<< HEAD
             border: 1px solid #50adc9;
             padding: 7px;
             cursor: pointer;
@@ -46,19 +58,44 @@
             display: flex;
             align-items: center;
             border-radius: 0.375rem;
+=======
+            /* szeFoszin1 */
+            border: 1px solid #50adc9;
+            /* szeFoszin2 */
+            padding: 7px;
+            cursor: pointer;
+            color: white;
+            /* White text for contrast */
+            display: flex;
+            align-items: center;
+            border-radius: 0.375rem;
+            /* Rounded corners */
+>>>>>>> 3a631830a36e045793caf09176ee767ab120cc54
         }
 
         .dropdown .options {
             display: none;
             position: absolute;
             background-color: #fff;
+<<<<<<< HEAD
             border: 1px solid #50adc9;
+=======
+            /* White background for options */
+            border: 1px solid #50adc9;
+            /* szeFoszin2 */
+>>>>>>> 3a631830a36e045793caf09176ee767ab120cc54
             z-index: 1;
             width: 100%;
             max-height: 200px;
             overflow-y: auto;
             border-radius: 0.375rem;
+<<<<<<< HEAD
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+=======
+            /* Rounded corners */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            /* Subtle shadow */
+>>>>>>> 3a631830a36e045793caf09176ee767ab120cc54
         }
 
         .dropdown .option {
@@ -67,15 +104,29 @@
             display: flex;
             align-items: center;
             color: #242943;
+<<<<<<< HEAD
+=======
+            /* szeFoszin1 */
+>>>>>>> 3a631830a36e045793caf09176ee767ab120cc54
         }
 
         .dropdown .option:hover {
             background-color: #50adc9;
+<<<<<<< HEAD
             color: white;
+=======
+            /* szeFoszin2 */
+            color: white;
+            /* White text on hover */
+>>>>>>> 3a631830a36e045793caf09176ee767ab120cc54
         }
 
         .dropdown.open .options {
             display: block;
+<<<<<<< HEAD
+=======
+            /* Show options when dropdown is open */
+>>>>>>> 3a631830a36e045793caf09176ee767ab120cc54
         }
     </style>
 </head>
@@ -83,6 +134,7 @@
 <body class="bg-gray-100">
     <div class="flex min-h-screen">
         <!-- Sidebar -->
+<<<<<<< HEAD
         <div class="sidebar fixed top-0 left-0 h-full w-80 bg-szeFoszin1 transition-transform duration-300 transform -translate-x-full lg:translate-x-0 overflow-y-auto" id="sidebar">
             <div class="mb-4">
                 <img src="https://static.wixstatic.com/media/a64cda_1b6e4310f40343f4ab177e4f7674d6e3~mv2.png" alt="Logo" class="w-40 h-auto mx-auto">
@@ -144,10 +196,165 @@
                     <div class="option" data-value="en" onclick="selectLanguage('🇬🇧 English')">🇬🇧 English</div>
                     <div class="option" data-value="de" onclick="selectLanguage('🇩🇪 Deutsch')">🇩🇪 Deutsch</div>
                 </div>
+=======
+        <div class="sidebar fixed top-0 left-0 h-full w-full lg:w-64  bg-szeFoszin1 transition-transform duration-300 transform -translate-x-full lg:translate-x-0 overflow-y-auto" id="sidebar">
+            <div class="mb-4 flex items-center justify-around">
+                <img src="https://static.wixstatic.com/media/a64cda_1b6e4310f40343f4ab177e4f7674d6e3~mv2.png" alt="Logo" class="w-40 h-auto">
+                <div id="hamburger" onclick="toggleSidebar()" class="lg:hidden">
+                    
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="white" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M21 16.811c0 .864-.933 1.406-1.683.977l-7.108-4.061a1.125 1.125 0 0 1 0-1.954l7.108-4.061A1.125 1.125 0 0 1 21 8.689v8.122ZM11.25 16.811c0 .864-.933 1.406-1.683.977l-7.108-4.061a1.125 1.125 0 0 1 0-1.954l7.108-4.061a1.125 1.125 0 0 1 1.683.977v8.122Z" />
+                      </svg>
+                      
+                </div>
+            </div>
+            <nav class="text-white p-4" role="navigation">
+                <ul class="flex flex-col space-y-2">
+                    <li><a class="hover:bg-szeFoszin2 block my-1 py-1 pl-1 text-lg font-bold  rounded-md"
+    aria-current="false"
+    href="./dashboard.html"
+>Főoldal </a>
+
+</li>
+                    <hr>
+                    <li><a class="hover:bg-szeFoszin2 block my-1 py-1 pl-1 text-lg font-bold  rounded-md"
+    aria-current="false"
+    href="./szobafoglalas.html"
+>Szobafoglalás </a>
+
+</li>
+                    <li><a class="hover:bg-szeFoszin2 block my-1 py-1 pl-1 text-lg font-bold  rounded-md"
+    aria-current="false"
+    href="./szobacsere.html"
+>Szobacsere kérelem </a>
+
+</li>
+                    <li><a class="hover:bg-szeFoszin2 block my-1 py-1 pl-1 text-lg font-bold  rounded-md"
+    aria-current="false"
+    href="./penzugyek.html"
+>Pénzügyek </a>
+
+</li>
+                    <hr>
+                    <li><a class="hover:bg-szeFoszin2 block my-1 py-1 pl-1 text-lg font-bold  rounded-md"
+    aria-current="false"
+    href="./szallasfoglalas.html"
+>Szállásfoglalás </a>
+
+</li>
+                    <li><a class="hover:bg-szeFoszin2 block my-1 py-1 pl-1 text-lg font-bold  rounded-md"
+    aria-current="false"
+    href="./vendegfogadas.html"
+>Vendégfogadás </a>
+
+</li>
+                    <hr>
+                    <li><a class="hover:bg-szeFoszin2 block my-1 py-1 pl-1 text-lg font-bold  rounded-md"
+    aria-current="false"
+    href="./hazamenetel.html"
+>Hazamenetel </a>
+
+</li>
+                    <li><a class="hover:bg-szeFoszin2 block my-1 py-1 pl-1 text-lg font-bold  rounded-md"
+    aria-current="false"
+    href="./kimenok.html"
+>Kimenők </a>
+
+</li>
+                    <hr>
+                    <li><a class="hover:bg-szeFoszin2 block my-1 py-1 pl-1 text-lg font-bold  rounded-md"
+    aria-current="false"
+    href="./szolgaltatas.html"
+>Szolgáltatás igénylés </a>
+
+</li>
+                    <li><a class="hover:bg-szeFoszin2 block my-1 py-1 pl-1 text-lg font-bold  rounded-md"
+    aria-current="false"
+    href="./internet.html"
+>Internet </a>
+
+</li>
+                    <li><a class="hover:bg-szeFoszin2 block my-1 py-1 pl-1 text-lg font-bold  rounded-md"
+    aria-current="false"
+    href="./parkolas.html"
+>Parkolás, bicikli tárolás </a>
+
+</li>
+                    <li><a class="hover:bg-szeFoszin2 block my-1 py-1 pl-1 text-lg font-bold  rounded-md"
+    aria-current="false"
+    href="./rendezvenyek.html"
+>Rendezvények </a>
+
+</li>
+                    <hr>
+                    <li><a class="hover:bg-szeFoszin2 block my-1 py-1 pl-1 text-lg font-bold  rounded-md"
+    aria-current="false"
+    href="./hibabejelentes.html"
+>Hibabejelentés </a>
+
+</li>
+                    <li><a class="hover:bg-szeFoszin2 block my-1 py-1 pl-1 text-lg font-bold  rounded-md"
+    aria-current="false"
+    href="./kikoltozes.html"
+>Kiköltözési kérelem </a>
+
+</li>
+                    <li><a class="hover:bg-szeFoszin2 block my-1 py-1 pl-1 text-lg font-bold  rounded-md"
+    aria-current="false"
+    href="./informaciok.html"
+>Információk, letölthető anyagok </a>
+
+</li>
+                    <li><a class="hover:bg-szeFoszin2 block my-1 py-1 pl-1 text-lg font-bold  rounded-md"
+    aria-current="false"
+    href="./cseveges.html"
+>Csevegés </a>
+
+</li>
+                    <li><a class="hover:bg-szeFoszin2 block my-1 py-1 pl-1 text-lg font-bold  rounded-md"
+    aria-current="false"
+    href="./kapcsolat.html"
+>Kapcsolat </a>
+
+</li>
+                </ul>
+            </nav>
+            <div class="mb-4 lg:hidden xl:hidden">
+                <div class="dropdown">
+                    <div class="selected" id="selected-language" onclick="toggleDropdown()">
+                        🇭🇺 Magyar
+                        <!-- Default language flag and name -->
+                    </div>
+                    <div class="options" id="language-options">
+                        <div class="option" data-value="hu" onclick="selectLanguage('🇭🇺 Magyar')">🇭🇺 Magyar
+                        </div>
+                        <div class="option" data-value="en" onclick="selectLanguage('🇬🇧 English')">🇬🇧
+                            English</div>
+                        <div class="option" data-value="de" onclick="selectLanguage('🇩🇪 Deutsch')">🇩🇪
+                            Deutsch</div>
+                        <div class="option" data-value="zh" onclick="selectLanguage('🇨🇳 中文')">🇨🇳 中文</div>
+                        <div class="option" data-value="ru" onclick="selectLanguage('🇷🇺 Русский')">🇷🇺
+                            Русский</div>
+                        <div class="option" data-value="fr" onclick="selectLanguage('🇫🇷 Français')">🇫🇷
+                            Français</div>
+                        <div class="option" data-value="es" onclick="selectLanguage('🇪🇸 Español')">🇪🇸
+                            Español</div>
+                        <div class="option" data-value="it" onclick="selectLanguage('🇮🇹 Italiano')">🇮🇹
+                            Italiano</div>
+                        <div class="option" data-value="pt" onclick="selectLanguage('🇵🇹 Português')">🇵🇹
+                            Português</div>
+                        <div class="option" data-value="ja" onclick="selectLanguage('🇯🇵 日本語')">🇯🇵 日本語</div>
+                    </div>
+                </div>
+
+
+
+>>>>>>> 3a631830a36e045793caf09176ee767ab120cc54
             </div>
         </div>
 
         <!-- Overlay -->
+<<<<<<< HEAD
         <div class="" id="overlay" onclick="toggleSidebar()"></div>
 
         <!-- Main content -->
@@ -204,30 +411,110 @@
 
     <!-- Registered Guests Section -->
     <section id="registered-guests" class="p-8 text-center">
+=======
+        <div class=" " id="overlay" onclick="toggleSidebar()"></div>
+
+        <!-- Main content -->
+        <div class="content flex-1 py-4 px-1 transition-margin duration-300 lg:ml-64" id="content">
+            <!-- Top Navbar -->
+            <div class="bg-szeFoszin1 text-white p-4 rounded-lg mb-4 lg:justify-between">
+                
+                <div class="flex justify-between">
+                    <div class="flex items-center space-x-2">
+                        <div id="hamburger" onclick="toggleSidebar()" class="lg:hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="white" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                            </svg>
+                        </div>
+                        <h1 class="text-2xl font-bold">Vendégfogadás</h1>
+                    </div>
+                    <div>
+                        <div class="hidden lg:flex items-center space-x-4">
+                            <div class="">
+                                <div class="dropdown">
+                                    <div class="selected" id="selected-language" onclick="toggleDropdown()">
+                                        🇭🇺 Magyar
+                                        <!-- Default language flag and name -->
+                                    </div>
+                                    <div class="options" id="language-options">
+                                        <div class="option" data-value="hu" onclick="selectLanguage('🇭🇺 Magyar')">🇭🇺 Magyar
+                                        </div>
+                                        <div class="option" data-value="en" onclick="selectLanguage('🇬🇧 English')">🇬🇧
+                                            English</div>
+                                        <div class="option" data-value="de" onclick="selectLanguage('🇩🇪 Deutsch')">🇩🇪
+                                            Deutsch</div>
+                                        <div class="option" data-value="zh" onclick="selectLanguage('🇨🇳 中文')">🇨🇳 中文</div>
+                                        <div class="option" data-value="ru" onclick="selectLanguage('🇷🇺 Русский')">🇷🇺
+                                            Русский</div>
+                                        <div class="option" data-value="fr" onclick="selectLanguage('🇫🇷 Français')">🇫🇷
+                                            Français</div>
+                                        <div class="option" data-value="es" onclick="selectLanguage('🇪🇸 Español')">🇪🇸
+                                            Español</div>
+                                        <div class="option" data-value="it" onclick="selectLanguage('🇮🇹 Italiano')">🇮🇹
+                                            Italiano</div>
+                                        <div class="option" data-value="pt" onclick="selectLanguage('🇵🇹 Português')">🇵🇹
+                                            Português</div>
+                                        <div class="option" data-value="ja" onclick="selectLanguage('🇯🇵 日本語')">🇯🇵 日本語</div>
+                                    </div>
+                                </div>
+                
+                
+                
+                            </div>
+                            <a href="#.html" class="text-szeFoszin2 hover:text-szeFoszin1">Kijelentkezés</a>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+
+            <!-- Rest of the content goes here -->
+            <!-- Available Overnight Tokens -->
+    <div class="bg-white shadow-lg rounded-lg mx-8 mt-4 p-8 flex flex-col">
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">Elérhető bentalvós tokenek</h2>
+        <div class="flex flex-col mb-4">
+            <p class="text-lg font-semibold text-gray-600">Elérhető tokenek száma: <span class="text-gray-800 font-bold">3</span></p>
+        </div>
+    </div>
+
+    <!-- Registered Guests -->
+    <section id="registered-guests" class="p-8 py-8 text-center">
+>>>>>>> 3a631830a36e045793caf09176ee767ab120cc54
         <h2 class="text-3xl font-bold mb-6">Rögzített vendégek</h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
             <!-- Guest Example -->
             <div class="bg-white p-6 rounded-lg shadow-md flex flex-col">
                 <h3 class="font-bold text-xl text-gray-800 mb-2">Kiss János</h3>
                 <p class="font-semibold">Felfüggesztések száma: <span class="text-gray-600">2</span></p>
+<<<<<<< HEAD
                 <p class="text-gray-600">Státusz: Jóváhagyva</p>
+=======
+>>>>>>> 3a631830a36e045793caf09176ee767ab120cc54
                 <div class="mt-auto">
                     <button class="mt-4 bg-szeFoszin2 text-white py-2 px-4 rounded-md">Vendég adatlap</button>
                 </div>
             </div>
 
+<<<<<<< HEAD
             <!-- More guest entries as needed -->
+=======
+            <!-- Add more registered guests here -->
+>>>>>>> 3a631830a36e045793caf09176ee767ab120cc54
         </div>
     </section>
 
     <!-- Register New Guest -->
     <div class="bg-white shadow-lg rounded-lg mx-8 mt-4 p-8 flex flex-col">
         <h2 class="text-2xl font-bold text-gray-800 mb-4">Új vendég rögzítése</h2>
+<<<<<<< HEAD
         <p class="text-sm text-gray-600 mb-4">
             Új vendég rögzítése esetén meg kell adni a vendég alapadatait. A vendég minden tettéért a kollégista felel. Az új vendég jóváhagyása az ügyintézők általi ellenőrzés után történik.
         </p>
         <form id="new-guest-form">
             <!-- Guest Details Form -->
+=======
+        <form id="new-guest-form">
+>>>>>>> 3a631830a36e045793caf09176ee767ab120cc54
             <div class="flex flex-col mb-4">
                 <label for="guest-name" class="font-semibold">Teljes név:</label>
                 <input type="text" id="guest-name" placeholder="Vendég teljes neve" class="border rounded p-2" required>
@@ -264,7 +551,11 @@
         </form>
     </div>
 
+<<<<<<< HEAD
     <!-- Previous Overnight Stays Section -->
+=======
+    <!-- Previous Overnight Stays -->
+>>>>>>> 3a631830a36e045793caf09176ee767ab120cc54
     <section id="previous-stays" class="py-8 text-center">
         <h2 class="text-3xl font-bold mb-6">Korábbi bentalvások</h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -278,7 +569,11 @@
                 </div>
             </div>
 
+<<<<<<< HEAD
             <!-- More previous stays as needed -->
+=======
+            <!-- Add more previous stays as needed -->
+>>>>>>> 3a631830a36e045793caf09176ee767ab120cc54
         </div>
     </section>
         </div>
@@ -288,6 +583,7 @@
         function toggleSidebar() {
             document.getElementById('sidebar').classList.toggle('-translate-x-full');
             document.getElementById('overlay').classList.toggle('hidden');
+<<<<<<< HEAD
             document.getElementById('content').classList.toggle('ml-80');
         }
 
@@ -360,5 +656,34 @@
         </div>
     </div>
 </footer>
+=======
+            document.getElementById('content').classList.toggle('ml-64');
+        }
+
+
+
+
+        function toggleDropdown() {
+            const dropdown = document.querySelector('.dropdown');
+            dropdown.classList.toggle('open');
+        }
+
+        function selectLanguage(language) {
+            const selectedDiv = document.getElementById('selected-language');
+            selectedDiv.textContent = language;
+            toggleDropdown(); // Close dropdown after selection
+        }
+
+        // Close dropdown when clicking outside
+        window.addEventListener('click', function (event) {
+            const dropdown = document.querySelector('.dropdown');
+            if (!dropdown.contains(event.target)) {
+                dropdown.classList.remove('open');
+            }
+        });
+
+    </script>
+</body>
+>>>>>>> 3a631830a36e045793caf09176ee767ab120cc54
 
 </html>

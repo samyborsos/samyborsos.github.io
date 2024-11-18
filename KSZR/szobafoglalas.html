@@ -13,8 +13,10 @@
             theme: {
                 extend: {
                     colors: {
-                        szeFoszin1: '#242943',
-                        szeFoszin2: '#50adc9',
+                        /* szeFoszin1: '#31511E', */
+                      /*   szeFoszin2: '#859F3D', */
+                        szeFoszin1: '#231942',
+                        szeFoszin2: '#9B7EBD', 
                     }
                 }
             }
@@ -23,6 +25,8 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css.html" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOMvWz0z8Qk8JYVxBZT2F5MdLw0MS3XaK9dYmoC" crossorigin="anonymous">
     <link href="https://unpkg.com/heroicons@1.0.6/dist/heroicons.min.css.html" rel="stylesheet">
+    <!-- Font Awesome CDN -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css.html" rel="stylesheet">
     <link rel="icon" type="image/svg+xml" href="https://static.wixstatic.com/media/a64cda_74704ce89b8b4e6eb850accaeeee1a93%7Emv2.png/v1/fill/w_192%2Ch_192%2Clg_1%2Cusm_0.66_1.00_0.01/a64cda_74704ce89b8b4e6eb850accaeeee1a93%7Emv2.png.html">
 
     <style>
@@ -84,66 +88,188 @@
     <div class="flex min-h-screen">
         <!-- Sidebar -->
         <div class="sidebar fixed top-0 left-0 h-full w-80 bg-szeFoszin1 transition-transform duration-300 transform -translate-x-full lg:translate-x-0 overflow-y-auto" id="sidebar">
-            <div class="mb-4">
-                <img src="https://static.wixstatic.com/media/a64cda_1b6e4310f40343f4ab177e4f7674d6e3~mv2.png" alt="Logo" class="w-40 h-auto mx-auto">
+            <div class="m-4">
+                <img src="http://localhost/storage/images/DSPS-logo-oldalso-feher.png" 
+                     alt="Logo" 
+                     class="w-60 h-auto mx-auto max-w-full">
             </div>
+            <hr>
             <nav class="text-white p-4" role="navigation">
                 <ul class="flex flex-col space-y-2">
-                    <li><a class="hover:bg-szeFoszin2 hover:py-4 block my-1 pl-4 text-lg font-bold  rounded-md py-4"
-    aria-current="false" href="./dashboard.html">Főoldal </a></li>
+                    <li>
+                        <a class="hover:bg-szeFoszin2 hover:py-4 block my-1 pl-4 text-lg font-bold transition duration-200 rounded-md py-4"
+    aria-current="false" href="./dashboard.html"><i class="fas fa-home mr-2"></i>Főoldal </a>                    </li>
                     <hr>
-                    <li><a class="hover:bg-szeFoszin2 hover:py-4 block my-1 pl-4 text-lg font-bold  rounded-md py-4"
-    aria-current="false" href="./szobafoglalas.html">Szobafoglalás </a></li>
-                    <li><a class="hover:bg-szeFoszin2 hover:py-4 block my-1 pl-4 text-lg font-bold  rounded-md py-4"
-    aria-current="false" href="./szobacsere.html">Szobacsere kérelem </a></li>
-                    <li><a class="hover:bg-szeFoszin2 hover:py-4 block my-1 pl-4 text-lg font-bold  rounded-md py-4"
-    aria-current="false" href="./penzugyek.html">Pénzügyek </a></li>
+                    <li>
+                        <a class="hover:bg-szeFoszin2 hover:py-4 block my-1 pl-4 text-lg font-bold transition duration-200 rounded-md py-4"
+    aria-current="false" href="./szobafoglalas.html"><i class="fas fa-bed mr-2"></i>Szobafoglalás </a>                    </li>
+                    <li>
+                        <a class="hover:bg-szeFoszin2 hover:py-4 block my-1 pl-4 text-lg font-bold transition duration-200 rounded-md py-4"
+    aria-current="false" href="./szobacsere.html"><i class="fas fa-exchange-alt mr-2"></i>Szobacsere kérelem </a>                    </li>
+                    <li>
+                        <a class="hover:bg-szeFoszin2 hover:py-4 block my-1 pl-4 text-lg font-bold transition duration-200 rounded-md py-4"
+    aria-current="false" href="./penzugyek.html"><i class="fas fa-wallet mr-2"></i>Pénzügyek </a>                    </li>
                     <hr>
-                    <li><a class="hover:bg-szeFoszin2 hover:py-4 block my-1 pl-4 text-lg font-bold  rounded-md py-4"
-    aria-current="false" href="./szallasfoglalas.html">Szállásfoglalás </a></li>
-                    <li><a class="hover:bg-szeFoszin2 hover:py-4 block my-1 pl-4 text-lg font-bold  rounded-md py-4"
-    aria-current="false" href="./vendegfogadas.html">Vendégfogadás </a></li>
+                    <li>
+                        <a class="hover:bg-szeFoszin2 hover:py-4 block my-1 pl-4 text-lg font-bold transition duration-200 rounded-md py-4"
+    aria-current="false" href="./vendegfogadas.html"><i class="fas fa-user-friends mr-2"></i>Vendégfogadás </a>                    </li>
                     <hr>
-                    <li><a class="hover:bg-szeFoszin2 hover:py-4 block my-1 pl-4 text-lg font-bold  rounded-md py-4"
-    aria-current="false" href="./hazamenetel.html">Hazamenetel </a></li>
-                    <li><a class="hover:bg-szeFoszin2 hover:py-4 block my-1 pl-4 text-lg font-bold  rounded-md py-4"
-    aria-current="false" href="./kimenok.html">Kimenők </a></li>
+                    <li>
+                        <a class="hover:bg-szeFoszin2 hover:py-4 block my-1 pl-4 text-lg font-bold transition duration-200 rounded-md py-4"
+    aria-current="false" href="./hazamenetel.html"><i class="fas fa-plane-departure mr-2"></i>Hazamenetel </a>                    </li>
+                    <li>
+                        <a class="hover:bg-szeFoszin2 hover:py-4 block my-1 pl-4 text-lg font-bold transition duration-200 rounded-md py-4"
+    aria-current="false" href="./kimenok.html"><i class="fas fa-sign-out-alt mr-2"></i>Kimenők </a>                    </li>
                     <hr>
-                    <li><a class="hover:bg-szeFoszin2 hover:py-4 block my-1 pl-4 text-lg font-bold  rounded-md py-4"
-    aria-current="false" href="./szolgaltatas.html">Szolgáltatás igénylés </a></li>
-                    <li><a class="hover:bg-szeFoszin2 hover:py-4 block my-1 pl-4 text-lg font-bold  rounded-md py-4"
-    aria-current="false" href="./internet.html">Internet </a></li>
-                    <li><a class="hover:bg-szeFoszin2 hover:py-4 block my-1 pl-4 text-lg font-bold  rounded-md py-4"
-    aria-current="false" href="./parkolas.html">Parkolás, bicikli tárolás </a></li>
-                    <li><a class="hover:bg-szeFoszin2 hover:py-4 block my-1 pl-4 text-lg font-bold  rounded-md py-4"
-    aria-current="false" href="./rendezvenyek.html">Rendezvények </a></li>
+                    <li>
+                        <a class="hover:bg-szeFoszin2 hover:py-4 block my-1 pl-4 text-lg font-bold transition duration-200 rounded-md py-4"
+    aria-current="false" href="./szolgaltatas.html"><i class="fas fa-cogs mr-2"></i>Szolgáltatás igénylés </a>                    </li>
+                    <li>
+                        <a class="hover:bg-szeFoszin2 hover:py-4 block my-1 pl-4 text-lg font-bold transition duration-200 rounded-md py-4"
+    aria-current="false" href="./internet.html"><i class="fas fa-wifi mr-2"></i>Internet </a>                    </li>
+                    <li>
+                        <a class="hover:bg-szeFoszin2 hover:py-4 block my-1 pl-4 text-lg font-bold transition duration-200 rounded-md py-4"
+    aria-current="false" href="./parkolas.html"><i class="fas fa-car mr-2"></i>Parkolás, bicikli tárolás </a>                    </li>
+                    <li>
+                        <a class="hover:bg-szeFoszin2 hover:py-4 block my-1 pl-4 text-lg font-bold transition duration-200 rounded-md py-4"
+    aria-current="false" href="./rendezvenyek.html"><i class="fas fa-calendar-alt mr-2"></i>Rendezvények </a>                    </li>
                     <hr>
-                    <li><a class="hover:bg-szeFoszin2 hover:py-4 block my-1 pl-4 text-lg font-bold  rounded-md py-4"
-    aria-current="false" href="./hibabejelentes.html">Hibabejelentés </a></li>
-                    <li><a class="hover:bg-szeFoszin2 hover:py-4 block my-1 pl-4 text-lg font-bold  rounded-md py-4"
-    aria-current="false" href="./kikoltozes.html">Kiköltözési kérelem </a></li>
-                    <li><a class="hover:bg-szeFoszin2 hover:py-4 block my-1 pl-4 text-lg font-bold  rounded-md py-4"
-    aria-current="false" href="./hirdetesek.html">Hirdetések </a></li>
-                    <li><a class="hover:bg-szeFoszin2 hover:py-4 block my-1 pl-4 text-lg font-bold  rounded-md py-4"
-    aria-current="false" href="./email-kuldes.html">Email küldés </a></li>
+                    <li>
+                        <a class="hover:bg-szeFoszin2 hover:py-4 block my-1 pl-4 text-lg font-bold transition duration-200 rounded-md py-4"
+    aria-current="false" href="./hibabejelentes.html"><i class="fas fa-tools mr-2"></i>Hibabejelentés </a>                    </li>
+                    <li>
+                        <a class="hover:bg-szeFoszin2 hover:py-4 block my-1 pl-4 text-lg font-bold transition duration-200 rounded-md py-4"
+    aria-current="false" href="./kikoltozes.html"><i class="fas fa-door-open mr-2"></i>Kiköltözési kérelem </a>                    </li>
+                    <li>
+                        <a class="hover:bg-szeFoszin2 hover:py-4 block my-1 pl-4 text-lg font-bold transition duration-200 rounded-md py-4"
+    aria-current="false" href="./hirdetesek.html"><i class="fas fa-bullhorn mr-2"></i>Hirdetések </a>                    </li>
+                    <li>
+                        <a class="hover:bg-szeFoszin2 hover:py-4 block my-1 pl-4 text-lg font-bold transition duration-200 rounded-md py-4"
+    aria-current="false" href="./email-kuldes.html"><i class="fas fa-envelope mr-2"></i>Email küldés </a>                    </li>
                     <hr>
-                    <li><a class="hover:bg-szeFoszin2 hover:py-4 block my-1 pl-4 text-lg font-bold  rounded-md py-4"
-    aria-current="false" href="./informaciok.html">Információk, letölthető anyagok </a></li>
-                    <li><a class="hover:bg-szeFoszin2 hover:py-4 block my-1 pl-4 text-lg font-bold  rounded-md py-4"
-    aria-current="false" href="./kapcsolat.html">Kapcsolat </a></li>
-                    <li><a class="hover:bg-szeFoszin2 hover:py-4 block my-1 pl-4 text-lg font-bold  rounded-md py-4"
-    aria-current="false" href="./rendszerbeallitasok.html">Rendszerbeállítások </a></li>
+                    <li>
+                        <a class="hover:bg-szeFoszin2 hover:py-4 block my-1 pl-4 text-lg font-bold transition duration-200 rounded-md py-4"
+    aria-current="false" href="./informaciok.html"><i class="fas fa-info-circle mr-2"></i>Információk, letölthető anyagok </a>                    </li>
+                    <li>
+                        <a class="hover:bg-szeFoszin2 hover:py-4 block my-1 pl-4 text-lg font-bold transition duration-200 rounded-md py-4"
+    aria-current="false" href="./kapcsolat.html"><i class="fas fa-phone mr-2"></i>Kapcsolat </a>                    </li>
+                    <li>
+                        <a class="hover:bg-szeFoszin2 hover:py-4 block my-1 pl-4 text-lg font-bold transition duration-200 rounded-md py-4"
+    aria-current="false" href="./rendszerbeallitasok.html"><i class="fas fa-sliders-h mr-2"></i>Rendszerbeállítások </a>                    </li>
                 </ul>
             </nav>
-            <div class="dropdown relative mb-4 pl-8">
-                <div class="selected" id="selected-language" onclick="toggleDropdown()">
-                    🇭🇺 Magyar
-                </div>
-                <div class="options" id="language-options">
-                    <div class="option" data-value="hu" onclick="selectLanguage('🇭🇺 Magyar')">🇭🇺 Magyar</div>
-                    <div class="option" data-value="en" onclick="selectLanguage('🇬🇧 English')">🇬🇧 English</div>
-                    <div class="option" data-value="de" onclick="selectLanguage('🇩🇪 Deutsch')">🇩🇪 Deutsch</div>
-                </div>
+            
+            <div class="ml-8 space-y-8 mb-80">
+
+                <!-- Template -->
+
+<div class="dropdown relative ml-8">
+    <div class="selected" onclick="toggleDropdown(this)">
+        🇭🇺 Magyar
+    </div>
+    <div class="options hidden">
+        <div class="option" data-value="hu" onclick="selectLanguage(this, '🇭🇺 Magyar')">🇭🇺 Magyar</div>
+        <div class="option" data-value="en" onclick="selectLanguage(this, '🇬🇧 English')">🇬🇧 English</div>
+        <div class="option" data-value="de" onclick="selectLanguage(this, '🇩🇪 Deutsch')">🇩🇪 Deutsch</div>
+    </div>
+</div>
+
+<!-- Styles -->
+<style>
+    /* Dropdown container */
+    .dropdown {
+        position: relative;
+        display: inline-block;
+        width: 200px;
+    }
+
+    /* Selected language display */
+    .dropdown .selected {
+        background-color: #412e79;
+        border: 1px solid #5e548e;
+        padding: 7px;
+        cursor: pointer;
+        color: white;
+        display: flex;
+        align-items: center;
+        border-radius: 0.375rem;
+    }
+
+    /* Options container */
+    .dropdown .options {
+        display: none;
+        position: absolute;
+        background-color: #fff;
+        border: 1px solid #5e548e;
+        z-index: 1;
+        width: 100%;
+        max-height: 200px;
+        overflow-y: auto;
+        border-radius: 0.375rem;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Option items */
+    .dropdown .option {
+        padding: 10px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        color: #242943;
+    }
+
+    /* Hover effect for options */
+    .dropdown .option:hover {
+        background-color: #5e548e;
+        color: white;
+    }
+
+    /* When options are open */
+    .dropdown .options.open {
+        display: block;
+    }
+</style>
+
+<!-- Script -->
+<script>
+    function toggleDropdown(selectedElement) {
+        // Close all dropdowns first
+        document.querySelectorAll('.dropdown .options').forEach(options => {
+            options.classList.add('hidden');
+            options.classList.remove('open');
+        });
+
+        // Toggle the current dropdown
+        const options = selectedElement.nextElementSibling;
+        options.classList.toggle('hidden');
+        options.classList.toggle('open');
+    }
+
+    function selectLanguage(optionElement, language) {
+        // Find the closest dropdown container
+        const dropdown = optionElement.closest('.dropdown');
+
+        // Update the selected language
+        const selectedElement = dropdown.querySelector('.selected');
+        selectedElement.innerText = language;
+
+        // Close the dropdown
+        const options = dropdown.querySelector('.options');
+        options.classList.add('hidden');
+        options.classList.remove('open');
+    }
+
+    // Close dropdowns when clicking outside
+    document.addEventListener('click', function (event) {
+        if (!event.target.closest('.dropdown')) {
+            document.querySelectorAll('.dropdown .options').forEach(options => {
+                options.classList.add('hidden');
+                options.classList.remove('open');
+            });
+        }
+    });
+</script>
+                <button class="bg-szeFoszin1 text-white rounded p-2 transition duration-200 hover:bg-szeFoszin2 rounded-lg px-6 py-2 border border-white rounded-xl ml-8">Kijelentkezés</button>
             </div>
         </div>
 
@@ -153,7 +279,7 @@
         <!-- Main content -->
         <div class="content flex-1 p-4 transition-margin duration-300 lg:ml-80 " id="content" >
             <!-- Top Navbar -->
-            <div class="bg-szeFoszin1 text-white p-4 rounded-lg mb-4 flex items-center md:justify-between ">
+            <div class="bg-szeFoszin1 text-white p-4 rounded-lg mb-4 flex items-center md:justify-between">
                 <div id="hamburger" onclick="toggleSidebar()" class="lg:hidden">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="white" class="w-6 h-6">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
@@ -161,73 +287,174 @@
                 </div>
                 <h1 class="ml-4 text-2xl font-bold text-left">Szobafoglalás</h1>
                 <div class="hidden lg:flex items-center space-x-4">
-                    <div class="dropdown relative">
-                        <div class="selected" id="selected-language" onclick="toggleDropdown()">
-                            🇭🇺 Magyar
-                        </div>
-                        <div class="options" id="language-options">
-                            <div class="option" data-value="hu" onclick="selectLanguage('🇭🇺 Magyar')">🇭🇺 Magyar</div>
-                            <div class="option" data-value="en" onclick="selectLanguage('🇬🇧 English')">🇬🇧 English</div>
-                            <div class="option" data-value="de" onclick="selectLanguage('🇩🇪 Deutsch')">🇩🇪 Deutsch</div>
-                        </div>
-                    </div>
-                    <a href="#.html" class="text-szeFoszin2 hover:text-szeFoszin1">Kijelentkezés</a>
+                        <!-- Template -->
+
+<div class="dropdown relative flex items-center md:hidden">
+    <div class="selected" onclick="toggleDropdown(this)">
+        🇭🇺 Magyar
+    </div>
+    <div class="options hidden">
+        <div class="option" data-value="hu" onclick="selectLanguage(this, '🇭🇺 Magyar')">🇭🇺 Magyar</div>
+        <div class="option" data-value="en" onclick="selectLanguage(this, '🇬🇧 English')">🇬🇧 English</div>
+        <div class="option" data-value="de" onclick="selectLanguage(this, '🇩🇪 Deutsch')">🇩🇪 Deutsch</div>
+    </div>
+</div>
+
+<!-- Styles -->
+<style>
+    /* Dropdown container */
+    .dropdown {
+        position: relative;
+        display: inline-block;
+        width: 200px;
+    }
+
+    /* Selected language display */
+    .dropdown .selected {
+        background-color: #412e79;
+        border: 1px solid #5e548e;
+        padding: 7px;
+        cursor: pointer;
+        color: white;
+        display: flex;
+        align-items: center;
+        border-radius: 0.375rem;
+    }
+
+    /* Options container */
+    .dropdown .options {
+        display: none;
+        position: absolute;
+        background-color: #fff;
+        border: 1px solid #5e548e;
+        z-index: 1;
+        width: 100%;
+        max-height: 200px;
+        overflow-y: auto;
+        border-radius: 0.375rem;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Option items */
+    .dropdown .option {
+        padding: 10px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        color: #242943;
+    }
+
+    /* Hover effect for options */
+    .dropdown .option:hover {
+        background-color: #5e548e;
+        color: white;
+    }
+
+    /* When options are open */
+    .dropdown .options.open {
+        display: block;
+    }
+</style>
+
+<!-- Script -->
+<script>
+    function toggleDropdown(selectedElement) {
+        // Close all dropdowns first
+        document.querySelectorAll('.dropdown .options').forEach(options => {
+            options.classList.add('hidden');
+            options.classList.remove('open');
+        });
+
+        // Toggle the current dropdown
+        const options = selectedElement.nextElementSibling;
+        options.classList.toggle('hidden');
+        options.classList.toggle('open');
+    }
+
+    function selectLanguage(optionElement, language) {
+        // Find the closest dropdown container
+        const dropdown = optionElement.closest('.dropdown');
+
+        // Update the selected language
+        const selectedElement = dropdown.querySelector('.selected');
+        selectedElement.innerText = language;
+
+        // Close the dropdown
+        const options = dropdown.querySelector('.options');
+        options.classList.add('hidden');
+        options.classList.remove('open');
+    }
+
+    // Close dropdowns when clicking outside
+    document.addEventListener('click', function (event) {
+        if (!event.target.closest('.dropdown')) {
+            document.querySelectorAll('.dropdown .options').forEach(options => {
+                options.classList.add('hidden');
+                options.classList.remove('open');
+            });
+        }
+    });
+</script>
+                    <button class="bg-szeFoszin1 text-white rounded p-2 transition duration-200 hover:bg-szeFoszin2 rounded-lg px-6 py-2 border border-white rounded-xl">Kijelentkezés</button>
                 </div>
             </div>
+            
 
             <!-- Rest of the content goes here -->
-                <div id="popup" class="fixed inset-0 bg-gray-800 bg-opacity-75 flex items-center justify-center z-50 shadow-lg">
-    <div class="bg-white p-4 md:p-6 rounded-lg shadow-lg w-11/12 max-w-lg relative">
-        <!-- Top Close Button -->
-        <button onclick="hidePopup()" class="absolute top-4 right-4 text-gray-500 hover:text-gray-700 text-2xl md:text-3xl">&times;</button>
+                <div id="popup" class="fixed inset-0 bg-gray-800 bg-opacity-75 flex items-center justify-center z-50">
+    <div 
+        class="bg-white p-4 md:p-6 rounded-lg shadow-lg mx-4 overflow-visible relative overflow-visibl w-3/5 mr-[100px]"
+        style="max-height: 90vh;">
+        
+        <!-- Close Button -->
+        <button 
+            onclick="hidePopup()" 
+            class="absolute top-4 right-4 text-gray-500 hover:text-gray-700 text-2xl md:text-3xl">
+            &times;
+        </button>
         
         <!-- Popup Content -->
         <div class="mt-4 text-center text-gray-700 italic font-bold leading-6 md:leading-8">
-            Ezen a felületen foglalhatsz szobát a kollégiumban. Válaszd ki a kívánt időpontot és szobatípust, majd kövesd az utasításokat a foglalás befejezéséhez.
+            Ezen a felületen foglalhatsz szobát a kollégiumban. Válaszd ki a kívánt időpontot és szobatípust, majd kövesd az
+        utasításokat a foglalás befejezéséhez.
         </div>
         
         <!-- Bottom Close Button -->
         <div class="mt-6 flex justify-center">
-            <button onclick="hidePopup()" class="bg-szeFoszin1 text-white py-2 px-4 rounded-md hover:bg-szeFoszin2 transition duration-200">
-                Bezárás
-            </button>
+            <button class="bg-szeFoszin1 text-white rounded p-2 transition duration-200 hover:bg-szeFoszin2 rounded-lg px-6 py-2" onclick="hidePopup()">Bezárás</button>
         </div>
     </div>
 </div>
 
     <div class="bg-white shadow-lg rounded-lg lg:mx-8 mt-4 p-8 overflow-x-y overflow-y-clip">
         <h2 class="text-xl font-semibold mb-4">Szobafoglalás</h2>
-        
-        <input type="hidden" name="_token" value="" autocomplete="off"> <!-- Laravel CSRF Protection -->
+
+        <input type="hidden" name="_token" value="" autocomplete="off">        <!-- Laravel CSRF Protection -->
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div class="flex flex-col">
                 <label for="username" class="font-semibold">Felhasználó neve:</label>
-                <input type="text" id="username" name="username" value="Nagy Péter" readonly class="border rounded p-2 bg-gray-200">
+                <input type="text" id="username" name="username" value="Nagy Péter" readonly
+                    class="border rounded p-2 bg-gray-200">
             </div>
             <div class="flex flex-col">
-                <label for="user_id" class="font-semibold">Felhasználó azonosítója:</label>
-                <input type="text" id="user_id" name="user_id" value="ABC123" readonly class="border rounded p-2 bg-gray-200">
+                <label for="user_id" class="font-semibold">Oktatási azonosító:</label>
+                <input type="text" id="user_id" name="user_id" value="ABC123" readonly
+                    class="border rounded p-2 bg-gray-200">
             </div>
             <div class="flex flex-col">
                 <label for="email" class="font-semibold">Felhasználó email címe:</label>
-                <input type="email" id="email" name="email" value="peter.nagy@example.com" readonly class="border rounded p-2 bg-gray-200">
+                <input type="email" id="email" name="email" value="peter.nagy@example.com" readonly
+                    class="border rounded p-2 bg-gray-200">
             </div>
             <div class="flex flex-col">
                 <label for="phone" class="font-semibold">Felhasználó telefonszáma:</label>
-                <input type="tel" id="phone" name="phone" value="+36 30 987 6543" readonly class="border rounded p-2 bg-gray-200">
-            </div>
-            <div class="flex flex-col">
-                <label for="checkin_date" class="font-semibold">Bejelentkezés dátuma:</label>
-                <input type="date" id="checkin_date" name="checkin_date"  class="border rounded p-2">
-            </div>
-            <div class="flex flex-col">
-                <label for="checkout_date" class="font-semibold">Kijelentkezés dátuma:</label>
-                <input type="date" id="checkout_date" name="checkout_date"  class="border rounded p-2">
+                <input type="tel" id="phone" name="phone" value="+36 30 987 6543" readonly
+                    class="border rounded p-2 bg-gray-200">
             </div>
         </div>
 
         <div class="flex flex-col mt-4">
-            <label for="roommate" class="font-semibold">Szeretne szobatársat?</label>
+            <label for="roommate" class="font-semibold">Kiválasztja a szobatársat?</label>
             <select id="roommate" name="roommate" class="border rounded p-2" onchange="toggleRoommateName(this.value)">
                 <option value="no" selected>Nem</option>
                 <option value="yes">Igen</option>
@@ -239,30 +466,45 @@
             <div id="roommate-inputs">
                 <div class="roommate-input flex flex-col mb-2">
                     <label for="roommate_name_1">Szobatárs neve:</label>
-                    <input type="text" id="roommate_name_1" name="roommate_name[]" class="border rounded p-2" placeholder="Kérem adja meg a szobatárs nevét...">
+                    <input type="text" id="roommate_name_1" name="roommate_name[]" class="border rounded p-2"
+                        placeholder="Kérem adja meg a szobatárs nevét...">
                 </div>
                 <div class="roommate-input flex flex-col mb-2">
                     <label for="roommate_id_1">Oktatási azonosító:</label>
-                    <input type="text" id="roommate_id_1" name="roommate_id[]" class="border rounded p-2" placeholder="Oktatási azonosító...">
+                    <input type="text" id="roommate_id_1" name="roommate_id[]" class="border rounded p-2"
+                        placeholder="Oktatási azonosító...">
                 </div>
                 <div class="roommate-input flex flex-col mb-2">
                     <label for="roommate_email_1">Email cím:</label>
-                    <input type="email" id="roommate_email_1" name="roommate_email[]" class="border rounded p-2" placeholder="Email cím...">
+                    <input type="email" id="roommate_email_1" name="roommate_email[]" class="border rounded p-2"
+                        placeholder="Email cím...">
                 </div>
             </div>
-            <button type="button" onclick="addRoommateInput()" class="mt-2 bg-blue-500 text-white rounded px-2 py-1">További lakótárs hozzáadása</button>
+            <button type="button" onclick="addRoommateInput()"
+                class="mt-2 bg-blue-500 text-white rounded px-2 py-1">További lakótárs hozzáadása</button>
+        </div>
+
+        <h3 class="text-lg font-semibold mt-4 mb-2">Válasszon kollégiumot</h3>
+
+        <!-- Block selection -->
+        <div class="flex flex-col mb-4">
+            <select id="block" name="block" class="border rounded p-2">
+                <option value="block1">Kollégium 1</option>
+                <option value="block2">Kollégium 2</option>
+                <option value="block3">Kollégium 3</option>
+                <option value="block4">Kollégium 4</option>
+            </select>
         </div>
 
         <h3 class="text-lg font-semibold mt-4 mb-2">Válasszon szobát</h3>
-        
+
         <!-- Block selection -->
         <div class="flex flex-col mb-4">
             <label for="block" class="font-semibold">Szoba/Blokk/Lakóegység:</label>
             <select id="block" name="block" class="border rounded p-2">
-                <option value="block1">Blokk 1</option>
-                <option value="block2">Blokk 2</option>
-                <option value="block3">Blokk 3</option>
-                <option value="block4">Blokk 4</option>
+                <option value="block1">szoba</option>
+                <option value="block2">blokk</option>
+                <option value="block3">lakóegység</option>
             </select>
         </div>
 
@@ -277,10 +519,11 @@
                 <option value="reception4">K4</option>
             </select>
         </div>
-        
+
         <div id="roommate-name-container" class="flex flex-col mt-4 hidden">
             <label for="roommate_name" class="font-semibold">Szobatárs neve:</label>
-            <input type="text" id="roommate_name" name="roommate_name" class="border rounded p-2" placeholder="Kérem adja meg a szobatárs nevét...">
+            <input type="text" id="roommate_name" name="roommate_name" class="border rounded p-2"
+                placeholder="Kérem adja meg a szobatárs nevét...">
         </div>
 
 
@@ -289,78 +532,80 @@
             <label for="floor" class="font-semibold">Melyik szinten legyen a szoba:</label>
         </div>
         <div class="tabs space-x-2 md:space-x-8">
-            <button class="tab-button active w-1/4 md:w-auto px-2 py-1 md:px-4 md:py-2" onclick="showFloor('1')">1. Emelet</button>
-            <button class="tab-button w-1/4 md:w-auto px-2 py-1 md:px-4 md:py-2" onclick="showFloor('2')">2. Emelet</button>
-            <button class="tab-button w-1/4 md:w-auto px-2 py-1 md:px-4 md:py-2" onclick="showFloor('3')">3. Emelet</button>
-            <button class="tab-button w-1/4 md:w-auto px-2 py-1 md:px-4 md:py-2" onclick="showFloor('4')">4. Emelet</button>
+            <button class="tab-button active w-full md:w-auto px-2 py-1 md:px-4 md:py-2 bg-szeFoszin1"
+                onclick="showFloor('1')">1. Emelet</button>
+            <button class="tab-button w-full md:w-auto px-2 py-1 md:px-4 md:py-2" onclick="showFloor('2')">2. Emelet</button>
+            <button class="tab-button w-full md:w-auto px-2 py-1 md:px-4 md:py-2" onclick="showFloor('3')">3. Emelet</button>
+            <button class="tab-button w-full md:w-auto px-2 py-1 md:px-4 md:py-2" onclick="showFloor('4')">4. Emelet</button>
         </div>
 
+        <div class="container mx-auto">
+            <div class="bg-gray-100 p-4">
+                <div class="flex justify-between items-center">
+                    <div class="flex items-center">
+                        <div class="w-4 h-4 bg-green-500 rounded-full mr-2"></div>
+                        <p class="text-sm">Szabad szoba</p>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="w-4 h-4 bg-gray-400 rounded-full mr-2"></div>
+                        <p class="text-sm">Foglalt/nem választható szoba</p>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="w-4 h-4 bg-orange-500 rounded-full mr-2"></div>
+                        <p class="text-sm">Kiválasztott szoba</p>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="w-4 h-4 bg-blue-500 rounded-full mr-2"></div>
+                        <p class="text-sm">Elfoglalt szoba</p>
+                    </div>
+                </div>
+            </div>
 
-        <div id="room-container" class="mt-4">
-            <div class="floor w-full flex flex-wrap justify-between" id="floor-1">
-                <div class="room available  cursor-pointer" data-room="101">101</div>
-                <div class="room available  cursor-pointer" data-room="102">102</div>
-                <div class="room occupied " data-room="103">103</div>
-                <div class="room available  cursor-pointer" data-room="104">104</div>
-                <div class="room available  cursor-pointer" data-room="105">105</div>
-                <div class="room occupied " data-room="106">106</div>
-                <div class="room available  cursor-pointer" data-room="107">107</div>
-                <div class="room available  cursor-pointer" data-room="108">108</div>
-                <div class="room occupied " data-room="109">109</div>
-                <div class="room available  cursor-pointer" data-room="110">110</div>
-                <div class="room available  cursor-pointer" data-room="111">111</div>
-                <div class="room occupied " data-room="112">112</div>
-                <div class="room available  cursor-pointer" data-room="113">113</div>
-                <div class="room available  cursor-pointer" data-room="114">114</div>
-            </div>
+            <div class="bg-white p-4">
+                <div class="grid grid-cols-3 md:grid-cols-3 gap-4">
+                    <!-- Left Column: Rooms -->
+                    <div class="flex flex-col gap-2">
+                        <button class="room bg-gray-400 disabled hover:cursor-not-allowed text-white text-center p-2" data-room="309" disabled>309</button>
+                        <button class="room bg-gray-400 disabled hover:cursor-not-allowed text-white text-center p-2" data-room="310" disabled>310</button>
+                        <button class="room bg-green-500 text-white text-center p-2" data-room="311">311</button>
+                        <button class="room bg-green-500 text-white text-center p-2" data-room="312">312</button>
+                        <button class="room bg-gray-400 disabled hover:cursor-not-allowed text-white text-center p-2" data-room="313" disabled>313</button>
+                        <button class="room bg-gray-400 disabled hover:cursor-not-allowed text-white text-center p-2" data-room="314" disabled>314</button>
+                    </div>
             
-            <div class="floor hidden" id="floor-2">
-                <div class="room occupied" data-room="201">201</div>
-                <div class="room available" data-room="202">202</div>
-                <div class="room available" data-room="203">203</div>
-                <div class="room available" data-room="204">204</div>
-                <div class="room occupied" data-room="205">205</div>
-                <div class="room available" data-room="206">206</div>
-                <div class="room occupied" data-room="207">207</div>
-                <div class="room available" data-room="208">208</div>
-                <div class="room available" data-room="209">209</div>
-                <div class="room occupied" data-room="210">210</div>
-                <div class="room available" data-room="211">211</div>
-                <div class="room available" data-room="212">212</div>
-                <div class="room occupied" data-room="213">213</div>
-                <div class="room available" data-room="214">214</div>
+                    <!-- Middle Column: Hallway -->
+                    <div class="flex flex-col items-center h-full">
+                        <p class="text-center text-sm bg-black text-black p-2">FOLYOSÓ</p>
+                        <p class="text-center text-sm bg-black text-black p-2">FOLYOSÓ</p>
+                        <p class="text-center text-sm bg-black text-black p-2">FOLYOSÓ</p>
+                        <p class="text-center text-sm bg-black text-black p-2">FOLYOSÓ</p>
+                        <p class="text-center text-sm bg-black text-black p-2">FOLYOSÓ</p>
+                        <p class="text-center text-sm bg-black text-black p-2">FOLYOSÓ</p>
+                        <p class="text-center text-sm bg-black text-black p-2">FOLYOSÓ</p>
+                        <p class="text-center text-sm bg-black text-white p-2">FOLYOSÓ</p>
+                        <p class="text-center text-sm bg-black text-black p-2">FOLYOSÓ</p>
+                        <p class="text-center text-sm bg-black text-black p-2">FOLYOSÓ</p>
+                        <p class="text-center text-sm bg-black text-black p-2">FOLYOSÓ</p>
+                        <p class="text-center text-sm bg-black text-black p-2">FOLYOSÓ</p>
+                        <p class="text-center text-sm bg-black text-black p-2">FOLYOSÓ</p>
+                        <p class="text-center text-sm bg-black text-black p-2">FOLYOSÓ</p>
+                        <p class="text-center text-sm bg-black text-black p-2">FOLYOSÓ</p>
+                    </div>
+                    
+                    <!-- Right Column: Rooms -->
+                    <div class="flex flex-col gap-2">
+                        <button class="room bg-green-500 text-white text-center p-2" data-room="320">320</button>
+                        <button class="room bg-gray-400 disabled hover:cursor-not-allowed text-white text-center p-2" data-room="321" disabled>321</button>
+                        <button class="room bg-green-500 text-white text-center p-2" data-room="322">322</button>
+                        <button class="room bg-gray-400 disabled hover:cursor-not-allowed text-white text-center p-2" data-room="323" disabled>323</button>
+                        <button class="room bg-gray-400 disabled hover:cursor-not-allowed text-white text-center p-2" data-room="324" disabled>324</button>
+                        <button class="room bg-gray-400 disabled hover:cursor-not-allowed text-white text-center p-2" data-room="325" disabled>325</button>
+                    </div>
+                </div>
             </div>
-            <div class="floor hidden" id="floor-3">
-                <div class="room available" data-room="301">301</div>
-                <div class="room available" data-room="302">302</div>
-                <div class="room occupied" data-room="303">303</div>
-                <div class="room available" data-room="304">304</div>
-                <div class="room occupied" data-room="305">305</div>
-                <div class="room available" data-room="306">306</div>
-                <div class="room available" data-room="307">307</div>
-                <div class="room occupied" data-room="308">308</div>
-                <div class="room available" data-room="309">309</div>
-                <div class="room occupied" data-room="310">310</div>
-                <div class="room available" data-room="311">311</div>
-                <div class="room available" data-room="312">312</div>
-                <div class="room occupied" data-room="313">313</div>
-                <div class="room available" data-room="314">314</div>
-            </div>
-            <div class="floor hidden" id="floor-4">
-                <div class="room occupied" data-room="401">401</div>
-                <div class="room available" data-room="402">402</div>
-                <div class="room available" data-room="403">403</div>
-                <div class="room available" data-room="404">404</div>
-                <div class="room occupied" data-room="405">405</div>
-                <div class="room available" data-room="406">406</div>
-                <div class="room available" data-room="407">407</div>
-                <div class="room occupied" data-room="408">408</div>
-                <div class="room available" data-room="409">409</div>
-                <div class="room available" data-room="410">410</div>
-                <div class="room occupied" data-room="411">411</div>
-                <div class="room available" data-room="412">412</div>
-                <div class="room occupied" data-room="413">413</div>
-                <div class="room available" data-room="414">414</div>
+
+            <div class="flex justify-center mt-4">
+                <button class="bg-szeFoszin1 text-white rounded p-2 transition duration-200 hover:bg-szeFoszin2 rounded-lg px-6 py-2" id="reset-view">Alapnézet visszaállítása</button>
             </div>
         </div>
 
@@ -371,11 +616,48 @@
         </div>
 
         <div class="flex justify-center mt-6">
-            <button type="submit" class="bg-blue-500 text-white rounded px-4 py-2 text-sm md:text-base lg:text-lg">Foglalás</button>
+            <button class="bg-szeFoszin1 text-white rounded p-2 transition duration-200 hover:bg-szeFoszin2 rounded-lg px-6 py-2 text-xl">Foglalás</button>
         </div>
+
+        <hr class="my-8">
+        <div class="flex justify-center text-center">
+            <h3 class="font-bold mt-2 rounded-full shadow-lg border px-12 py-2  text-2xl w-fit">Infórmáció</h3>
+        </div>
+        <p class="text-center m-10 text-xl">Foglalás módosítása vagy törlése csak az ügyintézők felkeresésén keresztül
+            lehetséges.</p>
     </div>
 
     <style>
+        .room {
+            display: inline-block;
+            margin: 5px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .room.available {
+            background-color: #b2ebf2;
+        }
+
+        .room.occupied {
+            background-color: #ffcccb;
+            pointer-events: none;
+        }
+
+        .room.selected-room {
+            background-color: #f97316 !important;
+            /* Blue color for selected room */
+            color: white;
+            /* Ensure the text stays readable */
+        }
+
+        .room:hover:not(.occupied) {
+            background-color: #f97316  ;
+        }
+
         .tabs {
             display: flex;
             margin-bottom: 20px;
@@ -392,45 +674,11 @@
         }
 
         .tab-button.active {
-            background-color: #007bff;
+            background-color: #231942;
             color: white;
         }
-
-        .floor {
-            display: none;
-        }
-
-        .floor.active {
-            display: block;
-        }
-
-        .room {
-            display: inline-block;
-            margin: 5px;
-            padding: 20px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            text-align: center;
-            cursor: pointer;
-        }
-
-        .room.available {
-            background-color: #b2ebf2;
-        }
-
-        .room.occupied {
-            background-color: #ffcccb; /* Red background for occupied rooms */
-            pointer-events: none; /* Disable click for occupied rooms */
-        }
-
-        .room:hover:not(.occupied) {
-            background-color: #80deea; /* Darker blue when hovered */
-        }
-
-        .hidden {
-            display: none;
-        }
     </style>
+
 
     <script>
         function toggleRoommateName(value) {
@@ -443,38 +691,58 @@
             }
         }
 
-        function showFloor(floor) {
-            const floors = document.querySelectorAll('.floor');
-            const tabs = document.querySelectorAll('.tab-button');
-
-            // Hide all floors and remove active class from tabs
-            floors.forEach(f => {
-                f.classList.remove('active', 'hidden');
-            });
-            tabs.forEach(tab => {
-                tab.classList.remove('active');
-            });
-
-            // Show the selected floor and activate the corresponding tab
-            document.getElementById(`floor-${floor}`).classList.add('active');
-            document.querySelector(`.tab-button[onclick="showFloor('${floor}')"]`).classList.add('active');
+   // Room Selection Handler
+document.querySelectorAll('.room').forEach(room => {
+    room.addEventListener('click', () => {
+        // Check if the room is "foglalt" (occupied)
+        if (room.classList.contains('occupied')) {
+            return;  // If it's occupied, do nothing (disable selection)
         }
 
-        document.querySelectorAll('.room.available').forEach(room => {
-            room.addEventListener('click', () => {
-                const roomInfo = room.getAttribute('data-room');
-                // Update only the span with the selected room info
-                document.getElementById('selected-room-info').textContent = roomInfo;
-                
-                // Update hidden input with the selected room for form handling if needed
-                document.getElementById('room-selection').value = roomInfo;
-
-
-            });
+        const roomInfo = room.getAttribute('data-room');
+        
+        // Remove 'selected-room' class from all rooms
+        document.querySelectorAll('.room').forEach(r => {
+            r.classList.remove('selected-room');
         });
+        
+        // Add 'selected-room' class to the clicked room and change the background color
+        room.classList.add('selected-room');
+        
+        // Update the selected room info text
+        document.getElementById('selected-room-info').textContent = roomInfo;
+        
+        // Update hidden input with the selected room for form handling if needed
+        document.getElementById('room-selection').value = roomInfo;
+    });
+});
 
-        // Initialize the first floor as active
-        showFloor('1');
+    // Zoom In/Out Buttons
+    document.getElementById('zoom-in').addEventListener('click', () => {
+        // You can adjust this functionality to increase the room size, change font, etc.
+        const rooms = document.querySelectorAll('.room');
+        rooms.forEach(room => {
+            room.style.fontSize = '18px';  // Example: increase font size
+        });
+    });
+
+    document.getElementById('zoom-out').addEventListener('click', () => {
+        const rooms = document.querySelectorAll('.room');
+        rooms.forEach(room => {
+            room.style.fontSize = '14px';  // Example: decrease font size
+        });
+    });
+
+    // Reset to default view
+    document.getElementById('reset-view').addEventListener('click', () => {
+        const rooms = document.querySelectorAll('.room');
+        rooms.forEach(room => {
+            room.style.fontSize = '';  // Reset font size to default
+        });
+        document.getElementById('selected-room-info').textContent = ' - ';  // Reset the selected room info
+        document.getElementById('room-selection').value = '';  // Clear selected room in hidden input
+    });
+
     </script>
         </div>
     </div>
@@ -502,10 +770,10 @@
     </script>
 </body>
 <!-- Footer -->
-<footer class="bg-szeFoszin1 text-white p-8 mt-4">
+<footer class="bg-szeFoszin1 text-white p-8 mt-4 pl-80 xl:40">
     <div class="max-w-7xl mx-auto">
         <!-- Top section with links -->
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-4 text-sm text-gray-300">
+        <div class="grid grid-cols-1s xl:grid-cols-4 gap-4 text-sm text-gray-300">
             <!-- Section 1: Company Information -->
             <div>
                 <h3 class="font-semibold mb-2">Üzemeltető</h3>
@@ -536,16 +804,114 @@
             <!-- Section 4: Language Switcher and Social Media -->
             <div>
                 <h3 class="font-semibold mb-2">Nyelvválasztás</h3>
-                <div class="dropdown">
-                    <div class="selected" id="selected-language" onclick="toggleDropdown()">
-                        🇭🇺 Magyar
-                    </div>
-                    <div class="options" id="language-options">
-                        <div class="option" data-value="hu" onclick="selectLanguage('🇭🇺 Magyar')">🇭🇺 Magyar</div>
-                        <div class="option" data-value="en" onclick="selectLanguage('🇬🇧 English')">🇬🇧 English</div>
-                        <div class="option" data-value="de" onclick="selectLanguage('🇩🇪 Deutsch')">🇩🇪 Deutsch</div>
-                    </div>
-                </div>
+                <!-- Template -->
+
+<div class="dropdown relative">
+    <div class="selected" onclick="toggleDropdown(this)">
+        🇭🇺 Magyar
+    </div>
+    <div class="options hidden">
+        <div class="option" data-value="hu" onclick="selectLanguage(this, '🇭🇺 Magyar')">🇭🇺 Magyar</div>
+        <div class="option" data-value="en" onclick="selectLanguage(this, '🇬🇧 English')">🇬🇧 English</div>
+        <div class="option" data-value="de" onclick="selectLanguage(this, '🇩🇪 Deutsch')">🇩🇪 Deutsch</div>
+    </div>
+</div>
+
+<!-- Styles -->
+<style>
+    /* Dropdown container */
+    .dropdown {
+        position: relative;
+        display: inline-block;
+        width: 200px;
+    }
+
+    /* Selected language display */
+    .dropdown .selected {
+        background-color: #412e79;
+        border: 1px solid #5e548e;
+        padding: 7px;
+        cursor: pointer;
+        color: white;
+        display: flex;
+        align-items: center;
+        border-radius: 0.375rem;
+    }
+
+    /* Options container */
+    .dropdown .options {
+        display: none;
+        position: absolute;
+        background-color: #fff;
+        border: 1px solid #5e548e;
+        z-index: 1;
+        width: 100%;
+        max-height: 200px;
+        overflow-y: auto;
+        border-radius: 0.375rem;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Option items */
+    .dropdown .option {
+        padding: 10px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        color: #242943;
+    }
+
+    /* Hover effect for options */
+    .dropdown .option:hover {
+        background-color: #5e548e;
+        color: white;
+    }
+
+    /* When options are open */
+    .dropdown .options.open {
+        display: block;
+    }
+</style>
+
+<!-- Script -->
+<script>
+    function toggleDropdown(selectedElement) {
+        // Close all dropdowns first
+        document.querySelectorAll('.dropdown .options').forEach(options => {
+            options.classList.add('hidden');
+            options.classList.remove('open');
+        });
+
+        // Toggle the current dropdown
+        const options = selectedElement.nextElementSibling;
+        options.classList.toggle('hidden');
+        options.classList.toggle('open');
+    }
+
+    function selectLanguage(optionElement, language) {
+        // Find the closest dropdown container
+        const dropdown = optionElement.closest('.dropdown');
+
+        // Update the selected language
+        const selectedElement = dropdown.querySelector('.selected');
+        selectedElement.innerText = language;
+
+        // Close the dropdown
+        const options = dropdown.querySelector('.options');
+        options.classList.add('hidden');
+        options.classList.remove('open');
+    }
+
+    // Close dropdowns when clicking outside
+    document.addEventListener('click', function (event) {
+        if (!event.target.closest('.dropdown')) {
+            document.querySelectorAll('.dropdown .options').forEach(options => {
+                options.classList.add('hidden');
+                options.classList.remove('open');
+            });
+        }
+    });
+</script>
             </div>
         </div>
 
@@ -557,4 +923,3 @@
 </footer>
 
 </html>
-

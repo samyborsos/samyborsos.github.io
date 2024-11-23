@@ -1,0 +1,593 @@
+[
+  {
+    "question": "Hogy hívják a BT legfőbb szervét?",
+    "answer": "Tagok gyűlése"
+  },
+  {
+    "question": "Hol működhet igazgatótanács?",
+    "answer": "NYRT-ben"
+  },
+  {
+    "question": "KIsebbségi jogok gyakorlásának százalékos küszöbe?",
+    "answer": "5%"
+  },
+  {
+    "question": "Megengedett-e az apport alulértékelése?",
+    "answer": "Nem"
+  },
+  {
+    "question": "Hogy hívjuk az írásbeli képviseletet a cégeknél?",
+    "answer": "Megbízólevél"
+  },
+  {
+    "question": "Mekkora a legkisebb törzstőke a KFT-ben?",
+    "answer": "min 3.000.000 Ft"
+  },
+  {
+    "question": "Melyik Gt-nél kötelező mindig a felügyelőbizottság?",
+    "answer": "NYRT"
+  },
+  {
+    "question": "Mely gazdasági társaságok működhetnek egy taggal?",
+    "answer": "KFT, ZRT (egyszemélyes)"
+  },
+  {
+    "question": "Mennyi lehet a felügyelőbizottság tagjainak a száma?",
+    "answer": "min. 3 fő"
+  },
+  {
+    "question": "Az aláírást követően mennyi idő áll rendelkezésre, hogy a társasági szerződést beadjuk a cégbíróságra?",
+    "answer": "30 nap"
+  },
+  {
+    "question": "Csődeljárás a társaság megszűnésére irányuló eljárás-e?",
+    "answer": "Nem."
+  },
+  {
+    "question": "Mit jelent a cég nevében a \"v.a.\" jelzés?",
+    "answer": "\"Végelszámolás alatt\""
+  },
+  {
+    "question": "Hogy hívják a BT korlátoltan felelős tagját?",
+    "answer": "Kültag"
+  },
+  {
+    "question": "Melyik GT-ben kötelező a könyvvizsgáló?",
+    "answer": "NYRT"
+  },
+  {
+    "question": "Hogy hívjuk a vállalkozásokra vonatkozó versenykorlátozó joganyagot összefoglalóan?",
+    "answer": "Versenyjog"
+  },
+  {
+    "question": "Melyik Gt-t lehet felmondani a társasági szerződését?(2)",
+    "answer": "BT,KKT(lehet)"
+  },
+  {
+    "question": "Melyik Gt-t kell alapszabállyal létrehozni?",
+    "answer": "ZRT,NYRT"
+  },
+  {
+    "question": "Mekkora az NYRT minimum jegyzett tőkéje?",
+    "answer": "min 20.000.000 Ft"
+  },
+  {
+    "question": "Mennyi időn belül kell szolgáltatni az apportot KFT-ben, ha alapításkor nem fizetik be az egészet?",
+    "answer": "3 éven belül"
+  },
+  {
+    "question": "Melyik gazdasági társaságban nem lehet felügyelő bizottság?",
+    "answer": "KKT"
+  },
+  {
+    "question": "Hogy hívjuk a KKT vezető tisztségviselőjét?",
+    "answer": "Ügyvezető"
+  },
+  {
+    "question": "Mennyi időn belül kell szolgáltatni az apportot ZRT-ben, ha alapításkor nem fizetik be az egészet?",
+    "answer": "5 éven belül"
+  },
+  {
+    "question": "Mit jelent az “f.a” toldat a cégnévben?",
+    "answer": "\"Felszámolás alatt\""
+  },
+  {
+    "question": "Lehete a BT kültagja üzletvezető?",
+    "answer": "Nem"
+  },
+  {
+    "question": "Hány évig tartozik helytállni a BT beltagja a társaság tartozásaiért jogutód nélküli megszűnés esetén?",
+    "answer": "5 évig"
+  },
+  {
+    "question": "Tagkizárás iránti per megindításához szükséges döntési hányad?",
+    "answer": "3/4"
+  },
+  {
+    "question": "Mennyi időn belül kell a társasági szerződés módosítását bejelenteni a Cégbíróságon?",
+    "answer": "30 nap"
+  },
+  {
+    "question": "Egyszemélyes KFT esetén legalább mennyi pénzbeli hozzájárulást kell a társaság rendelkezésére bocsátani a Cégbírósági bejelentést megelőzően?",
+    "answer": "100.000 Ft"
+  },
+  {
+    "question": "Mennyivel kell maradék nélkül oszthatónak lennie a törzsbetétnek?",
+    "answer": "10.000"
+  },
+  {
+    "question": "Mi a termelési-forgalmazási lánc különböző fokán lévő vállalkozások versenykorlátozó megállapodásának az elnevezése?",
+    "answer": "Vertikális Kartell"
+  },
+  {
+    "question": "Melyik Gt-nek van üzletrésze?",
+    "answer": "KFT"
+  },
+  {
+    "question": "Hogy hívjuk a ZRT azon szervét, amelyiknek minden részvényes tagja?",
+    "answer": "Közgyűlés"
+  },
+  {
+    "question": "Milyen szavazati aránnyal lehet döntést hozni általában a taggyűlésen?",
+    "answer": "50%"
+  },
+  {
+    "question": "Melyik gazdasági társaságoknak nincsen jegyzett tőke-minimuma?",
+    "answer": "BT,KKT"
+  },
+  {
+    "question": "Hány évig tartozik helytállni az apportáló az apport szolgáltatáskori értékéért?",
+    "answer": "5 évig"
+  },
+  {
+    "question": "Határozat megtámadása esetén mennyi a szubjektív határidő?",
+    "answer": "8 nap"
+  },
+  {
+    "question": "Mennyi idő áll rendelkezésére a könyvvizsgálónak hogy megbízási szerződést kössön a megválasztását követően?",
+    "answer": "15 nap"
+  },
+  {
+    "question": "Határozat megtámadása esetén mennyi az objektív határidő?",
+    "answer": "30 nap"
+  },
+  {
+    "question": "Tagkizárás esetén a határozathozataltól mennyi nap áll rendelkezésre a kereset beterjesztéséig?",
+    "answer": "30 nap"
+  },
+  {
+    "question": "Mit jelent az “b.a” toldat a cégnévben?",
+    "answer": "\"Bejegyzés alatt\""
+  },
+  {
+    "question": "A részvény fogalma?",
+    "answer": "A részvény névre szóló, névértékkel rendelkező, forgatható értékpapír."
+  },
+  {
+    "question": "Ismertesse a legfőbb szerv határozathozatalára vonatkozó szabályokat! (NEM az összehívás szabályai!!!)(Milyen eljárás keretében hozható határozat, ki nem szavazhat, melyek a kötelező hatáskörök…)",
+    "answer": "Legfőbb szervezeti ülésen mindenki szavazhat, kivéve: - akinek tagsági jogviszonya vitás. - akivel a határozat értelmében szerződést kell kötni. - akivel szemben a határozat értelmében tartozás behajtásáról van szó. - aki az adott kérdésben elfogult. Szavazati arányok: - Egyszerű többség. - ¾ (pl:tagkizárás) - Teljes egyhangúság (átalakulás/megszűnés esetén)"
+  },
+    {
+      "question": "A felügyelő bizottság működése?",
+      "answer": "A felügyelő bizottság egy belső ellenőrző szerv. Nem lehet tagja a vezető tisztségviselő vagy annak rokona. A tagjai természetes személyek, akár társaságon kívül is. Működésére nincs szabály. Minimum 3 főből áll. Évente 1x kötelezően össze kell hívni."
+    },
+    {
+      "question": "A társaságalapítás alanyi korlátai?",
+      "answer": "Egy természetes személy egy időben csak egy gazdasági társaságnak lehet korlátlanul felelős tagja. Korlátlanul felelős tag nem lehet másik korlátlanul felelős társaság tagja. Kiskorú személy nem lehet korlátlanul felelős tag."
+    },
+    {
+      "question": "Hasonlítsa össze a teljes cégnevet és a rövidített cégnevet példákkal!",
+      "answer": "Teljes cégnév: Vezérszó + tevékenységre utaló jelző + cégforma megjelölés + toldat. Példa: Szélvész Csomagkézbesítő és Házhozszállító Betéti Társaság. Rövidített cégnév: Vezérszó + cégforma rövidítve. Példa: Szélvész Bt."
+    },
+    {
+      "question": "Milyen részvény osztályokat ismer?",
+      "answer": "Szavazatelsőbbségi részvény, vezetői tisztségviselő kijelölésére vonatkozó elsőbbségi részvény, osztalékelsőbbségi részvény, likviditási hányadhoz fűződő elsőbbségi részvény, elővásárlási jogot biztosító elsőbbségi részvény."
+    },
+    {
+      "question": "Kft. definíciója?",
+      "answer": "Olyan gazdasági társaság, amely előre meghatározott összegű törzsbetétekből álló törzstőkével alapul és ahol a tag kötelezettsége kizárólag a vállalt vagyoni hozzájárulás szolgáltatásáig terjed, a társaság tartozásaiért nem felelős."
+    },
+    {
+      "question": "Ismertesse a meghívóra vonatkozó szabályokat (tartalma, kiküldése)",
+      "answer": "Átadni csak postán keresztül vagy személyesen. Tartalma: időpont (minimum 15 nappal korábban), helyszín (legfőbbszervi ülés a székhelyen, de el lehet térni, ha a tagok hozzájárulnak), napirendi pontok (részletesen), megismételt taggyűlés helye és ideje. Határozatképes, ha a törzstőke fele vagy a szavazók fele jelen van."
+    },
+    {
+      "question": "Mit tud az előtársaságról?",
+      "answer": "Az előtársaság nem folytathat hatósági engedélyhez kötött tevékenységet, nem módosíthatja a társasági szerződést, nem szűnhet meg, nem alakulhat át, tagjai sorában változás nem állhat be, tagkizárási pert nem kezdeményezhet, másik gazdasági társaságot nem alapíthat."
+    },
+    {
+      "question": "A társaságalapítás tárgyi korlátai?",
+      "answer": "Adott tevékenységhez adott társasági forma szükséges (pl. biztosító -> Rt.), hatósági engedély, tevékenységi kör gyakorlására engedély, megfelelő képesítéssel rendelkező személy."
+    },
+    {
+      "question": "A társasági szerződés kötelező formai elemei?",
+      "answer": "A legfontosabb formai feltétel, hogy a leírt és a tagok által aláírt társasági szerződést közjegyző készítse közokiratba, vagy ügyvéd, illetve az alapító jogtanácsosa által ellenjegyzett magánokiratba."
+    },
+    {
+      "question": "Tisztességtelen piaci magatartások?",
+      "answer": "Hírnévrontás tilalma, bojkott felhívás tilalma, szolgai utánzás tilalma, tiltott összehasonlító reklám, tisztességtelen versenyeztetés tőzsdei ügyletek tilalma."
+    },
+    {
+      "question": "Ismertesse a kartell alóli mentesülési rendszer elemeit?",
+      "answer": "Törvényi kivételek: bagatell kartell (csekély jelentőségű megállapodások, piac kevesebb mint 10%-a), nem független vállalkozások. Csoportmentességi rendeletek: franchise rendszerek, egyedi mentesítés."
+    },
+    {
+      "question": "Mit nem tehet az előtársaság?",
+      "answer": "Hatósági engedélyhez kötött tevékenységet nem folytathat, társasági szerződést nem módosíthat, nem szűnhet meg, nem alakulhat át, tagjai sorában változás nem állhat be, tagkizárási pert nem kezdeményezhet, másik gazdasági társaságot nem alapíthat."
+    },
+    {
+      "question": "Mi lehet apport tárgya?",
+      "answer": "Apport lehet minden vagyoni értékű dolog, vagyoni értékű jog, adós által elismert követelés vagy jogerős bíróság határozatán alapuló követelés. Pl: ingatlan, jármű."
+    },
+    {
+      "question": "Mikor van egy vállalkozás erőfölényben az érintett piacon?",
+      "answer": "Azt mondhatjuk, hogy az a vállalkozás van az érintett piacon erőfölényben, amely a piac többi szereplőjétől nagy mértékben függetlenül tudja megváltoztatni a saját döntéseit."
+    },
+    {
+      "question": "Cégnevet szabályozó elvek?",
+      "answer": "Cégszabatosság elve: a vezérszó idegen nyelvű kifejezés, rövidítés és mozaikszó is lehet, amelyet latin betűkkel kell feltüntetni. Cégkizárólagosság elve: ugyanazon a néven csak egy gazdasági társaság lehet. Cégvalódiság elve: a cégnév nem lehet megtévesztő."
+    },
+    {
+      "question": "Mit tud a társasági jogon belül a kisebbségi jogokról?",
+      "answer": "Legalább 5%-nyi szavazati joga van a gazdasági társaságban. Ok és cél megjelölésével bármikor kérheti a legfőbb szerv összehívását. Ha az ügyvezetés nem tesz eleget a kérelemnek 30 napon belül, a kisebbség a cégbírósághoz fordulhat. Könyvvizsgálót hívhatnak. Igényt érvényesíthetnek a társaság nevében."
+    },
+    {
+      "question": "Társasági szerződés kötelező tartalmi elemei?",
+      "answer": "Cégnév, székhely, tagok adatai, gazdasági társaság vagyona, tevékenységi körei, időtartam, vezető tisztségviselők és képviselők."
+    },
+    {
+      "question": "A teljes cégnév részei példával?",
+      "answer": "Teljes cégnév: Vezérszó + tevékenységre utaló jelző + cégforma megjelölés + toldat. Példa: Szélvész Csomagkézbesítő és Házhozszállító Betéti Társaság."
+    },
+    {
+      "question": "Hogyan szűnhet meg egy gazdasági társaság tagjának tagsági jogviszonya?",
+      "answer": "Tagkizárással (ha két tag van akkor nem lehet a másikat kizárni), halállal, tulajdon átruházással, csőddel, ki lehet lépni (Bt, Kkt esetén, felmondási idő 3 hónap)."
+    },
+    {
+      "question": "Mi a feladata a vezető tisztségviselőnek? Mi az elnevezése a különböző gazdasági társaságoknál? (5 pont)",
+      "answer": "Feladata: A vezető tisztségviselő felelős a gazdasági társaság irányításáért, döntéshozatalért, valamint a társaság operatív vezetéséért. Elnevezések: - Bt, Kkt, Kft: Ügyvezető - Zrt: Igazgatóság - Nyrt: Igazgatótanács"
+    },
+    {
+      "question": "Mit jelent a versenyjogban használt “összehangolt magatartás és párhuzamos magatartás” fogalom? (4 pont)",
+      "answer": "Összehangolt magatartás: Ha a vállalkozások ténylegesen összehangolják piaci magatartásukat, bár nem történt formális megállapodás. Párhuzamos magatartás: Ha a vállalkozások piaci reakciói ugyanarra az objektív, külső piaci hatásra történnek, nem minősül összehangolt magatartásnak."
+    },
+    {
+      "question": "Hogyan szűnhet meg a tagsági viszony bt/kkt esetén? (5 pont)",
+      "answer": "Tagkizárással, Halállal, Csőddel, Jogutód nélküli megszűnéssel, Kilépéssel"
+    },
+    {
+      "question": "Tagkizárás szabályai a gazdasági társaságoknál? (5 pont)",
+      "answer": "Ha a társaságban csak két tag van, nem lehet kizárni egyiket sem. Ha a tag a társaság célját nagymértékben veszélyezteti. Nem lehet kizárni nyilvános részvénytársaságból (Nyrt). Nem lehet kizárni, ha a tag 75%-os szavazati joggal rendelkezik."
+    },
+    {
+      "question": "A Bt definíciója? (4 pont)",
+      "answer": "A Bt. egy olyan társaság, ahol az egyik tag (beltag) felelőssége korlátlan és egyetemleges a társaság tartozásaiért, míg a kültag csak a vagyoni hozzájárulásával felelős. A társaság üzletszerű és közös gazdasági tevékenységet folytat."
+    },
+    {
+      "question": "A felügyelő bizottság működése (határozatképessége, tagok száma, jogkörei) (5 pont)",
+      "answer": "A felügyelőbizottság egy belső ellenőrző szerv, amely nem lehet vezető tisztségviselő vagy annak rokona. Legalább 3 tagból kell állnia, és a működésére nincs szabály, de évente egyszer kötelező összehívni."
+    },
+    {
+      "question": "A cégbíróság szerepe a gazdasági társaságokkal kapcsolatban? (6 pont)",
+      "answer": "A cégbíróság szerepe a gazdasági társaságok bejegyzése, változása, valamint jogi státuszuk ellenőrzése. Biztosítja, hogy a társaságok megfeleljenek a törvényeknek és szabályozásoknak."
+    },
+    {
+      "question": "Mit tud a könyvvizsgálóról? (6 pont)",
+      "answer": "A könyvvizsgáló külső ellenőrző szerv, amely lehet természetes vagy jogi személy. Semmi köze nem lehet a gazdasági társasághoz. A beszámoló vizsgálata a feladata, és legfeljebb 5 évre, minimum 1 évre választják meg."
+    },
+    {
+      "question": "Ki ellen nem indítható tagkizárási per? (3 pont)",
+      "answer": "A részvényes, egy tag sem zárható ki 2 tagú társaságból, és az a tag, aki a szavazatok ¾-vel rendelkezik."
+    },
+    {
+      "question": "Antitröszt jog 3 részterülete? (3 pont)",
+      "answer": "Kartell megállapodás tilalma, Erőfölénnyel való visszaélés tilalma, Fúziókontroll."
+    },
+    {
+      "question": "Mi a különbség a telephely és a fióktelep között? (3 pont)",
+      "answer": "A telephely a cég tevékenységét végző állandó helye, amely nem a székhelye, míg a fióktelep egy másik településen található telephely."
+    },
+    {
+      "question": "Mely esetekben nem lehet egy cégnevet bejegyeztetni? (5 pont)",
+      "answer": "Nem lehet bejegyeztetni a céget, ha az már be van jegyezve, ha túl rövid a cégnév, ha 'Állami' vagy 'Nemzeti' szerepel benne, hacsak nem az állam 50%-os tulajdonos. Történelmi személy nevét csak a Magyar Tudományos Akadémia engedélyével lehet használni."
+    },
+    {
+      "question": "Ismertesse az NYRT alapításának folyamatát? (6 pont)",
+      "answer": "Alapból csak Zrt-t lehet alapítani, majd abból lehet NYRT-t létrehozni. Az alapítás során be kell tartani a törvényes előírásokat és rendelkezéseket."
+    },
+    {
+      "question": "Törzstőke felemelés szabályai? (5 pont)",
+      "answer": "A törzstőke felemelésére a tagok döntése alapján kerülhet sor. Az alapító okiratot és a módosítást be kell jegyeztetni a cégbíróságnál."
+    },
+    {
+      "question": "Egyszemélyes Zrt. speciális tulajdonságai?",
+      "answer": "Az egyszemélyes Zrt. mindig zártkörű. Az alaptőke teljes rendelkezésre bocsátása szükséges a cégbejegyzés előtt. A közgyűlés hatásköreiből az egyedüli részvényes dönt. Az egyszemélyes Zrt. nem szerezhet saját részvényt."
+    },
+    {
+      "question": "Apport fogalma?",
+      "answer": "Az apport lehet minden vagyoni értékű dolog, jog, elismert követelés vagy jogerős bírósági határozat alapján elismert követelés."
+    },
+    {
+      "question": "Ki nem zárható ki a gazdasági társaságból? (3 pont)",
+      "answer": "A részvényes, egy tag sem zárható ki 2 tagú társaságból, és az a tag, aki a szavazatok ¾-ével rendelkezik."
+    },
+    {
+      "question": "Mikor kötelező a felügyelőbizottság? (4 pont)",
+      "answer": "Nyilvánosan működő Rt esetén kivéve ha egységes irányítás alá tartozik. Zrt esetén ha 5%-kal legalább rendelkező tagok kérik. Köztulajdon védelme érdekében kötelező."
+    },
+    {
+      "question": "Milyen okirat formákat ismer? Milyen formai kellékek szükségesek az egyes típusokhoz? (8 pont)",
+      "answer": "Az okiratok lehetnek köz- vagy magánokiratok. Közokirat az, amit hatóság ad ki, és a benne foglalt tényeket valósnak kell tekinteni. A magánokiratot a felek írják alá, és bizonyító ereje attól függ, hogy két tanú is aláírja vagy sem."
+    },
+    {
+      "question": "Milyen értékpapírokat ismer? (3 pont)",
+      "answer": "Dologi (tulajdonjogot megtestesítő), Kötelmi (követelést megtestesítő), Tagsági jogokat megtestesítő (részvény)."
+    },
+    {
+      "question": "Mi alapján és meddig áll fenn a szerzői jogi védelem a művön? (5 pont)",
+      "answer": "A szerzői jog a törvény erejénél fogva keletkezik, és nem átruházható, nem örökíthető. Az oltalmi idő a szerző halála utáni első január 1-jétől 70 évig tart."
+    },
+    {
+      "question": "Mikor van két termék közös érintett piacon? (Felsorolás) (4 pont)",
+      "answer": "Két termék akkor van közös érintett piacon, ha közös áru illetve közös földrajzi piacon van.\n- Két termék akkor van közös árupiacon, ha a vevő szerint az egyik termék helyettesíthető egy másik termékkel.\n- Két termék akkor van közös földrajzi piacon, ha a vevő szerint az egyik helyen megvásárolt termék helyettesíthető egy másik helyen megvásárolt termékkel."
+    },
+    {
+      "question": "Mit tud a gazdasági társaságok átalakulásáról? (6 pont)",
+      "answer": "Társaságjogi egyesülés\n- beolvadás\n- összeolvadás\n- Egyik vállalkozás a másikban irányítást szerez\n- Ha 50%-ot meghaladó szavazati joggal rendelkeznek\n- Ha a vezető tisztségviselők kinevezésének többségére jogosult\n- Ha szerződés vagy egyéb kapcsolat révén képes a másik vállalkozás döntéseit meghatározó módon befolyásolni.\n- Ha két vállalkozás valamely külön tevékenységre közös gt-t hoz létre.\n15 milliárd forint bevételt minimum el kell érni a fúziós engedélyhez, a legkisebbnek is minimum el kell érnie az 1 milliárdot."
+    },
+    {
+      "question": "Mit tud a távollévők közötti szerződés szabályairól? (5 pont)",
+      "answer": "A távollévők közötti szerződés esetén a szerződés akkor jön létre, ha az ajánlatot az ajánlattevő a címzettnek eljuttatta, és a címzett azt elfogadta. Az elfogadási határidő a távollévők közötti szerződéskötés esetén 14 napon belül kell, hogy megtörténjen."
+    },
+    {
+      "question": "A semmisségi szerződéssel kapcsolatos szabályok? (5 pont)",
+      "answer": "A semmisségi szerződés érvénytelenséget von maga után. Az érvénytelenség a szerződés tartalmától függően lehet teljes vagy részleges. Az érvénytelenség hatására a felek nem kötelesek teljesíteni a szerződésben foglaltakat. A semmisségi okokat a törvény határozza meg."
+    },
+    {
+      "question": "Mi történik ha a tag határidőben nem fizeti meg a vagyoni hozzájárulást? (3 pont)",
+      "answer": "Ha a tag nem fizeti meg határidőben a vagyoni hozzájárulást, akkor a társaság dönthet úgy, hogy a tagot kizárja a társaságból, vagy más jogi következményekkel kell szembenéznie."
+    },
+    {
+      "question": "A Kft. legfőbb szervének összehívása, működése és határozatképessége? (8 pont)",
+      "answer": "A Kft. legfőbb szerve az ügyvezetés. Az ügyvezető köteles évente legalább egyszer összehívni a közgyűlést. A közgyűlés határozatképességhez a tagok többsége szükséges. A közgyűlés az ügyvezető által összehívott értekezleten hozza meg döntéseit."
+    },
+    {
+      "question": "Tilos-e erőfölényes helyzetet kialakítania egy vállalkozásnak az érintett piacon? Indokolja válaszát! (4 pont)",
+      "answer": "Igen, tilos erőfölényes helyzetet kialakítani az érintett piacon, mert a versenyjogi szabályok értelmében a vállalkozások nem használhatják ki túlzottan erőfölényüket, hogy ellehetetlenítsenek más versenytársakat vagy kárt okozzanak a fogyasztóknak."
+    },
+    {
+      "question": "Szabadalmaztatható találmány kritériumai (4 pont)",
+      "answer": "A szabadalmaztatható találmánynak újnak, hasznosnak és iparilag alkalmazhatónak kell lennie. Az újnesség megköveteli, hogy a találmány ne szerepeljen a nyilvánosság előtt a bejegyzés előtt."
+    },
+    {
+      "question": "Ismertesse a törzstőke leszállítására vonatkozó szabályokat! (Milyen arányú döntéssel? Mit jelent a feltételes törzstőke leszállítás?) (5 pont)",
+      "answer": "A törzstőke leszállítását a tagok dönthetik el, és az szükséges, hogy a közgyűlés döntése legalább 75%-os többséggel történjen. A feltételes törzstőke leszállítás esetén a döntés csak akkor érvényes, ha bizonyos feltételek teljesülnek, például a társaság pénzügyi helyzetének megfelelően."
+    },
+    {
+      "question": "Szabadalmaztatható találmány jellemzői? (4 pont)",
+      "answer": "A szabadalmaztatható találmányoknak az alábbi jellemzőkkel kell rendelkezniük: új, iparilag alkalmazható és egyedi megoldást kínál a meglévő problémákra. Emellett a találmány nem lehet nyilvános, és nem lehet olyan egyszerű, hogy bárki könnyen előállíthatja."
+    },
+    {
+      "question": "Jegyzett tőke leszállításának szabályai korlátolt felelősségű társaság esetén? (5 pont)",
+      "answer": "A jegyzett tőke leszállítása a tagok döntésével történhet, legalább 75%-os többséggel. A leszállításnak el kell érnie a társaság jogszabályokban előírt minimális tőkekövetelményeket."
+    },
+    {
+      "question": "A szerző kizárólagos jogai csoportosítva? (5 pont)",
+      "answer": "A szerző kizárólagos jogai közé tartozik a mű másolásának, terjesztésének, előadásának, bemutatásának, és módosításának joga. A szerzők kizárólagos jogot gyakorolhatnak a művek felhasználásában és azok gazdasági hasznosításában."
+    },
+      {
+          "question": "Mennyi részvényfajtát ismer?",
+          "answer": "5"
+      },
+      {
+          "question": "Melyik Gt- ket lehet alapítani egy taggal?",
+          "answer": "Kft, Rt"
+      },
+      {
+          "question": "Hogyan nevezik a cégnév első tagját?",
+          "answer": "vezérszó"
+      },
+      {
+          "question": "Mekkora időtartamra lehet a vezető tisztségviselőt megbízni?",
+          "answer": "5 év"
+      },
+      {
+          "question": "Melyik Gt- ben kötelező a könyvvizsgáló?",
+          "answer": "Nyrt"
+      },
+      {
+          "question": "Melyik Gt- t lehet 500.100.- Ft-tal alapítani?",
+          "answer": "KKT, BT"
+      },
+      {
+          "question": "A Bt. mely tagjának korlátlan a felelőssége a társaság vagyona által nem fedezett tartozásokért?",
+          "answer": "Beltag"
+      },
+      {
+          "question": "Melyik Gt- t kell alapszabállyal létrehozni?",
+          "answer": "Részvénytársaság"
+      },
+      {
+          "question": "Hogyan hívják a Zrt. jegyzett tőkéjét?",
+          "answer": "Alaptőke"
+      },
+      {
+          "question": "Melyik az a részvényfajta, amelyiket az Nyrt-vel fennálló munkaviszony megléte esetén lehet megvásárolni?",
+          "answer": "Dolgozói részvény"
+      },
+      {
+          "question": "Tisztességtelen piaci magatartások nevesített esetei?",
+          "answer": "Hírnévrontás, üzleti titok megsértése, bojkott felhívás, névbitorlás és szolgai utánzás, versenyeztetés tisztaságának megsértése"
+      },
+      {
+          "question": "Elsőbbségi részvényfajtán belül milyen részvényosztályokat ismer?",
+          "answer": "Osztalékelsőbbségi részvény, Likvidációs hányadhoz fűződő elsőbbségi részvény, Szavazatelsőbbségi részvény, A vezető tisztségviselők és felügyelő bizottsági tagok kijelölésére vonatkozó elsőbbségi részvény, Elővásárlási jogot biztosító elsőbbségi részvény"
+      },
+      {
+          "question": "Mikor kötelező a felügyelőbizottság?",
+          "answer": "Ha a társaság teljes munkaidőben foglalkoztatott munkavállalóinak száma éves átlagban a 200 főt meghaladja, és az üzemi tanács nem mondott le a felügyelőbizottságban való munkavállalói részvételről."
+      },
+      {
+          "question": "A társasági szerződés kötelező tartalmi elemei?",
+          "answer": "Cégnév, székhely, tagok, időtartam, törzstőke, tevékenységi kör, egyéb, vezető tisztségviselők"
+      },
+      {
+          "question": "Mi az a Kartell?",
+          "answer": "Van Horizontális kartell (azonos szint) és vertikális kartell (különböző szintek). A kartell olyan versenytárs vállalatok és/vagy azok érdekképviseleti szervei közötti titkos megállapodás, amely a verseny kiiktatására vagy legalábbis annak korlátozására vonatkozik. Kartellmegállapodásokat kötni tilos, mert a legszigorúbb versenyjogsértés, és súlyosan károsíthatják a fogyasztókat. Előbb-utóbb kitudódik. Akár egy kartelltag is felfedheti, aki ezzel mentesülhet a felelősségre vonás alól. Sőt, bárki a versenyhatósághoz fordulhat, akinek információja van egy kartellről."
+      },
+      {
+          "question": "Mit tud az előtársaság?",
+          "answer": "A gazdasági társaság a társasági szerződés ellenjegyzésének napjától a létrehozni kívánt társaság előtársaságként működhet. Amit nem tehet: - a tagok személyében kizárólag jogszabályon alapuló változás következhet be; - a létesítő okirat módosítására - a nyilvántartó bíróság, valamint a hatósági engedély kiadására jogosult szerv felhívása teljesítésének kivételével - nem kerülhet sor; - az előtársaság gazdasági társaságot nem alapíthat, és abban tagként nem vehet részt; - nem kezdeményezhető tag kizárására irányuló per; és - nem határozható el átalakulás, egyesülés, szétválás, valamint jogutód nélküli megszűnés."
+      },
+      {
+          "question": "Cégnevet szabályzó elvek?",
+          "answer": "● Cégvalódiság elve: a cégnévnek a cég alapvető tevékenységét és tényleges formáját kell tartalmaznia és nem kelthet olyan látszatot, amely ezekkel ellentétes ● Cégszabatosság elve: a cégnévben a vezérszón kívül csak magyar szavak és kifejezések szerepelhetnek a magyar helyesírás szabályai szerint ● Cégkizárólagosság elve: a cégnévnek (rövidített névnek) az ország területén a cégnévben azonos tevékenységet feltüntető más cég elnevezésétől egyértelműen különböznie kell"
+      },
+        {
+            "question": "Mennyi a Kft. törzsbetét minimuma?",
+            "answer": "100 ezer Ft (Törzstőke- 3 millió)"
+        },
+        {
+            "question": "Melyik részvényfajtán belül vannak részvény osztályok?",
+            "answer": "elsőbbségi"
+        },
+        {
+            "question": "Melyik Gt- nek lehet igazgatósága?",
+            "answer": "Zrt, Nyrt"
+        },
+        {
+            "question": "Hogy hívjuk az egyszemélyes Kft. létesítő okiratát?",
+            "answer": "alapító okirat"
+        },
+        {
+            "question": "Mennyi időn belül kell beadni az okiratokat a Cégbíróságra, ha a társasági szerződést érintő változás következik be?",
+            "answer": "30 nap"
+        },
+        {
+            "question": "Melyik Gt. szűnik meg, ha tagjai száma 2 fő alá csökken?",
+            "answer": "BT, KKT"
+        },
+        {
+            "question": "Melyik Gt- nél lehet audit bizottság?",
+            "answer": "Nyrt"
+        },
+        {
+            "question": "Milyen szavazati aránnyal lehet döntést hozni törzstőke leszállítás esetén a taggyűlésen?",
+            "answer": "minősített többség (2/3, 3/4)"
+        },
+        {
+            "question": "Milyen piaci részesedés alatt nem tiltott a kartell?",
+            "answer": "<10%"
+        },
+        {
+            "question": "Melyik gazdasági társaságokat lehet megalakítani 2.000.000.- Ft jegyzettőkével?",
+            "answer": "BT, KKT"
+        },
+        {
+            "question": "A társaságalapítás tárgyi korlátai?",
+            "answer": "● Társaság tevékenysége ● Adott tevékenység adott társasági formában ● Társaság alapítása hatósági engedélyhez ● Tevékenységi kör gyakorlásához ír elő engedélyt"
+        },
+        {
+            "question": "A társasági szerződés kötelező tartalmi elemei?",
+            "answer": "Cégnév, székhely, tagok, időtartam, törzstőke, tevékenységi kör, egyéb, vezető tisztségviselők"
+        },
+        {
+            "question": "Hasonlítsa össze a teljes cégnevet és a rövidített cégnevet példákkal",
+            "answer": "vezérszó + tevékenységre utaló jelző + cégforma megjelölése (szükség esetén + toldat) Kis Halász Szolgáltató Betéti Társaság. Toldatok lehetnek: b.a: bejegyzés alatt, f.a: felszámolás alatt, v.a: végelszámolás alatt, cs.a: csődeljárás alatt, kt.a: kényszertörlés alatt"
+        },
+        {
+            "question": "Milyen részvényosztályokat ismer?",
+            "answer": "5db - (Törzsrészvény, Elsőbbségi részvény, Dolgozói részvény, Visszaváltható részvény, Kamatozó részvény)"
+        },
+        {
+            "question": "Mikor van két termék közös érintett piacon?",
+            "answer": "Az árupiac és a földrajzi piac metszete az érintett piac à egyszerre"
+        },
+        {
+            "question": "Kft. definíciója?",
+            "answer": "Olyan gazdasági társaság, amely előre meghatározott nagyságú törzsbetétekből állótörzstőkével alakul és ahol a tag kötelezettsége csak a vállalt vagyoni hozzájárulás szolgáltatásáig terjed, a társaság tartozásaiért egyebekben nem felelős"
+        },
+        {
+            "question": "Ismertesse a meghívóra vonatkozó szabályokat?",
+            "answer": "Az ügyvezető hívja össze. A meghívó elküldése és a taggyűlés napja között legalább 15 napnak kell eltelnie azzal, hogy a létesítő okirat ettől eltérően is rendelkezhet, de 3 napnál rövidebb időtartamot érvényesen nem határozhat meg. A legfőbb szerv a társasági szerződésben meghatározott gyakorisággal ülésezik azzal, hogy évente legalább egy taggyűlést tartani kell. A taggyűlés akkor határozatképes, ha azon a leadható szavazatok többsége képviselve van. Amennyiben a taggyűlés nem határozatképes, akkor érvényes döntéseket nem hozhat. A taggyűlés és a megismételt taggyűlés között legalább 3, legfeljebb 15 napnak kell eltelnie."
+        },
+        {
+            "question": "Az előtársaság?",
+            "answer": "A gazdasági társaság a társasági szerződés ellenjegyzésének napjától a létrehozni kívánt társaság előtársaságként működhet. Amit nem tehet: - a tagok személyében kizárólag jogszabályon alapuló változás következhet be; - a létesítő okirat módosítására - a nyilvántartó bíróság, valamint a hatósági engedély kiadására jogosult szerv felhívása teljesítésének kivételével - nem kerülhet sor; - az előtársaság gazdasági társaságot nem alapíthat, és abban tagként nem vehet részt; - nem kezdeményezhető tag kizárására irányuló per; és - nem határozható el átalakulás, egyesülés, szétválás, valamint jogutód nélküli megszűnés."
+        },
+          {
+              "question": "Mennyi a Kft. jegyzett tőke minimuma?",
+              "answer": "3 millió Ft"
+          },
+          {
+              "question": "Melyik részvényfajtán belül vannak részvény osztályok?",
+              "answer": "elsőbbségi"
+          },
+          {
+              "question": "Melyik Gt- nek lehet igazgatósága?",
+              "answer": "Zrt, Nyrt"
+          },
+          {
+              "question": "Hogy hívjuk a Zrt. jegyzett tőkéjét?",
+              "answer": "alaptőke"
+          },
+          {
+              "question": "Kötelező-e a könyvvizsgáló a Kft. nél?",
+              "answer": "Nem"
+          },
+          {
+              "question": "Melyik Gt. szűnik meg, ha tagjai száma 2 fő alá csökken?",
+              "answer": "Bt"
+          },
+          {
+              "question": "Melyik bíróság illetékes cégügyekben?",
+              "answer": "cégbíróság"
+          },
+          {
+              "question": "Milyen szavazati aránnyal lehet döntést hozni törzstőke leszállítás esetén a taggyűlésen?",
+              "answer": "minősített többség (2/3, 3/4)"
+          },
+          {
+              "question": "Milyen piaci részesedés kell az erőfölénnyel visszaélés megállapításához?",
+              "answer": "50 % felett meg kell bizonyítani, 75 % felett a GVH megindítja"
+          },
+          {
+              "question": "Melyik gazdasági társaságokat lehet megalakítani 2.000.000.- Ft jegyzettőkével?",
+              "answer": "BT, KKT"
+          },
+          {
+              "question": "A társaságalapítás tárgyi korlátai?",
+              "answer": "● Társaság tevékenysége ● Adott tevékenység adott társasági formában ● Társaság alapítása hatósági engedélyhez ● Tevékenységi kör gyakorlásához ír elő engedélyt"
+          },
+          {
+              "question": "A társasági szerződés kötelező tartalmi elemei?",
+              "answer": "Cégnév, székhely, tagok, időtartam, törzstőke, tevékenységi kör, egyéb, vezető tisztségviselők"
+          },
+          {
+              "question": "Hasonlítsa össze a teljes cégnevet és a rövidített cégnevet példákkal",
+              "answer": "vezérszó + tevékenységre utaló jelző + cégforma megjelölése (szükség esetén + toldat) Kis Halász Szolgáltató Betéti Társaság. Toldatok lehetnek: b.a: bejegyzés alatt, f.a: felszámolás alatt, v.a: végelszámolás alatt, cs.a: csődeljárás alatt, kt.a: kényszertörlés alatt"
+          },
+          {
+              "question": "Milyen részvényosztályokat ismer?",
+              "answer": "5db - (Törzsrészvény, Elsőbbségi részvény, Dolgozói részvény, Visszaváltható részvény, Kamatozó részvény)"
+          },
+          {
+              "question": "Mikor van két termék közös érintett piacon?",
+              "answer": "Az árupiac és a földrajzi piac metszete az érintett piac à egyszerre"
+          },
+          {
+              "question": "Kft. definíciója?",
+              "answer": "Olyan gazdasági társaság, amely előre meghatározott nagyságú törzsbetétekből állótörzstőkével alakul és ahol a tag kötelezettsége csak a vállalt vagyoni hozzájárulás szolgáltatásáig terjed, a társaság tartozásaiért egyebekben nem felelős"
+          },
+          {
+              "question": "Ismertesse a meghívóra vonatkozó szabályokat?",
+              "answer": "Az ügyvezető hívja össze. A meghívó elküldése és a taggyűlés napja között legalább 15 napnak kell eltelnie azzal, hogy a létesítő okirat ettől eltérően is rendelkezhet, de 3 napnál rövidebb időtartamot érvényesen nem határozhat meg. A legfőbb szerv a társasági szerződésben meghatározott gyakorisággal ülésezik azzal, hogy évente legalább egy taggyűlést tartani kell. A taggyűlés akkor határozatképes, ha azon a leadható szavazatok többsége képviselve van. Amennyiben a taggyűlés nem határozatképes, akkor érvényes döntéseket nem hozhat. A taggyűlés és a megismételt taggyűlés között legalább 3, legfeljebb 15 napnak kell eltelnie."
+          },
+          {
+              "question": "Az előtársaság?",
+              "answer": "A gazdasági társaság a társasági szerződés ellenjegyzésének napjától a létrehozni kívánt társaság előtársaságként működhet. Amit nem tehet: - a tagok személyében kizárólag jogszabályon alapuló változás következhet be; - a létesítő okirat módosítására - a nyilvántartó bíróság, valamint a hatósági engedély kiadására jogosult szerv felhívása teljesítésének kivételével - nem kerülhet sor; - az előtársaság gazdasági társaságot nem alapíthat, és abban tagként nem vehet részt; - nem kezdeményezhető tag kizárására irányuló per; és - nem határozható el átalakulás, egyesülés, szétválás, valamint jogutód nélküli megszűnés."
+          }
+      ]
+      
+    
+  

@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flashcard App</title>
+
+  <!-- Link to Favicon -->
+  <link rel="icon"
+    href="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn-icons-png.flaticon.com%2F512%2F9145%2F9145817.png&f=1&nofb=1&ipt=f251eb4db82f46b4e3a263a26fe045bae34e5ede43199766fefb99d396d02bfe&ipo=images"
+    type="image/x-icon">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Adjusting font size and weight for better readability */
+    body {
+      font-family: 'Arial', sans-serif;
+    }
+
+    .text-lg {
+      font-size: 1.25rem;
+      /* Larger text for easier readability */
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      /* Larger title */
+    }
+
+    h2 {
+      font-size: 1.75rem;
+      /* Larger question text */
+    }
+
+    .text-xl {
+      font-size: 1.5rem;
+      /* Text size for flashcards */
+    }
+
+    /* Ensure buttons are easy to read and tap */
+    button {
+      font-size: 1rem;
+    }
+
+    /* Improve the contrast between text and background */
+    .bg-gray-800 {
+      background-color: #2D3748;
+      /* Darker shade for better contrast */
+    }
+
+    .text-white {
+      color: #F7FAFC;
+      /* Light text color */
+    }
+
+    /* Make sure buttons have appropriate spacing */
+    .py-2,
+    .px-4 {
+      padding: 0.5rem 1rem;
+      /* Comfortable button padding */
+    }
+
+    /* Make sure the text stays readable on smaller screens */
+    @media (max-width: 600px) {
+
+      .text-lg,
+      h1,
+      h2 {
+        font-size: 1.2rem;
+        /* Slightly smaller font size on smaller screens */
+      }
+    }
+  </style>
+</head>
+
+<body class="bg-gray-900 text-white min-h-screen flex flex-col items-center justify-center">
+  <div class="max-w-md w-full bg-gray-800 shadow-lg rounded-lg p-6">
+    <h1 class="text-2xl font-bold text-center mb-4">Flashcard App</h1>
+
+    <!-- Dropdown for selecting JSON file -->
+    <div class="mb-4">
+      <label for="json-select" class="block text-gray-200 mb-2">Select Flashcard Deck:</label>
+      <select id="json-select" class="bg-gray-700 text-white py-2 px-4 rounded-md">
+        <option value="" disabled selected>Select a deck</option>
+        <option value="deck1">Üzleti jog</option>
+        <option value="deck2">Portálfejlesztés</option>
+        <option value="deck3">VIR</option>
+        <option value="deck4">Kontrolling 2. ZH</option>
+      </select>
+      <button id="load-flashcards" class="mt-4 bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-md">
+        Load Flashcards
+      </button>
+    </div>
+
+    <!-- Flashcard Display -->
+    <div id="flashcard-section" class="hidden text-center mt-6">
+      <div class="bg-gray-700 p-4 rounded-md shadow-md mb-4">
+        <h2 id="flashcard-question" class="text-xl font-medium"></h2>
+
+        <!-- Show Answer Button -->
+        <button id="show-answer" class="mt-4 bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded-md">
+          Show Answer
+        </button>
+
+        <!-- Space reserved for the answer -->
+        <div id="answer-row" class="mt-4 text-gray-200">
+          <p id="flashcard-answer" class="hidden"></p>
+        </div>
+
+        <!-- Answer options (for Deck 2) -->
+        <div id="answer-options" class="mt-4 hidden">
+          <button id="answer1"
+            class="bg-gray-600 hover:bg-gray-700 text-white py-2 px-4 rounded-md w-full mb-2"></button>
+          <button id="answer2"
+            class="bg-gray-600 hover:bg-gray-700 text-white py-2 px-4 rounded-md w-full mb-2"></button>
+          <button id="answer3"
+            class="bg-gray-600 hover:bg-gray-700 text-white py-2 px-4 rounded-md w-full mb-2"></button>
+          <!-- <button id="answer4"
+            class="bg-gray-600 hover:bg-gray-700 text-white py-2 px-4 rounded-md w-full mb-2"></button> -->
+        </div>
+      </div>
+
+      <!-- Rating Buttons -->
+      <div id="anki-buttons" class="flex justify-between hidden">
+        <button id="again" class="bg-red-600 hover:bg-red-700 text-white py-2 px-4 rounded-md">Again</button>
+        <button id="hard" class="bg-yellow-600 hover:bg-yellow-700 text-white py-2 px-4 rounded-md">Hard</button>
+        <button id="good" class="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-md">Good</button>
+        <button id="easy" class="bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded-md">Easy</button>
+      </div>
+    </div>
+  </div>
+
+    <!-- Footer Section -->
+    <footer class="my-4">
+      <p>
+        <a href="https://samyborsos.github.io">
+          Created by <span class="underline hover:text-blue-500">Borsos Samy</span>
+        </a>
+      </p>
+    </footer>
+
+  <script>
+    let flashcards = [];
+    let currentCardIndex = 0;
+
+    // Hardcoded paths to JSON files
+    const jsonPaths = {
+      deck1: '/flashcard/uzleti_jog.json',  // Replace with actual paths
+      deck2: '/flashcard/new_portalfejlesztes_flashcards.json',  // Replace with actual paths
+      deck3: '/flashcard/vir_flashcards.json',  // Replace with actual paths
+      deck4: '/flashcard/kontrolling_2h_kerdesek.json',  // Replace with actual paths
+    };
+
+    // Function to load the selected JSON file
+    document.getElementById("load-flashcards").addEventListener("click", () => {
+      const selectedDeck = document.getElementById("json-select").value;
+
+      if (!selectedDeck) {
+        alert("Please select a flashcard deck!");
+        return;
+      }
+
+      // Fetch the selected JSON file
+      fetch(jsonPaths[selectedDeck])
+        .then(response => response.json())
+        .then(data => {
+          flashcards = data.map((card) => ({
+            ...card,
+            interval: 1,
+            easeFactor: 2.5,
+            lapses: 0,
+            dueDate: new Date(),
+          }));
+
+          // Shuffle the flashcards array for random order
+          shuffleArray(flashcards);
+
+          if (flashcards.length > 0) {
+            showFlashcard();
+          } else {
+            alert("No valid flashcards found in the selected deck.");
+          }
+        })
+        .catch(error => alert("Failed to load the selected JSON file: " + error));
+    });
+
+    // Shuffle function to randomize the flashcards order
+    function shuffleArray(arr) {
+      for (let i = arr.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [arr[i], arr[j]] = [arr[j], arr[i]];
+      }
+    }
+
+    // Function to show the current flashcard
+    function showFlashcard() {
+      const flashcard = flashcards[currentCardIndex];
+      const questionEl = document.getElementById("flashcard-question");
+      const answerEl = document.getElementById("flashcard-answer");
+
+      // Reset all button backgrounds and enable them
+      resetAnswerButtons();
+
+      document.getElementById("flashcard-section").classList.remove("hidden");
+      questionEl.textContent = flashcard.question;
+      answerEl.textContent = "";
+      answerEl.classList.add("hidden");
+
+      // Hide the multiple choice answers if Deck1 or Deck3 is selected
+      const deckSelect = document.getElementById("json-select").value;
+      if (deckSelect === 'deck1' || deckSelect === 'deck3' || deckSelect === 'deck4') {
+        document.getElementById("answer-options").classList.add("hidden");
+        document.getElementById("anki-buttons").classList.remove("hidden");
+        // Show the "Show Answer" button for Deck 1 and Deck 3
+        document.getElementById("show-answer").classList.remove("hidden");
+      } else {
+        // For Deck 2, show multiple choice answers and hide "Show Answer" button
+        document.getElementById("answer-options").classList.remove("hidden");
+        document.getElementById("anki-buttons").classList.add("hidden");
+        document.getElementById("show-answer").classList.add("hidden");  // Hide the "Show Answer" button for Deck 2
+        showDeck2Answers(flashcard);
+      }
+
+      // If Deck 1 or Deck 3 is selected, show the answer on button click
+      if (deckSelect === 'deck1' || deckSelect === 'deck3' || deckSelect === 'deck4') {
+        document.getElementById("show-answer").addEventListener("click", () => {
+          answerEl.textContent = flashcard.answer;
+          answerEl.classList.remove("hidden");
+
+          // Show Anki-style buttons after showing the answer
+          document.getElementById("anki-buttons").classList.remove("hidden");
+        });
+      }
+    }
+
+    // Handle Deck1 button actions (Anki-style)
+    function handleDeck1Answer(option) {
+      const flashcard = flashcards[currentCardIndex];
+
+      switch (option) {
+        case 'again':
+          flashcard.interval = 1;
+          break;
+        case 'hard':
+          flashcard.interval = 2;
+          break;
+        case 'good':
+          flashcard.interval = 3;
+          break;
+        case 'easy':
+          flashcard.interval = 4;
+          break;
+      }
+
+      // Move to the next flashcard after selection
+      currentCardIndex = (currentCardIndex + 1) % flashcards.length;
+      showFlashcard();
+    }
+
+    // Event listeners for Anki buttons (Deck 1 and Deck 3)
+    document.getElementById("again").addEventListener("click", () => handleDeck1Answer('again'));
+    document.getElementById("hard").addEventListener("click", () => handleDeck1Answer('hard'));
+    document.getElementById("good").addEventListener("click", () => handleDeck1Answer('good'));
+    document.getElementById("easy").addEventListener("click", () => handleDeck1Answer('easy'));
+
+
+    // Show multiple answer choices for Deck 2
+function showDeck2Answers(currentFlashcard) {
+  const correctAnswer = currentFlashcard.correct_answer;
+  const allAnswers = currentFlashcard.answers;  // Array of possible answers in the JSON
+
+  // Ensure the correct answer is included and shuffle
+  allAnswers.push(correctAnswer); // Add the correct answer to the answers array
+  shuffleArray(allAnswers);
+
+  // Display the answers in the buttons
+  document.getElementById("answer1").textContent = allAnswers[0];
+  document.getElementById("answer2").textContent = allAnswers[1];
+  document.getElementById("answer3").textContent = allAnswers[2];
+/*   document.getElementById("answer4").textContent = allAnswers[3];
+ */
+  // Set the click event to check the answer
+  document.querySelectorAll('#answer-options button').forEach((btn) => {
+    btn.onclick = () => {
+      const buttons = document.querySelectorAll('#answer-options button');
+
+      // Disable buttons after selection
+      buttons.forEach(button => button.disabled = true);
+
+      // Highlight selected answer
+      if (btn.textContent === correctAnswer) {
+        btn.classList.add("bg-green-600");  // Correct answer
+      } else {
+        btn.classList.add("bg-red-600");    // Incorrect answer
+      }
+
+      // After a delay, move to the next card
+      setTimeout(() => {
+        currentCardIndex = (currentCardIndex + 1) % flashcards.length;
+        showFlashcard();
+      }, 2000);  // 2-second delay before showing the next card
+    };
+  });
+}
+
+    // Reset the button styles and re-enable them
+    function resetAnswerButtons() {
+      const buttons = document.querySelectorAll('#answer-options button');
+      buttons.forEach(button => {
+        button.classList.remove('bg-green-600', 'bg-red-600'); // Reset background color
+        button.disabled = false;  // Re-enable buttons for the next question
+      });
+    }
+  </script>
+</body>
+
+</html>

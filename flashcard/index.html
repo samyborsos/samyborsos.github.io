@@ -270,7 +270,7 @@ function showDeck2Answers(currentFlashcard) {
   const correctAnswer = currentFlashcard.correct_answer;
   const allAnswers = currentFlashcard.answers;  // Array of possible answers in the JSON
 
-  // Ensure the correct answer is included and shuffle
+  // Shuffle questions
   shuffleArray(allAnswers);
 
   // Display the answers in the buttons

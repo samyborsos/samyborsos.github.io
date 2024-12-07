@@ -116,10 +116,11 @@
             class="bg-gray-600 hover:bg-gray-700 text-white py-2 px-4 rounded-md w-full mb-2"></button>
           <button id="answer3"
             class="bg-gray-600 hover:bg-gray-700 text-white py-2 px-4 rounded-md w-full mb-2"></button>
-          <!-- <button id="answer4"
-            class="bg-gray-600 hover:bg-gray-700 text-white py-2 px-4 rounded-md w-full mb-2"></button> -->
+          </div>
+          
         </div>
-      </div>
+        <button id="stats"
+          class="bg-gray-600 hover:bg-gray-700 text-white py-2 px-4 rounded-md w-full mb-2"></button>
 
       <!-- Rating Buttons -->
       <div id="anki-buttons" class="flex justify-between hidden">
@@ -155,6 +156,7 @@
     // Function to load the selected JSON file
     document.getElementById("load-flashcards").addEventListener("click", () => {
       const selectedDeck = document.getElementById("json-select").value;
+      currentCardIndex = 0;
 
       if (!selectedDeck) {
         alert("Please select a flashcard deck!");
@@ -209,21 +211,37 @@
 
       // Hide the multiple choice answers if Deck1 or Deck3 is selected
       const deckSelect = document.getElementById("json-select").value;
-      if (deckSelect === 'deck1' || deckSelect === 'deck3' || deckSelect === 'deck4') {
+      if (deckSelect === 'deck1' || deckSelect === 'deck4') {
         document.getElementById("answer-options").classList.add("hidden");
         document.getElementById("anki-buttons").classList.remove("hidden");
         // Show the "Show Answer" button for Deck 1 and Deck 3
         document.getElementById("show-answer").classList.remove("hidden");
-      } else {
+        const statistics = `Progress: ${currentCardIndex}/${flashcards.length}`;
+        document.getElementById("stats").classList.add("bg-gray-800");
+        document.getElementById("stats").classList.add("pointer-events-none");
+      document.getElementById("stats").textContent = statistics;
+      } else if (deckSelect === 'deck2') {
         // For Deck 2, show multiple choice answers and hide "Show Answer" button
         document.getElementById("answer-options").classList.remove("hidden");
         document.getElementById("anki-buttons").classList.add("hidden");
         document.getElementById("show-answer").classList.add("hidden");  // Hide the "Show Answer" button for Deck 2
+        document.getElementById("answer3").classList.remove("hidden");
+        document.getElementById("stats").classList.add("bg-gray-800");
+        document.getElementById("stats").classList.add("pointer-events-none");
         showDeck2Answers(flashcard);
+      } else if (deckSelect === 'deck3') {
+        // For Deck 2, show multiple choice answers and hide "Show Answer" button
+        document.getElementById("answer-options").classList.remove("hidden");
+        document.getElementById("anki-buttons").classList.add("hidden");
+        document.getElementById("show-answer").classList.add("hidden");  // Hide the "Show Answer" button for Deck 2
+        document.getElementById("answer3").classList.add("hidden");
+        document.getElementById("stats").classList.add("bg-gray-800");
+        document.getElementById("stats").classList.add("pointer-events-none");
+        showDeck3Answers(flashcard);
       }
 
       // If Deck 1 or Deck 3 is selected, show the answer on button click
-      if (deckSelect === 'deck1' || deckSelect === 'deck3' || deckSelect === 'deck4') {
+      if (deckSelect === 'deck1' || deckSelect === 'deck4') {
         document.getElementById("show-answer").addEventListener("click", () => {
           answerEl.textContent = flashcard.answer;
           answerEl.classList.remove("hidden");
@@ -233,6 +251,47 @@
         });
       }
     }
+    let correctlyAnswered = 0;
+    let wronglyAnswered = 0;
+    // Show answers for Deck 3 (Igaz/Hamis buttons)
+function showDeck3Answers(currentFlashcard) {
+  const correctAnswer = currentFlashcard.answer; // 'igaz' or 'hamis'
+  
+
+  document.getElementById("answer1").textContent = "Igaz";
+  document.getElementById("answer2").textContent = "Hamis";
+
+    // Create a string with statistics to display
+  //const statistics = `Progress: ${currentCardIndex}/50 | Correct: ${correctlyAnswered} | Incorrect: ${wronglyAnswered} | Accuracy: ${(wronglyAnswered / correctlyAnswered) * 100}%`;
+  const statistics = `Progress: ${currentCardIndex}/${flashcards.length}`;
+  // Set the text content for answer3 with the statistics
+  document.getElementById("stats").textContent = statistics;
+
+  // Check if selected answer matches the correct one
+  document.querySelectorAll('#answer-options button').forEach((btn) => {
+    btn.onclick = () => {
+      const buttons = document.querySelectorAll('#answer-options button');
+
+      // Disable buttons after selection
+      buttons.forEach(button => button.disabled = true);
+
+      // Highlight selected answer
+      if (btn.textContent.toLowerCase() === correctAnswer) {
+        correctlyAnswered = correctlyAnswered + 1;
+        btn.classList.add("bg-green-600");  // Correct answer
+      } else {
+        wronglyAnswered = wronglyAnswered + 1;
+        btn.classList.add("bg-red-600");    // Incorrect answer
+      }
+
+      // After a delay, move to the next card
+      setTimeout(() => {
+        currentCardIndex = (currentCardIndex + 1) % flashcards.length;
+        showFlashcard();
+      }, 2000);  // 2-second delay before showing the next card
+    };
+  });
+} 
 
     // Handle Deck1 button actions (Anki-style)
     function handleDeck1Answer(option) {
@@ -265,6 +324,7 @@
     document.getElementById("easy").addEventListener("click", () => handleDeck1Answer('easy'));
 
 
+
     // Show multiple answer choices for Deck 2
 function showDeck2Answers(currentFlashcard) {
   const correctAnswer = currentFlashcard.correct_answer;
@@ -277,6 +337,13 @@ function showDeck2Answers(currentFlashcard) {
   document.getElementById("answer1").textContent = allAnswers[0];
   document.getElementById("answer2").textContent = allAnswers[1];
   document.getElementById("answer3").textContent = allAnswers[2];
+
+  
+  //const statistics = `Progress: ${currentCardIndex}/50 | Correct: ${correctlyAnswered} | Incorrect: ${wronglyAnswered} | Accuracy: ${(wronglyAnswered / correctlyAnswered) * 100}%`;
+    const statistics = `Progress: ${currentCardIndex}/${flashcards.length}`;
+
+  // Set the text content for answer3 with the statistics
+  document.getElementById("stats").textContent = statistics;
 /*   document.getElementById("answer4").textContent = allAnswers[3];
  */
   // Set the click event to check the answer
@@ -286,11 +353,11 @@ function showDeck2Answers(currentFlashcard) {
 
       // Disable buttons after selection
       buttons.forEach(button => button.disabled = true);
-
-      // Highlight selected answer
       if (btn.textContent === correctAnswer) {
+        correctlyAnswered = correctlyAnswered + 1;
         btn.classList.add("bg-green-600");  // Correct answer
       } else {
+        wronglyAnswered = wronglyAnswered + 1;
         btn.classList.add("bg-red-600");    // Incorrect answer
       }
 
@@ -298,7 +365,7 @@ function showDeck2Answers(currentFlashcard) {
       setTimeout(() => {
         currentCardIndex = (currentCardIndex + 1) % flashcards.length;
         showFlashcard();
-      }, 2000);  // 2-second delay before showing the next card
+      }, 1000);  // 2-second delay before showing the next card
     };
   });
 }

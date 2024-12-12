@@ -141,7 +141,7 @@
             "Disabled tulajdonság true értékre állításával.",
             "Visible tulajdonság false értékre állításával."
         ],
-        "correct_answer": "Enabled tulajdonság false értékre állításával"
+        "correct_answer": "Enabled tulajdonság false értékre állításával."
     },
     {
         "question": "Web alkalmazásban (web forms) egy TextBox típusú vezérlőben hogyan tudunk több sornyi szöveget megjeleníteni?",

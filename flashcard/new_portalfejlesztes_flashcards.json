@@ -247,7 +247,7 @@
         "answers": [
             "Minden öröklődési hierarchiához egy tábla készül az ős nevével, mely minden leszármazott tulajdonságot és Discriminatort tartalmaz.",
             "Minden keletkezett táblában benne lesz az összes tulajdonság, ami csak felmerül a Context-ben, így gyorsul a hozzáférés.",
-            "Annyi tábla keletkezik belső hivatkozásokkal, ahány osztály részt vesz az öröklésben"
+            "Annyi tábla keletkezik belső hivatkozásokkal, ahány osztály részt vesz az öröklésben."
         ],
         "correct_answer": "Minden öröklődési hierarchiához egy tábla készül az ős nevével, mely minden leszármazott tulajdonságot és Discriminatort tartalmaz."
     },
@@ -258,7 +258,7 @@
             "Minen öröklődési hierarchiához egy tábla készül az ős nevével, mely minden leszármazott tulajdonságot és Discriminatort tartalmaz.",
             "Minden keletkezett táblában benne lesz az összes tulajdonság, ami csak felmerül a Context-ben, így gyorsul a hozzáférés."
         ],
-        "correct_answer": "Annyi tábla keletkezik belső hivatkozásokkal, ahány osztály részt vesz az öröklésben"
+        "correct_answer": "Annyi tábla keletkezik belső hivatkozásokkal, ahány osztály részt vesz az öröklésben."
     },
     {
         "question": "Kérdés: Entity Framework - konkurencia kezelésére melyek a lehetséges módok?",

@@ -355,8 +355,8 @@
         "question": "Kérdés: MVC projektben, adatkezeléssel kapcsolatban, miért/mikor előnyös Initializer használata?",
         "answers": [
             "Mert így nem kell újra felvinni teszt adatokat fejlesztés közben, amikor intenzíven változik a db séma.",
-            "Mert gyorsítja az adatbázis betöltését.",
-            "Mert automatikusan szinkronizálja az adatbázist."
+            "Mert így minden Model osztályból tábla készíthető, egy lépésben.",
+            "Mert így minden változás a sémában automatikusan rögzítve lesz."
         ],
         "correct_answer": "Mert így nem kell újra felvinni teszt adatokat fejlesztés közben, amikor intenzíven változik a db séma."
     }

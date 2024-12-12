@@ -30,8 +30,8 @@
         "question": "Web alkalmazásban mi a különbség valami.aspx, valami.aspx.cs és valami.aspx.designer.cs fájlok tartalma között?",
         "answers": [
             "Az aspx tartalmazza a vezérlőelemek elhelyezkedését, típusát és alapvelő működését, az aspx.cs a hozzá tartozó codebehind fájl (főként vezérlőelemek kezelésére vonatkozó kóddal), míg az aspx.designer.cs generált fájl, mely a vezérlők definícióját tartalmazza.",
-            "Az aspx tartalmazza a vezérlőelemek elhelyezkedését és a codebehind kódot, míg az aspx.cs fájl csak a vezérlőelemek működését definiálja.",
-            "Az aspx fájl csak a vizuális elemeket tartalmazza, míg az aspx.cs és aspx.designer.cs fájlok a háttérlogikát."
+            "Az .cs tartalmazza a vezérlőelemek elhelyezkedését, típusát és alapvelő működését, az aspx.designer.cs a hozzá tartozó codebehind fájl (főként vezérlőelemek kezelésére vonatkozó kóddal), míg az aspx.csgenerált fájl, mely a vezérlők definícióját tartalmazza.",
+            "Az aspx.designer.cs tartalmazza a vezérlőelemek elhelyezkedését, típusát és alapvelő működését, az aspx.cs a hozzá tartozó codebehind fájl (főként vezérlőelemek kezelésére vonatkozó kóddal), míg az aspx generált fájl, mely a vezérlők definícióját tartalmazza."
         ],
         "correct_answer": "Az aspx tartalmazza a vezérlőelemek elhelyezkedését, típusát és alapvelő működését, az aspx.cs a hozzá tartozó codebehind fájl (főként vezérlőelemek kezelésére vonatkozó kóddal), míg az aspx.designer.cs generált fájl, mely a vezérlők definícióját tartalmazza."
     },

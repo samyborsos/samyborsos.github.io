@@ -2,9 +2,9 @@
     {
         "question": "Miért van külön Web.Debug.config és Web.Release.config fájl a webalkalmazásban?",
         "answers": [
-            "Azért, mert így külön definiálhatóak beállítások a SolutionConfiguration alatt választható buildtípusokhoz.",
+            "Azért, mert így külön definiálhatóak beállítások éles és demo környezetekhez.",
             "Azért, mert így a fájlok segítenek a debuggolás során a fejlesztőknek.",
-            "Azért, mert így könnyen létrehozható egy univerzális konfiguráció minden környezethez."
+            "Azért, mert így külön definiálhatóak változtatható a kinézetéles és demo környezetek között."
         ],
         "correct_answer": "Azért, mert így külön definiálhatóak beállítások a SolutionConfiguration alatt választható buildtípusokhoz."
     },
@@ -40,7 +40,7 @@
         "answers": [
             "Az oldal kerete, kinézete és működése, melyet az .aspx fájlok töltenek meg tartalommal.",
             "Az oldal logikáját és adatkezelési metódusokat.",
-            "A vezérlők CSS stílusait és JavaScript kódjait."
+            "Az oldal kerete, kinézete és működése, melyet az .cs fájlok töltenek meg tartalommal."
         ],
         "correct_answer": "Az oldal kerete, kinézete és működése, melyet az .aspx fájlok töltenek meg tartalommal."
     },
@@ -48,16 +48,16 @@
         "question": "Web alkalmazásban lehet-e több site.master fájl?",
         "answers": [
             "Igen, lehet.",
-            "Nem, csak egy Site.master fájl használható.",
-            "Csak akkor, ha különböző oldalakat használunk különböző keretekkel."
+            "Nem, nem lehet.",
+            "Nem, lehet."
         ],
         "correct_answer": "Igen, lehet."
     },
     {
-        "question": "Web alkalmazásban egy aspx fájlban a <%: %> jel található, mit jelent?",
+        "question": "Web alkalmazásban egy aspx fájlban a <% : %> jel található, mit jelent?",
         "answers": [
             "A végleges, browsernek küldött html tartalomban jelenjen meg a jelek között található kifejezés értéke.",
-            "A szerver oldali kód végrehajtása előtt jelenik meg a kifejezés értéke.",
+            "A végleges, browsernek küldött html tartalom előállítása során c# nyelven kell értelmezni a jelek közötti részt.",
             "A végleges html kódba kerül a kifejezés, de nem kerül lefordításra."
         ],
         "correct_answer": "A végleges, browsernek küldött html tartalomban jelenjen meg a jelek között található kifejezés értéke."
@@ -66,7 +66,7 @@
         "question": "Web alkalmazásban egy aspx fájlban a <% %> jel található, mit jelent?",
         "answers": [
             "A végleges, browsernek küldött html tartalom előállítása során c# nyelven kell értelmezni a jelek közötti részt.",
-            "Ez a kód futtatásának helye a server oldalon.",
+            "A végleges, browsernek küldött html tartalomban jelenjen meg a jelek között található kifejezés értéke.",
             "A kód már végrehajtásra került, és a generált HTML tartalom látszik."
         ],
         "correct_answer": "A végleges, browsernek küldött html tartalom előállítása során c# nyelven kell értelmezni a jelek közötti részt."
@@ -75,26 +75,26 @@
         "question": "Web alkalmazásban (Web forms) mit értünk a codebehind fájl alatt?",
         "answers": [
             "Azt a .aspx.cs fájlt, mely az aspx fájllal összhangban tartalmazza többek között az események kezelőit.",
-            "A .aspx fájl része, amely a felhasználói interakciókat kezeli.",
-            "A fő HTML fájl kiegészítése, amely tartalmazza az eseményeket."
+            "Azt a POCO .cs fájlt, mely az aspx fájllal összhangban tartalmazza többek között az események kezelőit.",
+            "Azt a .designer.cs fájlt, mely az aspx fájllal összhangban tartalmazza többek között az események kezelőit."
         ],
         "correct_answer": "Azt a .aspx.cs fájlt, mely az aspx fájllal összhangban tartalmazza többek között az események kezelőit."
     },
     {
-        "question": "Web alkalmazásban (web forms) hogyan generáltatható egy vezérlőelem default eseménykezelője?",
+        "question": "Web alkalmazásban (web forms) hogyan generáltatható egy vezérlőelem default eseménykezelője? (2 db)",
         "answers": [
             "Dupla kattintás a vezérlőelemen",
-            "Vezérlőelem beállítások paneljén kattintsunk az eseményekre.",
-            "Kézzel kell írni az eseménykódot."
+            "Properties panel, event gomb alapján a kiválasztott eseményen dupla kattintás ",
+            "Tools menü, events... és ott kiválasztható 'adddefault'"
         ],
         "correct_answer": "Dupla kattintás a vezérlőelemen"
     },
     {
-        "question": "Web alkalmazásban (web forms) válassza ki, melyek a választható/használható vezérlő elemek?",
+        "question": "Web alkalmazásban (web forms) válassza ki, melyek a választható/használható vezérlő elemek? (4 db)",
         "answers": [
             "Button, Textbox, DropdownList, Checkbox",
-            "Label, Button, Image, GridView",
-            "Button, Checkbox, Form, GridView"
+            "Clock, Button, Textbox, DropdownList, Checkbox",
+            "Clock, Textbox, DropdownList, Checkbox"
         ],
         "correct_answer": "Button, Textbox, DropdownList, Checkbox"
     },
@@ -102,7 +102,7 @@
         "question": "Web alkalmazásban (Web forms) mit tudhatunk meg az IsPostBack tulajdonságából?",
         "answers": [
             "Értéke hamis, ha ez az első oldalbetöltés.",
-            "Értéke igaz, ha az oldal előzőleg már betöltődött.",
+            "Értéke hamis, ha az oldalbetöltés vezérlés hatására történt    ",
             "Értéke hamis, ha a felhasználó beírta az adatokat a form-ba."
         ],
         "correct_answer": "Értéke hamis, ha ez az első oldalbetöltés."
@@ -137,9 +137,9 @@
     {
         "question": "Web alkalmazásban (Web forms) egy Textbox típusú melyik tulajdonsággal tiltható le (user nem szerkesztheti)?",
         "answers": [
-            "Enabled tulajdonság false értékre állításával",
-            "ReadOnly tulajdonság beállításával",
-            "Visible tulajdonság beállításával"
+            "Enabled tulajdonság false értékre állításával.",
+            "Disabled tulajdonság true értékre állításával.",
+            "Visible tulajdonság false értékre állításával."
         ],
         "correct_answer": "Enabled tulajdonság false értékre állításával"
     },
@@ -147,8 +147,8 @@
         "question": "Web alkalmazásban (web forms) egy TextBox típusú vezérlőben hogyan tudunk több sornyi szöveget megjeleníteni?",
         "answers": [
             "Text tulajdonságba sortöréssel ellátott szöveget helyezünk, TextMode tulajdonságot MultiLine értékre állítva.",
-            "TextMode tulajdonságot SingleLine értékre állítva.",
-            "Text tulajdonságot üresen hagyjuk, és a kód generálja a sorokat."
+            "Nem lehetséges, alapvetően userinput-ra való.",
+            "Text tulajdonságba sortöréssel ellátott szöveget helyezünk, EnableMultiLine tulajdonságot true értékre állítva"
         ],
         "correct_answer": "Text tulajdonságba sortöréssel ellátott szöveget helyezünk, TextMode tulajdonságot MultiLine értékre állítva."
     },
@@ -156,8 +156,8 @@
         "question": "Kérdés: MVC projekt esetén tipikusan hova futnak be a browser kérései?",
         "answers": [
             "Controller osztályok publikus metódusaihoz",
-            "View fájlokhoz",
-            "Model osztályokhoz"
+            "Controller osztályok ActionResult attribútummal ellátott metóduasihoz.",
+            "Manager osztályok publikus metódusaihoz."
         ],
         "correct_answer": "Controller osztályok publikus metódusaihoz"
     },
@@ -165,8 +165,8 @@
         "question": "Mi határozza meg, hogy a browser címsorában lévő uri hova mutat az alkalmazásban?",
         "answers": [
             "Routing szabályokkal kell megadni",
-            "A controller nevére van szabva.",
-            "A URL paraméterekben szereplő értékek."
+            "Controllerek publikus metódusaihoz futnak be.",
+            "A Contextben kell megadni."
         ],
         "correct_answer": "Routing szabályokkal kell megadni"
     },
@@ -174,8 +174,8 @@
         "question": "MVC projekt esetén tipikusan mit értünk ViewModel alatt?",
         "answers": [
             "Egy View alapját szolgáltató osztály, mely tipikusan tartalmaz számított mezőket és lekérdezett értékeket.",
-            "Egy objektum, amely csak adatokat tárol, de nem tartalmaz logikát.",
-            "Egy Controller által generált adatokat tartalmazó objektum."
+            "Egy View alapját szolgáltató osztály, mely tipikusan nem tartalmaz számított mezőket és lekérdezett értékeket.",
+            "Azon osztályok ezek, melyek az adatbázisban kerülnek perzisztálásra."
         ],
         "correct_answer": "Egy View alapját szolgáltató osztály, mely tipikusan tartalmaz számított mezőket és lekérdezett értékeket."
     },
@@ -183,7 +183,7 @@
         "question": "Mire utal az MVC minta?",
         "answers": [
             "Model-View-Controller",
-            "Model-View-Content",
+            "Model-ViewModel-Control",
             "Model-View-Class"
         ],
         "correct_answer": "Model-View-Controller"
@@ -192,8 +192,8 @@
         "question": "MVC Web alkalmazásban hogyan kerül egy View megjelenítésre?",
         "answers": [
             "A megadott URL egy Controller metódusra mutat, mely View-t adhat vissza.",
-            "A View fájl közvetlenül a böngészőhöz kerül.",
-            "A Controller vezérli, de a View automatikusan betöltődik."
+            "A megadott URL egy HTML oldalra mutat, melyet a browser megjelenít, ez a View.",
+            " ViewModel generálódik és jeleníti meg a browser."
         ],
         "correct_answer": "A megadott URL egy Controller metódusra mutat, mely View-t adhat vissza."
     },
@@ -201,8 +201,8 @@
         "question": "MVC alkalmazás esetén mikor fog kiértékelődni a <%%> jelek között kifejezés?",
         "answers": [
             "Az oldal minden elkészítése során",
-            "Csak akkor, ha új adatokat kérdeztünk le.",
-            "Ha az oldal paramétereket tartalmaz."
+            "Csak az első megjelenítés során.",
+            "Az oldal minden elkészítése során, ami nem IsPostBack."
         ],
         "correct_answer": "Az oldal minden elkészítése során"
     },
@@ -237,8 +237,8 @@
         "question": "Kérdés: Tipikusan mit értünk Context alatt?",
         "answers": [
             "Minden ide tartozik, amely a tárolt adatokat írja le (tulajdonságok, kapcsolatok)",
-            "Az alkalmazás felhasználói felületét.",
-            "A szerveroldali adatkezelési logikát."
+            "Minden ide tartozik, ami a Model osztályokban van.",
+            "Minden ide tartozik, mely megmondja, hogy hol és milyen adatok érhetőek el."
         ],
         "correct_answer": "Minden ide tartozik, amely a tárolt adatokat írja le (tulajdonságok, kapcsolatok)"
     },
@@ -246,17 +246,17 @@
         "question": "Kérdés: Entity Framework - mit jelent a Table-per-hierarchy pattern használata/mit eredményez?",
         "answers": [
             "Minden öröklődési hierarchiához egy tábla készül az ős nevével, mely minden leszármazott tulajdonságot és Discriminatort tartalmaz.",
-            "Minden öröklődési hierarchiához külön táblák készülnek, az ős és a leszármazottak számára is.",
-            "A táblák összekapcsolásával érhető el az öröklődés."
+            "Minden keletkezett táblában benne lesz az összes tulajdonság, ami csak felmerül a Context-ben, így gyorsul a hozzáférés.",
+            "Annyi tábla keletkezik belső hivatkozásokkal, ahány osztály részt vesz az öröklésben"
         ],
         "correct_answer": "Minden öröklődési hierarchiához egy tábla készül az ős nevével, mely minden leszármazott tulajdonságot és Discriminatort tartalmaz."
     },
     {
         "question": "Kérdés: Entity Framework - mit jelent a Table-per-type pattern használata/mit eredményez?",
         "answers": [
-            "Annyi tábla keletkezik belső hivatkozásokkal, ahány osztály részt vesz az öröklésben",
-            "Minden típus egy külön táblában jelenik meg.",
-            "Az osztályok öröklődése nem befolyásolja a táblák kialakítását."
+            "Annyi tábla keletkezik belső hivatkozásokkal, ahány osztály részt vesz az öröklésben.",
+            "Minen öröklődési hierarchiához egy tábla készül az ős nevével, mely minden leszármazott tulajdonságot és Discriminatort tartalmaz.",
+            "Minden keletkezett táblában benne lesz az összes tulajdonság, ami csak felmerül a Context-ben, így gyorsul a hozzáférés."
         ],
         "correct_answer": "Annyi tábla keletkezik belső hivatkozásokkal, ahány osztály részt vesz az öröklésben"
     },
@@ -282,8 +282,8 @@
         "question": "Kérdés: MVC projekt esetén mire használható a ViewBag?",
         "answers": [
             "Egy View kollekciót lehet segítségével megjeleníteni, akár egyszerre több controllerből is.",
-            "A ViewModel szerkesztésére szolgál.",
-            "A JavaScript kódok tárolására szolgál."
+            "Olyan objektum, melynek nincsenek előre definiált tulajdonságai, kétirányban bármi bele tehető.",
+            "View-kat lehet controllerekhez küldeni vele."
         ],
         "correct_answer": "Egy View kollekciót lehet segítségével megjeleníteni, akár egyszerre több controllerből is."
     },
@@ -299,27 +299,28 @@
     {
         "question": "Kérdés: Entity Framework - Ha tulajdonságként 1:N kapcsolat megvalósítása a cél, akkor....",
         "answers": [
-            "Generikus ICollection interfészt megvalósító tulajdonság kell.",
-            "Referencia típusú változót kell használnunk.",
-            "Az osztályban két külön tulajdonságot kell létrehozni."
+            "...generikus ICollection interfészt megvalósító tulajdonság kell.",
+            "...generikus IDictionary interfészt megvalósító tulajdonság kell.",
+            "...List<long> tulajdonság kell az idegen kulcs miatt."
         ],
-        "correct_answer": "Generikus ICollection interfészt megvalósító tulajdonság kell."
+        "correct_answer": "...generikus ICollection interfészt megvalósító tulajdonság kell."
     },
     {
         "question": "Kérdés: Entity Framework - Ha tulajdonságként 1:1 kapcsolat megvalósítása a cél, akkor....",
         "answers": [
-            "Publikus property get részében kell lekérdezni ID alapján és visszaadni.",
-            "Két különböző táblát kell létrehozni.",
-            "A kapcsolatot explicit módon kell definiálni."
+            "...protected property kell, olyan típussal, ami a hivatkozott elem típusa.",
+            "...virtual property kell, olyan típussal, ami a másik elem típusa.",
+            "...publikus property get részében kell lekérdezni ID alapján és visszaadni."
+
         ],
-        "correct_answer": "Publikus property get részében kell lekérdezni ID alapján és visszaadni."
+        "correct_answer": "...publikus property get részében kell lekérdezni ID alapján és visszaadni."
     },
     {
         "question": "Kérdés: Entity Framework - mivel szabályozható, hogy mely osztályokból készüljön tábla?",
         "answers": [
             "A model osztályok attribútumai határozzák meg.",
-            "A tábla nevét a controller határozza meg.",
-            "A routing szabályok határozzák meg."
+            "Web.config fájl ConnectionStrings részében kell megadni.",
+            "Ezt Context generikus DbSet tulajdonságai határozzák meg."
         ],
         "correct_answer": "A model osztályok attribútumai határozzák meg."
     },
@@ -327,8 +328,8 @@
         "question": "Kérdés: Entity Framework - hogyan állíthatjuk be az adatok inicializálását?",
         "answers": [
             "Initializer osztály kell / Seed metódus override.",
-            "Kézi adatfeltöltéssel.",
-            "A kontextus indításakor automatikusan betöltődik."
+            "Initializer osztály kell / Initialize() metódus felülbírálatával.",
+            "Az Application_Start() metódus való erre."
         ],
         "correct_answer": "Initializer osztály kell / Seed metódus override."
     },
@@ -345,8 +346,8 @@
         "question": "Kérdés: Miért előnyös az IQueryable interfész használata?",
         "answers": [
             "Mert Query Object pattern megvalósítás miatt, csak a lekérdezést tárolja, késői kiértékelés lehetséges.",
-            "Mert gyorsabban végrehajtja a lekérdezéseket.",
-            "Mert egyszerűbb az adatbázishoz való csatlakozás."
+            "Mert így az adatbázisba nem kell külön elmenteni az adatokat, ez azonnal megtörténik.",
+            "Mert így azonnal rendelkezsére áll az egész halmaz, igaz több adat kerülhet átvitelre."
         ],
         "correct_answer": "Mert Query Object pattern megvalósítás miatt, csak a lekérdezést tárolja, késői kiértékelés lehetséges."
     },

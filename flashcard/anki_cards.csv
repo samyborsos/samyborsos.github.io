@@ -1,0 +1,353 @@
+question,answer
+"A ""best practice"" jellegű üzleti folyamatok az egyes területek legjobb üzleti gyakorlatának megfelelő folyamatokat jelentik.",igaz
+"A ""best practice"" jellegű üzleti folyamatok nem az egyes területek legjobb üzleti gyakorlatának megfelelő folyamatokat jelentik.",hamis
+A DRP feladata a kiesett erőforrások visszaállításának biztosítása.,igaz
+A DRP feladata a kiesett erőforrások nélküli funkcionális működés biztosítása.,hamis
+"A BCP jelentése kiesett erőforrás visszaállítása, míg a DRP jelentése a kiesett erőforrások nélküli funkcionális működés.",hamis
+A BOM-ban backflush hatására változik-e a készletszint?,igaz
+A DSS-rendszerek a döntési folyamat informatikai támogatását szolgáló rendszerek.,igaz
+A DSS-rendszerek nem a döntési folyamat informatikai támogatását szolgáló rendszerek.,hamis
+A Garbage in garbage out hatásnak nincsen nagy jelentősége hibás adatkezelés esetén.,hamis
+"A garbage in garbage out jelentése, hogy rossz adatokból csak rossz adatok nyerhetőek ki",igaz
+A HANA repository a futásidejű adatbázis objektumokattárolja.,hamis
+Egy HANA adatbázis alapvetően OLAP igényekkiszolgálására alkalmas,igaz
+Egy HANA adatbázisban az adatok karbantartása (pl.: újrekord felvitele) technológiai szempontból a delta bufferekenkeresztül valósul meg.,igaz
+"HANA környezetben a delivery unitok szolgálnak a különbözőrendszerek (fejlesztői teszt, produktyv) közötti transzporthoz.",igaz
+A MOLAP (Multidimensional OLAP) rendszerek az adatok tárolására a multidimenziós adatmodellt használják.,igaz
+A Máv-Start által fejlesztett Elvira elnevezésű menetrend rendszer egy információs rendszer.,igaz
+A PaaS alkalmazás szolgáltatást jelent.,hamis
+A PaaS platform szolgáltatást jelent.,igaz
+"A ""PaaS"" jelentése szoftverszolgáltatás.",hamis
+A SAP NetWeaver egy átfogó integrációs és alkalmazási platform,igaz
+A beszerzési információ rekordok (purchasing info records) az egyes anyagokkal kapcsolatos meghatározott szállítókra vonatkozó beszerzési adatokat tartalmazzák.,igaz
+A beszerzési információs rekordok (purchase info records) az egyes anyagokkal kapcsolatos meghatározott szállítókra vonatkozó beszerzési adatait tartalmazzák.,igaz
+A beszerzési információs rekordok (purchasing info records) a darabjegyzék (BOM) és a műveleti jegyzék (routing) megfelelő elemeit kapcsolja össze a beszerzés vonatkozásában.,hamis
+"A beszerzési információs rekordok (purchasing info records) megmutatják, hogy hogyan lehet összekötni a szállítót a vállalattal. Megmutatja, hogy az adott szállító milyen anyagot tud szállítani, megmutatja, hogy milyen kedvezményeket kaphat a szállító, illetve feljegyzéseket készíthetünk.",igaz
+"A centralizáció: biztosítja az egységes vezetői akarat érvényesítését, az erőforrások racionális hasznosítását.",igaz
+"A centralizált hatáskörök leadása előnyös a munkavállalói elégedettség, a kreativitás és az elkötelezettség növelése.",hamis
+A darabjegyzék (Bill of material) létrehozása és karbantartása többszintű darabjegyzék formájában is történhet.,igaz
+A darabjegyzék (bill of material) létrehozása és karbantartása csak egyszintű darabjegyzék (single-level BOM) formájában történhet.,hamis
+A darabjegyzék (bill of material) létrehozása és karbantartásatöbbszintű darabjegyzék (multi-level BOM) formájában istörténhet.,hamis
+A diszpozíció (MRP) futás eredménye lehet egy tervrendelés(planned order).,igaz
+"A diszpozíció az SAP-rendszerben az anyagok rendelkezésreállásának biztosítását, az anyagszükséglet tervezését jelenti.",igaz
+"A dobozos üzleti alkalmazások olyan szoftvertermékek, amelynek telepítőkészletét a vállalatok CD, DVD vagy Blu-ray lemezek formájában vásárolhatnak meg.",hamis
+A dokumentummenedzsment- és vállalati tartalom kezelő rendszerek azonos funkcionalitással bírnak.,hamis
+A dokumentummenedzsment- és vállalati tartalom kezelő rendszerek nem azonos funkcionalitással bírnak.,igaz
+A döntéshozatali hierarchia és információ igény szerint a operatív vezetés problémaszerkezet jól strukturált.,igaz
+A döntéshozatali hierarchia és információ igény szerint a stratégiai vezetők problémaszerkezet közepesen struktúrált.,hamis
+A döntéshozatali hierarchia és információ igény szerint a taktikai vezetés problémaszerkezet közepesen strukturált.,igaz
+A döntéstámogató rendszerek a stratégiai döntéshozatalhoz kapcsolódó igényeket elégítik ki.,igaz
+"A döntéstámogató rendszerek, vállalati műveleteket támogató rendszerek.",hamis
+A döntéstámogató rendszerekben a teljesítménynövelés egyik praktikus módja az adatredukció.,igaz
+A felhasználás vezérelt diszpozíció (consumption-based planning) típusú eljárások alapvetően az anyag múltbéli fogyasztásán alapulnak.,igaz
+"A felhasználóval való kapcsolattartás alapján megkülönböztethetők passzív, aktív és kooperatív döntéstámogató rendszerek.",igaz
+A felhő szolgáltatásokra általánosságban jellemző a különféle virtualizált erőforrások használata.,igaz
+"A felhőalapú szolgáltatás egy olyan számítógépes erőforrás-hozzáférési modell, amely a hálózaton keresztül a különféle típusú, közös használatú erőforráshalmazokat konfigurálható módon tesz elérhetővé a felhasználók számára.",igaz
+"A felhőalapú szolgáltatás nem egy olyan számítógépes erőforrás-hozzáférési modell, amely a hálózaton keresztül különféle típusú, közös használatú erőforráshalmazokat konfigurálható módon tesz elérhetővé a felhasználók számára.",hamis
+A felhőszolgáltatások igénybevétele vállalati környezetben egy szolgáltatáskiszervezési formának tekinthető.,igaz
+A felhőszolgáltatásokra nem jellemző a különféle virtualizált erőforrások használata.,hamis
+A felhőszolgáltatásokra általánosságban jellemző a különféle virtualizált erőforrások használata.,igaz
+A gamification a játékkonzolok esetében alkalmazott ember-gép interakciók PC-s környezetbe történő adoptálását jelenti.,hamis
+A gamification a konzolról PC-re történő ember-gép reakciók adoptálását jelenti.,hamis
+A gamification játéktervezési elemek használatát jelenti játékos környezetben.,hamis
+A gamification játéktervezési elemek használatát jelenti nem-játékos környezetben.,igaz
+A gamification megközelítésnek pszichológiai vonatkozásai is vannak.,igaz
+A gamification megközelítésének nincsenek pszichológiai vonatkozásai,hamis
+A gamification nem a játékkonzolok esetében alkalmazott ember-gép interakciók PC-s környezetbe történő adoptálását jelenti.,igaz
+A gyártási megrendelés visszavonhatatlan.,hamis
+A gyártási megrendelés visszavonható.,igaz
+A hazai informatikai hálózat váltóáramról megy.,igaz
+A hiba kiszűrés ráfordítás igény és a pontosság között egyenes arányosság van.,igaz
+A háromrétegű architektúrájú vállalati információs rendszerek esetén az üzleti logika réteg feladata a felhasználóval való kapcsolattartás.,hamis
+A háromrétegű architektúrájú vállalati információs rendszerek esetén nem az üzleti logika réteg feladata a felhasználóval való kapcsolattartás.,igaz
+A háttérfeldolgozás beengedi a hibákat.,igaz
+"A karakteres adatfajtával a feldolgozási módjuk szerint semmiféle műveletet nem végezhetünk, adattartalommal nem összefüggő. (pl.: földrajzi nevek)",igaz
+A kevert szabály formai és tartalmi szabályok keverékei.,igaz
+A kiszállítási pontot (shipping point) üzemhez (plant) lehet rendelni,igaz
+"A kliens-szerver alapú rendszerekben a kommunikációt tipikusan a kliens kezdeményezi, a szervernek alaphelyzetben csupán várakozik a bejövő kérésre.",igaz
+"A kliens-szerver alapú rendszerekben a kommunikációt tipikusan a szerver kezdeményezi, a kliensek alaphelyzetben csupán várakozik a bejövő kérésre.",hamis
+A kliens-szerver modellben a szerver- és a kliensmodulok általában azonos számítógépekre kerülnek.,hamis
+A kliens-szerver modellben a szerver- és a kliensmodulok általában különböző számítógépekre kerülnek,igaz
+A komponens alapú rendszerek feketedoboz-jellegű (black box) újrafelhasználás lehetőségével rendelkeznek.,igaz
+A komponensalapú rendszerek feketedoboz-jellegű (black box) újrafelhasználás lehetőségével rendelkeznek.,igaz
+A komponensalapú rendszerek nem rendelkeznek feketedoboz-jellegű (black-box) újrafelhasználás lehetőséggel.,hamis
+"A kép adatfajtával a feldolgozási módjuk szerint lehetséges honvédelmi, felderítési, földrajzi, mezőgazdasági, környezetvédelmi, gyógyászati.",igaz
+A különböző diszpozíciós eljárások az SAP-rendszerben a különböző kontrolling eszközök alkalmazását definiálják.,hamis
+"A laza csatolásnak az az előnye, hogy az elemek önmagukban is működőképesek, így nem őrzik meg függetlenségüket.",hamis
+A lefúrás (drill-down) művelete megnöveli az egyik dimenzió felbontását.,igaz
+A legacy rendszerek jogi informatikai rendszerek.,hamis
+A legacy rendszerek rendszerint fontos szerepet játszanak az adott vállalkozások működésében.,igaz
+"A lineáris szervezeti forma egyszerű, jól áttekinthető, egyértelműek az alá fölé rendelési viszonyok",igaz
+"A lineáris szervezeti forma esetén magasak a költésgek, és sok az adminisztráció.",hamis
+"A lineáris-funkcionális szervezeti forma esetén, a törzskar kialakulásának célja a vezető túlterhetlségének csökkentése a szakmai színvonal növelése.",igaz
+"A magánfelhők jellemzője, hogy azok tulajdonosi szerkezete legalább több, mint 50%-ban magánkézben van.",igaz
+A matematikai szabályok közé soroljuk a konzisztencia ellenőrző szabályokat.,igaz
+A multidimenzionális adatmodellben a dimenziós adatok hierarchiába rendezhetők.,igaz
+A multidimenzionális adatmodellben a dimenziós adatok nem rendezhetők hierarchiába.,hamis
+A műveleti tervet (routing) mintának használják fel a gyártási vagy sorozatgyártási feladatoknál.,igaz
+"A nyilvános felhő Külső szolgáltató által üzemeltetett, szabadon elérhető szolgáltatás",igaz
+"A nyilvános felhő Külső szolgáltató által üzemeltetett, szabadon elérhető szolgáltatás.",igaz
+A nyilvános felhők esetében a szolgáltató az ügyfelek sokaságának kiszolgálását célozta.,igaz
+A nyilvános felhők esetében a szolgáltató nem az ügyfelek sokaságának kiszolgálását célozta.,hamis
+A pivot (rotate) során a forgatáskor a dimenziók száma nő.,hamis
+A rekordszintű hiba összefüggéseket sérthet.,igaz
+A relációs adatok indexelésével az adatelemzés hatékonysága romlik.,hamis
+A rendelési lista elkészültekor a pénzügyi bizonylat is létrejön.,hamis
+"A rendszer egymással összefüggésben levő részek (elemek) halmaza, amelyek egyetlen egészet alkotnak",igaz
+"A rendszer egymással összefüggésben levő részek (elemek) halmaza, amelyek egyetlen egészet alkotnak.",igaz
+A rendszer-architektúrák közötti fő koncepciós különbséget a centralizáltság mértéke adja.,igaz
+"A rétegek a feladatot jól definiált, kisebb modulokra bontják.",igaz
+"A szervezet alapveto struktúralis jellemzoi koze tartozik a technokratikus jellemzo, melybe beletartoznak a: szabalyok, szabalyzatok, eljarasok, tervek, programok, menetrendek, koltsegkeretek, penzugyi tervek, elszamolo arak.",igaz
+A szervezet alapvető strukturális jellemzői közül a strukturális és személyorientált eszközök a koordinációs eszközök közé tartozik.,igaz
+A szervezet alapvető strukturális jellemzői közül a technokratikus eszközök a kordinációs eszközök közé tartozik.,igaz
+A szervezet definíciója szerint az egyének a cél érdekében folyamatosan tevékenykednek.,igaz
+"A szervezetek kialakulását befolyásoló tagi jellemzők: tartósság, újdonságtartalom.",hamis
+"A szigetszerű alkalmazások a vállalati információs rendszerek területén az olyan vállalatirányítási rendszereket jelölik, amelyek nem rendelkeznek EDI (Electronic Data Interchange) komponenssel.",hamis
+"A szigetszerű alkalmazások a vállalati információs rendszerek területén nem az olyan vállalatirányítási rendszereket jelölik, amelyek rendelkeznek EDI (Electronic Data Interchange) komponenssel.",igaz
+"A szolgálat út biztosítja, hogy az utasítások lefelé minden egységet elérjenek.",igaz
+A szöveg adatfajtával a feldolgozási módjuk szerint szöveg feldolgozási célra használhatók.,igaz
+A tartalmi adatszabály matematikai szabály.,hamis
+A technológiai műveleti terv (routing) a termelési folyamat egyes műveleteit írja le.,igaz
+A terv rendelésből (planned order) gyártási megrendelés (production order) képezhető.,igaz
+"A transzformációs fázis az adatokat olyan közös alakra hozza, amely lehetővé teszi a döntéstámogató rendszerek lényegi feldolgozó algoritmusainak minél hatékonyabb futtatását.",igaz
+A tranzakció feldolgozó rendszerek részei az információs rendszereknek.,igaz
+"A tranzakciók alkalmazások, amelyek üzleti folyamatokatfuttatnak az SAP-ban.",igaz
+A tudásmenedzsment rendszerek a vállalatirányítási rendszerek egyik típusának tekinthetők.,hamis
+A tudásmenedzsment rendszerek az ERP-rendszerek egyik típusának tekinthetőek.,hamis
+A tudásmenedzsment rendszerek nem tekinthetőek a vállalatirányítási rendszerek egyik típusának,igaz
+A tudásmenedzsment rendszerek nem tekinthetőek a vállalatirányítási rendszerek egyik típusának.,igaz
+A tételnagyság meghatározásának módja (lot-sizing) a kontrolling szempontjából releváns az SAPrendszerben.,igaz
+A vastagkliens megoldásokra épülő vállalati információs rendszerek eseteként a folyamatos kapcsolat nélküli működés lehetőségét kínálják.,igaz
+A vevő-anyag információs rekordok (customer-material info records) vevőspecifikus kiegészítőinformációkat tartalmazhatnak egy anyagra vonatkozóan.,igaz
+A vállalat szempontjából információnak számít minden bizonytalanságot csökkentő új ismeret.,igaz
+A vállalati alkalmazásintegráció az adatintegritás megfelelőségéért felel.,igaz
+"A vállalati alkalmazások között megvalósított integráció jellemzői eltérnek aszerint, hogy azt melyik rétegben végzik el.",igaz
+A vállalati információs rendszerek esetében a hagyományos vastagkliens megoldások használata nem csak előnnyel rendelkezik a vékonykliens megoldásokkal szemben.,igaz
+A vállalati információs rendszerek esetében a hagyományos vastagkliens megoldások használata szinte csak előnnyel rendelkezik a vékonykliens megoldásokkal szemben.,hamis
+"A vállalati információs rendszerek esetében a vékonykliens megoldások használata számos előnnyel rendelkezik, a hagyományos vastagkliens megoldásokkal szemben.",igaz
+A vállalatirányitási rendszerek bimoduláris felépítésűek.,hamis
+"A vállalatirányítási rendszerek egyfajta tipikus, jól bevált (best practice) folyamatkezelést biztosítanak.",igaz
+A vállalatirányítási rendszerek moduláris felépítésűek,igaz
+A vállalatok az operatív működést képező feladatok kiszolgálása tipikusan döntéstámogató rendszereket alkalmaznak.,hamis
+A vállalatok az operatív működést képező feladatok kiszolgálása tipikusan nem tranzakciófeldolgozó rendszereket alkalmaznak.,hamis
+A vállalatok az operatív működést képező feladatok kiszolgálása tipikusan tranzakciófeldolgozó rendszereket alkalmaznak.,igaz
+"A vállalatok által használt üzleti alkalmazások nem érhetőek el felhőszolgáltatásként, csak a nem üzletiek.",hamis
+"A vékonykliens megoldásokra épülő vállalati információs rendszereknek nehézkesebb a telepítése, mint a vastagkliensre épülőknek.",hamis
+"Adatforrások közül két féle forrást különböztetünk meg: külső, és belső források.",igaz
+Adatminőség javításokat egy rendszerben csak algoritmikus úton végezhetünk,igaz
+"Adatnak nevezzük a számokkal leírható dolgokat, melyek számítástechnikai eszközökkel rögzíthetők, feldolgozhatók és megjeleníthetőek.",igaz
+Adatvédelmi szempontból az eljárásos ellenőrzés adatfeldolgozási szinten valósul meg.,hamis
+"Adatvédelmi szempontból az eljárásos ellenőrzés elősegíti a minőséget és csökkenti a csalás, illetve a hibák esélyét.",igaz
+Adatvédelmi szempontból az eszközös ellenőrzés fizikai védelemi szinten valósul meg.,igaz
+Adatvédelmi szempontból az rendszer szintű ellenőrzés adatfeldolgozási szinten valósul meg,igaz
+Az ABAP Workbench egy Microsoft NAV fejlesztésű platform.,hamis
+Az AVIR egy adattár alapú vezetői információs rendszer a magyar felsőoktatásban.,igaz
+Az AWS a google nyilványos számításfelhő-szolgáltatása.,hamis
+"Az Azure Cloud platform több mint 200 terméket és felhőalapú szolgáltatást foglal magába, amelynek célja, hogy segítsenek az új megoldások létrehozásában, melyekkel megfelelhet a mai kihívásoknak, és felkészülhet a jövőre. Alkalmazásokat fejleszthet, helyezhet üzembe és kezelhet akár a felhőben, akár a helyszínen vagy a peremhálózaton, és ehhez szabadon megválaszthatja saját eszközeit és keretrendszerét.",igaz
+Azure a google nyilvanos szolgáltatása.,hamis
+Az Azure a Microsoft nyilványos számításfelhő-szolgáltatása.,igaz
+Az Azure a SAP nyilvános számításfelhő-szolgáltatása.,hamis
+Az ERP-vel (integralt vallalatiranyitasi rendszerrel) szemben kovetelmeny a redundancia kizarasa.,igaz
+Az ERP-vel (integrált vállalatirányitási rendszerrel) szemben követelmény a jogosultágnak megfelelő hozzáférés.,igaz
+Az IaaS infrastruktúraszolgáltatást jelent.,igaz
+Az MRP típusú diszpozíciós eljárás alapvetően az anyag múltbéli fogyásán alapul.,hamis
+Az OLAP Online Analytical Processing jelent.,igaz
+"Az OLAP egy konkrét szoftver, programcsomag.",hamis
+Az OLAP felgörgetés (roll-up) művelete csökkenti az egyik dimenzió felbontását.,igaz
+"Az OLAP olyan adatfeldolgozó rendszerek közös elnevezése amelyek számos adattárolással, adatábrázolással és statisztikai feldolgozással kapcsolatos koncepciót magukba foglal.",igaz
+Az OLAP rendszerek jellemzően olvasásra vannak optimalizálva.,igaz
+Az OLAP-rendszerek jellemzően nem olvasásra vannak optimalizálva.,hamis
+Az OLAP-rendszerek jellemzően olvasásra vannak optimalizálva.,igaz
+Az OLAP-rendszerek nem relációs adatmodellen alapulnak.,igaz
+Az OLAP-rendszerek relációs adatmodellen alapulnak,hamis
+Az OLAP-rendszerek relációs adatmodellen alapulnak.,hamis
+A OLAP rendszerek többnyire írási folyamatokat végeznek.,hamis
+"OLAP rendszerekben a nyílt interneten, vagy bérelt vonali hálózaton online módon történik az adatok egyfajta valós idejű feldolgozása.",igaz
+"OLAP-nál a dice az egyik művelet, amely szeletelést ,részkocka kiválasztást, illetve projekciót és szelekciót hajt végre.",igaz
+"A klasszikus OLAP megközelítésben az adattárházak adatai nem naprakészek, csupán bizonyos késleltetéssel tükrözik a vállalat állapotát.",igaz
+"Az keresztülfúrás műveletnél az OLAP-kocka felépítéséhez használt operatív adatokhoz tudunk hozzáfűzni, amelyek már nem az OLAP rendszertől, hanem maguktól a tranzakciós adatbázisokból érkeznek.",igaz
+"Az átfúrás (drill across) műveletnél az OLAP-kocka felépítéséhez használt operatív adatokhoz tudunk hozzáfűzni, amelyek már nem az OLAP rendszertől, hanem maguktól a tranzakciós adatbázisokból érkeznek.",hamis
+"Az átfúrás (drill across) műveletnél az OLAP-kockák közötti elemzést teszi lehetővé, vagyis olyan esetekben alkalmazható, amikor több ténytábla kapcsolódik a közös dimenziós adatokhoz.",igaz
+az OLAP rendszerek jellemzően írásra vannak optimalizálva,hamis
+egy OLAP rendszer adatforrásai heterogének is lehetnek,igaz
+Az OLTP Online Transaction Processing-et jelent.,igaz
+Az OLTP mozaikszó az Online Transaction Performance szavakat jelölik.,hamis
+Az OLTP-rendszerek relációs adatmodellen alapulnak,igaz
+Az OLTP-vel az OLAP-hoz képest több műveletet és tranzakciót végeznek átlagosan óránként.,igaz
+Az RTO és RPO ertekek teljesites mellett fontos : be kell tartani a jogszabályokat.,igaz
+Az RTO és RPO használatakor a kieső időnek minimálisnak kell lennie.,igaz
+Az RTO és RPO használatakor egyszerű mechanizmusokat kell tervezni.,igaz
+Az RTO és RPO használatakor ki kell dolgozni a normál működéshez való visszatérés szabályait.,igaz
+Az RTO és RPO használatakor nem kell betartani a jogszabályokat.,hamis
+Az RTO és RPO használatakor nem kell minimalizálni a pénzügyi veszteséget.,hamis
+"Az SAP ERP Business Suite egy kis- és középvállalatokat célzó, alacsony komplexitású vállalatirányítási megoldás.",hamis
+"Az SAP ERP Business Suite egy kis- és középvállalatokat célzó, alacsony komplexitású vállalatirányítási modell.",hamis
+Az SAP ERP Business Suite elsősorban nem a kis- és középvállalatokat célzó vállalatirányítási megoldás.,igaz
+Az SAP ERP Business Suite elsősorban nem a kis- és középvállalatokat célzó vállalatirányítási megoldás.,igaz
+"Az SAP rendszerek leggyakoribb moduljai: Adatbázis, alapprogram, MM - Materials Management, PP - Production Planning.",hamis
+Az SD (Sales and Distribution) modul használata esetén legalább egy részleg (division) felvétele kötelező.,igaz
+Az SD (sales and distribution) modul használata esetén legalább egy értékesítési csatorna (distribution channel) létrehozása kötelező.,hamis
+"Az adat lényegében az információk jelentése, vagyis az információk értelmezése valamilyen (pl.: egyéni, szervezeti) tudás kontextusában.",hamis
+"Az adat olyan adat vagy ismeret, amely viselkedésünket befolyásolni képes.",hamis
+"Az adatbeviteli rendszerek, műszaki tervező rendszerek (CAD), vállalati műveleteket támogató rendszerek.",igaz
+Az adatbányász programok időigényének egy jelentős részét az adatelőkészítés lépés teszi ki.,igaz
+Az adatbányászat fő célja az analitikai modellalkotás.,hamis
+Az adatbányászatnak nem fő célja az analitikai modellalkotás.,igaz
+Az adatintegráció lényege a különböző forrásokból származó adatok egy helyre csoportosítása és azonos interfészen keresztül való hozzáférhetővé tétele.,igaz
+"Az adatminőség adatonként adható meg, és csak egy adott célra való alkalmasságot jelent.",hamis
+"Az adatminőség jellemzői közé tartozik a tartalom, a pontosság, és az időszerűség is.",igaz
+"Az adatminőség probléma összefüggésekből eredő hibáin belül vannak a DUMMY értékek. A Dummy lényege,hogy ez egy mesterséges vagy álváltozó, melynek értéke 0 vagy 1 lehet",igaz
+"A Dummy érték jelenti, ha valamelyik adatból duplikáció van jelen.",hamis
+"Összefüggésekből eredő hiba az rekordon belüli/közötti hiba, duplikáció és a „Dummy"" értékek.",igaz
+"Összefüggésekből eredő hiba a forma, értékkészleten kívül eső hiba és a matematikai helytelenség.",hamis
+"Az adatok forrásai szerint a sajtóból, hatóságoktól, piackutató cégek belső források.",hamis
+"Az adatok forrásai szerint a sajtóból, hatóságoktól, piackutató cégek külső források.",igaz
+"Az adatok forrásai szerint az eladási helyek, saját adatbankok, központok külső források.",hamis
+Az adatok tisztítása az információtartalmukból való leválasztását jelenti.,hamis
+Az adatok önmagukban nem hordoznak jelentést.,igaz
+Az adatszabványok nem szabályozzák az adat megjelenítési formáját.,hamis
+"Az adatszabványok olyan megegyezések, szabályszerűségek, amelyek az ismeretek tartalmát és megjelenítési formáját szabályozzák.",igaz
+"Az adatszabványok olyan szabályszerűségek, amelyek teljesülését elvárjuk egy adattól.",igaz
+"Az adattisztítás feladata a zaj, a redundancia és az inkonzisztencia eltávolítása a nyers adatokból, illetve a hiányos adatok valamilyen kezelése.",igaz
+Az aktív döntéstámogató rendszerek döntési vagy megoldási javaslatokat is generálnak.,igaz
+Az alkalmazásintegráció szükséges lehet az üzleti partnerek felé történő kapcsolatkialakítás esetén.,igaz
+"Az alábbi felsorolás a szervezetek kialakítását befolyásoló környezeti tényezők: piac, tudományos-technikai tényezők, szervezetközi kapcsolatok.",igaz
+"Az alábbi felsorolás a szervezetek kialakítását befolyásoló környezeti tényezők: sokféleség, vertikalitás, összetettség.",hamis
+"Az alábbi felsorolás a szervezetek kialakítását befolyásoló tagi tényezők: szakmai felkészültség, vezetési ismeretek, tekintély.",igaz
+"Az alábbi felsorolás a szervezetek kialakítását befolyásoló vállalati adottságai: méret, eredet, telepítettség.",igaz
+Az anyag törzsben (material master) rögzített alapadatok (basic data) alkalmazhatóak a teljes vállalatra (client).,igaz
+Az anyagtörzs (material master) minden beállítása releváns az anyagtervezés (material planning) szempontjából.,hamis
+Az anyagtörzs (material master) nem minden beállítása releváns az anyagtervezés (material planning) szempontjából.,igaz
+Az anyagtörzsben (material master) a retrográd kivét (backflush) beállításának hatására a készletszint mindig optimális lesz.,hamis
+"Az anyagtörzsben (material master) a retrográd kivét (backflush)beállításának hatására az anyagmozgás automatikusankönyvelődik, amikor a gyártási megbízás visszajelzésre kerül(production order confirmation)",igaz
+"Az anyagtörzsben (material master) a retrográd kivét (blackflush) beállításának hatására az anyagmozgás automatikusan könyvelődik, amikor a gyártási megbízás visszajelzésre kerül (production order confirmation).",igaz
+Az anyagtörzsben (material master) rögzített alapadatok (basic data) alkalmazhatók a teljes vállalatcsoportra (client).,igaz
+Az anyagtörzsben (material master) rögzített alapadatok (basic data) nem alkalmazhatók a teljes vállalatcsoportra (client).,hamis
+Az anyagtörzsben (material master) rögzített alapadatok (basicdata) alkalmazhatók a teljes vállalatcsoportra (client),igaz
+"Az együttműködési rendszerek, és a műszaki tervező rendszerek (CAD), nem sorolhatók a vállalati műveleteket támogató rendszerek közé.",hamis
+"Az elforgatás (pivot) művelete csak a megjelenítést érinti: arra ad lehetőséget, hogy a koordinátatengelyek sorrendjét vagy azok irányát felcseréljük.",igaz
+"Az elosztott rendszerek számos egymástól függetlenül működő, lazán csatolt alkotóelemből épülnek fel.",igaz
+"Az információ lényegében az adatok jelentése, vagyis az adatok értelmezése valamilyen tudás kontextusban.",igaz
+Az információ nem azonos az adatok halmazával.,igaz
+"Az információ olyan adat vagy ismeret, amely viselkedésünket befolyásolni képes.",igaz
+Az információnak a rendszer szempontjából nincsen kulcs szerepe az időben meghozott döntésekben.,hamis
+"Az információs rendszer célja az információk összegyűjtése úgy, hogy közben a vállalat számára egy információs többlet értéket biztosítson",igaz
+"Az információs rendszer erőforrásai: eszközök, emberek, szabványok és eljárások.",igaz
+"Az információs rendszerek alapvető feladata, hogy a döntéshozókat ellássa a vállalat működése szempontjából célszerű döntések meghozatalához szükséges információkkal.",igaz
+Az információs rendszerek különböző folyamatai minden esetben autamatizáltak.,hamis
+"Az információs rendszernek (definíciója alapján) része tárolását és szolgáltatását végző személyek, de nem része a technikai eszközök összessége.",hamis
+"Az információs rendszernek (definíciója alapján) része tárolását és szolgáltatását végző személyek, és tevékenységek és technikai eszközök összessége.",igaz
+"Az információs rendszernek CSAK az a célja, hogy a vállalat számára egy információs többlet értéket biztosításon.",hamis
+Az integrált információs rendszerek követelménye az egységes UI.,igaz
+"Az integrált vállalatirányítási rendszerek bevezetése során nem szükséges a szoftvert az adott vállalat igényeire testre szabni, mivel az integráltságból adódóan ez már korábban meg lett valósítva.",hamis
+Az integrált vállalatirányítási rendszerek bevezetése során szükséges lehet a szoftvert az adott vállalat igényeire testre szabni.,igaz
+Az inverz szabályok formai és tartalmi szabályok keverékei.,hamis
+Az objektív információfelfogás szerint az információ abszolút és semleges.,igaz
+Az objektív információfelfogás szerint az információ nem abszolút és semleges.,hamis
+"Az on-line megoldásos adathiba feltárás előnye, hogy nem költséges.",hamis
+"Az operatív rendszerek lényege az, hogy az összegyűjtött bemeneti adatokat olyan formára hozzák, amely a felhasználók számára megkönnyíti az adott helyzet megfelelő értékelését.",hamis
+"Az operatív rendszereknek nem az a lényege, hogy az összegyűjtött bemeneti adatokat olyanra formára hozzák, amely a felhasználó számára megkönnyíti az adott helyzet megfelelő értékelését.",igaz
+Az átkönyvelés (transfer posting) mindig fizikai anyagmozgással jár.,hamis
+Az átkönyvelés (transfer posting) nem jár feltétlenül fizikai anyagmozgatással.,igaz
+Az áttolás (stock transfer) mindig fizikai anyagmozgatással jár.,igaz
+Az ügyviteli rendszerek nem tartoznak az vállalati információs rendszerek közé.,hamis
+Az üzleti intelligencia kifejezetten az operatív adatbázisok intelligens működésére fókuszáló terület.,igaz
+"Az üzletiintelligencia-rendszerek a döntések meghozatalához szükséges adatok feltárását, összesítését és elemzését végző eszközök.",igaz
+Beszerzési igényből (purchase requisition) tervrendelés (planned order) képezhető.,igaz
+"Csak olyan termék értékesíthető, amelyik szerepel az anyagtörzsben",igaz
+"Csak olyan termék értékesíthető, amelyik van raktáron",igaz
+"Definíciója szerint a szervezet nem ""emberek meghatározott céllal létrejött"" csoportja.",hamis
+Döntéshozatali hierarchia és információ igény szerint a stratégiai vezetés problémaszerkezete jól strukturált.,hamis
+Döntéshozatali hierarchia és információ igény szerint az operatív vezetés problémaszerkezete jól strukturált.,igaz
+"Egy adatból gondolkodás vagy gépi feldolgozás útján új ismeretek és ezzel párhuzamosan újabb információk nyerhetđk. Egy adatnak annál nagyobb az információtartalma, minél kevésbé magától értetđdđ, azaz minél nehezebben lehet elđre kikövetkeztetni.",igaz
+Egy adatminőség felmérést követően maradhatnak fel nem tárt hibák a rendszerben.,igaz
+Egy adott művelet elvégzéséhez szükséges időt egy adottmunkaközpont (work center) határozza meg.,hamis
+Egy beszerzési szervezetet (purchasing organization) minden esetben hozzá kell rendelni egy vállalathoz (company code).,hamis
+Egy beszerzési szervezetet (purchasing organization) nem kellminden esetben hozzárendelni egy vállalathoz (company code).,igaz
+Egy beszerzési szervezetet nem kell minden esetben hozzárendelni egy vállalathoz (company code).,igaz
+Egy egysegnyi munka korulbelul 90%-os pontossagot tud produkalni.,igaz
+Egy kiszállítási pontot (shipping point) raktárhelyhez (storage location) lehet rendelni.,hamis
+Egy kiszállítási pontot (shipping point) üzemekhez (plants) lehetrendelni.,igaz
+Egy költségszámítási körhöz (controlling area) csak egy vállalat(company code) rendelhető.,hamis
+Egy költségszámítási körhöz (controlling area) több vállalat (company code) is rendelhető.,igaz
+Egy rendelési igény (purchase requisition) beszerzésimegrendelésé (purchase order) alakítható.,igaz
+Egy rendszer maga is része lehet egy nagyobb egységnek (rendszernek).,igaz
+Egy rendszer nem lehet része egy nagyobb egységnek (rendszernek).,hamis
+"Egy szervezet koordinációja, ha struktúrális, az a szabályok, szabályzatok betartását követeli meg.",hamis
+"Egy szervezetben a vezetői irányítás megléte nem fontos, sőt elhanyagolható.",hamis
+Egy szállítási rekord létrehozásakor a beszerzéshez és a könyveléshez vonatkozóan nem kell minden releváns adatot egy lépésben megadni.,igaz
+"Egy uzleti celú alkalmazas retegszerkezetenek kialakitasa soran olyan rendszerfelbontasra torekszunk, hogy miden reteg transzparens az osszes felette elhelyezkedo reteg szamara.",hamis
+"Egy vastagkliens megoldásokra épülő vállalati információs rendszer biztonsági szempontból kedvezőbb, mint egy vékonykliensre épülő.",hamis
+Egy vevőtörzs rekord (vendor master record) létrehozásakor abeszerzéshez és könyveléshez vonatkozóan minden relevánsadatot egy lépésben kell megadni.,hamis
+Egy virtuális gép formájában elérhető hardver és operációs rendszer szolgáltatás infrastruktúraszolgáltatásnak tekinthető.,igaz
+"Egy vállalatirányítási rendszer folyamattesztelésének a célja az, hogy feltárja a rendszer teljesítőképességeit a válaszidők és az átbocsátóképesség tekintetében.",hamis
+"Egy vállalatirányítási rendszer folyamattesztelésének a célja az, hogy nem a feldolgozás sebességét, hanem az üzleti folyamatok helyességét és teljességét ellenőrizzük.",igaz
+"Egy vállalatirányítási rendszer teljesítménytesztelésének célja az, hogy megvalósítja-e a specifikációban foglalt funkciókat.",hamis
+"Egy vállalatirányítási rendszer teljesítménytesztelésének célja nem az, hogy megvalósítja-e a specifikációban foglalt funkciókat.",igaz
+Egy értékesítési szervezet (sales organization) csak egy vállalathoz (company code) tartozhat.,igaz
+Egy értékesítési szervezet (sales organization) több vállalathoz (company code) is tartozhat.,hamis
+Egy üzleti alkalmazás adatelérési rétegéhez kapcsolódó szervezeti réteget mediátornak nevezzük.,igaz
+Egy üzleti alkalmazás egyes rétegei különállóan implementálhatóak.,igaz
+"Egy üzleti célú alkalmazás rétegszerkezetének kialakítása során olyan rendszer felbontásra törekszünk, hogy minden réteg csak a két közvetlen szomszédjával álljon kapcsolatban.",igaz
+"Egy üzleti célú alkalmazás rétegszerkezetének kialakítása során olyan rendszer felbontásra törekszünk, hogy minden réteg minden réteggel közvetlen kapcsolatban álljon.",hamis
+"Egy üzleti célú alkalmazás rétegszerkezetének kialakítása során olyan rendszerfelbontásra törekszünk, hogy minden réteg csak a két közvetlen szomszédjával álljon kapcsolatban.",igaz
+"Előfeldolgozásos adathiba feltárás hátránya, hogy kisebb eséllyel kerül hiba a rendszerbe.",hamis
+"Előfeldolgozásos adathiba feltárás hátránya, hogy össze kell szervezni a megfelelő alapfolyamatokkal.",igaz
+Fel lehet venni utólag is az árut eladás (raktárból kiküldéselőtt),hamis
+"Formai adatszabvány az, ami az ismeretek megjelenési formáját szabályozzák.",igaz
+Gyártási megrendelésből (production order) tervrendelés (planed order) képezhető.,hamis
+"Ha történik egy erőforrásmegszűnés, akkor RTO-n múlik, hogy mennyi idő alatt tudom helyreállítani a rendszert, illetve az RPO jelzi azt, hogy mennyi adatvesztést engedek meg.",igaz
+"Helytelen értékekről beszélünk, ha az adathibát a hibásan bevitt adatok, hibásan gyűjtött adat, adatforrás hibás, elmaradt beállítás okozza.",igaz
+"Háttérfeldolgozásos adathiba feltárás esetén előny, hogy beengedi a hibákat.",hamis
+"Háttérfeldolgozásos adathiba feltárás esetén előny, hogy bármelyik rendszerhez csatolható, átalakítás nélkül.",igaz
+"Háttérfeldolgozásos adathiba feltárás esetén előny, hogy mérhető a rendszer adatminősége.",igaz
+"Információnak nevezzük, a valóságra vonatkozó tapasztalatokat, általánosításokat, fogalmakat.",hamis
+"Információs rendszer fő összetevői: Ember (döntéshozó),Rendszerezett információ ,Technikai apparátus (HW, SW)",igaz
+"Információs rendszer technikai megközelítésből az adatok bevétele, tárolása, feldolgozása, rendelkezésre bocsátása, kiadása.",igaz
+"Információs rendszer technikai megközelítéséből az információk bevétele tárolása, feldolgozása, rendelkezésre bocsátása, kiadása.",hamis
+"Információs technológiával működő rendszerekkel szemben funkcionális követelmény a külső, belső fenyegetések elleni védelem",hamis
+Információs technológiával működő rendszerekkel szemben funkcionális követelmény a tárolás módja.,igaz
+Információs technológiával működő rendszerekkel szemben funkcionális követelmény az adatfeldolgozási feladat (algoritmusok).,igaz
+Információs technológiával működő rendszerekkel szemben funkcionális követelmény az ember gép kapcsolat módja.,igaz
+"Integrált vállalatirányítási rendszerrel kapcsolatosan követelmény, hogy jogosultágnak megfelelő hozzáférés.",igaz
+"Integrált vállalatirányítási rendszerrel kapcsolatosan nem követelmény, hogy segítse a rövid és középtávú tervezést",hamis
+"Inverz adatszabvány típus, ha helyes értékre állítjuk fel a szabályt.",hamis
+"Irányitószám, telefonszám (adatfajta kategóriában) azt jelenti, hogy csonkolással földrajzi-közIgatási körzetekre jellemző adat nyerhető.",igaz
+Jellegzetes hibás adatminőség kapcsán ködös definicióként értendő az üres érték.,hamis
+Karakteres adatfajtával minden aritmtikai művelet elvégezthető.,hamis
+"Karakteres: semmiféle művelet nem végezhető velük, adattartalommal nem összefüggő (maximum rendezni tudjuk, pl. ABC..) Pl: földrajzi nevek",igaz
+Komplex információs rendszer nem moduláris módon épül fel.,hamis
+Komplex információs rendszerek kritériuma az egy adatbázison keresztül történő információ csere.,igaz
+"Komplex információs rendszerek kritériumai közé tartozik a duplikáció kizárása, felhasználói jogosultsági rendszer, egységes user interface és a vállalati igény kielégítés.",igaz
+Komplex információs rendszereknél egységes kell hogy legyen a user interface.,igaz
+"Lineáris funkcionális szervezeti forma esetén a törzsegység szakértői véleményt alkotnak, és utasítási joguk is van.",hamis
+Lineáris szervezeti forma összetett és sok az adminisztráció.,hamis
+"Lineáris szervezeti forma: sok adminisztráció, magasak a költségek, a szervezet nem tagolható tovább szélességében és mélységében.",hamis
+"Lineáris szervezetnél: egyszerű kapcsolatok, alacsony költség.",igaz
+"Lineáris szervezetnél: egyszerű kapcsolatok, magas költségek.",hamis
+Magyarországon az előfeldolgozás az elterjedt adathiba feltárási módszer.,hamis
+Magyarországon az háttér-feldolgozásos adathiba a legelterjedtebb.,igaz
+Magyarországon nem a háttérfeldolgozásos adathiba feltárás a legjellemzőbb.,hamis
+"Mező szintű adathiba (értékkészlet, [>150év feletti életkor] )",igaz
+"Minden információ adat, de nem minden adat információ.",igaz
+Napjainkban a vállalatirányitási rendszerei jellemzően háromrétegű architektúrára épülnek,igaz
+"Olyan termék is értékesíthető, ami nem szerepel az anyagtörzsben, mivel lehetőség van annak felvitelére még a számla kiegyenlítése előtt.",hamis
+"Olyan termék is értékesíthető, mely nincs raktáron jelenleg",hamis
+Operatív működést képező feladatok: tranzakció feldolgozás.,igaz
+RPO jelentése Recovery Point objective,igaz
+RTO jelentése Recovery Time objective.,igaz
+RTP jelentese Recovery Time Protocol.,igaz
+Shipping point több üzemhez is hozzá lehet rendelve .,igaz
+Tervrendelésből (planned order) gyártási megrendelés(production order) képezhető.,igaz
+Transportation planning point csak egy üzemhez tartozhat.,igaz
+Vezetői jelentéseknél 3-4 %-os eltérés engedhető csak meg.,hamis
+Vezetőket támogató rendszerek kategóriába tartoznak a döntéstámogató rendszerek.,igaz
+"Vállalati műveleteket támogató rendszerek a Adatbeviteli rendszerek (RFID, vonalkód, QR).",igaz
+Vállalati műveleteket támogató rendszerek a műszaki tervező rendszerek (CAD),igaz
+"a vállalati alkalmazások között megvalósított integráció jellemzői eltérnek aszerint, hogy azt melyik rétegben végzik el",igaz
+egy üzleti alkalmazás adatelérési rétegéhez kapcsolódó szervezeti réteget mediátornak nevezzük,igaz
+"Üzletmenet folytonosság tervezés esetén az RTO és RPO értékek teljesítése mellett fontos, hogy egyszerű mechanizmusokat kell tervezni baj esetére.",igaz
+"Üzletmenet folytonosság tervezés esetén az RTO, és RPO értékek teljesülés mellett fontos, hogy a kieső időnek minimálisnak kell lennie.",igaz
+"Üzletmenet folytonosság tervezés esetén az RTO, és RPO értékek teljesülés mellett fontos, hogy ki kell dolgozni a normál működéshez való visszatérés szabályait.",igaz
+Üzletmenet folytonosság tervezés esetén az RTO: a katasztrófa bekövetkezése (leállás utáni) összes számítógépes alkalmazás újraindulási ideje.,igaz
+Üzletmenet folytonosság tervezés két hatékonysági mutatója az RTO és az RPO.,igaz

@@ -76,6 +76,14 @@
         "answer": "hamis"
     },
     {
+        "question": "A platformszolgáltatás általában nemcsak egy futtató környezetet jelent, hanem kapunk egy fejlesztőkészletet és különféle üzemeltetést segítő eszközöket is (felhőben működő alkalmazásszerver, adattár, üzenetkezelő és teljesítménymonitorozó rendszer).",
+        "answer": "igaz"
+    },
+    {
+        "question": "A platformszolgáltatás általában csak egy futtató környezetet jelent.",
+        "answer": "hamis"
+    },
+    {
         "question": "A SAP NetWeaver egy átfogó integrációs és alkalmazási platform",
         "answer": "igaz"
     },
@@ -172,6 +180,10 @@
         "answer": "igaz"
     },
     {
+        "question": "A felhőalapú szolgáltatások elérése gyakran böngészőn keresztül történik",
+        "answer": "igaz"
+    },
+    {
         "question": "A felhőalapú szolgáltatás egy olyan számítógépes erőforrás-hozzáférési modell, amely a hálózaton keresztül a különféle típusú, közös használatú erőforráshalmazokat konfigurálható módon tesz elérhetővé a felhasználók számára.",
         "answer": "igaz"
     },
@@ -189,6 +201,14 @@
     },
     {
         "question": "A felhőszolgáltatásokra általánosságban jellemző a különféle virtualizált erőforrások használata.",
+        "answer": "igaz"
+    },
+    {
+        "question": "A felhőszolgáltatások egyik fő vonzereje az alacsony kezdeti befektetés",
+        "answer": "igaz"
+    },
+    {
+        "question": "A felhőszolgáltatások egyetlen fő vonzereje az alacsony kezdeti befektetés",
         "answer": "igaz"
     },
     {
@@ -260,6 +280,14 @@
         "answer": "igaz"
     },
     {
+        "question": " Az információs rendszerek két legfőbb tervezési mintája a kliens-szerver architektúra és a rétegszerkezet.",
+        "answer": "igaz"
+    },
+    {
+        "question": " Az információs rendszerek két legfőbb tervezési mintája a számítógép-szerver architektúra és a réteg nélküli szerkezet.",
+        "answer": "hamis"
+    },
+    {
         "question": "A kliens-szerver alapú rendszerekben a kommunikációt tipikusan a kliens kezdeményezi, a szervernek alaphelyzetben csupán várakozik a bejövő kérésre.",
         "answer": "igaz"
     },
@@ -272,15 +300,47 @@
         "answer": "hamis"
     },
     {
-        "question": "A kliens-szerver modellben a szerver- és a kliensmodulok általában különböző számítógépekre kerülnek",
+        "question": "A kliensszámítógépek nem osztanak meg erőforrásokat, de működésükkor aktívan használják a szervere(ke)n található tartalmakat és szolgáltatásokat.",
         "answer": "igaz"
+    },
+    {
+        "question": "A kliensszámítógépek erőforrásokat osztanak meg, de működésükkor aktívan használják a szervere(ke)n található tartalmakat és szolgáltatásokat.",
+        "answer": "hamis"
+    },
+    {
+        "question": "A kliens-szerver modellben a szerver- és a kliensmodulok általában különböző számítógépekre kerülnek.",
+        "answer": "igaz"
+    },
+    {
+        "question": "A szervermodulokat futtató számítógépek jellemzően nagy teljesítményű, hibatűrő rendszerek.",
+        "answer": "igaz"
+    },
+    {
+        "question": "A szervermodulokat futtató számítógépek jellemzően kis teljesítményű, hibatűrő rendszerek.",
+        "answer": "hamis"
+    },
+    {
+        "question": "A modulok kialakítása segíti a specifikációk pontosítását, a szükséges interfészek meghatározását és a rendszer dokumentálását.",
+        "answer": "igaz"
+    },
+    {
+        "question": "A modulok kialakítása nem segíti a specifikációk pontosítását, a szükséges interfészek meghatározását és a rendszer dokumentálását",
+        "answer": "hamis"
+    },
+    {
+        "question": "Az interfészek helyes kialakításához pontosan ismerni kell az adott alkalmazásokat és környezetüket.",
+        "answer": "igaz"
+    },
+    {
+        "question": "Az interfészek helyes kialakításához nem kell pontosan ismerni az adott alkalmazásokat és környezetüket.",
+        "answer": "hamis"
     },
     {
         "question": "A komponens alapú rendszerek feketedoboz-jellegű (black box) újrafelhasználás lehetőségével rendelkeznek.",
         "answer": "igaz"
     },
     {
-        "question": "A komponensalapú rendszerek feketedoboz-jellegű (black box) újrafelhasználás lehetőségével rendelkeznek.",
+        "question": "A komponens    alapú rendszerek feketedoboz-jellegű (black box) újrafelhasználás lehetőségével rendelkeznek.",
         "answer": "igaz"
     },
     {
@@ -298,6 +358,14 @@
     {
         "question": "A laza csatolásnak az az előnye, hogy az elemek önmagukban is működőképesek, így nem őrzik meg függetlenségüket.",
         "answer": "hamis"
+    },
+    {
+        "question": "A laza csatolásnak az az előnye, hogy az elemek önmagukban is működőképesek, így őrzik meg függetlenségüket.",
+        "answer": "igaz"
+    },
+    {
+        "question": "A csatoltság azt jellemzi, hogy a rendszerkomponensek milyen mértékben függnek egymástól.",
+        "answer": "igaz"
     },
     {
         "question": "A lefúrás (drill-down) művelete megnöveli az egyik dimenzió felbontását.",
@@ -348,8 +416,12 @@
         "answer": "igaz"
     },
     {
-        "question": "A nyilvános felhő Külső szolgáltató által üzemeltetett, szabadon elérhető szolgáltatás.",
+        "question": "A szolgáltató az ügyfelek sokaságának kiszolgálását célozta",
         "answer": "igaz"
+    },
+    {
+        "question": "A szolgáltató nem az ügyfelek sokaságának kiszolgálását célozta",
+        "answer": "hamis"
     },
     {
         "question": "A nyilvános felhők esetében a szolgáltató az ügyfelek sokaságának kiszolgálását célozta.",
@@ -386,6 +458,10 @@
     {
         "question": "A rendszer-architektúrák közötti fő koncepciós különbséget a centralizáltság mértéke adja.",
         "answer": "igaz"
+    },
+    {
+        "question": "A rendszer-architektúrák közötti fő koncepciós különbséget a decentralizáltság mértéke adja.",
+        "answer": "hamis"
     },
     {
         "question": "A rétegek a feladatot jól definiált, kisebb modulokra bontják.",
@@ -472,6 +548,38 @@
         "answer": "igaz"
     },
     {
+        "question": "Minden réteg külön egységet alkot, amely a többi rétegtől függetlenül tervezhető és implementálható.",
+        "answer": "igaz"
+    },
+    {
+        "question": "Minden réteg azonos egységet alkot, amely a többi rétegtől függetlenül tervezhető és implementálható.",
+        "answer": "hamis"
+    },
+    {
+        "question": "Az alkalmazásintegráció folyamata az alkalmazásfejlesztési folyamathoz hasonlít.",
+        "answer": "igaz"
+    },
+    {
+        "question": "Az alkalmazásintegráció folyamata az alkalmazástervezési folyamathoz hasonlít.",
+        "answer": "hamis"
+    },
+    {
+        "question": "A prezentációs réteg (presentation layer) feladata a felhasználóval való kapcsolattartás.",
+        "answer": "igaz"
+    },
+    {
+        "question": "Nem a prezentációs réteg (presentation layer) feladata a felhasználóval való kapcsolattartás.",
+        "answer": "hamis"
+    },
+    {
+        "question": " Az angol szakirodalom kétfajta rétegfogalmat különböztet meg. A **layer** a logikailag elkülönített rétegeket jelöli, míg a **tier** a fizikai szeparációt (kliens- vagy szerveroldalra telepített funkciók) hangsúlyozza.",
+        "answer": "igaz"
+    },
+    {
+        "question": " Az angol szakirodalom kétfajta rétegfogalmat különböztet meg. A **tier** a logikailag elkülönített rétegeket jelöli, míg a **layer** a fizikai szeparációt (kliens- vagy szerveroldalra telepített funkciók) hangsúlyozza.",
+        "answer": "hamis"
+    },
+    {
         "question": "A vastagkliens megoldásokra épülő vállalati információs rendszerek eseteként a folyamatos kapcsolat nélküli működés lehetőségét kínálják.",
         "answer": "igaz"
     },
@@ -501,6 +609,14 @@
     },
     {
         "question": "A vállalati információs rendszerek esetében a vékonykliens megoldások használata számos előnnyel rendelkezik, a hagyományos vastagkliens megoldásokkal szemben.",
+        "answer": "igaz"
+    },
+    {
+        "question": "A vékonykliensrendszer olyan kooperatív feldolgozási környezet, ahol az alkalmazásfejlesztés alapvetően vagy a távoli, vagy az elosztott prezentáció tervezési minta (lásd a 13. ábrát) alapján zajlik. ",
+        "answer": "igaz"
+    },
+    {
+        "question": "Vékonykliens környezetben természetes adottság a platformfüggetlenség.",
         "answer": "igaz"
     },
     {
@@ -580,6 +696,14 @@
         "answer": "igaz"
     },
     {
+        "question": "A web 2.0-nél a szöveges vagy multimédiás tartalmat maguk a felhasználók hozzák létre, töltik fel, osztják meg egymással.",
+        "answer": "igaz"
+    },
+    {
+        "question": "A web 2.0-nél a szöveges vagy multimédiás tartalmat nem a felhasználók hozzák létre, töltik fel, osztják meg egymással.",
+        "answer": "igaz"
+    },
+    {
         "question": "Azure a google nyilvanos szolgáltatása.",
         "answer": "hamis"
     },
@@ -608,7 +732,7 @@
         "answer": "hamis"
     },
     {
-        "question": "Az OLAP Online Analytical Processing jelent.",
+        "question": "Az 2 Online Analytical Processing jelent.",
         "answer": "igaz"
     },
     {
@@ -796,6 +920,30 @@
         "answer": "hamis"
     },
     {
+        "question": "A hagyományos (legacy) rendszerek központi szerepet játszanak az adott vállalat működésében.",
+        "answer": "igaz"
+    },
+    {
+        "question": "A hagyományos (legacy) rendszerek nem játszanak központi szerepet az adott vállalat működésében.",
+        "answer": "hamis"
+    },
+    {
+        "question": "A dobozos alkalmazások viszonylag gyors és megbízható megoldást kínálnak az egyes részterületek lefedésére.",
+        "answer": "igaz"
+    },
+    {
+        "question": "A dobozos alkalmazások viszonylag lassuú és megbízhatatlan megoldást kínálnak az egyes részterületek lefedésére.",
+        "answer": "hamis"
+    },
+    {
+        "question": "A vállalati rendszer-tervezői munkakör (enterprise architect), és az ezt betöltő személy fő feladata a vállalati rendszerekben alkalmazott műszaki megoldások összehangolása let",
+        "answer": "igaz"
+    },
+    {
+        "question": "A vállalati rendszer-tervezői munkakör (enterprise architect), és az ezt betöltő személy fő nem feladata a vállalati rendszerekben alkalmazott műszaki megoldások összehangolása let",
+        "answer": "hamis"
+    },
+    {
         "question": "Összefüggésekből eredő hiba az rekordon belüli/közötti hiba, duplikáció és a „Dummy\" értékek.",
         "answer": "igaz"
     },
@@ -909,6 +1057,14 @@
     },
     {
         "question": "Az elosztott rendszerek számos egymástól függetlenül működő, lazán csatolt alkotóelemből épülnek fel.",
+        "answer": "igaz"
+    },
+    {
+        "question": "Az elosztott rendszerek számos egymástól függésben működő, lazán csatolt alkotóelemből épülnek fel.",
+        "answer": "hamis"
+    },
+    {
+        "question": "A központosított rendszerekben egy alkatrész meghibásodása az egész rendszer leállását okozhatja.",
         "answer": "igaz"
     },
     {
@@ -1114,6 +1270,10 @@
     {
         "question": "Egy vastagkliens megoldásokra épülő vállalati információs rendszer biztonsági szempontból kedvezőbb, mint egy vékonykliensre épülő.",
         "answer": "hamis"
+    },
+    {
+        "question": "Egy vékönykliens megoldásokra épülő vállalati információs rendszer biztonsági szempontból kedvezőbb, mint egy vékonykliensre épülő.",
+        "answer": "igaz"
     },
     {
         "question": "Egy vevőtörzs rekord (vendor master record) létrehozásakor abeszerzéshez és könyveléshez vonatkozóan minden relevánsadatot egy lépésben kell megadni.",
@@ -1382,6 +1542,14 @@
     {
         "question": "a vállalati alkalmazások között megvalósított integráció jellemzői eltérnek aszerint, hogy azt melyik rétegben végzik el",
         "answer": "igaz"
+    },
+    {
+        "question": "A megvalósíthatóság feltétele, hogy az adatok közvetlenül hozzáférhetők és értelmezhetők legyenek.",
+        "answer": "igaz"
+    },
+    {
+        "question": "A megvalósíthatóság nem feltétele, hogy az adatok közvetlenül hozzáférhetők és értelmezhetők legyenek.",
+        "answer": "hamis"
     },
     {
         "question": "egy üzleti alkalmazás adatelérési rétegéhez kapcsolódó szervezeti réteget mediátornak nevezzük",

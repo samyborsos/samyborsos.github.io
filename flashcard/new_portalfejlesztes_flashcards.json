@@ -3,10 +3,10 @@
         "question": "Miért van külön Web.Debug.config és Web.Release.config fájl a webalkalmazásban?",
         "answers": [
             "Azért, mert így külön definiálhatóak beállítások éles és demo környezetekhez.",
-            "Azért, mert így a fájlok segítenek a debuggolás során a fejlesztőknek.",
+            "Azért, mert így külön definiálhatóak beállítások a SolutionConfiguration alatt választható build típusokhoz.",
             "Azért, mert így külön definiálhatóak változtatható a kinézetéles és demo környezetek között."
         ],
-        "correct_answer": "Azért, mert így külön definiálhatóak beállítások a SolutionConfiguration alatt választható buildtípusokhoz."
+        "correct_answer": "Azért, mert így külön definiálhatóak beállítások a SolutionConfiguration alatt választható build típusokhoz."
     },
     {
         "question": "Web alkalmazásban adatbáziskapcsolat adatai hol tárolhatóak?",

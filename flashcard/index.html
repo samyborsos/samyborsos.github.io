@@ -255,15 +255,19 @@
     let wronglyAnswered = 0;
     // Show answers for Deck 3 (Igaz/Hamis buttons)
 function showDeck3Answers(currentFlashcard) {
-  const correctAnswer = currentFlashcard.answer; // 'igaz' or 'hamis'
-  
+  let correctAnswer = currentFlashcard.answer; // 'igaz' or 'hamis'
+  let statistics = "-"
 
   document.getElementById("answer1").textContent = "Igaz";
   document.getElementById("answer2").textContent = "Hamis";
 
     // Create a string with statistics to display
-  //const statistics = `Progress: ${currentCardIndex}/50 | Correct: ${correctlyAnswered} | Incorrect: ${wronglyAnswered} | Accuracy: ${(wronglyAnswered / correctlyAnswered) * 100}%`;
-  const statistics = `Progress: ${currentCardIndex}/${flashcards.length}`;
+    if (currentCardIndex == 50) {
+      statistics = `Progress: ${currentCardIndex}/50 | Correct: ${correctlyAnswered} | Incorrect: ${wronglyAnswered} | Accuracy: ${(wronglyAnswered / correctlyAnswered) * 100}%`;
+    } else {
+      statistics = `Progress: ${currentCardIndex}/${flashcards.length}`;
+    }
+    console.log(currentCardIndex, currentCardIndex == 2, statistics)
   // Set the text content for answer3 with the statistics
   document.getElementById("stats").textContent = statistics;
 

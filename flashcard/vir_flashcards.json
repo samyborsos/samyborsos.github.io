@@ -112,6 +112,10 @@
         "answer": "hamis"
     },
     {
+        "question": "a vállalatirányítási rendszer önmagában egységes platform",
+        "answer": "igaz"
+    },
+    {
         "question": "A darabjegyzék (Bill of material) létrehozása és karbantartása többszintű darabjegyzék formájában is történhet.",
         "answer": "igaz"
     },
@@ -864,6 +868,18 @@
         "answer": "igaz"
     },
     {
+        "question": "A Business One elsősorban a kis- és középvállalatokat célzó vállalatirányítási megoldás.",
+        "answer": "igaz"
+    },
+    {
+        "question": "A Business Suite egy komplex szoftverrendszer, elsősorban nagyvállalatok részére.",
+        "answer": "igaz"
+    },
+    {
+        "question": "A Business Suite egy komplex szoftverrendszer, elsősorban kis- és középvállalatok részére.",
+        "answer": "hamis"
+    },
+    {
         "question": "Az SAP rendszerek leggyakoribb moduljai: Adatbázis, alapprogram, MM - Materials Management, PP - Production Planning.",
         "answer": "hamis"
     },
@@ -1297,6 +1313,10 @@
     },
     {
         "question": "Egy vállalatirányítási rendszer teljesítménytesztelésének célja nem az, hogy megvalósítja-e a specifikációban foglalt funkciókat.",
+        "answer": "igaz"
+    },
+    {
+        "question": "A teljesítménytesztelés célja az, hogy feltárja a rendszer teljesítőképességét a válaszidők és az átbocsátóképesség tekintetében",
         "answer": "igaz"
     },
     {

@@ -701,7 +701,7 @@
     },
     {
         "question": "A web 2.0-nél a szöveges vagy multimédiás tartalmat nem a felhasználók hozzák létre, töltik fel, osztják meg egymással.",
-        "answer": "igaz"
+        "answer": "hamis"
     },
     {
         "question": "Azure a google nyilvanos szolgáltatása.",

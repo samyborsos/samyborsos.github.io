@@ -263,7 +263,7 @@ function showDeck3Answers(currentFlashcard) {
 
     // Create a string with statistics to display
     if (currentCardIndex == 50) {
-      statistics = `Progress: ${currentCardIndex}/50 | Correct: ${correctlyAnswered} | Incorrect: ${wronglyAnswered} | Accuracy: ${(wronglyAnswered / correctlyAnswered) * 100}%`;
+      statistics = `Progress: ${currentCardIndex}/50 | Correct: ${correctlyAnswered} | Incorrect: ${wronglyAnswered} | Accuracy: ${(correctlyAnswered / 50) * 100}%`;
     } else {
       statistics = `Progress: ${currentCardIndex}/${flashcards.length}`;
     }

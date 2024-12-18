@@ -3,11 +3,11 @@ import json
 import random
 
 # Input JSON file name
-input_file = "./flashcard/vir_flashcards.json"
+input_file = "./flashcard/new_vir_flashcards.json"
 
 # Output CSV file names
-output_file_original = "./flashcard/anki_cards4_original.csv"
-output_file_shuffled = "./flashcard/anki_cards4_shuffled.csv"
+output_file_original = "./flashcard/anki_cards5_original.csv"
+output_file_shuffled = "./flashcard/anki_cards5_shuffled.csv"
 
 # Read JSON data from the file
 with open(input_file, mode="r", encoding="utf-8") as json_file:

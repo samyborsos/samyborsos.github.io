@@ -1,0 +1,678 @@
+question,title,QType,Q_1,Q_2,Q_3,Q_4,Q_5,Answers
+1 egységnyi munka 90 % pontosság.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+2 egységnyi munka 95 % pontosság.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"4 egységnyi munka 97,5 % pontosság.",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+8 egységnyi munka 98 % pontosság.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"80 egységnyi munka 99,5% pontosság.",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+ABAP Workbench egy Microsoft NAV fejlesztésű platform.,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+"a BCP jelentése kimenet erőforrás visszaállítása, míg a DRP jelentése a kiesett erőforrások nélküli funkcionális működés",VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+A best-bractice jellegű üzleti folyamatok az egyes területek legjobb üzleti gyakortalának megfelelő folyamatokat jelentik.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"A „best practice"" jellegű üzleti folyamatok az egyes területek legjobb üzleti gyakorlatának megfelelő folyamatokat jelentik.",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"A „best practice"" jellegű üzleti folyamatok nem az egyes területek legjobb üzleti gyakorlatának megfelelő folyamatokat jelentik.",VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+"a centralizált hatáskörök leadása előnyös a munkávalvalói elégedettség,a kreativitás és az elkötelezettség növelése",VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+Adatbányászat fő célja az analitikai modellalkotás.,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+Adatbányászatnak nem fő célja az analitikai modellalkotás.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+Adatbányász programok időigényének egy jelentős részét az adatelőkészítés lépés teszi ki.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"Adatfajták feldolgozási módjuk szerint. - Karakteres: semmiféle művelet nem végezhető velük, adattartalommal nem összefüggő (maximum rendezni tudjuk, pl. ABC..) Pl: földrajzi nevek",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+Adatforrások közül két féle forrást különböztetünk meg: külső és belső források.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"Adathibák életútja diagramból leszűrhető egyik tanulság, hogy a hiba újratermelődést megelőzni a felvitel pillanatában és későbbi kiszűréssel lehet.",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+Adatintegráció lényege a különböző forrásokból származó adatok egy helyre csoportosítása és azonos interfészen keresztül való hozzáférhetővé tétele.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"Adat lényegében az információk jelentése, vagyis az információk értelmezése valamilyen (például egyéni, vállalati vagy szervezeti) tudás kontextusában.",VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+Adatminoseg javitasokat egy rendszerben csak algoritmikus úton vegezhetunk,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+Adatminőség tekintetében a megbízhatóság az adatforrást minősítő tényező.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+Adatminőség témakörben a pontossági tapasztalat: Egységnyi munkával 90%-os pontosság érhető el.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"Adatnak nevezzük a számokkal leírható dolgokat, melyek számítástechnikai eszközökkel rögzíthetők, feldolgozhatók és megjeleníthetők.",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+Adatok önmagukban nem hordoznak jelentést.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+Adatok tisztítása az információtartalmukból való leválasztását jelenti.,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+"Adat olyan adat vagy ismeret, amely viselkedésünket befolyásolni képes.",VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+Adatszabványok nem szabályozzák az adat megjelenítési formáját.,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+"Adattranszformáció során az adatokat olyan közös alakra hozzák, amely lehetővé teszi a döntéstámogató rendszerek lényegi feldolgozó algoritmusainak minél hatékonyabb futtatását.",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+adatvédelmi szempontból az eljárásos ellenörzés adatfeldolgozási szinten valósul meg,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+"Adatvédelmi szempontból az eljárásos ellenőrzés elősegíti a minőséget és csökkenti a csalás, illetve a hibák esélyét.",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"A dobozos üzleti alkalmazások olyan szoftvertermékek, amelyek különféle általános, több vállalattípusnál is előforduló tipikus üzleti folyamatok automatizálását támogatják.",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"A dobozos üzleti alkalmazások olyan szoftvertermékek, amelynek telepítőkészletét a vállalatok CD, DVD vagy Blu-ray lemezek formájában vásárolhatják meg.",VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+A dokumentummenedzsment- és vállalati tartalom kezelő rendszerek azonos funkcionalitással bírnak.,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+A dokumentummenedzsment- és vállalati tartalom kezelő rendszerek nem azonos funkcionalitással bírnak.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+A donteshozatali hierarchia es informacio igeny szerint a operativ vezetes problemaszerkezet jol struktúralt.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+A donteshozatali hierarchia es informacio igeny szerint a strategiai vezetok problemaszerkezet kozepesen struktúralt.,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+A donteshozatali hierarchia es informacio igeny szerint a taktikai vezetes problemaszerkezet kozepesen struktúralt.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+A döntéshozatali hierarchia szerint a középvezetői szinten a problémamegoldás strukturálatlan.,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+a döntéstámogató rendszerek a stratégiai döntéshozatalhoz kapcsolódó igényeket elégítik ki,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+a döntéstámogató rendszerekben a teljesítménynövelés egyik praktikus módja az adatredukció,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"A döntéstámogató rendszerek, vállalati műveleteket támogató rendszerek.",VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+A DRP feladata a kiesett erőforrások nélküli funkcionális működés biztosítása.,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+A DSS-rendszerek a döntési folyamat informatikai támogatását szolgáló rendszerek.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+A DSS-rendszerek nem a döntési folyamat informatikai támogatását szolgáló rendszerek.,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+A felhasznalas vezerelt diszpozicio (consumption-based planning) tipusú eljarasok alapvetoen az anyag múltbeli fogyasztasan alapulnak.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"A felhasználóval való kapcsolattartás alapján megkülönböztethetők passzív, aktív és kooperatív döntéstámogató rendszerek.",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"A felhőalapú szolgáltatás egy olyan számítógépes erőforrás-hozzáférési modell, amely a hálózaton keresztül különféle típusú, közös használatú erőforráshalmazokat konfigurálható módon tesz elérhetővé a felhasználók számára.",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"A felhőalapú szolgáltatás egy olyan számítógépes erőforrás-hozzáférési modell, amely a hálózaton keresztül különféle típusú, közös használatú erőforráshalmazokat konfiguráló módon tesz elérhetővé a felhasználók számára.",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"A felhoalapú szolgaltatas egy olyan szamitogepes eroforras-hozzaferesi modell, amely a halozaton keresztul kulonfele tipusú kozos hasznalatú modon tesz elerhetove a felhasznalok szamara.",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"A felhoalapú szolgaltatas nem egy olyan szamitogepes eroforras-hozzaferesi modell, amely a halozaton keresztul a kulonfele tipusú, kozos hasznalatú eroforrashalmazokat konfiguralhato modon tesz lehetove a felhasznalok szamara.",VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+"A felhőalapú szolgáltatás nem egy olyan számítógépes erőforráshozzáférési modell, amely a hálózaton keresztül különféle típusú, közös használatú erőforráshalmazokat konfigurálható módon tesz elérhetővé a felhasználók számára.",VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+"A felhőalapú szolgáltatás nem egy olyan számítógépes erőforrás-hozzáférési modell, amely a hálózaton keresztül különféle típusú, közös használatú erőforráshalmazokat konfigurálható módon tesz elérhetővé a felhasználók számára.",VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+A felhőszolgáltatások csak ritkán használnak különféle virtualizált erőforrásokat.,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+A felhőszolgáltatások igénybevétele vállalati környezetben egy szolgáltatáskiszervezési formának tekinthető.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+A felhőszolgáltatásokra általánosságban jellemző a különféle virtualizált erőforrások használata.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+A gamification a játékkonzolok esetében alkalmazott ember-gép interakciók PC-s környezetbe történő adoptálását jelenti.,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+A gamification játéktervezési elemek használatát jelenti játékos környezetben.,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+A gamification játéktervezési elemek használatát jelenti nem-játékos környezetben.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+A gamification megközelítésnek nincsenek pszichológiai vonatkozásai.,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+A gamification megközelítésnek pszichológiai vonatkozásai is vannak.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+A gamification nem a játékkonzolok esetében alkalmazott ember-gép interakciók PC-s környezetbe történő adoptálását jelenti.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"a garbage in garbage out jelentése, hogy rossz adatokból csak rossz adatok nyerhetőek ki",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+A haromretegu architektúrajú vallalati informacios rendszerek eseten az uzleti logika reteg feladata a felhasznaloval valo kapcsolattartas.,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+A haromretegu architektúrajú vallalati informacios rendszerek eseten nem az uzleti logika reteg feladata a felhasznaloval valo kapcsolattartas.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+A háttérfeldolgozás beengedi a hibákat,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+A hiba kiszűrés ráfordítás igény és a pontosság között egyenes arányosság van.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+A kettőnél több dimenziós üzleti adatok vizualizációja csak minimum háromdimenziós megjelenítőkön (pl: VR szemüveg) lehetséges.,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+"A klasszikus OLAP-megközelítésében az adattárházak adatai nem naprakészek, csupán bizonyos késleltetéssel tükrözik a vállalat állapotát.",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"A kliens-szerver alapú rendszerekben a kommunikaciot tipikusan a kliens kezdemenyezi, a szervernek alaphelyzetben csupan varakozik a bejovo keresre.",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"A kliens-szerver alapú rendszerekben a kommunikaciot tipikusan a szerver kezdemenyezi, a kliensek alaphelyzetben csupan varakozik a bejovo keresre",VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+A kliens-szerver modellben a szerver- és a kliensmodulok általában azonos számítógépekre kerülnek.,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+A kliens-szerver modellben a szerver- és a kliensmodulok általában különböző számítógépekre kerülnek.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+A kliens-szerver rendszerek peer-to-peer jellegű rendszereknek tekinthetők.,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+A komponens alapú rendszerek feketedoboz-jellegu (black box) újrafelhasznalas lehetosegevel rendelkeznek.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+A komponensalapú rendszerek feketedoboz-jellegű (black box) újrafelhasználás lehetőségével rendelkeznek.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+A komponensalapú rendszerek nem rendelkeznek feketedoboz-jellegu (black-box) újrafelhasznalas lehetoseggel.,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+A komponensalapú rendszerek nem rendelkeznek feketedoboz-jellegű (black box) újrafelhasználás lehetőséggel.,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+"A kontrollingra jellemző, hogy nem módosíthatja a vállalati terveket és az üzleti tevékenységet.",VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+Aktív döntéstámogató rendszerek döntési vagy megoldási javaslatokat is generálnak.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+A lefúras (drill-down) muvelete megnoveli az egyik dimenzio felbontasat,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+A legacy rendszerek rendszerint fontos szerepet játszanak az adott vállalkozások működésében,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"A linearis-funkcionalis szervezeti forma eseten, a torzskar kialakulasanak celja a vezeto túlterhetlsegenek csokkentese a szakmai szinvonal novelese",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"a lineáris szervezeti forma egyszerű, jól áttekinthető, egyértelműek az alá fölé rendelési viszonyok",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+Alkalmazásintegráció szükséges lehet az üzleti partnerek felé történő kapcsolatkialakítás esetén,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"A magánfelhők jellemzője, hogy azok tulajdonosi szerkezete legalább több, mint 50%-ban magánkézben van",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+A matematikai szabályok közé soroljuk a konzisztencia ellenőrző szabályokat.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+A MÁV START által fejlesztett ELVIRA elnevezésű menetrend rendszer egy információs rendszer.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+A MOLAP-rendszerek az adatok tárolására a multidimenziós adatmodellt használják.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+A multidimenzionális adatmodellben a dimenziók az elemzések alapját képző tényadatokat jelentik,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+A multidimenzionális adatmodellben a dimenziós adatok hierarchiába rendezhetők.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+A multidimenzionális adatmodellben a dimenziós adatok nem rendezhetők hierarchiába.,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+A nyilvános felhők esetében a szolgáltató az ügyfelek sokaságának kiszolgálását célozta.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+A nyilvános felhők esetében a szolgáltató nem az ügyfelek sokaságának kiszolgálását célozta.,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+"A nyilvános felhő Külső szolgáltató által üzemeltetett, szabadon elérhető szolgáltatás.",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+A PaaS alkalmazásszolgáltatást jelent.,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+"A ""PaaS"" jelentése szoftverszolgáltatás.",VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+A PaaS platformszolgáltatást jelent.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+A peer-to-peer rendszerek a kliensek és szerverek hálózaton keresztül történő kapcsolásának módját jelentik.,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+A peer-to-peer rendszerek nem a kliensek és szerverek hálózaton keresztül történő kapcsolásának módját jelentik.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+A pivot (rotate) során a forgatáskor a dimenziók száma nő.,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+a rekordszintű hiba összefüggéseket sérhet,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+a relációs adatok indexelésével az adatelemzés hatékonysága romlik,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+A rendszer-architektúrak kozotti fo koncepcios kulonbseget a centralizaltsag merteke adja,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+A repository a rendszer viselkedését és felépítését leíró koncepcionális terv.,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+A repository nem a rendszer viselkedését és felépítését leíró koncepcionális terv.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+A részkocka-kiválasztás (dice) műveletével az eredeti hiperkocka dimenzióit csak a kiválasztott értékek mentén vizsgáljuk.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"A ROLAP rendszerek olyan OLAP-rendszerek, amelyekben az elemzésekhez és előrejelzésekhez nagy számú véletlen (random) esetet generálnak.",VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+"A SAP Business Suite egy kis-és középvállalatokat célzó, alacsony komplexitású vállalatirányítási megoldás.",VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+"A skálázhatóság a rendszer azon tulajdonsága, hogy a rendszer teljesítménye a rendelkezésre álló erőforrások változtatásával milyen módon változtatható a rendszer újratervezése nélkül",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"A SOA egy olyan rendszerépítési stílus, amelynek célja a szoros csatolás megvalósítása az együttműködő szoftvermodulok között.",VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+"A SOA nem egy olyan rendszerépítési stílus, amelynek célja a szoros csatolás megvalósítása az együttműködő szoftvermodulok között.",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"A szervetezetek kialakultasat befolyasolo tagi jellemzok: tartossag, újdonsagtartalom.",VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+"A szervezet alapveto struktúralis jellemzoi koze tartozik a technokratikus jellemzo, melybe beletartoznak a: szabalyok, szabalyzatok, eljarasok, tervek, programok, menetrendek, koltsegkeretek, penzugyi tervek, elszamolo arak",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+A szervezet alapvető strukturális jellemzői közül a TECHNOKRATIKUS eszkötök a koordinációs eszközök közé tartoznak.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"A szigetszerű alkalmazások a vállalati információs rendszerek területén az olyan vállalatirányítási rendszereket jelölik, amelyek nem rendelkeznek EDI (Electronic Data Interchange) komponenssel.",VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+"A szigetszerű alkalmazások a vállalati információs rendszerek területén az olyan vállalatirányítási rendszereket jelölnek, amelyek nem rendelkeznek EDI (Electronic Data Interchange) komponenssel.",VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+"A szigetszerű alkalmazások a vállalati információs rendszerek területén nem az olyan vállalatirányítási rendszereket jelölik, amelyek rendelkeznek EDI (Electronic Data Interchange) komponenssel.",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"A szolgalat út biztositja, hogy az utasitasok lefele minden egyseget elerjenek.",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+A szöveg adatfajtával a feldolgozási módjuk szerint szöveg feldolgozási célra használhatók.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+A szöveges információk zajszűrésére nem lehet hasznos a szótáralapú módszer.,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+A szöveges információs zajszűrésére hasznos lehet a szótáralapú módszer.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+A tartalmi adatszabály matematikai szabály.,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+"Átfúrás (drill across) műveletnél az OLAP-kocka felépítéséhez használt operatív adatokhoz tudunk hozzáfűzni, amelyek már nem az OLAP rendszertől, hanem maguktól a tranzakciós adatbázisokból érkeznek.",VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+A tranzakció feldolgozó rendszerek részei az információs rendszereknek.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+A tudásmenedzsment rendszerek a vállalatirányítási rendszerek egyik típusának tekinthetők.,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+a tudásmenedzsment rendszerek az ERP-rendszerek egyik típusának tekinthetőek,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+A tudásmenedzsment rendszerek nem tekinthetőek a vállalatirányítási rendszerek egyik típusának.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+A vállalati alkalmazásintegráció a hatékonyan együttműködő és karbantartható alkalmazásrendszer kialakításával foglalkozó szakterület.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+A vállalati alkalmazásintegráció az adatintegritás megfelelőségéért felel,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+A vállalati alkalmazásintegráció nem a hatékonyan együttműködő és karbantartható alkalmazásrendszer kialakításával foglalkozó szakterület.,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+"a vállalati alkalmazások között megvalósított integráció jellemzői eltérnek aszerint, hogy azt melyik rétegben végzik el",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+A vállalati dobozos szoftvertermékek minden esetben jól integrálhatók a többi vállalati rendszerek.,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+A vállalati dobozos szoftvertermékek nem minden esetben integrálhatók jól a többi vállalati rendszerrel.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+A vállalati felhőszolgáltatások elutasításának egyik fő oka a magas kezdeti befektetés,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+A vállalati információs rendszerek esetében a hagyományos vastagkliens megoldások használata nem csak előnnyel rendelkezik a vékonykliens megoldásokkal szemben.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+A vállalati információs rendszerek esetében a hagyományos vastagkliens megoldások használata szinte csak előnnyel rendelkezik a vékonykliens megoldásokkal szemben.,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+"a vállalati információs rendszerek esetében a vékonykliens megoldások használata számos előnnyel rendelkezik, a hagyományos vastagkliens megoldásokkal szemben",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+A vállalati információs rendszerek leggyakrabban kliens-szerver architektúrára épülnek,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+A vállalati okoskliens alkalmazások kizárólag natív okostelefonos alkalmazások formájában valósíthatóak meg.,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+A vállalatirányítási rendszerek bimoduláris felépítésűek.,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+a vállalatirányítási rendszerek moduláris felépítésűek,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"A vállalatok által használt üzleti alkalmazások nem érhetők el felhőszolgáltatásként, csak a nem üzletiek.",VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+A vállalatok az operatív működést képező feladatok kiszolgálása tipikusan döntéstámogató rendszereket alkalmaznak.,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+A vállalatok az operatív működést képező feladatok kiszolgálása tipikusan nem tranzakciófeldolgozó rendszereket alkalmaznak.,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+A vállalatok az operatív működést képező feladatok kiszolgálása tipikusan tranzakciófeldolgozó rendszereket alkalmaznak.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+A vallalat szempontjabol informacionak szamit minden bizonytalansagot csokkento új ismeret.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+A vastagkliens megoldásokra épülő vállalati információs rendszerek eseteként a folyamatos kapcsolat nélkül működés lehetőségét kínálják.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"A vékonykliens megoldásokra épülő vállalati információs rendszerek a helyi erőforrásokat csekélyebb mértékben használják ki, mint a vastagkliensre épülők.",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"A vékonykliens megoldásokra épülő vállalati információs rendszerek a helyi erőforrásokat jelentősebb mértékben használják ki, mint a vastagkliensre épülők.",VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+"A vékonykliens megoldásokra épülő vállalati információs rendszereknek nehézkesebb a telepítése, mint a vastagkliensre épülőknek",VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+A web 2.0 webes felületen keresztül elérhető ERP-rendszereket jelöli.,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+AWS a Google nyilvános számításfelhő-szolgáltatása.,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+az ABAP Workbench egy Microsoft NAV fejlesztésű platform (SAP),VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+Az adatbányászat fő célja az analitikai modellalkotás.,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+"Az adatbányászat különböző adatbázisokban végzett önálló tudásfeltárást takar, amely korábban nem ismert, váratlan, nem triviálisan előállítható infomrációk megszerzésére irányul.",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+Az adatbányászatnak nem fő célja az analitikai modellalkotás.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+az adatbányász programok időigényének egy jelentős részét az adatelőkészítés lépés teszi ki,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+Az adatintegráció lényege a különböző forrásokból származó adatok egy helyre csoportosítása és azonos interfészen keresztül való hozzáférhetővé tétele.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+Az adatintegráció során az adatingeritást érjük el.,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+Az adatintegráció során nem az adatinegritást érjük el.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"Az adat lényegében az információk jelentése, vagyis az információk értelmezése valamilyen (például egyéni, vállalati vagy szervezeti) tudás kontextusában.",VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+"Az adatminőség adatonként adható meg, és csak egy adott célra való alkalmasságot jelent.",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"Az adatminőség jellemzői közé tartozik a tartalom, a pontosság, és az időszerűség is.",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"Az adatminőség probléma összefüggésekből eredő hibáin belül vannak a DUMMY értékek. A Dummy lényege,hogy ez egy mesterséges vagy álváltozó, melynek értéke 0 vagy 1 lehet.",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"Az adatok forrásai szerint a sajtóból, hatóságoktól, piackutató cégek belső források.",VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+Az adatok önmagukban nem hordoznak jelentést.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+az adatok tisztítása az információtartalmukból való leválasztását jelenti,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+"Az adat olyan adat vagy ismeret, amely viselkedésünket befolyásolni képes.",VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+az adatszabványok nem szabályozzák az adat megjelenítési formáját,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+Az adatszabványok olyan szabályszerűségek amelyek teljesülését elvárjuk egy adattól.,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+Az adattisztítás a jogosulatlanul tárolt adatok törlését jelenti,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+Az adattisztítás egyfajta adattranszformációt is jelent.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+Az adattisztítás nem jelenthet adattranszformációt.,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+Az adattisztítás során az inkonzisztencia eltávolításra kerül a nyers adatokból.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+Az adattisztítás során az inkonzisztencia nem kerül eltávolításra a nyers adatokból.,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+"Az adattranszformáció során az adatokat olyan közös alakra hozzák, amely lehetővé teszi a döntéstámogató rendszerek lényegi feldolgozó algoritmusainak minél hatékonyabb futtatását.",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+Az aktív döntéstámogató rendszerek döntési vagy megoldási javaslatokat is generálnak.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"Az alábbi felsorolás a szervezetek kialakítását befolyásoló környezetei tényezők: Sokféleség, Vertikalitás, Összetettség.",VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+"Az alábbi felsorolás a szervezetek kialakítását befolyásoló tagi jellemzők? - Tartósság, Újdonságtartalom.",VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+"Az alábbi felsorolás igaz a LINEÁRIS szervezeti formára? -sok az adminisztráció, magasak a költségek, a szervezet nem tagolható tovább szélességében és mélységében.",VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+"Az alábbi felsorolás igaz a lineáris szervezeti formára? -sok az adminisztráció, magasak a költségek, a szervezet nem tagolható tovább szélességében, és mélységében.",VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+Az alkalmazásintegráció folyamata az alkalmazásfejlesztési folyamathoz hasonlít.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+Az alkalmazásintegráció folyamata nem hasonlít az alkalmazásfejlesztési folyamathoz.,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+az alkalmazásintegráció szükséges lehet az üzleti partnerek felé történő kapcsolatkialakítás esetén,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"Az alkalmazásszerver lényegében különféle folyamatok (programok, szkriptek) futásához biztosít keretet.",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"Az API szintű alkalmazásintegráció előnyös, ha a programozói interfész adott, és az adatréteg nem elérhető.",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"Az API szintű alkalmazásintegráció hátrányos, ha a programozói interfész adott, és az adatréteg nem elérhető.",VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+"Az architekturális tervezési minták egy adott rendszertípus jellemző elemeit és szerkezetét foglalják össze, valamint a vázszerkezet elkészítésének egy, a gyakorlatban már sokszor bevált módját ismertetik.",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"Az atfúras (drill across) muveletnel az OLAP-kocka felepitesehez hasznalt operativ adatokhoz tudunk hozzafuzni, amelyek mar nem az OLAP rendszertol, hanem maguktol a tranzakcios adatbazisokbol erkeznek.",VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+"Az atfúras (drill across) muveletnel az OLAP-kockak kozotti elemzest teszi lehetove, vagyis olyan esetekben alkalmazhato, amikor tobb tenytabla kapcsolodik a kozos dimenzios adatokhoz.",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+Az AVIR egy adattar alapú vezetoi informacios rendszer a magyar felsooktatasban.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+az AWS a google nyilványos számításfelhő-szolgáltatása (amazon),VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+Az Azure az SAP nyilvános számításifelhő-szolgáltatása.,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+"Az Azure Cloud platform több mint 200 terméket és felhőalapú szolgáltatást foglal magába, amelynek célja, hogy segítsenek az új megoldások létrehozásában, melyekkel megfelelhet a mai kihívásoknak, és felkészülhet a jövőre. Alkalmazásokat fejleszthet, helyezhet üzembe és kezelhet akár a felhőben, akár a helyszínen vagy a peremhálózaton, és ehhez szabadon megválaszthatja saját eszközeit és keretrendszerét",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"Az elosztott rendszerek rugalmasabbak és könnyebben alkalmazkodnak a körülmények folyamatos változásához, mint a központosított rendszerek.",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"Az elosztott rendszerek rugalmatlanabban és nehezebben alkalmazkodnak a körülmények folyamatos változásához, mint a központosított rendszerek.",VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+"Az ember, és a rendezett információ az információs rendszer fő összetevői.",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+Az IaaS infrastruktúraszolgaltatast jelent.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"Az információ lényegében az adatok jelentése, vagyis az adatok értelmezése valamilyen (például egyéni, vállalati vagy szervezeti) tudás kontextusában.",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+Az információnak a rendszer szempontjából nincsen kulcs szerepe az időben meghozott döntésekben.,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+Az információ nem azonos az adatok halmazával,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"Az információ rendszer, és az információs rendszer nem keverendő össze. A két rendszer nem ugyan azt jelenti.",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"Az információs rendszer alapvető feladata, hogy a döntéshozókat ellássa a vállalat működése szempontjából célszerű döntések meghozatalához szükséges információkkal.",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"Az informacios rendszer celja az informaciok osszegyujtese úgy, hogy kozben a vallalat szamara egy informacios tobblet erteket biztositson.",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+Az információs rendszerek különböző folyamatai minden esetben automatizáltak,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+"Az információs rendszernek (definíciója alapján) része tárolását és szolgáltatását végző személyek, és tevékenységek és technikai eszközök összesége.",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+Az integrált információs rendszerek követelménye az egységes UI.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"Az integrált vállalatirányítási rendszerek bevezetése során nem szükséges a szoftvert az adott vállalat igényeire testre szabni, mivel az integrálásból adódóan ez már korábban meg lett valósítva.",VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+"Az integrált vállalatirányítási rendszerek bevezetése során nem szükséges a szoftvert az adott vállalat igényeire testre szabni, mivel az integráltságból adódóan ez már korábban meg lett valósítva.",VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+Az integrált vállalatirányítási rendszerek bevezetése során szükséges lehet a szoftvert az adott vállalat igényeire testre szabni.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+Az inverz szabályok formai és tartalmi szabályok keverékei.,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+"Az keresztulfúras muveletnel az OLAP-kocka felepitesehez hasznalt operativ adatokhoz tudunk hozzafuzni, amelyek mar nem az OLAP rendszertol, hanem maguktol a tranzakcios adatbazisokbol erkeznek.",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+Az objektiv informaciofeldolgozas szerint az informacio nem abszolút es semleges.,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+Az objektiv informaciofelfogas szerint az informacio abszolút es semleges.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+Az objektív információfelfogás szerint az információ nem abszolút és semleges.,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+Az OLAP alatt egy szoftvert értünk.,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+"Az OLAP egy konkrét szoftver, programcsomag.",VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+az OLAP felgörgetés (roll-up) művelete csökkenti az egyik dimenzió felbontását,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+Az OLAP lefúrás (drill-down) művelete megnöveli az egyik dimenzió felbontását.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+Az OLAP mozaikszó az Online Analytical Processing szavakat jelöli,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"az OLAP olyan adatfeldolgozó rendszerek közös elnevezése amelyek számos adattárolással,adatábrázolással és statisztikai feldolgozással kapcsolatos koncepciót magukba foglal",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"Az OLAP olyan adatfeldolgozó rendszerek közös elnevezése, amelyek számos adattárolással, adatábrázolással és statisztikai feldolgozással kapcsolatos koncepciót megukba foglalnak.",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+az OLAP rendszerek jellemzően írásra vannak optimalizálva,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+Az OLAP-rendszerek jellemzően nem olvasásra vannak optimalizálva.,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+Az OLAP-rendszerek jellemzően olvasásra vannak optimalizálva.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+Az OLAP-rendszerek nem relációs adatmodellen alapulnak.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+Az OLAP-rendszerek relációs adatmodellen alapulnak.,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+az OLTP mozaikszó az Online Transaction Performance szavakat jelölik,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+Az OLTP-rendszerek multidimenziós adatmodellen alapulnak,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+Az OLTP-rendszerek relációs adatmodellen alapulnak.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+Az OLTP-vel az OLAP-hoz képest több műveletet és tranzakciót végeznek átlagosan óránként.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"Az on-line megoldásos adathiba feltárás előnye, hogy nem költséges.",VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+"Az operatív rendszerekből származó adatgyűjtés, előfeldolgozás és tárolás fontos eszközei az adattárháznak",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"Az operatív rendszerek lényege az, hogy az összegyűjtött bemeneti adatokat olyan formára hozzák, amely a felhasználók számára megkönnyíti az adott helyzet megfelelő értékelését.",VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+"Az operatív rendszereknek nem az a lényege, hogy az összegyűjtött bemeneti adatokat olyan formára hozzák, amely a felhasználók számára megkönnyíti az adott helyzet megfelelő értékelését.",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+Az RTO és RPO ertekek teljesites mellett fontos : be kell tartani a jogszabályokat.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+Az RTO és RPO használatakor nem kell minimalizálni a pénzügyi veszteséget.,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+"Az SAP ERP Business Suite egy kis- és középvállalatokat célzó, alacsony komplexitású vállalatirányítási megoldás",VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+"Az SAP ERP Business Suite egy kis- es kozepvallalatokat celzo, alacsony komplexitasú vallalatiranyitasi modell.",VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+Az SAP ERP Business Suite elsősorban nem a kis- és középvállalatokat célzó vállalatirányítási megoldás.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"Az SAP rendszerek leggyakoribb moduljai: Adatbázis, alapprogram, MM - Materials Management, PP - Production Planning.",VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+Az ügyviteli rendszerek nem tartoznak az vállalati információs rendszerek közé.,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+Azure a google nyilvanos szolgáltatása.,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+Azure az SAP nyilvános számításifelhő-szolgáltatása.,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+Az üzleti intelligencia kifejezetten az operatív adatbázisok intelligens működésére fókuszáló terület.,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+"Az üzletiintelligencia-rendszerek a döntések meghozatalához szükséges adatok feltárását, összesítését és elemzését végző eszközök.",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"BCP jelentése kimenet erőforrás visszaállítása, míg a DRP jelentése a kiesett erőforrások nélküli funkcionális működés.",VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+Best practice jellegű üzleti folyamatok az egyes területek legjobb üzleti gyakorlatának megfelelő folyamatokat jelentik.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+Best practice jellegű üzleti folyamatok nem az egyes területek legjobb üzleti gyakorlatának megfelelő folyamatokat jelentik.,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+"Centralizáció: biztosítja az egységes vezetői akarat érvényesítését, az erőforrások racionális hasznosítását.",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"Centralizált hatáskörök leadása előnyös a munkavállalói elégedettség, a kreativitás és az elkötelezettség növelése.",VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+"Decentralizáció: biztosítja az egységes vezetői akarat érvényesítését, az erőforrások racionális hasznosítását.",VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+"Definíciója szerint a szervezet nem ""emberek meghatározott céllal létrejött"" csoportja.",VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+"Dobozos üzleti alkalmazások olyan szoftvertermékek, amelynek telepítőkészletét a vállalatok CD, DVD vagy Blu-ray lemezek formájában vásárolhatják meg.",VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+Dokumentummenedzsment- és vállalati tartalom kezelő rendszerek azonos funkcionalitással bírnak.,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+Dokumentummenedzsment- és vállalati tartalom kezelő rendszerek nem azonos funkcionalitással bírnak.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+Döntéshozatali hierarchia és információ igény szerint a stratégiai vezetők problémaszerkezet közepesen strukturált.,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+Döntéshozatali hierarchia és információ igény szerint az operatív vezetők problémaszerkezete strukturálatlan,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+Döntéshozatali hierarchia és információs igény szerint a stratégiai vezetők problémaszerkezete jól struktúrált.,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+Döntéstámogató rendszerek a stratégiai döntéshozatalhoz kapcsolódó igényeket elégítik ki.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+Döntéstámogató rendszerekben a teljesítménynövelés egyik praktikus módja az adatredukció.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+DRP feladata a kiesett erőforrások nélküli funkcionális működés biztosítása.,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+DSS-rendszerek a döntési folyamat informatikai támogatását szolgáló rendszerek.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+DSS-rendszerek nem a döntési folyamat informatikai támogatását szolgáló rendszerek.,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+"Dummy érték jelenti, ha valamelyik adatból duplikáció van jelen.",VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+"Egy adatból gondolkodás vagy gépi feldolgozás útján új ismeretek és ezzel párhuzamosan újabb információk nyerhetők. Egy adatnak annál nagyobb az információtartalma, minél kevésbé magától értetődő, azaz minél nehezebben lehet előre kikövetkeztetni.",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+Egy adatminőség felmérést követően maradhatnak fel nem tárt hibák a rendszerben.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+Egy egységnyi munka körülbelül 90%-os pontosságot tud produkálni.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+Egy informatikai rendszer modulokra (komponensekre) bontásának segítségével megközelítőleg egyenlő arányú kódrészletre bontják a teljes forráskódmennyiséget,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+"Egy informatikai rendszer modulokra (komponensekre) bontása nem segíti sem a specifikációk pontosítását, sem pedig a rendszer dokumentálását.",VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+"Egy informatikai rendszer modulokra (komponensekre) bontása segíti a specifikációk pontosítását, a szükséges interfészek meghatározását és a rendszer dokumentálását is.",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+Egy OLAP adatbázisban az adatok granularitása az adatok absztrakciós szintjét jelenti.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+Egy OLAP-kocka mindig három dimenzióval rendelkezik,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+Egy OLAP-rendszer adatforrásai csak homogének lehetnek,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+Egy OLAP rendszer adatforrásai heterogének is lehetnek.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+Egy OLAP-rendszer adatforrásai heterogének is lehetnek.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+Egy OLAP-rendszerben a redundancia elkerülése végett nem tárolunk számított értékeket.,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+Egy rendszer maga is része lehet egy nagyobb egységnek (rendszernek).,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+Egy rendszer nem lehet része egy nagyobb egységnek (rendszernek).,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+"Egy szervezetben a vezetői irányítás megléte nem fontos, sőt elhanyagolható.",VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+"Egy szervezet koordinációja, ha struktúrális, az a szabályok, szabályzatok betartását követeli meg.",VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+"Együttműködési rendszerek, és a műszaki tervező rendszerek (CAD), nem sorolhatók a vállalati műveleteket támogató rendszerek közé.",VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+Egy üzleti alkalmazás adatelérési rétegéhez kapcsolódó szervezeti réteget mediátornak nevezzük.,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+"Egy üzleti alkalmazás egyes rétegei az alkalmazás rétegeit jól definiált, kisebb modulokra bontja",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+Egy üzleti alkalmazás egyes rétegei különállóan implementálhatóak,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"Egy uzleti celú alkalmazas retegszerkezetenek kialakitasa soran olyan rendszerfelbontasra torekszunk, hogy miden reteg transzparens az osszes felette elhelyezkedo reteg szamara.",VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+"Egy uzleti celú alkalmazas retegszerkezetenek kialakitasa soran olyan rendszerfelbontasra torekszunk, hogy minden reteg csak a ket kozvetlen szomszedjaval alljon kapcsolatban.",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"Egy uzleti celú alkalmazas retegszerkezetenek kialakitasa soran olyan rendszer felbontasra torekszunk, hogy minden reteg csak a ket kozvetlen szomszedjaval alljon kapcsolatban.",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"Egy üzleti célú alkalmazás rétegszerkezetének kialakítása során olyan rendszerfelbontásra törekszünk, hogy minden réteg minden réteggel közvetlen kapcsolatba álljon.",VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+"Egy uzleti celú alkalmazas retegszerkezetenek kialakitasa soran olyan rendszer felbontasra torekszunk, hogy minden reteg minden reteggel kozvetlen kapcsolatban alljon.",VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+"Egy üzleti célú alkalmazás rétegszerkezetének kialakítása során olyan rendszerfelbontásra törekszünk, hogy minden réteg minden réteggel közvetlen kapcsolatban álljon.",VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+"Egy üzleti célú alkalmazás rétegszerkezetének kialakítása során olyan rendszerfelbontásra törekszünk, hogy minden réteg transzparens az összes felette elhelyezkedő réteg számára",VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+Egy üzleti célú alkalmazás üzleti logikájához kapcsoló szervezési réteget mediátornak nevezzük.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"Egy vállalati informatikai rendszer TCO-ja a rendszer teljes birtoklási költségét jelenti, annak teljes működési élettartama során.",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"Egy vállalati informatikai rendszer TCO-ja nem a rendszer teljes birtoklási költségét jelenti, annak teljes működési élettartama során.",VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+Egy vállalatirányítási rendszerben az üzleti logikát jellemzően adatbázisszerver szintjén implementálják.,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+"Egy vállalatirányítási rendszer folyamattesztelésének a célja az, hogy feltárja a rendszer teljesítőképességeit a válaszidők és az átbocsátóképesség tekintetében.",VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+"Egy vállalatirányítási rendszer teljesítménytesztelésének célja az, hogy megvalósítja-e a specifikációban foglalt funkciókat.",VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+"Egy vállalatirányítási rendszer teljesítménytesztelésének célja nem az, hogy megvalósítja-e a specifikációban foglalt funkciókat.",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"Egy vastagkliens megoldásokra épülő vállalti információs rendszer biztonsági szempontból kedvezőbb, mint egy vékonykliensre épülő.",VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+Egy VIR bevezetése során biztosan nem szükséges alkalmazásintegráció,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+Egy vir TCO mutatója a rendszerben egy esetlegesen fellépő hiba kijavításához szükséges időt jelent,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+Egy virtualis gep formajaban elerheto hardver es operacios rendszer szolgaltatas infrastruktúraszolgaltatasnak tekintheto.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"Előfeldolgozásos adathiba feltárás előnye, hogy kisebb eséllyel kerül hiba a rendszerbe.",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"Előfeldolgozásos adathiba feltárás hátránya, hogy kisebb eséllyel kerül hiba a rendszerbe.",VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+ERP-vel szembeni egyik követelmény a redundancia kizárása.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"Felhasználóval való kapcsolattartás alapján megkülönböztethetők passzív, aktív és kooperatív döntéstámogató rendszerek.",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"Felhőalapú szolgáltatás egy olyan számítógépes erőforrás-hozzáférési modell, amely a hálózaton keresztül különféle típusú, közös használatú erőforráshalmazokat konfigurálható módon tesz elérhetővé a felhasználók számára.",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"Felhőalapú szolgáltatás nem egy olyan számítógépes erőforrás-hozzáférési modell, amely a hálózaton keresztül különféle típusú, közös használatú erőforráshalmazokat konfigurálható módon tesz elérhetővé a felhasználók számára.",VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+Felhőszolgáltatások igénybevétele vállalati környezetben egy szolgáltatáskiszervezési formának tekinthető.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+Felhőszolgáltatásokra általánosságban jellemző a különféle virtualizált erőforrások használata.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+Felhőszolgáltatásokra nem jellemző a különféle virtualizált erőforrások használata.,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+"formációs rendszer fő összetevői: Ember (döntéshozó), Rendszerezett információ ,Technikai apparátus (HW, SW)",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"Formai adatszabvány az, ami az ismeretek megjelenési formáját szabályozzák.",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+Gamification a játékkonzolok esetében alkalmazott ember-gép interakciók PC-s környezetbe történő adoptálását jelenti.,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+Gamification játéktervezési elemek használatát jelenti játékos környezetben.,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+Gamification játéktervezési elemek használatát jelenti nem-játékos környezetben.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+Gamification megközelítésnek nincsenek pszichológiai vonatkozásai.,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+Gamification megközelítésnek pszichológiai vonatkozásai is vannak.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+Gamification nem a játékkonzolok esetében alkalmazott ember-gép interakciók PC-s környezetbe történő adoptálását jelenti.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+Garbage in garbage out hatásnak nincsen nagy jelentősége hibás adatkezelés esetén.,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+"Garbage in garbage out jelentése, hogy rossz adatokból csak rossz adatok nyerhetőek ki.",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+Háromrétegű architektúrájú vállalati információs rendszerek esetén az üzleti logika réteg feladata a felhasználóval való kapcsolattartás.,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+Háromrétegű architektúrájú vállalati információs rendszerek esetén nem az üzleti logika réteg feladata a felhasználóval való kapcsolattartás.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"Ha tortenik egy eroforrasmegszunes, akkor RTO-n múlik, hogy mennyi ido alatt tudom helyreallitani a rendszert, illetve az RPO jelzi azt, hogy mennyi adatvesztest engedek meg.",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+Háttérfeldolgozás beengedi a hibákat.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"Háttérfeldolgozásos adathiba feltárás esetén előny, hogy mérhető a rendszer adatminősége.",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+háttérfeldolgozásos adathiba feltárás esetén előny hogy mérhető a rendszer adatminősége,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"Helytelen értékekről beszélünk, ha az adathibát a hibásan bevitt adat okozza.",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+Iaas infrastruktúraszolgáltatást jelent.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"Információ lényegében az adatok jelentése, vagyis az adatok értelmezése valamilyen (például egyéni, vállalati vagy szervezeti) tudás kontextusában.",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"Információnak nevezzük, a valóságra vonatkozó tapasztalatokat, általánosításokat, fogalmakat.",VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+Információ nem azonos az adatok halmazával,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"Információ rendszer, és az információs rendszer nem keverendő össze. A két rendszer nem ugyan azt jelenti.",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+Információs rendszerek különböző folyamatai minden esetben automatizáltak.,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+"Információs rendszernek CSAK az a célja, hogy a vállalat számára egy információs többlet értéket biztosításon.",VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+"Információs rendszernek (definíciója alapján) része tárolását és szolgáltatását végző személyek, de nem része a technikai eszközök összessége.",VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+"Információs rendszernek (definíciója alapján) része tárolását és szolgáltatását végző személyek, és tevékenységek és technikai eszközök összesége.",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"Információs rendszer technikai megközelítésből az adatok bevétele, tárolása, feldolgozása, rendelkezésre bocsátása, kiadása.",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"Információs rendszer technikai megközelítéséből az információk bevétele tárolása, feldolgozása, rendelkezésre bocsátása, kiadása.",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"információs rendszer technikai megközelítéséből az információk bevétele tárolása, feldolgozása,rendelkezésre bocsátása, kiadása",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+Információs-technológiával működő rendszerekkel szemben funkcionális követelmény a tárolás módja.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+Információs technológiával működő rendszerekkel szemben funkcionális követelmény az ember gép kapcsolat módja.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+Információs technológiával működő rendszerekkel szemben funkcionális követelmény az ember-gép kapcsolat módja.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+Integrált információs rendszerek követelménye az egységes UI.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"Integrált vállalatirányítási rendszerek bevezetése során nem szükséges a szoftvert az adott vállalat igényeire testre szabni, mivel az integráltságból adódóan ez már korábban meg lett valósítva.",VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+Integrált vállalatirányítási rendszerek bevezetése során szükséges lehet a szoftvert az adott vállalat igényeire testre szabni.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+Integrált vállalatirányítási rendszerrel kapcsolatosan nem követelmény a redundancia kizárása.,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+"Integralt vallalatiranyitasi rendszerrel kapcsolatosan nem kovetelmeny, hogy segitse a rovid es kozeptavú tervezest",VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+"Inverz adatszabvány típus, ha helyes értékre állítjuk fel a szabályt.",VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+Inverz szabályok formai és tartalmi szabályok keverékei.,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+"Irányítószám, telefonszám (adatfajta kategóriában) azt jelenti, hogy csonkolással földrajzi-közigazgatási körzetekre jellemző adat nyerhető.",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"Irányítószám, telefonszám (adatfajta kategóriában) azt jelenti, hogy csonkolással földrajzi közigazgatási körzetekre jellemző adat nyerhető.",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+Jellegzetes hibás adatminőség kapcsán helytelen érték pl a hibásan gyűjtött adat.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+Jellegzetes hibás adatminőség kapcsán ködös definícióként értendő az üres érték.,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+Karakteres adatfajtával minden aritmetikai művelet elvégezhető.,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+Kettőnél több dimenziós üzleti adatok vizualizációja csak minimum háromdimenziós megjelenítőkön (pl: VR szemüveg) lehetséges.,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+"Klasszikus OLAP-megközelítésében az adattárházak adatai nem naprakészek, csupán bizonyos késleltetéssel tükrözik a vállalat állapotát.",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"Kliens-szerver alapú rendszerekben a kommunikációt tipikusan a kliens kezdeményezi, a szervernek alaphelyzetben csupán várakozik a bejövő kérésre.",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"Kliens-szerver alapú rendszerekben a kommunikációt tipikusan a szerver kezdeményezi, a kliensek alaphelyzetben csupán várakozik a bejövő kérésre.",VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+Kliens-szerver modellben a szerver- és a kliensmodulok általában azonos számítógépekre kerülnek.,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+Kliens-szerver modellben a szerver- és a kliensmodulok általában különböző számítógépekre kerülnek.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+Komplex információs rendszerek kritériuma az egy adatbázison keresztül történő információ csere.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+Komplex információs rendszereknél egységes kell hogy legyen a user interface.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+Komplex információs rendszer nem moduláris módon épül fel.,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+Komponensalapú rendszerek feketedoboz-jellegű (black box) újrafelhasználás lehetőségével rendelkeznek.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+Komponensalapú rendszerek nem rendelkeznek feketedoboz-jellegű (black box) újrafelhasználás lehetőséggel.,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+"Lineáris-funkcionális szervezeti forma esetén a törzsegység szakértői véleményt alkotnak, és utasítási joguk is van.",VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+"Lineáris-funkcionális szervezeti forma esetén, a törzskar kialakulásának célja a vezető túlterheltségének csökkentése a szakmai színvonal növelése.",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"Lineáris szervezetek egyszerűek, jól áttekinthetők és egyértelműek az alá és fölérendeltségi viszonyok.",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"Lineáris szervezeti forma egyszerű, jól áttekinthető, egyértelműek az alá fölé rendelési viszonyok.",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"Lineáris szervezeti forma esetén magasak a költségek, és sok az adminisztráció.",VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+Lineáris szervezeti forma összetett és sok az adminisztráció.,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+Magyarországon a háttér-feldolgozásos adathiba a legelterjedtebb.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+Magyarországon a háttérfeldolgozásos adathiba feltárás a legjellemzőbb.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+Magyarországon az előfeldolgozás az elterjedt adathiba feltárási módszer.,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+Magyarországon nem a háttérfeldolgozásos adathiba feltárás a legjellemzőbb.,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+"Míg az OLAP-technikák kimondottan a sokdimenziós adatok megjelenítését és emberi feldolgozását segítik, addig az adatbányászat már túllép ezeken a korlátokon.",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"Minden információ adat, de nem minden adat információ.",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+MOLAP-rendszerek az adatok tárolására a multidimenziós adatmodellt használják.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+Multidimenzionális adatmodellben a dimenziós adatok hierarchiába rendezhetők.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+Multidimenzionális adatmodellben a dimenziós adatok nem rendezhetők hierarchiába.,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+Napjainkban a vallalatiranyitasi rendszerei jellemzoen haromretegu architektúrara epulnek,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+Napjaink vállalatirányítási rendszerei jellemzően háromrétegű architektúrára épülnek.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+Nyilvános felhők esetében a szolgáltató az ügyfelek sokaságának kiszolgálását célozta.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+Nyilvános felhők esetében a szolgáltató nem az ügyfelek sokaságának kiszolgálását célozta.,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+Objektív információfelfogás szerint az információ abszolút és semleges.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+Objektív információfelfogás szerint az információ nem abszolút és semleges.,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+"OLAP egy konkrét szoftver, programcsomag.",VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+OLAP felgörgetés (roll-up) művelete csökkenti az egyik dimenzió felbontását.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+OLAP lefúrás (drill-down) művelete megnöveli az egyik dimenzió felbontását.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"OLAP nál a dice az egyik művelet, amely szeletelést ,részkocka kiválasztást, illetve projekciót és szelekciót hajt végre.",VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+"OLAP olyan adatfeldolgozó rendszerek közös elnevezése, amelyek számos adattárolással, adatábrázolással és statisztikai feldolgozással kapcsolatos koncepciót magukba foglal.",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+OLAP rendszerek jellemzően írásra vannak optimalizálva.,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+OLAP-rendszerek jellemzően nem olvasásra vannak optimalizálva.,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+OLAP-rendszerek jellemzően olvasásra vannak optimalizálva.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+OLAP-rendszerek nem relációs adatmodellen alapulnak.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+OLAP-rendszerek relációs adatmodellen alapulnak.,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+OLAP rendszerek többnyire írási folyamatokat végeznek.,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+OLTP mozaikszó az Online Transaction Performance szavakat jelölik.,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+OLTP-rendszerek relációs adatmodellen alapulnak.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+OLTP-vel az OLAP-hoz képest több műveletet és tranzakciót végeznek átlagosan óránként.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"On-Line Analytical Processing rendszerekben a nyílt interneten, vagy bérelt vonali hálózaton on-line módon történik az adatok egyfajta valós idejű feldolgozása.",VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+Operatív működést képező feladatok: tranzakció feldolgozás,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"Operatív rendszerek lényege az, hogy az összegyűjtött bemeneti adatokat olyan formára hozzák, amely a felhasználók számára megkönnyíti az adott helyzet megfelelő értékelését.",VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+"Operatív rendszereknek nem az a lényege, hogy az összegyűjtött bemeneti adatokat olyan formára hozzák, amely a felhasználók számára megkönnyíti az adott helyzet megfelelő értékelését.",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+Összefüggésekből eredő hiba az értékkészleten kívül eső hiba.,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+PaaS alkalmazásszolgáltatást jelent.,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+PaaS jelentése szoftverszolgáltatás.,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+PaaS platformszolgáltatást jelent.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+Pivot (rotate) során a forgatáskor a dimenziók száma nő.,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+Rekordszintű hiba összefüggéseket sérthet.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+Relációs adatok indexelésével az adatelemzés hatékonysága romlik.,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+RPO jelentése Recovery Point objective,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+RTO és RPO használatakor nem kell minimalizálni a pénzügyi veszteséget.,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+RTO jelentése: Recovery Time Objective.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"SAP ERP Business Suite egy kis- és középvállalatokat célzó, alacsony komplexitású vállalatirányítási megoldás.",VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+SAP ERP Business Suite elsősorban nem a kis- és középvállalatokat célzó vállalatirányítási megoldás.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"SAP rendszerek leggyakoribb moduljai:datbázis, alapprogram, MM - Materials Management, PP - Production Planning.",VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+Szervezet definíciója szerint az egyének a cél érdekében folyamatosan tevékenykednek.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"Szigetszerű alkalmazások a vállalati információs rendszerek területén az olyan vállalatirányítási rendszereket jelölik, amelyek nem rendelkeznek EDI (Electronic Data Interchange) komponenssel.",VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+"Szigetszerű alkalmazások a vállalati információs rendszerek területén nem az olyan vállalatirányítási rendszereket jelölik, amelyek rendelkeznek EDI (Electronic Data Interchange) komponenssel.",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"Szolgálat út biztosítja, hogy az utasítások lefelé ill. az információk felfelé minden egységet elérjenek.",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"Szolgálat út biztosítja, hogy az utasítások lefelé minden egységet elérjenek.",VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+Tranzakció feldolgozó rendszerek részei az információs rendszereknek.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+Tudásmenedzsment rendszerek a vállalatirányítási rendszerek egyik típusának tekinthetők.,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+Tudásmenedzsment rendszerek az ERP-rendszerek egyik típusának tekinthetőek.,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+Tudásmenedzsment rendszerek nem tekinthetőek a vállalatirányítási rendszerek egyik típusának.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+Ügyviteli rendszerek nem tartoznak a vállalati információs rendszerek közé.,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+Üzleti intelligencia kifejezetten az operatív adatbázisok intelligens működésére fókuszáló terület.,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+"Üzletiintelligencia-rendszerek a döntések meghozatalához szükséges adatok feltárását, összesítését és elemzését végző eszközök.",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+Üzletmenet-folytonosság tervezés esetén az RPO: a katasztrófa bekövetkezése (leállás utáni) összes számítógépes alkalmazás újraindítási ideje.,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+Üzletmenet-folytonosság tervezés esetén az RTO: a katasztrófa bekövetkezése (leállás utáni) összes számítógépes alkalmazás újraindítási ideje.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+uzletmenet folytonossag tervezes eseten az RTO: a katasztrofa bekovetkezese (leallas utani) osszes szamitogepes alkalmazas újraindulasi ideje.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+Üzletmenet-folytonosság tervezés esetén az RTO: a katasztrófa bekövetkezése (leállás utáni) összes számítógépes alkalmazás újraindulási ideje.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"Üzletmenet-folytonosság tervezés esetén az RTO, és RPO értékek teljesítése mellett fontos, hogy egyszerű mechanizmusokat kell tervezni baj esetére.",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"Üzletmenet folytonosság tervezés esetén az RTO, és RPO értékek teljesülés mellett fontos, hogy a kieső időnek minimálisnak kell lennie.",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"Üzletmenet-folytonosság tervezés két hatékonysági mutatója a BCP, és az DRP.",VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+"Üzletmenet-folytonosság tervezés két hatékonysági mutatója az RTO, és az RPO.",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"Vállalati alkalmazások között megvalósított integráció jellemzői eltérnek aszerint, hogy azt melyik rétegben végzik el.",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+Vállalati információs rendszerek esetében a hagyományos vastagkliens megoldások használata nem csak előnnyel rendelkezik a vékonykliens megoldásokkal szemben.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+Vállalati információs rendszerek esetében a hagyományos vastagkliens megoldások használata szinte csak előnnyel rendelkezik a vékonykliens megoldásokkal szemben.,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+"Vállalati információs rendszerek esetében a vékonykliens megoldások használata számos előnnyel rendelkezik, a hagyományos vastagkliens megoldásokkal szemben.",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+vállalati műveleteket támogató rendszerek a műszaki tervező rendszerek (CAD),VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+Vállalati műveleteket támogató rendszerek a műszaki tervező rendszerek (CD),VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"Vállalati műveleteket támogató rendszerek az adatbeviteli rendszerek (RFID, vonalkód, QR)",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+Vállalatirányítási rendszerek bimoduláris felépítésűek.,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+Vállalatirányítási rendszerek moduláris felépítésűek.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"Vállalatok által használt üzleti alkalmazások nem érhetőek el felhőszolgáltatásként, csak a nem üzletiek.",VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+Vállalatok az operatív működést kepéző feladatok kiszolgálása tipikusan döntéstámogató rendszereket alkalmaznak.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+Vállalatok az operatív működést képező feladatok kiszolgálása tipikusan nem tranzakciófeldolgozó rendszereket alkalmaznak.,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+Vállalatok az operatív működést képező feladatok kiszolgálása tipikusan tranzakciófeldolgozó rendszereket alkalmaznak.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+Vastagkliens megoldásokra épülő vállalati információs rendszerek eseteként a folyamatos kapcsolat nélkül működés lehetőségét kínálják.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"Vékonykliens megoldásokra épülő vállalati információs rendszereknek nehézkesebb a telepítése, mint a vastagkliensre épülőknek.",VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+Vezetői jelentéseknél 3-4 %-os eltérés engedhető csak meg.,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+Vezetőket támogató rendszerek kategóriába tartoznak a döntéstámogató rendszerek.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+Vezetőket támogató rendszerek kategóriába tartoznak a vezetői információs rendszerek.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"A ""best practice"" jellegű üzleti folyamatok az egyes területek legjobb üzleti gyakorlatának megfelelő folyamatokat jelentik.",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"A ""best practice"" jellegű üzleti folyamatok nem az egyes területek legjobb üzleti gyakorlatának megfelelő folyamatokat jelentik.",VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+A DRP feladata a kiesett erőforrások visszaállításának biztosítása.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"A BCP jelentése kiesett erőforrás visszaállítása, míg a DRP jelentése a kiesett erőforrások nélküli funkcionális működés.",VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+A BOM-ban backflush hatására változik-e a készletszint?,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+A Garbage in garbage out hatásnak nincsen nagy jelentősége hibás adatkezelés esetén.,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+A HANA repository a futásidejű adatbázis objektumokattárolja.,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+Egy HANA adatbázis alapvetően OLAP igényekkiszolgálására alkalmas,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+Egy HANA adatbázisban az adatok karbantartása (pl.: újrekord felvitele) technológiai szempontból a delta bufferekenkeresztül valósul meg.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"HANA környezetben a delivery unitok szolgálnak a különbözőrendszerek (fejlesztői teszt, produktyv) közötti transzporthoz.",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+A MOLAP (Multidimensional OLAP) rendszerek az adatok tárolására a multidimenziós adatmodellt használják.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+A Máv-Start által fejlesztett Elvira elnevezésű menetrend rendszer egy információs rendszer.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+A PaaS alkalmazás szolgáltatást jelent.,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+A PaaS platform szolgáltatást jelent.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"A platformszolgáltatás általában nemcsak egy futtató környezetet jelent, hanem kapunk egy fejlesztőkészletet és különféle üzemeltetést segítő eszközöket is (felhőben működő alkalmazásszerver, adattár, üzenetkezelő és teljesítménymonitorozó rendszer).",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+A platformszolgáltatás általában csak egy futtató környezetet jelent.,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+A SAP NetWeaver egy átfogó integrációs és alkalmazási platform,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+A beszerzési információ rekordok (purchasing info records) az egyes anyagokkal kapcsolatos meghatározott szállítókra vonatkozó beszerzési adatokat tartalmazzák.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+A beszerzési információs rekordok (purchase info records) az egyes anyagokkal kapcsolatos meghatározott szállítókra vonatkozó beszerzési adatait tartalmazzák.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+A beszerzési információs rekordok (purchasing info records) a darabjegyzék (BOM) és a műveleti jegyzék (routing) megfelelő elemeit kapcsolja össze a beszerzés vonatkozásában.,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+"A beszerzési információs rekordok (purchasing info records) megmutatják, hogy hogyan lehet összekötni a szállítót a vállalattal. Megmutatja, hogy az adott szállító milyen anyagot tud szállítani, megmutatja, hogy milyen kedvezményeket kaphat a szállító, illetve feljegyzéseket készíthetünk.",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"A centralizáció: biztosítja az egységes vezetői akarat érvényesítését, az erőforrások racionális hasznosítását.",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"A centralizált hatáskörök leadása előnyös a munkavállalói elégedettség, a kreativitás és az elkötelezettség növelése.",VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+a vállalatirányítási rendszer önmagában egységes platform,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+A darabjegyzék (Bill of material) létrehozása és karbantartása többszintű darabjegyzék formájában is történhet.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+A darabjegyzék (bill of material) létrehozása és karbantartása csak egyszintű darabjegyzék (single-level BOM) formájában történhet.,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+A darabjegyzék (bill of material) létrehozása és karbantartásatöbbszintű darabjegyzék (multi-level BOM) formájában istörténhet.,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+A diszpozíció (MRP) futás eredménye lehet egy tervrendelés(planned order).,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"A diszpozíció az SAP-rendszerben az anyagok rendelkezésreállásának biztosítását, az anyagszükséglet tervezését jelenti.",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"A dobozos üzleti alkalmazások olyan szoftvertermékek, amelynek telepítőkészletét a vállalatok CD, DVD vagy Blu-ray lemezek formájában vásárolhatnak meg.",VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+A felhő szolgáltatásokra általánosságban jellemző a különféle virtualizált erőforrások használata.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+A felhőalapú szolgáltatások elérése gyakran böngészőn keresztül történik,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"A felhőalapú szolgáltatás egy olyan számítógépes erőforrás-hozzáférési modell, amely a hálózaton keresztül a különféle típusú, közös használatú erőforráshalmazokat konfigurálható módon tesz elérhetővé a felhasználók számára.",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+A felhőszolgáltatásokra nem jellemző a különféle virtualizált erőforrások használata.,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+A felhőszolgáltatások egyik fő vonzereje az alacsony kezdeti befektetés,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+A felhőszolgáltatások egyetlen fő vonzereje az alacsony kezdeti befektetés,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+A gamification a konzolról PC-re történő ember-gép reakciók adoptálását jelenti.,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+A gamification megközelítésének nincsenek pszichológiai vonatkozásai,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+A gyártási megrendelés visszavonhatatlan.,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+A gyártási megrendelés visszavonható.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+A hazai informatikai hálózat váltóáramról megy.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"A karakteres adatfajtával a feldolgozási módjuk szerint semmiféle műveletet nem végezhetünk, adattartalommal nem összefüggő. (pl.: földrajzi nevek)",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+A kevert szabály formai és tartalmi szabályok keverékei.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+A kiszállítási pontot (shipping point) üzemhez (plant) lehet rendelni,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+ Az információs rendszerek két legfőbb tervezési mintája a kliens-szerver architektúra és a rétegszerkezet.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+ Az információs rendszerek két legfőbb tervezési mintája a számítógép-szerver architektúra és a réteg nélküli szerkezet.,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+"A kliensszámítógépek nem osztanak meg erőforrásokat, de működésükkor aktívan használják a szervere(ke)n található tartalmakat és szolgáltatásokat.",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"A kliensszámítógépek erőforrásokat osztanak meg, de működésükkor aktívan használják a szervere(ke)n található tartalmakat és szolgáltatásokat.",VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+"A szervermodulokat futtató számítógépek jellemzően nagy teljesítményű, hibatűrő rendszerek.",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"A szervermodulokat futtató számítógépek jellemzően kis teljesítményű, hibatűrő rendszerek.",VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+"A modulok kialakítása segíti a specifikációk pontosítását, a szükséges interfészek meghatározását és a rendszer dokumentálását.",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"A modulok kialakítása nem segíti a specifikációk pontosítását, a szükséges interfészek meghatározását és a rendszer dokumentálását",VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+Az interfészek helyes kialakításához pontosan ismerni kell az adott alkalmazásokat és környezetüket.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+Az interfészek helyes kialakításához nem kell pontosan ismerni az adott alkalmazásokat és környezetüket.,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+A komponens    alapú rendszerek feketedoboz-jellegű (black box) újrafelhasználás lehetőségével rendelkeznek.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"A kép adatfajtával a feldolgozási módjuk szerint lehetséges honvédelmi, felderítési, földrajzi, mezőgazdasági, környezetvédelmi, gyógyászati.",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+A különböző diszpozíciós eljárások az SAP-rendszerben a különböző kontrolling eszközök alkalmazását definiálják.,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+"A laza csatolásnak az az előnye, hogy az elemek önmagukban is működőképesek, így nem őrzik meg függetlenségüket.",VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+"A laza csatolásnak az az előnye, hogy az elemek önmagukban is működőképesek, így őrzik meg függetlenségüket.",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"A csatoltság azt jellemzi, hogy a rendszerkomponensek milyen mértékben függnek egymástól.",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"A lineáris szervezeti forma esetén magasak a költésgek, és sok az adminisztráció.",VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+A műveleti tervet (routing) mintának használják fel a gyártási vagy sorozatgyártási feladatoknál.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+A szolgáltató az ügyfelek sokaságának kiszolgálását célozta,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+A szolgáltató nem az ügyfelek sokaságának kiszolgálását célozta,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+A rekordszintű hiba összefüggéseket sérthet.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+A rendelési lista elkészültekor a pénzügyi bizonylat is létrejön.,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+"A rendszer egymással összefüggésben levő részek (elemek) halmaza, amelyek egyetlen egészet alkotnak",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+A rendszer-architektúrák közötti fő koncepciós különbséget a decentralizáltság mértéke adja.,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+"A rétegek a feladatot jól definiált, kisebb modulokra bontják.",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+A szervezet alapvető strukturális jellemzői közül a strukturális és személyorientált eszközök a koordinációs eszközök közé tartozik.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+A szervezet alapvető strukturális jellemzői közül a technokratikus eszközök a kordinációs eszközök közé tartozik.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+A szervezet definíciója szerint az egyének a cél érdekében folyamatosan tevékenykednek.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"A szervezetek kialakulását befolyásoló tagi jellemzők: tartósság, újdonságtartalom.",VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+A technológiai műveleti terv (routing) a termelési folyamat egyes műveleteit írja le.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+A terv rendelésből (planned order) gyártási megrendelés (production order) képezhető.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"A transzformációs fázis az adatokat olyan közös alakra hozza, amely lehetővé teszi a döntéstámogató rendszerek lényegi feldolgozó algoritmusainak minél hatékonyabb futtatását.",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"A tranzakciók alkalmazások, amelyek üzleti folyamatokatfuttatnak az SAP-ban.",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+A tételnagyság meghatározásának módja (lot-sizing) a kontrolling szempontjából releváns az SAPrendszerben.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"Minden réteg külön egységet alkot, amely a többi rétegtől függetlenül tervezhető és implementálható.",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"Minden réteg azonos egységet alkot, amely a többi rétegtől függetlenül tervezhető és implementálható.",VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+Az alkalmazásintegráció folyamata az alkalmazástervezési folyamathoz hasonlít.,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+A prezentációs réteg (presentation layer) feladata a felhasználóval való kapcsolattartás.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+Nem a prezentációs réteg (presentation layer) feladata a felhasználóval való kapcsolattartás.,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+" Az angol szakirodalom kétfajta rétegfogalmat különböztet meg. A **layer** a logikailag elkülönített rétegeket jelöli, míg a **tier** a fizikai szeparációt (kliens- vagy szerveroldalra telepített funkciók) hangsúlyozza.",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+" Az angol szakirodalom kétfajta rétegfogalmat különböztet meg. A **tier** a logikailag elkülönített rétegeket jelöli, míg a **layer** a fizikai szeparációt (kliens- vagy szerveroldalra telepített funkciók) hangsúlyozza.",VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+A vastagkliens megoldásokra épülő vállalati információs rendszerek eseteként a folyamatos kapcsolat nélküli működés lehetőségét kínálják.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+A vevő-anyag információs rekordok (customer-material info records) vevőspecifikus kiegészítőinformációkat tartalmazhatnak egy anyagra vonatkozóan.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"A vékonykliensrendszer olyan kooperatív feldolgozási környezet, ahol az alkalmazásfejlesztés alapvetően vagy a távoli, vagy az elosztott prezentáció tervezési minta (lásd a 13. ábrát) alapján zajlik. ",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+Vékonykliens környezetben természetes adottság a platformfüggetlenség.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"A vállalatirányítási rendszerek egyfajta tipikus, jól bevált (best practice) folyamatkezelést biztosítanak.",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"A vállalatok által használt üzleti alkalmazások nem érhetőek el felhőszolgáltatásként, csak a nem üzletiek.",VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+"Adatforrások közül két féle forrást különböztetünk meg: külső, és belső források.",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"Adatnak nevezzük a számokkal leírható dolgokat, melyek számítástechnikai eszközökkel rögzíthetők, feldolgozhatók és megjeleníthetőek.",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+Adatvédelmi szempontból az eszközös ellenőrzés fizikai védelemi szinten valósul meg.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+Adatvédelmi szempontból az rendszer szintű ellenőrzés adatfeldolgozási szinten valósul meg,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+Az ABAP Workbench egy Microsoft NAV fejlesztésű platform.,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+Az AWS a google nyilványos számításfelhő-szolgáltatása.,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+"A web 2.0-nél a szöveges vagy multimédiás tartalmat maguk a felhasználók hozzák létre, töltik fel, osztják meg egymással.",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"A web 2.0-nél a szöveges vagy multimédiás tartalmat nem a felhasználók hozzák létre, töltik fel, osztják meg egymással.",VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+Az Azure a Microsoft nyilványos számításfelhő-szolgáltatása.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+Az Azure a SAP nyilvános számításfelhő-szolgáltatása.,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+Az ERP-vel (integrált vállalatirányitási rendszerrel) szemben követelmény a jogosultágnak megfelelő hozzáférés.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+Az MRP típusú diszpozíciós eljárás alapvetően az anyag múltbéli fogyásán alapul.,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+"Az OLAP olyan adatfeldolgozó rendszerek közös elnevezése amelyek számos adattárolással, adatábrázolással és statisztikai feldolgozással kapcsolatos koncepciót magukba foglal.",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+Az OLAP rendszerek jellemzően olvasásra vannak optimalizálva.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+A OLAP rendszerek többnyire írási folyamatokat végeznek.,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+"OLAP rendszerekben a nyílt interneten, vagy bérelt vonali hálózaton online módon történik az adatok egyfajta valós idejű feldolgozása.",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"OLAP-nál a dice az egyik művelet, amely szeletelést ,részkocka kiválasztást, illetve projekciót és szelekciót hajt végre.",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"A klasszikus OLAP megközelítésben az adattárházak adatai nem naprakészek, csupán bizonyos késleltetéssel tükrözik a vállalat állapotát.",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+Az RTO és RPO használatakor a kieső időnek minimálisnak kell lennie.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+Az RTO és RPO használatakor egyszerű mechanizmusokat kell tervezni.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+Az RTO és RPO használatakor ki kell dolgozni a normál működéshez való visszatérés szabályait.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+Az RTO és RPO használatakor nem kell betartani a jogszabályokat.,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+A Business One elsősorban a kis- és középvállalatokat célzó vállalatirányítási megoldás.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"A Business Suite egy komplex szoftverrendszer, elsősorban nagyvállalatok részére.",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"A Business Suite egy komplex szoftverrendszer, elsősorban kis- és középvállalatok részére.",VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+Az SD (Sales and Distribution) modul használata esetén legalább egy részleg (division) felvétele kötelező.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+Az SD (sales and distribution) modul használata esetén legalább egy értékesítési csatorna (distribution channel) létrehozása kötelező.,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+"Az adat lényegében az információk jelentése, vagyis az információk értelmezése valamilyen (pl.: egyéni, szervezeti) tudás kontextusában.",VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+"Az adatbeviteli rendszerek, műszaki tervező rendszerek (CAD), vállalati műveleteket támogató rendszerek.",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"A Dummy érték jelenti, ha valamelyik adatból duplikáció van jelen.",VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+A hagyományos (legacy) rendszerek központi szerepet játszanak az adott vállalat működésében.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+A hagyományos (legacy) rendszerek nem játszanak központi szerepet az adott vállalat működésében.,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+A dobozos alkalmazások viszonylag gyors és megbízható megoldást kínálnak az egyes részterületek lefedésére.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+A dobozos alkalmazások viszonylag lassuú és megbízhatatlan megoldást kínálnak az egyes részterületek lefedésére.,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+"A vállalati rendszer-tervezői munkakör (enterprise architect), és az ezt betöltő személy fő feladata a vállalati rendszerekben alkalmazott műszaki megoldások összehangolása let",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"A vállalati rendszer-tervezői munkakör (enterprise architect), és az ezt betöltő személy fő nem feladata a vállalati rendszerekben alkalmazott műszaki megoldások összehangolása let",VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+"Összefüggésekből eredő hiba az rekordon belüli/közötti hiba, duplikáció és a „Dummy"" értékek.",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"Összefüggésekből eredő hiba a forma, értékkészleten kívül eső hiba és a matematikai helytelenség.",VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+"Az adatok forrásai szerint a sajtóból, hatóságoktól, piackutató cégek külső források.",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"Az adatok forrásai szerint az eladási helyek, saját adatbankok, központok külső források.",VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+"Az adatszabványok olyan megegyezések, szabályszerűségek, amelyek az ismeretek tartalmát és megjelenítési formáját szabályozzák.",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"Az adatszabványok olyan szabályszerűségek, amelyek teljesülését elvárjuk egy adattól.",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"Az adattisztítás feladata a zaj, a redundancia és az inkonzisztencia eltávolítása a nyers adatokból, illetve a hiányos adatok valamilyen kezelése.",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"Az alábbi felsorolás a szervezetek kialakítását befolyásoló környezeti tényezők: piac, tudományos-technikai tényezők, szervezetközi kapcsolatok.",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"Az alábbi felsorolás a szervezetek kialakítását befolyásoló környezeti tényezők: sokféleség, vertikalitás, összetettség.",VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+"Az alábbi felsorolás a szervezetek kialakítását befolyásoló tagi tényezők: szakmai felkészültség, vezetési ismeretek, tekintély.",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"Az alábbi felsorolás a szervezetek kialakítását befolyásoló vállalati adottságai: méret, eredet, telepítettség.",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+Az anyag törzsben (material master) rögzített alapadatok (basic data) alkalmazhatóak a teljes vállalatra (client).,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+Az anyagtörzs (material master) minden beállítása releváns az anyagtervezés (material planning) szempontjából.,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+Az anyagtörzs (material master) nem minden beállítása releváns az anyagtervezés (material planning) szempontjából.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+Az anyagtörzsben (material master) a retrográd kivét (backflush) beállításának hatására a készletszint mindig optimális lesz.,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+"Az anyagtörzsben (material master) a retrográd kivét (backflush)beállításának hatására az anyagmozgás automatikusankönyvelődik, amikor a gyártási megbízás visszajelzésre kerül(production order confirmation)",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"Az anyagtörzsben (material master) a retrográd kivét (blackflush) beállításának hatására az anyagmozgás automatikusan könyvelődik, amikor a gyártási megbízás visszajelzésre kerül (production order confirmation).",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+Az anyagtörzsben (material master) rögzített alapadatok (basic data) alkalmazhatók a teljes vállalatcsoportra (client).,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+Az anyagtörzsben (material master) rögzített alapadatok (basic data) nem alkalmazhatók a teljes vállalatcsoportra (client).,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+Az anyagtörzsben (material master) rögzített alapadatok (basicdata) alkalmazhatók a teljes vállalatcsoportra (client),VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"Az együttműködési rendszerek, és a műszaki tervező rendszerek (CAD), nem sorolhatók a vállalati műveleteket támogató rendszerek közé.",VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+"Az elforgatás (pivot) művelete csak a megjelenítést érinti: arra ad lehetőséget, hogy a koordinátatengelyek sorrendjét vagy azok irányát felcseréljük.",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"Az elosztott rendszerek számos egymástól függetlenül működő, lazán csatolt alkotóelemből épülnek fel.",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"Az elosztott rendszerek számos egymástól függésben működő, lazán csatolt alkotóelemből épülnek fel.",VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+A központosított rendszerekben egy alkatrész meghibásodása az egész rendszer leállását okozhatja.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"Az információ lényegében az adatok jelentése, vagyis az adatok értelmezése valamilyen tudás kontextusban.",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"Az információ olyan adat vagy ismeret, amely viselkedésünket befolyásolni képes.",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"Az információs rendszer erőforrásai: eszközök, emberek, szabványok és eljárások.",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"Az információs rendszerek alapvető feladata, hogy a döntéshozókat ellássa a vállalat működése szempontjából célszerű döntések meghozatalához szükséges információkkal.",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+Az információs rendszerek különböző folyamatai minden esetben autamatizáltak.,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+"Az információs rendszernek (definíciója alapján) része tárolását és szolgáltatását végző személyek, de nem része a technikai eszközök összessége.",VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+"Az információs rendszernek (definíciója alapján) része tárolását és szolgáltatását végző személyek, és tevékenységek és technikai eszközök összessége.",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"Az információs rendszernek CSAK az a célja, hogy a vállalat számára egy információs többlet értéket biztosításon.",VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+"Az operatív rendszereknek nem az a lényege, hogy az összegyűjtött bemeneti adatokat olyanra formára hozzák, amely a felhasználó számára megkönnyíti az adott helyzet megfelelő értékelését.",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+Az átkönyvelés (transfer posting) mindig fizikai anyagmozgással jár.,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+Az átkönyvelés (transfer posting) nem jár feltétlenül fizikai anyagmozgatással.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+Az áttolás (stock transfer) mindig fizikai anyagmozgatással jár.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+Beszerzési igényből (purchase requisition) tervrendelés (planned order) képezhető.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"Csak olyan termék értékesíthető, amelyik szerepel az anyagtörzsben",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"Csak olyan termék értékesíthető, amelyik van raktáron",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+Döntéshozatali hierarchia és információ igény szerint a stratégiai vezetés problémaszerkezete jól strukturált.,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+Döntéshozatali hierarchia és információ igény szerint az operatív vezetés problémaszerkezete jól strukturált.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"Egy adatból gondolkodás vagy gépi feldolgozás útján új ismeretek és ezzel párhuzamosan újabb információk nyerhetđk. Egy adatnak annál nagyobb az információtartalma, minél kevésbé magától értetđdđ, azaz minél nehezebben lehet elđre kikövetkeztetni.",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+Egy adott művelet elvégzéséhez szükséges időt egy adottmunkaközpont (work center) határozza meg.,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+Egy beszerzési szervezetet (purchasing organization) minden esetben hozzá kell rendelni egy vállalathoz (company code).,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+Egy beszerzési szervezetet (purchasing organization) nem kellminden esetben hozzárendelni egy vállalathoz (company code).,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+Egy beszerzési szervezetet nem kell minden esetben hozzárendelni egy vállalathoz (company code).,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+Egy kiszállítási pontot (shipping point) raktárhelyhez (storage location) lehet rendelni.,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+Egy kiszállítási pontot (shipping point) üzemekhez (plants) lehetrendelni.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+Egy költségszámítási körhöz (controlling area) csak egy vállalat(company code) rendelhető.,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+Egy költségszámítási körhöz (controlling area) több vállalat (company code) is rendelhető.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+Egy rendelési igény (purchase requisition) beszerzésimegrendelésé (purchase order) alakítható.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+Egy szállítási rekord létrehozásakor a beszerzéshez és a könyveléshez vonatkozóan nem kell minden releváns adatot egy lépésben megadni.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"Egy vastagkliens megoldásokra épülő vállalati információs rendszer biztonsági szempontból kedvezőbb, mint egy vékonykliensre épülő.",VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+"Egy vékönykliens megoldásokra épülő vállalati információs rendszer biztonsági szempontból kedvezőbb, mint egy vékonykliensre épülő.",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+Egy vevőtörzs rekord (vendor master record) létrehozásakor abeszerzéshez és könyveléshez vonatkozóan minden relevánsadatot egy lépésben kell megadni.,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+"Egy vállalatirányítási rendszer folyamattesztelésének a célja az, hogy nem a feldolgozás sebességét, hanem az üzleti folyamatok helyességét és teljességét ellenőrizzük.",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"A teljesítménytesztelés célja az, hogy feltárja a rendszer teljesítőképességét a válaszidők és az átbocsátóképesség tekintetében",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+Egy értékesítési szervezet (sales organization) csak egy vállalathoz (company code) tartozhat.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+Egy értékesítési szervezet (sales organization) több vállalathoz (company code) is tartozhat.,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+"Előfeldolgozásos adathiba feltárás hátránya, hogy össze kell szervezni a megfelelő alapfolyamatokkal.",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+Fel lehet venni utólag is az árut eladás (raktárból kiküldéselőtt),VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+Gyártási megrendelésből (production order) tervrendelés (planed order) képezhető.,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+"Helytelen értékekről beszélünk, ha az adathibát a hibásan bevitt adatok, hibásan gyűjtött adat, adatforrás hibás, elmaradt beállítás okozza.",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"Háttérfeldolgozásos adathiba feltárás esetén előny, hogy beengedi a hibákat.",VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+"Háttérfeldolgozásos adathiba feltárás esetén előny, hogy bármelyik rendszerhez csatolható, átalakítás nélkül.",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"Információs rendszer fő összetevői: Ember (döntéshozó),Rendszerezett információ ,Technikai apparátus (HW, SW)",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"Információs technológiával működő rendszerekkel szemben funkcionális követelmény a külső, belső fenyegetések elleni védelem",VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+Információs technológiával működő rendszerekkel szemben funkcionális követelmény a tárolás módja.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+Információs technológiával működő rendszerekkel szemben funkcionális követelmény az adatfeldolgozási feladat (algoritmusok).,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"Integrált vállalatirányítási rendszerrel kapcsolatosan követelmény, hogy jogosultágnak megfelelő hozzáférés.",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"Irányitószám, telefonszám (adatfajta kategóriában) azt jelenti, hogy csonkolással földrajzi-közIgatási körzetekre jellemző adat nyerhető.",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+Karakteres adatfajtával minden aritmtikai művelet elvégezthető.,VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+"Karakteres: semmiféle művelet nem végezhető velük, adattartalommal nem összefüggő (maximum rendezni tudjuk, pl. ABC..) Pl: földrajzi nevek",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"Komplex információs rendszerek kritériumai közé tartozik a duplikáció kizárása, felhasználói jogosultsági rendszer, egységes user interface és a vállalati igény kielégítés.",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"Lineáris funkcionális szervezeti forma esetén a törzsegység szakértői véleményt alkotnak, és utasítási joguk is van.",VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+"Lineáris szervezeti forma: sok adminisztráció, magasak a költségek, a szervezet nem tagolható tovább szélességében és mélységében.",VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+"Lineáris szervezetnél: egyszerű kapcsolatok, alacsony költség.",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"Lineáris szervezetnél: egyszerű kapcsolatok, magas költségek.",VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+Magyarországon az háttér-feldolgozásos adathiba a legelterjedtebb.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"Mező szintű adathiba (értékkészlet, [>150év feletti életkor] )",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"Olyan termék is értékesíthető, ami nem szerepel az anyagtörzsben, mivel lehetőség van annak felvitelére még a számla kiegyenlítése előtt.",VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+"Olyan termék is értékesíthető, mely nincs raktáron jelenleg",VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+RTO jelentése Recovery Time objective.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+Shipping point több üzemhez is hozzá lehet rendelve .,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+Tervrendelésből (planned order) gyártási megrendelés(production order) képezhető.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+Transportation planning point csak egy üzemhez tartozhat.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"Vállalati műveleteket támogató rendszerek a Adatbeviteli rendszerek (RFID, vonalkód, QR).",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"A megvalósíthatóság feltétele, hogy az adatok közvetlenül hozzáférhetők és értelmezhetők legyenek.",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"A megvalósíthatóság nem feltétele, hogy az adatok közvetlenül hozzáférhetők és értelmezhetők legyenek.",VIR (igaz/hamis),2,igaz,hamis,,,,0 1
+"Üzletmenet folytonosság tervezés esetén az RTO és RPO értékek teljesítése mellett fontos, hogy egyszerű mechanizmusokat kell tervezni baj esetére.",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+"Üzletmenet folytonosság tervezés esetén az RTO, és RPO értékek teljesülés mellett fontos, hogy ki kell dolgozni a normál működéshez való visszatérés szabályait.",VIR (igaz/hamis),2,igaz,hamis,,,,1 0
+Üzletmenet folytonosság tervezés két hatékonysági mutatója az RTO és az RPO.,VIR (igaz/hamis),2,igaz,hamis,,,,1 0

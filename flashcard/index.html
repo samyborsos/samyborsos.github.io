@@ -265,7 +265,7 @@ function showDeck3Answers(currentFlashcard) {
     if (currentCardIndex == 50) {
       statistics = `Progress: ${currentCardIndex}/50 | Correct: ${correctlyAnswered} + Pluszpont (6) = ${correctlyAnswered + 6}| Incorrect: ${wronglyAnswered} | Accuracy: ${(correctlyAnswered / 50) * 100}%`;
     } else {
-      statistics = `Progress: ${currentCardIndex}/<br>${flashcards.length}`;
+      statistics = `Progress: ${currentCardIndex}/${flashcards.length}`;
     }
     console.log(currentCardIndex, currentCardIndex == 2, statistics)
   // Set the text content for answer3 with the statistics

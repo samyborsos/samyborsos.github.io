@@ -20,6 +20,22 @@
         "answer": "igaz"
     },
     {
+        "question": "A szakértői rendszerek általában azon alapulnak, hogy valamilyen formában (elemi tények, ontológiák, szabályok segítségével) modellezik és eltárolják a döntéshozó tudását, és az adott tudásbázis fölött szimulálják a döntéshozás folyamatát.",
+        "answer": "igaz"
+    },
+    {
+        "question": "A szakértői rendszerek nem azon alapulnak, hogy valamilyen formában (elemi tények, ontológiák, szabályok segítségével) modellezik és eltárolják a döntéshozó tudását, és az adott tudásbázis fölött szimulálják a döntéshozás folyamatát.",
+        "answer": "hamis"
+    },
+    {
+        "question": "A szakértői rendszerek egyik típusa a tudáskezelő rendszer (KMS, Knowledge Management System), amely kimondottan arra specializálódott, hogy a vállalati alkalmazottak által előállított tudás és szakértelem rendezett formában elérhetővé váljon mások számára",
+        "answer": "igaz"
+    },
+    {
+        "question": "A szakértői rendszerek egyik típusa a tudáskezelő rendszer (EDI, Electronic Data Interchange), amely kimondottan arra specializálódott, hogy a vállalati alkalmazottak által előállított tudás és szakértelem rendezett formában elérhetővé váljon mások számára",
+        "answer": "hamis"
+    },
+    {
         "question": "ABAP Workbench egy Microsoft NAV fejlesztésű platform.",
         "answer": "hamis"
     },
@@ -564,6 +580,10 @@
         "answer": "igaz"
     },
     {
+        "question": "Az adathalmaz konzisztenciája a kényszereket be nem tartó, üzleti logikánakvagy más forrásnak ellentmondó adatok eltávolításával állítható helyre. ",
+        "answer": "igaz"
+    },
+    {
         "question": "A vállalatok által használt üzleti alkalmazások nem érhetők el felhőszolgáltatásként, csak a nem üzletiek.",
         "answer": "hamis"
     },
@@ -609,6 +629,14 @@
     },
     {
         "question": "az ABAP Workbench egy Microsoft NAV fejlesztésű platform (SAP)",
+        "answer": "hamis"
+    },
+    {
+        "question": "Az SAP-architektúra alapját képező Netweaver egy szolgáltatásorientált alkalmazás- és integrációs platform. ",
+        "answer": "igaz"
+    },
+    {
+        "question": "Az SAP-architektúra alapját képező Netweaver nem egy szolgáltatásorientált alkalmazás- és integrációs platform. ",
         "answer": "hamis"
     },
     {
@@ -666,6 +694,10 @@
     {
         "question": "az adatok tisztítása az információtartalmukból való leválasztását jelenti",
         "answer": "hamis"
+    },
+    {
+        "question": "Az adatok tisztításanál történik meg a hiányzó, hibás értékek kezelése, illetve végezhetünk különféle szűréseket az adatok minőségének a javítására. ",
+        "answer": "igaz"
     },
     {
         "question": "Az adat olyan adat vagy ismeret, amely viselkedésünket befolyásolni képes.",
@@ -932,11 +964,19 @@
         "answer": "igaz"
     },
     {
+        "question": "Az operatív rendszerekben az adatok rögzítése gyakran hiányos",
+        "answer": "igaz"
+    },
+    {
         "question": "Az operatív rendszerek lényege az, hogy az összegyűjtött bemeneti adatokat olyan formára hozzák, amely a felhasználók számára megkönnyíti az adott helyzet megfelelő értékelését.",
         "answer": "hamis"
     },
     {
         "question": "Az operatív rendszereknek nem az a lényege, hogy az összegyűjtött bemeneti adatokat olyan formára hozzák, amely a felhasználók számára megkönnyíti az adott helyzet megfelelő értékelését.",
+        "answer": "igaz"
+    },
+    {
+        "question": "Az döntéstámogató rendszereknek az a lényege, hogy az összegyűjtött bemeneti adatokat olyan formára hozzák, amely a felhasználók számára megkönnyíti az adott helyzet megfelelő értékelését.",
         "answer": "igaz"
     },
     {
@@ -1432,6 +1472,14 @@
         "answer": "igaz"
     },
     {
+        "question": "Az adattárházak frissítésalapú integrációt valósítanak meg.",
+        "answer": "igaz"
+    },
+    {
+        "question": "Ha olyan adattárat építünk, amelyben csupán az adatok egy speciális felhasználói csoport (marketing, készletgazdálkodás, pénzügy) kiszolgálását célzó részét kezeljük, **adatpiacról** (data mart) beszélünk",
+        "answer": "igaz"
+    },
+    {
         "question": "Kliens-szerver alapú rendszerekben a kommunikációt tipikusan a kliens kezdeményezi, a szervernek alaphelyzetben csupán várakozik a bejövő kérésre.",
         "answer": "igaz"
     },
@@ -1650,6 +1698,10 @@
     {
         "question": "Relációs adatok indexelésével az adatelemzés hatékonysága romlik.",
         "answer": "hamis"
+    },
+    {
+        "question": "Relációs adatok indexelésével az adatelemzés hatékonysága javul.",
+        "answer": "igaz"
     },
     {
         "question": "RPO jelentése Recovery Point objective",

@@ -169,7 +169,7 @@
     },
     {
         "question": "a döntéstámogató rendszerek a stratégiai döntéshozatalhoz kapcsolódó igényeket elégítik ki",
-        "answer": "hamis"
+        "answer": "igaz"
     },
     {
         "question": "a döntéstámogató rendszerekben a teljesítménynövelés egyik praktikus módja az adatredukció",
@@ -629,6 +629,14 @@
     },
     {
         "question": "az ABAP Workbench egy Microsoft NAV fejlesztésű platform (SAP)",
+        "answer": "hamis"
+    },
+    {
+        "question": "A klaszteres (vagy csoportosítás) a klasszikus adatbányászati feladatok egyike",
+        "answer": "igaz"
+    },
+    {
+        "question": "A klaszteres (vagy csoportosítás) nem a klasszikus adatbányászati feladatok egyike",
         "answer": "hamis"
     },
     {
@@ -1400,7 +1408,7 @@
         "answer": "igaz"
     },
     {
-        "question": "információs rendszer technikai megközelítéséből az információk bevétele tárolása, feldolgozása,rendelkezésre bocsátása, kiadása",
+        "question": "információs rendszer technikai megközelítéséből az információk bevétele tárolása, feldolgozása, rendelkezésre bocsátása, kiadása",
         "answer": "igaz"
     },
     {
@@ -2256,8 +2264,8 @@
         "answer": "igaz"
     },
     {
-        "question": "Adatvédelmi szempontból az rendszer szintű ellenőrzés adatfeldolgozási szinten valósul meg",
-        "answer": "igaz"
+        "question": "Adatvédelmi szempontból a rendszer szintű ellenőrzés adatfeldolgozási szinten valósul meg",
+        "answer": "hamis"
     },
     {
         "question": "Az ABAP Workbench egy Microsoft NAV fejlesztésű platform.",

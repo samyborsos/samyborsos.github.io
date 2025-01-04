@@ -164,6 +164,7 @@
                     <label for="image-upload" class="block text-lg font-medium mb-2">Upload an Image</label>
                     <input id="image-upload" type="file" accept="image/*"
                         class="block w-full text-sm text-gray-400 file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-gray-700 file:text-white hover:file:bg-gray-600 pulse">
+                        <p id="remaining-calls" class="text-lg p-4 hidden text-red-500 font-bold">Loading...</p>
                 </div>
             </div>
         </div>
@@ -339,6 +340,35 @@
                     break;
                 }
             }
+        });
+
+
+        //Fetch remaining API calls as number
+        document.addEventListener('DOMContentLoaded', function() {
+            fetch('https://api.remove.bg/v1.0/account', {
+                headers: {
+                    'accept': '*/*',
+                    'X-API-Key': 'NMULEdoGXMc21etqThEqAbeU'
+                }
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data && data.data && data.data.attributes && data.data.attributes.api) {
+                    const remainingCalls = data.data.attributes.api.free_calls;
+                    if (remainingCalls <= 5) {
+                                remainingCallsElement.classList.remove('hidden');
+                            }
+                    document.getElementById('remaining-calls').textContent = `Limited Requests Remaining. Please notify the Admin`;
+                    console.log(`Remaining API calls: ${remainingCalls}`);
+                } else {
+                    document.getElementById('remaining-calls').textContent = 'Error: Unexpected API response structure';
+                    console.log('Error: Unexpected response structure');
+                }
+            })
+            .catch(error => {
+                console.error('Error fetching API data:', error);
+                document.getElementById('remaining-calls').textContent = 'Error loading data';
+            });
         });
     </script>
 

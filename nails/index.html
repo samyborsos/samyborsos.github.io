@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nail Color Tracker</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-50 min-h-screen">
+    <div class="max-w-4xl mx-auto p-4">
+        <!-- Header -->
+        <header class="text-center mb-8">
+            <h1 class="text-3xl font-bold text-gray-800">Nail Color Tracker</h1>
+            <p class="text-gray-600">Track your nail colors throughout the year</p>
+        </header>
+
+        <!-- View Controls -->
+        <div class="flex justify-center gap-2 mb-6">
+            <button class="view-btn px-4 py-2 rounded-md" data-view="day">Day</button>
+            <button class="view-btn px-4 py-2 rounded-md" data-view="week">Week</button>
+            <button class="view-btn px-4 py-2 rounded-md" data-view="month">Month</button>
+            <button class="view-btn px-4 py-2 rounded-md" data-view="year">Year</button>
+        </div>
+
+        <!-- Main Content -->
+        <div id="main-content" class="bg-white rounded-lg shadow-md p-6 mb-6">
+            <!-- Dynamic content will be inserted here -->
+        </div>
+
+        <!-- Color Controls -->
+        <div class="bg-white rounded-lg shadow-md p-6">
+            <div class="flex flex-wrap gap-4 justify-center items-center">
+                <input type="color" id="color-picker" class="w-12 h-12 rounded cursor-pointer">
+                <input type="text" id="color-name" placeholder="Color name (optional)"
+                    class="px-3 py-2 border rounded-md">
+                <button id="apply-color" class="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600">
+                    Apply Color
+                </button>
+                <button id="remove-color" class="px-4 py-2 bg-red-500 text-white rounded-md hover:bg-red-600">
+                    Remove Color
+                </button>
+            </div>
+        </div>
+
+        <!-- Polish Collection -->
+        <div class="bg-white rounded-lg shadow-md p-6 mt-6">
+            <div class="flex justify-between items-center mb-4">
+                <h3 class="font-semibold text-gray-700">My Polish Collection</h3>
+                <button id="add-polish-btn" 
+                    class="px-4 py-2 bg-green-500 text-white rounded-md hover:bg-green-600 transition-colors">
+                    Add New Polish
+                </button>
+            </div>
+            <div id="polish-collection" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                <!-- Polish items will be rendered here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Polish Modal -->
+    <div id="polish-modal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+        <div class="bg-white rounded-lg p-6 max-w-md w-full mx-4">
+            <h3 class="text-xl font-bold mb-4">Add New Polish</h3>
+            <form id="polish-form" class="space-y-4">
+                <div>
+                    <label class="block text-sm font-medium text-gray-700">Brand</label>
+                    <input type="text" id="polish-brand" required
+                        class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 px-3 py-2 border">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700">Name/Number</label>
+                    <input type="text" id="polish-name" required
+                        class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 px-3 py-2 border">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700">Color</label>
+                    <input type="color" id="polish-color" required
+                        class="mt-1 block w-12 h-12 rounded cursor-pointer border-2 border-gray-200">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700">Finish</label>
+                    <select id="polish-finish" required
+                        class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 px-3 py-2 border">
+                        <option value="cream">Cream</option>
+                        <option value="shimmer">Shimmer</option>
+                        <option value="glitter">Glitter</option>
+                        <option value="metallic">Metallic</option>
+                        <option value="matte">Matte</option>
+                        <option value="pearl">Pearl</option>
+                        <option value="holographic">Holographic</option>
+                    </select>
+                </div>
+                <div class="flex justify-end gap-2 mt-4">
+                    <button type="button" id="cancel-polish-btn"
+                        class="px-4 py-2 bg-gray-500 text-white rounded-md hover:bg-gray-600 transition-colors">
+                        Cancel
+                    </button>
+                    <button type="submit"
+                        class="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition-colors">
+                        Save Polish
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Core variables
+        const mainContent = document.getElementById('main-content');
+        const colorPicker = document.getElementById('color-picker');
+        const colorName = document.getElementById('color-name');
+        const applyColorBtn = document.getElementById('apply-color');
+        const removeColorBtn = document.getElementById('remove-color');
+        const viewButtons = document.querySelectorAll('.view-btn');
+
+        // State
+        let currentView = 'day';
+        let selectedDate = new Date();
+        let colorData = loadColorData();
+        let polishes = loadPolishCollection();
+
+        // Initialize
+        function init() {
+            // Load polish collection first
+            polishes = loadPolishCollection();
+            console.log("Loaded polishes:", polishes); // Debug log
+            renderPolishCollection();
+
+            setActiveView('day');
+            renderView();
+            attachEventListeners();
+        }
+
+        // Event Listeners
+        function attachEventListeners() {
+            // View buttons
+            viewButtons.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    setActiveView(btn.dataset.view);
+                    renderView();
+                });
+            });
+
+            // Color controls
+            applyColorBtn.addEventListener('click', () => {
+                addColor(selectedDate, colorPicker.value, colorName.value);
+            });
+
+            removeColorBtn.addEventListener('click', () => {
+                removeColor(selectedDate);
+            });
+
+            // Polish collection listeners
+            const addPolishBtn = document.getElementById('add-polish-btn');
+            const cancelPolishBtn = document.getElementById('cancel-polish-btn');
+            const polishModal = document.getElementById('polish-modal');
+            const polishForm = document.getElementById('polish-form');
+
+            addPolishBtn?.addEventListener('click', () => {
+                polishModal.classList.remove('hidden');
+            });
+
+            cancelPolishBtn?.addEventListener('click', () => {
+                polishModal.classList.add('hidden');
+                polishForm.reset();
+            });
+
+            polishForm?.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const newPolish = {
+                    brand: document.getElementById('polish-brand').value,
+                    name: document.getElementById('polish-name').value,
+                    color: document.getElementById('polish-color').value,
+                    finish: document.getElementById('polish-finish').value
+                };
+                addPolish(newPolish);
+                polishModal.classList.add('hidden');
+                polishForm.reset();
+            });
+
+            polishModal?.addEventListener('click', (e) => {
+                if (e.target === polishModal) {
+                    polishModal.classList.add('hidden');
+                    polishForm.reset();
+                }
+            });
+        }
+
+        // View Management
+        function setActiveView(view) {
+            currentView = view;
+            viewButtons.forEach(btn => {
+                const isActive = btn.dataset.view === view;
+                btn.classList.toggle('bg-blue-500', isActive);
+                btn.classList.toggle('text-white', isActive);
+                btn.classList.toggle('bg-gray-200', !isActive);
+                btn.classList.toggle('text-gray-700', !isActive);
+            });
+        }
+
+        // Data Management
+        function loadColorData() {
+            try {
+                const saved = localStorage.getItem('nailColors');
+                return saved ? JSON.parse(saved) : {};
+            } catch (error) {
+                console.error('Failed to load data:', error);
+                return {};
+            }
+        }
+
+        function saveColorData() {
+            try {
+                localStorage.setItem('nailColors', JSON.stringify(colorData));
+            } catch (error) {
+                console.error('Failed to save data:', error);
+                alert('Failed to save changes');
+            }
+        }
+
+        function addColor(date, color, name = '') {
+            const dateKey = date.toISOString().split('T')[0];
+            if (!colorData[dateKey]) {
+                colorData[dateKey] = [];
+            }
+            colorData[dateKey].push({ color, name, timestamp: new Date().toISOString() });
+            saveColorData();
+            renderView();
+        }
+
+        function removeColor(date) {
+            const dateKey = date.toISOString().split('T')[0];
+            if (colorData[dateKey]?.length > 0) {
+                colorData[dateKey].pop();
+                saveColorData();
+                renderView();
+            }
+        }
+
+        function loadPolishCollection() {
+            try {
+                const saved = localStorage.getItem('polishCollection');
+                if (!saved) {
+                    // Default presets
+                    const defaultPolishes = [
+                        { brand: "OPI", name: "Alpine Snow", color: "#FFFFFF", finish: "cream" },
+                        { brand: "Essie", name: "Ballet Slippers", color: "#FDE6E4", finish: "cream" },
+                        { brand: "OPI", name: "Big Apple Red", color: "#DC1436", finish: "cream" },
+                        { brand: "Essie", name: "Mint Candy Apple", color: "#98DFD6", finish: "cream" },
+                        { brand: "OPI", name: "Lincoln Park After Dark", color: "#4A4A4A", finish: "cream" },
+                        { brand: "Essie", name: "Bikini So Teeny", color: "#A7C7DC", finish: "shimmer" },
+                        { brand: "OPI", name: "Bubble Bath", color: "#FBE6E6", finish: "cream" },
+                        { brand: "Essie", name: "Wicked", color: "#2E0F15", finish: "cream" },
+                        { brand: "OPI", name: "I'm Not Really a Waitress", color: "#C13828", finish: "metallic" },
+                        { brand: "Essie", name: "Turquoise & Caicos", color: "#99DDC8", finish: "cream" },
+                        { brand: "OPI", name: "You Don't Know Jacques", color: "#4A4238", finish: "cream" },
+                        { brand: "Essie", name: "Chinchilly", color: "#999B9A", finish: "cream" }
+                    ];
+                    localStorage.setItem('polishCollection', JSON.stringify(defaultPolishes));
+                    return defaultPolishes;
+                }
+                return JSON.parse(saved);
+            } catch (error) {
+                console.error('Failed to load polish collection:', error);
+                return [];
+            }
+        }
+
+        function renderPolishCollection() {
+            const polishCollection = document.getElementById('polish-collection');
+            if (!polishCollection) return;
+
+            polishCollection.innerHTML = polishes.map((polish, index) => `
+                <div class="border rounded-lg p-4 flex flex-col gap-2">
+                    <div class="flex items-center gap-2">
+                        <div class="w-8 h-8 rounded-full shadow" 
+                            style="background-color: ${polish.color}"></div>
+                        <div class="flex-1">
+                            <div class="font-medium">${polish.brand}</div>
+                            <div class="text-sm text-gray-600">${polish.name}</div>
+                        </div>
+                        <button onclick="deletePolish(${index})" 
+                            class="text-red-500 hover:text-red-600">×</button>
+                    </div>
+                    <div class="text-sm text-gray-500 capitalize">${polish.finish}</div>
+                    <button onclick="usePolish(${index})"
+                        class="mt-2 w-full px-3 py-1 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition-colors text-sm">
+                        Use This Polish
+                    </button>
+                </div>
+            `).join('');
+        }
+
+        // Rendering
+        function renderView() {
+            mainContent.innerHTML = '';
+            switch (currentView) {
+                case 'day':
+                    renderDayView();
+                    break;
+                case 'week':
+                    renderWeekView();
+                    break;
+                case 'month':
+                    renderMonthView();
+                    break;
+                case 'year':
+                    renderYearView();
+                    break;
+            }
+        }
+
+        function renderDayView() {
+            const dateKey = selectedDate.toISOString().split('T')[0];
+            const colors = colorData[dateKey] || [];
+
+            const dayContent = `
+                <div class="text-center">
+                    <h2 class="text-xl font-bold mb-4">
+                        ${selectedDate.toLocaleDateString('en-US', {
+                weekday: 'long',
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric'
+            })}
+                    </h2>
+                    <div class="flex flex-wrap justify-center gap-4 mb-4">
+                        ${colors.map(entry => `
+                            <div class="text-center">
+                                <div class="w-16 h-16 rounded-full mb-2" 
+                                    style="background-color: ${entry.color}">
+                                </div>
+                                <div class="text-sm text-gray-600">
+                                    ${entry.name || entry.color}
+                                </div>
+                            </div>
+                        `).join('') || '<p class="text-gray-500">No colors added yet</p>'}
+                    </div>
+                    <div class="flex justify-center gap-4">
+                        <button onclick="changeDate(-1)" 
+                            class="px-4 py-2 bg-gray-200 rounded-md hover:bg-gray-300">
+                            Previous Day
+                        </button>
+                        <button onclick="changeDate(1)" 
+                            class="px-4 py-2 bg-gray-200 rounded-md hover:bg-gray-300">
+                            Next Day
+                        </button>
+                    </div>
+                </div>
+            `;
+
+            mainContent.innerHTML = dayContent;
+        }
+
+        function renderWeekView() {
+            const weekStart = new Date(selectedDate);
+            weekStart.setDate(weekStart.getDate() - ((weekStart.getDay() + 6) % 7)); // Start from Monday
+
+            const weekContent = `
+                <div class="flex flex-col">
+                    <h2 class="text-xl font-bold mb-4 text-center">
+                        Week of ${weekStart.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}
+                    </h2>
+                    <div class="grid grid-cols-7 gap-2">
+                        ${['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'].map(day => `
+                            <div class="text-center font-medium text-gray-600">${day}</div>
+                        `).join('')}
+                        ${Array.from({ length: 7 }, (_, i) => {
+                            const date = new Date(weekStart);
+                            date.setDate(weekStart.getDate() + i);
+                            const dateKey = date.toISOString().split('T')[0];
+                            const colors = colorData[dateKey] || [];
+                            const isSelected = date.toDateString() === selectedDate.toDateString();
+
+                            return `
+                                <div class="flex flex-col items-center p-2 ${isSelected ? 'bg-blue-50' : 'bg-white'} 
+                                    rounded-lg cursor-pointer hover:bg-gray-50"
+                                    onclick="selectDate('${dateKey}')">
+                                    <div class="font-medium mb-1">${date.toLocaleDateString('en-US', { weekday: 'short' })}</div>
+                                    <div class="text-sm mb-2">${date.getDate()}</div>
+                                    <div class="flex flex-wrap justify-center gap-1">
+                                        ${colors.map(entry => `
+                                            <div class="w-6 h-6 rounded-full" 
+                                                style="background-color: ${entry.color}"
+                                                title="${entry.name || entry.color}">
+                                            </div>
+                                        `).join('')}
+                                    </div>
+                                </div>
+                            `;
+                        }).join('')}
+                    </div>
+                    <div class="flex justify-center gap-4 mt-4">
+                        <button onclick="changeWeek(-1)" 
+                            class="px-4 py-2 bg-gray-200 rounded-md hover:bg-gray-300">
+                            Previous Week
+                        </button>
+                        <button onclick="changeWeek(1)" 
+                            class="px-4 py-2 bg-gray-200 rounded-md hover:bg-gray-300">
+                            Next Week
+                        </button>
+                    </div>
+                </div>
+            `;
+            mainContent.innerHTML = weekContent;
+        }
+
+        function renderMonthView() {
+            const firstDay = new Date(selectedDate.getFullYear(), selectedDate.getMonth(), 1);
+            const lastDay = new Date(selectedDate.getFullYear(), selectedDate.getMonth() + 1, 0);
+            const startPadding = firstDay.getDay();
+            const totalDays = lastDay.getDate();
+
+            const monthContent = `
+                <div class="flex flex-col">
+                    <h2 class="text-xl font-bold mb-4 text-center">
+                        ${firstDay.toLocaleDateString('en-US', { month: 'long', year: 'numeric' })}
+                    </h2>
+                    <div class="grid grid-cols-7 gap-2">
+                        ${['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'].map(day =>
+                            `<div class="text-center font-bold text-gray-600">${day}</div>`
+                        ).join('')}
+                        ${Array(startPadding).fill().map(() =>
+                            `<div class="p-2"></div>`
+                        ).join('')}
+                        ${Array(totalDays).fill().map((_, i) => {
+                            const date = new Date(firstDay.getFullYear(), firstDay.getMonth(), i + 1);
+                            const dateKey = date.toISOString().split('T')[0];
+                            const colors = colorData[dateKey] || [];
+                            const isSelected = date.toDateString() === selectedDate.toDateString();
+                            const isToday = date.toDateString() === new Date().toDateString();
+
+                            return `
+                                <div class="p-2 border rounded-lg ${isSelected ? 'bg-blue-50' : 'bg-white'} 
+                                    ${isToday ? 'ring-2 ring-blue-500' : ''} 
+                                    cursor-pointer hover:bg-gray-50"
+                                    onclick="selectDate('${dateKey}')">
+                                    <div class="text-right text-sm mb-1">${i + 1}</div>
+                                    <div class="flex flex-wrap gap-1">
+                                        ${colors.map(entry => `
+                                            <div class="w-4 h-4 rounded-full" 
+                                                style="background-color: ${entry.color}"
+                                                title="${entry.name || entry.color}">
+                                            </div>
+                                        `).join('')}
+                                    </div>
+                                </div>
+                            `;
+                        }).join('')}
+                    </div>
+                    <div class="flex justify-center gap-4 mt-4">
+                        <button onclick="changeMonth(-1)" 
+                            class="px-4 py-2 bg-gray-200 rounded-md hover:bg-gray-300">
+                            Previous Month
+                        </button>
+                        <button onclick="changeMonth(1)" 
+                            class="px-4 py-2 bg-gray-200 rounded-md hover:bg-gray-300">
+                            Next Month
+                        </button>
+                    </div>
+                </div>
+            `;
+            mainContent.innerHTML = monthContent;
+        }
+
+        function renderYearView() {
+            const year = selectedDate.getFullYear();
+            const yearContent = `
+                <div class="flex flex-col">
+                    <h2 class="text-xl font-bold mb-4 text-center">${year}</h2>
+                    <div class="grid grid-cols-3 md:grid-cols-4 gap-4">
+                        ${Array(12).fill().map((_, month) => {
+                            const firstDay = new Date(year, month, 1);
+                            const monthName = firstDay.toLocaleDateString('en-US', { month: 'short' });
+                            const daysInMonth = new Date(year, month + 1, 0).getDate();
+
+                            return `
+                                <div class="border rounded-lg p-2">
+                                    <div class="text-center font-bold mb-2">${monthName}</div>
+                                    <div class="grid grid-cols-7 gap-px">
+                                        ${Array(daysInMonth).fill().map((_, i) => {
+                                            const date = new Date(year, month, i + 1);
+                                            const dateKey = date.toISOString().split('T')[0];
+                                            const colors = colorData[dateKey] || [];
+                                            const hasColor = colors.length > 0;
+                                            const isToday = date.toDateString() === new Date().toDateString();
+
+                                            return `
+                                                <div class="aspect-square text-center text-xs cursor-pointer 
+                                                    ${isToday ? 'ring-1 ring-blue-500' : ''}"
+                                                    onclick="selectDate('${dateKey}')"
+                                                    style="${hasColor ? `background-color: ${colors[colors.length - 1].color}` : ''}"
+                                                    title="${date.toLocaleDateString()}">
+                                                    ${i + 1}
+                                                </div>
+                                            `;
+                                        }).join('')}
+                                    </div>
+                                </div>
+                            `;
+                        }).join('')}
+                    </div>
+                    <div class="flex justify-center gap-4 mt-4">
+                        <button onclick="changeYear(-1)" 
+                            class="px-4 py-2 bg-gray-200 rounded-md hover:bg-gray-300">
+                            Previous Year
+                        </button>
+                        <button onclick="changeYear(1)" 
+                            class="px-4 py-2 bg-gray-200 rounded-md hover:bg-gray-300">
+                            Next Year
+                        </button>
+                    </div>
+                </div>
+            `;
+            mainContent.innerHTML = yearContent;
+        }
+
+        // Navigation
+        function changeDate(offset) {
+            selectedDate = new Date(selectedDate);
+            selectedDate.setDate(selectedDate.getDate() + offset);
+            renderView();
+        }
+
+        function selectDate(dateString) {
+            selectedDate = new Date(dateString);
+            renderView();
+        }
+
+        function changeWeek(offset) {
+            selectedDate.setDate(selectedDate.getDate() + (offset * 7));
+            renderView();
+        }
+
+        function changeMonth(offset) {
+            selectedDate.setMonth(selectedDate.getMonth() + offset);
+            renderView();
+        }
+
+        function changeYear(offset) {
+            selectedDate.setFullYear(selectedDate.getFullYear() + offset);
+            renderView();
+        }
+
+        // Make all navigation functions global
+        window.changeDate = changeDate;
+        window.selectDate = selectDate;
+        window.changeWeek = changeWeek;
+        window.changeMonth = changeMonth;
+        window.changeYear = changeYear;
+
+        // Initialize the app
+        init();
+    </script>
+</body>
+
+</html>

@@ -93,6 +93,52 @@
             opacity: 1;
             transform: translateX(0);
         }
+
+        /* Custom color animations */
+        .custom-color {
+            animation: fadeIn 0.3s ease;
+        }
+
+        .fade-out {
+            animation: fadeOut 0.3s ease;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeOut {
+            from {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+            to {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+        }
+
+        /* Success animation for add button */
+        .success {
+            background-color: #22c55e !important;
+            /* green-500 */
+        }
+
+        /* Input focus styles */
+        #custom-color-name:focus {
+            outline: none;
+            border-color: #3b82f6;
+            box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+        }
     </style>
 </head>
 
@@ -118,272 +164,28 @@
         <!-- Color Controls -->
         <div class="bg-white rounded-lg shadow-md p-6">
             <div class="flex flex-col gap-4">
-                <!-- Color name input -->
-                <input type="text" id="color-name" placeholder="Color name (optional)"
-                    class="w-full px-3 py-2 border rounded-md">
+
 
                 <!-- Custom color picker -->
-                <div class="grid grid-cols-5 gap-2 sm:grid-cols-8 md:grid-cols-10">
-                    <!-- Common nail polish colors -->
-                    <div class="flex flex-col items-center">
-                        <button
-                            class="w-12 h-12 rounded-full shadow-md border-2 border-gray-200 focus:ring-2 focus:ring-blue-500 color-button"
-                            style="background-color: #852a34" data-color="#852a34"></button>
-                        <span class="text-xs text-gray-600 mt-1 text-center">Deep Red</span>
+                <div class="mt-4 p-4 bg-gray-50 rounded-lg">
+                    <h3 class="text-lg font-semibold mb-3">Custom Colors</h3>
+                    <div class="flex items-center gap-4">
+                        <div class="flex items-center gap-2">
+                            <input type="color" id="color-picker" class="w-12 h-12 rounded cursor-pointer">
+                            <div class="flex flex-col gap-2">
+                                <input type="text" id="custom-color-name" placeholder="Color name"
+                                    class="px-3 py-1 border rounded-md text-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                                <button id="add-to-palette"
+                                    class="px-3 py-1 bg-blue-500 text-white rounded-md hover:bg-blue-600 text-sm transition-all">
+                                    Add to Palette
+                                </button>
+                            </div>
+                        </div>
                     </div>
-                    <div class="flex flex-col items-center">
-                        <button
-                            class="w-12 h-12 rounded-full shadow-md border-2 border-gray-200 focus:ring-2 focus:ring-blue-500 color-button"
-                            style="background-color: #a6526a" data-color="#a6526a"></button>
-                        <span class="text-xs text-gray-600 mt-1 text-center">Dusty Rose</span>
+                    <!-- Add a dedicated section for custom colors -->
+                    <div id="custom-colors-grid" class="grid grid-cols-5 gap-4 sm:grid-cols-8 md:grid-cols-10 mt-4">
+                        <!-- Custom colors will be added here -->
                     </div>
-                    <div class="flex flex-col items-center">
-                        <button
-                            class="w-12 h-12 rounded-full shadow-md border-2 border-gray-200 focus:ring-2 focus:ring-blue-500 color-button"
-                            style="background-color: #5b2c0d" data-color="#5b2c0d"></button>
-                        <span class="text-xs text-gray-600 mt-1 text-center">Dark Brown</span>
-                    </div>
-                    <div class="flex flex-col items-center">
-                        <button
-                            class="w-12 h-12 rounded-full shadow-md border-2 border-gray-200 focus:ring-2 focus:ring-blue-500 color-button"
-                            style="background-color: #c17e6d" data-color="#c17e6d"></button>
-                        <span class="text-xs text-gray-600 mt-1 text-center">Rosy Beige</span>
-                    </div>
-                    <div class="flex flex-col items-center">
-                        <button
-                            class="w-12 h-12 rounded-full shadow-md border-2 border-gray-200 focus:ring-2 focus:ring-blue-500 color-button"
-                            style="background-color: #696055" data-color="#696055"></button>
-                        <span class="text-xs text-gray-600 mt-1 text-center">Warm Gray</span>
-                    </div>
-                    <div class="flex flex-col items-center">
-                        <button
-                            class="w-12 h-12 rounded-full shadow-md border-2 border-gray-200 focus:ring-2 focus:ring-blue-500 color-button"
-                            style="background-color: #d85054" data-color="#d85054"></button>
-                        <span class="text-xs text-gray-600 mt-1 text-center">Coral Red</span>
-                    </div>
-                    <div class="flex flex-col items-center">
-                        <button
-                            class="w-12 h-12 rounded-full shadow-md border-2 border-gray-200 focus:ring-2 focus:ring-blue-500 color-button"
-                            style="background-color: #e48c44" data-color="#e48c44"></button>
-                        <span class="text-xs text-gray-600 mt-1 text-center">Peach</span>
-                    </div>
-                    <div class="flex flex-col items-center">
-                        <button
-                            class="w-12 h-12 rounded-full shadow-md border-2 border-gray-200 focus:ring-2 focus:ring-blue-500 color-button"
-                            style="background-color: #473728" data-color="#473728"></button>
-                        <span class="text-xs text-gray-600 mt-1 text-center">Espresso</span>
-                    </div>
-                    <div class="flex flex-col items-center">
-                        <button
-                            class="w-12 h-12 rounded-full shadow-md border-2 border-gray-200 focus:ring-2 focus:ring-blue-500 color-button"
-                            style="background-color: #e3d04f" data-color="#e3d04f"></button>
-                        <span class="text-xs text-gray-600 mt-1 text-center">Yellow Gold</span>
-                    </div>
-                    <div class="flex flex-col items-center">
-                        <button
-                            class="w-12 h-12 rounded-full shadow-md border-2 border-gray-200 focus:ring-2 focus:ring-blue-500 color-button"
-                            style="background-color: #f18849" data-color="#f18849"></button>
-                        <span class="text-xs text-gray-600 mt-1 text-center">Tangerine</span>
-                    </div>
-                    <div class="flex flex-col items-center">
-                        <button
-                            class="w-12 h-12 rounded-full shadow-md border-2 border-gray-200 focus:ring-2 focus:ring-blue-500 color-button"
-                            style="background-color: #cc2e1e" data-color="#cc2e1e"></button>
-                        <span class="text-xs text-gray-600 mt-1 text-center">Cherry Red</span>
-                    </div>
-                    <div class="flex flex-col items-center">
-                        <button
-                            class="w-12 h-12 rounded-full shadow-md border-2 border-gray-200 focus:ring-2 focus:ring-blue-500 color-button"
-                            style="background-color: #7ea287" data-color="#7ea287"></button>
-                        <span class="text-xs text-gray-600 mt-1 text-center">Sage Green</span>
-                    </div>
-                    <div class="flex flex-col items-center">
-                        <button
-                            class="w-12 h-12 rounded-full shadow-md border-2 border-gray-200 focus:ring-2 focus:ring-blue-500 color-button"
-                            style="background-color: #452511" data-color="#452511"></button>
-                        <span class="text-xs text-gray-600 mt-1 text-center">Dark Chocolate</span>
-                    </div>
-                    <div class="flex flex-col items-center">
-                        <button
-                            class="w-12 h-12 rounded-full shadow-md border-2 border-gray-200 focus:ring-2 focus:ring-blue-500 color-button"
-                            style="background-color: #f6b6c4" data-color="#f6b6c4"></button>
-                        <span class="text-xs text-gray-600 mt-1 text-center">Baby Pink</span>
-                    </div>
-                    <div class="flex flex-col items-center">
-                        <button
-                            class="w-12 h-12 rounded-full shadow-md border-2 border-gray-200 focus:ring-2 focus:ring-blue-500 color-button"
-                            style="background-color: #efdfc8" data-color="#efdfc8"></button>
-                        <span class="text-xs text-gray-600 mt-1 text-center">Shell</span>
-                    </div>
-                    <div class="flex flex-col items-center">
-                        <button
-                            class="w-12 h-12 rounded-full shadow-md border-2 border-gray-200 focus:ring-2 focus:ring-blue-500 color-button"
-                            style="background-color: #95af96" data-color="#95af96"></button>
-                        <span class="text-xs text-gray-600 mt-1 text-center">Mint</span>
-                    </div>
-                    <div class="flex flex-col items-center">
-                        <button
-                            class="w-12 h-12 rounded-full shadow-md border-2 border-gray-200 focus:ring-2 focus:ring-blue-500 color-button"
-                            style="background-color: #691e23" data-color="#691e23"></button>
-                        <span class="text-xs text-gray-600 mt-1 text-center">Burgundy</span>
-                    </div>
-                    <div class="flex flex-col items-center">
-                        <button
-                            class="w-12 h-12 rounded-full shadow-md border-2 border-gray-200 focus:ring-2 focus:ring-blue-500 color-button"
-                            style="background-color: #9e5353" data-color="#9e5353"></button>
-                        <span class="text-xs text-gray-600 mt-1 text-center">Marsala</span>
-                    </div>
-                    <div class="flex flex-col items-center">
-                        <button
-                            class="w-12 h-12 rounded-full shadow-md border-2 border-gray-200 focus:ring-2 focus:ring-blue-500 color-button"
-                            style="background-color: #ea667d" data-color="#ea667d"></button>
-                        <span class="text-xs text-gray-600 mt-1 text-center">Rose Pink</span>
-                    </div>
-                    <div class="flex flex-col items-center">
-                        <button
-                            class="w-12 h-12 rounded-full shadow-md border-2 border-gray-200 focus:ring-2 focus:ring-blue-500 color-button"
-                            style="background-color: #d28248" data-color="#d28248"></button>
-                        <span class="text-xs text-gray-600 mt-1 text-center">Terra Cotta</span>
-                    </div>
-                    <div class="flex flex-col items-center">
-                        <button
-                            class="w-12 h-12 rounded-full shadow-md border-2 border-gray-200 focus:ring-2 focus:ring-blue-500 color-button"
-                            style="background-color: #dac1a3" data-color="#dac1a3"></button>
-                        <span class="text-xs text-gray-600 mt-1 text-center">Sand</span>
-                    </div>
-                    <!-- Additional colors -->
-                    <div class="flex flex-col items-center">
-                        <button
-                            class="w-12 h-12 rounded-full shadow-md border-2 border-gray-200 focus:ring-2 focus:ring-blue-500 color-button"
-                            style="background-color: #db4e4c" data-color="#db4e4c"></button>
-                        <span class="text-xs text-gray-600 mt-1 text-center">Reddish Pink</span>
-                    </div>
-                    <div class="flex flex-col items-center">
-                        <button
-                            class="w-12 h-12 rounded-full shadow-md border-2 border-gray-200 focus:ring-2 focus:ring-blue-500 color-button"
-                            style="background-color: #6b4b4c" data-color="#6b4b4c"></button>
-                        <span class="text-xs text-gray-600 mt-1 text-center">Dark Brown</span>
-                    </div>
-                    <div class="flex flex-col items-center">
-                        <button
-                            class="w-12 h-12 rounded-full shadow-md border-2 border-gray-200 focus:ring-2 focus:ring-blue-500 color-button"
-                            style="background-color: #f2d3ba" data-color="#f2d3ba"></button>
-                        <span class="text-xs text-gray-600 mt-1 text-center">Light Peach</span>
-                    </div>
-                    <div class="flex flex-col items-center">
-                        <button
-                            class="w-12 h-12 rounded-full shadow-md border-2 border-gray-200 focus:ring-2 focus:ring-blue-500 color-button"
-                            style="background-color: #c59f70" data-color="#c59f70"></button>
-                        <span class="text-xs text-gray-600 mt-1 text-center">Golden Beige</span>
-                    </div>
-                    <div class="flex flex-col items-center">
-                        <button
-                            class="w-12 h-12 rounded-full shadow-md border-2 border-gray-200 focus:ring-2 focus:ring-blue-500 color-button"
-                            style="background-color: #45292d" data-color="#45292d"></button>
-                        <span class="text-xs text-gray-600 mt-1 text-center">Dark Maroon</span>
-                    </div>
-                    <div class="flex flex-col items-center">
-                        <button
-                            class="w-12 h-12 rounded-full shadow-md border-2 border-gray-200 focus:ring-2 focus:ring-blue-500 color-button"
-                            style="background-color: #e5c499" data-color="#e5c499"></button>
-                        <span class="text-xs text-gray-600 mt-1 text-center">Light Beige</span>
-                    </div>
-                    <div class="flex flex-col items-center">
-                        <button
-                            class="w-12 h-12 rounded-full shadow-md border-2 border-gray-200 focus:ring-2 focus:ring-blue-500 color-button"
-                            style="background-color: #9dbaa3" data-color="#9dbaa3"></button>
-                        <span class="text-xs text-gray-600 mt-1 text-center">Mint Green</span>
-                    </div>
-                    <div class="flex flex-col items-center">
-                        <button
-                            class="w-12 h-12 rounded-full shadow-md border-2 border-gray-200 focus:ring-2 focus:ring-blue-500 color-button"
-                            style="background-color: #a85c5e" data-color="#a85c5e"></button>
-                        <span class="text-xs text-gray-600 mt-1 text-center">Rosy Pink</span>
-                    </div>
-                    <div class="flex flex-col items-center">
-                        <button
-                            class="w-12 h-12 rounded-full shadow-md border-2 border-gray-200 focus:ring-2 focus:ring-blue-500 color-button"
-                            style="background-color: #3f514c" data-color="#3f514c"></button>
-                        <span class="text-xs text-gray-600 mt-1 text-center">Deep Teal</span>
-                    </div>
-                    <div class="flex flex-col items-center">
-                        <button
-                            class="w-12 h-12 rounded-full shadow-md border-2 border-gray-200 focus:ring-2 focus:ring-blue-500 color-button"
-                            style="background-color: #e06e2f" data-color="#e06e2f"></button>
-                        <span class="text-xs text-gray-600 mt-1 text-center">Burnt Orange</span>
-                    </div>
-                    <div class="flex flex-col items-center">
-                        <button
-                            class="w-12 h-12 rounded-full shadow-md border-2 border-gray-200 focus:ring-2 focus:ring-blue-500 color-button"
-                            style="background-color: #e0b0b1" data-color="#e0b0b1"></button>
-                        <span class="text-xs text-gray-600 mt-1 text-center">Pale Pink</span>
-                    </div>
-                    <div class="flex flex-col items-center">
-                        <button
-                            class="w-12 h-12 rounded-full shadow-md border-2 border-gray-200 focus:ring-2 focus:ring-blue-500 color-button"
-                            style="background-color: #897d6f" data-color="#897d6f"></button>
-                        <span class="text-xs text-gray-600 mt-1 text-center">Taupe</span>
-                    </div>
-                    <div class="flex flex-col items-center">
-                        <button
-                            class="w-12 h-12 rounded-full shadow-md border-2 border-gray-200 focus:ring-2 focus:ring-blue-500 color-button"
-                            style="background-color: #b55b37" data-color="#b55b37"></button>
-                        <span class="text-xs text-gray-600 mt-1 text-center">Rust Orange</span>
-                    </div>
-                    <div class="flex flex-col items-center">
-                        <button
-                            class="w-12 h-12 rounded-full shadow-md border-2 border-gray-200 focus:ring-2 focus:ring-blue-500 color-button"
-                            style="background-color: #7c3e4e" data-color="#7c3e4e"></button>
-                        <span class="text-xs text-gray-600 mt-1 text-center">Plum</span>
-                    </div>
-                    <div class="flex flex-col items-center">
-                        <button
-                            class="w-12 h-12 rounded-full shadow-md border-2 border-gray-200 focus:ring-2 focus:ring-blue-500 color-button"
-                            style="background-color: #9e5b8d" data-color="#9e5b8d"></button>
-                        <span class="text-xs text-gray-600 mt-1 text-center">Mauve</span>
-                    </div>
-                    <div class="flex flex-col items-center">
-                        <button
-                            class="w-12 h-12 rounded-full shadow-md border-2 border-gray-200 focus:ring-2 focus:ring-blue-500 color-button"
-                            style="background-color: #4d6f63" data-color="#4d6f63"></button>
-                        <span class="text-xs text-gray-600 mt-1 text-center">Forest Green</span>
-                    </div>
-                    <div class="flex flex-col items-center">
-                        <button
-                            class="w-12 h-12 rounded-full shadow-md border-2 border-gray-200 focus:ring-2 focus:ring-blue-500 color-button"
-                            style="background-color: #5f6a87" data-color="#5f6a87"></button>
-                        <span class="text-xs text-gray-600 mt-1 text-center">Slate Blue</span>
-                    </div>
-                    <div class="flex flex-col items-center">
-                        <button
-                            class="w-12 h-12 rounded-full shadow-md border-2 border-gray-200 focus:ring-2 focus:ring-blue-500 color-button"
-                            style="background-color: #c77e91" data-color="#c77e91"></button>
-                        <span class="text-xs text-gray-600 mt-1 text-center">Dusty Rose</span>
-                    </div>
-                    <div class="flex flex-col items-center">
-                        <button
-                            class="w-12 h-12 rounded-full shadow-md border-2 border-gray-200 focus:ring-2 focus:ring-blue-500 color-button"
-                            style="background-color: #d4a659" data-color="#d4a659"></button>
-                        <span class="text-xs text-gray-600 mt-1 text-center">Mustard Yellow</span>
-                    </div>
-                    <div class="flex flex-col items-center">
-                        <button
-                            class="w-12 h-12 rounded-full shadow-md border-2 border-gray-200 focus:ring-2 focus:ring-blue-500 color-button"
-                            style="background-color: #7a97b8" data-color="#7a97b8"></button>
-                        <span class="text-xs text-gray-600 mt-1 text-center">Light Blue</span>
-                    </div>
-                    <div class="flex flex-col items-center">
-                        <button
-                            class="w-12 h-12 rounded-full shadow-md border-2 border-gray-200 focus:ring-2 focus:ring-blue-500 color-button"
-                            style="background-color: #2b81bb" data-color="#2b81bb"></button>
-                        <span class="text-xs text-gray-600 mt-1 text-center">Blue</span>
-                    </div>
-                </div>
-
-                <!-- Advanced color picker (hidden by default) -->
-                <div class="flex items-center gap-2">
-                    <input type="color" id="color-picker" class="w-12 h-12 rounded cursor-pointer">
-                    <span class="text-sm text-gray-600">Custom color</span>
                 </div>
 
                 <!-- Action buttons -->
@@ -457,6 +259,9 @@
         const removeColorBtn = document.getElementById('remove-color');
         const viewButtons = document.querySelectorAll('.view-btn');
         const colorButtons = document.querySelectorAll('[data-color]');
+        const customColorName = document.getElementById('custom-color-name');
+        const addToPaletteBtn = document.getElementById('add-to-palette');
+        let selectedColor = null;  // Add this line to track the selected color
 
         // State
         let currentView = 'month';
@@ -464,6 +269,7 @@
         let colorData = loadColorData();
         let polishes = loadPolishCollection();
         let recentPolishes = loadRecentPolishes();
+        let customColors = JSON.parse(localStorage.getItem('customColors') || '[]');
 
         // Initialize
         function init() {
@@ -489,7 +295,11 @@
 
             // Color controls
             applyColorBtn.addEventListener('click', () => {
-                addColor(selectedDate, colorPicker.value, colorName.value);
+                const color = colorPicker.value;
+                const name = customColorName.value.trim() || '';
+                if (color) {
+                    addColor(selectedDate, color, name);
+                }
             });
 
             removeColorBtn.addEventListener('click', () => {
@@ -532,17 +342,35 @@
             });
 
             // Custom color picker
-            colorButtons.forEach(btn => {
+            document.querySelectorAll('[data-color]').forEach(btn => {
                 btn.addEventListener('click', () => {
-                    // Update the color picker value
-                    colorPicker.value = btn.dataset.color;
+                    selectedColor = btn.dataset.color;
+                    colorPicker.value = selectedColor;
 
                     // Remove selected state from all buttons
-                    colorButtons.forEach(b => b.classList.remove('ring-2', 'ring-blue-500'));
+                    document.querySelectorAll('[data-color]').forEach(b => 
+                        b.classList.remove('ring-2', 'ring-blue-500'));
 
                     // Add selected state to clicked button
                     btn.classList.add('ring-2', 'ring-blue-500');
                 });
+            });
+
+            // Event listener for adding custom colors
+            addToPaletteBtn.addEventListener('click', () => {
+                const color = colorPicker.value;
+                const name = customColorName.value.trim() || 'Custom Color';
+
+                if (color) {
+                    addCustomColor(color, name);
+                    customColorName.value = ''; // Clear the input
+
+                    // Add success animation
+                    addToPaletteBtn.classList.add('success');
+                    setTimeout(() => {
+                        addToPaletteBtn.classList.remove('success');
+                    }, 1000);
+                }
             });
         }
 
@@ -592,10 +420,12 @@
 
         function addColor(date, color, name = '') {
             const dateKey = date.toISOString().split('T')[0];
-            if (!colorData[dateKey]) {
-                colorData[dateKey] = [];
-            }
-            colorData[dateKey].push({ color, name, timestamp: new Date().toISOString() });
+            colorData[dateKey] = colorData[dateKey] || [];
+            colorData[dateKey].push({ 
+                color, 
+                name, 
+                timestamp: new Date().toISOString() 
+            });
             saveColorData();
 
             // Add animation to the day element
@@ -612,8 +442,11 @@
 
         function removeColor(date) {
             const dateKey = date.toISOString().split('T')[0];
-            if (colorData[dateKey]?.length > 0) {
+            if (colorData[dateKey] && colorData[dateKey].length > 0) {
                 colorData[dateKey].pop();
+                if (colorData[dateKey].length === 0) {
+                    delete colorData[dateKey];
+                }
                 saveColorData();
                 renderView();
             }
@@ -916,6 +749,75 @@
             if (!button.hasAttribute('data-color')) {
                 button.classList.add('btn');
             }
+        });
+
+        // Function to save custom colors to localStorage
+        function saveCustomColors() {
+            localStorage.setItem('customColors', JSON.stringify(customColors));
+        }
+
+        // Function to add a custom color to the palette
+        function addCustomColor(color, name) {
+            // Create new color button container
+            const colorContainer = document.createElement('div');
+            colorContainer.className = 'flex flex-col items-center custom-color';
+
+            // Create the color button
+            const button = document.createElement('button');
+            button.className = 'w-12 h-12 rounded-full shadow-md border-2 border-gray-200 focus:ring-2 focus:ring-blue-500 color-button';
+            button.style.backgroundColor = color;
+            button.setAttribute('data-color', color);
+
+            // Add click handler to use this color
+            button.onclick = () => {
+                colorPicker.value = color;
+                colorName.value = name;
+            };
+
+            // Create the color name label
+            const label = document.createElement('span');
+            label.className = 'text-xs text-gray-600 mt-1 text-center';
+            label.textContent = name;
+
+            // Add delete button
+            const deleteBtn = document.createElement('button');
+            deleteBtn.className = 'text-xs text-red-500 hover:text-red-700 mt-1';
+            deleteBtn.textContent = 'Remove';
+            deleteBtn.onclick = (e) => {
+                e.stopPropagation();
+                colorContainer.classList.add('fade-out');
+                setTimeout(() => {
+                    colorContainer.remove();
+                    customColors = customColors.filter(c => c.color !== color);
+                    saveCustomColors();
+                }, 300);
+            };
+
+            // Assemble the color container
+            colorContainer.appendChild(button);
+            colorContainer.appendChild(label);
+            colorContainer.appendChild(deleteBtn);
+
+            // Add to the custom colors grid
+            const customColorsGrid = document.getElementById('custom-colors-grid');
+            if (customColorsGrid) {
+                customColorsGrid.appendChild(colorContainer);
+            } else {
+                console.error('Custom colors grid not found');
+            }
+
+            // Save to localStorage
+            if (!customColors.some(c => c.color === color)) {
+                customColors.push({ color, name });
+                saveCustomColors();
+            }
+        }
+
+        // Load saved custom colors on page load
+        window.addEventListener('DOMContentLoaded', () => {
+            customColors.forEach(color => {
+                addCustomColor(color.color, color.name);
+            });
         });
     </script>
 </body>

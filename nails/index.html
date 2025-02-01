@@ -151,10 +151,30 @@
         </header>
 
         <!-- View Controls -->
-        <div class="flex justify-center gap-2 mb-6">
-            <button class="view-btn px-4 py-2 rounded-md" data-view="month">Month</button>
-            <button class="view-btn px-4 py-2 rounded-md" data-view="year">Year</button>
-            <button class="view-btn px-4 py-2 rounded-md" data-view="stats">Stats</button>
+        <div class="flex justify-center items-center gap-4 mb-6">
+            <!-- Calendar Views -->
+            <div class="bg-gray-100 rounded-lg p-1 flex gap-1">
+                <button class="view-btn px-4 py-2 rounded-md flex items-center gap-2 text-sm font-medium" data-view="month">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                    </svg>
+                    Month
+                </button>
+                <button class="view-btn px-4 py-2 rounded-md flex items-center gap-2 text-sm font-medium" data-view="year">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path>
+                    </svg>
+                    Year
+                </button>
+            </div>
+
+            <!-- Stats Button -->
+            <button class="view-btn px-4 py-2 rounded-md flex items-center gap-2 text-sm font-medium bg-indigo-50 hover:bg-indigo-100 text-indigo-600 transition-colors duration-200" data-view="stats">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                </svg>
+                Statistics
+            </button>
         </div>
 
         <!-- Main Content -->
@@ -384,10 +404,10 @@
                 currentView = view;
                 viewButtons.forEach(btn => {
                     const isActive = btn.dataset.view === view;
-                    btn.classList.toggle('bg-blue-500', isActive);
-                    btn.classList.toggle('text-white', isActive);
-                    btn.classList.toggle('bg-gray-200', !isActive);
-                    btn.classList.toggle('text-gray-700', !isActive);
+                    btn.classList.toggle('active', isActive);
+                    
+                    // Remove any lingering classes
+                    btn.classList.remove('bg-blue-500', 'text-white', 'bg-gray-200', 'text-gray-700');
                 });
 
                 renderView();
@@ -579,9 +599,6 @@
                 case 'year':
                     renderYearView();
                     break;
-                case 'stats':
-                    renderStatsView();
-                    break;
                 default:
                     renderMonthView();
                     break;
@@ -706,122 +723,6 @@
                 </div>
             `;
             mainContent.innerHTML = yearContent;
-        }
-
-        function renderStatsView() {
-            // Calculate color usage statistics
-            const colorStats = {};
-            Object.values(colorData).forEach(dayColors => {
-                dayColors.forEach(entry => {
-                    const colorKey = entry.name || entry.color;
-                    colorStats[colorKey] = colorStats[colorKey] || {
-                        color: entry.color,
-                        name: entry.name,
-                        count: 0,
-                        lastUsed: null
-                    };
-                    colorStats[colorKey].count++;
-                    
-                    // Track last used date
-                    const usedDate = new Date(entry.timestamp);
-                    if (!colorStats[colorKey].lastUsed || usedDate > new Date(colorStats[colorKey].lastUsed)) {
-                        colorStats[colorKey].lastUsed = entry.timestamp;
-                    }
-                });
-            });
-
-            // Sort colors by usage count
-            const sortedColors = Object.values(colorStats).sort((a, b) => b.count - a.count);
-
-            // Calculate total uses
-            const totalUses = sortedColors.reduce((sum, stat) => sum + stat.count, 0);
-
-            const statsContent = `
-                <div class="flex flex-col gap-6">
-                    <div class="text-center">
-                        <h2 class="text-xl font-bold mb-2">Color Usage Statistics</h2>
-                        <p class="text-gray-600">Total color applications: ${totalUses}</p>
-                    </div>
-
-                    <!-- Color usage chart -->
-                    <div class="bg-white rounded-lg p-6 shadow-md">
-                        <h3 class="text-lg font-semibold mb-4">Most Used Colors</h3>
-                        <div class="space-y-4">
-                            ${sortedColors.map(stat => {
-                                const percentage = ((stat.count / totalUses) * 100).toFixed(1);
-                                return `
-                                    <div class="flex flex-col gap-1">
-                                        <div class="flex items-center gap-2">
-                                            <div class="w-6 h-6 rounded-full" 
-                                                style="background-color: ${stat.color}"></div>
-                                            <span class="flex-1 font-medium">
-                                                ${stat.name || stat.color}
-                                            </span>
-                                            <span class="text-gray-600">
-                                                ${stat.count} uses (${percentage}%)
-                                            </span>
-                                        </div>
-                                        <div class="h-2 bg-gray-100 rounded-full overflow-hidden">
-                                            <div class="h-full rounded-full transition-all duration-500"
-                                                style="width: ${percentage}%; background-color: ${stat.color}">
-                                            </div>
-                                        </div>
-                                        <div class="text-xs text-gray-500">
-                                            Last used: ${new Date(stat.lastUsed).toLocaleDateString()}
-                                        </div>
-                                    </div>
-                                `;
-                            }).join('')}
-                        </div>
-                    </div>
-
-                    <!-- Monthly usage chart -->
-                    <div class="bg-white rounded-lg p-6 shadow-md">
-                        <h3 class="text-lg font-semibold mb-4">Monthly Usage Trends</h3>
-                        ${renderMonthlyTrends()}
-                    </div>
-                </div>
-            `;
-
-            mainContent.innerHTML = statsContent;
-        }
-
-        function renderMonthlyTrends() {
-            // Get current year
-            const currentYear = new Date().getFullYear();
-            
-            // Create monthly data structure
-            const monthlyData = Array(12).fill(0);
-            
-            // Count colors used per month
-            Object.entries(colorData).forEach(([dateStr, colors]) => {
-                const date = new Date(dateStr);
-                if (date.getFullYear() === currentYear) {
-                    monthlyData[date.getMonth()] += colors.length;
-                }
-            });
-
-            // Find maximum monthly usage for scaling
-            const maxUsage = Math.max(...monthlyData);
-            
-            // Generate bar chart
-            return `
-                <div class="flex items-end h-48 gap-1">
-                    ${monthlyData.map((count, index) => {
-                        const height = maxUsage ? (count / maxUsage) * 100 : 0;
-                        const month = new Date(currentYear, index).toLocaleDateString('en-US', { month: 'short' });
-                        return `
-                            <div class="flex flex-col items-center flex-1">
-                                <div class="w-full bg-blue-100 rounded-t transition-all duration-500"
-                                    style="height: ${height}%">
-                                </div>
-                                <div class="text-xs mt-2 rotate-45 origin-left">${month}</div>
-                                <div class="text-xs font-medium">${count}</div>
-                            </div>
-                        `;
-                    }).join('')}
-                </div>
-            `;
         }
 
         // Navigation

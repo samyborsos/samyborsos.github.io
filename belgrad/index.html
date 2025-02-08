@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Belgrádi Tanulmányút</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      // For testing, set now to 2025-05-15T13:30:00.
+      // Replace with: let now = new Date(); in production.
+      let now = new Date("2025-05-15T13:30:00");
+
+      // Collect all events.
+      const events = Array.from(document.querySelectorAll(".event"));
+
+      let currentIndex = -1;  // Ongoing event: last event with start time <= now.
+      let upcomingIndex = -1; // Next event: first event with start time > now.
+
+      // Identify the ongoing event.
+      events.forEach((event, index) => {
+        const eventTime = new Date(event.getAttribute("data-time"));
+        if (eventTime <= now) {
+          currentIndex = index;
+        }
+      });
+
+      // Identify the next upcoming event.
+      events.some((event, index) => {
+        const eventTime = new Date(event.getAttribute("data-time"));
+        if (eventTime > now) {
+          upcomingIndex = index;
+          return true;
+        }
+        return false;
+      });
+
+      // Style events based on their status.
+      events.forEach((event, index) => {
+        if (index < currentIndex) {
+          // Past events: dimmed.
+          event.classList.add("opacity-50", "text-gray-500");
+        } else if (index === currentIndex) {
+          // Ongoing event: highlighted in green.
+          event.classList.add(
+            "border-green-500",
+            "border-4",
+            "bg-green-800",
+            "text-white",
+            "p-4",
+            "rounded-lg",
+            "shadow-lg"
+          );
+        } else if (index === upcomingIndex) {
+          // Next upcoming event: highlighted in orange.
+          event.classList.add(
+            "border-orange-500",
+            "border-l-4",
+            "bg-gray-800",
+            "text-gray-300",
+            "p-4",
+            "rounded-lg",
+            "shadow-md"
+          );
+        } else {
+          // Other future events: default styling.
+          event.classList.add("opacity-75", "text-gray-300", "p-4");
+        }
+      });
+
+      // Calculate the scroll offset so that the ongoing event's top is at 80% of the viewport height.
+      if (currentIndex !== -1) {
+        const ongoingEvent = events[currentIndex];
+        const rect = ongoingEvent.getBoundingClientRect();
+        const targetPosition = window.innerHeight * 0.8; // 80% of the viewport height
+        const scrollOffset = window.pageYOffset + rect.top - targetPosition;
+        window.scrollTo({ top: scrollOffset, behavior: "smooth" });
+      }
+
+      // Reload the page every minute (60000 milliseconds).
+      setInterval(() => {
+        location.reload();
+      }, 60000);
+    });
+  </script>
+</head>
+<body class="bg-gray-950 text-white p-6 font-sans">
+  <div class="max-w-3xl mx-auto bg-gray-900 shadow-2xl rounded-2xl p-6 space-y-6">
+    <h1 class="text-4xl font-bold text-center text-gray-100 mb-6">📍 Belgrádi Tanulmányút</h1>
+    
+    <h2 class="text-2xl font-semibold text-center text-gray-300 border-b border-gray-600 pb-2">2025. Május 14. (szerda)</h2>
+    <div class="space-y-4">
+      <div class="event" data-time="2025-05-14T08:00:00">
+        🚍 <strong>08:00</strong> - Indulás busszal (MCC Budapesti Központ)
+      </div>
+      <div class="event" data-time="2025-05-14T13:00:00">
+        🍽️ <strong>13:00</strong> - Érkezés Szabadkára, ebéd
+      </div>
+      <div class="event" data-time="2025-05-14T14:00:00">
+        📢 <strong>14:00</strong> - Vajdaság, Szerbia és Magyarország kapcsolatai (Előadás: Dr. Pásztor Bálint, Varga-Diósi Viola)
+      </div>
+      <div class="event" data-time="2025-05-14T15:00:00">
+        🏛️ <strong>15:00</strong> - Séta a szabadkai belvárosban (Szecessziós építészet, Fő tér)
+      </div>
+      <div class="event" data-time="2025-05-14T17:00:00">
+        🚄 <strong>17:00</strong> - Indulás vonattal Belgrádba
+      </div>
+      <div class="event" data-time="2025-05-14T18:30:00">
+        🏨 <strong>18:30</strong> - Érkezés Belgrádba, szállás elfoglalása
+      </div>
+      <div class="event" data-time="2025-05-14T19:00:00">
+        🌙 <strong>19:00</strong> - Vacsora, szabad program
+      </div>
+    </div>
+    
+    <h2 class="text-2xl font-semibold text-center text-gray-300 border-b border-gray-600 pb-2">2025. Május 15. (csütörtök)</h2>
+    <div class="space-y-4">
+      <div class="event" data-time="2025-05-15T09:00:00">
+        💼 <strong>09:00</strong> - Magyar-szerb gazdasági kapcsolatok (Előadás: Magyar József, Scherzer Károly)
+      </div>
+      <div class="event" data-time="2025-05-15T10:30:00">
+        🏦 <strong>10:30</strong> - Szerbia piacvezető bankja (Előadás: Predrag Mihajlovic, OTP Banka Srbija)
+      </div>
+      <div class="event" data-time="2025-05-15T14:30:00">
+        🚀 <strong>14:30</strong> - Alternatív Program: Startup (Branko Milutinovic, Nordeus) / Megújuló energia (CPSD)
+      </div>
+      <div class="event" data-time="2025-05-15T16:00:00">
+        💰 <strong>16:00</strong> - Kik fektetnek be Szerbiában? (EBRD, RAS)
+      </div>
+      <div class="event" data-time="2025-05-15T18:00:00">
+        🏙️ <strong>18:00</strong> - Belgrade Waterfront (Panoráma a Belgrade 360 toronyról)
+      </div>
+      <div class="event" data-time="2025-05-15T19:30:00">
+        🍷 <strong>19:30</strong> - Vacsora: Ada Ciganlija, kvíz, szabad program
+      </div>
+    </div>
+    
+    <h2 class="text-2xl font-semibold text-center text-gray-300 border-b border-gray-600 pb-2">2025. Május 16. (péntek)</h2>
+    <div class="space-y-4">
+      <div class="event" data-time="2025-05-16T09:00:00">
+        🚌 <strong>09:00</strong> - Indulás busszal, szállás elhagyása
+      </div>
+      <div class="event" data-time="2025-05-16T10:00:00">
+        ✈️ <strong>10:00</strong> - Alternatív Program: Nikola Tesla repülőtér látogatás / Nándorfehérvár vár
+      </div>
+      <div class="event" data-time="2025-05-16T11:30:00">
+        🚍 <strong>11:30</strong> - Indulás vissza Budapestre
+      </div>
+      <div class="event" data-time="2025-05-16T18:00:00">
+        🏠 <strong>18:00</strong> - Érkezés Budapestre
+      </div>
+    </div>
+  </div>
+</body>
+</html>

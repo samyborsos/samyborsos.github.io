@@ -5,6 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recept Tároló</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        dark: {
+                            100: '#E5E7EB',
+                            200: '#D1D5DB',
+                            700: '#374151',
+                            800: '#1F2937',
+                            900: '#111827',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
     <link rel="icon" type="image/x-icon" href="img/favicon.ico">
     
     <style>
@@ -16,18 +34,29 @@
         }
     </style>
 </head>
-<body class="bg-gray-100 min-h-screen">
+<body class="bg-gray-100 dark:bg-gray-900 min-h-screen">
     <div class="container mx-auto px-4 py-8">
-        <h1 class="text-4xl font-bold text-center text-indigo-700 mb-10">Recept Tároló</h1>
+        <h1 class="text-3xl font-bold text-center mb-8 text-gray-800 dark:text-white">Recept Könyv</h1>
         
         <!-- Hozzáadás űrlap -->
         <div class="bg-white p-6 rounded-lg shadow-md mb-10">
             <h2 class="text-2xl font-semibold mb-4">Új recept hozzáadása</h2>
             <form id="recipeForm" class="space-y-4">
-                <div>
-                    <label for="recipeName" class="block text-sm font-medium text-gray-700">Recept neve</label>
-                    <input type="text" id="recipeName" required 
-                           class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500">
+                <div class="relative group">
+                    <input 
+                        type="text" 
+                        id="recipeName" 
+                        required
+                        placeholder=" "
+                        class="peer h-14 w-full px-4 pt-4 pb-2 text-gray-700 bg-white border-2 border-gray-200 rounded-lg focus:outline-none focus:border-indigo-500 transition-all duration-200"
+                    >
+                    <label 
+                        for="recipeName" 
+                        class="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 peer-focus:text-indigo-500 peer-focus:top-3.5 peer-focus:text-xs peer-[:not(:placeholder-shown)]:text-indigo-500 peer-[:not(:placeholder-shown)]:top-3.5 peer-[:not(:placeholder-shown)]:text-xs transition-all duration-200 pointer-events-none px-1 bg-white"
+                    >
+                        Recept neve
+                    </label>
+                    <div class="absolute bottom-0 left-0 w-0 h-0.5 bg-indigo-500 transition-all duration-300 group-focus-within:w-full"></div>
                 </div>
                 <div>
                     <label class="block text-sm font-medium text-gray-700 mb-1">Recept képe</label>
@@ -38,11 +67,11 @@
                                     <span>Kép feltöltése</span>
                                     <input id="imageUpload" name="imageUpload" type="file" class="sr-only" accept="image/*">
                                 </label>
-                                <p class="pl-1">vagy húzd ide</p>
+                                <p class="text-gray-700 dark:text-gray-300">Húzd ide a képet</p>
                             </div>
-                            <p class="text-xs text-gray-500">PNG, JPG, GIF akár 5MB</p>
+                            <p class="text-xs text-gray-500 dark:text-gray-400">PNG, JPG, GIF akár 5MB</p>
                             <div id="imagePreview" class="mt-2 hidden">
-                                <img id="previewImage" src="#" alt="Előnézet" class="mx-auto max-h-32 rounded-md">
+                                <img id="previewImage" src="#" alt="Előnézet" class="mx-auto max-w-full rounded-md shadow-sm bg-gray-100 dark:bg-gray-700" style="max-height: 400px; object-fit: contain;">
                             </div>
                         </div>
                     </div>
@@ -53,15 +82,17 @@
                         </button>
                     </div>
                 </div>
-                <button type="submit" 
-                        class="w-full bg-indigo-600 text-white py-2 px-4 rounded-md hover:bg-indigo-700 transition-colors">
-                    Recept mentése
+                <button type="submit" class="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition-colors font-medium">
+                    Recept hozzáadása
+                </button>
+                <button type="button" onclick="document.documentElement.classList.toggle('dark')" class="mt-4 w-full py-2 px-4 rounded-md bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors">
+                    Téma váltása
                 </button>
             </form>
         </div>
 
         <!-- Receptek listája -->
-        <div id="recipesContainer" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div id="recipesContainer" class="columns-1 md:columns-2 lg:columns-3 gap-6 px-4">
             <!-- Ide kerülnek a recept kártyák -->
         </div>
     </div>
@@ -223,8 +254,25 @@
             }
             
             function showPreview(imageDataUrl) {
-                previewImage.src = imageDataUrl;
-                imagePreview.classList.remove('hidden');
+                const img = new Image();
+                img.onload = function() {
+                    // Set image source
+                    previewImage.src = imageDataUrl;
+                    
+                    // Remove any size constraints
+                    previewImage.style.maxHeight = 'none';
+                    previewImage.style.maxWidth = 'none';
+                    previewImage.style.height = img.height + 'px';
+                    previewImage.style.width = 'auto';
+                    
+                    // Show the preview container
+                    imagePreview.classList.remove('hidden');
+                    
+                    // Center the image
+                    imagePreview.style.textAlign = 'center';
+                    imagePreview.style.overflow = 'auto'; // Add scroll if image is too large
+                };
+                img.src = imageDataUrl;
             }
             
             // Upload image to ImgBB
@@ -393,7 +441,7 @@
             function renderRecipes() {
                 if (recipes.length === 0) {
                     recipesContainer.innerHTML = `
-                        <div class="col-span-full text-center text-gray-500 py-10">
+                        <div class="col-span-full text-center text-gray-500 dark:text-gray-400 py-10">
                             <p>Még nincsenek receptek. Adj hozzá újat!</p>
                         </div>
                     `;
@@ -407,27 +455,24 @@
                 
                 recipesContainer.innerHTML = sortedRecipes.map(recipe => {
                     return `
-                        <div class="recipe-card bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg flex flex-col">
-                            <div class="overflow-hidden">
-                                <img 
-                                    src="${recipe.imageUrl}" 
-                                    alt="${recipe.name}" 
-                                    class="w-full h-auto max-w-full"
-                                    style="max-height: 400px;"
-                                    loading="lazy"
-                                >
-                            </div>
-                            <div class="p-4 flex-grow flex flex-col">
-                                <h3 class="text-xl font-semibold mb-2 break-words">${recipe.name}</h3>
-                                <p class="text-sm text-gray-500 mb-2">
+                        <div class="recipe-card mb-6 break-inside-avoid bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-200">
+                            <img 
+                                src="${recipe.imageUrl}" 
+                                alt="${recipe.name}" 
+                                class="w-full h-auto max-w-full"
+                                loading="lazy"
+                                style="cursor: pointer;"
+                                onclick="this.style.maxWidth = this.style.maxWidth === 'none' ? '100%' : 'none'; this.style.height = this.style.height === 'auto' ? 'auto' : 'auto'"
+                            >
+                            <div class="p-4">
+                                <h3 class="text-lg font-semibold mb-2 break-words text-gray-800 dark:text-white">${recipe.name}</h3>
+                                <p class="text-sm text-gray-500 dark:text-gray-300 mb-3">
                                     Hozzáadva: ${new Date(recipe.timestamp).toLocaleDateString('hu-HU')}
                                 </p>
-                                <div class="mt-auto">
-                                    <button onclick="deleteRecipe(${recipe.id})" 
-                                            class="text-red-600 hover:text-red-800 text-sm font-medium">
-                                        Törlés
-                                    </button>
-                                </div>
+                                <button onclick="deleteRecipe(${recipe.id})" 
+                                        class="w-full py-2 text-red-600 hover:bg-red-50 dark:hover:bg-red-900/20 rounded-md text-sm font-medium transition-colors">
+                                    Törlés
+                                </button>
                             </div>
                         </div>
                     `;

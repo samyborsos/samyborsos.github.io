@@ -19,7 +19,20 @@
                             900: '#121212',
                             800: '#1f1f1f',
                             700: '#2e2e2e',
+                        },
+                        audi: {
+                            red: '#e00',
+                            dark: '#0c0c0c',
+                            gray: {
+                                900: '#121212',
+                                800: '#1f1f1f',
+                                700: '#2e2e2e',
+                            }
+
                         }
+                    },
+                    boxShadow: {
+                        audi: '0 0 15px #e00',
                     }
                 }
             }
@@ -27,34 +40,52 @@
     </script>
     <style>
         p {
-            border-left: 2px solid white;
-            padding-left: 10px;
+            position: relative;
+            padding-left: 12px;
+        }
+
+        p::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background-color: #e00000;
+            box-shadow: 0 0 8px rgba(224, 0, 0, 0.8);
         }
 
         i {
             color: #ff6f61;
             /* Default color for icons */
         }
+
+        .glow {
+            box-shadow: 0 0 15px rgba(224, 0, 0, 0.6);
+        }
     </style>
 </head>
 
-<body class="bg-gray-900 text-gray-100 min-h-screen flex flex-col">
-    <header class="bg-gray-800 shadow-md">
+<body class="bg-audi-dark text-gray-100 min-h-screen flex flex-col">
+    <header class="bg-gray-800 shadow-md sticky top-0 z-50">
         <nav class="container mx-auto flex justify-between items-center p-4">
             <h1 class="text-2xl font-bold text-gray-100 hidden lg:block">Samy Borsos</h1>
             <h1 class="text-2xl font-bold text-gray-100">Curriculum Vitae</h1>
             <ul class="flex space-x-4">
-                <li><a href="/" class="text-gray-300 hover:text-white"><i class="fas fa-home text-blue-400"></i> Home</a></li>
-                <li><a href="/projects" class="text-gray-300 hover:text-white"><i class="fas fa-project-diagram text-green-400"></i> Projects</a></li>
-                <li><a href="/cv" class="text-gray-300 hover:text-white"><i class="fas fa-file-alt text-purple-400"></i> CV</a></li>
+                <li><a href="/" class="text-gray-300 hover:text-white">
+                        <i class="fas fa-home text-white mx-2"></i>Home</a></li>
+                <li><a href="/projects" class="text-gray-300 hover:text-white">
+                        <i class="fas fa-project-diagram text-white mx-2"></i> Projects</a></li>
+                <li><a href="/cv" class="text-gray-300 hover:text-white">
+                        <i class="fas fa-file-alt text-white mx-2"></i>CV</a></li>
             </ul>
         </nav>
     </header>
     <main class="container mx-auto mt-8 px-4 flex-grow">
-        <div class="max-w-3xl mx-auto space-y-8">
+        <div class="max-w-4xl mx-auto space-y-16 mb-20">
             <!-- Profile Section -->
             <div class="flex flex-col items-center space-y-8">
-                <div class="relative w-48 h-48 overflow-hidden shadow-lg rounded-full">
+                <div class="glow relative w-48 h-48 overflow-hidden glow rounded-full ">
                     <img src="/pictures/sirius_red_one-by-one-removebg-preview.png" alt="Samy Borsos"
                         class="object-cover w-full h-full">
                 </div>
@@ -67,10 +98,10 @@
             </div>
 
             <!-- About Section -->
-            <section class="bg-gray-800 p-6 rounded-lg shadow-md">
-                <h2 class="text-2xl font-semibold text-gray-100 mb-4"><i class="fas fa-user"
-                        style="color: #9c27b0;"></i> About</h2>
-                <p class="text-gray-300">
+            <section class="bg-gray-800 p-6 rounded-xl shadow-audi">
+                <h2 class="text-2xl font-semibold text-gray-100 mb-4"><i class="fas fa-user text-white mr-2"></i> About
+                </h2>
+                <p class="text-gray-300 text-medium">
                     Hello! I'm Samy, a passionate third-year Economics Informatics student from Hungary. With
                     proficiency
                     in both German and Hungarian, I seamlessly switch between the two languages, making me adaptable in
@@ -81,47 +112,96 @@
             </section>
 
             <!-- Experience Section -->
-            <section class="bg-gray-800 p-6 rounded-lg shadow-md">
-                <h2 class="text-2xl font-semibold text-gray-100 mb-4"><i class="fas fa-briefcase"
-                        style="color: #ff9800;"></i> Experience</h2>
-                <div class="mt-4">
-                    <p class="text-xl font-medium text-gray-100">Intern to the Board Member for Engine Production</p>
-                    <p class="text-gray-400">Audi Hungaria Zrt.</p>
-                    <p class="text-gray-400">September 2024 - Present</p>
-                </div>
-                <div class="mt-4">
-                    <p class="text-xl font-medium text-gray-100">Python Teaching Assistant</p>
-                    <p class="text-gray-400">Széchenyi István University</p>
-                    <p class="text-gray-400">September 2024 - Present</p>
-                </div>
-                <div class="mt-4">
-                    <p class="text-xl font-medium text-gray-100">Project Assistant in the Ramp-up Management Department
-                    </p>
-                    <p class="text-gray-400">Audi Hungaria Zrt.</p>
-                    <p class="text-gray-400">May 2023 - September 2024</p>
+            <section class="bg-gray-800 p-6 rounded-xl shadow-audi">
+                <h2 class="text-2xl font-semibold text-gray-100 mb-4">
+                    <i class="fas fa-briefcase text-white mr-2"></i> Experience
+                </h2>
+
+                <div class="flex flex-col gap-8">
+                    <!-- Experience 1 -->
+                    <div class="flex justify-between items-center gap-4">
+                        <!-- Text -->
+                        <div class="flex-1">
+                            <p class="text-xl font-medium text-gray-100">
+                                Intern to the Board Member for Engine Production
+                            </p>
+                            <p class="text-gray-400">Audi Hungaria Zrt.</p>
+                            <p class="text-gray-400">September 2024 - Present</p>
+                        </div>
+                        <!-- Logo -->
+                        <img src="/img/Audi_Rings_Medium_wh-RGB.png" alt="Audi Hungaria Logo"
+                            class="w-20 h-20 rounded-md object-contain" />
+                    </div>
+
+                    <!-- Experience 2 -->
+                    <div class="flex justify-between items-center gap-4">
+                        <div class="flex-1">
+                            <p class="text-xl font-medium text-gray-100">Python Teaching Assistant</p>
+                            <p class="text-gray-400">Széchenyi István University</p>
+                            <p class="text-gray-400">September 2024 - Present</p>
+                        </div>
+                        <img src="/img/sze_logo_allo_RGB_negativ.png" alt="Széchenyi István University Logo"
+                            class="w-20 h-20 rounded-md object-contain" />
+                    </div>
+
+                    <!-- Experience 3 -->
+                    <div class="flex justify-between items-center gap-4">
+                        <div class="flex-1">
+                            <p class="text-xl font-medium text-gray-100">Project Assistant in the Ramp-up Management
+                                Department</p>
+                            <p class="text-gray-400">Audi Hungaria Zrt.</p>
+                            <p class="text-gray-400">May 2023 - September 2024</p>
+                        </div>
+                        <img src="/img/Audi_Rings_Medium_wh-RGB.png" alt="Audi Hungaria Logo"
+                            class="w-20 h-20 rounded-md object-contain" />
+                    </div>
                 </div>
             </section>
+
+
+
+
+
 
             <!-- Education Section -->
-            <section class="bg-gray-800 p-6 rounded-lg shadow-md">
-                <h2 class="text-2xl font-semibold text-gray-100 mb-4"><i class="fas fa-graduation-cap"
-                        style="color: #03a9f4;"></i> Education</h2>
-                <div class="mt-4">
-                    <p class="text-xl font-medium text-gray-100">Bachelor of Science in Business Informatics</p>
-                    <p class="text-gray-400">Széchenyi István University</p>
-                    <p class="text-gray-400"> 2022 - Present</p>
-                </div>
-                <div class="mt-4">
-                    <p class="text-xl font-medium text-gray-100">Summer School - The World of Startups in CEE</p>
-                    <p class="text-gray-400">Modul University Vienna</p>
-                    <p class="text-gray-400">2024</p>
+            <section class="bg-gray-800 p-6 rounded-xl shadow-audi">
+                <h2 class="text-2xl font-semibold text-gray-100 mb-4">
+                    <i class="fas fa-graduation-cap text-white mr-2"></i> Education
+                </h2>
+
+                <div class="flex flex-col gap-8">
+                    <!-- Education 1 -->
+                    <div class="flex justify-between items-center gap-4">
+                        <!-- Text -->
+                        <div class="flex-1">
+                            <p class="text-xl font-medium text-gray-100">Bachelor of Science in Business Informatics</p>
+                            <p class="text-gray-400">Széchenyi István University</p>
+                            <p class="text-gray-400">2022 - Present</p>
+                        </div>
+                        <!-- Logo -->
+                        <img src="/img/sze_logo_allo_RGB_negativ.png" alt="Széchenyi István University Logo"
+                            class="w-20 h-20 rounded-md object-contain" />
+                    </div>
+
+                    <!-- Education 2 -->
+                    <div class="flex justify-between items-center gap-4">
+                        <div class="flex-1">
+                            <p class="text-xl font-medium text-gray-100">Summer School - The World of Startups in CEE
+                            </p>
+                            <p class="text-gray-400">Modul University Vienna</p>
+                            <p class="text-gray-400">2024</p>
+                        </div>
+                        <img src="/img/moudl_vienna.png" alt="Modul University Logo"
+                            class="w-20 h-20 rounded-md object-contain" />
+                    </div>
                 </div>
             </section>
 
+
             <!-- Projects Section -->
-            <section class="bg-gray-800 p-6 rounded-lg shadow-md">
-                <h2 class="text-2xl font-semibold text-gray-100 mb-4"><i class="fas fa-tasks"
-                        style="color: #f44336;"></i> Projects</h2>
+            <section class="bg-gray-800 p-6 rounded-xl shadow-audi">
+                <h2 class="text-2xl font-semibold text-gray-100 mb-4"><i class="fas fa-tasks text-white mr-2"></i>
+                    Projects</h2>
                 <div class="mt-4">
                     <p class="text-xl font-medium text-gray-100">Automation and Workflow Optimization</p>
                     <p class="text-gray-400">Audi Hungaria Zrt. | Finished</p>
@@ -137,30 +217,61 @@
             </section>
 
             <!-- Honors & Awards -->
-            <section class="bg-gray-800 p-6 rounded-lg shadow-md">
-                <h2 class="text-2xl font-semibold text-gray-100 mb-4"><i class="fas fa-award"
-                        style="color: #ffeb3b;"></i> Honors & Awards</h2>
-                <p class="my-2">National Higher Education Scholarship (2024)</p>
-                <p class="my-2">Microsoft Power Platform Hackathon Special Award (2024)</p>
-                <p class="my-2">The Student of the Year (2022)</p>
-                <p class="my-2">Böröcky Géza Award (2022)</p>
-                <p class="my-2">ÁSZÉV National Professional Study Competition - 11th Place (2022)</p>
+            <section class="bg-gray-800 p-6 rounded-xl shadow-audi space-y-6">
+                <h2 class="text-2xl font-semibold text-gray-100 mb-4">
+                    <i class="fas fa-award text-white mr-2"></i> Honors & Awards
+                </h2>
+
+                <div class="my-2">
+                    <p class="font-medium text-gray-100">Techtra Scholarship (2024)</p>
+                    <p class="text-gray-400 text-sm">Awarded for academic and professional excellence.</p>
+                </div>
+
+                <div class="my-2">
+                    <p class="font-medium text-gray-100">National Higher Education Scholarship (2024)</p>
+                    <p class="text-gray-400 text-sm">Granted for outstanding academic performance.</p>
+                </div>
+
+                <div class="my-2">
+                    <p class="font-medium text-gray-100">Microsoft Power Platform Hackathon Special Award (2024)</p>
+                    <p class="text-gray-400 text-sm">Recognized for innovation in Power Platform development at Audi
+                        Hungaria.</p>
+                </div>
+
+                <div class="my-2">
+                    <p class="font-medium text-gray-100">The Student of the Year (2022)</p>
+                    <p class="text-gray-400 text-sm">Presented for exceptional academic and personal achievements.</p>
+                </div>
+
+                <div class="my-2">
+                    <p class="font-medium text-gray-100">Böröcky Géza Award (2022)</p>
+                    <p class="text-gray-400 text-sm">Given for academic excellence and dedication to preserving
+                        Hungarian traditions.</p>
+                </div>
+
+                <div class="my-2">
+                    <p class="font-medium text-gray-100">ÁSZÉV National Professional Study Competition – 11th Place
+                        (2022)</p>
+                    <p class="text-gray-400 text-sm">Awarded for ranking 11th nationally in a professional subject
+                        competition.</p>
+                </div>
             </section>
+
 
             <!-- Skills Section -->
 
-            <section class="bg-gray-800 p-6 rounded-lg shadow-md">
+            <section class="bg-gray-800 p-6 rounded-xl shadow-audi">
                 <h2 class="text-2xl font-semibold text-gray-100 mb-4 flex items-center">
-                    <i class="fas fa-tools mr-2 text-yellow-400"></i> Skills
+                    <i class="fas fa-tools mr-2 text-white"></i> Skills
                 </h2>
                 <div class="space-y-6">
                     <!-- Programming Languages -->
                     <div>
                         <h3 class="text-lg font-medium text-gray-100 mb-2">Programming Languages</h3>
-                            <p class="my-2">Python</p>
-                            <p class="my-2">C++</p>
-                            <p class="my-2">HTML, CSS, PHP</p>
-                            <p class="my-2">JavaScript, SQL</p>
+                        <p class="my-2">Python</p>
+                        <p class="my-2">C++</p>
+                        <p class="my-2">HTML, CSS, PHP</p>
+                        <p class="my-2">JavaScript, SQL</p>
                     </div>
 
                     <!-- Data Science & Analysis -->
@@ -227,9 +338,9 @@
 
 
             <!-- Languages -->
-            <section class="bg-gray-800 p-6 rounded-lg shadow-md">
-                <h2 class="text-2xl font-semibold text-gray-100 mb-4"><i class="fas fa-language"
-                        style="color: #3f51b5;"></i> Languages</h2>
+            <section class="bg-gray-800 p-6 rounded-xl shadow-audi">
+                <h2 class="text-2xl font-semibold text-gray-100 mb-4"><i class="fas fa-language text-white mr-2"></i>
+                    Languages</h2>
                 <p class="text-gray-300 my-2">German: Native or bilingual proficiency</p>
                 <p class="text-gray-300 my-2">English: Professional working proficiency</p>
             </section>
@@ -238,13 +349,13 @@
     <footer class="bg-gray-800 shadow-md mt-8">
         <div class="container mx-auto p-4 flex justify-center space-x-4">
             <a href="https://github.com/samyborsos" target="_blank" class="text-gray-300 hover:text-white">
-                <i class="fab fa-github text-yellow-400"></i> GitHub
+                <i class="fab fa-github text-white"></i> GitHub
             </a>
             <a href="https://hu.linkedin.com/in/samyborsos" target="_blank" class="text-gray-300 hover:text-white">
-                <i class="fab fa-linkedin text-blue-600"></i> LinkedIn
+                <i class="fab fa-linkedin text-white"></i> LinkedIn
             </a>
             <a href="mailto:samy.borsos@gmail.com" target="_blank" class="text-gray-300 hover:text-white">
-                <i class="fas fa-envelope text-red-400"></i> Email
+                <i class="fas fa-envelope text-white"></i> Email
             </a>
         </div>
 

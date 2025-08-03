@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samy Borsos - CV</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="https://avatars.githubusercontent.com/u/159457978?v=4">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        audi: {
+                            red: '#e00',
+                            dark: '#0c0c0c',
+                            gray: '#1a1a1a'
+                        }
+                    },
+                    boxShadow: {
+                        audi: '0 0 15px #e00',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .glow {
+            box-shadow: 0 0 15px rgba(224, 0, 0, 0.6);
+        }
+    </style>
+</head>
+
+<body class="bg-audi-dark text-white min-h-screen flex flex-col">
+    <header class="bg-audi-gray shadow-audi">
+        <nav class="container mx-auto flex justify-between items-center py-6 px-6">
+            <div class="flex items-center space-x-4">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Audi_logo.png" alt="Audi Logo" class="h-8">
+                <h1 class="text-2xl font-bold text-white tracking-wide">Samy Borsos</h1>
+            </div>
+            <ul class="flex space-x-6 text-sm">
+                <li><a href="/" class="text-gray-300 hover:text-white"><i class="fas fa-home text-audi-red"></i> Home</a></li>
+                <li><a href="/projects" class="text-gray-300 hover:text-white"><i class="fas fa-project-diagram text-audi-red"></i> Projects</a></li>
+                <li><a href="/cv" class="text-gray-300 hover:text-white"><i class="fas fa-file-alt text-audi-red"></i> CV</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-6 py-10 flex-grow">
+        <div class="max-w-4xl mx-auto space-y-12">
+
+            <!-- Profile Section -->
+            <div class="text-center space-y-6">
+                <div class="w-40 h-40 mx-auto overflow-hidden rounded-full glow">
+                    <img src="/pictures/sirius_red_one-by-one-removebg-preview.png" alt="Samy Borsos"
+                        class="object-cover w-full h-full">
+                </div>
+                <h1 class="text-4xl font-bold tracking-tight">Samy Borsos</h1>
+                <p class="text-lg text-gray-400">Trainee at Audi Hungaria Zrt.<br>Business Informatics Student</p>
+            </div>
+
+            <!-- Section Template -->
+            <section class="bg-audi-gray p-6 rounded-xl shadow-audi">
+                <h2 class="text-2xl font-semibold mb-4 text-white"><i class="fas fa-user text-audi-red"></i> About</h2>
+                <p class="text-gray-300 leading-relaxed">
+                    Hello! I'm Samy, a passionate third-year Economics Informatics student from Hungary. With
+                    proficiency in both German and Hungarian, I seamlessly switch between the two languages, making me
+                    adaptable in diverse environments. I am driven by a fervent love for informatics, particularly in
+                    crafting innovative solutions for digital business operations. From data analysis to programming, I
+                    aim to contribute to impactful projects and embrace every learning opportunity.
+                </p>
+            </section>
+
+            <!-- Other sections follow the same design -->
+            <!-- Experience, Education, Projects, Awards, Skills, Languages -->
+
+            <!-- Footer -->
+            <footer class="bg-audi-gray py-6 mt-12">
+                <div class="container mx-auto flex justify-center space-x-6 text-sm">
+                    <a href="https://github.com/samyborsos" target="_blank" class="text-gray-300 hover:text-white">
+                        <i class="fab fa-github text-audi-red"></i> GitHub
+                    </a>
+                    <a href="https://hu.linkedin.com/in/samyborsos" target="_blank" class="text-gray-300 hover:text-white">
+                        <i class="fab fa-linkedin text-audi-red"></i> LinkedIn
+                    </a>
+                    <a href="mailto:samy.borsos@gmail.com" class="text-gray-300 hover:text-white">
+                        <i class="fas fa-envelope text-audi-red"></i> Email
+                    </a>
+                </div>
+            </footer>
+        </div>
+    </main>
+</body>
+
+</html>

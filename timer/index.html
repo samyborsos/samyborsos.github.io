@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Advanced Timer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+    body {
+      font-family: 'Orbitron', sans-serif;
+      transition: background-color 0.5s ease;
+      background-color: #000; /* Black background for better contrast */
+      color: #fff;
+      height: 100vh;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+    .glass {
+      background: rgba(30, 30, 30, 0.8);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-radius: 1rem;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .pulse {
+      animation: pulse 1s infinite;
+    }
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+  </style>
+</head>
+<body class="text-white min-h-screen flex flex-col items-center justify-start text-center p-4 transition-colors duration-500 overflow-auto">
+
+  <div class="w-full max-w-4xl flex flex-col items-center justify-start p-4 my-4">
+    <!-- Timer Display - Large and centered -->
+    <div id="timerDisplay" class="text-[20vw] md:text-[15vw] font-bold mb-4 text-center leading-none tracking-tight">00:00</div>
+    
+    <!-- Controls Container -->
+    <div class="glass p-6 w-full max-w-2xl shadow-2xl rounded-2xl">
+      <h1 class="text-3xl md:text-4xl mb-6 font-bold tracking-wide text-center">CONFERENCE TIMER</h1>
+
+    <!-- Presets -->
+    <div class="flex flex-wrap gap-2 justify-center mb-4">
+      <button class="preset bg-blue-600 hover:bg-blue-500 text-white px-3 py-1.5 rounded-lg text-base" data-min="1">1 min</button>
+      <button class="preset bg-blue-600 hover:bg-blue-500 text-white px-3 py-1.5 rounded-lg text-base" data-min="5">5 min</button>
+      <button class="preset bg-blue-600 hover:bg-blue-500 text-white px-3 py-1.5 rounded-lg text-base" data-min="25">Pomodoro</button>
+    </div>
+
+    <!-- Input Fields -->
+    <div class="flex space-x-6 mb-8">
+      <div class="flex-1">
+        <input id="minutes" type="number" min="0" placeholder="Min" class="w-full p-3 text-xl text-black text-center rounded-lg bg-white" />
+      </div>
+      <div class="flex items-center text-4xl">:</div>
+      <div class="flex-1">
+        <input id="seconds" type="number" min="0" max="59" placeholder="Sec" class="w-full p-3 text-xl text-black text-center rounded-lg bg-white" />
+      </div>
+    </div>
+
+    <!-- Controls -->
+    <div class="grid grid-cols-3 gap-3 mb-4">
+      <button id="startButton" class="bg-green-600 hover:bg-green-500 px-4 py-3 rounded-lg text-xl font-bold text-white shadow-lg hover:shadow-xl transition-all duration-200">START</button>
+      <button id="pauseButton" class="bg-yellow-600 hover:bg-yellow-500 px-4 py-3 rounded-lg text-xl font-bold text-white shadow-lg hover:shadow-xl transition-all duration-200 hidden">PAUSE</button>
+      <button id="resetButton" class="bg-red-600 hover:bg-red-500 px-4 py-3 rounded-lg text-xl font-bold text-white shadow-lg hover:shadow-xl transition-all duration-200">RESET</button>
+    </div>
+    <div class="flex justify-center items-center gap-4">
+      <label class="flex items-center gap-2 text-xl">
+        <input type="checkbox" id="loopToggle" class="w-6 h-6" /> Loop Mode
+      </label>
+    </div>
+
+    <!-- Progress Bar -->
+    <div class="w-full h-4 bg-gray-800 rounded-full mt-6 mb-6 overflow-hidden">
+      <div id="progressBar" class="h-full bg-gradient-to-r from-blue-500 to-purple-500 transition-all duration-1000 ease-linear"></div>
+    </div>
+
+    <!-- Estimated End Time -->
+    <div id="endTimeDisplay" class="mt-4 text-sm text-gray-400"></div>
+
+    <!-- Session Info -->
+    <div class="mt-6 grid grid-cols-2 gap-3 text-center">
+      <div class="glass p-4 rounded-xl">
+        <div class="text-sm text-gray-300">Current Time</div>
+        <div id="currentTime" class="text-xl font-bold">--:--</div>
+      </div>
+      <div class="glass p-4 rounded-xl">
+        <div class="text-sm text-gray-300">Elapsed</div>
+        <div id="elapsedTime" class="text-xl font-bold">00:00</div>
+      </div>
+    </div>
+    
+    <!-- Quick Actions -->
+    <div class="mt-4">
+      <h3 class="text-base mb-2">Quick Actions</h3>
+      <div class="grid grid-cols-3 gap-2">
+        <button id="add5min" class="bg-blue-600 hover:bg-blue-500 p-3 rounded-lg">+5 min</button>
+        <button id="add10min" class="bg-blue-600 hover:bg-blue-500 p-3 rounded-lg">+10 min</button>
+        <button id="alert1min" class="bg-purple-600 hover:bg-purple-500 p-3 rounded-lg">Alert in 1 min</button>
+      </div>
+    </div>
+    
+  </div>
+  
+  <!-- Fullscreen Toggle -->
+  <button id="fullscreenBtn" class="fixed bottom-4 right-4 p-3 bg-white/20 rounded-full hover:bg-white/30 transition-colors">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4" />
+    </svg>
+  </button>
+
+  <script>
+    // DOM Elements
+    const startBtn = document.getElementById("startButton");
+    const pauseBtn = document.getElementById("pauseButton");
+    const resetBtn = document.getElementById("resetButton");
+    const minutesInput = document.getElementById("minutes");
+    const secondsInput = document.getElementById("seconds");
+    const timerDisplay = document.getElementById("timerDisplay");
+    const endTimeDisplay = document.getElementById("endTimeDisplay");
+    const currentTimeDisplay = document.getElementById("currentTime");
+    const elapsedTimeDisplay = document.getElementById("elapsedTime");
+    const loopToggle = document.getElementById("loopToggle");
+    const presetButtons = document.querySelectorAll(".preset");
+    const quickPresetButtons = document.querySelectorAll(".quick-preset");
+    const fullscreenBtn = document.getElementById('fullscreenBtn');
+    
+    // Sound effects
+    const sounds = {
+      start: new Audio('https://assets.mixkit.co/active_storage/sfx/2571/2571-preview.mp3'),
+      end: new Audio('https://assets.mixkit.co/active_storage/sfx/2578/2578-preview.mp3'),
+      alert: new Audio('https://assets.mixkit.co/active_storage/sfx/2569/2569-preview.mp3')
+    };
+    
+    // Initialize sounds
+    Object.values(sounds).forEach(sound => {
+      sound.volume = 0.5; // Lower volume for conference use
+    });
+
+    // Timer state
+    const timerState = {
+      timeLeft: 0,
+      totalTime: 0,
+      interval: null,
+      isPaused: false,
+      isRunning: false,
+      startTime: null,
+      endTime: null,
+      alertSet: false
+    };
+    
+    // Ensure audio is properly initialized
+    Object.values(sounds).forEach(sound => {
+      sound.load(); // Preload sounds
+      sound.volume = 0.5;
+    });
+
+    // Fullscreen functionality
+    fullscreenBtn.addEventListener('click', () => {
+      if (!document.fullscreenElement) {
+        document.documentElement.requestFullscreen().catch(err => {
+          console.error(`Error attempting to enable fullscreen: ${err.message}`);
+        });
+      } else {
+        if (document.exitFullscreen) {
+          document.exitFullscreen();
+        }
+      }
+    });
+
+    // Input validation
+    function validateInput(input, max = 999) {
+      let value = parseInt(input.value) || 0;
+      if (value < 0) value = 0;
+      if (value > max) value = max;
+      input.value = value === 0 ? '' : value;
+      return value;
+    }
+
+    // Removed unused updateRing function
+
+    function updateDisplay() {
+      const mins = Math.floor(timerState.timeLeft / 60);
+      const secs = timerState.timeLeft % 60;
+      const displayText = `${String(mins).padStart(2,"0")}<span class="opacity-50">:</span>${String(secs).padStart(2,"0")}`;
+      timerDisplay.innerHTML = displayText;
+      
+      // Update progress bar
+      if (timerState.totalTime > 0) {
+        const progress = ((timerState.totalTime - timerState.timeLeft) / timerState.totalTime) * 100;
+        document.getElementById('progressBar').style.width = `${progress}%`;
+      }
+    }
+
+    function setEndTime(secondsFromNow) {
+      const end = new Date(Date.now() + secondsFromNow * 1000);
+      timerState.endTime = end;
+      endTimeDisplay.textContent = `Ends at ${end.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})}`;
+    }
+
+    function updateClock() {
+      const now = new Date();
+      currentTimeDisplay.textContent = now.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'});
+      
+      // Update elapsed time if timer is running
+      if (isRunning && !isPaused && totalTime > 0) {
+        const elapsed = totalTime - timeLeft;
+        const mins = Math.floor(elapsed / 60);
+        const secs = elapsed % 60;
+        elapsedTimeDisplay.textContent = `${String(mins).padStart(2, '0')}:${String(secs).padStart(2, '0')}`;
+      }
+    }
+    
+    // Initialize clock and set up auto-update
+    updateClock();
+    const clockInterval = setInterval(updateClock, 1000);
+    
+    // Clean up intervals when page unloads
+    window.addEventListener('beforeunload', () => {
+      clearInterval(clockInterval);
+      if (timerState.interval) {
+        clearInterval(timerState.interval);
+      }
+    });
+    
+    function showAlert(message) {
+      const alert = document.createElement('div');
+      alert.className = 'fixed top-4 left-1/2 transform -translate-x-1/2 bg-yellow-600 text-white px-6 py-3 rounded-lg shadow-lg z-50 animate-bounce';
+      alert.textContent = message;
+      document.body.appendChild(alert);
+      setTimeout(() => {
+        alert.remove();
+      }, 3000);
+    }
+
+    function updateBackgroundColor(secondsLeft) {
+      if (secondsLeft < 30) {
+        document.body.style.backgroundColor = '#7f1d1d'; // Dark Red
+        timerDisplay.style.color = '#fecaca'; // Light Red
+      } else if (secondsLeft < 60) {
+        document.body.style.backgroundColor = '#9a3412'; // Dark Orange
+        timerDisplay.style.color = '#fed7aa'; // Light Orange
+      } else if (secondsLeft < 300) {
+        document.body.style.backgroundColor = '#854d0e'; // Dark Yellow
+        timerDisplay.style.color = '#fef08a'; // Light Yellow
+      } else {
+        document.body.style.backgroundColor = '#000'; // Black
+        timerDisplay.style.color = '#fff'; // White
+      }
+    }
+
+    function startTimer() {
+      // If already running, do nothing
+      if (timerState.isRunning && !timerState.isPaused) return;
+      
+      // If paused, just resume
+      if (timerState.isPaused) {
+        timerState.isPaused = false;
+        pauseBtn.textContent = "PAUSE";
+        setEndTime(timerState.timeLeft);
+        return;
+      }
+
+      // Start new timer
+      const min = validateInput(minutesInput, 999);
+      const sec = validateInput(secondsInput, 59);
+      timerState.totalTime = min * 60 + sec;
+      
+      if (timerState.totalTime === 0) {
+        // Show error if no time is set
+        timerDisplay.classList.add('shake');
+        setTimeout(() => timerDisplay.classList.remove('shake'), 500);
+        return;
+      }
+
+      // Initialize timer state
+      timerState.timeLeft = timerState.totalTime;
+      timerState.isRunning = true;
+      timerState.isPaused = false;
+      timerState.startTime = new Date();
+      clearInterval(timerState.interval);
+      
+      // Update UI
+      setEndTime(timerState.timeLeft);
+      updateBackgroundColor(timerState.timeLeft);
+      updateDisplay();
+      startBtn.disabled = true;
+      pauseBtn.classList.remove("hidden");
+      pauseBtn.textContent = "PAUSE";
+
+      // Start the countdown
+      timerState.interval = setInterval(() => {
+        if (!timerState.isPaused && timerState.timeLeft > 0) {
+          timerState.timeLeft--;
+          updateDisplay();
+          updateBackgroundColor(timerState.timeLeft);
+
+          // Add pulse effect for last 10 seconds
+          if (timerState.timeLeft <= 10) {
+            timerDisplay.classList.add("pulse");
+            // Play tick sound for last 3 seconds
+            if (timerState.timeLeft <= 3) {
+              sounds.alert.play().catch(console.error);
+            }
+          } else {
+            timerDisplay.classList.remove("pulse");
+          }
+
+          // Timer finished
+          if (timerState.timeLeft <= 0) {
+            clearInterval(timerState.interval);
+            timerState.isRunning = false;
+            
+            // Play end sound
+            sounds.end.play().catch(console.error);
+            showAlert('Time\'s up!');
+            
+            if (loopToggle.checked) {
+              // If loop is enabled, restart the timer
+              setTimeout(startTimer, 1000);
+            } else {
+              // Otherwise reset the UI
+              pauseBtn.classList.add("hidden");
+              startBtn.disabled = false;
+            }
+          }
+        }
+      }, 1000);
+      
+      // Play start sound
+      sounds.start.play().catch(console.error);
+      showAlert('Timer started!');
+    }
+
+    // Event Listeners
+    startBtn.addEventListener('click', startTimer);
+    
+    pauseBtn.addEventListener('click', () => {
+      if (!timerState.isRunning) return;
+      timerState.isPaused = !timerState.isPaused;
+      pauseBtn.textContent = timerState.isPaused ? "RESUME" : "PAUSE";
+      if (timerState.isPaused) {
+        endTimeDisplay.textContent = "PAUSED";
+        // Pause any playing sounds
+        Object.values(sounds).forEach(sound => {
+          sound.pause();
+          sound.currentTime = 0;
+        });
+      } else {
+        setEndTime(timerState.timeLeft);
+        // Resume any sounds if needed
+        if (timerState.timeLeft <= 3) {
+          sounds.alert.play().catch(console.error);
+        }
+      }
+    });
+    
+    resetBtn.addEventListener('click', () => {
+      // Clear any running intervals
+      if (timerState.interval) {
+        clearInterval(timerState.interval);
+        timerState.interval = null;
+      }
+      
+      // Reset timer state
+      timerState.isRunning = false;
+      timerState.isPaused = false;
+      timerState.timeLeft = 0;
+      timerState.totalTime = 0;
+      timerState.alertSet = false;
+      
+      // Stop any sounds
+      Object.values(sounds).forEach(sound => {
+        sound.pause();
+        sound.currentTime = 0;
+      });
+      
+      // Reset UI
+      updateDisplay();
+      timerDisplay.classList.remove("pulse");
+      pauseBtn.classList.add("hidden");
+      pauseBtn.textContent = "PAUSE";
+      startBtn.disabled = false;
+      endTimeDisplay.textContent = "";
+      document.body.style.backgroundColor = '#000';
+      timerDisplay.style.color = '#fff';
+      minutesInput.value = '';
+      secondsInput.value = '';
+    });
+
+    // Keyboard controls
+    document.addEventListener('keydown', (e) => {
+      // Only process if not typing in an input field
+      if (document.activeElement.tagName === 'INPUT') {
+        if (e.key === 'Enter') {
+          e.preventDefault();
+          startTimer();
+        }
+        return;
+      }
+      
+      switch (e.key) {
+        case 'Enter':
+          startTimer();
+          break;
+        case ' ':
+        case 'Spacebar': // For older browsers
+          e.preventDefault();
+          if (timerState.isRunning) {
+            pauseBtn.click();
+          } else {
+            startTimer();
+          }
+          break;
+        case 'Escape':
+          resetBtn.click();
+          break;
+        case 'p':
+        case 'P':
+          if (timerState.isRunning) pauseBtn.click();
+          break;
+        case 's':
+        case 'S':
+          if (!timerState.isRunning) startTimer();
+          break;
+        case 'r':
+        case 'R':
+          resetBtn.click();
+          break;
+        case 'h':
+        case 'H':
+          showHelp();
+          break;
+      }
+    });
+    
+    function showHelp() {
+      const helpText = `Keyboard Shortcuts:
+• Space: Start/Pause timer
+• Enter: Start timer (when in input field)
+• Esc: Reset timer
+• P: Pause/Resume
+• S: Start timer
+• R: Reset timer
+• H: Show this help`;
+      alert(helpText);
+    }
+
+    // Preset buttons
+    document.querySelectorAll('.preset').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const minutes = parseInt(btn.dataset.min) || 0;
+        minutesInput.value = minutes;
+        secondsInput.value = '00';
+        // Auto-focus on seconds for quick adjustment
+        secondsInput.focus();
+        secondsInput.select();
+        
+        // If timer is not running, update the display
+        if (!timerState.isRunning) {
+          const totalSeconds = minutes * 60;
+          timerState.timeLeft = totalSeconds;
+          timerState.totalTime = totalSeconds;
+          updateDisplay();
+        }
+      });
+    });
+    
+    // Quick action buttons
+    document.getElementById('add5min').addEventListener('click', () => addTime(300));
+    document.getElementById('add10min').addEventListener('click', () => addTime(600));
+    document.getElementById('alert1min').addEventListener('click', setOneMinuteAlert);
+    
+    function addTime(seconds) {
+      if (timerState.isRunning) {
+        // Add time to running timer
+        timerState.timeLeft += seconds;
+        timerState.totalTime += seconds;
+        setEndTime(timerState.timeLeft);
+        showAlert(`Added ${seconds/60} minutes`);
+      } else {
+        // Add time to input fields
+        const currentMins = parseInt(minutesInput.value) || 0;
+        const currentSecs = parseInt(secondsInput.value) || 0;
+        const totalSeconds = (currentMins * 60) + currentSecs + seconds;
+        
+        minutesInput.value = Math.floor(totalSeconds / 60);
+        secondsInput.value = String(totalSeconds % 60).padStart(2, '0');
+        
+        // Update display preview
+        timerState.timeLeft = totalSeconds;
+        timerState.totalTime = totalSeconds;
+        updateDisplay();
+        
+        showAlert(`Added ${seconds/60} minutes`);
+      }
+    }
+    
+    function setOneMinuteAlert() {
+      if (!timerState.isRunning) {
+        showAlert('Start the timer first');
+        return;
+      }
+      
+      if (timerState.alertSet) {
+        showAlert('Alert already set');
+        return;
+      }
+      
+      if (timerState.timeLeft <= 60) {
+        showAlert('Less than a minute remaining');
+        return;
+      }
+      
+      timerState.alertSet = true;
+      const alertTime = timerState.timeLeft - 60; // 1 minute before end
+      const alertTimeText = new Date(Date.now() + (timerState.timeLeft - 60) * 1000).toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'});
+      
+      setTimeout(() => {
+        if (timerState.isRunning && !timerState.isPaused) {
+          showAlert('1 minute remaining!');
+          sounds.alert.play().catch(console.error);
+          // Flash the display
+          const flashInterval = setInterval(() => {
+            timerDisplay.classList.toggle('text-yellow-400');
+          }, 200);
+          
+          // Stop flashing after 2 seconds
+          setTimeout(() => {
+            clearInterval(flashInterval);
+            timerDisplay.classList.remove('text-yellow-400');
+          }, 2000);
+        }
+        timerState.alertSet = false;
+      }, (timerState.timeLeft - 60) * 1000);
+      
+      showAlert(`Alert set for 1 minute before end (${alertTimeText})`);
+    }
+    
+    // Input validation on change
+    minutesInput.addEventListener('input', () => validateInput(minutesInput, 999));
+    secondsInput.addEventListener('input', () => validateInput(secondsInput, 59));
+    
+    // Auto-move to seconds when minutes is filled
+    minutesInput.addEventListener('input', function() {
+      if (this.value.length >= 2) {
+        secondsInput.focus();
+      }
+    });
+    
+    // Start timer when pressing Enter in input fields
+    [minutesInput, secondsInput].forEach(input => {
+      input.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') {
+          startTimer();
+        }
+      });
+    });
+  </script>
+</body>
+</html>

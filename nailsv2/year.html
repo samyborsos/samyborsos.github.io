@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="hu" class="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nailverse - Éves nézet</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="image/x-icon" href="../img/favicon.ico">
+    <style>
+        .fade-in {
+            animation: fadeIn 0.5s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.95);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-gray-900 min-h-screen">
+    <div class="container mx-auto px-2 py-6 max-w-4xl">
+        <h1 class="text-4xl font-extrabold text-center mb-8 text-indigo-300 tracking-widest drop-shadow-lg">NAILVERSE -
+            Éves nézet</h1>
+        <div class="flex justify-center mb-6">
+            <button onclick="window.location.href='index.html'"
+                class="bg-indigo-700 text-white px-4 py-2 rounded hover:bg-indigo-800 transition-colors">Vissza a hónap
+                nézethez</button>
+        </div>
+        <div id="yearGrid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6"></div>
+    </div>
+    <script>
+        // JSONBin.io config
+        const BIN_ID = '68446a408561e97a5020b8c5';
+        const API_KEY = '$2a$10$J7fi24LcCk1TF8IfMHC4.e/IaKxCzRvCdOdE5F3YrDVrMRjhID4lC';
+        const today = new Date();
+        const year = today.getFullYear();
+        let colors = [];
+
+        function getMonthName(i) {
+            return ['Január', 'Február', 'Március', 'Április', 'Május', 'Június', 'Július', 'Augusztus', 'Szeptember', 'Október', 'November', 'December'][i];
+        }
+
+        function renderYear() {
+            const yearGrid = document.getElementById('yearGrid');
+            let html = '';
+            for (let m = 0; m < 12; m++) {
+                html += `<div class='bg-gray-800 rounded-lg shadow p-4 fade-in'>
+                <div class='text-lg font-bold text-indigo-200 mb-2 text-center'>${getMonthName(m)}</div>
+                <div class='grid grid-cols-7 gap-1 text-xs mb-1'>
+                    <div class='text-gray-400'>H</div><div class='text-gray-400'>K</div><div class='text-gray-400'>Sz</div><div class='text-gray-400'>Cs</div><div class='text-gray-400'>P</div><div class='text-gray-400'>Szo</div><div class='text-gray-400'>V</div>
+                </div>
+                <div class='grid grid-cols-7 gap-1'>`;
+                const firstDay = new Date(year, m, 1);
+                let startDay = firstDay.getDay();
+                startDay = startDay === 0 ? 6 : startDay - 1;
+                const daysInMonth = new Date(year, m + 1, 0).getDate();
+                for (let i = 0; i < startDay; i++) html += `<div></div>`;
+                for (let d = 1; d <= daysInMonth; d++) {
+                    const dateStr = `${year}-${String(m + 1).padStart(2, '0')}-${String(d).padStart(2, '0')}`;
+                    const entry = colors.find(c => c.date === dateStr);
+                    html += `<div class='w-6 h-6 sm:w-7 sm:h-7 rounded-full mx-auto border-2 ${entry ? 'border-gray-600' : 'border-gray-700'} ${entry ? '' : 'bg-gray-900'}' style='background:${entry ? entry.color : 'none'}' title='${entry && entry.desc ? entry.desc : ''}'></div>`;
+                }
+                html += `</div></div>`;
+            }
+            yearGrid.innerHTML = html;
+        }
+
+        async function loadColors() {
+            try {
+                const response = await fetch(`https://api.jsonbin.io/v3/b/${BIN_ID}/latest`, {
+                    headers: {
+                        'X-Master-Key': API_KEY,
+                        'Content-Type': 'application/json'
+                    }
+                });
+                if (response.ok) {
+                    const data = await response.json();
+                    colors = (data.record.colors || []).filter(c => c.date.startsWith(year + "-"));
+                    renderYear();
+                } else {
+                    yearGrid.innerHTML = '<div class="col-span-full text-center text-red-500 py-10">Hiba a színek betöltésekor.</div>';
+                }
+            } catch (e) {
+                yearGrid.innerHTML = '<div class="col-span-full text-center text-red-500 py-10">Hiba a szerverrel való kommunikáció során.</div>';
+            }
+        }
+        loadColors();
+    </script>
+</body>
+
+</html>

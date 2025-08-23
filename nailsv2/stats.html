@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="hu" class="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nailverse - Statisztika</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="image/x-icon" href="../img/favicon.ico">
+    <style>
+        .fade-in {
+            animation: fadeIn 0.5s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.95);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-gray-900 min-h-screen">
+    <div class="container mx-auto px-2 py-6 max-w-2xl">
+        <h1 class="text-4xl font-extrabold text-center mb-8 text-indigo-300 tracking-widest drop-shadow-lg">NAILVERSE -
+            Statisztika</h1>
+        <div class="flex justify-center mb-6">
+            <button onclick="window.location.href='index.html'"
+                class="bg-indigo-700 text-white px-4 py-2 rounded hover:bg-indigo-800 transition-colors">Vissza a hónap
+                nézethez</button>
+        </div>
+        <div id="statsContent" class="space-y-8"></div>
+    </div>
+    <script>
+        // JSONBin.io config
+        const BIN_ID = '68446a408561e97a5020b8c5';
+        const API_KEY = '$2a$10$J7fi24LcCk1TF8IfMHC4.e/IaKxCzRvCdOdE5F3YrDVrMRjhID4lC';
+        let colors = [];
+        function hexToRgb(hex) {
+            hex = hex.replace('#', '');
+            if (hex.length === 3) hex = hex.split('').map(x => x + x).join('');
+            const num = parseInt(hex, 16);
+            return [num >> 16 & 255, num >> 8 & 255, num & 255];
+        }
+        function getContrastYIQ(hexcolor) {
+            const [r, g, b] = hexToRgb(hexcolor);
+            return ((r * 299) + (g * 587) + (b * 114)) / 1000 >= 128 ? '#222' : '#fff';
+        }
+        function renderStats() {
+            const statsContent = document.getElementById('statsContent');
+            if (!colors.length) {
+                statsContent.innerHTML = '<div class="text-center text-gray-400">Nincs adat.</div>';
+                return;
+            }
+            // Usage count by color
+            const colorUsage = {};
+            colors.forEach(c => {
+                if (!colorUsage[c.color]) colorUsage[c.color] = { count: 0, descs: new Set() };
+                colorUsage[c.color].count++;
+                if (c.desc) colorUsage[c.color].descs.add(c.desc);
+            });
+            // Most used colors
+            const sorted = Object.entries(colorUsage).sort((a, b) => b[1].count - a[1].count);
+            let html = '<div><h2 class="text-xl font-bold text-indigo-200 mb-4">Leggyakrabban használt színek</h2><div class="grid grid-cols-2 sm:grid-cols-3 gap-4">';
+            for (const [color, data] of sorted) {
+                html += `<div class='flex flex-col items-center bg-gray-800 rounded-lg p-3 fade-in'>
+                <div class='w-10 h-10 rounded-full border-2 border-gray-600 mb-2' style='background:${color}'></div>
+                <span class='text-sm font-semibold mb-1' style='color:${getContrastYIQ(color)};background:${color};padding:2px 8px;border-radius:8px;'>${color}</span>
+                <span class='text-xs text-gray-400'>${data.count} nap</span>
+                <span class='text-xs text-gray-300 mt-1'>${[...data.descs].join(', ')}</span>
+            </div>`;
+            }
+            html += '</div></div>';
+            // Timeline
+            html += '<div><h2 class="text-xl font-bold text-indigo-200 mb-4 mt-8">Színek idővonala</h2><div class="flex flex-wrap gap-2">';
+            const byDate = [...colors].sort((a, b) => a.date.localeCompare(b.date));
+            for (const c of byDate) {
+                html += `<div class='flex flex-col items-center bg-gray-800 rounded-lg p-2 fade-in'>
+                <div class='w-7 h-7 rounded-full border-2 border-gray-600 mb-1' style='background:${c.color}'></div>
+                <span class='text-xs' style='color:${getContrastYIQ(c.color)};background:${c.color};padding:1px 6px;border-radius:6px;'>${c.color}</span>
+                <span class='text-xs text-gray-400'>${c.date}</span>
+                <span class='text-xs text-gray-300 mt-1'>${c.desc || ''}</span>
+            </div>`;
+            }
+            html += '</div></div>';
+            statsContent.innerHTML = html;
+        }
+        async function loadColors() {
+            try {
+                const response = await fetch(`https://api.jsonbin.io/v3/b/${BIN_ID}/latest`, {
+                    headers: {
+                        'X-Master-Key': API_KEY,
+                        'Content-Type': 'application/json'
+                    }
+                });
+                if (response.ok) {
+                    const data = await response.json();
+                    colors = data.record.colors || [];
+                    renderStats();
+                } else {
+                    statsContent.innerHTML = '<div class="col-span-full text-center text-red-500 py-10">Hiba a színek betöltésekor.</div>';
+                }
+            } catch (e) {
+                statsContent.innerHTML = '<div class="col-span-full text-center text-red-500 py-10">Hiba a szerverrel való kommunikáció során.</div>';
+            }
+        }
+        loadColors();
+    </script>
+</body>
+
+</html>

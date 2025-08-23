@@ -3347,9 +3347,44 @@ sortButton.addEventListener('click', () => {
     sortButton.textContent = sortAsc ? 'Ár szerint rendezés ⬆' : 'Ár szerint rendezés ⬇';
 });
 
-// Favorites
-let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+const BIN_ID = "68a97b74d0ea881f406129d6";  // Replace with your JSONBin ID
+const SECRET_KEY = "$2a$10$J7fi24LcCk1TF8IfMHC4.e/IaKxCzRvCdOdE5F3YrDVrMRjhID4lC"; // Replace with your JSONBin secret
 
+let favorites = [];
+
+// Fetch current favorites from JSONBin
+async function fetchFavorites() {
+    try {
+        const res = await fetch(`https://api.jsonbin.io/v3/b/${BIN_ID}/latest`, {
+            headers: { "X-Master-Key": SECRET_KEY }
+        });
+        const data = await res.json();
+        favorites = data.record.favorites || [];
+        updateFavIcons();
+        filterCards();
+    } catch (err) {
+        console.error("Failed to fetch favorites:", err);
+    }
+}
+
+// Update favorites in JSONBin
+async function saveFavorites() {
+    try {
+        await fetch(`https://api.jsonbin.io/v3/b/${BIN_ID}`, {
+            method: "PUT",
+            headers: {
+                "Content-Type": "application/json",
+                "X-Master-Key": SECRET_KEY,
+                "X-Bin-Versioning": "false"
+            },
+            body: JSON.stringify({ favorites })
+        });
+    } catch (err) {
+        console.error("Failed to save favorites:", err);
+    }
+}
+
+// Update icons based on favorites array
 function updateFavIcons() {
     document.querySelectorAll(".fav-btn").forEach(icon => {
         const id = icon.dataset.id;
@@ -3363,8 +3398,9 @@ function updateFavIcons() {
     });
 }
 
+// Toggle favorite when clicking icon
 document.querySelectorAll(".fav-btn").forEach(icon => {
-    icon.addEventListener("click", e => {
+    icon.addEventListener("click", async e => {
         e.preventDefault();
         const id = icon.dataset.id;
         if (favorites.includes(id)) {
@@ -3372,19 +3408,21 @@ document.querySelectorAll(".fav-btn").forEach(icon => {
         } else {
             favorites.push(id);
         }
-        localStorage.setItem('favorites', JSON.stringify(favorites));
+        await saveFavorites();  // Save to JSONBin
         updateFavIcons();
         filterCards();
     });
 });
 
+// Favorites filter button
 favFilterButton.addEventListener('click', () => {
     favFilterActive = !favFilterActive;
     favFilterButton.textContent = favFilterActive ? "Összes program" : "Csak kedvencek ❤️";
     filterCards();
 });
 
-updateFavIcons();
+// Initial fetch
+fetchFavorites();
 
 const scrollTopBtn = document.getElementById('scrollTopBtn');
 

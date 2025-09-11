@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Coffee — Splash</title>
+    <script>
+        // Inline small helper: remove splash after animation ends
+        // Also force-restart animations on load (fixes cases where browser restores state
+        // and animations don't replay on refresh). Still honors prefers-reduced-motion.
+        document.addEventListener("DOMContentLoaded", () => {
+            const splash = document.querySelector(".splash-root");
+            const CONTENT_SHOW_DELAY = 2400; // match animation length (ms)
+
+            // Respect reduced motion preference
+            const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            if (reduced) {
+                splash.classList.add("reduced");
+                setTimeout(() => splash.classList.add("hidden"), 50);
+                return;
+            }
+
+            // Workaround: force-restart animations so they reliably play on refresh.
+            // We set inline animation to 'none' then clear it on the next frame.
+            try {
+                const animated = splash.querySelectorAll('.anim-group, .cup-outline, .coffee-fill, .foam, .drop, .steam, use');
+                animated.forEach(el => { el.style.animation = 'none'; });
+                // allow a frame to paint with animations disabled, then re-enable so they start
+                requestAnimationFrame(() => {
+                    animated.forEach(el => { el.style.animation = ''; });
+                });
+            } catch (err) {
+                // ignore if something unexpected (shouldn't block the splash)
+                console.warn('splash animation restart failed', err);
+            }
+
+            setTimeout(() => splash.classList.add("hide"), CONTENT_SHOW_DELAY);
+            // fully remove after transition
+            splash.addEventListener("transitionend", (e) => {
+                if (e.propertyName === "opacity") splash.classList.add("hidden");
+            });
+        });
+    </script>
+    <style>
+        :root {
+            --bg: #0b0b0b;
+            /* page background */
+            --panel: #0f1720;
+            /* splash panel */
+            --coffee: #3b2b1f;
+            /* coffee color */
+            --foam: #eadfc9;
+            /* light foam */
+            --accent: #b68a5b;
+            /* accent */
+        }
+
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            background: var(--bg);
+            font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial;
+        }
+
+        /* SPLASH ROOT */
+        .splash-root {
+            position: fixed;
+            inset: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(180deg, #050505 0%, rgba(11, 11, 11, 0.85) 60%);
+            z-index: 9999;
+            transition: opacity .45s ease, transform .45s ease;
+            opacity: 1;
+        }
+
+        .splash-root.hide {
+            opacity: 0;
+            transform: translateY(-8px);
+            pointer-events: none;
+        }
+
+        .splash-root.hidden {
+            display: none;
+        }
+
+        /* container */
+        .splash-card {
+            width: min(520px, 92vw);
+            height: min(360px, 66vh);
+            border-radius: 14px;
+            background: linear-gradient(180deg, var(--panel), #0b1116);
+            box-shadow: 0 10px 40px rgba(2, 6, 10, 0.7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 28px;
+        }
+
+        /* accessible reduced motion */
+        .splash-root.reduced .anim-group * {
+            animation: none !important;
+        }
+
+        .splash-root.reduced {
+            opacity: 0;
+            transition: none;
+        }
+
+        /* Main SVG scales in */
+        .anim-group {
+            width: 100%;
+            max-width: 420px;
+            height: 100%;
+            display: block;
+            transform-origin: center;
+            animation: group-zoom .6s cubic-bezier(.2, .9, .3, 1) .0s both;
+        }
+
+        @keyframes group-zoom {
+            from {
+                transform: scale(.86) translateY(6px);
+                opacity: 0
+            }
+
+            to {
+                transform: scale(1) translateY(0);
+                opacity: 1
+            }
+        }
+
+        /* Cup stroke draw */
+        .cup-outline {
+            stroke: #cbd5d1;
+            stroke-width: 2.2;
+            stroke-linecap: round;
+            fill: none;
+            stroke-dasharray: 400;
+            stroke-dashoffset: 400;
+            animation: draw-cup .9s ease forwards .14s;
+        }
+
+        @keyframes draw-cup {
+            to {
+                stroke-dashoffset: 0
+            }
+        }
+
+        /* coffee surface rising (clip + wave translate) */
+        .coffee-fill {
+            transform-origin: 50% 50%;
+            animation: coffee-rise .9s cubic-bezier(.2, .9, .3, 1) .5s forwards;
+            fill: var(--coffee);
+        }
+
+        @keyframes coffee-rise {
+            0% {
+                transform: translateY(18px) scaleY(.88)
+            }
+
+            70% {
+                transform: translateY(-6px) scaleY(1.03)
+            }
+
+            100% {
+                transform: translateY(0) scaleY(1)
+            }
+        }
+
+        /* foam highlight: gentle fade-in */
+        .foam {
+            opacity: 0;
+            transform-origin: center;
+            animation: foam-appear .8s ease .9s forwards;
+        }
+
+        @keyframes foam-appear {
+            to {
+                opacity: 1
+            }
+        }
+
+        /* splash droplets: staggered scale & fade */
+        .drop {
+            transform-origin: center;
+            transform-box: fill-box;
+            opacity: 0;
+            transform: scale(.6) translateY(6px);
+            animation: drop-pop .5s cubic-bezier(.22, .9, .3, 1) forwards;
+        }
+
+        .drop.d1 {
+            animation-delay: .68s
+        }
+
+        .drop.d2 {
+            animation-delay: .74s
+        }
+
+        .drop.d3 {
+            animation-delay: .8s
+        }
+
+        .drop.d4 {
+            animation-delay: .86s
+        }
+
+        .drop.d5 {
+            animation-delay: .92s
+        }
+
+        @keyframes drop-pop {
+            0% {
+                opacity: 0;
+                transform: scale(.56) translateY(8px)
+            }
+
+            60% {
+                opacity: 1;
+                transform: scale(1.06) translateY(-6px)
+            }
+
+            100% {
+                opacity: 1;
+                transform: scale(.96) translateY(0)
+            }
+        }
+
+        /* little steam lines - fade up */
+        .steam {
+            opacity: 0;
+            transform-origin: center;
+            animation: steam-rise .9s ease .95s forwards;
+        }
+
+        @keyframes steam-rise {
+            to {
+                opacity: 1;
+                transform: translateY(-6px)
+            }
+        }
+
+        /* title below optional (hidden for minimal) */
+        .splash-caption {
+            margin-top: 14px;
+            color: #94a3b8;
+            font-size: 13px;
+            text-align: center;
+            letter-spacing: .02em;
+        }
+
+        /* Small responsiveness */
+        @media (max-width:420px) {
+            .splash-card {
+                padding: 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Splash -->
+    <div class="splash-root" aria-hidden="false">
+        <div class="splash-card" role="img" aria-label="Coffee splash animation">
+            <!-- SVG animation group -->
+            <svg class="anim-group" viewBox="0 0 420 300" xmlns="http://www.w3.org/2000/svg"
+                preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+                <defs>
+                    <!-- gentle cup shadow -->
+                    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
+                        <feGaussianBlur stdDeviation="6" result="b" />
+                        <feBlend in="SourceGraphic" in2="b" />
+                    </filter>
+
+                    <!-- clip for the coffee inside cup -->
+                    <clipPath id="cup-clip">
+                        <!-- cup interior rectangle (approx) -->
+                        <path
+                            d="M100 120 H320 a20 20 0 0 1 20 20 v18 a32 32 0 0 1 -32 32 H112 a32 32 0 0 1 -32 -32 v-18 a20 20 0 0 1 20 -20 z" />
+                    </clipPath>
+
+                    <!-- subtle wave shape (used twice for gentle parallax) -->
+                    <path id="wave" d="M100 160 C140 150 180 170 220 160 C260 150 300 170 340 160" />
+                </defs>
+
+                <!-- background soft vignette -->
+                <rect x="0" y="0" width="420" height="300" fill="transparent" />
+
+                <!-- cup shadow -->
+                <ellipse cx="210" cy="242" rx="82" ry="10" fill="#020202" opacity=".24" />
+
+                <!-- cup outline (drawn) -->
+                <g transform="translate(0,0)">
+                    <path class="cup-outline" d="M120 120
+             h200
+             a24 24 0 0 1 24 24
+             v16
+             a40 40 0 0 1 -40 40
+             H136
+             a40 40 0 0 1 -40 -40
+             v-16
+             a24 24 0 0 1 24 -24
+             z" />
+                    <!-- handle -->
+                    <path class="cup-outline" d="M324 136 a24 24 0 1 1 0 48" />
+                </g>
+
+                <!-- coffee fill (clipped to cup interior) -->
+                <g clip-path="url(#cup-clip)">
+                    <g class="coffee-fill">
+                        <!-- main body -->
+                        <rect x="100" y="160" width="240" height="80" rx="18" />
+                        <!-- two layered waves for a subtle wobble -->
+                        <use href="#wave" x="0" y="0" stroke="rgba(0,0,0,.12)" stroke-width="8" fill="none"
+                            stroke-linecap="round" stroke-linejoin="round" opacity=".8"
+                            style="transform-origin:210px 200px; animation:wave-slow 1.2s ease .5s forwards;"></use>
+                        <use href="#wave" x="0" y="8" stroke="rgba(255,255,255,.06)" stroke-width="5" fill="none"
+                            stroke-linecap="round" stroke-linejoin="round" opacity=".7"
+                            style="transform-origin:210px 208px; animation:wave-slower 1.2s ease .56s forwards;"></use>
+                    </g>
+                </g>
+
+                <style>
+                    /* small wave wobble keyframes scoped inside SVG */
+                    @keyframes wave-slow {
+                        0% {
+                            transform: translateY(10px)
+                        }
+
+                        50% {
+                            transform: translateY(-6px)
+                        }
+
+                        100% {
+                            transform: translateY(0px)
+                        }
+                    }
+
+                    @keyframes wave-slower {
+                        0% {
+                            transform: translateY(8px)
+                        }
+
+                        50% {
+                            transform: translateY(-3px)
+                        }
+
+                        100% {
+                            transform: translateY(0px)
+                        }
+                    }
+                </style>
+
+                <!-- foam highlight -->
+                <g class="foam" opacity="0">
+                    <ellipse cx="210" cy="168" rx="72" ry="18" fill="rgba(255,255,255,0.06)"></ellipse>
+                    <path d="M150 170 q30 -12 60 -4 t60 4" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="2"
+                        stroke-linecap="round" />
+                </g>
+
+                <!-- splash droplets (staggered pop) -->
+                <g fill="var(--coffee)" stroke="none" transform="translate(0,0)">
+                    <ellipse class="drop d1" cx="180" cy="138" rx="6" ry="8" opacity="0" />
+                    <ellipse class="drop d2" cx="220" cy="128" rx="5" ry="7" opacity="0" />
+                    <ellipse class="drop d3" cx="238" cy="146" rx="4.5" ry="6" opacity="0" />
+                    <ellipse class="drop d4" cx="260" cy="134" rx="3.8" ry="5.5" opacity="0" />
+                    <ellipse class="drop d5" cx="200" cy="122" rx="4" ry="6" opacity="0" />
+                </g>
+
+                <!-- small steam lines -->
+                <g class="steam" stroke="rgba(255,255,255,0.06)" stroke-width="2" fill="none" stroke-linecap="round">
+                    <path d="M170 110 q6 -10 12 -4 t12 0" />
+                    <path d="M200 108 q6 -12 12 -6 t12 2" />
+                    <path d="M230 106 q6 -11 12 -4 t12 4" />
+                </g>
+
+                <!-- subtle accent (a thin rim highlight) -->
+                <path d="M110 118 h200" stroke="rgba(255,255,255,0.02)" stroke-width="12" stroke-linecap="round" />
+
+                <!-- Optional caption inside card (commented out to keep minimal)
+      <text x="210" y="280" font-size="12" text-anchor="middle" fill="#94a3b8">Opening…</text>
+      -->
+            </svg>
+        </div>
+    </div>
+
+    <!-- Main content area (hidden underneath; revealed after splash) -->
+    <main style="opacity:1; transition:opacity .25s ease; max-width:900px;margin:0 auto;padding:28px;color:#e6eef6;">
+        <div style="display:flex;align-items:center;justify-content:center;height:100vh;flex-direction:column;">
+            <h2 style="color:#f8fafc;font-weight:700;margin:0 0 8px 0;">Your app content</h2>
+            <p style="color:#94a3b8;margin:0;">The splash will fade, leaving this page visible. Replace this with your
+                real app.</p>
+        </div>
+    </main>
+
+</body>
+
+</html>

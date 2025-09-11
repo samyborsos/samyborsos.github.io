@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>Coffee Ratings</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <style>
+        /* Mobile-first spacing and touch settings */
+        :root {
+            --card-bg: #2e1b0f;
+            --muted: #bfa58a;
+            --bg1: #0f0503;
+            --bg2: #2b1206;
+            --accent: #d6b58a;
+        }
+
+        html,
+        body {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        body {
+            -webkit-tap-highlight-color: transparent;
+            touch-action: manipulation;
+            background: linear-gradient(180deg, var(--bg1), var(--bg2));
+            color: #f6efe6;
+        }
+
+        /* override some Tailwind-ish utility uses to match coffee palette */
+        .bg-neutral-900 {
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(0, 0, 0, 0.08));
+            background-color: var(--card-bg) !important;
+        }
+
+        .bg-neutral-800 {
+            background-color: rgba(255, 255, 255, 0.02);
+        }
+
+        input,
+        textarea,
+        select {
+            color: #efe6db;
+        }
+
+        .text-gray-400,
+        .fa-solid {
+            color: var(--muted);
+        }
+
+        /* coffee button style */
+        .coffee-btn {
+            background: linear-gradient(180deg, #f6e6d9, #e7d2b1);
+            color: #2e1508;
+        }
+
+        /* Floating header */
+        @keyframes floaty {
+            0% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-6px);
+            }
+
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        h1.floaty {
+            animation: floaty 6s ease-in-out infinite;
+        }
+
+        /* Enter animation for list items */
+        @keyframes enterFromBelow {
+            0% {
+                opacity: 0;
+                transform: translateY(14px) scale(.995);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        /* short pulse when rate changes */
+        @keyframes pop {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.12);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        /* ripple for button / taps */
+        .ripple {
+            position: absolute;
+            border-radius: 9999px;
+            transform: translate(-50%, -50%) scale(0);
+            opacity: .6;
+            pointer-events: none;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.18) 0%, rgba(255, 255, 255, 0.04) 40%, rgba(255, 255, 255, 0) 60%);
+            animation: rippleAnim .7s ease-out forwards;
+            will-change: transform, opacity;
+        }
+
+        @keyframes rippleAnim {
+            to {
+                transform: translate(-50%, -50%) scale(6);
+                opacity: 0;
+            }
+        }
+
+        /* toast */
+        .toast {
+            position: fixed;
+            right: 16px;
+            bottom: 20px;
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.02));
+            color: #e6e6e6;
+            padding: 10px 14px;
+            border-radius: 10px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.45);
+            backdrop-filter: blur(6px);
+            transform: translateY(12px);
+            opacity: 0;
+            transition: transform 300ms ease, opacity 300ms ease;
+            z-index: 60;
+            font-weight: 600;
+        }
+
+        .toast.show {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        /* subtle flash for updates */
+        .flash {
+            box-shadow: 0 10px 30px rgba(99, 102, 241, 0.06);
+            transition: box-shadow 220ms ease, transform 220ms ease;
+        }
+
+        /* pressed / touch feedback for tap targets */
+        .pressed {
+            transform: translateY(-4px) scale(1.02);
+            box-shadow: 0 18px 40px rgba(0, 0, 0, 0.45);
+            transition: transform 160ms cubic-bezier(.2, .9, .2, 1), box-shadow 160ms ease;
+        }
+
+        /* pill focus for inputs */
+        .focus-lift:focus {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45), 0 0 0 4px rgba(255, 255, 255, 0.02) inset;
+        }
+
+        .transition-smooth {
+            transition: all 220ms cubic-bezier(.2, .9, .2, 1);
+        }
+
+        /* helper classes used by script */
+        .item-enter {
+            opacity: 0;
+            transform: translateY(10px) scale(.995);
+        }
+
+        /* pressed state for list items originates here (no hover used) */
+        .coffee-item {
+            will-change: transform, box-shadow;
+        }
+
+        /* larger tap targets & legibility for phones */
+        .tap-target {
+            padding: 18px;
+            border-radius: 14px;
+            font-size: 16px;
+        }
+
+        .big-btn {
+            padding: 14px;
+            border-radius: 12px;
+            font-size: 17px;
+        }
+
+        /* Splash / mug animation */
+        #splash {
+            position: fixed;
+            inset: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(180deg, rgba(11, 6, 4, 0.85), rgba(8, 4, 2, 0.9));
+            z-index: 80;
+            pointer-events: auto;
+            transition: opacity 420ms ease, transform 420ms ease;
+            opacity: 1;
+        }
+
+        #splash.hide {
+            opacity: 0;
+            transform: translateY(-8px);
+            pointer-events: none;
+        }
+
+        .mug-svg {
+            width: 160px;
+            height: 160px;
+            display: block;
+        }
+
+        .coffee-fill {
+            transform-origin: 50% 100%;
+            transform: scaleY(0);
+            fill: #6b3f2a;
+            animation: fillUp 900ms cubic-bezier(.2, .9, .2, 1) 240ms forwards;
+        }
+
+        .steam {
+            fill: none;
+            stroke: rgba(255, 255, 255, 0.85);
+            stroke-width: 2;
+            stroke-linecap: round;
+            opacity: 0;
+            transform-origin: center;
+            animation: steamRise 1200ms ease 900ms forwards;
+        }
+
+        .steam.s1 {
+            animation-delay: 1000ms;
+        }
+
+        .steam.s2 {
+            animation-delay: 1150ms;
+        }
+
+        .steam.s3 {
+            animation-delay: 1300ms;
+        }
+
+        @keyframes fillUp {
+            from {
+                transform: scaleY(0);
+            }
+
+            to {
+                transform: scaleY(1);
+            }
+        }
+
+        @keyframes steamRise {
+            from {
+                opacity: 0;
+                transform: translateY(6px) scale(0.9);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(-18px) scale(1);
+            }
+        }
+
+        /* remove any default outline but keep accessibility-friendly focus ring */
+        button:focus,
+        select:focus,
+        input:focus,
+        textarea:focus {
+            outline: none;
+            box-shadow: 0 6px 24px rgba(0, 0, 0, 0.35);
+        }
+    </style>
+</head>
+
+<body class="bg-black text-gray-100 min-h-screen flex flex-col items-center py-10 font-sans">
+
+    <!-- Splash animation shown on startup -->
+    <div id="splash">
+        <svg class="mug-svg" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <defs>
+                <clipPath id="cupClip">
+                    <rect x="18" y="34" width="84" height="50" rx="8" />
+                </clipPath>
+            </defs>
+            <!-- background circle -->
+            <circle cx="60" cy="60" r="58" fill="rgba(255,255,255,0.02)" />
+            <!-- coffee fill (animates up) -->
+            <g clip-path="url(#cupClip)">
+                <rect class="coffee-fill" x="29" y="20" width="50" height="50" rx="8" fill="#5a3724" opacity="0">
+                    <!-- keep the visual hidden until the animated top reaches the mug's inner top.
+                         0.72 corresponds to (70 - 50*s = 34) -> s = 0.72 (see CSS rect coordinates) -->
+                    <animate attributeName="opacity" dur="900ms" begin="240ms" values="0;0;1" keyTimes="0;0.72;1" fill="freeze" />
+                </rect>
+            </g>
+            <!-- mug outline -->
+            <g stroke="#efe6db" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M28 34h52v24a12 12 0 0 1-12 12H40a12 12 0 0 1-12-12V34z" />
+                <path d="M80 46c6 0 10-4 10-10s-4-10-10-10" />
+            </g>
+            <!-- spoon shine -->
+            <path d="M44 28c4-4 14-2 18 2" stroke="rgba(255,255,255,0.06)" stroke-width="1.6" fill="none"
+                stroke-linecap="round" />
+            <!-- steam lines -->
+            <path class="steam s1" d="M46 24c4-6 8-6 8-10s-4-6-6-2" stroke-linejoin="round" />
+            <path class="steam s2" d="M58 26c3-5 6-5 6-9s-3-5-5-2" stroke-linejoin="round" />
+            <path class="steam s3" d="M70 25c3-5 6-5 6-9s-3-5-5-2" stroke-linejoin="round" />
+        </svg>
+    </div>
+
+    <!-- Header -->
+    <h1 class="text-3xl sm:text-4xl font-bold tracking-tight mb-6 floaty">Coffee Ratings</h1>
+
+    <!-- Add Coffee Form -->
+    <div id="formCard"
+        class="bg-neutral-900 rounded-xl shadow-lg p-5 w-full max-w-md space-y-4 transition transform-gpu">
+        <input id="name" type="text" placeholder="Coffee name"
+            class="w-full p-3 bg-neutral-800 border border-neutral-700 rounded focus:outline-none focus:ring focus:ring-gray-600 transition-smooth focus-lift" />
+
+        <select id="person"
+            class="w-full p-3 bg-neutral-800 border border-neutral-700 rounded focus:outline-none focus:ring focus:ring-gray-600 transition-smooth focus-lift">
+            <option value="Virag">Virag</option>
+            <option value="Samy">Samy</option>
+            <!-- options populated from DB -->
+        </select>
+
+        <input id="place" type="text" placeholder="Place"
+            class="w-full p-3 bg-neutral-800 border border-neutral-700 rounded focus:outline-none focus:ring focus:ring-gray-600 transition-smooth focus-lift" />
+
+        <div>
+            <label for="rate" class="block text-sm mb-2 text-gray-400"><i class="fa-solid fa-star mr-2"></i>Rate</label>
+            <div class="flex items-center space-x-4">
+                <input id="rate" type="range" min="1" max="10" value="5"
+                    class="flex-grow accent-gray-500 cursor-pointer transition-smooth" />
+                <span id="rateValue" class="text-lg font-semibold text-gray-200 w-9 text-center">5</span>
+            </div>
+        </div>
+
+        <textarea id="megjegyzes" placeholder="Megjegyzés"
+            class="w-full p-3 bg-neutral-800 border border-neutral-700 rounded focus:outline-none focus:ring focus:ring-gray-600 transition-smooth focus-lift"></textarea>
+
+        <div class="relative">
+            <button id="addBtn"
+                class="w-full coffee-btn font-semibold px-4 py-3 big-btn rounded transition relative overflow-hidden">
+                Add Coffee
+            </button>
+        </div>
+    </div>
+
+    <!-- Search & Filters -->
+    <div class="mt-6 w-full max-w-md space-y-4 px-2">
+        <div id="searchCard" class="bg-neutral-900 rounded-xl p-3 flex items-center space-x-3 transition-smooth">
+            <i class="fa-solid fa-magnifying-glass text-gray-400"></i>
+            <input id="search" type="text" placeholder="Search coffee name..."
+                class="flex-grow p-2 bg-neutral-800 border border-neutral-700 rounded focus:outline-none focus:ring focus:ring-gray-600 transition-smooth focus-lift" />
+        </div>
+
+        <div id="filtersCard" class="bg-neutral-900 rounded-xl p-3 flex flex-col gap-3 transition-smooth">
+            <div>
+                <label class="text-sm text-gray-400 mb-1 flex items-center"><i
+                        class="fa-solid fa-user mr-2"></i>Person</label>
+                <select id="personFilter"
+                    class="w-full p-3 bg-neutral-800 border border-neutral-700 rounded focus:outline-none focus:ring focus:ring-gray-600 transition-smooth">
+                    <option value="">All</option>
+                    <!-- populated from DB -->
+                </select>
+            </div>
+            <div>
+                <label class="text-sm text-gray-400 mb-1 flex items-center"><i
+                        class="fa-solid fa-location-dot mr-2"></i>Place</label>
+                <select id="placeFilter"
+                    class="w-full p-3 bg-neutral-800 border border-neutral-700 rounded focus:outline-none focus:ring focus:ring-gray-600 transition-smooth">
+                    <option value="">All</option>
+                    <!-- populated from DB -->
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <!-- Coffee List -->
+    <ul id="coffeeList" class="mt-6 space-y-4 w-full max-w-md px-2"></ul>
+
+    <script>
+        // 🔑 Replace with your JSONbin values
+        const API_KEY = "$2a$10$J7fi24LcCk1TF8IfMHC4.e/IaKxCzRvCdOdE5F3YrDVrMRjhID4lC";
+        const BIN_ID = "68c2f61cd0ea881f407a843e";
+        const BASE_URL = `https://api.jsonbin.io/v3/b/${BIN_ID}`;
+
+        let coffeesData = [];
+
+        const rateInput = document.getElementById("rate");
+        const rateValue = document.getElementById("rateValue");
+        const searchInput = document.getElementById("search");
+        const personFilter = document.getElementById("personFilter");
+        const placeFilter = document.getElementById("placeFilter");
+        const addBtn = document.getElementById("addBtn");
+        const filtersCard = document.getElementById("filtersCard");
+        const searchCard = document.getElementById("searchCard");
+        const formCard = document.getElementById("formCard");
+
+        // quick tap feedback for add button (ripple handled here)
+        addBtn.addEventListener("click", (ev) => {
+            const rect = addBtn.getBoundingClientRect();
+            const x = (ev.clientX || rect.left + rect.width / 2) - rect.left;
+            const y = (ev.clientY || rect.top + rect.height / 2) - rect.top;
+            const ripple = document.createElement("span");
+            ripple.className = "ripple";
+            ripple.style.left = x + "px";
+            ripple.style.top = y + "px";
+            ripple.style.width = ripple.style.height = Math.max(rect.width, rect.height) + "px";
+            addBtn.appendChild(ripple);
+            setTimeout(() => ripple.remove(), 800);
+        });
+
+        rateInput.addEventListener("input", () => {
+            rateValue.textContent = rateInput.value;
+            rateValue.style.animation = "pop 420ms cubic-bezier(.2,.9,.2,1)";
+            rateValue.addEventListener("animationend", () => rateValue.style.animation = "", { once: true });
+        });
+
+        function escapeHtml(s = "") {
+            return s.replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll('"', "&quot;");
+        }
+
+        function updateFiltersAndForm() {
+            const persons = Array.from(new Set(coffeesData.map(c => (c.person || "").trim()).filter(Boolean))).sort();
+            const places = Array.from(new Set(coffeesData.map(c => (c.place || "").trim()).filter(Boolean))).sort();
+            personFilter.innerHTML = `<option value="">All</option>` + persons.map(p => `<option value="${escapeHtml(p)}">${escapeHtml(p)}</option>`).join("");
+            placeFilter.innerHTML = `<option value="">All</option>` + places.map(p => `<option value="${escapeHtml(p)}">${escapeHtml(p)}</option>`).join("");
+            // populate small person dropdown in form (keeps recent choices)
+            const personSelect = document.getElementById("person");
+            const current = (personSelect.value || "").trim();
+            personSelect.innerHTML = (current ? `<option value="${escapeHtml(current)}">${escapeHtml(current)}</option>` : "") + persons.map(p => `<option value="${escapeHtml(p)}">${escapeHtml(p)}</option>`).join("");
+        }
+
+        async function fetchCoffees() {
+            try {
+                const res = await fetch(BASE_URL + "/latest", { headers: { "X-Master-Key": API_KEY } });
+                const data = await res.json();
+                coffeesData = data.record || [];
+                updateFiltersAndForm();
+                renderCoffees();
+            } catch (e) { console.error("Failed to fetch coffees", e); }
+        }
+
+        async function addCoffee() {
+            const name = document.getElementById("name").value.trim();
+            const person = document.getElementById("person").value.trim();
+            const place = document.getElementById("place").value.trim();
+            const rate = document.getElementById("rate").value;
+            const megjegyzes = document.getElementById("megjegyzes").value.trim();
+            if (!name) return;
+
+            // fetch latest to avoid overwriting concurrent changes
+            const res = await fetch(BASE_URL + "/latest", { headers: { "X-Master-Key": API_KEY } });
+            const data = await res.json();
+            const coffees = data.record || [];
+
+            const newCoffee = { id: Date.now(), name, person, place, rate, megjegyzes };
+            const updated = [...coffees, newCoffee];
+
+            await fetch(BASE_URL, {
+                method: "PUT",
+                headers: {
+                    "Content-Type": "application/json",
+                    "X-Master-Key": API_KEY
+                },
+                body: JSON.stringify(updated)
+            });
+
+            // clear form
+            document.getElementById("name").value = "";
+            document.getElementById("person").value = "";
+            document.getElementById("place").value = "";
+            document.getElementById("megjegyzes").value = "";
+            rateInput.value = 5;
+            rateValue.textContent = "5";
+
+            // refresh local data and UI
+            coffeesData = updated;
+            updateFiltersAndForm();
+            renderCoffees();
+
+            flashElement(formCard);
+            showToast("Coffee added");
+        }
+
+        function flashElement(el) {
+            el.classList.add("flash");
+            setTimeout(() => el.classList.remove("flash"), 380);
+        }
+
+        function showToast(text = "Saved") {
+            const t = document.createElement("div");
+            t.className = "toast";
+            t.textContent = text;
+            document.body.appendChild(t);
+            requestAnimationFrame(() => t.classList.add("show"));
+            setTimeout(() => {
+                t.classList.remove("show");
+                setTimeout(() => t.remove(), 360);
+            }, 1700);
+        }
+
+        // Render list without hover, with touch/press interactions + ripple
+        function renderCoffees() {
+            const list = document.getElementById("coffeeList");
+            list.innerHTML = "";
+
+            const q = (searchInput.value || "").trim().toLowerCase();
+            const personSel = personFilter.value;
+            const placeSel = placeFilter.value;
+
+            const filtered = coffeesData.filter(c => {
+                if (q && !(c.name || "").toLowerCase().includes(q)) return false;
+                if (personSel && (c.person || "") !== personSel) return false;
+                if (placeSel && (c.place || "") !== placeSel) return false;
+                return true;
+            });
+
+            if (filtered.length === 0) {
+                list.innerHTML = `<li class="text-gray-400 px-2">No coffees found.</li>`;
+                return;
+            }
+
+            filtered.forEach((c, idx) => {
+                const li = document.createElement("li");
+                li.className = "bg-neutral-900 tap-target coffee-item transition transform-gpu";
+                li.style.padding = ""; // keep Tailwind-like spacing via CSS classes but allow tap-target
+                li.classList.add("item-enter");
+                li.style.animation = `enterFromBelow 360ms cubic-bezier(.2,.9,.2,1) forwards ${idx * 60}ms`;
+
+                li.innerHTML = `
+                    <div>
+                        <div class="flex justify-between items-center mb-2">
+                            <p class="font-semibold text-base">${escapeHtml(c.name)}</p>
+                            <p class="text-gray-200 font-bold text-base">${escapeHtml(String(c.rate))} / 10</p>
+                        </div>
+                        <div class="space-y-1 text-sm text-gray-400">
+                            ${c.person ? `<p><i class="fa-solid fa-user mr-2 text-gray-400"></i>${escapeHtml(c.person)}</p>` : ""}
+                            ${c.place ? `<p><i class="fa-solid fa-location-dot mr-2 text-gray-400"></i>${escapeHtml(c.place)}</p>` : ""}
+                            ${c.megjegyzes ? `<p><i class="fa-solid fa-comment mr-2 text-gray-400"></i>${escapeHtml(c.megjegyzes)}</p>` : ""}
+                        </div>
+                    </div>
+                `;
+                // attach tap interactions
+                attachTapInteractions(li);
+                list.appendChild(li);
+            });
+        }
+
+        // Touch / mouse press feedback for elements (adds .pressed + ripple)
+        function attachTapInteractions(el) {
+            let pressing = false;
+            const startPress = (evt) => {
+                pressing = true;
+                el.classList.add("pressed");
+                // ripple on tap center
+                const rect = el.getBoundingClientRect();
+                const clientX = (evt.touches && evt.touches[0] && evt.touches[0].clientX) || evt.clientX || rect.left + rect.width / 2;
+                const clientY = (evt.touches && evt.touches[0] && evt.touches[0].clientY) || evt.clientY || rect.top + rect.height / 2;
+                const x = clientX - rect.left;
+                const y = clientY - rect.top;
+                const ripple = document.createElement("span");
+                ripple.className = "ripple";
+                ripple.style.left = x + "px";
+                ripple.style.top = y + "px";
+                ripple.style.width = ripple.style.height = Math.max(rect.width, rect.height) + "px";
+                el.appendChild(ripple);
+                setTimeout(() => ripple.remove(), 800);
+            };
+            const endPress = () => {
+                if (!pressing) return;
+                pressing = false;
+                el.classList.remove("pressed");
+            };
+            el.addEventListener("touchstart", startPress, { passive: true });
+            el.addEventListener("mousedown", startPress);
+            window.addEventListener("touchend", endPress, { passive: true });
+            window.addEventListener("mouseup", endPress);
+            el.addEventListener("touchcancel", endPress, { passive: true });
+        }
+
+        // wire up filter/search events
+        let filterFlashTimer;
+        searchInput.addEventListener("input", () => {
+            renderCoffees();
+            searchCard.classList.add("flash");
+            clearTimeout(filterFlashTimer);
+            filterFlashTimer = setTimeout(() => searchCard.classList.remove("flash"), 360);
+        });
+        personFilter.addEventListener("change", () => {
+            renderCoffees();
+            filtersCard.classList.add("flash");
+            setTimeout(() => filtersCard.classList.remove("flash"), 360);
+        });
+        placeFilter.addEventListener("change", () => {
+            renderCoffees();
+            filtersCard.classList.add("flash");
+            setTimeout(() => filtersCard.classList.remove("flash"), 360);
+        });
+
+        // Enter in search lightly pulses results container (touch-friendly)
+        searchInput.addEventListener("keydown", (e) => {
+            if (e.key === "Enter") {
+                const list = document.getElementById("coffeeList");
+                list.classList.add("flash");
+                setTimeout(() => list.classList.remove("flash"), 380);
+            }
+        });
+
+        addBtn.addEventListener("click", addCoffee);
+
+        // startup: show splash animation, then fetch data
+        const splash = document.getElementById("splash");
+        const startDelay = 1600; // ms - matches animation timings
+        window.addEventListener('load', () => {
+            // in case load fires earlier, ensure we remove splash after animation
+            setTimeout(() => {
+                splash.classList.add('hide');
+                setTimeout(() => splash.remove(), 520);
+                fetchCoffees();
+            }, startDelay);
+        });
+    </script>
+</body>
+
+</html>

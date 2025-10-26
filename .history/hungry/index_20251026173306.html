@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Közös Bevásárlólista</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    :root {
+      --card-bg: #1b2a1b;
+      --muted: #aabfa8;
+      --bg1: #071107;
+      --bg2: #162016;
+      --accent: #c3e6a5;
+    }
+    body {
+      background: linear-gradient(180deg, var(--bg1), var(--bg2));
+      color: #f3f8f0;
+      font-family: system-ui, sans-serif;
+      padding: 2rem 1rem;
+    }
+    .bg-card { background: var(--card-bg); }
+    .item-exit {
+      opacity: 0;
+      transform: scale(0.95);
+      max-height: 0 !important;
+      padding: 0 !important;
+      margin: 0 !important;
+      border: none !important;
+    }
+    .toast {
+      position: fixed;
+      right: 16px;
+      bottom: 20px;
+      background: rgba(255,255,255,0.1);
+      backdrop-filter: blur(6px);
+      padding: 10px 14px;
+      border-radius: 10px;
+      font-weight: 600;
+      transition: all .3s ease;
+      opacity: 0;
+      transform: translateY(10px);
+      z-index: 60;
+    }
+    .toast.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    hr { border-color: #374151; }
+  </style>
+</head>
+<body class="flex flex-col items-center">
+
+<h1 class="text-3xl sm:text-4xl font-bold mb-6 text-center">🛒 Közös Bevásárlólista</h1>
+
+<div class="w-full max-w-md space-y-4">
+  <details class="bg-card rounded-xl p-4" open>
+    <summary class="font-semibold text-lg cursor-pointer mb-2">Új tétel hozzáadása</summary>
+    <div class="space-y-3">
+      <input id="name" type="text" placeholder="Termék neve" class="w-full p-3 rounded bg-neutral-800 border border-neutral-700" />
+      <input id="quantity" type="text" placeholder="Mennyiség (pl. 2kg, 3db)" class="w-full p-3 rounded bg-neutral-800 border border-neutral-700" />
+      <textarea id="note" placeholder="Megjegyzés (opcionális)" class="w-full p-3 rounded bg-neutral-800 border border-neutral-700"></textarea>
+      <div class="flex gap-3">
+        <button id="addBtn" class="w-full bg-lime-400 text-black font-semibold rounded p-3">Mentés</button>
+        <button id="cancelBtn" class="w-full bg-gray-600 text-white font-semibold rounded p-3 hidden">Mégse</button>
+      </div>
+    </div>
+  </details>
+
+  <ul id="list" class="space-y-3"></ul>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const API_KEY = "$2a$10$J7fi24LcCk1TF8IfMHC4.e/IaKxCzRvCdOdE5F3YrDVrMRjhID4lC";
+  const BIN_ID = "68fe495143b1c97be982801c";
+  const BASE_URL = `https://api.jsonbin.io/v3/b/${BIN_ID}`;
+
+  let items = [];
+  let editState = { isEditing: false, id: null };
+
+  const getEl = (id) => document.getElementById(id);
+  const list = getEl("list");
+  const nameInput = getEl("name");
+  const quantityInput = getEl("quantity");
+  const noteInput = getEl("note");
+  const addBtn = getEl("addBtn");
+  const cancelBtn = getEl("cancelBtn");
+
+  const showToast = (msg) => {
+    const t = document.createElement("div");
+    t.className = "toast";
+    t.textContent = msg;
+    document.body.appendChild(t);
+    requestAnimationFrame(() => t.classList.add("show"));
+    setTimeout(() => {
+      t.classList.remove("show");
+      setTimeout(() => t.remove(), 300);
+    }, 2000);
+  };
+
+  const updateRemote = async (data) => {
+    try {
+      await fetch(BASE_URL, {
+        method: "PUT",
+        headers: { "Content-Type": "application/json", "X-Master-Key": API_KEY },
+        body: JSON.stringify(data)
+      });
+      return true;
+    } catch (err) {
+      console.error(err);
+      showToast("Hiba a mentés során!");
+      return false;
+    }
+  };
+
+  const fetchItems = async () => {
+    try {
+      const res = await fetch(`${BASE_URL}/latest`, { headers: { "X-Master-Key": API_KEY } });
+      const data = await res.json();
+      items = data.record || [];
+      render();
+    } catch (e) {
+      showToast("Nem sikerült betölteni az adatokat.");
+    }
+  };
+
+  const createItemLi = (item) => {
+  const li = document.createElement("li");
+  li.className = "bg-card p-4 rounded-lg flex justify-between items-center shadow hover:shadow-md transition-all";
+  li.dataset.id = item.id;
+
+  li.innerHTML = `
+    <div class="flex items-start gap-4 w-full">
+      <input type="checkbox" class="done-checkbox mt-2 accent-lime-400" ${item.done ? "checked" : ""} />
+      
+      <div class="flex-1">
+       <p class="font-semibold text-lg text-white">Termék: <span class="font-normal">${item.title}</span></p>
+<p class="text-sm text-white">Mennyiség: <span class="font-medium">${item.quantity || "-"}</span></p>
+<p class="text-sm text-white">Megjegyzés: <span class="font-medium">${item.description || "-"}</span></p>
+
+      </div>
+    </div>
+
+    <div class="flex flex-col gap-2 ml-4">
+      <button class="text-lime-500 hover:text-lime-600 edit-btn p-1 rounded-md hover:bg-gray-100 transition">
+        <i class="fa-solid fa-pen"></i>
+      </button>
+      <button class="text-red-500 hover:text-red-600 delete-btn p-1 rounded-md hover:bg-gray-100 transition">
+        <i class="fa-solid fa-trash"></i>
+      </button>
+    </div>
+  `;
+
+  // Event listeners
+  li.querySelector(".done-checkbox").addEventListener("change", async (e) => {
+    item.done = e.target.checked;
+    if (await updateRemote(items)) render();
+    showToast("Állapot mentve");
+  });
+
+  li.querySelector(".edit-btn").addEventListener("click", () => startEdit(item.id));
+  li.querySelector(".delete-btn").addEventListener("click", () => removeItem(item.id));
+
+  return li;
+};
+
+
+  const render = () => {
+    list.innerHTML = "";
+    const activeItems = items.filter(i => !i.done);
+    const doneItems = items.filter(i => i.done);
+
+    if (activeItems.length === 0) {
+      list.innerHTML = `<li class="text-center text-gray-400">Nincs tétel.</li>`;
+    } else {
+      activeItems.forEach(item => list.appendChild(createItemLi(item)));
+    }
+
+    if (doneItems.length > 0) {
+      const hr = document.createElement("hr");
+      hr.className = "my-4 border-gray-600";
+      list.appendChild(hr);
+
+      doneItems.forEach(item => list.appendChild(createItemLi(item)));
+    }
+  };
+
+  const startEdit = (id) => {
+    const item = items.find(i => i.id === id);
+    if (!item) return;
+    editState = { isEditing: true, id };
+    nameInput.value = item.title;
+    quantityInput.value = item.quantity || "";
+    noteInput.value = item.description || "";
+    addBtn.textContent = "Módosítás mentése";
+    cancelBtn.classList.remove("hidden");
+  };
+
+  const cancelEdit = () => {
+    editState = { isEditing: false, id: null };
+    nameInput.value = "";
+    quantityInput.value = "";
+    noteInput.value = "";
+    addBtn.textContent = "Mentés";
+    cancelBtn.classList.add("hidden");
+  };
+
+  const removeItem = async (id) => {
+    if (!confirm("Biztosan törlöd?")) return;
+    const old = [...items];
+    items = items.filter(i => i.id !== id);
+    if (!(await updateRemote(items))) {
+      items = old;
+    }
+    render();
+    showToast("Törölve");
+  };
+
+  const handleAdd = async () => {
+    const item = {
+      id: editState.isEditing ? editState.id : Date.now(),
+      title: nameInput.value.trim(),
+      quantity: quantityInput.value.trim(),
+      description: noteInput.value.trim(),
+      done: false
+    };
+    if (!item.title) return showToast("Add meg a tétel nevét!");
+    if (editState.isEditing) {
+      const idx = items.findIndex(i => i.id === editState.id);
+      if (idx !== -1) items[idx] = item;
+    } else {
+      items = [item, ...items];
+    }
+    if (await updateRemote(items)) {
+      showToast(editState.isEditing ? "Frissítve" : "Hozzáadva");
+      cancelEdit();
+      render();
+    }
+  };
+
+  addBtn.addEventListener("click", handleAdd);
+  cancelBtn.addEventListener("click", cancelEdit);
+
+  fetchItems();
+});
+</script>
+
+</body>
+</html>

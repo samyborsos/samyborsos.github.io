@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SZE Papers Bemutató</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-100 text-gray-900">
+    <!-- Title Section -->
+    <section class="container mx-auto px-4 py-16">
+        <div class="text-center">
+            <h1
+                class="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
+                SZE <span class=" bg-gradient-to-r to-emerald-600 from-sky-400">Papers</span></h1>
+            <p class="text-lg max-w-2xl mx-auto">
+                A SZE Papers weboldal két fő részre tagolódik: a <strong>Research Portal</strong>-ra és a
+                <strong>Special Issues</strong> szekcióra. Ezek a funkciók célzottan szolgálják az egyetemi publikációk
+                és nemzetközi folyóiratok különszámainak áttekintését.
+            </p>
+            <div class="mt-8">
+                <a class="text-2xl text-blue-500 underline" target="_blank" href="https://www.youtube.com/watch?v=b8TADUjz2BU">Bemutatóvideó</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Welcome Section -->
+    <section class="container mx-auto px-4 py-8">
+        <div class="bg-white p-6 rounded-lg shadow-lg">
+            <h2 class="text-3xl font-semibold text-gray-800 mb-4">Főoldal</h2>
+            <img src="./pictures/welcome.png" alt="Welcome" class="h-full h-auto rounded-lg mb-6">
+        </div>
+    </section>
+
+    <!-- Research Portal Section -->
+    <section class="container mx-auto px-4 py-8">
+        <div class="bg-white p-6 rounded-lg shadow-lg">
+            <h2 class="text-3xl font-semibold text-gray-800 mb-4">Research Portal (Szabadon elérhető)</h2>
+            <img src="./pictures/research-portal.png" alt="Research Portal" class="h-full w-full rounded-lg mb-6">
+            <ul class="list-disc list-inside text-lg">
+                <li>Ez a szekció lehetővé teszi a felhasználók számára az egyetemen készült publikációk egyszerű
+                    böngészését. Az adatokat a <b>Scopus</b> adatbázis biztosítja.</li>
+                <li>A felhasználók kereshetnek publikációkat <b>kutatók neve</b> és <b>publikáció címe</b> alapján. </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Special Issues Section -->
+    <section class="container mx-auto px-4 py-8">
+        <div class="bg-white p-6 rounded-lg shadow-lg">
+            <h2 class="text-3xl font-semibold text-gray-800 mb-4">Special Issues (Edu-ID szükséges)</h2>
+            <img src="./pictures/special-issues.png" alt="Special Issues"
+                class="h-full h-auto object-cover rounded-lg mb-6">
+            <ul class="list-disc list-inside text-lg">
+                <li>Ez a rész a három vezető kiadó – <b>Emerald</b>, <b>Elsevier</b> és <b>Taylor & Francis</b> –
+                    folyóiratainak
+                    különszámaira fókuszál.</li>
+                <li>A felhasználók megtekinthetik a különszámokat és részletes információkat találhatnak a kutatási
+                    területekről, valamint a tematikus felhívásokról.</li>
+                <li>A weboldal összetett keresőmotorral rendelkezik, amely lehetővé teszi a folyóiratok közötti szűrést
+                    különböző kritériumok szerint, például a <b>Q-érték (SJR)</b>, valamint a folyóiratok <b>Scopus</b>, <b>WoS</b> (Web of
+                    Science) vagy <b>ABDC</b> indexálása alapján.</li>
+                <li>A felhasználók az érdekesnek talált pályázati lehetőségeket <b>kedvencek</b> közé helyezhetik és
+                    továbbíthatják azokat <b>e-mailben</b></li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Technical Background Section -->
+    <section class="container mx-auto px-4 py-8">
+        <div class="bg-white p-6 rounded-lg shadow-lg">
+            <h2 class="text-3xl font-semibold text-gray-800 mb-4 flex items-center">
+                Felhasznált technológiák
+            </h2>
+            <ul class="list-disc list-inside text-lg space-y-4">
+                <li class="flex items-center space-x-4">
+                    <strong>Backend:</strong>
+                    <span>PHP – Laravel</span>
+                    <img src="https://laravel.com/img/logomark.min.svg" alt="Laravel" class="w-8 h-8 mr-3">
+                </li>
+                <li class="flex items-center space-x-4">
+                    <strong>Frontend:</strong> <span>TailwindCSS</span>
+                    <svg viewBox="0 0 248 31" class="text-slate-900 dark:text-white w-auto h-5">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M25.517 0C18.712 0 14.46 3.382 12.758 10.146c2.552-3.382 5.529-4.65 8.931-3.805 1.941.482 3.329 1.882 4.864 3.432 2.502 2.524 5.398 5.445 11.722 5.445 6.804 0 11.057-3.382 12.758-10.145-2.551 3.382-5.528 4.65-8.93 3.804-1.942-.482-3.33-1.882-4.865-3.431C34.736 2.92 31.841 0 25.517 0zM12.758 15.218C5.954 15.218 1.701 18.6 0 25.364c2.552-3.382 5.529-4.65 8.93-3.805 1.942.482 3.33 1.882 4.865 3.432 2.502 2.524 5.397 5.445 11.722 5.445 6.804 0 11.057-3.381 12.758-10.145-2.552 3.382-5.529 4.65-8.931 3.805-1.941-.483-3.329-1.883-4.864-3.432-2.502-2.524-5.398-5.446-11.722-5.446z"
+                            fill="#38bdf8"></path>
+                    </svg>
+                </li>
+                <li class="flex items-center space-x-4">
+                    <strong>Adatbázis:</strong> <span>PostgreSQL</span>
+                    <img src="https://www.postgresql.org/media/img/about/press/elephant.png" alt="PostgreSQL"
+                        class="w-8 h-8 mr-3">
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="container mx-auto px-4 py-8 flex justify-between">
+        <p>Készítette: <strong>Borsos Samy</strong></p>
+        <p>2024. augusztus 8.</p>
+    </section>
+
+
+</body>
+
+</html>

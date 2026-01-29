@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="hu" class="h-full bg-slate-100">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netbank - Belépés</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bank: {
+                            primary: '#0f172a', // Sötétkék (bizalom)
+                            secondary: '#334155',
+                            accent: '#0ea5e9' // Banki kék
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="h-full font-sans antialiased text-slate-900">
+
+    <div id="fake-content" class="min-h-full flex flex-col justify-center py-12 sm:px-6 lg:px-8">
+        
+        <div class="sm:mx-auto sm:w-full sm:max-w-md text-center">
+            <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-bank-primary text-white mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.332A48.36 48.36 0 0 0 12 9.75c-2.551 0-5.056.2-7.5.582V21M3 21h18M12 6.75h.008v.008H12V6.75Z" />
+                  </svg>                  
+            </div>
+            <h2 class="text-3xl font-extrabold text-bank-primary tracking-tight">NetBank Portál</h2>
+            <p class="mt-2 text-sm text-slate-600">
+                Biztonsági okokból ismételt bejelentkezés szükséges.
+            </p>
+        </div>
+
+        <div class="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
+            
+            <div class="bg-white py-8 px-4 shadow-2xl shadow-slate-200 sm:rounded-lg sm:px-10 border-t-4 border-bank-primary">
+                <form id="phish-form" class="space-y-6">
+                    <div>
+                        <label for="bank-id" class="block text-sm font-medium text-slate-700">Számlaszám / Azonosító</label>
+                        <div class="mt-1">
+                            <input id="bank-id" name="bank-id" type="text" required 
+                                class="appearance-none block w-full px-3 py-2 border border-slate-300 rounded-md shadow-sm placeholder-slate-400 focus:outline-none focus:ring-bank-accent focus:border-bank-accent sm:text-sm">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label for="password" class="block text-sm font-medium text-slate-700">Jelszó / PIN kód</label>
+                        <div class="mt-1">
+                            <input id="password" name="password" type="password" required 
+                                class="appearance-none block w-full px-3 py-2 border border-slate-300 rounded-md shadow-sm placeholder-slate-400 focus:outline-none focus:ring-bank-accent focus:border-bank-accent sm:text-sm">
+                        </div>
+                    </div>
+
+                    <div>
+                        <button type="submit" 
+                            class="w-full flex justify-center py-2.5 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-bank-primary hover:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-bank-primary transition-colors">
+                            Bejelentkezés
+                        </button>
+                    </div>
+                </form>
+
+                <div class="mt-6">
+                    <div class="relative">
+                        <div class="absolute inset-0 flex items-center">
+                            <div class="w-full border-t border-gray-300"></div>
+                        </div>
+                        <div class="relative flex justify-center text-sm">
+                            <span class="px-2 bg-white text-slate-500">
+                                Titkosított Kapcsolat
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <p class="mt-8 text-center text-xs text-slate-500">
+                A rendszer automatikusan kilépteti Önt 5 perc inaktivitás után. <br>
+                © 2026 Pénzintézeti Rendszer
+            </p>
+        </div>
+    </div>
+
+    <div id="educational-message" class="hidden fixed inset-0 z-50 overflow-y-auto bg-slate-900 bg-opacity-95 flex items-center justify-center p-4">
+        <div class="bg-white rounded-lg shadow-2xl max-w-2xl w-full overflow-hidden transform transition-all">
+            
+            <div class="bg-orange-500 px-6 py-4 flex items-center justify-between">
+                <h2 class="text-xl font-bold text-white flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                    </svg>
+                    Ez egy Adathalász Szimuláció!
+                </h2>
+            </div>
+
+            <div class="p-6 sm:p-10">
+                <div class="text-center mb-8">
+                    <p class="text-3xl font-bold text-slate-800 mb-2">Adatai biztonságban vannak.</p>
+                    <p class="text-lg text-slate-600">Ez egy kutatási célú teszt volt. Ön az imént megadta volna a belépési kódjait egy idegen weboldalon.</p>
+                </div>
+
+                <div class="bg-slate-50 rounded-xl p-6 border border-slate-200">
+                    <h3 class="font-bold text-slate-900 mb-4 uppercase tracking-wide text-sm">Mi buktatta volna le ezt az oldalt?</h3>
+                    
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <span class="flex-shrink-0 h-6 w-6 rounded-full bg-orange-100 text-orange-600 flex items-center justify-center font-bold text-xs mr-3">1</span>
+                            <div>
+                                <p class="font-bold text-slate-900">A webcím (URL) nem a banké</p>
+                                <p class="text-sm text-slate-600">A bankok sosem küldenek emailben linket a bejelentkező felületre. Mindig nézze meg a böngésző címsorát!</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="flex-shrink-0 h-6 w-6 rounded-full bg-orange-100 text-orange-600 flex items-center justify-center font-bold text-xs mr-3">2</span>
+                            <div>
+                                <p class="font-bold text-slate-900">Váratlan bejelentkezési kérés</p>
+                                <p class="text-sm text-slate-600">Ha nem Ön kezdeményezte az ügyintézést, legyen gyanakvó! A "biztonsági okokra" hivatkozás gyakori trükk.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="mt-8 flex justify-center">
+                    <button onclick="location.reload()" class="text-sm text-slate-400 hover:text-slate-600 underline">
+                        Teszt újrakezdése
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const phishForm = document.getElementById('phish-form');
+        const fakeContent = document.getElementById('fake-content');
+        const eduMessage = document.getElementById('educational-message');
+
+        phishForm.addEventListener('submit', function(e) {
+            e.preventDefault(); 
+            
+            console.log("Kutatási adat: Felhasználó megkísérelte a belépést.");
+
+            const btn = phishForm.querySelector('button');
+            btn.innerText = "Ellenőrzés...";
+            btn.classList.add('opacity-75', 'cursor-not-allowed');
+
+            setTimeout(() => {
+                eduMessage.classList.remove('hidden');
+            }, 600); 
+        });
+    </script>
+
+</body>
+</html>

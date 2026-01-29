@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="copyright" content="Széchenyi István Egyetem - www.sze.hu"> 
+    <title>Széchenyi István Egyetem - Központi bejelentkező és regisztrációs oldal</title>
+    
+    <link href="https://idp.sze.hu/idp/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="https://idp.sze.hu/idp/css/regstyle.css" rel="stylesheet">
+    <script src="https://idp.sze.hu/idp/js/jquery-2.1.0.min.js"></script>
+    <script src="https://idp.sze.hu/idp/bootstrap/js/bootstrap.min.js"></script>
+
+    <style>
+        /* Alapból rejtett oktató réteg */
+        #educational-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(15, 23, 42, 0.95); /* Sötét háttér */
+            z-index: 9999;
+            color: white;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            overflow-y: auto;
+        }
+        .edu-content {
+            max-width: 600px;
+            margin: 50px auto;
+            background: white;
+            color: #333;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+            text-align: center;
+        }
+        .edu-header {
+            background-color: #d9534f; /* Bootstrap Danger Red */
+            color: white;
+            padding: 15px;
+            border-radius: 5px 5px 0 0;
+            margin: -30px -30px 20px -30px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .edu-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #5bc0de;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .edu-list {
+            text-align: left;
+            margin-top: 20px;
+            background: #f9f9f9;
+            padding: 15px;
+            border-left: 5px solid #d9534f;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="fake-site-content">
+        <div class="loginbox">
+            <div class="logoline">
+                <div class="szelogo" style="cursor: default;"></div>
+            </div>
+            <div class="innerbox">
+                <h1 class="loginheader">Kérjük jelentkezzen be!</h1>
+                <div class="line"></div>
+                <h2 class="loginreq"> Please login!</h2>
+        
+                <form id="sze-login-form">
+                    <div class="row" style="max-width: 500px;margin:0 auto;">
+                        <div class="col-md-12" style="padding:0px">
+                            <input class="logininput" type="text" placeholder="Felhasználónév / Username" name="j_username" id="username" required>
+                        </div>
+                    </div>
+                    <div class="row" style="max-width: 500px;margin:0 auto;margin-top:20px;margin-bottom: 10px;">
+                        <div class="col-md-12" style="padding:0px">
+                            <input class="logininput" type="password" placeholder="Jelszó / Password" name="j_password" id="password" required>
+                        </div>
+                    </div> 
+                    <p class="reminder">  
+                        <a class="newreg" href="#" onclick="return false;"> Elfelejtette jelszavát? - Forgot account? </a> / 
+                        <a class="newreg" href="#" onclick="return false;"> Még nem regisztrált? - Sign Up</a> 
+                    </p>
+                    <div class="row" style="max-width: 500px;margin:0 auto;padding-bottom: 95px;">
+                        <div class="col-md-12" style="padding:0px">
+                            <input class="loginbutton" type="submit" value="Belépés / Login">
+                        </div>
+                    </div>
+                </form>
+        
+            </div>
+            <div class="faq">
+                <a class="newreg" href="#" onclick="return false;"> Adatvédelem </a>
+            </div>
+            <div class="faq2">
+                <img src="https://idp.sze.hu/idp/images/logo_eduid.png" alt="EduID">
+                <img src="https://idp.sze.hu/idp/images/logo_shi.png" alt="Shibboleth">
+            </div>
+            <div class="faq3">
+                Beléptető szolgáltató: https://szelearning.sze.hu/shibboleth
+            </div>
+        </div>
+    </div>
+
+    <div id="educational-overlay">
+        <div class="edu-content">
+            <div class="edu-header">
+                ⚠️ FIGYELEM: ADATHALÁSZ SZIMULÁCIÓ
+            </div>
+            <h3>Ez nem az igazi SZE bejelentkező oldal!</h3>
+            <p>Ez egy biztonsági tudatossági teszt (Social Engineering kísérlet).<br>Ha ez egy valódi támadás lett volna, a jelszava most a csalók kezébe került volna.</p>
+            
+            <div class="edu-list">
+                <strong>Hogyan ismerhette volna fel?</strong>
+                <ul>
+                    <li><strong>Ellenőrizze az URL-t (címsort)!</strong><br> Az igazi cím: <code>idp.sze.hu</code> vagy <code>sze.hu</code>.<br> Ez az oldal nem ott van.</li>
+                    <li><strong>Gyanús levél:</strong><br> Ha emailben kapta a linket "sürgős jelszóváltás" kéréssel, az majdnem mindig csalás.</li>
+                </ul>
+            </div>
+            <br>
+            <p style="color:green; font-weight:bold;">Adatait NEM mentettük el és nem továbbítottuk sehova.</p>
+            
+            <a class="edu-btn" onclick="location.reload()">Teszt újrakezdése</a>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('sze-login-form').addEventListener('submit', function(e) {
+            // Megakadályozzuk, hogy elküldje az adatokat
+            e.preventDefault();
+            
+            // Konzolba írjuk a teszt sikerességét (statisztikához)
+            console.log("Kísérleti alany megnyomta a Belépés gombot.");
+
+            // Megjelenítjük a leleplező réteget
+            document.getElementById('educational-overlay').style.display = 'block';
+        });
+    </script>
+
+</body>
+</html>

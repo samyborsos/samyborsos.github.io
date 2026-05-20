@@ -246,6 +246,25 @@
             return text;
         }
 
+        // ÚJ FUNKCIÓ: Kiszámolja a kurzor pontos karakter-pozícióját a szövegben
+        function getCursorOffset() {
+            const sel = window.getSelection();
+            if (sel.rangeCount > 0 && DOM.editor.contains(sel.anchorNode)) {
+                try {
+                    const range = sel.getRangeAt(0);
+                    const preCaretRange = range.cloneRange();
+                    preCaretRange.selectNodeContents(DOM.editor);
+                    preCaretRange.setEnd(range.startContainer, range.startOffset);
+                    // Kiszámoljuk az összes szöveges node hosszát a kurzorig
+                    return preCaretRange.cloneContents().textContent.length;
+                } catch (e) {
+                    console.warn("Nem sikerült meghatározni a kurzor helyét.", e);
+                    return 0;
+                }
+            }
+            return 0; // Ha nincs kurzor a dobozban, a legelejéről kezdjük
+        }
+
         function highlightText(charIndex, charLength) {
             try {
                 const walker = document.createTreeWalker(DOM.editor, NodeFilter.SHOW_TEXT, null, false);
@@ -342,14 +361,24 @@
 
             try {
                 stopAudio();
-                const text = extractTextContent();
-                if (!text.trim()) {
+                const fullText = extractTextContent();
+                if (!fullText.trim()) {
                     showError("Kérlek írj vagy másolj be szöveget!");
                     return;
                 }
 
+                // 1. Lekérjük a kurzor pozícióját és levágjuk a felolvasandó szöveget
+                let startOffset = getCursorOffset();
+                let textToRead = fullText.substring(startOffset);
+                
+                // Ha a felhasználó a szöveg legvégére kattintott (vagy üres), kezdjük elölről
+                if (!textToRead.trim()) {
+                    startOffset = 0;
+                    textToRead = fullText;
+                }
+
                 if (state.engine === 'browser') {
-                    const utterance = new SpeechSynthesisUtterance(text);
+                    const utterance = new SpeechSynthesisUtterance(textToRead);
                     const voice = state.voices.find(v => v.voiceURI === state.selectedVoiceURI);
                     if (voice) utterance.voice = voice;
                     utterance.lang = 'hu-HU';
@@ -357,11 +386,13 @@
 
                     utterance.onboundary = (event) => {
                         if (event.name === 'word') {
-                            highlightText(event.charIndex, event.charLength);
+                            // 2. Kijelöljük az eltolt pozíciót a képernyőn
+                            const absoluteCharIndex = startOffset + event.charIndex;
+                            highlightText(absoluteCharIndex, event.charLength);
                             
                             if (state.smartPause) {
-                                const currentWord = text.substring(event.charIndex, event.charIndex + event.charLength);
-                                const nextChar = text.charAt(event.charIndex + event.charLength);
+                                const currentWord = textToRead.substring(event.charIndex, event.charIndex + event.charLength);
+                                const nextChar = textToRead.charAt(event.charIndex + event.charLength);
                                 if (/[.?!]/.test(currentWord) || /[.?!]/.test(nextChar)) {
                                     window.speechSynthesis.pause();
                                     setTimeout(() => {
@@ -391,7 +422,7 @@
                         method: 'POST',
                         headers: { 'Content-Type': 'application/json', 'xi-api-key': state.elApiKey },
                         body: JSON.stringify({
-                            text: text,
+                            text: textToRead,
                             model_id: "eleven_multilingual_v2",
                             voice_settings: { stability: 0.5, similarity_boost: 0.75 }
                         })
@@ -433,11 +464,13 @@
                             });
 
                             if (activeWord) {
-                                highlightText(activeWord.charIndex, activeWord.charLength);
+                                // 3. Elevenlabs esetén is hozzáadjuk a kezdő eltolást
+                                const absoluteCharIndex = startOffset + activeWord.charIndex;
+                                highlightText(absoluteCharIndex, activeWord.charLength);
                                 
                                 if (state.smartPause) {
-                                    const currentText = text.substring(activeWord.charIndex, activeWord.charIndex + activeWord.charLength);
-                                    const nextChar = text.charAt(activeWord.charIndex + activeWord.charLength);
+                                    const currentText = textToRead.substring(activeWord.charIndex, activeWord.charIndex + activeWord.charLength);
+                                    const nextChar = textToRead.charAt(activeWord.charIndex + activeWord.charLength);
                                     if (/[.?!]/.test(currentText) || /[.?!]/.test(nextChar)) {
                                         if (lastPausedIndex !== activeWord.charIndex) {
                                             lastPausedIndex = activeWord.charIndex;
@@ -589,6 +622,6 @@
             }
         });
 
-    </script> 
+    </script>
 </body>
 </html>

@@ -1,0 +1,51 @@
+<!-- ... existing code ... -->
+        function initBrowserVoices() {
+            const availableVoices = window.speechSynthesis.getVoices();
+            
+            // Bővített szűrés: nem csak a 'hu' nyelvkódot, hanem a nevet is figyeljük (Google miatt)
+            state.voices = availableVoices.filter(v => 
+                v.lang.toLowerCase().includes('hu') || 
+                v.name.toLowerCase().includes('magyar') || 
+                v.name.toLowerCase().includes('hungarian')
+            );
+            
+            DOM.browserVoices.innerHTML = '';
+            if (state.voices.length === 0) {
+                DOM.browserVoices.innerHTML = '<option>Nincs magyar hang telepítve...</option>';
+            } else {
+                state.voices.forEach(v => {
+                    const opt = document.createElement('option');
+                    opt.value = v.voiceURI;
+                    // Jelezzük a névben, ha a hang felhő alapú (pl. Google vagy Edge Neural)
+                    const isOnline = !v.localService ? " (Online AI)" : "";
+                    opt.textContent = `${v.name}${isOnline}`;
+                    DOM.browserVoices.appendChild(opt);
+                });
+                
+                // Csak akkor írjuk felül a kiválasztást, ha még nem választottunk semmit
+                if (!state.selectedVoiceURI || !state.voices.find(v => v.voiceURI === state.selectedVoiceURI)) {
+                    state.selectedVoiceURI = state.voices[0].voiceURI;
+                    DOM.browserVoices.value = state.selectedVoiceURI;
+                } else {
+                    DOM.browserVoices.value = state.selectedVoiceURI;
+                }
+            }
+        }
+
+        async function fetchElevenLabsVoices() {
+<!-- ... existing code ... -->
+        // Event Attachments
+        window.speechSynthesis.onvoiceschanged = initBrowserVoices;
+        initBrowserVoices();
+
+        // HACK: A Chrome és az online hangok (Google, Edge) sokszor késve töltődnek be az internetről.
+        // Ezért a betöltés utáni pár másodpercben többször is kikényszerítjük a frissítést!
+        setTimeout(initBrowserVoices, 500);
+        setTimeout(initBrowserVoices, 1500);
+        setTimeout(initBrowserVoices, 3000);
+
+        DOM.browserVoices.addEventListener('change', e => {
+<!-- ... existing code ... -->
+```
+
+*(Ha esetleg tényleg Androidos telefonon (pl. Chrome-ból) nézed az oldalt a Wi-Fi IP címen keresztül, frissítés után ott is meg kell jelennie a "Google magyar (Online AI)" opciónak!)*
